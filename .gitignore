@@ -1,0 +1,15 @@
+__pycache__/
+*.directory
+*.pyc
+.project
+.pydevproject
+.settings
+.idea
+
+/0_tmp
+node_modules/
+/.env
+/build/
+package-lock.json
+/test/
+/authData.json
