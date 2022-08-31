@@ -2,6 +2,7 @@
 const fetch = require('node-fetch')
 const config = require('../config/config.json')
 const utils = require('../utils')
+const logger = require('../logger')
 
 /**
  * Return Avatar list
@@ -10,13 +11,15 @@ const utils = require('../utils')
  */
 async function getAvatar(client) {
     const fnName = 'getAvatar'
-    console.log(fnName)
+    logger.debug(fnName)
     const url = `${config.url}/assets/v1/avatar`
-    /** @type {import('node-fetch').Response} */
-    const res = await fetch(url, {
+    const reqConfig = {
         method: 'get',
         headers: {'Authorization': await client.getToken()}
-    })
+    }
+    logger.debug(`${reqConfig.method} - ${url}`)
+    /** @type {import('node-fetch').Response} */
+    const res = await fetch(url, reqConfig)
     await utils.logRes(fnName, res)
     const data = await res.json()
     return data

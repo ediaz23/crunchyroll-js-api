@@ -91,6 +91,14 @@ class Clients {
     }
 
     /**
+     * @todo maybe add a extra field to save locale, and return profile.preferredContentSubtitleLanguage too
+     */
+    async getLocale() {
+//        preferredContentSubtitleLanguage: 'es-419',
+        return 'es-419'
+    }
+
+    /**
      * @returns {Object}
      */
     toJSON() {

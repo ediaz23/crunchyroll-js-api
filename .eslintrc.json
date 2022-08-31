@@ -10,6 +10,14 @@
         "sourceType": "module"
     },
     "rules": {
+        "no-unused-vars": [
+          "error", 
+          { 
+            "argsIgnorePattern": "^_",
+            "varsIgnorePattern": "^_",
+            "caughtErrorsIgnorePattern": "^_"
+          }
+        ]
     },
     "globals": {
         "process": true,

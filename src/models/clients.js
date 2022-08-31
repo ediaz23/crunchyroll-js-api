@@ -22,11 +22,11 @@ class Clients {
 
     toJSON() {
         return {
-            credentials: this.credentials.toJSON(),
-            tokens: this.tokens.toJSON(),
-            cms: this.cms.toJSON(),
-            account: this.account.toJSON(),
-            profile: this.profile.toJSON()
+            credentials: this.credentials ? this.credentials.toJSON() : null,
+            tokens: this.tokens ? this.tokens.toJSON() : null,
+            cms: this.cms ? this.cms.toJSON() : null,
+            account: this.account ? this.account.toJSON() : null,
+            profile: this.profile ? this.profile.toJSON() : null,
         }
     }
     

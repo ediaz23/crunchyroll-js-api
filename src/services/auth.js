@@ -3,6 +3,7 @@ const fetch = require('node-fetch')
 const { URLSearchParams } = require('url')
 const config = require('../config/config.json')
 const utils = require('../utils')
+const logger = require('../logger')
 const { Tokens } = require('../models/tokens')
 
 
@@ -25,7 +26,7 @@ function getBasicToken() {
  */
 async function getToken(credencials, grantType) {
     const fnName = 'getToken'
-    console.log(fnName)
+    logger.debug(fnName)
     const basicToken = getBasicToken()
     const body = {
         username: credencials.username,
@@ -33,7 +34,7 @@ async function getToken(credencials, grantType) {
         grant_type: grantType
     }
     const url = `${config.url}/auth/v1/token`
-    const res = await fetch(url, {
+    const reqConfig = {
         method: 'post',
         body:  new URLSearchParams(body),
         headers: {
@@ -41,7 +42,9 @@ async function getToken(credencials, grantType) {
             'Content-Type': 'application/x-www-form-urlencoded',
             'ETP-Anonymous-ID': null,
         }
-    })
+    }
+    logger.debug(`${reqConfig.method} - ${url}`)
+    const res = await fetch(url, reqConfig)
     await utils.logRes(fnName, res)
     const data = await res.json()
     const token = new Tokens()
@@ -58,14 +61,14 @@ async function getToken(credencials, grantType) {
  */
 async function getRefreshToken(token) {
     const fnName = 'getRefreshToken'
-    console.log(fnName)
+    logger.debug(fnName)
     const basicToken = getBasicToken()
     const body = {
         grant_type: 'refresh_token',
         refresh_token: token.refreshToken
     }
     const url = `${config.url}/auth/v1/token`
-    const res = await fetch(url, {
+    const reqConfig = {
         method: 'post',
         body:  new URLSearchParams(body),
         headers: {
@@ -73,7 +76,9 @@ async function getRefreshToken(token) {
             'Content-Type': 'application/x-www-form-urlencoded',
             'ETP-Anonymous-ID': null,
         }
-    })
+    }
+    logger.debug(`${reqConfig.method} - ${url}`)
+    const res = await fetch(url, reqConfig)
     await utils.logRes(fnName, res)
     const data = await res.json()
     const newToken = new Tokens()

@@ -12,7 +12,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "node-fetch": "^2.6.7"
+    "node-fetch": "^2.6.7",
+    "pino": "^8.4.2",
+    "pino-pretty": "^9.1.0"
   },
   "devDependencies": {
     "eslint": "^8.22.0"
