@@ -1,5 +1,4 @@
 
-const fetch = require('node-fetch')
 const { URLSearchParams } = require('url')
 const config = require('../config/config.json')
 const utils = require('../utils')
@@ -33,7 +32,7 @@ async function getToken(credencials, grantType) {
         password: credencials.password,
         grant_type: grantType
     }
-    const url = `${config.url}/auth/v1/token`
+    const url = `/auth/v1/token`
     const reqConfig = {
         method: 'post',
         body:  new URLSearchParams(body),
@@ -43,10 +42,7 @@ async function getToken(credencials, grantType) {
             'ETP-Anonymous-ID': null,
         }
     }
-    logger.debug(`${reqConfig.method} - ${url}`)
-    const res = await fetch(url, reqConfig)
-    await utils.logRes(fnName, res)
-    const data = await res.json()
+    const data = await utils.makeRequest(fnName, url, reqConfig)
     const token = new Tokens()
     data.created_date = new Date().toISOString()
     token.fromJSON(data)
@@ -67,7 +63,7 @@ async function getRefreshToken(token) {
         grant_type: 'refresh_token',
         refresh_token: token.refreshToken
     }
-    const url = `${config.url}/auth/v1/token`
+    const url = `/auth/v1/token`
     const reqConfig = {
         method: 'post',
         body:  new URLSearchParams(body),
@@ -77,10 +73,7 @@ async function getRefreshToken(token) {
             'ETP-Anonymous-ID': null,
         }
     }
-    logger.debug(`${reqConfig.method} - ${url}`)
-    const res = await fetch(url, reqConfig)
-    await utils.logRes(fnName, res)
-    const data = await res.json()
+    const data = await utils.makeRequest(fnName, url, reqConfig)
     const newToken = new Tokens()
     data.created_date = new Date().toISOString()
     newToken.fromJSON(data)

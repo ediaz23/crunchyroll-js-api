@@ -14,17 +14,23 @@ async function main() {
     const client = new Clients()
     await client.loadFromLocal()
 //    const data = await assets.getAvatar(client)
-//    client.client.profile = null
+    client.client.profile = null
 //    await account.updateProfile(client, {avatar: '16-the-god-of-high-school-jin-mori.png'})
 //    const data = await client.getProfile()
-//    client.client.account = null
+    client.client.account = null
 //    const data = await client.getAccount()
 //    const data = await account.getUsernames(client)
 //    const data = await index.getIndexConfig(client)
 //    const data = await content.getHomeFeed(client, 5, 1)
 //    const data = await content.getSeasonList(client)
 //    const data = await content.getBrowseAll(client, 2, 1)
+//    const data = await content.getCustomLists(client)
+//    const data = await content.getWatchHistory(client, 1, 1)
+//    const data = await content.getWatchlist(client, 1, 2)
 //    const season = 'summer-2022'
+//    const contentId = 'G0DUN1X9Q'
+//    const contentId = 'G0DUN5X5K'
+//    const data = await content.getWatchlistItems(client, contentId)
     logger.info(data)
 
 }

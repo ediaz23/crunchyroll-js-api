@@ -1,6 +1,4 @@
 
-const fetch = require('node-fetch')
-const config = require('../config/config.json')
 const utils = require('../utils')
 const logger = require('../logger')
 const { Accounts } = require('../models/accounts')
@@ -14,16 +12,12 @@ const { Profiles } = require('../models/profiles')
 async function getProfile(client) {
     const fnName = 'getProfile'
     logger.debug(fnName)
-    const url = `${config.url}/accounts/v1/me/profile`
+    const url = `/accounts/v1/me/profile`
     const reqConfig = {
         method: 'get',
         headers: {'Authorization': await client.getToken()}
     }
-    logger.debug(`${reqConfig.method} - ${url}`)
-    /** @type {import('node-fetch').Response} */
-    const res = await fetch(url, reqConfig)
-    await utils.logRes(fnName, res)
-    const data = await res.json()
+    const data = await utils.makeRequest(fnName, url, reqConfig)
     const profile = new Profiles()
     profile.fromJSON(data)
     return profile
@@ -38,7 +32,7 @@ async function getProfile(client) {
 async function updateProfile(client, data) {
     const fnName = 'updateProfile'
     logger.debug(fnName)
-    const url = `${config.url}/accounts/v1/me/profile`
+    const url = `/accounts/v1/me/profile`
     const reqConfig = {
         method: 'patch',
         headers: {
@@ -47,10 +41,7 @@ async function updateProfile(client, data) {
         },
         body:  JSON.stringify(data instanceof Profiles ? data.toJSON() : data),
     }
-    logger.debug(`${reqConfig.method} - ${url}`)
-    /** @type {import('node-fetch').Response} */
-    const res = await fetch(url, reqConfig)
-    await utils.logRes(fnName, res)
+    await utils.makeRequest(fnName, url, reqConfig)
 }
 
 /**
@@ -61,16 +52,12 @@ async function updateProfile(client, data) {
 async function getAccountId(client) {
     const fnName = 'getAccountId'
     logger.debug(fnName)
-    const url = `${config.url}/accounts/v1/me`
+    const url = `/accounts/v1/me`
     const reqConfig = {
         method: 'get',
         headers: {'Authorization': await client.getToken()}
     }
-    logger.debug(`${reqConfig.method} - ${url}`)
-    /** @type {import('node-fetch').Response} */
-    const res = await fetch(url, reqConfig)
-    await utils.logRes(fnName, res)
-    const data = await res.json()
+    const data = await utils.makeRequest(fnName, url, reqConfig)
     const account = new Accounts()
     account.fromJSON(data)
     return account
@@ -84,17 +71,12 @@ async function getAccountId(client) {
 async function getUsernames(client) {
     const fnName = 'getAccountId'
     logger.debug(fnName)
-    const url = `${config.url}/accounts/v1/usernames`
+    const url = `/accounts/v1/usernames`
     const reqConfig = {
         method: 'get',
         headers: {'Authorization': await client.getToken()}
     }
-    logger.debug(`${reqConfig.method} - ${url}`)
-    /** @type {import('node-fetch').Response} */
-    const res = await fetch(url, reqConfig)
-    await utils.logRes(fnName, res)
-    const data = await res.json()
-    return data
+    return utils.makeRequest(fnName, url, reqConfig)
 }
 
 module.exports = {
