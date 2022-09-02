@@ -45,8 +45,25 @@ async function makeRequest(fnName, url, reqConfig) {
     return out
 }
 
+/**
+ * Add key to object if not undefined
+ * @param {Object} data
+ * @param {String} key
+ * @param {Object} value
+ * @param {Function} validator
+ */
+function addParam(data, key, value, validator) {
+    if (value !== undefined) {
+        if (validator && !(validator(value))) {
+            throw new Error(`Value ${value} for key ${key} is not valid.`)
+        }
+        data[key] = value
+    }
+}
+
 module.exports = {
     camelCase: str => str.replace(/_([a-z])/g, (_m,w) => w.toUpperCase()),
     logRes,
     makeRequest,
+    addParam
 }

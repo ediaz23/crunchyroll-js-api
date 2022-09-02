@@ -1,5 +1,4 @@
 
-const config = require('../config/config.json')
 const utils = require('../utils')
 const logger = require('../logger')
 
