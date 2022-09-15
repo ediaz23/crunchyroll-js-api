@@ -33,6 +33,14 @@ async function logRes(fnName, res) {
 async function makeRequest(fnName, url, reqConfig) {
     url = decodeURIComponent(`${config.url}${url}`)
     logger.debug(`${reqConfig.method} - ${url}`)
+    if (!reqConfig.headers) {
+        reqConfig.headers = {}
+    }
+    if (reqConfig.headers instanceof fetch.Headers) {
+        reqConfig.headers.append('User-Agent', getUserAgent())
+    } else {
+        reqConfig.headers['User-Agent'] = getUserAgent()
+    }
     /** @type {import('node-fetch').Response} */
     const res = await fetch(url, reqConfig)
     await logRes(fnName, res)
@@ -59,6 +67,14 @@ function addParam(data, key, value, validator) {
         }
         data[key] = encodeURIComponent(value)
     }
+}
+
+/**
+ * Returning user-agent
+ * @return {String}
+ */
+function getUserAgent() {
+    return 'Crunchyroll/3.23.0 Android/13'
 }
 
 module.exports = {
