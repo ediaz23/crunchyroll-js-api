@@ -18,7 +18,7 @@ async function getIndexConfig(client) {
     }
     const data = await utils.makeRequest(fnName, url, reqConfig)
     const cms = new Cms()
-    cms.fromJSON(data.cms_beta)
+    cms.fromJSON(data.cms)
     return cms
 }
 

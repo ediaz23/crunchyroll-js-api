@@ -6,6 +6,10 @@ const index = require('./src/services/index')
 const content = require('./src/services/content')
 const account = require('./src/services/account')
 const assets = require('./src/services/assets')
+const review = require('./src/services/review')
+const subscription = require('./src/services/subscription')
+const configDelta = require('./src/services/configDelta')
+const cms = require('./src/services/cms')
 const utils = require('./src/utils')
 const logger = require('./src/logger')
 
@@ -13,6 +17,8 @@ const logger = require('./src/logger')
 async function main() {
     const client = new Clients()
     await client.loadFromLocal()
+//    const data = await client.getCms()
+//    logger.info(data)
 //    const data = await assets.getAvatar(client)
 //    client.client.profile = null
 //    await account.updateProfile(client, {avatar: '16-the-god-of-high-school-jin-mori.png'})
@@ -49,23 +55,36 @@ async function main() {
 //    const data = await content.savePlayhead(client, {contentId: 'GEVUZ2M13', playhead: 700})
 //    const data = await content.savePlayheadBatch(client, {batch: {'GEVUZ2M13': {dateWatched: new Date(), playhead: 800}}})
 //    const data = await content.updateWatchlistItemFavoriteStatus(client, 'GYXM79M56', {isFavorite: true})
-    const listId = '4886ff07-e0dd-4b7a-a138-41925774bbf8'
+//    const listId = '4886ff07-e0dd-4b7a-a138-41925774bbf8'
 //    const data = await content.createPrivateCustomList(client, {title: 'Prueba'})
 //    const data = await content.deletePrivateCustomList(client, listId)
 //    const data = await content.addItemToCustomList(client, listId, {contentId: 'GYXM79M56'})
 //    const data = await content.changeCustomListItemPosition(client, listId, {contentId: 'G6NQ5DWZ6', location: 'before', refContentId: 'GYXM79M56'})
 //    const data = await content.deleteCustomListItem(client, listId, {contentId: 'G6NQ5DWZ6'})
-    const data = await content.updateCustomList(client, listId, {title: 'Actualizado'})
+//    const data = await content.updateCustomList(client, listId, {title: 'Actualizado'})
+//    const data = await review.getRatings(client, 'GR751KNZY', 'series')
+//    const data = await subscription.getProducts(client)
+//    const data = await subscription.getUserBenefits(client)
+//    const data = await subscription.getUserSubscription(client)
+//    const data = await configDelta.getConfigDelta(client, 'cr-android', '3.13.0')
+//    const data = await cms.getSeries(client, 'GR751KNZY')
+//    const data = await cms.getSeasons(client, 'GR751KNZY')
+//    const data = await cms.getSeason(client, 'GR9PXM286')
+//    const data = await cms.getSeasonExtras(client, 'GR9PXM286')
+//    const data = await cms.getEpisodes(client, 'GR9PXM286')
+//    const data = await cms.getEpisode(client, 'GYK5KX14R')
+//    const data = await cms.getMovies(client, 'G6MG10746')
+//    const data = await cms.getMovie(client, 'GNJFJJ4P1')
+//    const data = await cms.getMovieListing(client, 'G6MG10746')
+//    const data = await cms.getMovieListingExtras(client, 'G6MG10746')
+//    const data = await cms.lookup(client, 'SRZ.273203')
+//    const data = await cms.getStreams(client, "/cms/v2/CL/M3/crunchyroll/videos/G07FX7WZW/streams")
+//    const data = await cms.getStreams(client, 'G07FX7WZW')
+//    const data = await cms.getPanelImages(client, 'G69PZ5PDY')
+//    const data = await cms.getPanels(client, 'G69PZ5PDY')
     logger.info(data)
 
 }
-/**
-getWatchlistItems
-    G4PH0WXVJ: {
-      "id": "G4PH0WXVJ",
-      "is_favorite": false,
-      "date_added": "2022-04-29T13:41:29Z"
-    }
-*/
+
 
 main()

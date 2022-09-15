@@ -31,7 +31,7 @@ async function logRes(fnName, res) {
  * @param {import('node-fetch').Request} reqConfig
  */
 async function makeRequest(fnName, url, reqConfig) {
-    url = `${config.url}${url}`
+    url = decodeURIComponent(`${config.url}${url}`)
     logger.debug(`${reqConfig.method} - ${url}`)
     /** @type {import('node-fetch').Response} */
     const res = await fetch(url, reqConfig)
@@ -57,7 +57,7 @@ function addParam(data, key, value, validator) {
         if (validator && !(validator(value))) {
             throw new Error(`Value ${value} for key ${key} is not valid.`)
         }
-        data[key] = value
+        data[key] = encodeURIComponent(value)
     }
 }
 

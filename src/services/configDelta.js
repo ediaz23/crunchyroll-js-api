@@ -1,12 +1,12 @@
 
-const { URLSearchParams } = require('url')
-const fetch = require('node-fetch')
-const config = require('./config/config.json')
 const utils = require('../utils')
+const logger = require('../logger')
+const { URLSearchParams } = require('url')
 
 /**
 how to call 
-    const data = await getConfigDelta(accessToken, config.app_id, config.version_name)
+    const data = await getConfigDelta(client, config.app_id, config.version_name)
+    configDelta.getConfigDelta(client, 'cr-android', '3.13.0')
 It is something about segments and Analytics:
     com/segment/analytics/Analytics.java:197:
 returning error
@@ -20,20 +20,26 @@ returning error
   ]
 }
  */
-async function getConfigDelta(accessToken, appId, appVersion) {
+
+
+/**
+ * @param {import('./../controllers/clients').Clients} client
+ * @param {String} appId
+ * @param {String} appVersion
+ * @returns {Promise<Object>} 
+ */
+async function getConfigDelta(client, appId, appVersion) {
     const fnName = 'getConfigDelta'
-    console.log(fnName)
-    const params = {app_version: appVersion}
-    const url = `${config.url}/config-delta/v2/apps/${appId}/config_delta?` + new URLSearchParams(params)
-//    , anonymous_id: 123
-    /** @type {import('node-fetch').Response} */
-    const res = await fetch(url, {
+    logger.debug(fnName)
+    const queryData = {locale: await client.getLocale()}
+    utils.addParam(queryData, 'app_version', appVersion, val => val)
+    const query = new URLSearchParams(queryData)
+    let url = `/config-delta/v2/apps/${appId}/config_delta?${query}`
+    const reqConfig = {
         method: 'get',
-        headers: {
-            'Authorization': accessToken,
-        }
-    })
-    await utils.logRes(fnName, res)
+        headers: {'Authorization': await client.getToken()}
+    }
+    return utils.makeRequest(fnName, url, reqConfig)
 }
 
 module.exports = {

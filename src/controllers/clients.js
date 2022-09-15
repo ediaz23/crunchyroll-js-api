@@ -6,6 +6,7 @@ const authService = require('../services/auth')
 const indexService = require('../services/index')
 const accountService = require('../services/account')
 
+
 class Clients {
 
     constructor() {
@@ -47,7 +48,7 @@ class Clients {
         let cms = null
         if (this.client.cms && this.client.cms.bucket) {
             const now = new Date()
-            if (this.client.cms.expires < now) {
+            if (this.client.cms.expires > now) {
                 cms = this.client.cms
             }
         }
