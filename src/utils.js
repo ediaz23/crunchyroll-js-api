@@ -2,6 +2,7 @@
 const config = require('./config/config.json')
 const fetch = require('node-fetch')
 const logger = require('./logger')
+const CONST = require('./const')
 
 
 /**
@@ -37,9 +38,9 @@ async function makeRequest(fnName, url, reqConfig) {
         reqConfig.headers = {}
     }
     if (reqConfig.headers instanceof fetch.Headers) {
-        reqConfig.headers.append('User-Agent', getUserAgent())
+        reqConfig.headers.append('User-Agent', CONST.getUserAgent())
     } else {
-        reqConfig.headers['User-Agent'] = getUserAgent()
+        reqConfig.headers['User-Agent'] = CONST.getUserAgent()
     }
     /** @type {import('node-fetch').Response} */
     const res = await fetch(url, reqConfig)
@@ -69,17 +70,9 @@ function addParam(data, key, value, validator) {
     }
 }
 
-/**
- * Returning user-agent
- * @return {String}
- */
-function getUserAgent() {
-    return 'Crunchyroll/3.23.0 Android/13'
-}
-
 module.exports = {
     camelCase: str => str.replace(/_([a-z])/g, (_m,w) => w.toUpperCase()),
     logRes,
     makeRequest,
-    addParam
+    addParam,
 }

@@ -2,6 +2,7 @@
 const utils = require('../utils')
 const logger = require('../logger')
 const { URLSearchParams } = require('url')
+const CONST = require('../const')
 
 
 /**
@@ -192,8 +193,8 @@ async function deleteWatchlistItem(client, watchlistItem) {
  * @param {String} [query] Search pattern
  * @returns {Promise<{total: Number, items: Array<Object>}>}
  */
-async function getBrowseAll(client, quantity, start, category, query) {
-    const fnName = 'getBrowseAll'
+async function _getBrowseAll(client, quantity, start, category, query) {
+    const fnName = '_getBrowseAll'
     logger.debug(fnName)
     const queryData = {locale: await client.getLocale()}
     utils.addParam(queryData, 'n', quantity, val => val > 0)
@@ -210,6 +211,19 @@ async function getBrowseAll(client, quantity, start, category, query) {
         }
     }
     return utils.makeRequest(fnName, url, reqConfig)
+}
+
+
+/**
+ * @param {import('./../controllers/clients').Clients} client
+ * @param {Number} [quantity] Number of records in a result
+ * @param {Number} [start] Offset to request
+ * @param {String} [category] Category
+ * @param {String} [query] Search pattern
+ * @returns {Promise<{total: Number, items: Array<Object>}>}
+ */
+async function getBrowseAll(client, quantity, start, category, query) {
+    return _getBrowseAll(client, quantity, start, category, query)
 }
 
 
@@ -670,7 +684,7 @@ async function savePlayheadBatch(client, playheadBatch) {
 async function search(client, queryStr, quantity, start, type) {
     const fnName = 'search'
     logger.debug(fnName)
-    const types = ['top_results', 'series', 'movie_listing', 'episode']
+    const types = CONST.getContentTypes().concat(['top_results'])
     const queryData = {locale: await client.getLocale()}
     utils.addParam(queryData, 'q', queryStr)
     utils.addParam(queryData, 'n', quantity, val => val > 0)

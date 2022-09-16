@@ -12,7 +12,7 @@ async function getIndexConfig(client) {
     const fnName = 'getIndexConfig'
     logger.debug(fnName)
     const url = `/index/v2`
-    const reqConfig =  {
+    const reqConfig = {
         method: 'get',
         headers: {'Authorization': await client.getToken()}
     }

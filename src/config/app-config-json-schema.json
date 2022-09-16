@@ -239,17 +239,6 @@
         }
       }
     },
-    "show_rating_update": {
-      "type": "object",
-      "title": "Show rating update",
-      "properties": {
-        "is_enabled": {
-          "type": "boolean",
-          "title": "Enable show rating update",
-          "default": false
-        }
-      }
-    },
     "content_maturity_rating": {
       "type": "object",
       "title": "Content Maturity Rating label",
@@ -258,41 +247,6 @@
           "type": "boolean",
           "title": "Enable Content Maturity Rating label",
           "default": false
-        }
-      }
-    },
-    "subscription_flow_tiers_menu": {
-      "type": "object",
-      "title": "Subscription Flow tiers menu",
-      "properties": {
-        "version": {
-          "type": "string",
-          "title": "Select Subscription Flow tiers menu version",
-          "default": "v1",
-          "enum": [
-            "v1",
-            "v2"
-          ]
-        },
-        "experiment_id": {
-          "type": "string",
-          "title": "Experiment id",
-          "default": ""
-        },
-        "experiment_name": {
-          "type": "string",
-          "title": "Experiment name",
-          "default": ""
-        },
-        "variation_id": {
-          "type": "string",
-          "title": "Variation id",
-          "default": ""
-        },
-        "variation_name": {
-          "type": "string",
-          "title": "Variation name",
-          "default": ""
         }
       }
     },
@@ -375,17 +329,28 @@
         "occurrence_interval_after_confirmation_minutes": {
           "type": "integer",
           "title": "Occurrence interval after confirmation in minutes",
-          "default": 900
+          "default": 15
         }
       }
     },
-    "connected_apps": {
+    "closed_captions": {
       "type": "object",
-      "title": "Connected Apps",
+      "title": "Closed Captions",
       "properties": {
         "is_enabled": {
           "type": "boolean",
-          "title": "Enable Connected Apps",
+          "title": "Enable Closed Captions",
+          "default": false
+        }
+      }
+    },
+    "sony_music": {
+      "type": "object",
+      "title": "Sony Music",
+      "properties": {
+        "is_enabled": {
+          "type": "boolean",
+          "title": "Enable Sony Music",
           "default": false
         }
       }

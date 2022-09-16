@@ -82,6 +82,12 @@ async function main() {
 //    const data = await cms.getStreams(client, 'G07FX7WZW')
 //    const data = await cms.getPanelImages(client, 'G69PZ5PDY')
 //    const data = await cms.getPanels(client, 'G69PZ5PDY')
+//    const data = await review.getRatings(client, 'GR751KNZY', 'series')
+//    const data = await review.removeRating(client, 'GR751KNZY', 'series')
+//    const data = await review.addEpisodeRating(client, 'GWDU8KN73', 'down')
+//    const data = await review.removeRating(client, 'GWDU8KN73', 'episode')
+//    const data = await review.addRating(client, 'GR751KNZY', '5s', 'series')
+//    const data = await review.getEpisodeRatings(client, 'GWDU8KN73')
     logger.info(data)
 
 }

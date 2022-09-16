@@ -146,7 +146,7 @@ async function getMovies(client, movieListingId) {
  * @returns {Promise<Object>}
  */
 async function getPanelIds(client, panelId) {
-    return getPanels(client, panelId, 'items(id)')
+    return _getPanels(client, panelId, 'items(id)')
 }
 
 
@@ -156,7 +156,7 @@ async function getPanelIds(client, panelId) {
  * @returns {Promise<Object>}
  */
 async function getPanelImages(client, panelId) {
-    return getPanels(client, panelId, 'items(id, images)')
+    return _getPanels(client, panelId, 'items(id, images)')
 }
 
 
@@ -167,6 +167,16 @@ async function getPanelImages(client, panelId) {
  * @returns {Promise<Object>}
  */
 async function getPanels(client, panelId, fields) {
+    return _getPanels(client, panelId, fields)
+}
+
+/**
+ * @param {import('./../controllers/clients').Clients} client
+ * @param {String} panelId
+ * @param {String} fields
+ * @returns {Promise<Object>}
+ */
+async function _getPanels(client, panelId, fields) {
     const fnName = '_getPanelIds'
     logger.debug(fnName)
     const queryData = await getBaseParams(client)

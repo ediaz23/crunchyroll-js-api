@@ -52,18 +52,8 @@
   "watch_page_rating": {
     "is_enabled": false
   },
-  "show_rating_update": {
-    "is_enabled": false
-  },
   "content_maturity_rating": {
     "is_enabled": false
-  },
-  "subscription_flow_tiers_menu": {
-    "version": "v1",
-    "experiment_name": "",
-    "experiment_id": "",
-    "variation_name": "",
-    "variation_id": ""
   },
   "app_resume_screens_reload_intervals": {
     "short_interval_minutes": 3,
@@ -82,9 +72,14 @@
   },
   "email_verification_banner": {
     "occurrence_interval_after_dismiss_minutes": 1440,
-    "occurrence_interval_after_confirmation_minutes": 900
+    "occurrence_interval_after_confirmation_minutes": 15
   },
-  "connected_apps": {
-    "is_enabled": false
+  "closed_captions": {
+    "is_enabled": false,
+    "remote_configurable": false
+  },
+  "sony_music": {
+    "is_enabled": false,
+    "remote_configurable": false
   }
 }
