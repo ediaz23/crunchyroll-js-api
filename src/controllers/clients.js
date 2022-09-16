@@ -62,6 +62,7 @@ class Clients {
 
     /**
      * @todo remember refresh data
+     * @returns {Promise<import('../models/profiles').Profiles>}
      */    
     async getProfile() {
         let profile = null
@@ -76,7 +77,16 @@ class Clients {
     }
 
     /**
+     * @param {import('../models/profiles').Profiles} data
+     */
+    async updateProfile(data) {
+        this.client.update({profile: data})
+        await this.saveToLocal()
+    }
+
+    /**
      * @todo remember refresh data
+     * @returns {Promise<import('../models/accounts').Accounts>}
      */    
     async getAccount() {
         let account = null

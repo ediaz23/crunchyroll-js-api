@@ -1,7 +1,11 @@
 
-class Tokens {
+const { BaseModel } = require('./baseModel')
+
+
+class Tokens extends BaseModel {
     
     constructor(param) {
+        super(param)
         const data = param || {}
         /** @type {String} */
         this.accessToken = data.accessToken || null

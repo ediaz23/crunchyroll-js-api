@@ -1,7 +1,11 @@
 
-class Cms {
+const { BaseModel } = require('./baseModel')
+
+
+class Cms extends BaseModel {
     
     constructor(param) {
+        super(param)
         const data = param || {}
         /** @type {String} */
         this.bucket = data.bucket || null

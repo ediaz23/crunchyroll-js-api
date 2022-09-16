@@ -1,7 +1,11 @@
 
-class Accounts {
+const { BaseModel } = require('./baseModel')
+
+
+class Accounts extends BaseModel {
     
     constructor(param) {
+        super(param)
         const data = param || {}
         /** @type {String} */
         this.accountId = data.accountId || null

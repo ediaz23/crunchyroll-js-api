@@ -1,7 +1,11 @@
 
-class Credentials {
+const { BaseModel } = require('./baseModel')
+
+
+class Credentials extends BaseModel {
     
     constructor(param) {
+        super(param)
         const data = param || {}
         /** @type {String} */
         this.username = data.username || null

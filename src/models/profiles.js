@@ -1,7 +1,11 @@
 
-class Profiles {
+const { BaseModel } = require('./baseModel')
+
+
+class Profiles extends BaseModel {
     
     constructor(param) {
+        super(param)
         const data = param || {}
         /** @type {String} */
         this.avatar = data.avatar || null

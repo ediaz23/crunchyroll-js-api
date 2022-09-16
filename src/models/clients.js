@@ -4,10 +4,13 @@ const { Tokens } = require('./tokens')
 const { Cms } = require('./cms')
 const { Accounts } = require('./accounts')
 const { Profiles } = require('./profiles')
+const { BaseModel } = require('./baseModel')
 
-class Clients {
+
+class Clients extends BaseModel {
     
     constructor() {
+        super()
         /** @type {Credentials} */
         this.credentials = new Credentials()
         /** @type {Tokens} */
@@ -45,6 +48,22 @@ class Clients {
         }
         if (data.profile) {
             this.profile.fromJSON(data.profile)
+        }
+    }
+
+    #update(key, data) {
+        if (data[key]) {
+            if (data[key] instanceof BaseModel) {
+                this[key] = data[key]
+            } else {
+                this[key].update(data[key])
+            }
+        }
+    }
+
+    update(data) {
+        for(const key of Object.keys(data)) {
+            this.#update(key, data)
         }
     }
     

@@ -60,6 +60,7 @@ async function makeRequest(fnName, url, reqConfig) {
     let out
     try {
         out = await res.json()
+        logger.info(JSON.stringify(out, null,'    '))
     } catch(_e) {
         // nothing
     }
@@ -84,10 +85,31 @@ function addParam(data, key, value, validator) {
 }
 
 
+/**
+ * Convert snake case to camel case
+ * @param {String}
+ * @returns {String}
+ */
+function toCamel(str) {
+    return str.replace(/([-_][a-z])/ig, $1 => $1.toUpperCase().replace('_', ''))
+}
+
+
+/**
+ * Convert camel case to snake case
+ * @param {String}
+ * @returns {String}
+ */
+function toSnake(str) {
+    return str.replace(/[A-Z]/g, letter => `_${letter.toLowerCase()}`)
+}
+
 module.exports = {
     camelCase: str => str.replace(/_([a-z])/g, (_m,w) => w.toUpperCase()),
     logRes,
     makeRawRequest,
     makeRequest,
     addParam,
+    toCamel,
+    toSnake,
 }
