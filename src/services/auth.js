@@ -17,6 +17,7 @@ function getBasicToken() {
     return base64data
 }
 
+
 /**
  * Make out system login
  * @param {import('../models/credentials').Credentials} credencials
@@ -30,7 +31,7 @@ async function getToken(credencials, grantType) {
     const body = {
         username: credencials.username,
         password: credencials.password,
-        grant_type: grantType
+        grant_type: grantType,
     }
     const url = `/auth/v1/token`
     const reqConfig = {
@@ -48,6 +49,7 @@ async function getToken(credencials, grantType) {
     token.fromJSON(data)
     return token
 }
+
 
 /**
  * Refresh access token.

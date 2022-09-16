@@ -25,13 +25,14 @@ async function logRes(fnName, res) {
     }
 }
 
+
 /**
- * Make http request
- * @param {String} fnName for loggin
+ * Make http request and return raw response
  * @param {String} url
  * @param {import('node-fetch').Request} reqConfig
+ * @returns {Promise<import('node-fetch').Response>}
  */
-async function makeRequest(fnName, url, reqConfig) {
+async function makeRawRequest(url, reqConfig) {
     url = decodeURIComponent(`${config.url}${url}`)
     logger.debug(`${reqConfig.method} - ${url}`)
     if (!reqConfig.headers) {
@@ -42,8 +43,19 @@ async function makeRequest(fnName, url, reqConfig) {
     } else {
         reqConfig.headers['User-Agent'] = CONST.getUserAgent()
     }
-    /** @type {import('node-fetch').Response} */
-    const res = await fetch(url, reqConfig)
+    return fetch(url, reqConfig)
+}
+
+
+/**
+ * Make http request
+ * @param {String} fnName for loggin
+ * @param {String} url
+ * @param {import('node-fetch').Request} reqConfig
+ * @returns {Promise<Object>}
+ */
+async function makeRequest(fnName, url, reqConfig) {
+    const res = await makeRawRequest(url, reqConfig)
     await logRes(fnName, res)
     let out
     try {
@@ -53,6 +65,7 @@ async function makeRequest(fnName, url, reqConfig) {
     }
     return out
 }
+
 
 /**
  * Add key to object if not undefined
@@ -70,9 +83,11 @@ function addParam(data, key, value, validator) {
     }
 }
 
+
 module.exports = {
     camelCase: str => str.replace(/_([a-z])/g, (_m,w) => w.toUpperCase()),
     logRes,
+    makeRawRequest,
     makeRequest,
     addParam,
 }

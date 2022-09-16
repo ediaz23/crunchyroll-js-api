@@ -7,6 +7,7 @@ class Tokens {
         this.accessToken = data.accessToken || null
         /** @type {String} */
         this.refreshToken = data.refreshToken || null
+        /** @type {Integer} */
         this.expiresIn = data.expiresIn || 0
         /** @type {String} */
         this.tokenType = data.tokenType || null
@@ -27,6 +28,8 @@ class Tokens {
             expires_in: this.expiresIn,
             token_type: this.tokenType,
             scope: this.scope,
+            country: this.country,
+            account_id: this.accountId,
             created_date: this.createdDate.toISOString(),
         }
     }
@@ -37,6 +40,8 @@ class Tokens {
         this.expiresIn = data.expires_in
         this.tokenType = data.token_type
         this.scope = data.scope
+        this.country = data.country
+        this.accountId = data.account_id
         this.createdDate = data.created_date ? new Date(data.created_date) : null
     }
     
