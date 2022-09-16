@@ -29,7 +29,6 @@ class Clients {
         if (!accessToken) {
             let data = null
             if (this.client.tokens && this.client.tokens.refreshToken) {
-                /** @todo it does not work */
                 data = await authService.getRefreshToken(this.client.tokens)
             } else {
                 data = await authService.getToken(this.client.credentials, 'password')

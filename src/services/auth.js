@@ -21,17 +21,19 @@ function getBasicToken() {
 /**
  * Make out system login
  * @param {import('../models/credentials').Credentials} credencials
- * @param {String} grantType
+ * @param {String} [grantType]
+ * @param {String} [scope]
  * @returns {Promise<Tokens>}
  */
-async function getToken(credencials, grantType) {
+async function getToken(credencials, grantType, scope) {
     const fnName = 'getToken'
     logger.debug(fnName)
     const basicToken = getBasicToken()
     const body = {
         username: credencials.username,
         password: credencials.password,
-        grant_type: grantType,
+        grant_type: grantType ? grantType : 'password',
+        scope: scope ? scope : 'offline_access'
     }
     const url = `/auth/v1/token`
     const reqConfig = {
@@ -53,7 +55,6 @@ async function getToken(credencials, grantType) {
 
 /**
  * Refresh access token.
- * Note: not really used
  * @param {import('../models/tokens').Tokens} token 
  * @returns {Promise<Tokens>}
  */
@@ -81,6 +82,7 @@ async function getRefreshToken(token) {
     newToken.fromJSON(data)
     return newToken
 }
+
 
 module.exports = {
     getToken,
