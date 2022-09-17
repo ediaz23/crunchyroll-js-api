@@ -14,12 +14,21 @@ const CONST = require('./const')
 async function logRes(fnName, res) {
     if (![200, 202, 204].includes(res.status)) {
         logger.error(`Status Code: ${res.status} - ${fnName}`)
+        let msg = null
         try {
             const r = await res.json()
+            if (r && r.error) {
+                msg = r.error
+            } 
             logger.error(r)
-        } catch( _e) {
-            logger.error(res.statusText)
+        } catch(_e) {
+            // ignore
         }
+        if (!msg) { 
+            msg = res.statusText ? res.statusText : 'Unexpected error.'
+        }
+        logger.error(msg)
+        throw new Error(msg)
     } else {
         logger.debug(`Status Code: ${res.status} - ${fnName}`)
     }
@@ -35,6 +44,10 @@ async function logRes(fnName, res) {
 async function makeRawRequest(url, reqConfig) {
     url = decodeURIComponent(`${config.url}${url}`)
     logger.debug(`${reqConfig.method} - ${url}`)
+    /** @todo quitar */
+    if (reqConfig.body && reqConfig.headers['Content-Type'] == 'application/json') {
+        logger.debug(JSON.stringify(JSON.parse(reqConfig.body), null, '    '))
+    }
     if (!reqConfig.headers) {
         reqConfig.headers = {}
     }
@@ -57,9 +70,10 @@ async function makeRawRequest(url, reqConfig) {
 async function makeRequest(fnName, url, reqConfig) {
     const res = await makeRawRequest(url, reqConfig)
     await logRes(fnName, res)
-    let out
+    let out = null
     try {
         out = await res.json()
+        /** @todo quitar */
         logger.info(JSON.stringify(out, null,'    '))
     } catch(_e) {
         // nothing

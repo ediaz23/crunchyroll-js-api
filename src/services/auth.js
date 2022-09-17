@@ -84,7 +84,34 @@ async function getRefreshToken(token) {
 }
 
 
+/**
+ * revoke access token.
+ * @param {import('../models/tokens').Tokens} token 
+ * @returns {Promise}
+ */
+async function revokeRefreshToken(token) {
+    const fnName = 'revokeRefreshToken'
+    logger.debug(fnName)
+    const basicToken = getBasicToken()
+    const body = {
+        token: token.refreshToken
+    }
+    const url = `/auth/v1/revoke`
+    const reqConfig = {
+        method: 'post',
+        body:  new URLSearchParams(body),
+        headers: {
+            'Authorization': `Basic ${basicToken}`,
+            'Content-Type': 'application/x-www-form-urlencoded',
+            'ETP-Anonymous-ID': null,
+        }
+    }
+    return utils.makeRequest(fnName, url, reqConfig)
+}
+
+
 module.exports = {
     getToken,
     getRefreshToken,
+    revokeRefreshToken,
 }

@@ -85,7 +85,6 @@ class Clients {
     }
 
     /**
-     * @todo remember refresh data
      * @returns {Promise<import('../models/accounts').Accounts>}
      */    
     async getAccount() {
