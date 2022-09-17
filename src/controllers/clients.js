@@ -5,6 +5,7 @@ const clientsModel = require('../models/clients')
 const authService = require('../services/auth')
 const indexService = require('../services/index')
 const accountService = require('../services/account')
+const { Tokens } = require('../models/tokens')
 
 
 class Clients {
@@ -38,6 +39,17 @@ class Clients {
             accessToken = this.client.tokens.accessToken
         }
         return `${this.client.tokens.tokenType} ${accessToken}`
+    }
+
+    /**
+     * @returns {Promise}
+     */
+    async revokeToken() {
+        if (this.client.tokens && this.client.tokens.accessToken) {
+            await authService.revokeRefreshToken(this.client.tokens)
+        }
+        this.client.tokens = new Tokens()
+        await this.saveToLocal()
     }
 
     /**
