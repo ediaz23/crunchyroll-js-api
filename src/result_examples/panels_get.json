@@ -1,0 +1,164 @@
+{
+    "__class__": "collection",
+    "__href__": "/cms/v2/CL/M3/crunchyroll/objects/G69PZ5PDY",
+    "__resource_key__": "cms:/objects/G69PZ5PDY",
+    "__links__": {},
+    "__actions__": {},
+    "total": 1,
+    "items": [
+        {
+            "__class__": "panel",
+            "__href__": "",
+            "__links__": {
+                "resource": {
+                    "href": "/cms/v2/CL/M3/crunchyroll/series/G69PZ5PDY"
+                },
+                "resource/channel": {
+                    "href": "/cms/v2/CL/M3/crunchyroll/channels/crunchyroll"
+                }
+            },
+            "__actions__": {},
+            "id": "G69PZ5PDY",
+            "external_id": "SRZ.273203",
+            "channel_id": "crunchyroll",
+            "title": "Overlord",
+            "description": "Cuando un popular MMORPG anuncia su cierre definitivo, el veterano jugador Momonoga decide quedarse en él hasta el mismo cierre, sin salir. El problema es que pasa la horra de cierre y él no se desconecta, pero los NPC han ganado conciencia propia. ¿Está atrapado?",
+            "promo_title": "",
+            "promo_description": "",
+            "type": "series",
+            "slug": "",
+            "slug_title": "overlord",
+            "images": {
+                "poster_tall": [
+                    [
+                        {
+                            "width": 60,
+                            "height": 90,
+                            "type": "poster_tall",
+                            "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/60x90/catalog/crunchyroll/59dd9785564f46c3cf2a18b38149f5a1.jpeg"
+                        },
+                        {
+                            "width": 120,
+                            "height": 180,
+                            "type": "poster_tall",
+                            "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/120x180/catalog/crunchyroll/59dd9785564f46c3cf2a18b38149f5a1.jpeg"
+                        },
+                        {
+                            "width": 240,
+                            "height": 360,
+                            "type": "poster_tall",
+                            "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/240x360/catalog/crunchyroll/59dd9785564f46c3cf2a18b38149f5a1.jpeg"
+                        },
+                        {
+                            "width": 480,
+                            "height": 720,
+                            "type": "poster_tall",
+                            "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/480x720/catalog/crunchyroll/59dd9785564f46c3cf2a18b38149f5a1.jpeg"
+                        },
+                        {
+                            "width": 750,
+                            "height": 1125,
+                            "type": "poster_tall",
+                            "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/750x1125/catalog/crunchyroll/59dd9785564f46c3cf2a18b38149f5a1.jpeg"
+                        },
+                        {
+                            "width": 960,
+                            "height": 1440,
+                            "type": "poster_tall",
+                            "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/960x1440/catalog/crunchyroll/59dd9785564f46c3cf2a18b38149f5a1.jpeg"
+                        },
+                        {
+                            "width": 1125,
+                            "height": 1688,
+                            "type": "poster_tall",
+                            "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1125x1688/catalog/crunchyroll/59dd9785564f46c3cf2a18b38149f5a1.jpeg"
+                        },
+                        {
+                            "width": 1200,
+                            "height": 1800,
+                            "type": "poster_tall",
+                            "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1200x1800/catalog/crunchyroll/59dd9785564f46c3cf2a18b38149f5a1.jpeg"
+                        },
+                        {
+                            "width": 1560,
+                            "height": 2340,
+                            "type": "poster_tall",
+                            "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1560x2340/catalog/crunchyroll/59dd9785564f46c3cf2a18b38149f5a1.jpeg"
+                        }
+                    ]
+                ],
+                "poster_wide": [
+                    [
+                        {
+                            "width": 320,
+                            "height": 180,
+                            "type": "poster_wide",
+                            "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/320x180/catalog/crunchyroll/5b65797ccc7305b99cd8f1922d66d777.jpeg"
+                        },
+                        {
+                            "width": 600,
+                            "height": 338,
+                            "type": "poster_wide",
+                            "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/600x338/catalog/crunchyroll/5b65797ccc7305b99cd8f1922d66d777.jpeg"
+                        },
+                        {
+                            "width": 640,
+                            "height": 360,
+                            "type": "poster_wide",
+                            "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/640x360/catalog/crunchyroll/5b65797ccc7305b99cd8f1922d66d777.jpeg"
+                        },
+                        {
+                            "width": 800,
+                            "height": 450,
+                            "type": "poster_wide",
+                            "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/800x450/catalog/crunchyroll/5b65797ccc7305b99cd8f1922d66d777.jpeg"
+                        },
+                        {
+                            "width": 1200,
+                            "height": 675,
+                            "type": "poster_wide",
+                            "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1200x675/catalog/crunchyroll/5b65797ccc7305b99cd8f1922d66d777.jpeg"
+                        },
+                        {
+                            "width": 1440,
+                            "height": 810,
+                            "type": "poster_wide",
+                            "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1440x810/catalog/crunchyroll/5b65797ccc7305b99cd8f1922d66d777.jpeg"
+                        },
+                        {
+                            "width": 1600,
+                            "height": 900,
+                            "type": "poster_wide",
+                            "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1600x900/catalog/crunchyroll/5b65797ccc7305b99cd8f1922d66d777.jpeg"
+                        },
+                        {
+                            "width": 1920,
+                            "height": 1080,
+                            "type": "poster_wide",
+                            "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1920x1080/catalog/crunchyroll/5b65797ccc7305b99cd8f1922d66d777.jpeg"
+                        }
+                    ]
+                ]
+            },
+            "series_metadata": {
+                "extended_description": "",
+                "episode_count": 192,
+                "season_count": 16,
+                "extended_maturity_rating": {},
+                "maturity_ratings": [
+                    "TV-14"
+                ],
+                "is_mature": false,
+                "mature_blocked": false,
+                "is_subbed": true,
+                "is_dubbed": false,
+                "is_simulcast": true,
+                "availability_notes": "",
+                "audio_locales": [],
+                "subtitle_locales": [],
+                "series_launch_year": 2022
+            },
+            "linked_resource_key": "cms:/series/G69PZ5PDY"
+        }
+    ]
+}

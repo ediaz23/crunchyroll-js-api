@@ -1,0 +1,25 @@
+{
+    "cms": {
+        "bucket": "/CL/M3/crunchyroll",
+        "policy": "eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9iZXRhLWFwaS5jcnVuY2h5cm9sbC5jb20vY21zL3Y~L0NML00zL2NydW5jaHlyb2xsLyoiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE2NjM0NDI4ODB9fX1dfQ__",
+        "signature": "izC3ZkEtDijHDyXqGlM3GvTZpTeBiVsk0l5JWCJnVkNLsTzJ7qJ4BUYx3vmxrlb4O~wSLTaMA-fYygyEAK7kx3hpoopO3~-5TdvWVLu7l5FOEMQDZGpE93EUEDu6fDNzUBsclnwEY1d6HJo7MZcGsxVr845ShHnVIj~OeeLOuTy19ys8IUbYE3OcXu4EDaK0Es5Jr5jtH9IL9jImVjhCa6FGGSRpNh3OM~ffTmcf8iivFyPeIHkBUAr93ewiT4fnRFKkOpTEjjPEXy1egUqxy1iMvP0hZ964t~X1j9~SNKO7iisi6is-ZaygzeKk7WCLJq2xdokZQR4Lt9fC0zySYg__",
+        "key_pair_id": "APKAJMWSQ5S7ZB3MF5VA",
+        "expires": "2022-09-17T19:28:00Z"
+    },
+    "cms_beta": {
+        "bucket": "/CL/M3/crunchyroll",
+        "policy": "eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9iZXRhLmNydW5jaHlyb2xsLmNvbS9jbXMvdj8vQ0wvTTMvY3J1bmNoeXJvbGwvKiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTY2MzQ0Mjg4MH19fV19",
+        "signature": "OYWw~Cd729NQIa0osXHDyg3S~w2wIRyOT2W~7TpCwsA1ZvlOIRMhU2Q1MsAwS3NC8uvOLM99VCPavu3lbfIujk4~bZnhZ5QIJu2UG78a5bDGIBgbJveJ7glXjkNNk5F3gyN-mo4m9rehP8~9qpkczpFZITlN1db2P6OXReaKgEFSreZelZhfoIkY5jx1mxIIQA7tj5AlIyGuz96vhOkOhaZx2EGOGySZ18J5bkqc~4bcqBSfEwzHxeO3NsFPdpULZW54uPmX4MqPVdCsWIuw4Hget-DfuMNYNGEP5tdzfchfEDTOBbDMr6ThIcaITcpJG6P8IMygdBC3wLQoLGY8ug__",
+        "key_pair_id": "APKAJMWSQ5S7ZB3MF5VA",
+        "expires": "2022-09-17T19:28:00Z"
+    },
+    "cms_web": {
+        "bucket": "/CL/M3/crunchyroll",
+        "policy": "eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9jcnVuY2h5cm9sbC5jb20vY21zL3Y~L0NML00zL2NydW5jaHlyb2xsLyoiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE2NjM0NDI4ODB9fX1dfQ__",
+        "signature": "rorf7xdM1jQsOWaLH~ZFiP8A9CiR69KD3oBeahkgkQcj7JDjvktxqOmn5RLc4C4NmSfr7jTZSA9iWkkzRgOTeV9LzGV7EHlOg8TY~6sQ89zryefx5VIc6HXWwZjoU9okxBY~qXF9IKqepeleaOqLGMmjWJ-Q7I89xEfEO~KxLGKae8xerbDkRaNBNtnpCcWkMQe35s5YrVfr~IaH4Oq9veieyf6HDaTk8F6kxKdfVwIlcb9Apx6omVM060JnCL8OZyu77DgTWsetffANlJCHY1sHO2HnUNasUr6P2J1sky~f79nK7GMTHfKfxlrgQu8a1c7XOhxQP2KZAca6lkQZ~A__",
+        "key_pair_id": "APKAJMWSQ5S7ZB3MF5VA",
+        "expires": "2022-09-17T19:28:00Z"
+    },
+    "service_available": true,
+    "default_marketing_opt_in": true
+}

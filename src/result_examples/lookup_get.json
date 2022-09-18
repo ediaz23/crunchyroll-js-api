@@ -1,0 +1,21 @@
+{
+    "__class__": "lookup",
+    "__href__": "/cms/v2/CL/M3/crunchyroll/lookup?channel_id=crunchyroll&external_id=SRZ.273203",
+    "__links__": {
+        "channel": {
+            "href": "/cms/v2/CL/M3/crunchyroll/channels/crunchyroll"
+        },
+        "series": {
+            "href": "/cms/v2/CL/M3/crunchyroll/series/G69PZ5PDY"
+        }
+    },
+    "__actions__": {},
+    "item": {
+        "guid": "G69PZ5PDY",
+        "container_type": "series",
+        "is_available": true,
+        "series": "G69PZ5PDY",
+        "channel": "G6099NDW6",
+        "channel_name": "crunchyroll"
+    }
+}

@@ -1,0 +1,50 @@
+[36m{
+    "__class__": "season",
+    "__href__": "/cms/v2/CL/M3/crunchyroll/seasons/GR9PXM286",
+    "__resource_key__": "cms:/seasons/GR9PXM286",
+    "__links__": {
+        "season/channel": {
+            "href": "/cms/v2/CL/M3/crunchyroll/channels/crunchyroll"
+        },
+        "season/episodes": {
+            "href": "/cms/v2/CL/M3/crunchyroll/episodes?season_id=GR9PXM286"
+        },
+        "season/series": {
+            "href": "/cms/v2/CL/M3/crunchyroll/series/GR751KNZY"
+        }
+    },
+    "__actions__": {},
+    "id": "GR9PXM286",
+    "channel_id": "crunchyroll",
+    "title": "Attack on Titan / Shingeki no Kyojin",
+    "slug_title": "attack-on-titan",
+    "series_id": "GR751KNZY",
+    "season_display_number": "",
+    "season_sequence_number": 0,
+    "season_number": 1,
+    "is_complete": false,
+    "description": "Muchos años atrás, la humanidad estuvo al borde de la extinción con la aparición de unas criaturas gigantes que devoraban a todas las personas. Huyendo, la humanidad consiguió sobrevivir en una ciudad fortificada de altas murallas que se ha convertido en el último reducto de la civilización contra los Titanes que campan a sus anchas por el mundo. Ahora esa paz está a punto de verse interrumpida por una cadena de acontecimientos que llevará a desvelar qué son los Titanes y cómo aparecieron.",
+    "keywords": [],
+    "season_tags": [
+        "Primavera-2013",
+        "Verano-2013"
+    ],
+    "images": {},
+    "extended_maturity_rating": {},
+    "maturity_ratings": [
+        "TV-14"
+    ],
+    "is_mature": false,
+    "mature_blocked": false,
+    "is_subbed": true,
+    "is_dubbed": false,
+    "is_simulcast": false,
+    "seo_title": "",
+    "seo_description": "",
+    "availability_notes": "",
+    "audio_locales": [],
+    "subtitle_locales": [],
+    "audio_locale": "",
+    "versions": null,
+    "identifier": ""
+}

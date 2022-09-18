@@ -1,0 +1,164 @@
+{
+    "total": 3,
+    "total_before_filter": 3,
+    "items": [
+        {
+            "panel": {
+                "external_id": "EPI.810812",
+                "title": "Final -Nemo-",
+                "id": "GZ7UVPV9M",
+                "promo_title": "",
+                "promo_description": "",
+                "episode_metadata": {
+                    "audio_locale": "",
+                    "availability_ends": "9998-11-30T08:00:00Z",
+                    "availability_notes": "",
+                    "availability_starts": "2021-06-20T16:30:00Z",
+                    "available_date": null,
+                    "available_offline": true,
+                    "closed_captions_available": false,
+                    "duration_ms": 1420019,
+                    "eligible_region": "CL",
+                    "episode": "12",
+                    "episode_air_date": "2021-06-21T00:00:00+09:00",
+                    "episode_number": 12,
+                    "extended_maturity_rating": {},
+                    "free_available_date": "2021-06-20T16:30:00Z",
+                    "identifier": "",
+                    "is_clip": false,
+                    "is_dubbed": false,
+                    "is_mature": false,
+                    "is_premium_only": false,
+                    "is_subbed": true,
+                    "mature_blocked": false,
+                    "maturity_ratings": [
+                        "TV-14"
+                    ],
+                    "premium_available_date": "2021-06-20T16:30:00Z",
+                    "premium_date": null,
+                    "season_id": "G6MGC3JGM",
+                    "season_number": 1,
+                    "season_slug_title": "seven-knights-revolution-hero-successor",
+                    "season_title": "SEVEN KNIGHTS REVOLUTION: Hero Successor",
+                    "sequence_number": 12,
+                    "series_id": "GZJH3DNE5",
+                    "series_slug_title": "seven-knights-revolution-hero-successor",
+                    "series_title": "SEVEN KNIGHTS REVOLUTION: Hero Successor",
+                    "subtitle_locales": [
+                        "en-US",
+                        "es-419",
+                        "es-ES",
+                        "fr-FR",
+                        "pt-BR",
+                        "ar-SA",
+                        "it-IT",
+                        "de-DE",
+                        "ru-RU"
+                    ],
+                    "upload_date": "2021-06-21T00:00:00+09:00",
+                    "versions": null
+                },
+                "description": "Llega la batalla final, donde Nemo tendrá que ponerlo todo en juego, donde todos tendrán que demostrar lo que valen y donde los sentimientos de unos y otros saldrán a la luz.",
+                "type": "episode",
+                "images": {
+                    "thumbnail": [
+                        [
+                            {
+                                "height": 180,
+                                "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/320x180/catalog/crunchyroll/e16e209f7563030e1e9d51d4a01c8ded.jpg",
+                                "type": "thumbnail",
+                                "width": 320
+                            },
+                            {
+                                "height": 338,
+                                "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/600x338/catalog/crunchyroll/e16e209f7563030e1e9d51d4a01c8ded.jpg",
+                                "type": "thumbnail",
+                                "width": 600
+                            },
+                            {
+                                "height": 360,
+                                "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/640x360/catalog/crunchyroll/e16e209f7563030e1e9d51d4a01c8ded.jpg",
+                                "type": "thumbnail",
+                                "width": 640
+                            },
+                            {
+                                "height": 450,
+                                "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/800x450/catalog/crunchyroll/e16e209f7563030e1e9d51d4a01c8ded.jpg",
+                                "type": "thumbnail",
+                                "width": 800
+                            },
+                            {
+                                "height": 675,
+                                "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1200x675/catalog/crunchyroll/e16e209f7563030e1e9d51d4a01c8ded.jpg",
+                                "type": "thumbnail",
+                                "width": 1200
+                            },
+                            {
+                                "height": 810,
+                                "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1440x810/catalog/crunchyroll/e16e209f7563030e1e9d51d4a01c8ded.jpg",
+                                "type": "thumbnail",
+                                "width": 1440
+                            },
+                            {
+                                "height": 900,
+                                "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1600x900/catalog/crunchyroll/e16e209f7563030e1e9d51d4a01c8ded.jpg",
+                                "type": "thumbnail",
+                                "width": 1600
+                            },
+                            {
+                                "height": 1080,
+                                "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1920x1080/catalog/crunchyroll/e16e209f7563030e1e9d51d4a01c8ded.jpg",
+                                "type": "thumbnail",
+                                "width": 1920
+                            }
+                        ]
+                    ]
+                },
+                "playback": "https://pl.crunchyroll.com/asset/421bdf711026259f5ecfedf6ff7901f8/v/0678976e10609af65b1f28b507a01152/languages/en-US,es-419,es-ES,fr-FR,pt-BR,ar-SA,it-IT,de-DE,ru-RU,es-LA,ar-ME?*&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly9wbC5jcnVuY2h5cm9sbC5jb20vYXNzZXQvNDIxYmRmNzExMDI2MjU5ZjVlY2ZlZGY2ZmY3OTAxZjgvdi8wNjc4OTc2ZTEwNjA5YWY2NWIxZjI4YjUwN2EwMTE1Mi8~KiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTY2MzUzMzY1M319fV19&Signature=YGwaIwxMjv7AIL1qXB9YZIXtvXpf~qLVXurZhDS3PTS0DOL96un~MsOp74GLs2g0CKuOm2Su6yI9bu2sX5~HB0bqwSbqjANJ2kId-JSrNon4Q7lkSKDYzTEcPUK4~4KiITD-Ovh5tRRJogLgFzD~0l4gmE4SHnka7Wmj1rwO1Cgmvvgc2dJ5JEVJT7uy3bsZG8GK370UJ8BV7gang9utnq58kPAU2caBu0bJYDqdCMnzP51EcZvPmu5D6VQF4Bb93Jpd26~PCvrurj6hfeXYNbIwO4GPsFxNA-yoq~pxxDMWoQe~6GYnInm9xYXHGCM3FfhVQqMMnJKA0FyqWu76Rg__&Key-Pair-Id=APKAJMWSQ5S7ZB3MF5VA",
+                "channel_id": "crunchyroll",
+                "slug_title": "finale--nemo-",
+                "slug": "",
+                "__class__": "panel",
+                "linked_resource_key": "cms:/episodes/GZ7UVPV9M",
+                "__links__": {
+                    "episode/season": {
+                        "href": "/cms/v2/CL/M3/crunchyroll/seasons/G6MGC3JGM"
+                    },
+                    "episode/series": {
+                        "href": "/cms/v2/CL/M3/crunchyroll/series/GZJH3DNE5"
+                    },
+                    "resource": {
+                        "href": "/cms/v2/CL/M3/crunchyroll/episodes/GZ7UVPV9M"
+                    },
+                    "resource/channel": {
+                        "href": "/cms/v2/CL/M3/crunchyroll/channels/crunchyroll"
+                    },
+                    "streams": {
+                        "href": "/cms/v2/CL/M3/crunchyroll/videos/G5JFZEZGD/streams"
+                    }
+                },
+                "__actions__": {},
+                "__href__": ""
+            },
+            "new": false,
+            "new_content": false,
+            "is_favorite": false,
+            "never_watched": false,
+            "completion_status": true,
+            "playhead": 1419,
+            "__class__": "continue_watching_item",
+            "__href__": "",
+            "__links__": {},
+            "__actions__": {}
+        }
+    ],
+    "__class__": "watchlist",
+    "__href__": "/content/v1/account-id/watchlist?channel_id=crunchyroll&locale=es-419&n=1&start=0",
+    "__resource_key__": "content:/watchlist?channel_id=crunchyroll&locale=es-419&n=1&start=0",
+    "__links__": {
+        "continuation": {
+            "href": "/content/v1/account-id/watchlist?channel_id=crunchyroll&locale=es-419&n=1&start=1"
+        }
+    },
+    "__actions__": {}
+}
