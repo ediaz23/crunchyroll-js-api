@@ -2,6 +2,8 @@
 const { Clients } = require('../controllers/clients')
 const fs = require('fs')
 const auth = require('../services/auth')
+const testUtils = require('./testUtils')
+
 
 /** @type {Clients} */
 let client = null
@@ -26,12 +28,8 @@ describe('Auth', () => {
 
     test('Credentials content', () => {
         expect(credentials).not.toBeNull()
-        expect(credentials.username).toBeDefined()
-        expect(credentials.username).not.toBe('')
-        expect(credentials.username).not.toBeNull()
-        expect(credentials.password).toBeDefined()
-        expect(credentials.password).not.toBe('')
-        expect(credentials.password).not.toBeNull()
+        testUtils.existValue(credentials.username)
+        testUtils.existValue(credentials.password)
     })
 
     test('Autenticate Wrong Email', async () => {

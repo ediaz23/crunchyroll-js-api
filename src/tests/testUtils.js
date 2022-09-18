@@ -37,8 +37,20 @@ function totalCheck(res) {
     expect(res.items.length).toEqual(res.total)
 }
 
+
+/**
+ * Exists value
+ * @param {Object} value
+ */
+function existValue(value) {
+    expect(value).toBeDefined()
+    expect(value).not.toBe('')
+    expect(value).not.toBeNull()
+}
+
 module.exports = {
     itesmCheck,
     resultCheck,
-    totalCheck
+    totalCheck,
+    existValue,
 }

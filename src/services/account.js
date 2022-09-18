@@ -81,7 +81,6 @@ async function updateProfile(client, data) {
         body:  JSON.stringify(data instanceof Profiles ? data.toJSON() : data),
     }
     await utils.makeRequest(fnName, url, reqConfig)
-    await client.updateProfile(data)
 }
 
 module.exports = {
