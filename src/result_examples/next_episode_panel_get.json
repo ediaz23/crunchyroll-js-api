@@ -1,0 +1,135 @@
+{
+  "panel": {
+      "external_id": "EPI.845604",
+      "description": "Naofumi se lanza al ataque con sus compañeras y la ayuda de Ost, pero el enemigo es extremadamente poderoso. ¿Quién controla al espíritu tortuga?",
+      "playback": "https://pl.crunchyroll.com/asset/f6723249bd54d243814aaa4860badd61/v/722b1cc41f3606cb9703a20ef01962cd/languages/de-DE?*&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly9wbC5jcnVuY2h5cm9sbC5jb20vYXNzZXQvZjY3MjMyNDliZDU0ZDI0MzgxNGFhYTQ4NjBiYWRkNjEvdi83MjJiMWNjNDFmMzYwNmNiOTcwM2EyMGVmMDE5NjJjZC8~KiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTY2MzgwODI4MX19fV19&Signature=VvjVMtNSHzqHC0CnlbOGsTRUY9MAhKYBHUyOanCbv28IKTlJ0MMeJznpzlUoEGpaQS4UHPgFgnW8jzY670kYm6OUQsQLuUpRFRGGq0vRJ8obu7Kxyn8BOdJqhJrHL7qx0XmKdtsOM~3XamXGF36JN2WUgnU8eBd70uLPhZSwdsgNfL2Op6ToXBs1goYj-6zgW3Rz6Ny9x4z0kAx5FCc~NhRKnVudN-jFY82bAfJ79qReHYm9D6UK2polr7t-jx9ychud4VDE1CLKFox4ZiZGi~WxYq1CH4b9nZVHNawwdsaQYKCdmpxJBXIoaLzuQ8euq5nOemstKnmW048PxXXHMw__&Key-Pair-Id=APKAJMWSQ5S7ZB3MF5VA",
+      "__class__": "panel",
+      "channel_id": "crunchyroll",
+      "promo_title": "",
+      "promo_description": "",
+      "slug": "",
+      "images": {
+          "thumbnail": [
+              [
+                  {
+                      "height": 180,
+                      "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/320x180/catalog/crunchyroll/3293e4ed8d7c09a96305e5e8eed314e5.jpeg",
+                      "type": "thumbnail",
+                      "width": 320
+                  },
+                  {
+                      "height": 338,
+                      "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/600x338/catalog/crunchyroll/3293e4ed8d7c09a96305e5e8eed314e5.jpeg",
+                      "type": "thumbnail",
+                      "width": 600
+                  },
+                  {
+                      "height": 360,
+                      "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/640x360/catalog/crunchyroll/3293e4ed8d7c09a96305e5e8eed314e5.jpeg",
+                      "type": "thumbnail",
+                      "width": 640
+                  },
+                  {
+                      "height": 450,
+                      "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/800x450/catalog/crunchyroll/3293e4ed8d7c09a96305e5e8eed314e5.jpeg",
+                      "type": "thumbnail",
+                      "width": 800
+                  },
+                  {
+                      "height": 675,
+                      "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1200x675/catalog/crunchyroll/3293e4ed8d7c09a96305e5e8eed314e5.jpeg",
+                      "type": "thumbnail",
+                      "width": 1200
+                  },
+                  {
+                      "height": 810,
+                      "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1440x810/catalog/crunchyroll/3293e4ed8d7c09a96305e5e8eed314e5.jpeg",
+                      "type": "thumbnail",
+                      "width": 1440
+                  },
+                  {
+                      "height": 900,
+                      "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1600x900/catalog/crunchyroll/3293e4ed8d7c09a96305e5e8eed314e5.jpeg",
+                      "type": "thumbnail",
+                      "width": 1600
+                  },
+                  {
+                      "height": 1080,
+                      "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1920x1080/catalog/crunchyroll/3293e4ed8d7c09a96305e5e8eed314e5.jpeg",
+                      "type": "thumbnail",
+                      "width": 1920
+                  }
+              ]
+          ]
+      },
+      "episode_metadata": {
+          "audio_locale": "deDE",
+          "availability_ends": "9998-11-30T08:00:00Z",
+          "availability_notes": "",
+          "availability_starts": "2022-05-11T21:00:00Z",
+          "available_date": null,
+          "available_offline": true,
+          "closed_captions_available": false,
+          "duration_ms": 1420104,
+          "eligible_region": "CL",
+          "episode": "2",
+          "episode_air_date": "2022-04-13T21:45:00+09:00",
+          "episode_number": 2,
+          "extended_maturity_rating": {},
+          "free_available_date": "2022-05-11T21:00:00Z",
+          "identifier": "",
+          "is_clip": false,
+          "is_dubbed": true,
+          "is_mature": false,
+          "is_premium_only": true,
+          "is_subbed": false,
+          "mature_blocked": false,
+          "maturity_ratings": [
+              "TV-14"
+          ],
+          "premium_available_date": "2022-05-11T21:00:00Z",
+          "premium_date": null,
+          "season_id": "G63VC274E",
+          "season_number": 2,
+          "season_slug_title": "the-rising-of-the-shield-hero-season-2-german-dub",
+          "season_title": "[GER] [S2] The Rising of the Shield Hero",
+          "sequence_number": 2,
+          "series_id": "G6W4QKX0R",
+          "series_slug_title": "the-rising-of-the-shield-hero",
+          "series_title": "The Rising of the Shield Hero",
+          "subtitle_locales": [
+              "de-DE"
+          ],
+          "upload_date": "2022-04-13T21:45:00+09:00",
+          "versions": null
+      },
+      "__href__": "",
+      "__links__": {
+          "episode/season": {
+              "href": "/cms/v2/CL/M3/crunchyroll/seasons/G63VC274E"
+          },
+          "episode/series": {
+              "href": "/cms/v2/CL/M3/crunchyroll/series/G6W4QKX0R"
+          },
+          "resource": {
+              "href": "/cms/v2/CL/M3/crunchyroll/episodes/GJWU25M18"
+          },
+          "resource/channel": {
+              "href": "/cms/v2/CL/M3/crunchyroll/channels/crunchyroll"
+          },
+          "streams": {
+              "href": "/cms/v2/CL/M3/crunchyroll/videos/GM8FX8Z3W/streams"
+          }
+      },
+      "__actions__": {},
+      "type": "episode",
+      "linked_resource_key": "cms:/episodes/GJWU25M18",
+      "id": "GJWU25M18",
+      "title": "Huellas del espíritu tortuga",
+      "slug_title": "footprints-of-the-spirit-tortoise"
+  },
+  "fully_watched": false,
+  "never_watched": true,
+  "playhead": 0
+}
+

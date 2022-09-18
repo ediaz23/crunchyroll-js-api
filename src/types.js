@@ -71,4 +71,64 @@
  * @property {Boolean} default_marketing_opt_in
  */
 
+/**
+ * @typedef RatingEpisode
+ * @type {Object}
+ * @property {Object} up
+ * @property {String} up.displayed
+ * @property {String} up.unit
+ * @property {Object} down
+ * @property {String} down.displayed
+ * @property {String} down.unit
+ * @property {Number} total
+ * @property {String} rating
+ */
+
+/**
+ * @typedef RatingBasic
+ * @type {Object}
+ * @property {String} displayed
+ * @property {String} unit
+ * @property {Number} percentage
+ */
+ 
+/**
+ * @typedef RatingStars
+ * @type {Object}
+ * @property {RatingBasic} [1s]
+ * @property {RatingBasic} [2s]
+ * @property {RatingBasic} [3s]
+ * @property {RatingBasic} [4s]
+ * @property {RatingBasic} [5s] 
+ * @property {String} average
+ * @property {Number} total
+ * @property {String} rating
+ */
+
+/**
+ * @typedef AuthBase
+ * @type {Object}
+ * @property {String} token
+ * @property {String} locale
+ */
+
+/**
+ * @typedef {AuthBase & import('./models/cms').Cms} CmsAuth
+ */
+
+/**
+ * @typedef AccountParamSub
+ * @type {Object}
+ * @property {String} accountId
+ * @typedef {AuthBase & AccountParamSub} AccountAuth
+ */
+
+/**
+ * @typedef CustomListResponse
+ * @type {Object}
+ * @property {String} list_id
+ * @property {Number} total
+ * @property {String} modified_at
+ */
+
 export {}  // eslint-disable-line no-undef

@@ -1,8 +1,9 @@
 module.exports = {
-	"roots": [
+	roots: [
 		"<rootDir>/src"
 	],
-	"testMatch": [
+	globalSetup: "<rootDir>/src/tests/config/setUp.js",
+	testMatch: [
 		"**/tests/*.test.+(ts|tsx|js)",
 	],
 }

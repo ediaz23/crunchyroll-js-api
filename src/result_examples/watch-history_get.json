@@ -1,0 +1,3596 @@
+{
+  "next_page": "/content/v1/watch-history/account-id?locale=es-419&page=2&page_size=25",
+  "items": [
+      {
+          "id": "G7PU4ZEGD",
+          "date_played": "2022-09-19T23:08:45Z",
+          "parent_id": "GYXM79M56",
+          "parent_type": "series",
+          "playhead": 1,
+          "fully_watched": false,
+          "panel": {
+              "slug": "",
+              "promo_title": "",
+              "description": "Dai y Popp lanzan su contraataque para superar la poderosa Guardia Demoníaca de Cielo y Tierra de Vearn, pero ¿tendrán éxito? ¿Será el fin del Rey Oscuro?",
+              "playback": "https://pl.crunchyroll.com/asset/c1e0f5b529d7e3056c724508decaf87c/v/48dc2eac921d43894a84da95d3f91c7b/languages/en-US,es-419,es-ES,fr-FR,pt-BR,ar-SA,it-IT,de-DE,ru-RU,es-LA,ar-ME?*&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly9wbC5jcnVuY2h5cm9sbC5jb20vYXNzZXQvYzFlMGY1YjUyOWQ3ZTMwNTZjNzI0NTA4ZGVjYWY4N2Mvdi80OGRjMmVhYzkyMWQ0Mzg5NGE4NGRhOTVkM2Y5MWM3Yi8~KiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTY2MzgwNTgzMH19fV19&Signature=aWes40Vq4Bn7pDKlxE8l26R1r8PSz0zU1eWkj094IZSy-7dId7Kif6cf5g-TFuilm~CRYk441GWsx7Hu9Ixirag571JgJfr-RBH0A8kTZWPmFMa0TGOUze3U2kcHU7DhSI6PjJtKi5oS86fU1VXslYgSna4hAUUJh6hENN0nhh1Kt7EaMTx~eD-F1lsCA6Ayg4eqtgjsHfVb-a~Aq~lDjjicY8FSmTv9XLxSCuOmeCgQI9BshceLcTi6TARK-yzKeMqY5O1nbzDeU36h9GWKeGkCrVdivL0~Se9R8bp2ATbdDib1xIVSmbxdzl8l9ZmwQGNxsx8tynU0qkB5xBgMug__&Key-Pair-Id=APKAJMWSQ5S7ZB3MF5VA",
+              "linked_resource_key": "cms:/episodes/G7PU4ZEGD",
+              "promo_description": "",
+              "slug_title": "",
+              "__href__": "",
+              "__links__": {
+                  "episode/season": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/seasons/G64G2VG8R"
+                  },
+                  "episode/series": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/series/GYXM79M56"
+                  },
+                  "resource": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/episodes/G7PU4ZEGD"
+                  },
+                  "resource/channel": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/channels/crunchyroll"
+                  },
+                  "streams": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/videos/G4GFQJ9G7/streams"
+                  }
+              },
+              "type": "episode",
+              "channel_id": "crunchyroll",
+              "external_id": "EPI.859256",
+              "__class__": "panel",
+              "title": "El gran contraataque final",
+              "episode_metadata": {
+                  "audio_locale": "jaJP",
+                  "availability_ends": "9998-11-30T08:00:00Z",
+                  "availability_notes": "",
+                  "availability_starts": "2022-09-17T02:00:00Z",
+                  "available_date": null,
+                  "available_offline": true,
+                  "closed_captions_available": false,
+                  "duration_ms": 1442796,
+                  "eligible_region": "CL",
+                  "episode": "95",
+                  "episode_air_date": "2022-09-17T09:30:00+09:00",
+                  "episode_number": 95,
+                  "extended_maturity_rating": {},
+                  "free_available_date": "2022-09-17T02:00:00Z",
+                  "identifier": "",
+                  "is_clip": false,
+                  "is_dubbed": false,
+                  "is_mature": false,
+                  "is_premium_only": true,
+                  "is_subbed": true,
+                  "mature_blocked": false,
+                  "maturity_ratings": [
+                      "TV-14"
+                  ],
+                  "premium_available_date": "2022-09-17T02:00:00Z",
+                  "premium_date": null,
+                  "season_id": "G64G2VG8R",
+                  "season_number": 1,
+                  "season_slug_title": "dragon-quest-the-adventure-of-dai",
+                  "season_title": "Dragon Quest: La aventura de Dai",
+                  "sequence_number": 95,
+                  "series_id": "GYXM79M56",
+                  "series_slug_title": "dragon-quest-the-adventure-of-dai",
+                  "series_title": "DRAGON QUEST The Adventure of Dai",
+                  "subtitle_locales": [
+                      "en-US",
+                      "es-419",
+                      "es-ES",
+                      "fr-FR",
+                      "pt-BR",
+                      "ar-SA",
+                      "it-IT",
+                      "de-DE",
+                      "ru-RU"
+                  ],
+                  "upload_date": "2022-09-17T09:30:00+09:00",
+                  "versions": null
+              },
+              "images": {
+                  "thumbnail": [
+                      [
+                          {
+                              "height": 180,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/320x180/catalog/crunchyroll/e8ace64e452a07b88e1e8db13797c457.jpeg",
+                              "type": "thumbnail",
+                              "width": 320
+                          },
+                          {
+                              "height": 338,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/600x338/catalog/crunchyroll/e8ace64e452a07b88e1e8db13797c457.jpeg",
+                              "type": "thumbnail",
+                              "width": 600
+                          },
+                          {
+                              "height": 360,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/640x360/catalog/crunchyroll/e8ace64e452a07b88e1e8db13797c457.jpeg",
+                              "type": "thumbnail",
+                              "width": 640
+                          },
+                          {
+                              "height": 450,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/800x450/catalog/crunchyroll/e8ace64e452a07b88e1e8db13797c457.jpeg",
+                              "type": "thumbnail",
+                              "width": 800
+                          },
+                          {
+                              "height": 675,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1200x675/catalog/crunchyroll/e8ace64e452a07b88e1e8db13797c457.jpeg",
+                              "type": "thumbnail",
+                              "width": 1200
+                          },
+                          {
+                              "height": 810,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1440x810/catalog/crunchyroll/e8ace64e452a07b88e1e8db13797c457.jpeg",
+                              "type": "thumbnail",
+                              "width": 1440
+                          },
+                          {
+                              "height": 900,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1600x900/catalog/crunchyroll/e8ace64e452a07b88e1e8db13797c457.jpeg",
+                              "type": "thumbnail",
+                              "width": 1600
+                          },
+                          {
+                              "height": 1080,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1920x1080/catalog/crunchyroll/e8ace64e452a07b88e1e8db13797c457.jpeg",
+                              "type": "thumbnail",
+                              "width": 1920
+                          }
+                      ]
+                  ]
+              },
+              "__actions__": {},
+              "id": "G7PU4ZEGD"
+          }
+      },
+      {
+          "id": "G8MFNQG5V",
+          "date_played": "2022-09-19T01:46:07Z",
+          "parent_id": "GR3KV3PWR",
+          "parent_type": "movie_listing",
+          "playhead": 2,
+          "fully_watched": false,
+          "panel": {
+              "playback": "https://pl.crunchyroll.com/asset/c5405d02b84fbf392bedd013d89559b3/v/966af8c1f2d45df2513b0b83916e0d8e/languages/en-US,es-419,pt-BR,es-LA?*&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly9wbC5jcnVuY2h5cm9sbC5jb20vYXNzZXQvYzU0MDVkMDJiODRmYmYzOTJiZWRkMDEzZDg5NTU5YjMvdi85NjZhZjhjMWYyZDQ1ZGYyNTEzYjBiODM5MTZlMGQ4ZS8~KiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTY2MzgwNTg3MH19fV19&Signature=m4t-yl~pjIm0RN3BVdBsRuQxKeXFSA2G7HbcnKjgqaXbqPVIKElVTVNxCqX878D7YxZ5D1ybLoMV5ZFA3Q-RacrT5dGvfLQmdsbXuyZew0kGROrHme9K8P1Fd-MKl9K80iVhKD2aZEB9P0u14EVaZEMT4kQgQDAvVnFg1PpeOEs3Na5mr8kVVKOvLNWfp4Y3mYCHzoI0crQd15K5PkOics8J87bJI1aqItFqaWaXaub26bn~y6stNp6Ri5jg~VHTArg2yx6HCWdyMZ245mKnUp284f-LB4NWi57PBDO3slephFbZ7iMQb90BHgcQcG7zA7c5gPRmDTn1uq8Ebj3AsQ__&Key-Pair-Id=APKAJMWSQ5S7ZB3MF5VA",
+              "__actions__": {},
+              "external_id": "MED.775963",
+              "channel_id": "crunchyroll",
+              "promo_title": "",
+              "slug_title": "sword-of-the-stranger",
+              "images": {
+                  "thumbnail": [
+                      [
+                          {
+                              "height": 180,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/320x180/catalog/crunchyroll/ae0c77539eb31e69cbbfaa6bee79fd2e.jpeg",
+                              "type": "thumbnail",
+                              "width": 320
+                          },
+                          {
+                              "height": 338,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/600x338/catalog/crunchyroll/ae0c77539eb31e69cbbfaa6bee79fd2e.jpeg",
+                              "type": "thumbnail",
+                              "width": 600
+                          },
+                          {
+                              "height": 360,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/640x360/catalog/crunchyroll/ae0c77539eb31e69cbbfaa6bee79fd2e.jpeg",
+                              "type": "thumbnail",
+                              "width": 640
+                          },
+                          {
+                              "height": 450,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/800x450/catalog/crunchyroll/ae0c77539eb31e69cbbfaa6bee79fd2e.jpeg",
+                              "type": "thumbnail",
+                              "width": 800
+                          },
+                          {
+                              "height": 675,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1200x675/catalog/crunchyroll/ae0c77539eb31e69cbbfaa6bee79fd2e.jpeg",
+                              "type": "thumbnail",
+                              "width": 1200
+                          },
+                          {
+                              "height": 810,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1440x810/catalog/crunchyroll/ae0c77539eb31e69cbbfaa6bee79fd2e.jpeg",
+                              "type": "thumbnail",
+                              "width": 1440
+                          },
+                          {
+                              "height": 900,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1600x900/catalog/crunchyroll/ae0c77539eb31e69cbbfaa6bee79fd2e.jpeg",
+                              "type": "thumbnail",
+                              "width": 1600
+                          },
+                          {
+                              "height": 1080,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1920x1080/catalog/crunchyroll/ae0c77539eb31e69cbbfaa6bee79fd2e.jpeg",
+                              "type": "thumbnail",
+                              "width": 1920
+                          }
+                      ]
+                  ]
+              },
+              "__href__": "",
+              "description": "",
+              "movie_metadata": {
+                  "availability_notes": "",
+                  "available_offline": true,
+                  "closed_captions_available": false,
+                  "duration_ms": 6156040,
+                  "extended_maturity_rating": {},
+                  "is_dubbed": false,
+                  "is_mature": false,
+                  "is_premium_only": false,
+                  "is_subbed": true,
+                  "mature_blocked": false,
+                  "maturity_ratings": [
+                      "PG-13"
+                  ],
+                  "movie_listing_id": "GR3KV3PWR",
+                  "movie_listing_slug_title": "sword-of-the-stranger",
+                  "movie_listing_title": "Sword of the Stranger"
+              },
+              "type": "movie",
+              "__class__": "panel",
+              "id": "G8MFNQG5V",
+              "__links__": {
+                  "movie/movie_listing": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/movie_listings/GR3KV3PWR"
+                  },
+                  "resource": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/movies/G8MFNQG5V"
+                  },
+                  "resource/channel": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/channels/crunchyroll"
+                  },
+                  "streams": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/videos/G8MFNQG5V/streams"
+                  }
+              },
+              "title": "Sword of the Stranger",
+              "slug": "",
+              "promo_description": "",
+              "linked_resource_key": "cms:/movies/G8MFNQG5V"
+          }
+      },
+      {
+          "id": "G8WUNDPX5",
+          "date_played": "2022-09-16T20:24:25Z",
+          "parent_id": "GR751KNZY",
+          "parent_type": "series",
+          "playhead": 1,
+          "fully_watched": false,
+          "panel": {
+              "type": "episode",
+              "__href__": "",
+              "slug_title": "the-door-of-hope",
+              "slug": "",
+              "description": "La historia se centra en el pasado de nuevo, cuando Reiner, Annie y los demás llegaron hasta la Isla Paradis.",
+              "title": "La puerta de la esperanza",
+              "promo_title": "",
+              "__links__": {
+                  "episode/season": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/seasons/G69PC2WV0"
+                  },
+                  "episode/series": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/series/GR751KNZY"
+                  },
+                  "resource": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/episodes/G8WUNDPX5"
+                  },
+                  "resource/channel": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/channels/crunchyroll"
+                  },
+                  "streams": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/videos/GQ9FGDZJW/streams"
+                  }
+              },
+              "channel_id": "crunchyroll",
+              "promo_description": "",
+              "linked_resource_key": "cms:/episodes/G8WUNDPX5",
+              "id": "G8WUNDPX5",
+              "__class__": "panel",
+              "episode_metadata": {
+                  "audio_locale": "jaJP",
+                  "availability_ends": "9998-11-30T08:00:00Z",
+                  "availability_notes": "",
+                  "availability_starts": "2020-12-20T20:45:00Z",
+                  "available_date": null,
+                  "available_offline": true,
+                  "closed_captions_available": false,
+                  "duration_ms": 1435123,
+                  "eligible_region": "CL",
+                  "episode": "62",
+                  "episode_air_date": "2020-12-21T00:10:00+09:00",
+                  "episode_number": 62,
+                  "extended_maturity_rating": {},
+                  "free_available_date": "2020-12-20T20:45:00Z",
+                  "identifier": "",
+                  "is_clip": false,
+                  "is_dubbed": false,
+                  "is_mature": false,
+                  "is_premium_only": false,
+                  "is_subbed": true,
+                  "mature_blocked": false,
+                  "maturity_ratings": [
+                      "TV-14"
+                  ],
+                  "premium_available_date": "2020-12-20T20:45:00Z",
+                  "premium_date": null,
+                  "season_id": "G69PC2WV0",
+                  "season_number": 4,
+                  "season_slug_title": "attack-on-titan-final-season",
+                  "season_title": "Attack on Titan",
+                  "sequence_number": 62,
+                  "series_id": "GR751KNZY",
+                  "series_slug_title": "attack-on-titan",
+                  "series_title": "Attack on Titan",
+                  "subtitle_locales": [
+                      "en-US",
+                      "es-419",
+                      "es-ES",
+                      "fr-FR",
+                      "pt-BR",
+                      "ar-SA",
+                      "it-IT",
+                      "de-DE",
+                      "ru-RU"
+                  ],
+                  "upload_date": "2020-12-21T00:10:00+09:00",
+                  "versions": null
+              },
+              "images": {
+                  "thumbnail": [
+                      [
+                          {
+                              "height": 180,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/320x180/catalog/crunchyroll/8fa4696a3e48fd56d2dc8faad2646b3e.jpeg",
+                              "type": "thumbnail",
+                              "width": 320
+                          },
+                          {
+                              "height": 338,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/600x338/catalog/crunchyroll/8fa4696a3e48fd56d2dc8faad2646b3e.jpeg",
+                              "type": "thumbnail",
+                              "width": 600
+                          },
+                          {
+                              "height": 360,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/640x360/catalog/crunchyroll/8fa4696a3e48fd56d2dc8faad2646b3e.jpeg",
+                              "type": "thumbnail",
+                              "width": 640
+                          },
+                          {
+                              "height": 450,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/800x450/catalog/crunchyroll/8fa4696a3e48fd56d2dc8faad2646b3e.jpeg",
+                              "type": "thumbnail",
+                              "width": 800
+                          },
+                          {
+                              "height": 675,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1200x675/catalog/crunchyroll/8fa4696a3e48fd56d2dc8faad2646b3e.jpeg",
+                              "type": "thumbnail",
+                              "width": 1200
+                          },
+                          {
+                              "height": 810,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1440x810/catalog/crunchyroll/8fa4696a3e48fd56d2dc8faad2646b3e.jpeg",
+                              "type": "thumbnail",
+                              "width": 1440
+                          },
+                          {
+                              "height": 900,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1600x900/catalog/crunchyroll/8fa4696a3e48fd56d2dc8faad2646b3e.jpeg",
+                              "type": "thumbnail",
+                              "width": 1600
+                          },
+                          {
+                              "height": 1080,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1920x1080/catalog/crunchyroll/8fa4696a3e48fd56d2dc8faad2646b3e.jpeg",
+                              "type": "thumbnail",
+                              "width": 1920
+                          }
+                      ]
+                  ]
+              },
+              "playback": "https://pl.crunchyroll.com/asset/d456dc3b32e9833744149fc2520a788d/v/74a1035e120918be7d0e54bfdceb6cbb/languages/en-US,es-419,es-ES,fr-FR,pt-BR,ar-SA,it-IT,de-DE,ru-RU,es-LA,ar-ME?*&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly9wbC5jcnVuY2h5cm9sbC5jb20vYXNzZXQvZDQ1NmRjM2IzMmU5ODMzNzQ0MTQ5ZmMyNTIwYTc4OGQvdi83NGExMDM1ZTEyMDkxOGJlN2QwZTU0YmZkY2ViNmNiYi8~KiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTY2MzgwNTczOH19fV19&Signature=UyjKkpB205oDHjzc7kHUXuFD-yxP12iBMguSgjNd0WrFrrLC1BmGdOj4gh8lvBmZvcUdoMUgpxsj7FhVYdHUQM3RYrz2FAgX8XksSLLGwNfNXP6N63PMVWgVCXgDfiGRlmGdy7XdWj00Cw80s7zvkcf3ype7EEWMirLDqxNzU3SaHQhO4G3SIqai7sqOswwSFbHc~qqW3ze-9SvSRWPUX33NTcxXRNJ8tqL8mY9bbxItHzb2-cKN8haq8mDLaP0a3~3pm8I8zRMg0qOPL-odLFwsPzv3fzApOW6bOt~Ew3GDG9A-FI~mmYwLHjoZIP2SC9xPZ-~rs-qgP-mXoiWzYQ__&Key-Pair-Id=APKAJMWSQ5S7ZB3MF5VA",
+              "external_id": "EPI.799903",
+              "__actions__": {}
+          }
+      },
+      {
+          "id": "GWDU8KN73",
+          "date_played": "2022-09-16T04:45:05Z",
+          "parent_id": "GR751KNZY",
+          "parent_type": "series",
+          "playhead": 1264,
+          "fully_watched": false,
+          "panel": {
+              "id": "GWDU8KN73",
+              "slug_title": "from-you-2000-years-ago",
+              "episode_metadata": {
+                  "audio_locale": "jaJP",
+                  "availability_ends": "9998-11-30T08:00:00Z",
+                  "availability_notes": "",
+                  "availability_starts": "2022-02-06T20:45:00Z",
+                  "available_date": null,
+                  "available_offline": true,
+                  "closed_captions_available": false,
+                  "duration_ms": 1435123,
+                  "eligible_region": "CL",
+                  "episode": "80",
+                  "episode_air_date": "2022-02-07T00:05:00+09:00",
+                  "episode_number": 80,
+                  "extended_maturity_rating": {},
+                  "free_available_date": "2022-02-06T20:45:00Z",
+                  "identifier": "",
+                  "is_clip": false,
+                  "is_dubbed": false,
+                  "is_mature": false,
+                  "is_premium_only": false,
+                  "is_subbed": true,
+                  "mature_blocked": false,
+                  "maturity_ratings": [
+                      "TV-14"
+                  ],
+                  "premium_available_date": "2022-02-06T20:45:00Z",
+                  "premium_date": null,
+                  "season_id": "G69PC2WV0",
+                  "season_number": 4,
+                  "season_slug_title": "attack-on-titan-final-season",
+                  "season_title": "Attack on Titan",
+                  "sequence_number": 80,
+                  "series_id": "GR751KNZY",
+                  "series_slug_title": "attack-on-titan",
+                  "series_title": "Attack on Titan",
+                  "subtitle_locales": [
+                      "en-US",
+                      "es-419",
+                      "es-ES",
+                      "fr-FR",
+                      "pt-BR",
+                      "ar-SA",
+                      "it-IT",
+                      "de-DE",
+                      "ru-RU"
+                  ],
+                  "upload_date": "2022-02-07T00:05:00+09:00",
+                  "versions": null
+              },
+              "__actions__": {},
+              "playback": "https://pl.crunchyroll.com/asset/32412d344795f33f25c8c8150d8eae1c/v/35bfbc54d7af2ca078cb8b6f4fad5b5e/languages/en-US,es-419,es-ES,fr-FR,pt-BR,ar-SA,it-IT,de-DE,ru-RU,es-LA,ar-ME?*&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly9wbC5jcnVuY2h5cm9sbC5jb20vYXNzZXQvMzI0MTJkMzQ0Nzk1ZjMzZjI1YzhjODE1MGQ4ZWFlMWMvdi8zNWJmYmM1NGQ3YWYyY2EwNzhjYjhiNmY0ZmFkNWI1ZS8~KiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTY2MzgwNTc0Mn19fV19&Signature=E~S6v8uYHmvQXX2CgiXv3720tv2b7vz8-CmdY5M33QF1WD0-LNzalqM6iDLjmu-FM6OgdAyLFA6B2p2xu7MQYIuJ6bzzJ3lC5HzIy1LlyUvnqevZjTtVM9x3l0fTUuq89IfSO0ajRVCkrHSSrCKRi0u3Bmnmhr0zAJ9jdDF3DgUUvWvN7vQjfR-y1GCjA8wah-VE1oMKEIP~Rt-DAyou5LkvL1pLYatUeSZqyw6sBZ9AI9BushVN2e6uLKdCvqOaOIhrzLwOAHn-WwIhY02kXKYG7BgJIQtLaM-ZUntcG9q8Rs-gXknBvQjHX~1W7uSUO1X-3AEw60~ze-2hyiD5JA__&Key-Pair-Id=APKAJMWSQ5S7ZB3MF5VA",
+              "__href__": "",
+              "promo_title": "",
+              "external_id": "EPI.823858",
+              "promo_description": "",
+              "slug": "",
+              "type": "episode",
+              "images": {
+                  "thumbnail": [
+                      [
+                          {
+                              "height": 180,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/320x180/catalog/crunchyroll/f7406e6c967ae324e8c918c733a518f3.jpeg",
+                              "type": "thumbnail",
+                              "width": 320
+                          },
+                          {
+                              "height": 338,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/600x338/catalog/crunchyroll/f7406e6c967ae324e8c918c733a518f3.jpeg",
+                              "type": "thumbnail",
+                              "width": 600
+                          },
+                          {
+                              "height": 360,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/640x360/catalog/crunchyroll/f7406e6c967ae324e8c918c733a518f3.jpeg",
+                              "type": "thumbnail",
+                              "width": 640
+                          },
+                          {
+                              "height": 450,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/800x450/catalog/crunchyroll/f7406e6c967ae324e8c918c733a518f3.jpeg",
+                              "type": "thumbnail",
+                              "width": 800
+                          },
+                          {
+                              "height": 675,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1200x675/catalog/crunchyroll/f7406e6c967ae324e8c918c733a518f3.jpeg",
+                              "type": "thumbnail",
+                              "width": 1200
+                          },
+                          {
+                              "height": 810,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1440x810/catalog/crunchyroll/f7406e6c967ae324e8c918c733a518f3.jpeg",
+                              "type": "thumbnail",
+                              "width": 1440
+                          },
+                          {
+                              "height": 900,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1600x900/catalog/crunchyroll/f7406e6c967ae324e8c918c733a518f3.jpeg",
+                              "type": "thumbnail",
+                              "width": 1600
+                          },
+                          {
+                              "height": 1080,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1920x1080/catalog/crunchyroll/f7406e6c967ae324e8c918c733a518f3.jpeg",
+                              "type": "thumbnail",
+                              "width": 1920
+                          }
+                      ]
+                  ]
+              },
+              "title": "De parte de tu yo de hace 2000 años",
+              "__class__": "panel",
+              "channel_id": "crunchyroll",
+              "linked_resource_key": "cms:/episodes/GWDU8KN73",
+              "__links__": {
+                  "episode/season": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/seasons/G69PC2WV0"
+                  },
+                  "episode/series": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/series/GR751KNZY"
+                  },
+                  "resource": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/episodes/GWDU8KN73"
+                  },
+                  "resource/channel": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/channels/crunchyroll"
+                  },
+                  "streams": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/videos/GEMFZG5WQ/streams"
+                  }
+              },
+              "description": "La historia de gente que se resistió, peleó y siguió avanzando. ¿Quién fue el que la empezó? Eren habla con una Ymir que no deja de caminar. \"Hace 2 000 años que esperas a alguien\"."
+          }
+      },
+      {
+          "id": "GVWU0VP42",
+          "date_played": "2022-09-15T17:31:00Z",
+          "parent_id": "GR751KNZY",
+          "parent_type": "series",
+          "playhead": 10,
+          "fully_watched": false,
+          "panel": {
+              "promo_description": "",
+              "__links__": {
+                  "episode/season": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/seasons/G69PC2WV0"
+                  },
+                  "episode/series": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/series/GR751KNZY"
+                  },
+                  "resource": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/episodes/GVWU0VP42"
+                  },
+                  "resource/channel": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/channels/crunchyroll"
+                  },
+                  "streams": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/videos/G25F025DV/streams"
+                  }
+              },
+              "type": "episode",
+              "episode_metadata": {
+                  "audio_locale": "jaJP",
+                  "availability_ends": "9998-11-30T08:00:00Z",
+                  "availability_notes": "",
+                  "availability_starts": "2021-03-21T20:45:00Z",
+                  "available_date": null,
+                  "available_offline": true,
+                  "closed_captions_available": false,
+                  "duration_ms": 1435123,
+                  "eligible_region": "CL",
+                  "episode": "73",
+                  "episode_air_date": "2021-03-22T00:10:00+09:00",
+                  "episode_number": 73,
+                  "extended_maturity_rating": {},
+                  "free_available_date": "2021-03-21T20:45:00Z",
+                  "identifier": "",
+                  "is_clip": false,
+                  "is_dubbed": false,
+                  "is_mature": false,
+                  "is_premium_only": false,
+                  "is_subbed": true,
+                  "mature_blocked": false,
+                  "maturity_ratings": [
+                      "TV-14"
+                  ],
+                  "premium_available_date": "2021-03-21T20:45:00Z",
+                  "premium_date": null,
+                  "season_id": "G69PC2WV0",
+                  "season_number": 4,
+                  "season_slug_title": "attack-on-titan-final-season",
+                  "season_title": "Attack on Titan",
+                  "sequence_number": 73,
+                  "series_id": "GR751KNZY",
+                  "series_slug_title": "attack-on-titan",
+                  "series_title": "Attack on Titan",
+                  "subtitle_locales": [
+                      "en-US",
+                      "es-419",
+                      "es-ES",
+                      "fr-FR",
+                      "pt-BR",
+                      "ar-SA",
+                      "it-IT",
+                      "de-DE",
+                      "ru-RU"
+                  ],
+                  "upload_date": "2021-03-22T00:10:00+09:00",
+                  "versions": null
+              },
+              "promo_title": "",
+              "channel_id": "crunchyroll",
+              "__href__": "",
+              "description": "Eren aparece ante sus antiguos amigos y les dice que quiere hablar con ellos. Mientras tanto, Levi y Zeke tendrán más que palabras.",
+              "id": "GVWU0VP42",
+              "slug_title": "savagery",
+              "linked_resource_key": "cms:/episodes/GVWU0VP42",
+              "external_id": "EPI.803838",
+              "slug": "",
+              "images": {
+                  "thumbnail": [
+                      [
+                          {
+                              "height": 180,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/320x180/catalog/crunchyroll/944483f657b5e19ce0956f383a28c48d.jpeg",
+                              "type": "thumbnail",
+                              "width": 320
+                          },
+                          {
+                              "height": 338,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/600x338/catalog/crunchyroll/944483f657b5e19ce0956f383a28c48d.jpeg",
+                              "type": "thumbnail",
+                              "width": 600
+                          },
+                          {
+                              "height": 360,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/640x360/catalog/crunchyroll/944483f657b5e19ce0956f383a28c48d.jpeg",
+                              "type": "thumbnail",
+                              "width": 640
+                          },
+                          {
+                              "height": 450,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/800x450/catalog/crunchyroll/944483f657b5e19ce0956f383a28c48d.jpeg",
+                              "type": "thumbnail",
+                              "width": 800
+                          },
+                          {
+                              "height": 675,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1200x675/catalog/crunchyroll/944483f657b5e19ce0956f383a28c48d.jpeg",
+                              "type": "thumbnail",
+                              "width": 1200
+                          },
+                          {
+                              "height": 810,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1440x810/catalog/crunchyroll/944483f657b5e19ce0956f383a28c48d.jpeg",
+                              "type": "thumbnail",
+                              "width": 1440
+                          },
+                          {
+                              "height": 900,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1600x900/catalog/crunchyroll/944483f657b5e19ce0956f383a28c48d.jpeg",
+                              "type": "thumbnail",
+                              "width": 1600
+                          },
+                          {
+                              "height": 1080,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1920x1080/catalog/crunchyroll/944483f657b5e19ce0956f383a28c48d.jpeg",
+                              "type": "thumbnail",
+                              "width": 1920
+                          }
+                      ]
+                  ]
+              },
+              "playback": "https://pl.crunchyroll.com/asset/2ef43368f1606041811319b80563115b/v/0a193ac87ef4780c1cae604bd973fc95/languages/en-US,es-419,es-ES,fr-FR,pt-BR,ar-SA,it-IT,de-DE,ru-RU,es-LA,ar-ME?*&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly9wbC5jcnVuY2h5cm9sbC5jb20vYXNzZXQvMmVmNDMzNjhmMTYwNjA0MTgxMTMxOWI4MDU2MzExNWIvdi8wYTE5M2FjODdlZjQ3ODBjMWNhZTYwNGJkOTczZmM5NS8~KiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTY2MzgwNTcyOX19fV19&Signature=lbqeWnyyl-~ouM3zEibPRizcEmudE4oTGq2MTg2k2tJB0eDvfbgqCvg0z9DS~edLmkSi0oYyY1o2iwYgmLTnFfnVBAABEYR4Yuyrniq8jltf3XLIqNfm3uB6fVyBQWoKMh3y-qaJDgBBlu1nu~JK9RMDiZVU1IWH9a0jFbeYzW1Cyo8k06uw4XLQYjclTr1N2fxc-bQ~~eDD~~18YvLEPNJRE1rmDtsmlgx3dtdBZwrg4DlzMR9yOk5hQAOoIOLtAHUKJhul3SPQHjFavOB4uYmhxOKsHCHZQATsjl7Ijf-SypwsL~5d2cpkB~u1rt4KYiZAeWVUl2pNja2ZR~beKQ__&Key-Pair-Id=APKAJMWSQ5S7ZB3MF5VA",
+              "title": "Violencia",
+              "__class__": "panel",
+              "__actions__": {}
+          }
+      },
+      {
+          "id": "GZ7UVPV9M",
+          "date_played": "2022-09-14T20:17:49Z",
+          "parent_id": "GZJH3DNE5",
+          "parent_type": "series",
+          "playhead": 1419,
+          "fully_watched": true,
+          "panel": {
+              "__href__": "",
+              "channel_id": "crunchyroll",
+              "__links__": {
+                  "episode/season": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/seasons/G6MGC3JGM"
+                  },
+                  "episode/series": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/series/GZJH3DNE5"
+                  },
+                  "resource": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/episodes/GZ7UVPV9M"
+                  },
+                  "resource/channel": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/channels/crunchyroll"
+                  },
+                  "streams": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/videos/G5JFZEZGD/streams"
+                  }
+              },
+              "external_id": "EPI.810812",
+              "playback": "https://pl.crunchyroll.com/asset/421bdf711026259f5ecfedf6ff7901f8/v/0678976e10609af65b1f28b507a01152/languages/en-US,es-419,es-ES,fr-FR,pt-BR,ar-SA,it-IT,de-DE,ru-RU,es-LA,ar-ME?*&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly9wbC5jcnVuY2h5cm9sbC5jb20vYXNzZXQvNDIxYmRmNzExMDI2MjU5ZjVlY2ZlZGY2ZmY3OTAxZjgvdi8wNjc4OTc2ZTEwNjA5YWY2NWIxZjI4YjUwN2EwMTE1Mi8~KiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTY2MzgwNTU4Nn19fV19&Signature=jdi7qsKiA0a-0bk~YJK-MZK0GQ2Q1YOG-ZoCZS50GL491~qFCj16b5SuLWaES94E-VLVfu2k034UN24ZkVgMcXAGzk5woXZ46px7BIg5DpmO16R8avKcETA9kdyVEuOSEhOZcMmculRXlHzTLBTCAtp4uO-MUlpqkGIJnYPH9GeROat9IuSAespbwjT9WkNq90ZhtPurEmUz1WPEP-5N~Piqt2aNVkZFnGvg8QLxsyo0nkQT3TJVMD-v4QjvX307GuRoyXzV6ykGAUsRacXix0xnDb1v1mo~tfKExBqwVomOSd1GxsZHQ~b9yYzVKt23pxWEfW~Ou~T2e2EByVsZKA__&Key-Pair-Id=APKAJMWSQ5S7ZB3MF5VA",
+              "id": "GZ7UVPV9M",
+              "__class__": "panel",
+              "description": "Llega la batalla final, donde Nemo tendrá que ponerlo todo en juego, donde todos tendrán que demostrar lo que valen y donde los sentimientos de unos y otros saldrán a la luz.",
+              "slug_title": "finale--nemo-",
+              "promo_title": "",
+              "__actions__": {},
+              "episode_metadata": {
+                  "audio_locale": "",
+                  "availability_ends": "9998-11-30T08:00:00Z",
+                  "availability_notes": "",
+                  "availability_starts": "2021-06-20T16:30:00Z",
+                  "available_date": null,
+                  "available_offline": true,
+                  "closed_captions_available": false,
+                  "duration_ms": 1420019,
+                  "eligible_region": "CL",
+                  "episode": "12",
+                  "episode_air_date": "2021-06-21T00:00:00+09:00",
+                  "episode_number": 12,
+                  "extended_maturity_rating": {},
+                  "free_available_date": "2021-06-20T16:30:00Z",
+                  "identifier": "",
+                  "is_clip": false,
+                  "is_dubbed": false,
+                  "is_mature": false,
+                  "is_premium_only": false,
+                  "is_subbed": true,
+                  "mature_blocked": false,
+                  "maturity_ratings": [
+                      "TV-14"
+                  ],
+                  "premium_available_date": "2021-06-20T16:30:00Z",
+                  "premium_date": null,
+                  "season_id": "G6MGC3JGM",
+                  "season_number": 1,
+                  "season_slug_title": "seven-knights-revolution-hero-successor",
+                  "season_title": "SEVEN KNIGHTS REVOLUTION: Hero Successor",
+                  "sequence_number": 12,
+                  "series_id": "GZJH3DNE5",
+                  "series_slug_title": "seven-knights-revolution-hero-successor",
+                  "series_title": "SEVEN KNIGHTS REVOLUTION: Hero Successor",
+                  "subtitle_locales": [
+                      "en-US",
+                      "es-419",
+                      "es-ES",
+                      "fr-FR",
+                      "pt-BR",
+                      "ar-SA",
+                      "it-IT",
+                      "de-DE",
+                      "ru-RU"
+                  ],
+                  "upload_date": "2021-06-21T00:00:00+09:00",
+                  "versions": null
+              },
+              "promo_description": "",
+              "title": "Final -Nemo-",
+              "linked_resource_key": "cms:/episodes/GZ7UVPV9M",
+              "images": {
+                  "thumbnail": [
+                      [
+                          {
+                              "height": 180,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/320x180/catalog/crunchyroll/e16e209f7563030e1e9d51d4a01c8ded.jpg",
+                              "type": "thumbnail",
+                              "width": 320
+                          },
+                          {
+                              "height": 338,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/600x338/catalog/crunchyroll/e16e209f7563030e1e9d51d4a01c8ded.jpg",
+                              "type": "thumbnail",
+                              "width": 600
+                          },
+                          {
+                              "height": 360,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/640x360/catalog/crunchyroll/e16e209f7563030e1e9d51d4a01c8ded.jpg",
+                              "type": "thumbnail",
+                              "width": 640
+                          },
+                          {
+                              "height": 450,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/800x450/catalog/crunchyroll/e16e209f7563030e1e9d51d4a01c8ded.jpg",
+                              "type": "thumbnail",
+                              "width": 800
+                          },
+                          {
+                              "height": 675,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1200x675/catalog/crunchyroll/e16e209f7563030e1e9d51d4a01c8ded.jpg",
+                              "type": "thumbnail",
+                              "width": 1200
+                          },
+                          {
+                              "height": 810,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1440x810/catalog/crunchyroll/e16e209f7563030e1e9d51d4a01c8ded.jpg",
+                              "type": "thumbnail",
+                              "width": 1440
+                          },
+                          {
+                              "height": 900,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1600x900/catalog/crunchyroll/e16e209f7563030e1e9d51d4a01c8ded.jpg",
+                              "type": "thumbnail",
+                              "width": 1600
+                          },
+                          {
+                              "height": 1080,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1920x1080/catalog/crunchyroll/e16e209f7563030e1e9d51d4a01c8ded.jpg",
+                              "type": "thumbnail",
+                              "width": 1920
+                          }
+                      ]
+                  ]
+              },
+              "type": "episode",
+              "slug": ""
+          }
+      },
+      {
+          "id": "G8WUN2N5V",
+          "date_played": "2022-09-14T19:50:39Z",
+          "parent_id": "GZJH3DNE5",
+          "parent_type": "series",
+          "playhead": 1420,
+          "fully_watched": true,
+          "panel": {
+              "promo_description": "",
+              "id": "G8WUN2N5V",
+              "playback": "https://pl.crunchyroll.com/asset/e47b6c689dcd60bfd378c12745844732/v/14db5703203bcc8541a59c4a9d92b79b/languages/en-US,es-419,es-ES,fr-FR,pt-BR,ar-SA,it-IT,de-DE,ru-RU,es-LA,ar-ME?*&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly9wbC5jcnVuY2h5cm9sbC5jb20vYXNzZXQvZTQ3YjZjNjg5ZGNkNjBiZmQzNzhjMTI3NDU4NDQ3MzIvdi8xNGRiNTcwMzIwM2JjYzg1NDFhNTljNGE5ZDkyYjc5Yi8~KiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTY2MzgwMjM1Mn19fV19&Signature=qH5y9YKfILtluIVTUH2zW4lPdvwyeoVxjOqJ2JuqexVJVylF8Ip5zfyRm4S77Qj8k0nnaMw~3VmB~2D4LhEyuleSqrnpguwLfwrj5LrNtCksT5f8mIlEVlDsi369PhMJfR502hW51wmbLf86s2cbOBLS16o4l6x37OtG4uAUVkjVfurASq922wirtJH7y4Jod34ws5Q9lYaNAgscIKjtRxzf7eVEqo0kGgxWLRaKRdQ8gkYDAII-oEfGXC9a~wevauhr~4w7qylAHUK-PdRfnE7W2lzLZCe4dnCtq01-hDq2Cf3QUtZBEhArySoY4DU~b~jz-4AU1cTOQN8ze5ObOw__&Key-Pair-Id=APKAJMWSQ5S7ZB3MF5VA",
+              "__class__": "panel",
+              "external_id": "EPI.810811",
+              "__actions__": {},
+              "channel_id": "crunchyroll",
+              "__href__": "",
+              "promo_title": "",
+              "description": "Las verdades salen a la luz y los rencores no están donde deben estar.",
+              "type": "episode",
+              "slug": "",
+              "episode_metadata": {
+                  "audio_locale": "",
+                  "availability_ends": "9998-11-30T08:00:00Z",
+                  "availability_notes": "",
+                  "availability_starts": "2021-06-13T16:30:00Z",
+                  "available_date": null,
+                  "available_offline": true,
+                  "closed_captions_available": false,
+                  "duration_ms": 1420147,
+                  "eligible_region": "CL",
+                  "episode": "11",
+                  "episode_air_date": "2021-06-14T00:00:00+09:00",
+                  "episode_number": 11,
+                  "extended_maturity_rating": {},
+                  "free_available_date": "2021-06-13T16:30:00Z",
+                  "identifier": "",
+                  "is_clip": false,
+                  "is_dubbed": false,
+                  "is_mature": false,
+                  "is_premium_only": false,
+                  "is_subbed": true,
+                  "mature_blocked": false,
+                  "maturity_ratings": [
+                      "TV-14"
+                  ],
+                  "premium_available_date": "2021-06-13T16:30:00Z",
+                  "premium_date": null,
+                  "season_id": "G6MGC3JGM",
+                  "season_number": 1,
+                  "season_slug_title": "seven-knights-revolution-hero-successor",
+                  "season_title": "SEVEN KNIGHTS REVOLUTION: Hero Successor",
+                  "sequence_number": 11,
+                  "series_id": "GZJH3DNE5",
+                  "series_slug_title": "seven-knights-revolution-hero-successor",
+                  "series_title": "SEVEN KNIGHTS REVOLUTION: Hero Successor",
+                  "subtitle_locales": [
+                      "en-US",
+                      "es-419",
+                      "es-ES",
+                      "fr-FR",
+                      "pt-BR",
+                      "ar-SA",
+                      "it-IT",
+                      "de-DE",
+                      "ru-RU"
+                  ],
+                  "upload_date": "2021-06-14T00:00:00+09:00",
+                  "versions": null
+              },
+              "title": "Represalia -Contraataque-",
+              "__links__": {
+                  "episode/season": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/seasons/G6MGC3JGM"
+                  },
+                  "episode/series": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/series/GZJH3DNE5"
+                  },
+                  "resource": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/episodes/G8WUN2N5V"
+                  },
+                  "resource/channel": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/channels/crunchyroll"
+                  },
+                  "streams": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/videos/GQ9FGEGW0/streams"
+                  }
+              },
+              "slug_title": "reprisal--counterattack-",
+              "images": {
+                  "thumbnail": [
+                      [
+                          {
+                              "height": 180,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/320x180/catalog/crunchyroll/a89c3eef116603dc649a513a9285e448.jpg",
+                              "type": "thumbnail",
+                              "width": 320
+                          },
+                          {
+                              "height": 338,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/600x338/catalog/crunchyroll/a89c3eef116603dc649a513a9285e448.jpg",
+                              "type": "thumbnail",
+                              "width": 600
+                          },
+                          {
+                              "height": 360,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/640x360/catalog/crunchyroll/a89c3eef116603dc649a513a9285e448.jpg",
+                              "type": "thumbnail",
+                              "width": 640
+                          },
+                          {
+                              "height": 450,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/800x450/catalog/crunchyroll/a89c3eef116603dc649a513a9285e448.jpg",
+                              "type": "thumbnail",
+                              "width": 800
+                          },
+                          {
+                              "height": 675,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1200x675/catalog/crunchyroll/a89c3eef116603dc649a513a9285e448.jpg",
+                              "type": "thumbnail",
+                              "width": 1200
+                          },
+                          {
+                              "height": 810,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1440x810/catalog/crunchyroll/a89c3eef116603dc649a513a9285e448.jpg",
+                              "type": "thumbnail",
+                              "width": 1440
+                          },
+                          {
+                              "height": 900,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1600x900/catalog/crunchyroll/a89c3eef116603dc649a513a9285e448.jpg",
+                              "type": "thumbnail",
+                              "width": 1600
+                          },
+                          {
+                              "height": 1080,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1920x1080/catalog/crunchyroll/a89c3eef116603dc649a513a9285e448.jpg",
+                              "type": "thumbnail",
+                              "width": 1920
+                          }
+                      ]
+                  ]
+              },
+              "linked_resource_key": "cms:/episodes/G8WUN2N5V"
+          }
+      },
+      {
+          "id": "GEVUZ2M13",
+          "date_played": "2022-09-14T19:49:26Z",
+          "parent_id": "GYXM79M56",
+          "parent_type": "series",
+          "playhead": 3,
+          "fully_watched": false,
+          "panel": {
+              "channel_id": "crunchyroll",
+              "episode_metadata": {
+                  "audio_locale": "jaJP",
+                  "availability_ends": "9998-11-30T08:00:00Z",
+                  "availability_notes": "",
+                  "availability_starts": "2022-09-10T02:00:00Z",
+                  "available_date": null,
+                  "available_offline": true,
+                  "closed_captions_available": false,
+                  "duration_ms": 1442842,
+                  "eligible_region": "CL",
+                  "episode": "94",
+                  "episode_air_date": "2022-09-10T09:30:00+09:00",
+                  "episode_number": 94,
+                  "extended_maturity_rating": {},
+                  "free_available_date": "2022-09-10T02:00:00Z",
+                  "identifier": "",
+                  "is_clip": false,
+                  "is_dubbed": false,
+                  "is_mature": false,
+                  "is_premium_only": true,
+                  "is_subbed": true,
+                  "mature_blocked": false,
+                  "maturity_ratings": [
+                      "TV-14"
+                  ],
+                  "premium_available_date": "2022-09-10T02:00:00Z",
+                  "premium_date": null,
+                  "season_id": "G64G2VG8R",
+                  "season_number": 1,
+                  "season_slug_title": "dragon-quest-the-adventure-of-dai",
+                  "season_title": "Dragon Quest: La aventura de Dai",
+                  "sequence_number": 94,
+                  "series_id": "GYXM79M56",
+                  "series_slug_title": "dragon-quest-the-adventure-of-dai",
+                  "series_title": "DRAGON QUEST The Adventure of Dai",
+                  "subtitle_locales": [
+                      "ar-SA",
+                      "de-DE",
+                      "en-US",
+                      "es-419",
+                      "es-ES",
+                      "fr-FR",
+                      "it-IT",
+                      "pt-BR",
+                      "ru-RU"
+                  ],
+                  "upload_date": "2022-09-10T09:30:00+09:00",
+                  "versions": null
+              },
+              "__class__": "panel",
+              "external_id": "EPI.859255",
+              "playback": "https://pl.crunchyroll.com/asset/bc9023c78b06564c952df8c45318cf07/v/cd89bae223199ff095723f072af39cf8/languages/ar-SA,de-DE,en-US,es-419,es-ES,fr-FR,it-IT,pt-BR,ru-RU,ar-ME,es-LA?*&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly9wbC5jcnVuY2h5cm9sbC5jb20vYXNzZXQvYmM5MDIzYzc4YjA2NTY0Yzk1MmRmOGM0NTMxOGNmMDcvdi9jZDg5YmFlMjIzMTk5ZmYwOTU3MjNmMDcyYWYzOWNmOC8~KiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTY2MzgwNTU3OX19fV19&Signature=nMqeIJFygVSDLFTFBILcvTWM3ogN9kXVWV08H6WIGgvLRHUXMLVXazU-~BR2ZxDD0Wa-icKSGPhnLLvrh11wTUTZhSsE-d7f7ofFY5KNZvdjoLsmCRZGB-D2ZF8Nj~wQ5Xy17M7wyM~s9NYv-CDUhEeUuKTeJt~bRBQxv1PLNa5yA1AmlzoiYkJCRYaw1EB1A~b01ujyu7wFItHArbg~cR4nWGyUt9zdhxlHeHTaau0vurekci1JklkKV8WfaAcpEJrRzR6924TWFj-cewXdh24ajIg0fgfVMhIP2~aojCV625WUFSNIdGJJAEVKcRYHywyKpOWOKFliI7Q6AYXc7g__&Key-Pair-Id=APKAJMWSQ5S7ZB3MF5VA",
+              "images": {
+                  "thumbnail": [
+                      [
+                          {
+                              "height": 180,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/320x180/catalog/crunchyroll/b091ab3c35ba4bae55682a53591956ad.jpeg",
+                              "type": "thumbnail",
+                              "width": 320
+                          },
+                          {
+                              "height": 338,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/600x338/catalog/crunchyroll/b091ab3c35ba4bae55682a53591956ad.jpeg",
+                              "type": "thumbnail",
+                              "width": 600
+                          },
+                          {
+                              "height": 360,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/640x360/catalog/crunchyroll/b091ab3c35ba4bae55682a53591956ad.jpeg",
+                              "type": "thumbnail",
+                              "width": 640
+                          },
+                          {
+                              "height": 450,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/800x450/catalog/crunchyroll/b091ab3c35ba4bae55682a53591956ad.jpeg",
+                              "type": "thumbnail",
+                              "width": 800
+                          },
+                          {
+                              "height": 675,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1200x675/catalog/crunchyroll/b091ab3c35ba4bae55682a53591956ad.jpeg",
+                              "type": "thumbnail",
+                              "width": 1200
+                          },
+                          {
+                              "height": 810,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1440x810/catalog/crunchyroll/b091ab3c35ba4bae55682a53591956ad.jpeg",
+                              "type": "thumbnail",
+                              "width": 1440
+                          },
+                          {
+                              "height": 900,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1600x900/catalog/crunchyroll/b091ab3c35ba4bae55682a53591956ad.jpeg",
+                              "type": "thumbnail",
+                              "width": 1600
+                          },
+                          {
+                              "height": 1080,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1920x1080/catalog/crunchyroll/b091ab3c35ba4bae55682a53591956ad.jpeg",
+                              "type": "thumbnail",
+                              "width": 1920
+                          }
+                      ]
+                  ]
+              },
+              "promo_description": "",
+              "__links__": {
+                  "episode/season": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/seasons/G64G2VG8R"
+                  },
+                  "episode/series": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/series/GYXM79M56"
+                  },
+                  "resource": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/episodes/GEVUZ2M13"
+                  },
+                  "resource/channel": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/channels/crunchyroll"
+                  },
+                  "streams": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/videos/GXMFQGXVM/streams"
+                  }
+              },
+              "type": "episode",
+              "__href__": "",
+              "description": "La Guardia Demoníaca de Cielo y Tierra de Vearn parece invencible, pero Popp y Dai no se rinden y buscan la forma de derrotar la habilidad definitiva del Rey Oscuro.",
+              "linked_resource_key": "cms:/episodes/GEVUZ2M13",
+              "promo_title": "",
+              "slug_title": "on-this-bond",
+              "__actions__": {},
+              "id": "GEVUZ2M13",
+              "slug": "",
+              "title": "Sobre este vínculo"
+          }
+      },
+      {
+          "id": "G2XU0509X",
+          "date_played": "2022-09-13T19:59:04Z",
+          "parent_id": "GZJH3DNE5",
+          "parent_type": "series",
+          "playhead": 1419,
+          "fully_watched": true,
+          "panel": {
+              "__href__": "",
+              "channel_id": "crunchyroll",
+              "linked_resource_key": "cms:/episodes/G2XU0509X",
+              "promo_description": "",
+              "external_id": "EPI.810810",
+              "promo_title": "",
+              "id": "G2XU0509X",
+              "description": "Nemo está encerrado y a la espera de que decidan qué hacer con él, pero sus compañeros no quieren verlo todos como un traidor.",
+              "type": "episode",
+              "episode_metadata": {
+                  "audio_locale": "",
+                  "availability_ends": "9998-11-30T08:00:00Z",
+                  "availability_notes": "",
+                  "availability_starts": "2021-06-06T16:30:00Z",
+                  "available_date": null,
+                  "available_offline": true,
+                  "closed_captions_available": false,
+                  "duration_ms": 1420061,
+                  "eligible_region": "CL",
+                  "episode": "10",
+                  "episode_air_date": "2021-06-07T00:00:00+09:00",
+                  "episode_number": 10,
+                  "extended_maturity_rating": {},
+                  "free_available_date": "2021-06-06T16:30:00Z",
+                  "identifier": "",
+                  "is_clip": false,
+                  "is_dubbed": false,
+                  "is_mature": false,
+                  "is_premium_only": false,
+                  "is_subbed": true,
+                  "mature_blocked": false,
+                  "maturity_ratings": [
+                      "TV-14"
+                  ],
+                  "premium_available_date": "2021-06-06T16:30:00Z",
+                  "premium_date": null,
+                  "season_id": "G6MGC3JGM",
+                  "season_number": 1,
+                  "season_slug_title": "seven-knights-revolution-hero-successor",
+                  "season_title": "SEVEN KNIGHTS REVOLUTION: Hero Successor",
+                  "sequence_number": 10,
+                  "series_id": "GZJH3DNE5",
+                  "series_slug_title": "seven-knights-revolution-hero-successor",
+                  "series_title": "SEVEN KNIGHTS REVOLUTION: Hero Successor",
+                  "subtitle_locales": [
+                      "en-US",
+                      "es-419",
+                      "es-ES",
+                      "fr-FR",
+                      "pt-BR",
+                      "ar-SA",
+                      "it-IT",
+                      "de-DE",
+                      "ru-RU"
+                  ],
+                  "upload_date": "2021-06-07T00:00:00+09:00",
+                  "versions": null
+              },
+              "__class__": "panel",
+              "playback": "https://pl.crunchyroll.com/asset/5051656306b43d38d0d6fc5f30b923c4/v/d3a0220ae96a6d9c40db2cd0a4626bb7/languages/en-US,es-419,es-ES,fr-FR,pt-BR,ar-SA,it-IT,de-DE,ru-RU,es-LA,ar-ME?*&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly9wbC5jcnVuY2h5cm9sbC5jb20vYXNzZXQvNTA1MTY1NjMwNmI0M2QzOGQwZDZmYzVmMzBiOTIzYzQvdi9kM2EwMjIwYWU5NmE2ZDljNDBkYjJjZDBhNDYyNmJiNy8~KiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTY2Mzc3ODkzMX19fV19&Signature=F~LwW8RdQrOfo-XkIMGUImefHicq38fOtLbpoVhXz3c1m~W7UbObGzYl~x6fuRA1F21XLk3Vc3GL30BxFni2IWG6raMloEMeQRtPyVHzTFuIh-y78O49rxQq-Lo4AfQ3zlfL41KZ2ntf8AhFRtpgXNwVs3symfs5o5V-A8wASDzTnFVGeshAVs5jHeq9fUhVJrFK2JbHMfgb9uAWnEO0MwAnH~4DhAfAIdftJHAFYRdFywimFTFKshmSHIP96t4xA9uGvABXxwWoI6RpqBGlX0okE1r7P6zVfi95IJrM26-2bmxv1EFnvyw6mJl6qLnpbyE~p-D0FXcQq8QdF09LbQ__&Key-Pair-Id=APKAJMWSQ5S7ZB3MF5VA",
+              "images": {
+                  "thumbnail": [
+                      [
+                          {
+                              "height": 180,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/320x180/catalog/crunchyroll/59817a1620f166c55841717b3bbb92c4.jpg",
+                              "type": "thumbnail",
+                              "width": 320
+                          },
+                          {
+                              "height": 338,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/600x338/catalog/crunchyroll/59817a1620f166c55841717b3bbb92c4.jpg",
+                              "type": "thumbnail",
+                              "width": 600
+                          },
+                          {
+                              "height": 360,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/640x360/catalog/crunchyroll/59817a1620f166c55841717b3bbb92c4.jpg",
+                              "type": "thumbnail",
+                              "width": 640
+                          },
+                          {
+                              "height": 450,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/800x450/catalog/crunchyroll/59817a1620f166c55841717b3bbb92c4.jpg",
+                              "type": "thumbnail",
+                              "width": 800
+                          },
+                          {
+                              "height": 675,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1200x675/catalog/crunchyroll/59817a1620f166c55841717b3bbb92c4.jpg",
+                              "type": "thumbnail",
+                              "width": 1200
+                          },
+                          {
+                              "height": 810,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1440x810/catalog/crunchyroll/59817a1620f166c55841717b3bbb92c4.jpg",
+                              "type": "thumbnail",
+                              "width": 1440
+                          },
+                          {
+                              "height": 900,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1600x900/catalog/crunchyroll/59817a1620f166c55841717b3bbb92c4.jpg",
+                              "type": "thumbnail",
+                              "width": 1600
+                          },
+                          {
+                              "height": 1080,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1920x1080/catalog/crunchyroll/59817a1620f166c55841717b3bbb92c4.jpg",
+                              "type": "thumbnail",
+                              "width": 1920
+                          }
+                      ]
+                  ]
+              },
+              "__actions__": {},
+              "title": "Convicción -Castigo-",
+              "slug_title": "conviction--punishment-",
+              "slug": "",
+              "__links__": {
+                  "episode/season": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/seasons/G6MGC3JGM"
+                  },
+                  "episode/series": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/series/GZJH3DNE5"
+                  },
+                  "resource": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/episodes/G2XU0509X"
+                  },
+                  "resource/channel": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/channels/crunchyroll"
+                  },
+                  "streams": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/videos/GDVFV2V79/streams"
+                  }
+              }
+          }
+      },
+      {
+          "id": "GPWUK0K89",
+          "date_played": "2022-09-13T00:19:44Z",
+          "parent_id": "GZJH3DNE5",
+          "parent_type": "series",
+          "playhead": 1241,
+          "fully_watched": false,
+          "panel": {
+              "description": "El enfrentamiento final contra Amis Germain llega a su punto álgido, y en él se revelarán varios secretos que pueden cambiarlo todo.",
+              "slug_title": "conclusion--end-times-",
+              "external_id": "EPI.810809",
+              "promo_description": "",
+              "playback": "https://pl.crunchyroll.com/asset/92224556845a9ca519991abca5ce829c/v/a087a0b340f78e7ff8a0af402cfe21b1/languages/en-US,es-419,es-ES,fr-FR,pt-BR,ar-SA,it-IT,de-DE,ru-RU,es-LA,ar-ME?*&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly9wbC5jcnVuY2h5cm9sbC5jb20vYXNzZXQvOTIyMjQ1NTY4NDVhOWNhNTE5OTkxYWJjYTVjZTgyOWMvdi9hMDg3YTBiMzQwZjc4ZTdmZjhhMGFmNDAyY2ZlMjFiMS8~KiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTY2Mzc5NzMyM319fV19&Signature=sHa1wfjM2SzBBCsAQWAaI7AS0n2NOVxvT6XhGTcExgTxlMgA0H3WnZeQ66PMV-CL1jFAtIckA7CQHE1rpQ-TcQso2l5sQQYxuud3epGFvNCSzy72Na-5H-aMOyNGO4hlEKMrXuAChWBuKVbz3LxpoD~HrOCN6XBqsRlsx0HdmVbbOdcJ8Vz~Q0CAtGG2kXYiZ42zi7xOcLm3dL-UwzcwyYygoCMlBO-uBYNZbPohaMrqXv14j9sSa1vAujdglJI9LjAVYIaoswZfZ78fnE3CoMZ9LJ3WhrVWTrXT1yWtAUWrz4RiKMVIrGsjLYMlW~qVaKYnUev9urC1oF9~o8yLow__&Key-Pair-Id=APKAJMWSQ5S7ZB3MF5VA",
+              "episode_metadata": {
+                  "audio_locale": "",
+                  "availability_ends": "9998-11-30T08:00:00Z",
+                  "availability_notes": "",
+                  "availability_starts": "2021-05-30T16:30:00Z",
+                  "available_date": null,
+                  "available_offline": true,
+                  "closed_captions_available": false,
+                  "duration_ms": 1420019,
+                  "eligible_region": "CL",
+                  "episode": "9",
+                  "episode_air_date": "2021-05-31T00:00:00+09:00",
+                  "episode_number": 9,
+                  "extended_maturity_rating": {},
+                  "free_available_date": "2021-05-30T16:30:00Z",
+                  "identifier": "",
+                  "is_clip": false,
+                  "is_dubbed": false,
+                  "is_mature": false,
+                  "is_premium_only": false,
+                  "is_subbed": true,
+                  "mature_blocked": false,
+                  "maturity_ratings": [
+                      "TV-14"
+                  ],
+                  "premium_available_date": "2021-05-30T16:30:00Z",
+                  "premium_date": null,
+                  "season_id": "G6MGC3JGM",
+                  "season_number": 1,
+                  "season_slug_title": "seven-knights-revolution-hero-successor",
+                  "season_title": "SEVEN KNIGHTS REVOLUTION: Hero Successor",
+                  "sequence_number": 9,
+                  "series_id": "GZJH3DNE5",
+                  "series_slug_title": "seven-knights-revolution-hero-successor",
+                  "series_title": "SEVEN KNIGHTS REVOLUTION: Hero Successor",
+                  "subtitle_locales": [
+                      "en-US",
+                      "es-419",
+                      "es-ES",
+                      "fr-FR",
+                      "pt-BR",
+                      "ar-SA",
+                      "it-IT",
+                      "de-DE",
+                      "ru-RU"
+                  ],
+                  "upload_date": "2021-05-31T00:00:00+09:00",
+                  "versions": null
+              },
+              "__class__": "panel",
+              "id": "GPWUK0K89",
+              "promo_title": "",
+              "__href__": "",
+              "__links__": {
+                  "episode/season": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/seasons/G6MGC3JGM"
+                  },
+                  "episode/series": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/series/GZJH3DNE5"
+                  },
+                  "resource": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/episodes/GPWUK0K89"
+                  },
+                  "resource/channel": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/channels/crunchyroll"
+                  },
+                  "streams": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/videos/GZ4FVPVDG/streams"
+                  }
+              },
+              "slug": "",
+              "channel_id": "crunchyroll",
+              "title": "Conclusión -Fin de los tiempos-",
+              "type": "episode",
+              "linked_resource_key": "cms:/episodes/GPWUK0K89",
+              "images": {
+                  "thumbnail": [
+                      [
+                          {
+                              "height": 180,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/320x180/catalog/crunchyroll/44bf682ba2ec5b55a4b4faf197117c5d.jpg",
+                              "type": "thumbnail",
+                              "width": 320
+                          },
+                          {
+                              "height": 338,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/600x338/catalog/crunchyroll/44bf682ba2ec5b55a4b4faf197117c5d.jpg",
+                              "type": "thumbnail",
+                              "width": 600
+                          },
+                          {
+                              "height": 360,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/640x360/catalog/crunchyroll/44bf682ba2ec5b55a4b4faf197117c5d.jpg",
+                              "type": "thumbnail",
+                              "width": 640
+                          },
+                          {
+                              "height": 450,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/800x450/catalog/crunchyroll/44bf682ba2ec5b55a4b4faf197117c5d.jpg",
+                              "type": "thumbnail",
+                              "width": 800
+                          },
+                          {
+                              "height": 675,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1200x675/catalog/crunchyroll/44bf682ba2ec5b55a4b4faf197117c5d.jpg",
+                              "type": "thumbnail",
+                              "width": 1200
+                          },
+                          {
+                              "height": 810,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1440x810/catalog/crunchyroll/44bf682ba2ec5b55a4b4faf197117c5d.jpg",
+                              "type": "thumbnail",
+                              "width": 1440
+                          },
+                          {
+                              "height": 900,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1600x900/catalog/crunchyroll/44bf682ba2ec5b55a4b4faf197117c5d.jpg",
+                              "type": "thumbnail",
+                              "width": 1600
+                          },
+                          {
+                              "height": 1080,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1920x1080/catalog/crunchyroll/44bf682ba2ec5b55a4b4faf197117c5d.jpg",
+                              "type": "thumbnail",
+                              "width": 1920
+                          }
+                      ]
+                  ]
+              },
+              "__actions__": {}
+          }
+      },
+      {
+          "id": "G31UX7XV4",
+          "date_played": "2022-09-12T21:45:11Z",
+          "parent_id": "GZJH3DNE5",
+          "parent_type": "series",
+          "playhead": 1186,
+          "fully_watched": false,
+          "panel": {
+              "promo_title": "",
+              "promo_description": "",
+              "description": "Los Seven Knights intentan derrotar a los Hijos de la Destrucción con la intención de llegar hasta Amis Germain y evitar que siga con su plan de destruir los relojes de arena. Mientras, Nemo comienza a enfrentarse de nuevo a su pasado.",
+              "slug": "",
+              "id": "G31UX7XV4",
+              "slug_title": "rivalry--conflict-",
+              "__actions__": {},
+              "images": {
+                  "thumbnail": [
+                      [
+                          {
+                              "height": 180,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/320x180/catalog/crunchyroll/dc7e087a660b0284abbbf1f4f0ac4a48.jpg",
+                              "type": "thumbnail",
+                              "width": 320
+                          },
+                          {
+                              "height": 338,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/600x338/catalog/crunchyroll/dc7e087a660b0284abbbf1f4f0ac4a48.jpg",
+                              "type": "thumbnail",
+                              "width": 600
+                          },
+                          {
+                              "height": 360,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/640x360/catalog/crunchyroll/dc7e087a660b0284abbbf1f4f0ac4a48.jpg",
+                              "type": "thumbnail",
+                              "width": 640
+                          },
+                          {
+                              "height": 450,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/800x450/catalog/crunchyroll/dc7e087a660b0284abbbf1f4f0ac4a48.jpg",
+                              "type": "thumbnail",
+                              "width": 800
+                          },
+                          {
+                              "height": 675,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1200x675/catalog/crunchyroll/dc7e087a660b0284abbbf1f4f0ac4a48.jpg",
+                              "type": "thumbnail",
+                              "width": 1200
+                          },
+                          {
+                              "height": 810,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1440x810/catalog/crunchyroll/dc7e087a660b0284abbbf1f4f0ac4a48.jpg",
+                              "type": "thumbnail",
+                              "width": 1440
+                          },
+                          {
+                              "height": 900,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1600x900/catalog/crunchyroll/dc7e087a660b0284abbbf1f4f0ac4a48.jpg",
+                              "type": "thumbnail",
+                              "width": 1600
+                          },
+                          {
+                              "height": 1080,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1920x1080/catalog/crunchyroll/dc7e087a660b0284abbbf1f4f0ac4a48.jpg",
+                              "type": "thumbnail",
+                              "width": 1920
+                          }
+                      ]
+                  ]
+              },
+              "playback": "https://pl.crunchyroll.com/asset/a8f47dfa9fbd6d102ea348e2f8793c9f/v/c162b13b1a618bfc44fcca8e1497bed6/languages/en-US,es-419,es-ES,fr-FR,pt-BR,ar-SA,it-IT,de-DE,ru-RU,es-LA,ar-ME?*&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly9wbC5jcnVuY2h5cm9sbC5jb20vYXNzZXQvYThmNDdkZmE5ZmJkNmQxMDJlYTM0OGUyZjg3OTNjOWYvdi9jMTYyYjEzYjFhNjE4YmZjNDRmY2NhOGUxNDk3YmVkNi8~KiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTY2MzgwMjAzMn19fV19&Signature=dfEUJhzWDBBNHqgZ7MqJ7QSgHR0oyZldUBAVs~u785N6Ds5NgtkiKtPjpMEwJa67pff-FCUCd~AOJ-grkqsn5qyJMkJrCnIlINTQtZloOK8LhfQKx0LpVG2FikQ0goum9WDmcKjMVDw75akY-Ue6MYDECvVUCRSe3KpiSxT1Nx5~RabCbJVwvyBORFxZ-0tVw6iFb~5bS5Xqtjhw471yO2ut86bGY2Dj3QBuugK9Ffut4-8~GQ4lrvrP4uXsMAE8z-xOCtIjCbbeJ9rPEq6tXnuqOpbhdLAQxTOzlxmPT5YCetqj0EQHeYLCPK7aAPdIm5GS3HQ4~iOyQuSceyg87w__&Key-Pair-Id=APKAJMWSQ5S7ZB3MF5VA",
+              "__links__": {
+                  "episode/season": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/seasons/G6MGC3JGM"
+                  },
+                  "episode/series": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/series/GZJH3DNE5"
+                  },
+                  "resource": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/episodes/G31UX7XV4"
+                  },
+                  "resource/channel": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/channels/crunchyroll"
+                  },
+                  "streams": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/videos/G8MFN2N71/streams"
+                  }
+              },
+              "__href__": "",
+              "type": "episode",
+              "channel_id": "crunchyroll",
+              "external_id": "EPI.810808",
+              "title": "Rivalidad -Conflicto-",
+              "__class__": "panel",
+              "linked_resource_key": "cms:/episodes/G31UX7XV4",
+              "episode_metadata": {
+                  "audio_locale": "",
+                  "availability_ends": "9998-11-30T08:00:00Z",
+                  "availability_notes": "",
+                  "availability_starts": "2021-05-23T16:30:00Z",
+                  "available_date": null,
+                  "available_offline": true,
+                  "closed_captions_available": false,
+                  "duration_ms": 1420061,
+                  "eligible_region": "CL",
+                  "episode": "8",
+                  "episode_air_date": "2021-05-24T00:00:00+09:00",
+                  "episode_number": 8,
+                  "extended_maturity_rating": {},
+                  "free_available_date": "2021-05-23T16:30:00Z",
+                  "identifier": "",
+                  "is_clip": false,
+                  "is_dubbed": false,
+                  "is_mature": false,
+                  "is_premium_only": false,
+                  "is_subbed": true,
+                  "mature_blocked": false,
+                  "maturity_ratings": [
+                      "TV-14"
+                  ],
+                  "premium_available_date": "2021-05-23T16:30:00Z",
+                  "premium_date": null,
+                  "season_id": "G6MGC3JGM",
+                  "season_number": 1,
+                  "season_slug_title": "seven-knights-revolution-hero-successor",
+                  "season_title": "SEVEN KNIGHTS REVOLUTION: Hero Successor",
+                  "sequence_number": 8,
+                  "series_id": "GZJH3DNE5",
+                  "series_slug_title": "seven-knights-revolution-hero-successor",
+                  "series_title": "SEVEN KNIGHTS REVOLUTION: Hero Successor",
+                  "subtitle_locales": [
+                      "en-US",
+                      "es-419",
+                      "es-ES",
+                      "fr-FR",
+                      "pt-BR",
+                      "ar-SA",
+                      "it-IT",
+                      "de-DE",
+                      "ru-RU"
+                  ],
+                  "upload_date": "2021-05-24T00:00:00+09:00",
+                  "versions": null
+              }
+          }
+      },
+      {
+          "id": "GVWU0P08W",
+          "date_played": "2022-09-12T20:22:19Z",
+          "parent_id": "GZJH3DNE5",
+          "parent_type": "series",
+          "playhead": 1322,
+          "fully_watched": true,
+          "panel": {
+              "slug": "",
+              "__href__": "",
+              "__links__": {
+                  "episode/season": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/seasons/G6MGC3JGM"
+                  },
+                  "episode/series": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/series/GZJH3DNE5"
+                  },
+                  "resource": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/episodes/GVWU0P08W"
+                  },
+                  "resource/channel": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/channels/crunchyroll"
+                  },
+                  "streams": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/videos/G25F050N4/streams"
+                  }
+              },
+              "description": "Los mandamases han descubierto la base de Physis y es el momento de enviar a los Seven Knights a lanzar un ataque preventivo, pese a que es extremadamente arriesgado.",
+              "linked_resource_key": "cms:/episodes/GVWU0P08W",
+              "slug_title": "sortie--apocalypse-",
+              "external_id": "EPI.810807",
+              "type": "episode",
+              "id": "GVWU0P08W",
+              "title": "Incursión -Apocalipsis-",
+              "promo_title": "",
+              "promo_description": "",
+              "episode_metadata": {
+                  "audio_locale": "",
+                  "availability_ends": "9998-11-30T08:00:00Z",
+                  "availability_notes": "",
+                  "availability_starts": "2021-05-16T16:30:00Z",
+                  "available_date": null,
+                  "available_offline": true,
+                  "closed_captions_available": false,
+                  "duration_ms": 1420019,
+                  "eligible_region": "CL",
+                  "episode": "7",
+                  "episode_air_date": "2021-05-17T00:00:00+09:00",
+                  "episode_number": 7,
+                  "extended_maturity_rating": {},
+                  "free_available_date": "2021-05-16T16:30:00Z",
+                  "identifier": "",
+                  "is_clip": false,
+                  "is_dubbed": false,
+                  "is_mature": false,
+                  "is_premium_only": false,
+                  "is_subbed": true,
+                  "mature_blocked": false,
+                  "maturity_ratings": [
+                      "TV-14"
+                  ],
+                  "premium_available_date": "2021-05-16T16:30:00Z",
+                  "premium_date": null,
+                  "season_id": "G6MGC3JGM",
+                  "season_number": 1,
+                  "season_slug_title": "seven-knights-revolution-hero-successor",
+                  "season_title": "SEVEN KNIGHTS REVOLUTION: Hero Successor",
+                  "sequence_number": 7,
+                  "series_id": "GZJH3DNE5",
+                  "series_slug_title": "seven-knights-revolution-hero-successor",
+                  "series_title": "SEVEN KNIGHTS REVOLUTION: Hero Successor",
+                  "subtitle_locales": [
+                      "en-US",
+                      "es-419",
+                      "es-ES",
+                      "fr-FR",
+                      "pt-BR",
+                      "ar-SA",
+                      "it-IT",
+                      "de-DE",
+                      "ru-RU"
+                  ],
+                  "upload_date": "2021-05-17T00:00:00+09:00",
+                  "versions": null
+              },
+              "__actions__": {},
+              "playback": "https://pl.crunchyroll.com/asset/7e03f2a2961fcd06f8cfaee9f11b3479/v/6ef307a504d7cce92cfbba4156f48aa9/languages/en-US,es-419,es-ES,fr-FR,pt-BR,ar-SA,it-IT,de-DE,ru-RU,es-LA,ar-ME?*&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly9wbC5jcnVuY2h5cm9sbC5jb20vYXNzZXQvN2UwM2YyYTI5NjFmY2QwNmY4Y2ZhZWU5ZjExYjM0Nzkvdi82ZWYzMDdhNTA0ZDdjY2U5MmNmYmJhNDE1NmY0OGFhOS8~KiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTY2MzgwNDQ4NH19fV19&Signature=S6TbfNU3PaaDo7H1W7DBa4df7kmku1u4TizijR7153n6O~FgZcSRMgpvtObcFvnfOgnoPUBbaZkRzVmDV~ZQySveeqwFZxBEr8jWS79sHZ~TdOc2NOkjHLnpuEYW3dZjCtdq49mM1lA8OybLE5YWV4NJxGjxfrdcObJrTXCuuhWXLbmUIXrHKfd6cqopBCqrLg2ANZ8dVVmhc7n~0xBLe~Rh5BVtnzzg0fpUg0kFbfCSyKThHc4NfeW-m2zlXcTSOoDVNoJMvE2wvUR7CN0qP~gc-5oY167EnCv2eDmtfaCBGKCYF-5LB8taVDOmQ-JggMg~ivkJicx6HLiPn3l~Bg__&Key-Pair-Id=APKAJMWSQ5S7ZB3MF5VA",
+              "images": {
+                  "thumbnail": [
+                      [
+                          {
+                              "height": 180,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/320x180/catalog/crunchyroll/a9fbcede5ed3b2208f8355f59e677763.jpg",
+                              "type": "thumbnail",
+                              "width": 320
+                          },
+                          {
+                              "height": 338,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/600x338/catalog/crunchyroll/a9fbcede5ed3b2208f8355f59e677763.jpg",
+                              "type": "thumbnail",
+                              "width": 600
+                          },
+                          {
+                              "height": 360,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/640x360/catalog/crunchyroll/a9fbcede5ed3b2208f8355f59e677763.jpg",
+                              "type": "thumbnail",
+                              "width": 640
+                          },
+                          {
+                              "height": 450,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/800x450/catalog/crunchyroll/a9fbcede5ed3b2208f8355f59e677763.jpg",
+                              "type": "thumbnail",
+                              "width": 800
+                          },
+                          {
+                              "height": 675,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1200x675/catalog/crunchyroll/a9fbcede5ed3b2208f8355f59e677763.jpg",
+                              "type": "thumbnail",
+                              "width": 1200
+                          },
+                          {
+                              "height": 810,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1440x810/catalog/crunchyroll/a9fbcede5ed3b2208f8355f59e677763.jpg",
+                              "type": "thumbnail",
+                              "width": 1440
+                          },
+                          {
+                              "height": 900,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1600x900/catalog/crunchyroll/a9fbcede5ed3b2208f8355f59e677763.jpg",
+                              "type": "thumbnail",
+                              "width": 1600
+                          },
+                          {
+                              "height": 1080,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1920x1080/catalog/crunchyroll/a9fbcede5ed3b2208f8355f59e677763.jpg",
+                              "type": "thumbnail",
+                              "width": 1920
+                          }
+                      ]
+                  ]
+              },
+              "channel_id": "crunchyroll",
+              "__class__": "panel"
+          }
+      },
+      {
+          "id": "GMKUX5XEG",
+          "date_played": "2022-09-12T02:56:04Z",
+          "parent_id": "GZJH3DNE5",
+          "parent_type": "series",
+          "playhead": 1324,
+          "fully_watched": true,
+          "panel": {
+              "promo_description": "",
+              "type": "episode",
+              "images": {
+                  "thumbnail": [
+                      [
+                          {
+                              "height": 180,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/320x180/catalog/crunchyroll/827af9e537194c33723540f02f6391ef.jpg",
+                              "type": "thumbnail",
+                              "width": 320
+                          },
+                          {
+                              "height": 338,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/600x338/catalog/crunchyroll/827af9e537194c33723540f02f6391ef.jpg",
+                              "type": "thumbnail",
+                              "width": 600
+                          },
+                          {
+                              "height": 360,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/640x360/catalog/crunchyroll/827af9e537194c33723540f02f6391ef.jpg",
+                              "type": "thumbnail",
+                              "width": 640
+                          },
+                          {
+                              "height": 450,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/800x450/catalog/crunchyroll/827af9e537194c33723540f02f6391ef.jpg",
+                              "type": "thumbnail",
+                              "width": 800
+                          },
+                          {
+                              "height": 675,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1200x675/catalog/crunchyroll/827af9e537194c33723540f02f6391ef.jpg",
+                              "type": "thumbnail",
+                              "width": 1200
+                          },
+                          {
+                              "height": 810,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1440x810/catalog/crunchyroll/827af9e537194c33723540f02f6391ef.jpg",
+                              "type": "thumbnail",
+                              "width": 1440
+                          },
+                          {
+                              "height": 900,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1600x900/catalog/crunchyroll/827af9e537194c33723540f02f6391ef.jpg",
+                              "type": "thumbnail",
+                              "width": 1600
+                          },
+                          {
+                              "height": 1080,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1920x1080/catalog/crunchyroll/827af9e537194c33723540f02f6391ef.jpg",
+                              "type": "thumbnail",
+                              "width": 1920
+                          }
+                      ]
+                  ]
+              },
+              "__href__": "",
+              "title": "Día festivo -Festival-",
+              "slug": "",
+              "channel_id": "crunchyroll",
+              "__actions__": {},
+              "external_id": "EPI.810806",
+              "playback": "https://pl.crunchyroll.com/asset/64322ef8e69b677759b3ab4389924d90/v/5021283df8e0d08adef9f1ebc6efef64/languages/en-US,es-419,es-ES,fr-FR,pt-BR,ar-SA,it-IT,de-DE,ru-RU,es-LA,ar-ME?*&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly9wbC5jcnVuY2h5cm9sbC5jb20vYXNzZXQvNjQzMjJlZjhlNjliNjc3NzU5YjNhYjQzODk5MjRkOTAvdi81MDIxMjgzZGY4ZTBkMDhhZGVmOWYxZWJjNmVmZWY2NC8~KiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTY2Mzc5MTU0M319fV19&Signature=JcAK0nRoEyTMvjn-NFnKrdK~MHBPSgQ-NNsYXs9cumltdwPm6N-lWs9PIsq6HXRgrPvoMVgN~Gk5bWaVl6KGCG--d-xhXDDrbKu7ljQ6OAXBkvn7HkCMa2q6fKdZFdxTOmQ3c5ZW3IvPNFMWCtnLKTRIOM6FNoaYdUkP~pm7J4LQ4IYY5EsEvNUNa66jLrCJH-2FruGUFd1uVz~~hPfNEB3xUjOfmxP0tb1NtX81bTYop5fdJywT3UsxXpHAInguUXpXPLx-aAF0feHupQTol2KtYdxI4QHAXjRBE17c60wVneG4evX~WoIBFWF-qXsct2n740HMDMStutJakmFBGQ__&Key-Pair-Id=APKAJMWSQ5S7ZB3MF5VA",
+              "linked_resource_key": "cms:/episodes/GMKUX5XEG",
+              "__links__": {
+                  "episode/season": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/seasons/G6MGC3JGM"
+                  },
+                  "episode/series": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/series/GZJH3DNE5"
+                  },
+                  "resource": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/episodes/GMKUX5XEG"
+                  },
+                  "resource/channel": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/channels/crunchyroll"
+                  },
+                  "streams": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/videos/GPPFK0K8D/streams"
+                  }
+              },
+              "episode_metadata": {
+                  "audio_locale": "",
+                  "availability_ends": "9998-11-30T08:00:00Z",
+                  "availability_notes": "",
+                  "availability_starts": "2021-05-09T16:30:00Z",
+                  "available_date": null,
+                  "available_offline": true,
+                  "closed_captions_available": false,
+                  "duration_ms": 1420104,
+                  "eligible_region": "CL",
+                  "episode": "6",
+                  "episode_air_date": "2021-05-10T00:00:00+09:00",
+                  "episode_number": 6,
+                  "extended_maturity_rating": {},
+                  "free_available_date": "2021-05-09T16:30:00Z",
+                  "identifier": "",
+                  "is_clip": false,
+                  "is_dubbed": false,
+                  "is_mature": false,
+                  "is_premium_only": false,
+                  "is_subbed": true,
+                  "mature_blocked": false,
+                  "maturity_ratings": [
+                      "TV-14"
+                  ],
+                  "premium_available_date": "2021-05-09T16:30:00Z",
+                  "premium_date": null,
+                  "season_id": "G6MGC3JGM",
+                  "season_number": 1,
+                  "season_slug_title": "seven-knights-revolution-hero-successor",
+                  "season_title": "SEVEN KNIGHTS REVOLUTION: Hero Successor",
+                  "sequence_number": 6,
+                  "series_id": "GZJH3DNE5",
+                  "series_slug_title": "seven-knights-revolution-hero-successor",
+                  "series_title": "SEVEN KNIGHTS REVOLUTION: Hero Successor",
+                  "subtitle_locales": [
+                      "en-US",
+                      "es-419",
+                      "es-ES",
+                      "fr-FR",
+                      "pt-BR",
+                      "ar-SA",
+                      "it-IT",
+                      "de-DE",
+                      "ru-RU"
+                  ],
+                  "upload_date": "2021-05-10T00:00:00+09:00",
+                  "versions": null
+              },
+              "__class__": "panel",
+              "promo_title": "",
+              "slug_title": "holiday--festival-",
+              "id": "GMKUX5XEG",
+              "description": "Llega el día del festival escolar, y con él, el tradicional baile nocturno. Pero ¿con quién querrá bailar Nemo? ¿Y el resto de miembros del consejo? El amor es algo complicado, pero Nemo comienza a entender las cosas poco a poco."
+          }
+      },
+      {
+          "id": "GK9U383GX",
+          "date_played": "2022-09-12T02:32:18Z",
+          "parent_id": "GZJH3DNE5",
+          "parent_type": "series",
+          "playhead": 1308,
+          "fully_watched": true,
+          "panel": {
+              "channel_id": "crunchyroll",
+              "slug_title": "rampancy--physis-",
+              "description": "El comité disciplinario está sufriendo muchas bajas recientes debido a una serie de ataques que parecen apuntar a un vampiro como responsable, y de hecho hay rumores de que podría tratarse de Shirley.",
+              "external_id": "EPI.810805",
+              "playback": "https://pl.crunchyroll.com/asset/f4ed292b46ff36d3f7ef2973bfb9d3d7/v/17b3ac42b28feacec67cd603205968bf/languages/en-US,es-419,es-ES,fr-FR,pt-BR,ar-SA,it-IT,de-DE,ru-RU,es-LA,ar-ME?*&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly9wbC5jcnVuY2h5cm9sbC5jb20vYXNzZXQvZjRlZDI5MmI0NmZmMzZkM2Y3ZWYyOTczYmZiOWQzZDcvdi8xN2IzYWM0MmIyOGZlYWNlYzY3Y2Q2MDMyMDU5NjhiZi8~KiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTY2Mzc5NzY2OX19fV19&Signature=YdyKJSkQwVBMAFEEK24mIHJSgTazgnV49ORbRI-SllJ2CJq-aml06SuXJVL7xD6S5Cc43-o4mCjZs2ipZBFu42e~O3fTT1WxlA~SCZ9oDen~DsHHlsFtR3Ab9y-iDOou3NuB4SP3ON8sghb7jLW-kZ17OnW130g6H1u7AGBK60hRJDGHQPPq8rzY~Yl2yE~ov6Ffeo0waV~d3BjPJHWQFfqIuGStmV1DM~~l3cl8lczHtmzTLmNr~Se8W9W93-i9Pjv1lcMCC06HVyeI6SvcasJFa7rU-5iysHJOe6usVKx0K9b2k-SUIUqwAgWMEiB9z-ok5v3csobtUhE7kgyU9A__&Key-Pair-Id=APKAJMWSQ5S7ZB3MF5VA",
+              "title": "Desenfreno -Physis-",
+              "promo_description": "",
+              "images": {
+                  "thumbnail": [
+                      [
+                          {
+                              "height": 180,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/320x180/catalog/crunchyroll/0c5cd4804aba89b1c36b9c73393a009a.jpg",
+                              "type": "thumbnail",
+                              "width": 320
+                          },
+                          {
+                              "height": 338,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/600x338/catalog/crunchyroll/0c5cd4804aba89b1c36b9c73393a009a.jpg",
+                              "type": "thumbnail",
+                              "width": 600
+                          },
+                          {
+                              "height": 360,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/640x360/catalog/crunchyroll/0c5cd4804aba89b1c36b9c73393a009a.jpg",
+                              "type": "thumbnail",
+                              "width": 640
+                          },
+                          {
+                              "height": 450,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/800x450/catalog/crunchyroll/0c5cd4804aba89b1c36b9c73393a009a.jpg",
+                              "type": "thumbnail",
+                              "width": 800
+                          },
+                          {
+                              "height": 675,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1200x675/catalog/crunchyroll/0c5cd4804aba89b1c36b9c73393a009a.jpg",
+                              "type": "thumbnail",
+                              "width": 1200
+                          },
+                          {
+                              "height": 810,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1440x810/catalog/crunchyroll/0c5cd4804aba89b1c36b9c73393a009a.jpg",
+                              "type": "thumbnail",
+                              "width": 1440
+                          },
+                          {
+                              "height": 900,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1600x900/catalog/crunchyroll/0c5cd4804aba89b1c36b9c73393a009a.jpg",
+                              "type": "thumbnail",
+                              "width": 1600
+                          },
+                          {
+                              "height": 1080,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1920x1080/catalog/crunchyroll/0c5cd4804aba89b1c36b9c73393a009a.jpg",
+                              "type": "thumbnail",
+                              "width": 1920
+                          }
+                      ]
+                  ]
+              },
+              "__class__": "panel",
+              "slug": "",
+              "promo_title": "",
+              "type": "episode",
+              "linked_resource_key": "cms:/episodes/GK9U383GX",
+              "__links__": {
+                  "episode/season": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/seasons/G6MGC3JGM"
+                  },
+                  "episode/series": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/series/GZJH3DNE5"
+                  },
+                  "resource": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/episodes/GK9U383GX"
+                  },
+                  "resource/channel": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/channels/crunchyroll"
+                  },
+                  "streams": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/videos/G3WFX7XV9/streams"
+                  }
+              },
+              "__actions__": {},
+              "id": "GK9U383GX",
+              "__href__": "",
+              "episode_metadata": {
+                  "audio_locale": "",
+                  "availability_ends": "9998-11-30T08:00:00Z",
+                  "availability_notes": "",
+                  "availability_starts": "2021-05-02T16:30:00Z",
+                  "available_date": null,
+                  "available_offline": true,
+                  "closed_captions_available": false,
+                  "duration_ms": 1420061,
+                  "eligible_region": "CL",
+                  "episode": "5",
+                  "episode_air_date": "2021-05-03T00:00:00+09:00",
+                  "episode_number": 5,
+                  "extended_maturity_rating": {},
+                  "free_available_date": "2021-05-02T16:30:00Z",
+                  "identifier": "",
+                  "is_clip": false,
+                  "is_dubbed": false,
+                  "is_mature": false,
+                  "is_premium_only": false,
+                  "is_subbed": true,
+                  "mature_blocked": false,
+                  "maturity_ratings": [
+                      "TV-14"
+                  ],
+                  "premium_available_date": "2021-05-02T16:30:00Z",
+                  "premium_date": null,
+                  "season_id": "G6MGC3JGM",
+                  "season_number": 1,
+                  "season_slug_title": "seven-knights-revolution-hero-successor",
+                  "season_title": "SEVEN KNIGHTS REVOLUTION: Hero Successor",
+                  "sequence_number": 5,
+                  "series_id": "GZJH3DNE5",
+                  "series_slug_title": "seven-knights-revolution-hero-successor",
+                  "series_title": "SEVEN KNIGHTS REVOLUTION: Hero Successor",
+                  "subtitle_locales": [
+                      "en-US",
+                      "es-419",
+                      "es-ES",
+                      "fr-FR",
+                      "pt-BR",
+                      "ar-SA",
+                      "it-IT",
+                      "de-DE",
+                      "ru-RU"
+                  ],
+                  "upload_date": "2021-05-03T00:00:00+09:00",
+                  "versions": null
+              }
+          }
+      },
+      {
+          "id": "GN7UDWDNQ",
+          "date_played": "2022-09-12T02:02:28Z",
+          "parent_id": "GZJH3DNE5",
+          "parent_type": "series",
+          "playhead": 1420,
+          "fully_watched": true,
+          "panel": {
+              "external_id": "EPI.810804",
+              "description": "Nemo se recupera tras los últimos acontecimientos con los cuidados de la presidenta, quien parece sentir cierta responsabilidad sobre él. Sus compañeros también intentan que se recupere cuanto antes, pero a Nemo le preocupa ser una carga para la presidenta y para los demás.",
+              "__class__": "panel",
+              "playback": "https://pl.crunchyroll.com/asset/858765d2705a8ae1db37fa4184b8a4d6/v/0b4627b90329d68a81c72d76173935a0/languages/en-US,es-419,es-ES,fr-FR,pt-BR,ar-SA,it-IT,de-DE,ru-RU,es-LA,ar-ME?*&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly9wbC5jcnVuY2h5cm9sbC5jb20vYXNzZXQvODU4NzY1ZDI3MDVhOGFlMWRiMzdmYTQxODRiOGE0ZDYvdi8wYjQ2MjdiOTAzMjlkNjhhODFjNzJkNzYxNzM5MzVhMC8~KiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTY2MzgwNDIwNn19fV19&Signature=gyJK9AjGvwUOrKtP4VHIvZHwPEftqdL8rCBS8VM~V5MeluiNY7TUfB74VMUujx~YpliYIHCGIIi6wa0x1~Zlt7REkibhuZ2geTmIPE-LUOYp7d3gwky1IvYZsiNqmPPg1~SdWDgSB1BuOxYpSS0bBcjLzJRWOilU3SpfX77w7R8Qzuyfcw1oq559lbCWu4KMsevFCXPyUz9KEnlt6boQl~RIiKRt6murrB9nu6qtuy4Ew-fFMHY4hpto45WnZUVVYKqcMHPrpuPlvM~lLk1dYnaf2QyE82Qlor6~1j90FBJsadXSDKUfwq8Vj9AXII6HtUI17bvXNnCrDmBAqAUOQg__&Key-Pair-Id=APKAJMWSQ5S7ZB3MF5VA",
+              "channel_id": "crunchyroll",
+              "slug_title": "friendship--connection-",
+              "slug": "",
+              "images": {
+                  "thumbnail": [
+                      [
+                          {
+                              "height": 180,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/320x180/catalog/crunchyroll/bafdde6bfd6b5b51977b0499594704e1.jpg",
+                              "type": "thumbnail",
+                              "width": 320
+                          },
+                          {
+                              "height": 338,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/600x338/catalog/crunchyroll/bafdde6bfd6b5b51977b0499594704e1.jpg",
+                              "type": "thumbnail",
+                              "width": 600
+                          },
+                          {
+                              "height": 360,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/640x360/catalog/crunchyroll/bafdde6bfd6b5b51977b0499594704e1.jpg",
+                              "type": "thumbnail",
+                              "width": 640
+                          },
+                          {
+                              "height": 450,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/800x450/catalog/crunchyroll/bafdde6bfd6b5b51977b0499594704e1.jpg",
+                              "type": "thumbnail",
+                              "width": 800
+                          },
+                          {
+                              "height": 675,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1200x675/catalog/crunchyroll/bafdde6bfd6b5b51977b0499594704e1.jpg",
+                              "type": "thumbnail",
+                              "width": 1200
+                          },
+                          {
+                              "height": 810,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1440x810/catalog/crunchyroll/bafdde6bfd6b5b51977b0499594704e1.jpg",
+                              "type": "thumbnail",
+                              "width": 1440
+                          },
+                          {
+                              "height": 900,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1600x900/catalog/crunchyroll/bafdde6bfd6b5b51977b0499594704e1.jpg",
+                              "type": "thumbnail",
+                              "width": 1600
+                          },
+                          {
+                              "height": 1080,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1920x1080/catalog/crunchyroll/bafdde6bfd6b5b51977b0499594704e1.jpg",
+                              "type": "thumbnail",
+                              "width": 1920
+                          }
+                      ]
+                  ]
+              },
+              "title": "Amistad -Conexión-",
+              "promo_title": "",
+              "episode_metadata": {
+                  "audio_locale": "",
+                  "availability_ends": "9998-11-30T08:00:00Z",
+                  "availability_notes": "",
+                  "availability_starts": "2021-04-25T16:30:00Z",
+                  "available_date": null,
+                  "available_offline": true,
+                  "closed_captions_available": false,
+                  "duration_ms": 1420104,
+                  "eligible_region": "CL",
+                  "episode": "4",
+                  "episode_air_date": "2021-04-26T00:00:00+09:00",
+                  "episode_number": 4,
+                  "extended_maturity_rating": {},
+                  "free_available_date": "2021-04-25T16:30:00Z",
+                  "identifier": "",
+                  "is_clip": false,
+                  "is_dubbed": false,
+                  "is_mature": false,
+                  "is_premium_only": false,
+                  "is_subbed": true,
+                  "mature_blocked": false,
+                  "maturity_ratings": [
+                      "TV-14"
+                  ],
+                  "premium_available_date": "2021-04-25T16:30:00Z",
+                  "premium_date": null,
+                  "season_id": "G6MGC3JGM",
+                  "season_number": 1,
+                  "season_slug_title": "seven-knights-revolution-hero-successor",
+                  "season_title": "SEVEN KNIGHTS REVOLUTION: Hero Successor",
+                  "sequence_number": 4,
+                  "series_id": "GZJH3DNE5",
+                  "series_slug_title": "seven-knights-revolution-hero-successor",
+                  "series_title": "SEVEN KNIGHTS REVOLUTION: Hero Successor",
+                  "subtitle_locales": [
+                      "en-US",
+                      "es-419",
+                      "es-ES",
+                      "fr-FR",
+                      "pt-BR",
+                      "ar-SA",
+                      "it-IT",
+                      "de-DE",
+                      "ru-RU"
+                  ],
+                  "upload_date": "2021-04-26T00:00:00+09:00",
+                  "versions": null
+              },
+              "__href__": "",
+              "id": "GN7UDWDNQ",
+              "type": "episode",
+              "__actions__": {},
+              "linked_resource_key": "cms:/episodes/GN7UDWDNQ",
+              "__links__": {
+                  "episode/season": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/seasons/G6MGC3JGM"
+                  },
+                  "episode/series": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/series/GZJH3DNE5"
+                  },
+                  "resource": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/episodes/GN7UDWDNQ"
+                  },
+                  "resource/channel": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/channels/crunchyroll"
+                  },
+                  "streams": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/videos/GVMF0P08K/streams"
+                  }
+              },
+              "promo_description": ""
+          }
+      },
+      {
+          "id": "GJWU2J2Q3",
+          "date_played": "2022-09-08T23:55:32Z",
+          "parent_id": "GZJH3DNE5",
+          "parent_type": "series",
+          "playhead": 1420,
+          "fully_watched": true,
+          "panel": {
+              "promo_title": "",
+              "description": "Mientras realizan una operación, Gildan siente que puede hacer mucho más. Esa presión está a punto de convertirse en una tragedia.",
+              "external_id": "EPI.810803",
+              "title": "Héroes -Seven Knights-",
+              "__class__": "panel",
+              "slug_title": "hero--seven-knights-",
+              "__links__": {
+                  "episode/season": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/seasons/G6MGC3JGM"
+                  },
+                  "episode/series": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/series/GZJH3DNE5"
+                  },
+                  "resource": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/episodes/GJWU2J2Q3"
+                  },
+                  "resource/channel": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/channels/crunchyroll"
+                  },
+                  "streams": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/videos/GM8FX5XE2/streams"
+                  }
+              },
+              "episode_metadata": {
+                  "audio_locale": "",
+                  "availability_ends": "9998-11-30T08:00:00Z",
+                  "availability_notes": "",
+                  "availability_starts": "2021-04-18T16:30:00Z",
+                  "available_date": null,
+                  "available_offline": true,
+                  "closed_captions_available": false,
+                  "duration_ms": 1420104,
+                  "eligible_region": "CL",
+                  "episode": "3",
+                  "episode_air_date": "2021-04-19T00:00:00+09:00",
+                  "episode_number": 3,
+                  "extended_maturity_rating": {},
+                  "free_available_date": "2021-04-18T16:30:00Z",
+                  "identifier": "",
+                  "is_clip": false,
+                  "is_dubbed": false,
+                  "is_mature": false,
+                  "is_premium_only": false,
+                  "is_subbed": true,
+                  "mature_blocked": false,
+                  "maturity_ratings": [
+                      "TV-14"
+                  ],
+                  "premium_available_date": "2021-04-18T16:30:00Z",
+                  "premium_date": null,
+                  "season_id": "G6MGC3JGM",
+                  "season_number": 1,
+                  "season_slug_title": "seven-knights-revolution-hero-successor",
+                  "season_title": "SEVEN KNIGHTS REVOLUTION: Hero Successor",
+                  "sequence_number": 3,
+                  "series_id": "GZJH3DNE5",
+                  "series_slug_title": "seven-knights-revolution-hero-successor",
+                  "series_title": "SEVEN KNIGHTS REVOLUTION: Hero Successor",
+                  "subtitle_locales": [
+                      "en-US",
+                      "es-419",
+                      "es-ES",
+                      "fr-FR",
+                      "pt-BR",
+                      "ar-SA",
+                      "it-IT",
+                      "de-DE",
+                      "ru-RU"
+                  ],
+                  "upload_date": "2021-04-19T00:00:00+09:00",
+                  "versions": null
+              },
+              "slug": "",
+              "images": {
+                  "thumbnail": [
+                      [
+                          {
+                              "height": 180,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/320x180/catalog/crunchyroll/08f769358ff486e4ade9351808e595ac.jpg",
+                              "type": "thumbnail",
+                              "width": 320
+                          },
+                          {
+                              "height": 338,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/600x338/catalog/crunchyroll/08f769358ff486e4ade9351808e595ac.jpg",
+                              "type": "thumbnail",
+                              "width": 600
+                          },
+                          {
+                              "height": 360,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/640x360/catalog/crunchyroll/08f769358ff486e4ade9351808e595ac.jpg",
+                              "type": "thumbnail",
+                              "width": 640
+                          },
+                          {
+                              "height": 450,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/800x450/catalog/crunchyroll/08f769358ff486e4ade9351808e595ac.jpg",
+                              "type": "thumbnail",
+                              "width": 800
+                          },
+                          {
+                              "height": 675,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1200x675/catalog/crunchyroll/08f769358ff486e4ade9351808e595ac.jpg",
+                              "type": "thumbnail",
+                              "width": 1200
+                          },
+                          {
+                              "height": 810,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1440x810/catalog/crunchyroll/08f769358ff486e4ade9351808e595ac.jpg",
+                              "type": "thumbnail",
+                              "width": 1440
+                          },
+                          {
+                              "height": 900,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1600x900/catalog/crunchyroll/08f769358ff486e4ade9351808e595ac.jpg",
+                              "type": "thumbnail",
+                              "width": 1600
+                          },
+                          {
+                              "height": 1080,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1920x1080/catalog/crunchyroll/08f769358ff486e4ade9351808e595ac.jpg",
+                              "type": "thumbnail",
+                              "width": 1920
+                          }
+                      ]
+                  ]
+              },
+              "playback": "https://pl.crunchyroll.com/asset/5ef4c9ff3a039a9aa4958cabb4fe27ec/v/68eefa9820910a8929fccb7bd212ab1f/languages/en-US,es-419,es-ES,fr-FR,pt-BR,ar-SA,it-IT,de-DE,ru-RU,es-LA,ar-ME?*&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly9wbC5jcnVuY2h5cm9sbC5jb20vYXNzZXQvNWVmNGM5ZmYzYTAzOWE5YWE0OTU4Y2FiYjRmZTI3ZWMvdi82OGVlZmE5ODIwOTEwYTg5MjlmY2NiN2JkMjEyYWIxZi8~KiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTY2MzgwNDU5NX19fV19&Signature=FzLF5ZoeCvWO33VjJnfrpXCqsIHMSM7dDhz8~tEXOSLtE2XN9KhZ4~BnlpQ8z6t31lrWmVHdaxYaIwfpX~t03Ybf9-alHOaPpG5yEU0lF-mt7WvJOLGrHp6udt6BvceXLxiq6h9NpLMTYqkUJmZ3TGxxL0Rx76OyGh5JJyqLPGbLXy8fVV~HB93GgCItP08VWD2h6dmvoeww3wjHujvYbLsG31Ip2caqaU6v9briFf~Yq2rT1CuY4BnPjZLXyFNRhBkHSZ-X-0W-iOO7lckgynyzIVGaRnCqJzwd4h8LNT-ICACXPh1KUOd80yd9snWIKIku0LZUfRo~RrCzUg0b0Q__&Key-Pair-Id=APKAJMWSQ5S7ZB3MF5VA",
+              "__href__": "",
+              "id": "GJWU2J2Q3",
+              "linked_resource_key": "cms:/episodes/GJWU2J2Q3",
+              "__actions__": {},
+              "type": "episode",
+              "channel_id": "crunchyroll",
+              "promo_description": ""
+          }
+      },
+      {
+          "id": "G14U4X4V0",
+          "date_played": "2022-09-08T23:32:09Z",
+          "parent_id": "GZJH3DNE5",
+          "parent_type": "series",
+          "playhead": 1420,
+          "fully_watched": true,
+          "panel": {
+              "external_id": "EPI.810802",
+              "promo_description": "",
+              "__class__": "panel",
+              "id": "G14U4X4V0",
+              "title": "Gran encuentro -Granseed-",
+              "type": "episode",
+              "slug": "",
+              "__actions__": {},
+              "images": {
+                  "thumbnail": [
+                      [
+                          {
+                              "height": 180,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/320x180/catalog/crunchyroll/c48bab37e88ff9d9908e9c94e344ebf5.jpg",
+                              "type": "thumbnail",
+                              "width": 320
+                          },
+                          {
+                              "height": 338,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/600x338/catalog/crunchyroll/c48bab37e88ff9d9908e9c94e344ebf5.jpg",
+                              "type": "thumbnail",
+                              "width": 600
+                          },
+                          {
+                              "height": 360,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/640x360/catalog/crunchyroll/c48bab37e88ff9d9908e9c94e344ebf5.jpg",
+                              "type": "thumbnail",
+                              "width": 640
+                          },
+                          {
+                              "height": 450,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/800x450/catalog/crunchyroll/c48bab37e88ff9d9908e9c94e344ebf5.jpg",
+                              "type": "thumbnail",
+                              "width": 800
+                          },
+                          {
+                              "height": 675,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1200x675/catalog/crunchyroll/c48bab37e88ff9d9908e9c94e344ebf5.jpg",
+                              "type": "thumbnail",
+                              "width": 1200
+                          },
+                          {
+                              "height": 810,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1440x810/catalog/crunchyroll/c48bab37e88ff9d9908e9c94e344ebf5.jpg",
+                              "type": "thumbnail",
+                              "width": 1440
+                          },
+                          {
+                              "height": 900,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1600x900/catalog/crunchyroll/c48bab37e88ff9d9908e9c94e344ebf5.jpg",
+                              "type": "thumbnail",
+                              "width": 1600
+                          },
+                          {
+                              "height": 1080,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1920x1080/catalog/crunchyroll/c48bab37e88ff9d9908e9c94e344ebf5.jpg",
+                              "type": "thumbnail",
+                              "width": 1920
+                          }
+                      ]
+                  ]
+              },
+              "__links__": {
+                  "episode/season": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/seasons/G6MGC3JGM"
+                  },
+                  "episode/series": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/series/GZJH3DNE5"
+                  },
+                  "resource": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/episodes/G14U4X4V0"
+                  },
+                  "resource/channel": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/channels/crunchyroll"
+                  },
+                  "streams": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/videos/GKKF383G0/streams"
+                  }
+              },
+              "__href__": "",
+              "slug_title": "chance-encounter--granseed-",
+              "channel_id": "crunchyroll",
+              "episode_metadata": {
+                  "audio_locale": "",
+                  "availability_ends": "9998-11-30T08:00:00Z",
+                  "availability_notes": "",
+                  "availability_starts": "2021-04-11T16:30:00Z",
+                  "available_date": null,
+                  "available_offline": true,
+                  "closed_captions_available": false,
+                  "duration_ms": 1420104,
+                  "eligible_region": "CL",
+                  "episode": "2",
+                  "episode_air_date": "2021-04-12T00:00:00+09:00",
+                  "episode_number": 2,
+                  "extended_maturity_rating": {},
+                  "free_available_date": "2021-04-11T16:30:00Z",
+                  "identifier": "",
+                  "is_clip": false,
+                  "is_dubbed": false,
+                  "is_mature": false,
+                  "is_premium_only": false,
+                  "is_subbed": true,
+                  "mature_blocked": false,
+                  "maturity_ratings": [
+                      "TV-14"
+                  ],
+                  "premium_available_date": "2021-04-11T16:30:00Z",
+                  "premium_date": null,
+                  "season_id": "G6MGC3JGM",
+                  "season_number": 1,
+                  "season_slug_title": "seven-knights-revolution-hero-successor",
+                  "season_title": "SEVEN KNIGHTS REVOLUTION: Hero Successor",
+                  "sequence_number": 2,
+                  "series_id": "GZJH3DNE5",
+                  "series_slug_title": "seven-knights-revolution-hero-successor",
+                  "series_title": "SEVEN KNIGHTS REVOLUTION: Hero Successor",
+                  "subtitle_locales": [
+                      "en-US",
+                      "es-419",
+                      "es-ES",
+                      "fr-FR",
+                      "pt-BR",
+                      "ar-SA",
+                      "it-IT",
+                      "de-DE",
+                      "ru-RU"
+                  ],
+                  "upload_date": "2021-04-12T00:00:00+09:00",
+                  "versions": null
+              },
+              "promo_title": "",
+              "linked_resource_key": "cms:/episodes/G14U4X4V0",
+              "playback": "https://pl.crunchyroll.com/asset/a10958411ca669de729cc451b42f8391/v/bc02ff3ec833b771f365ec5aa19358b4/languages/en-US,es-419,es-ES,fr-FR,pt-BR,ar-SA,it-IT,de-DE,ru-RU,es-LA,ar-ME?*&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly9wbC5jcnVuY2h5cm9sbC5jb20vYXNzZXQvYTEwOTU4NDExY2E2NjlkZTcyOWNjNDUxYjQyZjgzOTEvdi9iYzAyZmYzZWM4MzNiNzcxZjM2NWVjNWFhMTkzNThiNC8~KiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTY2MzgwNDUyMn19fV19&Signature=Bby9eiCYiAD21aJsRTT6IeWRn5Tg6sSCcUD13mez0kxd03UF94jwHl2CjFH-7~adOZPk~DrJiarraz9JoAV4w6sLTH0NqnnDJb4xYz5KjDODKxG1GxhwbcfpGAWcAYf--JvTPcGDhoxjPS8V--NiVrFjDjoBCxVs8G9vbpJxu~MbIoDOSWfLOzBRQwH6k1nYjKR056wCL9vFoOLw6iVuHSSpaau0VXkkh6M60nHsE3UZnREFecs-utfqogSx2VDD3bKo7f6m2FzEKHMhpqA0Zim3QgRxGljnOmyGvdhnS0sH46TYHxvyXhTKXfsrExjzsgyxiAcRT2NvCmsTmKjpNw__&Key-Pair-Id=APKAJMWSQ5S7ZB3MF5VA",
+              "description": "Nemo finalmente llega a la academia Granseed. Su llegada presenta muchas dudas y temores, pero tras un ataque podrá demostrar su valía."
+          }
+      },
+      {
+          "id": "GMKUXZ5GM",
+          "date_played": "2022-09-08T21:31:32Z",
+          "parent_id": "GR751KNZY",
+          "parent_type": "series",
+          "playhead": 1341,
+          "fully_watched": true,
+          "panel": {
+              "__class__": "panel",
+              "promo_description": "",
+              "description": "La guerra solo sirve para sembrar más y más odio. ¿Qué hará el padre de Sasha cuando tenga ante sus ojos a Gabi y sepa lo ocurrido?",
+              "playback": "https://pl.crunchyroll.com/asset/874d8ed8c02fb7a8424087e0abdcacd1/v/5d700e96d4eec86526f02d354e56388b/languages/en-US,es-419,es-ES,fr-FR,pt-BR,ar-SA,it-IT,de-DE,ru-RU,es-LA,ar-ME?*&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly9wbC5jcnVuY2h5cm9sbC5jb20vYXNzZXQvODc0ZDhlZDhjMDJmYjdhODQyNDA4N2UwYWJkY2FjZDEvdi81ZDcwMGU5NmQ0ZWVjODY1MjZmMDJkMzU0ZTU2Mzg4Yi8~KiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTY2MzgwMzc5Mn19fV19&Signature=I7BNzOhrNbOLCa3mvHy2T8ZaWh24FAyHUszNa5Es8Mi2a0ToSGmyWiooCgSnkxfJW3dSI1aVlnc90QREiQlqdptO6TnQY0s1SYc83xBQHMgtp7nIa4GInshZrKRVxoon-mN1IOMpLjt23tovCe09KkRbWD5sl0fZDOFekwRejnvSGVUcsAiv0~kqeGnhAL~SgbO0BzjF9e3XZ~9ZDo~136k4-F7ruY5~HHCYSigQ7duDzC49psLeVnwq-F3YFD4oxXpIQYxjnu5VgrOJT-G7tzps5qa2oSkQ-Iepph36KYnb7akA~~npUUXaACWLA1fuyZ4qlyEyBTHGokn9aP9Nrw__&Key-Pair-Id=APKAJMWSQ5S7ZB3MF5VA",
+              "slug": "",
+              "images": {
+                  "thumbnail": [
+                      [
+                          {
+                              "height": 180,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/320x180/catalog/crunchyroll/ebfaa4c3fa6ffca48f8388b653335cb8.jpeg",
+                              "type": "thumbnail",
+                              "width": 320
+                          },
+                          {
+                              "height": 338,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/600x338/catalog/crunchyroll/ebfaa4c3fa6ffca48f8388b653335cb8.jpeg",
+                              "type": "thumbnail",
+                              "width": 600
+                          },
+                          {
+                              "height": 360,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/640x360/catalog/crunchyroll/ebfaa4c3fa6ffca48f8388b653335cb8.jpeg",
+                              "type": "thumbnail",
+                              "width": 640
+                          },
+                          {
+                              "height": 450,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/800x450/catalog/crunchyroll/ebfaa4c3fa6ffca48f8388b653335cb8.jpeg",
+                              "type": "thumbnail",
+                              "width": 800
+                          },
+                          {
+                              "height": 675,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1200x675/catalog/crunchyroll/ebfaa4c3fa6ffca48f8388b653335cb8.jpeg",
+                              "type": "thumbnail",
+                              "width": 1200
+                          },
+                          {
+                              "height": 810,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1440x810/catalog/crunchyroll/ebfaa4c3fa6ffca48f8388b653335cb8.jpeg",
+                              "type": "thumbnail",
+                              "width": 1440
+                          },
+                          {
+                              "height": 900,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1600x900/catalog/crunchyroll/ebfaa4c3fa6ffca48f8388b653335cb8.jpeg",
+                              "type": "thumbnail",
+                              "width": 1600
+                          },
+                          {
+                              "height": 1080,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1920x1080/catalog/crunchyroll/ebfaa4c3fa6ffca48f8388b653335cb8.jpeg",
+                              "type": "thumbnail",
+                              "width": 1920
+                          }
+                      ]
+                  ]
+              },
+              "slug_title": "children-of-the-forest",
+              "__actions__": {},
+              "episode_metadata": {
+                  "audio_locale": "jaJP",
+                  "availability_ends": "9998-11-30T08:00:00Z",
+                  "availability_notes": "",
+                  "availability_starts": "2021-03-07T20:45:00Z",
+                  "available_date": null,
+                  "available_offline": true,
+                  "closed_captions_available": false,
+                  "duration_ms": 1435123,
+                  "eligible_region": "CL",
+                  "episode": "72",
+                  "episode_air_date": "2021-03-08T00:10:00+09:00",
+                  "episode_number": 72,
+                  "extended_maturity_rating": {},
+                  "free_available_date": "2021-03-07T20:45:00Z",
+                  "identifier": "",
+                  "is_clip": false,
+                  "is_dubbed": false,
+                  "is_mature": false,
+                  "is_premium_only": false,
+                  "is_subbed": true,
+                  "mature_blocked": false,
+                  "maturity_ratings": [
+                      "TV-14"
+                  ],
+                  "premium_available_date": "2021-03-07T20:45:00Z",
+                  "premium_date": null,
+                  "season_id": "G69PC2WV0",
+                  "season_number": 4,
+                  "season_slug_title": "attack-on-titan-final-season",
+                  "season_title": "Attack on Titan",
+                  "sequence_number": 72,
+                  "series_id": "GR751KNZY",
+                  "series_slug_title": "attack-on-titan",
+                  "series_title": "Attack on Titan",
+                  "subtitle_locales": [
+                      "en-US",
+                      "es-419",
+                      "es-ES",
+                      "fr-FR",
+                      "pt-BR",
+                      "ar-SA",
+                      "it-IT",
+                      "de-DE",
+                      "ru-RU"
+                  ],
+                  "upload_date": "2021-03-08T00:10:00+09:00",
+                  "versions": null
+              },
+              "id": "GMKUXZ5GM",
+              "promo_title": "",
+              "title": "Los hijos del bosque",
+              "__href__": "",
+              "__links__": {
+                  "episode/season": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/seasons/G69PC2WV0"
+                  },
+                  "episode/series": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/series/GR751KNZY"
+                  },
+                  "resource": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/episodes/GMKUXZ5GM"
+                  },
+                  "resource/channel": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/channels/crunchyroll"
+                  },
+                  "streams": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/videos/GPPFKQ0DJ/streams"
+                  }
+              },
+              "channel_id": "crunchyroll",
+              "external_id": "EPI.803837",
+              "linked_resource_key": "cms:/episodes/GMKUXZ5GM",
+              "type": "episode"
+          }
+      },
+      {
+          "id": "G4VUQ3M28",
+          "date_played": "2022-09-08T21:27:58Z",
+          "parent_id": "GR751KNZY",
+          "parent_type": "series",
+          "playhead": 1304,
+          "fully_watched": true,
+          "panel": {
+              "__actions__": {},
+              "playback": "https://pl.crunchyroll.com/asset/7bdf2ed1fcdcbd274ca32ff3dff5c88e/v/d08dcd230520441d2dae4e00a63a2c33/languages/en-US,es-419,es-ES,fr-FR,pt-BR,ar-SA,it-IT,de-DE,ru-RU,es-LA,ar-ME?*&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly9wbC5jcnVuY2h5cm9sbC5jb20vYXNzZXQvN2JkZjJlZDFmY2RjYmQyNzRjYTMyZmYzZGZmNWM4OGUvdi9kMDhkY2QyMzA1MjA0NDFkMmRhZTRlMDBhNjNhMmMzMy8~KiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTY2MzgwNTcwNH19fV19&Signature=ooXzTvWyMMlM7oUzS9DB7dBQpeZuoBP1pJzzwBrI1aoVqWyDNgx8FzmNliJmce0hOOxA2-~mTCAF~~QWIeVRfhGEJl84NtjHvSvdWnQQY-qsRkVSEY2cxupPjRwoKToAgyLaf7Dg4Lsbf~3eT-uOrPtqM6vnSMDAvWABSvFt8KatnI680PmD~Mc2PYzu5nWv7D6RrqZobkzNWT5uCLTSqtEB2CxgXmULQTTFcgXnrkju7NQNaCR2R2ODvdt9iq7iM3~GMg5WzlG63ahZPuQ4Q~JmddEZbYtsUw7r0yQMKWUexQBEUZwZJIkoKs3zihgnos8Y1oGkMICCBdWINORwUA__&Key-Pair-Id=APKAJMWSQ5S7ZB3MF5VA",
+              "channel_id": "crunchyroll",
+              "episode_metadata": {
+                  "audio_locale": "jaJP",
+                  "availability_ends": "9998-11-30T08:00:00Z",
+                  "availability_notes": "",
+                  "availability_starts": "2021-01-31T20:45:00Z",
+                  "available_date": null,
+                  "available_offline": true,
+                  "closed_captions_available": false,
+                  "duration_ms": 1435123,
+                  "eligible_region": "CL",
+                  "episode": "67",
+                  "episode_air_date": "2021-02-01T00:10:00+09:00",
+                  "episode_number": 67,
+                  "extended_maturity_rating": {},
+                  "free_available_date": "2021-01-31T20:45:00Z",
+                  "identifier": "",
+                  "is_clip": false,
+                  "is_dubbed": false,
+                  "is_mature": false,
+                  "is_premium_only": false,
+                  "is_subbed": true,
+                  "mature_blocked": false,
+                  "maturity_ratings": [
+                      "TV-14"
+                  ],
+                  "premium_available_date": "2021-01-31T20:45:00Z",
+                  "premium_date": null,
+                  "season_id": "G69PC2WV0",
+                  "season_number": 4,
+                  "season_slug_title": "attack-on-titan-final-season",
+                  "season_title": "Attack on Titan",
+                  "sequence_number": 67,
+                  "series_id": "GR751KNZY",
+                  "series_slug_title": "attack-on-titan",
+                  "series_title": "Attack on Titan",
+                  "subtitle_locales": [
+                      "en-US",
+                      "es-419",
+                      "es-ES",
+                      "fr-FR",
+                      "pt-BR",
+                      "ar-SA",
+                      "it-IT",
+                      "de-DE",
+                      "ru-RU"
+                  ],
+                  "upload_date": "2021-02-01T00:10:00+09:00",
+                  "versions": null
+              },
+              "id": "G4VUQ3M28",
+              "promo_description": "",
+              "slug_title": "assassins-bullet",
+              "title": "La bala del asesino",
+              "promo_title": "",
+              "slug": "",
+              "description": "Tras el asedio, y sin verse capaz de matar a Reiner, Eren decide que es el momento de la retirada temporal.",
+              "type": "episode",
+              "external_id": "EPI.803832",
+              "linked_resource_key": "cms:/episodes/G4VUQ3M28",
+              "__href__": "",
+              "__links__": {
+                  "episode/season": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/seasons/G69PC2WV0"
+                  },
+                  "episode/series": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/series/GR751KNZY"
+                  },
+                  "resource": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/episodes/G4VUQ3M28"
+                  },
+                  "resource/channel": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/channels/crunchyroll"
+                  },
+                  "streams": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/videos/GNJFDZW4V/streams"
+                  }
+              },
+              "__class__": "panel",
+              "images": {
+                  "thumbnail": [
+                      [
+                          {
+                              "height": 180,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/320x180/catalog/crunchyroll/abfee50e7f4dc59eb17e5f5e17fb76a6.jpeg",
+                              "type": "thumbnail",
+                              "width": 320
+                          },
+                          {
+                              "height": 338,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/600x338/catalog/crunchyroll/abfee50e7f4dc59eb17e5f5e17fb76a6.jpeg",
+                              "type": "thumbnail",
+                              "width": 600
+                          },
+                          {
+                              "height": 360,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/640x360/catalog/crunchyroll/abfee50e7f4dc59eb17e5f5e17fb76a6.jpeg",
+                              "type": "thumbnail",
+                              "width": 640
+                          },
+                          {
+                              "height": 450,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/800x450/catalog/crunchyroll/abfee50e7f4dc59eb17e5f5e17fb76a6.jpeg",
+                              "type": "thumbnail",
+                              "width": 800
+                          },
+                          {
+                              "height": 675,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1200x675/catalog/crunchyroll/abfee50e7f4dc59eb17e5f5e17fb76a6.jpeg",
+                              "type": "thumbnail",
+                              "width": 1200
+                          },
+                          {
+                              "height": 810,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1440x810/catalog/crunchyroll/abfee50e7f4dc59eb17e5f5e17fb76a6.jpeg",
+                              "type": "thumbnail",
+                              "width": 1440
+                          },
+                          {
+                              "height": 900,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1600x900/catalog/crunchyroll/abfee50e7f4dc59eb17e5f5e17fb76a6.jpeg",
+                              "type": "thumbnail",
+                              "width": 1600
+                          },
+                          {
+                              "height": 1080,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1920x1080/catalog/crunchyroll/abfee50e7f4dc59eb17e5f5e17fb76a6.jpeg",
+                              "type": "thumbnail",
+                              "width": 1920
+                          }
+                      ]
+                  ]
+              }
+          }
+      },
+      {
+          "id": "G4VUQMQWE",
+          "date_played": "2022-09-08T21:27:32Z",
+          "parent_id": "GZJH3DNE5",
+          "parent_type": "series",
+          "playhead": 1321,
+          "fully_watched": true,
+          "panel": {
+              "__links__": {
+                  "episode/season": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/seasons/G6MGC3JGM"
+                  },
+                  "episode/series": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/series/GZJH3DNE5"
+                  },
+                  "resource": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/episodes/G4VUQMQWE"
+                  },
+                  "resource/channel": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/channels/crunchyroll"
+                  },
+                  "streams": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/videos/GNJFDWDNP/streams"
+                  }
+              },
+              "external_id": "EPI.810801",
+              "images": {
+                  "thumbnail": [
+                      [
+                          {
+                              "height": 180,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/320x180/catalog/crunchyroll/24733cb5571403350f2a2ebe567e3c97.jpg",
+                              "type": "thumbnail",
+                              "width": 320
+                          },
+                          {
+                              "height": 338,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/600x338/catalog/crunchyroll/24733cb5571403350f2a2ebe567e3c97.jpg",
+                              "type": "thumbnail",
+                              "width": 600
+                          },
+                          {
+                              "height": 360,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/640x360/catalog/crunchyroll/24733cb5571403350f2a2ebe567e3c97.jpg",
+                              "type": "thumbnail",
+                              "width": 640
+                          },
+                          {
+                              "height": 450,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/800x450/catalog/crunchyroll/24733cb5571403350f2a2ebe567e3c97.jpg",
+                              "type": "thumbnail",
+                              "width": 800
+                          },
+                          {
+                              "height": 675,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1200x675/catalog/crunchyroll/24733cb5571403350f2a2ebe567e3c97.jpg",
+                              "type": "thumbnail",
+                              "width": 1200
+                          },
+                          {
+                              "height": 810,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1440x810/catalog/crunchyroll/24733cb5571403350f2a2ebe567e3c97.jpg",
+                              "type": "thumbnail",
+                              "width": 1440
+                          },
+                          {
+                              "height": 900,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1600x900/catalog/crunchyroll/24733cb5571403350f2a2ebe567e3c97.jpg",
+                              "type": "thumbnail",
+                              "width": 1600
+                          },
+                          {
+                              "height": 1080,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1920x1080/catalog/crunchyroll/24733cb5571403350f2a2ebe567e3c97.jpg",
+                              "type": "thumbnail",
+                              "width": 1920
+                          }
+                      ]
+                  ]
+              },
+              "slug_title": "awakening--succession-",
+              "__href__": "",
+              "type": "episode",
+              "description": "Nemo es un joven que está por ingresar en la academia Granseed, donde pulen a los jóvenes para luchar contra Physis.",
+              "__actions__": {},
+              "channel_id": "crunchyroll",
+              "episode_metadata": {
+                  "audio_locale": "",
+                  "availability_ends": "9998-11-30T08:00:00Z",
+                  "availability_notes": "",
+                  "availability_starts": "2021-04-04T16:30:00Z",
+                  "available_date": null,
+                  "available_offline": true,
+                  "closed_captions_available": false,
+                  "duration_ms": 1420019,
+                  "eligible_region": "CL",
+                  "episode": "1",
+                  "episode_air_date": "2021-04-05T00:00:00+09:00",
+                  "episode_number": 1,
+                  "extended_maturity_rating": {},
+                  "free_available_date": "2021-04-04T16:30:00Z",
+                  "identifier": "",
+                  "is_clip": false,
+                  "is_dubbed": false,
+                  "is_mature": false,
+                  "is_premium_only": false,
+                  "is_subbed": true,
+                  "mature_blocked": false,
+                  "maturity_ratings": [
+                      "TV-14"
+                  ],
+                  "premium_available_date": "2021-04-04T16:30:00Z",
+                  "premium_date": null,
+                  "season_id": "G6MGC3JGM",
+                  "season_number": 1,
+                  "season_slug_title": "seven-knights-revolution-hero-successor",
+                  "season_title": "SEVEN KNIGHTS REVOLUTION: Hero Successor",
+                  "sequence_number": 1,
+                  "series_id": "GZJH3DNE5",
+                  "series_slug_title": "seven-knights-revolution-hero-successor",
+                  "series_title": "SEVEN KNIGHTS REVOLUTION: Hero Successor",
+                  "subtitle_locales": [
+                      "en-US",
+                      "es-419",
+                      "es-ES",
+                      "fr-FR",
+                      "pt-BR",
+                      "ar-SA",
+                      "it-IT",
+                      "de-DE",
+                      "ru-RU"
+                  ],
+                  "upload_date": "2021-04-05T00:00:00+09:00",
+                  "versions": null
+              },
+              "title": "Despertar -Sucesión-",
+              "id": "G4VUQMQWE",
+              "promo_title": "",
+              "playback": "https://pl.crunchyroll.com/asset/ba854cf2417e48f882cdb1713e40c1ac/v/f4d063c9d1e5dd2ffaca6fa864e3a35e/languages/en-US,es-419,es-ES,fr-FR,pt-BR,ar-SA,it-IT,de-DE,ru-RU,es-LA,ar-ME?*&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly9wbC5jcnVuY2h5cm9sbC5jb20vYXNzZXQvYmE4NTRjZjI0MTdlNDhmODgyY2RiMTcxM2U0MGMxYWMvdi9mNGQwNjNjOWQxZTVkZDJmZmFjYTZmYTg2NGUzYTM1ZS8~KiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTY2MzgwNTU4NH19fV19&Signature=Ng09cTNM0t~O96LHVZnSrlBfSvxvPYmPSTqiBjG7Uw7mHspMwv2fcR7zibV6hq4P9k~uxKreruMYhUe~DWuocS88gknp4WNT2OrsQnwbinc7F4Vo6chggYrGWlzx8h-ujlg5KdlRVSKcRJBMLv0aJ8ERjlqKmReB8ZURhIB80YnO5IORIo7CKl3BdsbfKNgHSMY0IFoiVRsCG40Uki3RftO-WUIRSAUf7NYZXaHFyVCuvLQlHGWvUg1WlBTPacV15R2VReMuVIK0TjlQ1CEVK1UEwICc72OI5SUt551MW2H8VxOzYmXi-t9uk9rnym1ul8vkVrVlscNz9-0c47WbJg__&Key-Pair-Id=APKAJMWSQ5S7ZB3MF5VA",
+              "linked_resource_key": "cms:/episodes/G4VUQMQWE",
+              "promo_description": "",
+              "__class__": "panel",
+              "slug": ""
+          }
+      },
+      {
+          "id": "G50UZ2DP2",
+          "date_played": "2022-09-08T21:25:57Z",
+          "parent_id": "GR751KNZY",
+          "parent_type": "series",
+          "playhead": 1298,
+          "fully_watched": true,
+          "panel": {
+              "description": "Eren sigue atacando a todos sus enemigos sin ningún tipo de piedad y sin que nadie sea capaz de frenarlo aunque sea un poco.",
+              "slug_title": "assault",
+              "episode_metadata": {
+                  "audio_locale": "jaJP",
+                  "availability_ends": "9998-11-30T08:00:00Z",
+                  "availability_notes": "",
+                  "availability_starts": "2021-01-24T20:45:00Z",
+                  "available_date": null,
+                  "available_offline": true,
+                  "closed_captions_available": false,
+                  "duration_ms": 1435123,
+                  "eligible_region": "CL",
+                  "episode": "66",
+                  "episode_air_date": "2021-01-25T00:10:00+09:00",
+                  "episode_number": 66,
+                  "extended_maturity_rating": {},
+                  "free_available_date": "2021-01-24T20:45:00Z",
+                  "identifier": "",
+                  "is_clip": false,
+                  "is_dubbed": false,
+                  "is_mature": false,
+                  "is_premium_only": false,
+                  "is_subbed": true,
+                  "mature_blocked": false,
+                  "maturity_ratings": [
+                      "TV-14"
+                  ],
+                  "premium_available_date": "2021-01-24T20:45:00Z",
+                  "premium_date": null,
+                  "season_id": "G69PC2WV0",
+                  "season_number": 4,
+                  "season_slug_title": "attack-on-titan-final-season",
+                  "season_title": "Attack on Titan",
+                  "sequence_number": 66,
+                  "series_id": "GR751KNZY",
+                  "series_slug_title": "attack-on-titan",
+                  "series_title": "Attack on Titan",
+                  "subtitle_locales": [
+                      "en-US",
+                      "es-419",
+                      "es-ES",
+                      "fr-FR",
+                      "pt-BR",
+                      "ar-SA",
+                      "it-IT",
+                      "de-DE",
+                      "ru-RU"
+                  ],
+                  "upload_date": "2021-01-25T00:10:00+09:00",
+                  "versions": null
+              },
+              "__links__": {
+                  "episode/season": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/seasons/G69PC2WV0"
+                  },
+                  "episode/series": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/series/GR751KNZY"
+                  },
+                  "resource": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/episodes/G50UZ2DP2"
+                  },
+                  "resource/channel": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/channels/crunchyroll"
+                  },
+                  "streams": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/videos/G07FN3XP3/streams"
+                  }
+              },
+              "title": "Asalto",
+              "images": {
+                  "thumbnail": [
+                      [
+                          {
+                              "height": 180,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/320x180/catalog/crunchyroll/e350687c8bbadbf1c6c73dc541a0e57c.jpeg",
+                              "type": "thumbnail",
+                              "width": 320
+                          },
+                          {
+                              "height": 338,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/600x338/catalog/crunchyroll/e350687c8bbadbf1c6c73dc541a0e57c.jpeg",
+                              "type": "thumbnail",
+                              "width": 600
+                          },
+                          {
+                              "height": 360,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/640x360/catalog/crunchyroll/e350687c8bbadbf1c6c73dc541a0e57c.jpeg",
+                              "type": "thumbnail",
+                              "width": 640
+                          },
+                          {
+                              "height": 450,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/800x450/catalog/crunchyroll/e350687c8bbadbf1c6c73dc541a0e57c.jpeg",
+                              "type": "thumbnail",
+                              "width": 800
+                          },
+                          {
+                              "height": 675,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1200x675/catalog/crunchyroll/e350687c8bbadbf1c6c73dc541a0e57c.jpeg",
+                              "type": "thumbnail",
+                              "width": 1200
+                          },
+                          {
+                              "height": 810,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1440x810/catalog/crunchyroll/e350687c8bbadbf1c6c73dc541a0e57c.jpeg",
+                              "type": "thumbnail",
+                              "width": 1440
+                          },
+                          {
+                              "height": 900,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1600x900/catalog/crunchyroll/e350687c8bbadbf1c6c73dc541a0e57c.jpeg",
+                              "type": "thumbnail",
+                              "width": 1600
+                          },
+                          {
+                              "height": 1080,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1920x1080/catalog/crunchyroll/e350687c8bbadbf1c6c73dc541a0e57c.jpeg",
+                              "type": "thumbnail",
+                              "width": 1920
+                          }
+                      ]
+                  ]
+              },
+              "__href__": "",
+              "promo_description": "",
+              "playback": "https://pl.crunchyroll.com/asset/612dea0e9eec1dbdd5e17f4107ffc1a4/v/9873ef560f7a839387eca319f5bd4b2c/languages/en-US,es-419,es-ES,fr-FR,pt-BR,ar-SA,it-IT,de-DE,ru-RU,es-LA,ar-ME?*&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly9wbC5jcnVuY2h5cm9sbC5jb20vYXNzZXQvNjEyZGVhMGU5ZWVjMWRiZGQ1ZTE3ZjQxMDdmZmMxYTQvdi85ODczZWY1NjBmN2E4MzkzODdlY2EzMTlmNWJkNGIyYy8~KiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTY2MzgwNTYzOH19fV19&Signature=XLg-WrSzTH9M0x1SPniALIUWAqgnYrxU9QjfzvSBW8O3xta9SIJvypuaOo~qoh3bR0C2rbDh-ldIXetiSs3hA9dJkuDuXh5jsURPoLdeRGqt38R2gDIHUV~VbuV5D-~e8pxRJ~8JyYBzYdHZZ3QY47Iqgp~PWIuDSUI~BmKcjCzlGBj~G-Z~rZVI-hVQnZ2TEbdYw6qDyxxoE~WbOhzng4iqbgTfe94zCfFdNJPdQ7-LmAA1LkLJZkzO3AvzCJrWKPuEnHGF2YNud0C-ZWyJGKg7oL~zg0l~LzRgfCeVxxrXGSKB7h46mNdzUPAQzxoXRdciU6fLWCo7ztRGTzyN1g__&Key-Pair-Id=APKAJMWSQ5S7ZB3MF5VA",
+              "__class__": "panel",
+              "__actions__": {},
+              "external_id": "EPI.799907",
+              "type": "episode",
+              "linked_resource_key": "cms:/episodes/G50UZ2DP2",
+              "id": "G50UZ2DP2",
+              "slug": "",
+              "channel_id": "crunchyroll",
+              "promo_title": ""
+          }
+      },
+      {
+          "id": "GQJUGDZJ4",
+          "date_played": "2022-09-08T21:12:26Z",
+          "parent_id": "GR751KNZY",
+          "parent_type": "series",
+          "playhead": 1304,
+          "fully_watched": true,
+          "panel": {
+              "linked_resource_key": "cms:/episodes/GQJUGDZJ4",
+              "type": "episode",
+              "episode_metadata": {
+                  "audio_locale": "jaJP",
+                  "availability_ends": "9998-11-30T08:00:00Z",
+                  "availability_notes": "",
+                  "availability_starts": "2021-01-17T20:45:00Z",
+                  "available_date": null,
+                  "available_offline": true,
+                  "closed_captions_available": false,
+                  "duration_ms": 1435037,
+                  "eligible_region": "CL",
+                  "episode": "65",
+                  "episode_air_date": "2021-01-18T00:10:00+09:00",
+                  "episode_number": 65,
+                  "extended_maturity_rating": {},
+                  "free_available_date": "2021-01-17T20:45:00Z",
+                  "identifier": "",
+                  "is_clip": false,
+                  "is_dubbed": false,
+                  "is_mature": false,
+                  "is_premium_only": false,
+                  "is_subbed": true,
+                  "mature_blocked": false,
+                  "maturity_ratings": [
+                      "TV-14"
+                  ],
+                  "premium_available_date": "2021-01-17T20:45:00Z",
+                  "premium_date": null,
+                  "season_id": "G69PC2WV0",
+                  "season_number": 4,
+                  "season_slug_title": "attack-on-titan-final-season",
+                  "season_title": "Attack on Titan",
+                  "sequence_number": 65,
+                  "series_id": "GR751KNZY",
+                  "series_slug_title": "attack-on-titan",
+                  "series_title": "Attack on Titan",
+                  "subtitle_locales": [
+                      "en-US",
+                      "es-419",
+                      "es-ES",
+                      "fr-FR",
+                      "pt-BR",
+                      "ar-SA",
+                      "it-IT",
+                      "de-DE",
+                      "ru-RU"
+                  ],
+                  "upload_date": "2021-01-18T00:10:00+09:00",
+                  "versions": null
+              },
+              "playback": "https://pl.crunchyroll.com/asset/65d4c3b78c409a492291b31b2b2c0284/v/84d5b29087ade922984663d7c13e1de7/languages/en-US,es-419,es-ES,fr-FR,pt-BR,ar-SA,it-IT,de-DE,ru-RU,es-LA,ar-ME?*&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly9wbC5jcnVuY2h5cm9sbC5jb20vYXNzZXQvNjVkNGMzYjc4YzQwOWE0OTIyOTFiMzFiMmIyYzAyODQvdi84NGQ1YjI5MDg3YWRlOTIyOTg0NjYzZDdjMTNlMWRlNy8~KiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTY2MzgwNDc0OX19fV19&Signature=HI3TEAaAeqytyixeljl~2vhiMcFXnAxFJXH16B6WKqBzYEW58Evr0gY2s2ELafsRHgf7iaFnZlVfaxwk53JBsBB91Md-45J-LFbVxo7u7366SaVu~VlyZZWrgCrzCu63xTV8iJ44TbbejITbGKTk-9SCMM0yLQWz-DSuxplYwwqpHC7ZoNYF1yvDsYRXkhXqEx0rDY4COjUjCzP8qfZSYhStEHh9uCYQx~MJo5v-60doMSf0egZOM9eS1P~YtVRpN~9lE6~olSPdLDhpAJ9hLTHAWdO5ZECAMrRWiJCgri-9Gaq6wk0kX1p1pe97xQogHCm908lSQzvSLVPbJS1esg__&Key-Pair-Id=APKAJMWSQ5S7ZB3MF5VA",
+              "__links__": {
+                  "episode/season": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/seasons/G69PC2WV0"
+                  },
+                  "episode/series": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/series/GR751KNZY"
+                  },
+                  "resource": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/episodes/GQJUGDZJ4"
+                  },
+                  "resource/channel": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/channels/crunchyroll"
+                  },
+                  "streams": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/videos/GGVF2MV97/streams"
+                  }
+              },
+              "title": "Titán martillo de guerra",
+              "slug": "",
+              "images": {
+                  "thumbnail": [
+                      [
+                          {
+                              "height": 180,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/320x180/catalog/crunchyroll/6fdde90f431f52982a23e429941e0cf9.jpeg",
+                              "type": "thumbnail",
+                              "width": 320
+                          },
+                          {
+                              "height": 338,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/600x338/catalog/crunchyroll/6fdde90f431f52982a23e429941e0cf9.jpeg",
+                              "type": "thumbnail",
+                              "width": 600
+                          },
+                          {
+                              "height": 360,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/640x360/catalog/crunchyroll/6fdde90f431f52982a23e429941e0cf9.jpeg",
+                              "type": "thumbnail",
+                              "width": 640
+                          },
+                          {
+                              "height": 450,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/800x450/catalog/crunchyroll/6fdde90f431f52982a23e429941e0cf9.jpeg",
+                              "type": "thumbnail",
+                              "width": 800
+                          },
+                          {
+                              "height": 675,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1200x675/catalog/crunchyroll/6fdde90f431f52982a23e429941e0cf9.jpeg",
+                              "type": "thumbnail",
+                              "width": 1200
+                          },
+                          {
+                              "height": 810,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1440x810/catalog/crunchyroll/6fdde90f431f52982a23e429941e0cf9.jpeg",
+                              "type": "thumbnail",
+                              "width": 1440
+                          },
+                          {
+                              "height": 900,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1600x900/catalog/crunchyroll/6fdde90f431f52982a23e429941e0cf9.jpeg",
+                              "type": "thumbnail",
+                              "width": 1600
+                          },
+                          {
+                              "height": 1080,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1920x1080/catalog/crunchyroll/6fdde90f431f52982a23e429941e0cf9.jpeg",
+                              "type": "thumbnail",
+                              "width": 1920
+                          }
+                      ]
+                  ]
+              },
+              "__href__": "",
+              "channel_id": "crunchyroll",
+              "description": "El brutal ataque lanzado por Eren hace que el caos se extienda y el titán martillo de guerra salga a su paso, pero Eren no está solo...",
+              "slug_title": "the-war-hammer-titan",
+              "external_id": "EPI.799906",
+              "__class__": "panel",
+              "id": "GQJUGDZJ4",
+              "promo_description": "",
+              "promo_title": "",
+              "__actions__": {}
+          }
+      },
+      {
+          "id": "GD9UVNGK1",
+          "date_played": "2022-09-08T20:58:16Z",
+          "parent_id": "GR751KNZY",
+          "parent_type": "series",
+          "playhead": 1310,
+          "fully_watched": true,
+          "panel": {
+              "linked_resource_key": "cms:/episodes/GD9UVNGK1",
+              "description": "Eren habla con Reiner mientras la verdad sobre los eldianos llega a los habitantes de Marley de mano de sus principales conocedores. La voluntad del rey Fritz, qué es Eren para Eldia y más en este emocionante episodio.",
+              "promo_title": "",
+              "type": "episode",
+              "images": {
+                  "thumbnail": [
+                      [
+                          {
+                              "height": 180,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/320x180/catalog/crunchyroll/e706a84d602030428815686202016012.jpeg",
+                              "type": "thumbnail",
+                              "width": 320
+                          },
+                          {
+                              "height": 338,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/600x338/catalog/crunchyroll/e706a84d602030428815686202016012.jpeg",
+                              "type": "thumbnail",
+                              "width": 600
+                          },
+                          {
+                              "height": 360,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/640x360/catalog/crunchyroll/e706a84d602030428815686202016012.jpeg",
+                              "type": "thumbnail",
+                              "width": 640
+                          },
+                          {
+                              "height": 450,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/800x450/catalog/crunchyroll/e706a84d602030428815686202016012.jpeg",
+                              "type": "thumbnail",
+                              "width": 800
+                          },
+                          {
+                              "height": 675,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1200x675/catalog/crunchyroll/e706a84d602030428815686202016012.jpeg",
+                              "type": "thumbnail",
+                              "width": 1200
+                          },
+                          {
+                              "height": 810,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1440x810/catalog/crunchyroll/e706a84d602030428815686202016012.jpeg",
+                              "type": "thumbnail",
+                              "width": 1440
+                          },
+                          {
+                              "height": 900,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1600x900/catalog/crunchyroll/e706a84d602030428815686202016012.jpeg",
+                              "type": "thumbnail",
+                              "width": 1600
+                          },
+                          {
+                              "height": 1080,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1920x1080/catalog/crunchyroll/e706a84d602030428815686202016012.jpeg",
+                              "type": "thumbnail",
+                              "width": 1920
+                          }
+                      ]
+                  ]
+              },
+              "episode_metadata": {
+                  "audio_locale": "jaJP",
+                  "availability_ends": "9998-11-30T08:00:00Z",
+                  "availability_notes": "",
+                  "availability_starts": "2021-01-10T20:45:00Z",
+                  "available_date": null,
+                  "available_offline": true,
+                  "closed_captions_available": false,
+                  "duration_ms": 1435123,
+                  "eligible_region": "CL",
+                  "episode": "64",
+                  "episode_air_date": "2021-01-11T00:10:00+09:00",
+                  "episode_number": 64,
+                  "extended_maturity_rating": {},
+                  "free_available_date": "2021-01-10T20:45:00Z",
+                  "identifier": "",
+                  "is_clip": false,
+                  "is_dubbed": false,
+                  "is_mature": false,
+                  "is_premium_only": false,
+                  "is_subbed": true,
+                  "mature_blocked": false,
+                  "maturity_ratings": [
+                      "TV-14"
+                  ],
+                  "premium_available_date": "2021-01-10T20:45:00Z",
+                  "premium_date": null,
+                  "season_id": "G69PC2WV0",
+                  "season_number": 4,
+                  "season_slug_title": "attack-on-titan-final-season",
+                  "season_title": "Attack on Titan",
+                  "sequence_number": 64,
+                  "series_id": "GR751KNZY",
+                  "series_slug_title": "attack-on-titan",
+                  "series_title": "Attack on Titan",
+                  "subtitle_locales": [
+                      "en-US",
+                      "es-419",
+                      "es-ES",
+                      "fr-FR",
+                      "pt-BR",
+                      "ar-SA",
+                      "it-IT",
+                      "de-DE",
+                      "ru-RU"
+                  ],
+                  "upload_date": "2021-01-11T00:10:00+09:00",
+                  "versions": null
+              },
+              "title": "Declaración de guerra",
+              "playback": "https://pl.crunchyroll.com/asset/20ea0fbb3aec777d2c70873113352add/v/3ec512621c3c75ad308dea74fbfc6753/languages/en-US,es-419,es-ES,fr-FR,pt-BR,ar-SA,it-IT,de-DE,ru-RU,es-LA,ar-ME?*&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly9wbC5jcnVuY2h5cm9sbC5jb20vYXNzZXQvMjBlYTBmYmIzYWVjNzc3ZDJjNzA4NzMxMTMzNTJhZGQvdi8zZWM1MTI2MjFjM2M3NWFkMzA4ZGVhNzRmYmZjNjc1My8~KiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTY2MzgwNTQwM319fV19&Signature=T3y-R5x50ha27ZnAsqRG~QJ8wSjrjl004liWVyInPaOxoELUIf9sfZ11xG30j6YGEBmYzDvkO5wjd8FGauVE1K~bnLvMNuvVtx5W8GnuJCzi3~sdV6clMBfZaEtp9fJW9rjvFoEdgdQHoImtGvYYsrubghh8NIcopFyQgCS1u6~MABN5vR9nL5-36FY2X1ELC7d0CQMUtJwDkiPu-GeIAk~oFmvSDejl05kYMI9gT0BbUwxZ0o12jzg7UHb0VBOPUvRur~nqydKVj35bgFptvAewhXpZpuxivdEvUbmi9rD23syXQdxWeEqS2pTmFeMk3U1jg0X-OXTJyJZ03kbJww__&Key-Pair-Id=APKAJMWSQ5S7ZB3MF5VA",
+              "id": "GD9UVNGK1",
+              "promo_description": "",
+              "__actions__": {},
+              "__class__": "panel",
+              "channel_id": "crunchyroll",
+              "slug": "",
+              "__links__": {
+                  "episode/season": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/seasons/G69PC2WV0"
+                  },
+                  "episode/series": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/series/GR751KNZY"
+                  },
+                  "resource": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/episodes/GD9UVNGK1"
+                  },
+                  "resource/channel": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/channels/crunchyroll"
+                  },
+                  "streams": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/videos/GWMF893X4/streams"
+                  }
+              },
+              "slug_title": "declaration-of-war",
+              "external_id": "EPI.799905",
+              "__href__": ""
+          }
+      },
+      {
+          "id": "GZ7UV7MK5",
+          "date_played": "2022-09-08T20:57:45Z",
+          "parent_id": "GR751KNZY",
+          "parent_type": "series",
+          "playhead": 1282,
+          "fully_watched": false,
+          "panel": {
+              "__actions__": {},
+              "channel_id": "crunchyroll",
+              "title": "De mano en mano",
+              "promo_description": "",
+              "__links__": {
+                  "episode/season": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/seasons/G69PC2WV0"
+                  },
+                  "episode/series": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/series/GR751KNZY"
+                  },
+                  "resource": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/episodes/GZ7UV7MK5"
+                  },
+                  "resource/channel": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/channels/crunchyroll"
+                  },
+                  "streams": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/videos/G5JFZ2DP3/streams"
+                  }
+              },
+              "id": "GZ7UV7MK5",
+              "promo_title": "",
+              "slug": "",
+              "linked_resource_key": "cms:/episodes/GZ7UV7MK5",
+              "slug_title": "from-one-hand-to-another",
+              "images": {
+                  "thumbnail": [
+                      [
+                          {
+                              "height": 180,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/320x180/catalog/crunchyroll/5326516a6776a8b7572d772c376ac1ea.jpeg",
+                              "type": "thumbnail",
+                              "width": 320
+                          },
+                          {
+                              "height": 338,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/600x338/catalog/crunchyroll/5326516a6776a8b7572d772c376ac1ea.jpeg",
+                              "type": "thumbnail",
+                              "width": 600
+                          },
+                          {
+                              "height": 360,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/640x360/catalog/crunchyroll/5326516a6776a8b7572d772c376ac1ea.jpeg",
+                              "type": "thumbnail",
+                              "width": 640
+                          },
+                          {
+                              "height": 450,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/800x450/catalog/crunchyroll/5326516a6776a8b7572d772c376ac1ea.jpeg",
+                              "type": "thumbnail",
+                              "width": 800
+                          },
+                          {
+                              "height": 675,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1200x675/catalog/crunchyroll/5326516a6776a8b7572d772c376ac1ea.jpeg",
+                              "type": "thumbnail",
+                              "width": 1200
+                          },
+                          {
+                              "height": 810,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1440x810/catalog/crunchyroll/5326516a6776a8b7572d772c376ac1ea.jpeg",
+                              "type": "thumbnail",
+                              "width": 1440
+                          },
+                          {
+                              "height": 900,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1600x900/catalog/crunchyroll/5326516a6776a8b7572d772c376ac1ea.jpeg",
+                              "type": "thumbnail",
+                              "width": 1600
+                          },
+                          {
+                              "height": 1080,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1920x1080/catalog/crunchyroll/5326516a6776a8b7572d772c376ac1ea.jpeg",
+                              "type": "thumbnail",
+                              "width": 1920
+                          }
+                      ]
+                  ]
+              },
+              "type": "episode",
+              "__class__": "panel",
+              "__href__": "",
+              "external_id": "EPI.799904",
+              "episode_metadata": {
+                  "audio_locale": "jaJP",
+                  "availability_ends": "9998-11-30T08:00:00Z",
+                  "availability_notes": "",
+                  "availability_starts": "2020-12-27T20:45:00Z",
+                  "available_date": null,
+                  "available_offline": true,
+                  "closed_captions_available": false,
+                  "duration_ms": 1435123,
+                  "eligible_region": "CL",
+                  "episode": "63",
+                  "episode_air_date": "2020-12-28T00:10:00+09:00",
+                  "episode_number": 63,
+                  "extended_maturity_rating": {},
+                  "free_available_date": "2020-12-27T20:45:00Z",
+                  "identifier": "",
+                  "is_clip": false,
+                  "is_dubbed": false,
+                  "is_mature": false,
+                  "is_premium_only": false,
+                  "is_subbed": true,
+                  "mature_blocked": false,
+                  "maturity_ratings": [
+                      "TV-14"
+                  ],
+                  "premium_available_date": "2020-12-27T20:45:00Z",
+                  "premium_date": null,
+                  "season_id": "G69PC2WV0",
+                  "season_number": 4,
+                  "season_slug_title": "attack-on-titan-final-season",
+                  "season_title": "Attack on Titan",
+                  "sequence_number": 63,
+                  "series_id": "GR751KNZY",
+                  "series_slug_title": "attack-on-titan",
+                  "series_title": "Attack on Titan",
+                  "subtitle_locales": [
+                      "en-US",
+                      "es-419",
+                      "es-ES",
+                      "fr-FR",
+                      "pt-BR",
+                      "ar-SA",
+                      "it-IT",
+                      "de-DE",
+                      "ru-RU"
+                  ],
+                  "upload_date": "2020-12-28T00:10:00+09:00",
+                  "versions": null
+              },
+              "description": "Mientras todavía está pendiente saber quién heredará al titán acorazado, el cabeza de familia de los Tybur prepara algo impactante.",
+              "playback": "https://pl.crunchyroll.com/asset/a37305015894fb236215e1b9bc9c86e5/v/1cc2fe65a774bc0fedbe504fcef0701f/languages/en-US,es-419,es-ES,fr-FR,pt-BR,ar-SA,it-IT,de-DE,ru-RU,es-LA,ar-ME?*&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly9wbC5jcnVuY2h5cm9sbC5jb20vYXNzZXQvYTM3MzA1MDE1ODk0ZmIyMzYyMTVlMWI5YmM5Yzg2ZTUvdi8xY2MyZmU2NWE3NzRiYzBmZWRiZTUwNGZjZWYwNzAxZi8~KiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTY2MzgwNDc3Mn19fV19&Signature=rzxNwpiot3Cz4~ItVenBct4b0R0Mj-Y~4gsqvtQtWP7Lhzqft~uxMjFrTStMzICbdwR04VAQZr9VnecO8rlTJSADr89Q~l2sf19S~fWSLek-bFigNr9zVceNNJKKItMWlMKYBdKq22pPbSps2017SIO85qoXh~XbNihpyS499xIj0IIREsSsecnnUuHZOiHnQB4oIw6CThMni5-V1rq6DN6hbgz0-~9jjfAsLdBwqYhEr7qMO746w6FVXP8tzCrfoA4g-xnryGpS2IcTcYUP7CTQAQYtGV~IUFWfz1KCTwL2ltX7sMV0nIWothgu9rKrtreK0~GA~EbsC-7~HFbhvQ__&Key-Pair-Id=APKAJMWSQ5S7ZB3MF5VA"
+          }
+      },
+      {
+          "id": "GY8D0QMJY",
+          "date_played": "2022-09-08T20:50:51Z",
+          "parent_id": "GR751KNZY",
+          "parent_type": "series",
+          "playhead": 1249,
+          "fully_watched": false,
+          "panel": {
+              "id": "GY8D0QMJY",
+              "slug": "",
+              "slug_title": "the-basement",
+              "external_id": "EPI.783663",
+              "playback": "https://pl.crunchyroll.com/asset/422c81615a32d17d288d1f603ef748ff/v/72ddfd767f20d982a31dcd96af404b85/languages/en-US,es-419,es-ES,fr-FR,pt-BR,ar-SA,it-IT,de-DE,ru-RU,es-LA,ar-ME?*&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly9wbC5jcnVuY2h5cm9sbC5jb20vYXNzZXQvNDIyYzgxNjE1YTMyZDE3ZDI4OGQxZjYwM2VmNzQ4ZmYvdi83MmRkZmQ3NjdmMjBkOTgyYTMxZGNkOTZhZjQwNGI4NS8~KiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTY2MzgwNTg0NH19fV19&Signature=jxVzwDDPbZiYmFNZqBFsK05i7UYA7dbkESZBKBnkjAYzN~7yNNKK4I3czFYHfXKIbqDd8RXrJ8Kf~~QA~QoHSPRGg3A4dwxw7VJT-wnWUVVL1NN-oHXOZXyoCgILdocGjzBH6lMio8pWorzf~JYK1F7brX~WJMSm8iYjenwWiVMFw1sV4Wa8atPx2by0mH4JQjs-qS7EXwjW4qC-wq6o5GHiVLW8A6bTepwEgYi8wX4bGSFvhx8BlzBUiQ0dHvDWkrF9TgTp1XSEX02EW7KgTY5ainT3TPRzZWuHhmxQWXkUqMte1-NhHZAPHzwYmBrPMf7dY6EogK02RZ8PyxilAA__&Key-Pair-Id=APKAJMWSQ5S7ZB3MF5VA",
+              "description": "Una vez realizado un nuevo sacrificio, es hora de volver a la casa de Eren para visitar el sótano donde se encierra toda la verdad.",
+              "type": "episode",
+              "__actions__": {},
+              "title": "Sótano",
+              "__links__": {
+                  "episode/season": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/seasons/GRG5GZZ3R"
+                  },
+                  "episode/series": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/series/GR751KNZY"
+                  },
+                  "resource": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/episodes/GY8D0QMJY"
+                  },
+                  "resource/channel": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/channels/crunchyroll"
+                  },
+                  "streams": {
+                      "href": "/cms/v2/CL/M3/crunchyroll/videos/GXMFQVPQM/streams"
+                  }
+              },
+              "episode_metadata": {
+                  "audio_locale": "jaJP",
+                  "availability_ends": "9998-11-30T08:00:00Z",
+                  "availability_notes": "",
+                  "availability_starts": "2019-06-10T00:45:00Z",
+                  "available_date": null,
+                  "available_offline": true,
+                  "closed_captions_available": false,
+                  "duration_ms": 1435123,
+                  "eligible_region": "CL",
+                  "episode": "56",
+                  "episode_air_date": "2019-06-10T00:10:00+09:00",
+                  "episode_number": 56,
+                  "extended_maturity_rating": {},
+                  "free_available_date": "2019-06-10T00:45:00Z",
+                  "identifier": "",
+                  "is_clip": false,
+                  "is_dubbed": false,
+                  "is_mature": false,
+                  "is_premium_only": false,
+                  "is_subbed": true,
+                  "mature_blocked": false,
+                  "maturity_ratings": [
+                      "TV-14"
+                  ],
+                  "premium_available_date": "2019-06-10T00:45:00Z",
+                  "premium_date": null,
+                  "season_id": "GRG5GZZ3R",
+                  "season_number": 3,
+                  "season_slug_title": "attack-on-titan-season-3",
+                  "season_title": "Attack on Titan / Shingeki no Kyojin - Tercera Temporada",
+                  "sequence_number": 56,
+                  "series_id": "GR751KNZY",
+                  "series_slug_title": "attack-on-titan",
+                  "series_title": "Attack on Titan",
+                  "subtitle_locales": [
+                      "en-US",
+                      "es-419",
+                      "es-ES",
+                      "fr-FR",
+                      "pt-BR",
+                      "ar-SA",
+                      "it-IT",
+                      "de-DE",
+                      "ru-RU"
+                  ],
+                  "upload_date": "2019-06-10T00:10:00+09:00",
+                  "versions": null
+              },
+              "__href__": "",
+              "channel_id": "crunchyroll",
+              "promo_title": "",
+              "promo_description": "",
+              "__class__": "panel",
+              "images": {
+                  "thumbnail": [
+                      [
+                          {
+                              "height": 180,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/320x180/catalog/crunchyroll/a487ae5f50260859ae587418f53f6850.jpeg",
+                              "type": "thumbnail",
+                              "width": 320
+                          },
+                          {
+                              "height": 338,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/600x338/catalog/crunchyroll/a487ae5f50260859ae587418f53f6850.jpeg",
+                              "type": "thumbnail",
+                              "width": 600
+                          },
+                          {
+                              "height": 360,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/640x360/catalog/crunchyroll/a487ae5f50260859ae587418f53f6850.jpeg",
+                              "type": "thumbnail",
+                              "width": 640
+                          },
+                          {
+                              "height": 450,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/800x450/catalog/crunchyroll/a487ae5f50260859ae587418f53f6850.jpeg",
+                              "type": "thumbnail",
+                              "width": 800
+                          },
+                          {
+                              "height": 675,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1200x675/catalog/crunchyroll/a487ae5f50260859ae587418f53f6850.jpeg",
+                              "type": "thumbnail",
+                              "width": 1200
+                          },
+                          {
+                              "height": 810,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1440x810/catalog/crunchyroll/a487ae5f50260859ae587418f53f6850.jpeg",
+                              "type": "thumbnail",
+                              "width": 1440
+                          },
+                          {
+                              "height": 900,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1600x900/catalog/crunchyroll/a487ae5f50260859ae587418f53f6850.jpeg",
+                              "type": "thumbnail",
+                              "width": 1600
+                          },
+                          {
+                              "height": 1080,
+                              "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1920x1080/catalog/crunchyroll/a487ae5f50260859ae587418f53f6850.jpeg",
+                              "type": "thumbnail",
+                              "width": 1920
+                          }
+                      ]
+                  ]
+              },
+              "linked_resource_key": "cms:/episodes/GY8D0QMJY"
+          }
+      }
+  ]
+}

@@ -1,6 +1,6 @@
 
-//import { expect } from '@jest/globals'
 const {expect} = require('@jest/globals')
+
 
 /**
  * Check generic items result
@@ -27,6 +27,7 @@ function resultCheck(res) {
     expect(res).toHaveProperty('__links__')
     expect(res).toHaveProperty('__actions__')
 }
+
 
 /**
  * Items result

@@ -4,23 +4,18 @@ const testUtils = require('./testUtils')
 const subscription = require('../services/subscription')
 
 
-/** @type {String} */
-let token = null
-
-/** @type {String} */
-let locale = null
+/** @type {import('../types').AuthBase} */
+let auth = null
 
 /** @type {String} */
 let externalId = null
 
-/** @type {Clients} */
-let client = null
-
 beforeEach(async () => {
-    client = new Clients()
+    const client = new Clients()
     await client.loadFromLocal()
-    token = await client.getToken()
-    locale = await client.getLocale()
+    const token = await client.getToken()
+    const locale = await client.getLocale()
+    auth = { token, locale}
     const account = await client.getAccount()
     externalId = account.externalId
 })
@@ -29,8 +24,8 @@ beforeEach(async () => {
 describe('Sbuscription', () => {
     test('empty', () => {})
 
-    /*test('Request Products', async() => {
-        return subscription.getProducts({token, locale}).then(res => {
+    test('Request Products', async() => {
+        return subscription.getProducts({ auth }).then(res => {
             testUtils.itesmCheck(res)
             testUtils.resultCheck(res)
             testUtils.totalCheck(res)
@@ -38,7 +33,7 @@ describe('Sbuscription', () => {
     })
     
     test('Request User Benefist', async() => {
-        return subscription.getUserBenefits({token, locale, externalId}).then(res => {
+        return subscription.getUserBenefits({ auth, externalId }).then(res => {
             testUtils.itesmCheck(res)
             testUtils.resultCheck(res)
             testUtils.totalCheck(res)
@@ -46,10 +41,10 @@ describe('Sbuscription', () => {
     })
     
     test('Request User Subscription', async() => {
-        return subscription.getUserSubscription({token, locale, externalId}).then(res => {
+        return subscription.getUserSubscription({ auth, externalId }).then(res => {
             testUtils.itesmCheck(res)
             testUtils.resultCheck(res)
             testUtils.totalCheck(res)
         })
-    })*/
+    })
 })

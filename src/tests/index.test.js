@@ -7,11 +7,8 @@ const index = require('../services/index')
 /** @type {String} */
 let token = null
 
-/** @type {Clients} */
-let client = null
-
 beforeEach(async () => {
-    client = new Clients()
+    const client = new Clients()
     await client.loadFromLocal()
     token = await client.getToken()
 })
@@ -19,7 +16,7 @@ beforeEach(async () => {
 describe('Index', () => {
     test('empty', () => {})
 
-    /*test('Request Index', async() => {
+    test('Request Index', async() => {
         return index.getIndexConfig({ token }).then(res => {
             const validateCms = cms => { 
                 expect(cms).not.toBeNull()
@@ -41,5 +38,5 @@ describe('Index', () => {
             validateCms(res.cms_beta)
             validateCms(res.cms_web)
         })
-    })*/
+    })
 })

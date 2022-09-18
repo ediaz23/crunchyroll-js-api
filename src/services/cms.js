@@ -5,12 +5,11 @@ const { URLSearchParams } = require('url')
 
 
 /**
- * @param {import('./../controllers/clients').Clients} client
+ * @param {import('../types').CmsAuth} cms
  * @returns {Promise<Object>}
  */
-async function getBaseParams(client) {
-    const cms = await client.getCms()
-    const queryData = {locale: await client.getLocale()}
+async function getBaseParams(cms) {
+    const queryData = { locale: cms.locale }
     utils.addParam(queryData, 'Policy', cms.policy)
     utils.addParam(queryData, 'Signature', cms.signature)
     utils.addParam(queryData, 'Key-Pair-Id', cms.keyPairId)
@@ -19,175 +18,179 @@ async function getBaseParams(client) {
 
 
 /**
- * @param {import('./../controllers/clients').Clients} client
- * @param {String} episodeId
+ * @param {Object} obj
+ * @param {import('../types').CmsAuth} obj.cmsAuth
+ * @param {String} obj.episodeId
  * @returns {Promise<Object>}
  */
-async function getEpisode(client, episodeId) {
+async function getEpisode({ cmsAuth, episodeId }) {
     const fnName = 'getEpisode'
     logger.debug(fnName)
-    const queryData = await getBaseParams(client)
+    const queryData = await getBaseParams(cmsAuth)
     const queryStr = new URLSearchParams(queryData)
-    const cms = await client.getCms()
-    const url = `/cms/v2${cms.bucket}/episodes/${episodeId}?${queryStr}`
+    const url = `/cms/v2${cmsAuth.bucket}/episodes/${episodeId}?${queryStr}`
     const reqConfig = {
         method: 'get',
-        headers: { 'Authorization': await client.getToken() }
+        headers: { 'Authorization': cmsAuth.token }
     }
     return utils.makeRequest(fnName, url, reqConfig)
 }
 
 
 /**
- * @param {import('./../controllers/clients').Clients} client
- * @param {String} episodeId
+ * @param {Object} obj
+ * @param {import('../types').CmsAuth} obj.cmsAuth
+ * @param {String} obj.seasonId
  * @returns {Promise<Object>}
  */
-async function getEpisodes(client, seasonId) {
+async function getEpisodes({ cmsAuth, seasonId }) {
     const fnName = 'getEpisodes'
     logger.debug(fnName)
-    const queryData = await getBaseParams(client)
+    const queryData = await getBaseParams(cmsAuth)
     utils.addParam(queryData, 'season_id', seasonId, val => val)
     const queryStr = new URLSearchParams(queryData)
-    const cms = await client.getCms()
-    const url = `/cms/v2${cms.bucket}/episodes?${queryStr}`
+    const url = `/cms/v2${cmsAuth.bucket}/episodes?${queryStr}`
     const reqConfig = {
         method: 'get',
-        headers: { 'Authorization': await client.getToken() }
+        headers: { 'Authorization': cmsAuth.token }
     }
     return utils.makeRequest(fnName, url, reqConfig)
 }
 
 
 /**
- * @param {import('./../controllers/clients').Clients} client
- * @param {String} movieId
+ * @param {Object} obj
+ * @param {import('../types').CmsAuth} obj.cmsAuth
+ * @param {String} obj.movieId
  * @returns {Promise<Object>}
  */
-async function getMovie(client, movieId) {
+async function getMovie({ cmsAuth, movieId }) {
     const fnName = 'getMovie'
     logger.debug(fnName)
-    const queryData = await getBaseParams(client)
+    const queryData = await getBaseParams(cmsAuth)
     const queryStr = new URLSearchParams(queryData)
-    const cms = await client.getCms()
-    const url = `/cms/v2${cms.bucket}/movies/${movieId}?${queryStr}`
+    const url = `/cms/v2${cmsAuth.bucket}/movies/${movieId}?${queryStr}`
     const reqConfig = {
         method: 'get',
-        headers: { 'Authorization': await client.getToken() }
+        headers: { 'Authorization': movieId.token }
     }
     return utils.makeRequest(fnName, url, reqConfig)
 }
 
 
 /**
- * @param {import('./../controllers/clients').Clients} client
- * @param {String} movieListingId
+ * @param {Object} obj
+ * @param {import('../types').CmsAuth} obj.cmsAuth
+ * @param {String} obj.movieListingId
  * @returns {Promise<Object>}
  */
-async function getMovieListing(client, movieListingId) {
+async function getMovieListing({ cmsAuth, movieListingId }) {
     const fnName = 'getMovieListing'
     logger.debug(fnName)
-    const queryData = await getBaseParams(client)
+    const queryData = await getBaseParams(cmsAuth)
     const queryStr = new URLSearchParams(queryData)
-    const cms = await client.getCms()
-    const url = `/cms/v2${cms.bucket}/movie_listings/${movieListingId}?${queryStr}`
+    const url = `/cms/v2${cmsAuth.bucket}/movie_listings/${movieListingId}?${queryStr}`
     const reqConfig = {
         method: 'get',
-        headers: { 'Authorization': await client.getToken() }
+        headers: { 'Authorization': cmsAuth.token }
     }
     return utils.makeRequest(fnName, url, reqConfig)
 }
 
 
 /**
- * @param {import('./../controllers/clients').Clients} client
- * @param {String} movieListingId
+ * @param {Object} obj
+ * @param {import('../types').CmsAuth} obj.cmsAuth
+ * @param {String} obj.movieListingId
  * @returns {Promise<Object>}
  */
-async function getMovieListingExtras(client, movieListingId) {
+async function getMovieListingExtras({ cmsAuth, movieListingId }) {
     const fnName = 'getMovieListingExtras'
     logger.debug(fnName)
-    const queryData = await getBaseParams(client)
+    const queryData = await getBaseParams(cmsAuth)
     const queryStr = new URLSearchParams(queryData)
-    const cms = await client.getCms()
-    const url = `/cms/v2${cms.bucket}/movie_listings/${movieListingId}/extra_videos?${queryStr}`
+    const url = `/cms/v2${cmsAuth.bucket}/movie_listings/${movieListingId}/extra_videos?${queryStr}`
     const reqConfig = {
         method: 'get',
-        headers: { 'Authorization': await client.getToken() }
+        headers: { 'Authorization': cmsAuth.token }
     }
     return utils.makeRequest(fnName, url, reqConfig)
 }
 
 
 /**
- * @param {import('./../controllers/clients').Clients} client
- * @param {String} movieListingId
+ * @param {Object} obj
+ * @param {import('../types').CmsAuth} obj.cmsAuth
+ * @param {String} obj.movieListingId
  * @returns {Promise<Object>}
  */
-async function getMovies(client, movieListingId) {
+async function getMovies({ cmsAuth, movieListingId }) {
     const fnName = 'getMovies'
     logger.debug(fnName)
-    const queryData = await getBaseParams(client)
+    const queryData = await getBaseParams(cmsAuth)
     utils.addParam(queryData, 'movie_listing_id', movieListingId, val => val)
     const queryStr = new URLSearchParams(queryData)
-    const cms = await client.getCms()
-    const url = `/cms/v2${cms.bucket}/movies?${queryStr}`
+    const url = `/cms/v2${cmsAuth.bucket}/movies?${queryStr}`
     const reqConfig = {
         method: 'get',
-        headers: { 'Authorization': await client.getToken() }
+        headers: { 'Authorization': cmsAuth.token }
     }
     return utils.makeRequest(fnName, url, reqConfig)
 }
 
 
 /**
- * @param {import('./../controllers/clients').Clients} client
- * @param {String} panelId
+ * @param {Object} obj
+ * @param {import('../types').CmsAuth} obj.cmsAuth
+ * @param {String} obj.panelId
  * @returns {Promise<Object>}
  */
-async function getPanelIds(client, panelId) {
-    return _getPanels(client, panelId, 'items(id)')
+async function getPanelIds({ cmsAuth, panelId }) {
+    return _getPanels({ cmsAuth, panelId, fields: 'items(id)' })
 }
 
 
 /**
- * @param {import('./../controllers/clients').Clients} client
- * @param {String} panelId
+ * @param {Object} obj
+ * @param {import('../types').CmsAuth} obj.cmsAuth
+ * @param {String} obj.panelId
  * @returns {Promise<Object>}
  */
-async function getPanelImages(client, panelId) {
-    return _getPanels(client, panelId, 'items(id, images)')
+async function getPanelImages({ cmsAuth, panelId }) {
+    return _getPanels({ cmsAuth, panelId, fields: 'items(id, images)' })
 }
 
 
 /**
- * @param {import('./../controllers/clients').Clients} client
- * @param {String} panelId
- * @param {String} fields
+ * @param {Object} obj
+ * @param {import('../types').CmsAuth} obj.cmsAuth
+ * @param {String} obj.panelId
+ * @param {String} obj.fields
  * @returns {Promise<Object>}
  */
-async function getPanels(client, panelId, fields) {
-    return _getPanels(client, panelId, fields)
+async function getPanels({ cmsAuth, panelId, fields }) {
+    return _getPanels({ cmsAuth, panelId, fields })
 }
 
+
 /**
- * @param {import('./../controllers/clients').Clients} client
- * @param {String} panelId
- * @param {String} fields
+ * @param {Object} obj
+ * @param {import('../types').CmsAuth} obj.cmsAuth
+  * @param {String} obj.panelId
+ * @param {String} obj.fields
  * @returns {Promise<Object>}
  */
-async function _getPanels(client, panelId, fields) {
+async function _getPanels({ cmsAuth, panelId, fields }) {
     const fnName = '_getPanelIds'
     logger.debug(fnName)
-    const queryData = await getBaseParams(client)
+    const queryData = await getBaseParams(cmsAuth)
     utils.addParam(queryData, 'fields', fields, val => val && val.startsWith('items('))
     const queryStr = new URLSearchParams(queryData)
-    const cms = await client.getCms()
-    const url = `/cms/v2${cms.bucket}/objects/${panelId}?${queryStr}`
+    const url = `/cms/v2${cmsAuth.bucket}/objects/${panelId}?${queryStr}`
     const reqConfig = {
         method: 'get',
         headers: {
-            'Authorization': await client.getToken(),
+            'Authorization': cmsAuth.token,
             'add_watchlist_status': true,
         }
     }
@@ -196,143 +199,143 @@ async function _getPanels(client, panelId, fields) {
 
 
 /**
- * @param {import('./../controllers/clients').Clients} client
- * @param {String} seasonId
+ * @param {Object} obj
+ * @param {import('../types').CmsAuth} obj.cmsAuth
+ * @param {String} obj.seasonId
  * @returns {Promise<Object>}
  */
-async function getSeason(client, seasonId) {
+async function getSeason({ cmsAuth, seasonId }) {
     const fnName = 'getSeason'
     logger.debug(fnName)
-    const queryData = await getBaseParams(client)
+    const queryData = await getBaseParams(cmsAuth)
     const queryStr = new URLSearchParams(queryData)
-    const cms = await client.getCms()
-    const url = `/cms/v2${cms.bucket}/seasons/${seasonId}?${queryStr}`
+    const url = `/cms/v2${cmsAuth.bucket}/seasons/${seasonId}?${queryStr}`
     const reqConfig = {
         method: 'get',
-        headers: { 'Authorization': await client.getToken() }
+        headers: { 'Authorization': cmsAuth.token }
     }
     return utils.makeRequest(fnName, url, reqConfig)
 }
 
 
 /**
- * @param {import('./../controllers/clients').Clients} client
- * @param {String} seasonId
+ * @param {Object} obj
+ * @param {import('../types').CmsAuth} obj.cmsAuth
+ * @param {String} obj.seasonId
  * @returns {Promise<Object>}
  */
-async function getSeasonExtras(client, seasonId) {
+async function getSeasonExtras({ cmsAuth, seasonId }) {
     const fnName = 'getSeasonExtras'
     logger.debug(fnName)
-    const queryData = await getBaseParams(client)
+    const queryData = await getBaseParams(cmsAuth)
     const queryStr = new URLSearchParams(queryData)
-    const cms = await client.getCms()
-    const url = `/cms/v2${cms.bucket}/seasons/${seasonId}/extra_videos?${queryStr}`
+    const url = `/cms/v2${cmsAuth.bucket}/seasons/${seasonId}/extra_videos?${queryStr}`
     const reqConfig = {
         method: 'get',
-        headers: { 'Authorization': await client.getToken() }
+        headers: { 'Authorization': cmsAuth.token }
     }
     return utils.makeRequest(fnName, url, reqConfig)
 }
 
 
 /**
- * @param {import('./../controllers/clients').Clients} client
- * @param {String} serieId
+ * @param {Object} obj
+ * @param {import('../types').CmsAuth} obj.cmsAuth
+ * @param {String} obj.seasonId
  * @returns {Promise<Object>}
  */
-async function getSeasons(client, serieId) {
+async function getSeasons({ cmsAuth, serieId }) {
     const fnName = 'getSeasons'
     logger.debug(fnName)
-    const queryData = await getBaseParams(client)
+    const queryData = await getBaseParams(cmsAuth)
     utils.addParam(queryData, 'series_id', serieId, val => val)
     const queryStr = new URLSearchParams(queryData)
-    const cms = await client.getCms()
-    const url = `/cms/v2${cms.bucket}/seasons?${queryStr}`
+    const url = `/cms/v2${cmsAuth.bucket}/seasons?${queryStr}`
     const reqConfig = {
         method: 'get',
-        headers: { 'Authorization': await client.getToken() }
+        headers: { 'Authorization': cmsAuth.token }
     }
     return utils.makeRequest(fnName, url, reqConfig)
 }
 
 
 /**
- * @param {import('./../controllers/clients').Clients} client
- * @param {String} serieId
+ * @param {Object} obj
+ * @param {import('../types').CmsAuth} obj.cmsAuth
+ * @param {String} obj.serieId
  * @returns {Promise<Object>}
  */
-async function getSeries(client, serieId) {
+async function getSeries({ cmsAuth, serieId }) {
     const fnName = 'getSeries'
     logger.debug(fnName)
-    const queryData = await getBaseParams(client)
+    const queryData = await getBaseParams(cmsAuth)
     const queryStr = new URLSearchParams(queryData)
-    const cms = await client.getCms()
-    const url = `/cms/v2${cms.bucket}/series/${serieId}?${queryStr}`
+    const url = `/cms/v2${cmsAuth.bucket}/series/${serieId}?${queryStr}`
     const reqConfig = {
         method: 'get',
-        headers: { 'Authorization': await client.getToken() }
+        headers: { 'Authorization': cmsAuth.token }
     }
     return utils.makeRequest(fnName, url, reqConfig)
 }
 
 
 /**
- * @param {import('./../controllers/clients').Clients} client
- * @param {String} streamURl
+ * @param {Object} obj
+ * @param {import('../types').CmsAuth} obj.cmsAuth
+ * @param {String} obj.streamUrl
  * @returns {Promise<Object>}
  */
-async function getStreamsWithURL(client, streamURl) {
+async function getStreamsWithURL({ cmsAuth, streamUrl }) {
     const fnName = 'getStreamsWithURL'
     logger.debug(fnName)
-    const queryData = await getBaseParams(client)
+    const queryData = await getBaseParams(cmsAuth)
     const queryStr = new URLSearchParams(queryData)
-    const url = `${streamURl}?${queryStr}`
+    const url = `${streamUrl}?${queryStr}`
     const reqConfig = {
         method: 'get',
-        headers: { 'Authorization': await client.getToken() }
+        headers: { 'Authorization': cmsAuth.token }
     }
     return utils.makeRequest(fnName, url, reqConfig)
 }
 
 
 /**
- * @param {import('./../controllers/clients').Clients} client
- * @param {String} contentId
+ * @param {Object} obj
+ * @param {import('../types').CmsAuth} obj.cmsAuth
+ * @param {String} obj.contentId
  * @returns {Promise<Object>}
  */
-async function getStreams(client, contentId) {
+async function getStreams({ cmsAuth, contentId }) {
     const fnName = 'getStreams'
     logger.debug(fnName)
-    const queryData = await getBaseParams(client)
+    const queryData = await getBaseParams(cmsAuth)
     const queryStr = new URLSearchParams(queryData)
-    const cms = await client.getCms()
-    const url = `/cms/v2${cms.bucket}/videos/${contentId}/streams?${queryStr}`
+    const url = `/cms/v2${cmsAuth.bucket}/videos/${contentId}/streams?${queryStr}`
     const reqConfig = {
         method: 'get',
-        headers: { 'Authorization': await client.getToken() }
+        headers: { 'Authorization': cmsAuth.token }
     }
     return utils.makeRequest(fnName, url, reqConfig)
 }
 
 
 /**
- * @param {import('./../controllers/clients').Clients} client
- * @param {String} externalId external_id from panels
- * @param {String} [channelId]
+ * @param {Object} obj
+ * @param {import('../types').CmsAuth} obj.cmsAuth
+ * @param {String} obj.contentId
  * @returns {Promise<Object>}
  */
-async function lookup(client, externalId, channelId) {
+async function lookup({ cmsAuth, externalId, channelId }) {
     const fnName = 'lookup'
     logger.debug(fnName)
-    const queryData = await getBaseParams(client)
+    const queryData = await getBaseParams(cmsAuth)
     utils.addParam(queryData, 'external_id', externalId, val => val)
     utils.addParam(queryData, 'channel_id', channelId ? channelId : 'crunchyroll', val => val)
     const queryStr = new URLSearchParams(queryData)
-    const cms = await client.getCms()
-    const url = `/cms/v2${cms.bucket}/lookup?${queryStr}`
+    const url = `/cms/v2${cmsAuth.bucket}/lookup?${queryStr}`
     const reqConfig = {
         method: 'get',
-        headers: { 'Authorization': await client.getToken() }
+        headers: { 'Authorization': cmsAuth.token }
     }
     return utils.makeRequest(fnName, url, reqConfig)
 }

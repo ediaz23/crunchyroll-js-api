@@ -7,6 +7,7 @@ const indexService = require('../services/index')
 const accountService = require('../services/account')
 const { Tokens } = require('../models/tokens')
 const { Accounts } = require('../models/accounts')
+const { Cms } = require('../models/cms')
 
 
 class Clients {
@@ -68,8 +69,11 @@ class Clients {
             }
         }
         if (!cms) {
-            cms = await indexService.getIndexConfig(this)
-            this.client.cms = cms
+            cms = await indexService.getIndexConfig({ token: await this.getToken()})
+            if (!this.client.cms) {
+                this.client.cms = new Cms()
+            }
+            this.client.cms.fromJSON(cms.cms)
             await this.saveToLocal()
         }
         
