@@ -1,62 +1,54 @@
 
 const utils = require('../utils')
 const logger = require('../logger')
-const { Accounts } = require('../models/accounts')
-const { Profiles } = require('../models/profiles')
 
 
 /**
  * Return account info
- * @param {import('./../controllers/clients').Clients} client
- * @returns {Promise<Accounts>}
+ * @param {{token: String}}
+ * @returns {Promise<import('../types').Account>}
  */
-async function getAccountId(client) {
+async function getAccountId({ token }) {
     const fnName = 'getAccountId'
     logger.debug(fnName)
     const url = `/accounts/v1/me`
     const reqConfig = {
         method: 'get',
-        headers: {'Authorization': await client.getToken()}
+        headers: {'Authorization': token}
     }
-    const data = await utils.makeRequest(fnName, url, reqConfig)
-    const account = new Accounts()
-    account.fromJSON(data)
-    return account
+    return utils.makeRequest(fnName, url, reqConfig)
 }
 
 
 /**
  * Return profile info
- * @param {import('./../controllers/clients').Clients} client
- * @returns {Promise<Profiles>}
+ * @param {{token: String}}
+ * @returns {Promise<import('../types').Profile>}
  */
-async function getProfile(client) {
+async function getProfile({ token }) {
     const fnName = 'getProfile'
     logger.debug(fnName)
     const url = `/accounts/v1/me/profile`
     const reqConfig = {
         method: 'get',
-        headers: {'Authorization': await client.getToken()}
+        headers: {'Authorization': token}
     }
-    const data = await utils.makeRequest(fnName, url, reqConfig)
-    const profile = new Profiles()
-    profile.fromJSON(data)
-    return profile
+    return utils.makeRequest(fnName, url, reqConfig)
 }
 
 
 /**
  * Return user names, idk what it is
- * @param {import('./../controllers/clients').Clients} client
+ * @param {{token: String}}
  * @returns {Promise<{usernames: Array<String>}>}
  */
-async function getUsernames(client) {
+async function getUsernames({ token }) {
     const fnName = 'getAccountId'
     logger.debug(fnName)
     const url = `/accounts/v1/usernames`
     const reqConfig = {
         method: 'get',
-        headers: {'Authorization': await client.getToken()}
+        headers: {'Authorization': token}
     }
     return utils.makeRequest(fnName, url, reqConfig)
 }
@@ -64,21 +56,23 @@ async function getUsernames(client) {
 
 /**
  * Update profile
- * @param {import('./../controllers/clients').Clients} client
- * @param {Profiles} data
+ * @param {{
+    token: String,
+    data: import('../types').Profile,
+ }}
  * @returns {Promise}
  */
-async function updateProfile(client, data) {
+async function updateProfile({ token, data }) {
     const fnName = 'updateProfile'
     logger.debug(fnName)
     const url = `/accounts/v1/me/profile`
     const reqConfig = {
         method: 'patch',
         headers: {
-            'Authorization': await client.getToken(),
+            'Authorization': token,
             'Content-Type': 'application/json',
         },
-        body:  JSON.stringify(data instanceof Profiles ? data.toJSON() : data),
+        body:  JSON.stringify(data),
     }
     await utils.makeRequest(fnName, url, reqConfig)
 }

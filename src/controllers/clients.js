@@ -6,6 +6,7 @@ const authService = require('../services/auth')
 const indexService = require('../services/index')
 const accountService = require('../services/account')
 const { Tokens } = require('../models/tokens')
+const { Accounts } = require('../models/accounts')
 
 
 class Clients {
@@ -30,11 +31,14 @@ class Clients {
         if (!accessToken) {
             let data = null
             if (this.client.tokens && this.client.tokens.refreshToken) {
-                data = await authService.getRefreshToken(this.client.tokens)
+                data = await authService.getRefreshToken(this.client.tokens.toObject())
             } else {
-                data = await authService.getToken(this.client.credentials, 'password')
+                data = await authService.getToken(this.client.credentials.toObject())
             }
-            this.client.tokens = data
+            if (!this.client.tokens) {
+                this.client.tokens = new Tokens()
+            }
+            this.client.tokens.fromJSON(data)
             await this.saveToLocal()
             accessToken = this.client.tokens.accessToken
         }
@@ -105,8 +109,11 @@ class Clients {
         if (this.client.account && this.client.account.accountId) {
             account = this.client.account
         } else {
-            account = await accountService.getAccountId(this)
-            this.client.account = account
+            account = await accountService.getAccountId({token: await this.getToken()})
+            if (!this.client.account) {
+                this.client.account = new Accounts()
+            }
+            this.client.account.fromJSON(account)
             await this.saveToLocal()
         }
         return account

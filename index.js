@@ -18,11 +18,8 @@ const logger = require('./src/logger')
 async function main() {
     const client = new Clients()
     await client.loadFromLocal()
-    const token = await client.getToken()
-    auth.revokeRefreshToken(client.client.tokens)
 
 
-//    await auth.getFirstRereshToken(client.client.tokens)
 //    const data = await client.getCms()
 //    logger.info(data)
 //    const data = await assets.getAvatar(client)
@@ -103,5 +100,13 @@ async function main() {
 
 }
 
+/**
+ * @param {Object} t
+ * @param {String} t.a
+ * @param {Date} t.b
+ */
+function test({a, b}) {
+    b.getDate()
+}
 
 main()

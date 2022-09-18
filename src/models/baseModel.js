@@ -13,6 +13,14 @@ class BaseModel {
         }
     }
     
+    toObject() {
+        const out = {}
+        for(const key of Object.keys(this)) {
+            out[key] = this[key]
+        }
+        return out
+    }
+    
 }
 
 module.exports = {
