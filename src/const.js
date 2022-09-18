@@ -36,9 +36,28 @@ function getRatingEpisodeTypes() {
     return ['up', 'down']
 }
 
+
+/**
+ * @returns {String}
+ */
+function getClientId() {
+    return config.client_id
+}
+
+
+/**
+ * @returns {String}
+ */
+function getClientSecret() {
+    return config.client_secret
+}
+
+
 module.exports = {
     getUserAgent,
     getContentTypes,
     getRatingContentTypes,
     getRatingEpisodeTypes,
+    getClientId,
+    getClientSecret,
 }

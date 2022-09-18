@@ -1,0 +1,143 @@
+{
+  "playhead": 1,
+  "fully_watched": false,
+  "never_watched": false,
+  "panel": {
+      "__links__": {
+          "episode/season": {
+              "href": "/cms/v2/CL/M3/crunchyroll/seasons/GRMGC357V"
+          },
+          "episode/series": {
+              "href": "/cms/v2/CL/M3/crunchyroll/series/G6W4QKX0R"
+          },
+          "resource": {
+              "href": "/cms/v2/CL/M3/crunchyroll/episodes/GD9UVPGKK"
+          },
+          "resource/channel": {
+              "href": "/cms/v2/CL/M3/crunchyroll/channels/crunchyroll"
+          },
+          "streams": {
+              "href": "/cms/v2/CL/M3/crunchyroll/videos/GWMF853XX/streams"
+          }
+      },
+      "__actions__": {},
+      "id": "GD9UVPGKK",
+      "images": {
+          "thumbnail": [
+              [
+                  {
+                      "height": 180,
+                      "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/320x180/catalog/crunchyroll/acb0c800bdf9c84bc08dd420676d15dd.jpeg",
+                      "type": "thumbnail",
+                      "width": 320
+                  },
+                  {
+                      "height": 338,
+                      "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/600x338/catalog/crunchyroll/acb0c800bdf9c84bc08dd420676d15dd.jpeg",
+                      "type": "thumbnail",
+                      "width": 600
+                  },
+                  {
+                      "height": 360,
+                      "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/640x360/catalog/crunchyroll/acb0c800bdf9c84bc08dd420676d15dd.jpeg",
+                      "type": "thumbnail",
+                      "width": 640
+                  },
+                  {
+                      "height": 450,
+                      "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/800x450/catalog/crunchyroll/acb0c800bdf9c84bc08dd420676d15dd.jpeg",
+                      "type": "thumbnail",
+                      "width": 800
+                  },
+                  {
+                      "height": 675,
+                      "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1200x675/catalog/crunchyroll/acb0c800bdf9c84bc08dd420676d15dd.jpeg",
+                      "type": "thumbnail",
+                      "width": 1200
+                  },
+                  {
+                      "height": 810,
+                      "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1440x810/catalog/crunchyroll/acb0c800bdf9c84bc08dd420676d15dd.jpeg",
+                      "type": "thumbnail",
+                      "width": 1440
+                  },
+                  {
+                      "height": 900,
+                      "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1600x900/catalog/crunchyroll/acb0c800bdf9c84bc08dd420676d15dd.jpeg",
+                      "type": "thumbnail",
+                      "width": 1600
+                  },
+                  {
+                      "height": 1080,
+                      "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1920x1080/catalog/crunchyroll/acb0c800bdf9c84bc08dd420676d15dd.jpeg",
+                      "type": "thumbnail",
+                      "width": 1920
+                  }
+              ]
+          ]
+      },
+      "linked_resource_key": "cms:/episodes/GD9UVPGKK",
+      "__class__": "panel",
+      "channel_id": "crunchyroll",
+      "promo_title": "",
+      "type": "episode",
+      "slug": "",
+      "__href__": "",
+      "promo_description": "",
+      "slug_title": "a-parting-in-the-snow",
+      "episode_metadata": {
+          "audio_locale": "jaJP",
+          "availability_ends": "9998-11-30T08:00:00Z",
+          "availability_notes": "",
+          "availability_starts": "2022-05-25T13:00:00Z",
+          "available_date": null,
+          "available_offline": true,
+          "closed_captions_available": false,
+          "duration_ms": 1420095,
+          "eligible_region": "CL",
+          "episode": "8",
+          "episode_air_date": "2022-05-25T21:45:00+09:00",
+          "episode_number": 8,
+          "extended_maturity_rating": {},
+          "free_available_date": "2022-05-25T13:00:00Z",
+          "identifier": "",
+          "is_clip": false,
+          "is_dubbed": false,
+          "is_mature": false,
+          "is_premium_only": true,
+          "is_subbed": true,
+          "mature_blocked": false,
+          "maturity_ratings": [
+              "TV-14"
+          ],
+          "premium_available_date": "2022-05-25T13:00:00Z",
+          "premium_date": null,
+          "season_id": "GRMGC357V",
+          "season_number": 2,
+          "season_slug_title": "the-rising-of-the-shield-hero-season-2",
+          "season_title": "[JAP] [S2] The Rising of the Shield Hero",
+          "sequence_number": 8,
+          "series_id": "G6W4QKX0R",
+          "series_slug_title": "the-rising-of-the-shield-hero",
+          "series_title": "The Rising of the Shield Hero",
+          "subtitle_locales": [
+              "en-US",
+              "es-419",
+              "es-ES",
+              "fr-FR",
+              "pt-BR",
+              "ar-SA",
+              "it-IT",
+              "de-DE",
+              "ru-RU"
+          ],
+          "upload_date": "2022-05-25T21:45:00+09:00",
+          "versions": null
+      },
+      "playback": "https://pl.crunchyroll.com/asset/738dd90c9e9b71888e57b09c8a4a9b50/v/cf53869275ec9ac9f8530c84f8e52b57/languages/en-US,es-419,es-ES,fr-FR,pt-BR,ar-SA,it-IT,de-DE,ru-RU,es-LA,ar-ME?*&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly9wbC5jcnVuY2h5cm9sbC5jb20vYXNzZXQvNzM4ZGQ5MGM5ZTliNzE4ODhlNTdiMDljOGE0YTliNTAvdi9jZjUzODY5Mjc1ZWM5YWM5Zjg1MzBjODRmOGU1MmI1Ny8~KiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTY2MzgwODEzNH19fV19&Signature=cFa5-ZrsaCLpLGIVhOFlVUK6BxxRFCRF8sm1CVOKU4XJiLBpptUm3cBZ9USB-U1ofE8oMKqM~j7Mf82EqL3eFMiS6neg6nosTBqdiIxhACY1VJBOQec1ONgnWobWCkb8QC0elaXO1xVt5bU88jQL0~sc2z-1770Ze9sGEiIoezcgeltOsqCNzDf7Qf6NzVbTmfbpNbYm6ZrSlAN~YgBjitza9HrQFKIXqDgdzcxE0OqqRBAcYqnnrCRfiVXOboyEly9H9fvWjP0-XEPgXypDGJT0w4VXHil0OexxqAY19qjz6lvGZkoE~snOD7uhsSfDRjmF5EOt2wXA2hkwHvrzwA__&Key-Pair-Id=APKAJMWSQ5S7ZB3MF5VA",
+      "external_id": "EPI.842505",
+      "description": "Naofumi y los suyos intentan sobrevivir como pueden en el nuevo mundo en el que están a la vez que intentan descubrir cómo regresar y encontrar a Filo.",
+      "title": "El adiós de la nieve"
+  }
+}
+

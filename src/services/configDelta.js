@@ -23,21 +23,22 @@ returning error
 
 
 /**
- * @param {import('./../controllers/clients').Clients} client
- * @param {String} appId
- * @param {String} appVersion
+ * @param {Object} obj
+ * @param {import('../types').AuthBase} obj.auth
+ * @param {String} obj.appId
+ * @param {String} .objappVersion
  * @returns {Promise<Object>} 
  */
-async function getConfigDelta(client, appId, appVersion) {
+async function getConfigDelta({ auth, appId, appVersion }) {
     const fnName = 'getConfigDelta'
     logger.debug(fnName)
-    const queryData = {locale: await client.getLocale()}
+    const queryData = { locale: auth.locale }
     utils.addParam(queryData, 'app_version', appVersion, val => val)
     const query = new URLSearchParams(queryData)
     let url = `/config-delta/v2/apps/${appId}/config_delta?${query}`
     const reqConfig = {
         method: 'get',
-        headers: {'Authorization': await client.getToken()}
+        headers: {'Authorization': auth.token}
     }
     return utils.makeRequest(fnName, url, reqConfig)
 }

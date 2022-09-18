@@ -1,8 +1,9 @@
 
-const { URLSearchParams } = require('url')
-const config = require('../config/config.json')
 const utils = require('../utils')
 const logger = require('../logger')
+const { URLSearchParams } = require('url')
+const CONST = require('../const')
+
 
 
 /**
@@ -10,7 +11,7 @@ const logger = require('../logger')
  * @returns {String}
  */
 function getBasicToken() {
-    const credenciales =  `${config.client_id}:${config.client_secret}`
+    const credenciales =  `${CONST.getClientId()}:${CONST.getClientSecret()}`
     let buff = Buffer.from(credenciales)
     let base64data = buff.toString('base64')
     return base64data
@@ -26,7 +27,7 @@ function getBasicToken() {
  * @param {String} [login.scope]
  * @returns {Promise<import('../types').Token>}
  */
-async function getToken({username, password, grantType, scope}) {
+async function getToken({ username, password, grantType, scope }) {
     const fnName = 'getToken'
     logger.debug(fnName)
     const basicToken = getBasicToken()
@@ -59,7 +60,7 @@ async function getToken({username, password, grantType, scope}) {
  * @param {{refreshToken: String}}
  * @returns {Promise<import('../types').Token>}
  */
-async function getRefreshToken({refreshToken}) {
+async function getRefreshToken({ refreshToken }) {
     const fnName = 'getRefreshToken'
     logger.debug(fnName)
     const basicToken = getBasicToken()
@@ -90,7 +91,7 @@ async function getRefreshToken({refreshToken}) {
  * @param {{refreshToken: String}}
  * @returns {Promise<{status: String}>}
  */
-async function revokeRefreshToken({refreshToken}) {
+async function revokeRefreshToken({ refreshToken }) {
     const fnName = 'revokeRefreshToken'
     logger.debug(fnName)
     const basicToken = getBasicToken()

@@ -7,11 +7,8 @@ const account = require('../services/account')
 /** @type {String} */
 let token = null
 
-/** @type {Clients} */
-let client = null
-
 beforeEach(async () => {
-    client = new Clients()
+    const client = new Clients()
     await client.loadFromLocal()
     token = await client.getToken()
 })
@@ -19,7 +16,7 @@ beforeEach(async () => {
 describe('Account', () => {
     test('empty', () => {})
 
-    /*test('Request Account', async() => {
+    test('Request Account', async() => {
         return account.getAccountId({ token }).then(account => {
             testUtils.existValue(account.account_id)
             testUtils.existValue(account.created)
@@ -59,6 +56,6 @@ describe('Account', () => {
     })
     
     test('Request Update Profile', async() => {
-        await account.updateProfile({token, data: {avatar: '16-the-god-of-high-school-jin-mori.png'}})
-    })*/
+        await account.updateProfile({ token, data: {avatar: '16-the-god-of-high-school-jin-mori.png'} })
+    })
 })

@@ -1,0 +1,612 @@
+{
+  "items": [
+      {
+          "id": "hero_carousel-13595",
+          "title": "[LATAM] 2022-09-19",
+          "resource_type": "hero_carousel",
+          "display_type": "hero",
+          "description": "",
+          "source_media_id": "none",
+          "source_media_title": "none",
+          "__class__": "home_feed_item",
+          "__href__": "",
+          "__links__": {
+              "resource": {
+                  "href": "/content/v1/carousel/13595?locale=es-419"
+              }
+          },
+          "__actions__": {}
+      },
+      {
+          "id": "GRVN8MNQY",
+          "title": "Classroom of the Elite",
+          "resource_type": "panel",
+          "display_type": "hero",
+          "description": "Kiyotaka Ayanokouji acaba de entrar en la Academia Tokyo Koudo Ikusei, de la cual se dice que el 100% de sus estudiantes acaban yendo a la universidad o encontrando un buen trabajo. Sin embargo nuestro protagonista acaba en la Clase 1-D, donde la escuela pone a todos los alumnos con problemas. Y lo que es más, cada mes la escuela otorga a los estudiantes puntos por valor de 100.000 yenes, y las clases emplean un sistema por el cual se puede hablar, dormir e incluso molestar a los compañeros durante las clases.",
+          "source_media_id": "none",
+          "source_media_title": "none",
+          "__class__": "home_feed_item",
+          "__href__": "",
+          "__links__": {
+              "resource": {
+                  "href": "/cms/v2/CL/M3/crunchyroll/series/GRVN8MNQY?locale=es-419"
+              }
+          },
+          "__actions__": {}
+      },
+      {
+          "id": "dynamic_collection-1",
+          "title": "Nuestras recomendaciones",
+          "resource_type": "dynamic_collection",
+          "display_type": "shelf",
+          "description": "¡Recomienda estas series a tus amigos!",
+          "source_media_id": "none",
+          "source_media_title": "none",
+          "__class__": "home_feed_item",
+          "__href__": "",
+          "__links__": {
+              "resource": {
+                  "href": "/content/v1/d1650989-cd33-50a3-a195-126b550c4e68/recommendations?locale=es-419&n=20"
+              }
+          },
+          "__actions__": {}
+      },
+      {
+          "id": "dynamic_collection-2",
+          "title": "Seguir viendo",
+          "resource_type": "continue_watching",
+          "display_type": "shelf",
+          "description": "Seguir donde lo dejaste",
+          "source_media_id": "none",
+          "source_media_title": "none",
+          "__class__": "home_feed_item",
+          "__href__": "",
+          "__links__": {
+              "resource": {
+                  "href": "/content/v1/d1650989-cd33-50a3-a195-126b550c4e68/up_next_account?locale=es-419&n=20"
+              }
+          },
+          "__actions__": {}
+      },
+      {
+          "id": "in_feed_banner-10206",
+          "title": "[LATAM] Rent-a-GF S2 (Standard)",
+          "resource_type": "in_feed_banner",
+          "display_type": "shelf",
+          "description": "Rent-a-Girlfriend Season 2",
+          "source_media_id": "none",
+          "source_media_title": "none",
+          "link": "https://got.cr/RAGS2-Standard-LATAM",
+          "new_window": true,
+          "banner_images": {
+              "mobile_small": "27060163-f747-43c7-a8e4-b3a470e57075.jpg",
+              "mobile_large": "",
+              "desktop_small": "",
+              "desktop_large": "be534c38-5090-4e33-8773-9aa7a469f608.jpg"
+          },
+          "__class__": "home_feed_item",
+          "__href__": "",
+          "__links__": {
+              "resource": {
+                  "href": "https://static.crunchyroll.com/config/cx-content-api/dummy.png"
+              }
+          },
+          "__actions__": {}
+      },
+      {
+          "id": "dynamic_collection-3",
+          "title": "Tus favoritos",
+          "resource_type": "dynamic_watchlist",
+          "display_type": "shelf",
+          "description": "Busca algo nuevo que ver en nuestro estupendo catálogo",
+          "source_media_id": "none",
+          "source_media_title": "none",
+          "__class__": "home_feed_item",
+          "__href__": "",
+          "__links__": {
+              "resource": {
+                  "href": "/content/v1/d1650989-cd33-50a3-a195-126b550c4e68/watchlist?locale=es-419&n=20"
+              }
+          },
+          "__actions__": {}
+      },
+      {
+          "id": "789",
+          "title": "¡SIEMPRE ES BUEN MOMENTO PARA EL DEPORTE!",
+          "resource_type": "curated_collection",
+          "display_type": "shelf",
+          "description": "El trabajo en equipo da forma a los sueños.",
+          "source_media_id": "none",
+          "source_media_title": "none",
+          "__class__": "home_feed_item",
+          "__href__": "",
+          "__links__": {
+              "resource": {
+                  "href": "/content/v1/curated_feeds/789?locale=es-419"
+              }
+          },
+          "__actions__": {}
+      },
+      {
+          "id": "dynamic_collection-9",
+          "title": "Noticias Crunchyroll",
+          "resource_type": "news_feed",
+          "display_type": "shelf",
+          "description": "Noticias Crunchyroll",
+          "source_media_id": "none",
+          "source_media_title": "none",
+          "__class__": "home_feed_item",
+          "__href__": "",
+          "__links__": {
+              "resource": {
+                  "href": "/content/v1/news_feed?locale=es-419"
+              }
+          },
+          "__actions__": {}
+      },
+      {
+          "id": "browse_popular",
+          "title": "Lo más popular",
+          "resource_type": "dynamic_collection",
+          "display_type": "shelf",
+          "description": "¡Las series más famosas de todo Crunchyroll!",
+          "source_media_id": "none",
+          "source_media_title": "none",
+          "__class__": "home_feed_item",
+          "__href__": "",
+          "__links__": {
+              "resource": {
+                  "href": "/content/v1/browse?locale=es-419&n=20&sort_by=popularity"
+              }
+          },
+          "__actions__": {}
+      },
+      {
+          "id": "browse_newly",
+          "title": "Últimos actualizados",
+          "resource_type": "dynamic_collection",
+          "display_type": "shelf",
+          "description": "¡Las mejores novedades de anime de Japón, solo para ti!",
+          "source_media_id": "none",
+          "source_media_title": "none",
+          "__class__": "home_feed_item",
+          "__href__": "",
+          "__links__": {
+              "resource": {
+                  "href": "/content/v1/browse?locale=es-419&n=20&sort_by=newly_added"
+              }
+          },
+          "__actions__": {}
+      },
+      {
+          "id": "in_feed_banner-7786",
+          "title": "[LATAM] Devil Part-timer S2 (Standard)",
+          "resource_type": "in_feed_banner",
+          "display_type": "shelf",
+          "description": "The Devil is a Part-timer! 2.ª Temporada",
+          "source_media_id": "none",
+          "source_media_title": "none",
+          "link": "https://got.cr/DevilPartTimerS2-Standard-LATAM",
+          "new_window": true,
+          "banner_images": {
+              "mobile_small": "0dd0ac4f-f185-4292-9c99-5df18a548bcd.png",
+              "mobile_large": "",
+              "desktop_small": "",
+              "desktop_large": "4139e399-ba0d-4067-870c-8cca3b5aadee.png"
+          },
+          "__class__": "home_feed_item",
+          "__href__": "",
+          "__links__": {
+              "resource": {
+                  "href": "https://static.crunchyroll.com/config/cx-content-api/dummy.png"
+              }
+          },
+          "__actions__": {}
+      },
+      {
+          "id": "dynamic_collection-6",
+          "title": "Similares a cosas que viste DRAGON QUEST The Adventure of Dai",
+          "resource_type": "dynamic_collection",
+          "display_type": "shelf",
+          "description": "¿Qué te parece esto?",
+          "source_media_id": "GYXM79M56",
+          "source_media_title": "DRAGON QUEST The Adventure of Dai",
+          "__class__": "home_feed_item",
+          "__href__": "",
+          "__links__": {
+              "resource": {
+                  "href": "/content/v1/d1650989-cd33-50a3-a195-126b550c4e68/similar_to?guid=GYXM79M56&locale=es-419&n=20"
+              }
+          },
+          "__actions__": {}
+      },
+      {
+          "id": "G1XHJV2X9",
+          "title": "Lycoris Recoil",
+          "resource_type": "panel",
+          "display_type": "shelf",
+          "description": "Las Lycoris protegen la paz, pero cuando una de ellas es \"retirada\" injustamente de su sección y enviada a una peculiar cafetería a trabajar, se replanteará cuál es el trabajo que hacía.",
+          "source_media_id": "none",
+          "source_media_title": "none",
+          "__class__": "home_feed_item",
+          "__href__": "",
+          "__links__": {
+              "resource": {
+                  "href": "/cms/v2/CL/M3/crunchyroll/series/G1XHJV2X9?locale=es-419"
+              }
+          },
+          "__actions__": {}
+      },
+      {
+          "id": "G4PH0WZZ3",
+          "title": "Shine on! Bakumatsu Bad Boys",
+          "resource_type": "panel",
+          "display_type": "shelf",
+          "description": "Un ataque al Shinsengumi por parte de una misteriosa organización de enmascarados acaba con muchos de sus miembros, pero un nuevo plan busca entre los criminales a gente apta que porte los nombres de los caídos y así poder buscar a la organización y vengarse por lo ocurrido.",
+          "source_media_id": "none",
+          "source_media_title": "none",
+          "__class__": "home_feed_item",
+          "__href__": "",
+          "__links__": {
+              "resource": {
+                  "href": "/cms/v2/CL/M3/crunchyroll/series/G4PH0WZZ3?locale=es-419"
+              }
+          },
+          "__actions__": {}
+      },
+      {
+          "id": "9159",
+          "title": "¡Doblajes en español en Crunchyroll!",
+          "promo_image": "8e40c98b-787d-45c6-875e-7335f5430974.png",
+          "resource_type": "curated_collection",
+          "display_type": "shelf",
+          "description": "¡Tus animes favoritos, ahora con doblaje en español!",
+          "source_media_id": "none",
+          "source_media_title": "none",
+          "__class__": "home_feed_item",
+          "__href__": "",
+          "__links__": {
+              "resource": {
+                  "href": "/content/v1/curated_feeds/9159?locale=es-419"
+              }
+          },
+          "__actions__": {}
+      },
+      {
+          "id": "dynamic_collection-7",
+          "title": "Similares a cosas que viste SEVEN KNIGHTS REVOLUTION: Hero Successor",
+          "resource_type": "dynamic_collection",
+          "display_type": "shelf",
+          "description": "¿Qué te parece esto?",
+          "source_media_id": "GZJH3DNE5",
+          "source_media_title": "SEVEN KNIGHTS REVOLUTION: Hero Successor",
+          "__class__": "home_feed_item",
+          "__href__": "",
+          "__links__": {
+              "resource": {
+                  "href": "/content/v1/d1650989-cd33-50a3-a195-126b550c4e68/similar_to?guid=GZJH3DNE5&locale=es-419&n=20"
+              }
+          },
+          "__actions__": {}
+      },
+      {
+          "id": "in_feed_banner-13445",
+          "title": "[LATAM] Mob Psycho 100 Evergreen (Standard)",
+          "resource_type": "in_feed_banner",
+          "display_type": "shelf",
+          "description": "Mob Psycho 100",
+          "source_media_id": "none",
+          "source_media_title": "none",
+          "link": "https://got.cr/MP100-Standard-LATAM",
+          "new_window": true,
+          "banner_images": {
+              "mobile_small": "6783fc14-9368-4320-ad67-2e4a92ed2837.png",
+              "mobile_large": "",
+              "desktop_small": "",
+              "desktop_large": "acc69ab4-3cdf-4fb1-ad95-ad2a25c2236e.png"
+          },
+          "__class__": "home_feed_item",
+          "__href__": "",
+          "__links__": {
+              "resource": {
+                  "href": "https://static.crunchyroll.com/config/cx-content-api/dummy.png"
+              }
+          },
+          "__actions__": {}
+      },
+      {
+          "id": "12119",
+          "title": "¡Curioso y recurioso!",
+          "resource_type": "curated_collection",
+          "display_type": "shelf",
+          "description": "Una buena conjunción de thriller, fantasía y misterio",
+          "source_media_id": "none",
+          "source_media_title": "none",
+          "__class__": "home_feed_item",
+          "__href__": "",
+          "__links__": {
+              "resource": {
+                  "href": "/content/v1/curated_feeds/12119?locale=es-419"
+              }
+          },
+          "__actions__": {}
+      },
+      {
+          "id": "GY5VGNM0Y",
+          "title": "Kino's Journey -the Beautiful World- the Animated Series",
+          "resource_type": "panel",
+          "display_type": "shelf",
+          "description": "\"El mundo no es precioso, por lo tanto, lo es\".\r\n\r\n \r\n\r\nSigue la historia de Kino, quien viaja por el mundo con la única compañía de sus armas para protegerse y la motocicleta parlante Hermes.\r\n\r\n \r\n\r\nKino recorrerá todo tipo de paisajes y lugares, conociendo sus costumbres y habitantes, aprendiendo de ellos sus historias. Eso sí, solo una norma rige los viajes de Kino: no puede permanecer en ningún lugar más de tres días, puesto que cree que si supera ese límite, se establecería en un lugar y supondría la muerte de su parte viajera.",
+          "source_media_id": "none",
+          "source_media_title": "none",
+          "__class__": "home_feed_item",
+          "__href__": "",
+          "__links__": {
+              "resource": {
+                  "href": "/cms/v2/CL/M3/crunchyroll/series/GY5VGNM0Y?locale=es-419"
+              }
+          },
+          "__actions__": {}
+      },
+      {
+          "id": "12074",
+          "title": "Las chicas dominan la pista",
+          "resource_type": "curated_collection",
+          "display_type": "shelf",
+          "description": "¡Estas chicas van con todo!",
+          "source_media_id": "none",
+          "source_media_title": "none",
+          "__class__": "home_feed_item",
+          "__href__": "",
+          "__links__": {
+              "resource": {
+                  "href": "/content/v1/curated_feeds/12074?locale=es-419"
+              }
+          },
+          "__actions__": {}
+      },
+      {
+          "id": "browse_newly_episode",
+          "title": "Episodios Nuevos",
+          "resource_type": "recent_episodes",
+          "display_type": "shelf",
+          "description": " New Episodes",
+          "source_media_id": "none",
+          "source_media_title": "none",
+          "__class__": "home_feed_item",
+          "__href__": "",
+          "__links__": {
+              "resource": {
+                  "href": "/content/v1/browse?locale=es-419&n=100&sort_by=newly_added&type=episode"
+              }
+          },
+          "__actions__": {}
+      },
+      {
+          "id": "799",
+          "title": "Regreso a clases",
+          "resource_type": "curated_collection",
+          "display_type": "shelf",
+          "description": "¡Los estudios son lo primero para estos estudiantes!",
+          "source_media_id": "none",
+          "source_media_title": "none",
+          "__class__": "home_feed_item",
+          "__href__": "",
+          "__links__": {
+              "resource": {
+                  "href": "/content/v1/curated_feeds/799?locale=es-419"
+              }
+          },
+          "__actions__": {}
+      },
+      {
+          "id": "GR75Q020Y",
+          "title": "BORUTO: NARUTO NEXT GENERATIONS",
+          "resource_type": "panel",
+          "display_type": "shelf",
+          "description": "En Konoha han entrado en una era de paz y modernidad. Los altos edificios despuntan en las calles, las pantallas gigantes muestran imágenes de todo tipo y los medios de transporte conectan los vairos distritos. Pese a que sigue siendo una aldea ninja, el número de civiles ha aumentado y la vida de los ninja ha cambiado.\r\n\r\nBoruto Uzumaki es hijo del Séptimo Hokage, Naruto Uzumaki, y se ha unido a la Academia Ninja para aprender. Otros estudiantes lo menosprecian de inmediato y consideran que solo está ahí por ser \"hijo del Hokage\", pero pronto Boruto disipará todas esas dudas sobre él.",
+          "source_media_id": "none",
+          "source_media_title": "none",
+          "__class__": "home_feed_item",
+          "__href__": "",
+          "__links__": {
+              "resource": {
+                  "href": "/cms/v2/CL/M3/crunchyroll/series/GR75Q020Y?locale=es-419"
+              }
+          },
+          "__actions__": {}
+      },
+      {
+          "id": "GRMG8ZQZR",
+          "title": "One Piece",
+          "resource_type": "panel",
+          "display_type": "shelf",
+          "description": "Hora de estreno en Latinoamérica: Domingos a la 1:30 AM PST (Hora del Pacífico)\r\nHora de estreno en España: Domingos a las 09:30 (Hora española peninsular)\r\n\r\nMonkey D. Luffy se niega a que nadie se interponga en su camino para convertirse en Rey de los Piratas. Se lanza a sucar los mares y se convertirá en un capitán dispuesto a no darse por vencido jamás hasta hacerse con el mayor tesoro de la historia: el legendario One Piece.",
+          "source_media_id": "none",
+          "source_media_title": "none",
+          "__class__": "home_feed_item",
+          "__href__": "",
+          "__links__": {
+              "resource": {
+                  "href": "/cms/v2/CL/M3/crunchyroll/series/GRMG8ZQZR?locale=es-419"
+              }
+          },
+          "__actions__": {}
+      },
+      {
+          "id": "11667",
+          "title": "¡No pierdas estos donghua!",
+          "resource_type": "curated_collection",
+          "display_type": "shelf",
+          "description": "¡Grandes series que tal vez se te escaparon!",
+          "source_media_id": "none",
+          "source_media_title": "none",
+          "__class__": "home_feed_item",
+          "__href__": "",
+          "__links__": {
+              "resource": {
+                  "href": "/content/v1/curated_feeds/11667?locale=es-419"
+              }
+          },
+          "__actions__": {}
+      },
+      {
+          "id": "10773",
+          "title": "Amor entre adultos",
+          "resource_type": "curated_collection",
+          "display_type": "shelf",
+          "description": "El amor también puede surgir fuera de la preparatoria",
+          "source_media_id": "none",
+          "source_media_title": "none",
+          "__class__": "home_feed_item",
+          "__href__": "",
+          "__links__": {
+              "resource": {
+                  "href": "/content/v1/curated_feeds/10773?locale=es-419"
+              }
+          },
+          "__actions__": {}
+      },
+      {
+          "id": "GG5H5XMWV",
+          "title": "To Your Eternity",
+          "resource_type": "panel",
+          "display_type": "shelf",
+          "description": "Al principio el \"orbe\" llegó a la Tierra. Podía hacer dos cosas: tomar la forma de cualquier cosa con la que interactuara y regenerarse para volver a la vida. El orbe se convirtió en roca, luego en lobo y finalmente en un chico, pero vaga por el mundo como un recién nacido que no sabe nada. Como niño se convierte en Fushi. Poco a poco va conociendo la amabilidad humana y Fushi no solo aprende a sobrevivir, sino que crece como \"persona\". Pero su viaje queda ensombrecido por Nokker, un destructivo e inexplicable enemigo, así como por las crueles depedidas de aquellos a quienes ama.",
+          "source_media_id": "none",
+          "source_media_title": "none",
+          "__class__": "home_feed_item",
+          "__href__": "",
+          "__links__": {
+              "resource": {
+                  "href": "/cms/v2/CL/M3/crunchyroll/series/GG5H5XMWV?locale=es-419"
+              }
+          },
+          "__actions__": {}
+      },
+      {
+          "id": "11668",
+          "title": "Compañeros de confianza y muuuuuy tiernitos",
+          "resource_type": "curated_collection",
+          "display_type": "shelf",
+          "description": "¡Nuestros mejores amigos!",
+          "source_media_id": "none",
+          "source_media_title": "none",
+          "__class__": "home_feed_item",
+          "__href__": "",
+          "__links__": {
+              "resource": {
+                  "href": "/content/v1/curated_feeds/11668?locale=es-419"
+              }
+          },
+          "__actions__": {}
+      },
+      {
+          "id": "10427",
+          "title": "Trabajando y esperando al fin de semana",
+          "resource_type": "curated_collection",
+          "display_type": "shelf",
+          "description": "Un esfuerzo sin fin",
+          "source_media_id": "none",
+          "source_media_title": "none",
+          "__class__": "home_feed_item",
+          "__href__": "",
+          "__links__": {
+              "resource": {
+                  "href": "/content/v1/curated_feeds/10427?locale=es-419"
+              }
+          },
+          "__actions__": {}
+      },
+      {
+          "id": "GVDHX8JP2",
+          "title": "RWBY: Ice Queendom",
+          "resource_type": "panel",
+          "display_type": "shelf",
+          "description": "Ruby y Yang son dos hermanas hijas de Cazadores. Yang ha superado las pruebas para unirse a la prestigiosa Academia Beacon y Ruby no podría estar más orgullosa de su hermana mayor, pero cuando ella se ve envuelta en cierto incidente, acabará teniendo la oportunidad de estudiar también en la Academia y comenzar una nueva vida como estudiante junto a Yang.",
+          "source_media_id": "none",
+          "source_media_title": "none",
+          "__class__": "home_feed_item",
+          "__href__": "",
+          "__links__": {
+              "resource": {
+                  "href": "/cms/v2/CL/M3/crunchyroll/series/GVDHX8JP2?locale=es-419"
+              }
+          },
+          "__actions__": {}
+      },
+      {
+          "id": "3297",
+          "title": "El club de las niñeras",
+          "resource_type": "curated_collection",
+          "display_type": "shelf",
+          "description": "Nos encantan los que cuidan a los más pequeños",
+          "source_media_id": "none",
+          "source_media_title": "none",
+          "__class__": "home_feed_item",
+          "__href__": "",
+          "__links__": {
+              "resource": {
+                  "href": "/content/v1/curated_feeds/3297?locale=es-419"
+              }
+          },
+          "__actions__": {}
+      },
+      {
+          "id": "9332",
+          "title": "¿Buscas algo apto para toda la familia?",
+          "resource_type": "curated_collection",
+          "display_type": "shelf",
+          "description": "¡Animes adorables para compartir!",
+          "source_media_id": "none",
+          "source_media_title": "none",
+          "__class__": "home_feed_item",
+          "__href__": "",
+          "__links__": {
+              "resource": {
+                  "href": "/content/v1/curated_feeds/9332?locale=es-419"
+              }
+          },
+          "__actions__": {}
+      },
+      {
+          "id": "GW4HM7GNK",
+          "title": "Sasaki and Miyano",
+          "resource_type": "panel",
+          "display_type": "shelf",
+          "description": "Miyano es un estudiante que adora el manga de corte boys love y al que le acompleja un poco el tener unos rasgos muy poco masculinos. Su afición por la ficción se convertirá en algo más real cuando conozca por casualidad a Sakaki, un estudiante mayor que él que lo salva de unos abusones. Juntos comenzarán una relación de amistad que pronto querrá convertirse en algo más... si ambos son capaces de dar el paso y admitir lo que sienten.",
+          "source_media_id": "none",
+          "source_media_title": "none",
+          "__class__": "home_feed_item",
+          "__href__": "",
+          "__links__": {
+              "resource": {
+                  "href": "/cms/v2/CL/M3/crunchyroll/series/GW4HM7GNK?locale=es-419"
+              }
+          },
+          "__actions__": {}
+      },
+      {
+          "id": "793",
+          "title": "¡Has llegado hasta abajo! ¡Aquí tienes tu recompensa!",
+          "resource_type": "curated_collection",
+          "display_type": "shelf",
+          "description": "¡Felicidades!",
+          "source_media_id": "none",
+          "source_media_title": "none",
+          "__class__": "home_feed_item",
+          "__href__": "",
+          "__links__": {
+              "resource": {
+                  "href": "/content/v1/curated_feeds/793?locale=es-419"
+              }
+          },
+          "__actions__": {}
+      }
+  ],
+  "__class__": "home_feed",
+  "__href__": "/content/v1/d1650989-cd33-50a3-a195-126b550c4e68/home_feed?channel_id=crunchyroll&locale=es-419&n=0&start=0",
+  "__resource_key__": "content:/home_feed?channel_id=crunchyroll&locale=es-419&n=0&start=0",
+  "__links__": {},
+  "__actions__": {}
+}

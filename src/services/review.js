@@ -6,20 +6,20 @@ const CONST = require('../const')
 
 
 /**
- * @param {import('./../controllers/clients').Clients} client
- * @param {String} contentId
- * @param {String} rating
- * @param {String} [contentType]
- * @returns {Promise<Object>}
+ * @param {Object} obj
+ * @param {import('../types').AccountAuth} obj.account
+ * @param {String} obj.contentId
+ * @param {String} obj.rating
+ * @param {String} [obj.contentType]
+ * @returns {Promise<import('../types').RatingEpisode>}
  */
-async function addEpisodeRating(client, contentId, rating, contentType) {
+async function addEpisodeRating({ account, contentId, rating, contentType }) {
     const fnName = 'addEpisodeRating'
     logger.debug(fnName)
     const contentTypes = CONST.getContentTypes()
     const ratingTypes = CONST.getRatingEpisodeTypes()
-    const queryData = {locale: await client.getLocale()}
+    const queryData = { locale: account.locale }
     const queryStr = new URLSearchParams(queryData)
-    const account = await client.getAccount()
     contentType = contentType ? contentType : 'episode'
     if (!contentTypes.includes(contentType)) {
         throw new Error(`ContentType ${contentType} is not valid.`)
@@ -31,7 +31,7 @@ async function addEpisodeRating(client, contentId, rating, contentType) {
     const reqConfig = {
         method: 'put',
         headers: {
-            'Authorization': await client.getToken(),
+            'Authorization': account.token,
             'Content-Type': 'application/json',
         },
         body: JSON.stringify({ rating: rating})
@@ -41,20 +41,20 @@ async function addEpisodeRating(client, contentId, rating, contentType) {
 
 
 /**
- * @param {import('./../controllers/clients').Clients} client
- * @param {String} contentId
- * @param {String} rating
- * @param {String} contentType
- * @returns {Promise<Object>}
+ * @param {Object} obj
+ * @param {import('../types').AccountAuth} obj.account
+ * @param {String} obj.contentId
+ * @param {String} obj.rating
+ * @param {String} obj.contentType
+ * @returns {Promise<import('../types').RatingStars>}
  */
-async function addRating(client, contentId, rating, contentType) {
+async function addRating({ account, contentId, rating, contentType }) {
     const fnName = 'addRating'
     logger.debug(fnName)
     const ratingTypes = CONST.getRatingContentTypes()
     const contentTypes = CONST.getContentTypes()
-    const queryData = {locale: await client.getLocale()}
+    const queryData = { locale: account.locale }
     const queryStr = new URLSearchParams(queryData)
-    const account = await client.getAccount()
     if (!contentTypes.includes(contentType)) {
         throw new Error(`ContentType ${contentType} is not valid.`)
     }
@@ -65,7 +65,7 @@ async function addRating(client, contentId, rating, contentType) {
     const reqConfig = {
         method: 'put',
         headers: {
-            'Authorization': await client.getToken(),
+            'Authorization': account.token,
             'Content-Type': 'application/json',
         },
         body: JSON.stringify({ rating: rating})
@@ -75,74 +75,77 @@ async function addRating(client, contentId, rating, contentType) {
 
 
 /**
- * @param {import('./../controllers/clients').Clients} client
- * @param {String} contentId
- * @param {String} contentType
+ * @param {Object} obj
+ * @param {import('../types').AccountAuth} obj.account
+ * @param {String} obj.contentId
+ * @param {String} obj.contentType
  * @returns {Promise<Object>}
  */
-async function _getRatings(client, contentId, contentType) {
+async function _getRatings({ account, contentId, contentType }) {
     const fnName = '_getRatings'
     logger.debug(fnName)
     const types = CONST.getContentTypes()
-    const queryData = {locale: await client.getLocale()}
+    const queryData = { locale: account.locale }
     const queryStr = new URLSearchParams(queryData)
-    const account = await client.getAccount()
     if (!types.includes(contentType)) {
         throw new Error(`ContentType ${contentType} is not valid.`)
     }
     const url = `/content-reviews/v2/user/${account.accountId}/rating/${contentType}/${contentId}?${queryStr}`
     const reqConfig = {
         method: 'get',
-        headers: { 'Authorization': await client.getToken() }
+        headers: { 'Authorization': account.token }
     }
     return utils.makeRequest(fnName, url, reqConfig)
 }
 
 
 /**
- * @param {import('./../controllers/clients').Clients} client
- * @param {String} contentId
- * @returns {Promise<Object>}
+ * @param {Object} obj
+ * @param {import('../types').AccountAuth} obj.account
+ * @param {String} obj.contentId
+ * @returns {Promise<import('../types').RatingEpisode>}
  */
-async function getEpisodeRatings(client, contentId) {
-    return _getRatings(client, contentId, 'episode')
+async function getEpisodeRatings({ account, contentId }) {
+    return _getRatings({ account, contentId, contentType: 'episode' })
 }
 
 
 /**
- * @param {import('./../controllers/clients').Clients} client
- * @param {String} contentId
- * @param {String} contentType
- * @returns {Promise<Object>}
+ * @param {Object} obj
+ * @param {import('../types').AccountAuth} obj.account
+ * @param {String} obj.contentId
+ * @param {String} obj.contentType
+ * @returns {Promise<import('../types').RatingStars>}
  */
-async function getRatings(client, contentId, contentType) {
-    return _getRatings(client, contentId, contentType)
+async function getRatings({ account, contentId, contentType }) {
+    return _getRatings({ account, contentId, contentType })
 }
 
 
 /**
- * @param {import('./../controllers/clients').Clients} client
- * @param {String} contentId
- * @param {String} contentType
- * @returns {Promise<Object>}
+ * @param {Object} obj
+ * @param {import('../types').AccountAuth} obj.account
+ * @param {String} obj.contentId
+ * @param {String} obj.contentType
+ * @returns {Promise}
  */
-async function removeRating(client, contentId, contentType) {
+async function removeRating({ account, contentId, contentType }) {
     const fnName = 'removeRating'
     logger.debug(fnName)
     const types = CONST.getContentTypes()
-    const queryData = {locale: await client.getLocale()}
+    const queryData = { locale: account.locale }
     const queryStr = new URLSearchParams(queryData)
-    const account = await client.getAccount()
     if (!types.includes(contentType)) {
         throw new Error(`ContentType ${contentType} is not valid.`)
     }
     const url = `/content-reviews/v2/user/${account.accountId}/rating/${contentType}/${contentId}?${queryStr}`
     const reqConfig = {
         method: 'delete',
-        headers: { 'Authorization': await client.getToken() }
+        headers: { 'Authorization': account.token }
     }
     return utils.makeRequest(fnName, url, reqConfig)
 }
+
 
 module.exports = {
     addEpisodeRating,

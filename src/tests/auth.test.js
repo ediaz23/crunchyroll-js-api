@@ -39,7 +39,7 @@ function validateToken(token) {
 describe('Auth', () => {
     test('empty', () => {})
 
-    /*test('Load Credentials', () => {
+    test('Load Credentials', () => {
         expect(fs.existsSync(client.authData)).toBe(true)
         expect(client.client).toBeDefined()
         expect(client.client).toHaveProperty('credentials')
@@ -81,6 +81,6 @@ describe('Auth', () => {
         return auth.revokeRefreshToken({refreshToken: token.refresh_token}).then(data => {
             expect(data).toEqual({status: "OK"})
         })
-    })*/
+    })
 
 })
