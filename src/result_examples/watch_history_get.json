@@ -1,0 +1,150 @@
+{
+    "next_page": "/content/v1/watch-history/d1650989-cd33-50a3-a195-126b550c4e68?locale=es-419&page=2&page_size=1",
+    "items": [
+        {
+            "id": "G8WUNDPX5",
+            "date_played": "2022-09-16T20:24:25Z",
+            "parent_id": "GR751KNZY",
+            "parent_type": "series",
+            "playhead": 1,
+            "fully_watched": false,
+            "panel": {
+                "linked_resource_key": "cms:/episodes/G8WUNDPX5",
+                "playback": "https://pl.crunchyroll.com/asset/d456dc3b32e9833744149fc2520a788d/v/74a1035e120918be7d0e54bfdceb6cbb/languages/en-US,es-419,es-ES,fr-FR,pt-BR,ar-SA,it-IT,de-DE,ru-RU,es-LA,ar-ME?*&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly9wbC5jcnVuY2h5cm9sbC5jb20vYXNzZXQvZDQ1NmRjM2IzMmU5ODMzNzQ0MTQ5ZmMyNTIwYTc4OGQvdi83NGExMDM1ZTEyMDkxOGJlN2QwZTU0YmZkY2ViNmNiYi8~KiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTY2MzUzMzU5N319fV19&Signature=avoAoEtmw7pszciNv4etdArNBFIZGQVRSihGZzJdirg69tsBPPnzyO~qXMkewUCXu7bf~N3Ki~b1Lt3PRMtbCKP9yK9OIGhGb0cW1KFjRSLKHZL09DGpBI7lVSHzAuIkUUVHaqPTw4Mlo8cMV5iZRz4BtzO8vOMmLMhzfI2E2SFJc-LXjFOf-V015tBwBCFGrqtpwaUF9aHaC0bob4FYSp9ZVKpu7zfKRHwHkJtZexLtc24tvy-ups2TfAo815I6LKRa1svU2QgVl9EHusRHc~Orl0PEsCpu26C4YS6uvbOvBNLGEUZpGsI5W9vMEOh1Wv7qxtO8HLicWMyaGbYFKA__&Key-Pair-Id=APKAJMWSQ5S7ZB3MF5VA",
+                "promo_title": "",
+                "title": "La puerta de la esperanza",
+                "__class__": "panel",
+                "promo_description": "",
+                "episode_metadata": {
+                    "audio_locale": "jaJP",
+                    "availability_ends": "9998-11-30T08:00:00Z",
+                    "availability_notes": "",
+                    "availability_starts": "2020-12-20T20:45:00Z",
+                    "available_date": null,
+                    "available_offline": true,
+                    "closed_captions_available": false,
+                    "duration_ms": 1435123,
+                    "eligible_region": "CL",
+                    "episode": "62",
+                    "episode_air_date": "2020-12-21T00:10:00+09:00",
+                    "episode_number": 62,
+                    "extended_maturity_rating": {},
+                    "free_available_date": "2020-12-20T20:45:00Z",
+                    "identifier": "",
+                    "is_clip": false,
+                    "is_dubbed": false,
+                    "is_mature": false,
+                    "is_premium_only": false,
+                    "is_subbed": true,
+                    "mature_blocked": false,
+                    "maturity_ratings": [
+                        "TV-14"
+                    ],
+                    "premium_available_date": "2020-12-20T20:45:00Z",
+                    "premium_date": null,
+                    "season_id": "G69PC2WV0",
+                    "season_number": 4,
+                    "season_slug_title": "attack-on-titan-final-season",
+                    "season_title": "Attack on Titan",
+                    "sequence_number": 62,
+                    "series_id": "GR751KNZY",
+                    "series_slug_title": "attack-on-titan",
+                    "series_title": "Attack on Titan",
+                    "subtitle_locales": [
+                        "en-US",
+                        "es-419",
+                        "es-ES",
+                        "fr-FR",
+                        "pt-BR",
+                        "ar-SA",
+                        "it-IT",
+                        "de-DE",
+                        "ru-RU"
+                    ],
+                    "upload_date": "2020-12-21T00:10:00+09:00",
+                    "versions": null
+                },
+                "__links__": {
+                    "episode/season": {
+                        "href": "/cms/v2/CL/M3/crunchyroll/seasons/G69PC2WV0"
+                    },
+                    "episode/series": {
+                        "href": "/cms/v2/CL/M3/crunchyroll/series/GR751KNZY"
+                    },
+                    "resource": {
+                        "href": "/cms/v2/CL/M3/crunchyroll/episodes/G8WUNDPX5"
+                    },
+                    "resource/channel": {
+                        "href": "/cms/v2/CL/M3/crunchyroll/channels/crunchyroll"
+                    },
+                    "streams": {
+                        "href": "/cms/v2/CL/M3/crunchyroll/videos/GQ9FGDZJW/streams"
+                    }
+                },
+                "type": "episode",
+                "__actions__": {},
+                "channel_id": "crunchyroll",
+                "description": "La historia se centra en el pasado de nuevo, cuando Reiner, Annie y los demás llegaron hasta la Isla Paradis.",
+                "slug": "",
+                "id": "G8WUNDPX5",
+                "images": {
+                    "thumbnail": [
+                        [
+                            {
+                                "height": 180,
+                                "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/320x180/catalog/crunchyroll/8fa4696a3e48fd56d2dc8faad2646b3e.jpeg",
+                                "type": "thumbnail",
+                                "width": 320
+                            },
+                            {
+                                "height": 338,
+                                "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/600x338/catalog/crunchyroll/8fa4696a3e48fd56d2dc8faad2646b3e.jpeg",
+                                "type": "thumbnail",
+                                "width": 600
+                            },
+                            {
+                                "height": 360,
+                                "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/640x360/catalog/crunchyroll/8fa4696a3e48fd56d2dc8faad2646b3e.jpeg",
+                                "type": "thumbnail",
+                                "width": 640
+                            },
+                            {
+                                "height": 450,
+                                "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/800x450/catalog/crunchyroll/8fa4696a3e48fd56d2dc8faad2646b3e.jpeg",
+                                "type": "thumbnail",
+                                "width": 800
+                            },
+                            {
+                                "height": 675,
+                                "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1200x675/catalog/crunchyroll/8fa4696a3e48fd56d2dc8faad2646b3e.jpeg",
+                                "type": "thumbnail",
+                                "width": 1200
+                            },
+                            {
+                                "height": 810,
+                                "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1440x810/catalog/crunchyroll/8fa4696a3e48fd56d2dc8faad2646b3e.jpeg",
+                                "type": "thumbnail",
+                                "width": 1440
+                            },
+                            {
+                                "height": 900,
+                                "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1600x900/catalog/crunchyroll/8fa4696a3e48fd56d2dc8faad2646b3e.jpeg",
+                                "type": "thumbnail",
+                                "width": 1600
+                            },
+                            {
+                                "height": 1080,
+                                "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1920x1080/catalog/crunchyroll/8fa4696a3e48fd56d2dc8faad2646b3e.jpeg",
+                                "type": "thumbnail",
+                                "width": 1920
+                            }
+                        ]
+                    ]
+                },
+                "external_id": "EPI.799903",
+                "__href__": "",
+                "slug_title": "the-door-of-hope"
+            }
+        }
+    ]
+}

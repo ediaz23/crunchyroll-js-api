@@ -1,0 +1,14 @@
+{
+    "items": [
+        {
+            "list_id": "4419ec95-e7c7-4baa-beec-e8bdf55f7c59",
+            "is_public": false,
+            "total": 2,
+            "modified_at": "2022-09-16T20:33:35Z",
+            "title": "api futuro"
+        }
+    ],
+    "total_public": 0,
+    "total_private": 1,
+    "max_private": 10
+}

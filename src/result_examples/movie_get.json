@@ -1,0 +1,98 @@
+{
+    "__class__": "movie",
+    "__href__": "/cms/v2/CL/M3/crunchyroll/movies/GNJFJJ4P1",
+    "__resource_key__": "cms:/movies/GNJFJJ4P1",
+    "__links__": {
+        "movie/channel": {
+            "href": "/cms/v2/CL/M3/crunchyroll/channels/crunchyroll"
+        },
+        "movie/movie_listing": {
+            "href": "/cms/v2/CL/M3/crunchyroll/movie_listings/G6MG10746"
+        },
+        "streams": {
+            "href": "/cms/v2/CL/M3/crunchyroll/videos/GNJFJJ4P1/streams"
+        }
+    },
+    "__actions__": {},
+    "id": "GNJFJJ4P1",
+    "channel_id": "crunchyroll",
+    "media_type": "movie",
+    "title": "Mizu no Kotoba",
+    "slug": "",
+    "slug_title": "mizu-no-kotoba",
+    "description": "",
+    "images": {
+        "thumbnail": [
+            [
+                {
+                    "width": 320,
+                    "height": 180,
+                    "type": "thumbnail",
+                    "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/320x180/catalog/crunchyroll/927cb8f8ab289aa7cab2115f7bed8570.jpeg"
+                },
+                {
+                    "width": 600,
+                    "height": 338,
+                    "type": "thumbnail",
+                    "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/600x338/catalog/crunchyroll/927cb8f8ab289aa7cab2115f7bed8570.jpeg"
+                },
+                {
+                    "width": 640,
+                    "height": 360,
+                    "type": "thumbnail",
+                    "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/640x360/catalog/crunchyroll/927cb8f8ab289aa7cab2115f7bed8570.jpeg"
+                },
+                {
+                    "width": 800,
+                    "height": 450,
+                    "type": "thumbnail",
+                    "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/800x450/catalog/crunchyroll/927cb8f8ab289aa7cab2115f7bed8570.jpeg"
+                },
+                {
+                    "width": 1200,
+                    "height": 675,
+                    "type": "thumbnail",
+                    "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1200x675/catalog/crunchyroll/927cb8f8ab289aa7cab2115f7bed8570.jpeg"
+                },
+                {
+                    "width": 1440,
+                    "height": 810,
+                    "type": "thumbnail",
+                    "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1440x810/catalog/crunchyroll/927cb8f8ab289aa7cab2115f7bed8570.jpeg"
+                },
+                {
+                    "width": 1600,
+                    "height": 900,
+                    "type": "thumbnail",
+                    "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1600x900/catalog/crunchyroll/927cb8f8ab289aa7cab2115f7bed8570.jpeg"
+                },
+                {
+                    "width": 1920,
+                    "height": 1080,
+                    "type": "thumbnail",
+                    "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1920x1080/catalog/crunchyroll/927cb8f8ab289aa7cab2115f7bed8570.jpeg"
+                }
+            ]
+        ]
+    },
+    "duration_ms": 545672,
+    "is_premium_only": false,
+    "listing_id": "G6MG10746",
+    "extended_maturity_rating": {},
+    "maturity_ratings": [
+        "PG-13"
+    ],
+    "is_mature": false,
+    "mature_blocked": false,
+    "available_offline": true,
+    "available_date": null,
+    "free_available_date": "1970-01-01T00:00:00Z",
+    "premium_date": null,
+    "premium_available_date": "1970-01-01T00:00:00Z",
+    "is_subbed": false,
+    "is_dubbed": true,
+    "playback": "https://pl.crunchyroll.com/asset/20ndhjvelfcexhx/v/f08b97bae61b58fe10f93f6db78889ee/languages/en-US?*&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly9wbC5jcnVuY2h5cm9sbC5jb20vYXNzZXQvMjBuZGhqdmVsZmNleGh4L3YvZjA4Yjk3YmFlNjFiNThmZTEwZjkzZjZkYjc4ODg5ZWUvPyoiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE2NjM1MDk4NDZ9fX1dfQ__&Signature=l75qR~sOxiPGnOCXRUWb~~el8TP6GoOEFMCYyuMB046ZQ2VghbjK14ere6UMC2rJqSHhvhforlzUEy7P5vDnwhAQzBFGDmpj1ZtrhOQ53mwa4hyMYJKDD3eRUT9wGNiMf2O~QWtov9N4iQoj75lRNTAPrB9FSU~N-8sAqdsGYKumjySTNqK2IPTBN1EnE8Iks~rIPg3c9HJEMVcs-7mYbpjSfSOVvroLSEz7rQ7g1FTJU7awNwaWAFH-TKlY5mIo2H-aXYOe7rag1RrkSHLoHCzNVW7-7sSWvkA1HCxyJqQRD8frtyA8ng7jSmzMIml-yeuRAxZI6hXVGIYrHopxow__&Key-Pair-Id=APKAJMWSQ5S7ZB3MF5VA",
+    "availability_notes": "",
+    "movie_listing_title": "Mizu no Kotoba",
+    "closed_captions_available": false
+}

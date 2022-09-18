@@ -1,0 +1,259 @@
+{
+    "__class__": "collection",
+    "__href__": "/cms/v2/CL/M3/crunchyroll/seasons?series_id=GR751KNZY",
+    "__resource_key__": "cms:/seasons?series_id=GR751KNZY",
+    "__links__": {},
+    "__actions__": {},
+    "total": 5,
+    "items": [
+        {
+            "__class__": "season",
+            "__href__": "/cms/v2/CL/M3/crunchyroll/seasons/GR9PXM286",
+            "__resource_key__": "cms:/seasons/GR9PXM286",
+            "__links__": {
+                "season/channel": {
+                    "href": "/cms/v2/CL/M3/crunchyroll/channels/crunchyroll"
+                },
+                "season/episodes": {
+                    "href": "/cms/v2/CL/M3/crunchyroll/episodes?season_id=GR9PXM286"
+                },
+                "season/series": {
+                    "href": "/cms/v2/CL/M3/crunchyroll/series/GR751KNZY"
+                }
+            },
+            "__actions__": {},
+            "id": "GR9PXM286",
+            "channel_id": "crunchyroll",
+            "title": "Attack on Titan / Shingeki no Kyojin",
+            "slug_title": "attack-on-titan",
+            "series_id": "GR751KNZY",
+            "season_display_number": "",
+            "season_sequence_number": 0,
+            "season_number": 1,
+            "is_complete": false,
+            "description": "Muchos años atrás, la humanidad estuvo al borde de la extinción con la aparición de unas criaturas gigantes que devoraban a todas las personas. Huyendo, la humanidad consiguió sobrevivir en una ciudad fortificada de altas murallas que se ha convertido en el último reducto de la civilización contra los Titanes que campan a sus anchas por el mundo. Ahora esa paz está a punto de verse interrumpida por una cadena de acontecimientos que llevará a desvelar qué son los Titanes y cómo aparecieron.",
+            "keywords": [],
+            "season_tags": [
+                "Primavera-2013",
+                "Verano-2013"
+            ],
+            "images": {},
+            "extended_maturity_rating": {},
+            "maturity_ratings": [
+                "TV-14"
+            ],
+            "is_mature": false,
+            "mature_blocked": false,
+            "is_subbed": true,
+            "is_dubbed": false,
+            "is_simulcast": false,
+            "seo_title": "",
+            "seo_description": "",
+            "availability_notes": "",
+            "audio_locales": [],
+            "subtitle_locales": [],
+            "audio_locale": "",
+            "versions": null,
+            "identifier": ""
+        },
+        {
+            "__class__": "season",
+            "__href__": "/cms/v2/CL/M3/crunchyroll/seasons/GYE58GMXR",
+            "__resource_key__": "cms:/seasons/GYE58GMXR",
+            "__links__": {
+                "season/channel": {
+                    "href": "/cms/v2/CL/M3/crunchyroll/channels/crunchyroll"
+                },
+                "season/episodes": {
+                    "href": "/cms/v2/CL/M3/crunchyroll/episodes?season_id=GYE58GMXR"
+                },
+                "season/series": {
+                    "href": "/cms/v2/CL/M3/crunchyroll/series/GR751KNZY"
+                }
+            },
+            "__actions__": {},
+            "id": "GYE58GMXR",
+            "channel_id": "crunchyroll",
+            "title": "Attack on Titan / Shingeki no Kyojin - Segunda Temporada",
+            "slug_title": "attack-on-titan-season-2",
+            "series_id": "GR751KNZY",
+            "season_display_number": "",
+            "season_sequence_number": 0,
+            "season_number": 2,
+            "is_complete": false,
+            "description": "Eren Jaeger juró acabar con todos esos seres gigantes que atormentan a la humanidad, pero para su desgracia, acabó convirtiéndose en lo que más odiaba. Con sus nuevos poderes luchará para liberar a la humanidad de los monstruos que amenazan su ya dura existencia. Tras una agridulce victoria, Eren no podrá descansar. Una horda de enemigos se aproxima a los muros y la humanidad debe sobrevivir, ¡a cualquier precio!",
+            "keywords": [],
+            "season_tags": [
+                "Primavera-2017"
+            ],
+            "images": {},
+            "extended_maturity_rating": {},
+            "maturity_ratings": [
+                "TV-14"
+            ],
+            "is_mature": false,
+            "mature_blocked": false,
+            "is_subbed": true,
+            "is_dubbed": false,
+            "is_simulcast": false,
+            "seo_title": "",
+            "seo_description": "",
+            "availability_notes": "",
+            "audio_locales": [],
+            "subtitle_locales": [],
+            "audio_locale": "",
+            "versions": null,
+            "identifier": ""
+        },
+        {
+            "__class__": "season",
+            "__href__": "/cms/v2/CL/M3/crunchyroll/seasons/GRG5GZZ3R",
+            "__resource_key__": "cms:/seasons/GRG5GZZ3R",
+            "__links__": {
+                "season/channel": {
+                    "href": "/cms/v2/CL/M3/crunchyroll/channels/crunchyroll"
+                },
+                "season/episodes": {
+                    "href": "/cms/v2/CL/M3/crunchyroll/episodes?season_id=GRG5GZZ3R"
+                },
+                "season/series": {
+                    "href": "/cms/v2/CL/M3/crunchyroll/series/GR751KNZY"
+                }
+            },
+            "__actions__": {},
+            "id": "GRG5GZZ3R",
+            "channel_id": "crunchyroll",
+            "title": "Attack on Titan / Shingeki no Kyojin - Tercera Temporada",
+            "slug_title": "attack-on-titan-season-3",
+            "series_id": "GR751KNZY",
+            "season_display_number": "",
+            "season_sequence_number": 0,
+            "season_number": 3,
+            "is_complete": false,
+            "description": "¡Da inicio la batalla para recuperar la Muralla María! Con la habilidad de endurecimiento de Eren, todos están convencidos de que podrán sellar el muro y recuperar Shinganshina. Si lo logran, Eran podrá finalmente acceder a los secretos del sótano... a los secretos del mundo. Pero el peligro acecha, puesto que Reiner, Bertholdt y el Titán Bestia tienen sus propios planes. ¿Será esta la batalla final por la supervivencia de la humanidad?",
+            "keywords": [],
+            "season_tags": [
+                "Verano-2018",
+                "Primavera-2019"
+            ],
+            "images": {},
+            "extended_maturity_rating": {},
+            "maturity_ratings": [
+                "TV-14"
+            ],
+            "is_mature": false,
+            "mature_blocked": false,
+            "is_subbed": true,
+            "is_dubbed": false,
+            "is_simulcast": false,
+            "seo_title": "",
+            "seo_description": "",
+            "availability_notes": "",
+            "audio_locales": [],
+            "subtitle_locales": [],
+            "audio_locale": "",
+            "versions": null,
+            "identifier": ""
+        },
+        {
+            "__class__": "season",
+            "__href__": "/cms/v2/CL/M3/crunchyroll/seasons/G69PC2WV0",
+            "__resource_key__": "cms:/seasons/G69PC2WV0",
+            "__links__": {
+                "season/channel": {
+                    "href": "/cms/v2/CL/M3/crunchyroll/channels/crunchyroll"
+                },
+                "season/episodes": {
+                    "href": "/cms/v2/CL/M3/crunchyroll/episodes?season_id=G69PC2WV0"
+                },
+                "season/series": {
+                    "href": "/cms/v2/CL/M3/crunchyroll/series/GR751KNZY"
+                }
+            },
+            "__actions__": {},
+            "id": "G69PC2WV0",
+            "channel_id": "crunchyroll",
+            "title": "Ataque a los Titanes - Temporada Final",
+            "slug_title": "attack-on-titan-final-season",
+            "series_id": "GR751KNZY",
+            "season_display_number": "",
+            "season_sequence_number": 0,
+            "season_number": 4,
+            "is_complete": false,
+            "description": "",
+            "keywords": [],
+            "season_tags": [
+                "Otoño-2020",
+                "Invierno-2021",
+                "Invierno-2022"
+            ],
+            "images": {},
+            "extended_maturity_rating": {},
+            "maturity_ratings": [
+                "TV-14"
+            ],
+            "is_mature": false,
+            "mature_blocked": false,
+            "is_subbed": true,
+            "is_dubbed": false,
+            "is_simulcast": false,
+            "seo_title": "",
+            "seo_description": "",
+            "availability_notes": "",
+            "audio_locales": [],
+            "subtitle_locales": [],
+            "audio_locale": "",
+            "versions": null,
+            "identifier": ""
+        },
+        {
+            "__class__": "season",
+            "__href__": "/cms/v2/CL/M3/crunchyroll/seasons/GY3VC2P34",
+            "__resource_key__": "cms:/seasons/GY3VC2P34",
+            "__links__": {
+                "season/channel": {
+                    "href": "/cms/v2/CL/M3/crunchyroll/channels/crunchyroll"
+                },
+                "season/episodes": {
+                    "href": "/cms/v2/CL/M3/crunchyroll/episodes?season_id=GY3VC2P34"
+                },
+                "season/series": {
+                    "href": "/cms/v2/CL/M3/crunchyroll/series/GR751KNZY"
+                }
+            },
+            "__actions__": {},
+            "id": "GY3VC2P34",
+            "channel_id": "crunchyroll",
+            "title": "Ataque a los Titanes - OAD",
+            "slug_title": "attack-on-titan-oads",
+            "series_id": "GR751KNZY",
+            "season_display_number": "",
+            "season_sequence_number": 0,
+            "season_number": 6,
+            "is_complete": false,
+            "description": "",
+            "keywords": [],
+            "season_tags": [
+                "Otoño-2021"
+            ],
+            "images": {},
+            "extended_maturity_rating": {},
+            "maturity_ratings": [
+                "TV-14"
+            ],
+            "is_mature": false,
+            "mature_blocked": false,
+            "is_subbed": true,
+            "is_dubbed": false,
+            "is_simulcast": false,
+            "seo_title": "",
+            "seo_description": "",
+            "availability_notes": "",
+            "audio_locales": [],
+            "subtitle_locales": [],
+            "audio_locale": "",
+            "versions": null,
+            "identifier": ""
+        }
+    ]
+}

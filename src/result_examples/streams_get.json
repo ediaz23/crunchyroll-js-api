@@ -1,0 +1,247 @@
+{
+    "__class__": "video_streams",
+    "__href__": "/cms/v2/CL/M3/crunchyroll/videos/G07FX7WZW/streams",
+    "__resource_key__": "cms:/videos/G07FX7WZW/streams",
+    "__links__": {
+        "resource": {
+            "href": "/cms/v2/CL/M3/crunchyroll/episodes/GYK5KX14R"
+        }
+    },
+    "__actions__": {},
+    "media_id": "G07FX7WZW",
+    "audio_locale": "ja-JP",
+    "subtitles": {
+        "en-US": {
+            "locale": "en-US",
+            "url": "https://v.vrv.co/evs3/727bd855b54497928bdccf793e66ddcb/assets/obuts40v4v4w3gn_39935.txt?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly92LnZydi5jby9ldnMzLzcyN2JkODU1YjU0NDk3OTI4YmRjY2Y3OTNlNjZkZGNiL2Fzc2V0cy9vYnV0czQwdjR2NHczZ25fMzk5MzUudHh0IiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNjYzNTMwNzU3fX19XX0_&Signature=qZduHe8krZ37wCjOTZs7PjZMWmNJvHKabhvFT0W3jP7O30kiMnMqBdBI1CTLNFX2mBEIrSRwUjo72JH0vsKtFEvlWudA6w9fgGlrLeKg4tIbY3HFLbq6UIB3P4CS7wtfNXT8jKkHEDeB-5zRdpwka81iQUUz0UJPRIHIWrrWDMx~NXQViUv19Ff6U0aQdjLYe-d-1pYYY0CVPmGk~T55hmAf8bG7Kwm26-IMe69BNwaTDlnFE~0-~a6XQsiOE-dMlvfi~gWPj82B4QtzmVWApUFObZM5onoIKSSjEIQM-Uzxln1J7G9cetRl5LDcEsk3M8eMQIBvyD7TkYKl6XnTSg__&Key-Pair-Id=APKAJMWSQ5S7ZB3MF5VA",
+            "format": "ass"
+        },
+        "es-LA": {
+            "locale": "es-LA",
+            "url": "https://v.vrv.co/evs3/727bd855b54497928bdccf793e66ddcb/assets/obuts40v4v4w3gn_166366.txt?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly92LnZydi5jby9ldnMzLzcyN2JkODU1YjU0NDk3OTI4YmRjY2Y3OTNlNjZkZGNiL2Fzc2V0cy9vYnV0czQwdjR2NHczZ25fMTY2MzY2LnR4dCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTY2MzUzMDc1N319fV19&Signature=MaE7pBcAqFn7ZDdOaeIQUd0nFBy87IZxJIlGIs8RIQHeMgZcYplj~MqbDI2XuAqtJmvLe3xdcBPZ9zHELKd0GmQn4XQ0qBUQHE0AdkhO9GsPb2jH~12NCI3POCklBS1fGL0riZC7ccPEnv2khYLC5D9-bnRsWEX1VzMw189-cwn~LXD0GTHjvBVyx9ZxWf9lh7t30yXuae~n9VwVS9GxVIJrk9znm9PiQtb~So~hWaZMA60UAny~onXL3a5sbd28-wv~zGjKUXm9hQz2mWpW~Cc4wubenvsFvhQazTxD8swCjf4Not1g-qKm7rYDrrk0xgUEC2ChoBdubYInpc90Wg__&Key-Pair-Id=APKAJMWSQ5S7ZB3MF5VA",
+            "format": "ass"
+        },
+        "pt-BR": {
+            "locale": "pt-BR",
+            "url": "https://v.vrv.co/evs3/727bd855b54497928bdccf793e66ddcb/assets/obuts40v4v4w3gn_168651.txt?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly92LnZydi5jby9ldnMzLzcyN2JkODU1YjU0NDk3OTI4YmRjY2Y3OTNlNjZkZGNiL2Fzc2V0cy9vYnV0czQwdjR2NHczZ25fMTY4NjUxLnR4dCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTY2MzUzMDc1N319fV19&Signature=jhdQrJX1k4pvpwuujIQDWwEhRrB1JjEOIA5farqnW0WrrFuQNNRDQN5izLHjNdq3pJni8Sucjl0RUQwjQtAb~qlLy5vjpNBAKDgOr~6EMz36l3cpboj5XPi-w66eExrxMhRPS-zAQbVB1oR9SYFICtIzXDP725qM8skpu1cH-MCjfVxp4jZGGKgeUkmHLK~VQHL-i1K35tMJXT8xo5LK8pNsn7nN518WI0rhDhqpfNWBO7KwvT6RbPY4LhcQn5k8C5Dil9izJSNmcSMKsE4P~5a9XHnk9LHXNLIYvI1e0aqW3Mjw8cWVNJixXMjvbzYuzEdMtXAdJuTu~1aNsqejQQ__&Key-Pair-Id=APKAJMWSQ5S7ZB3MF5VA",
+            "format": "ass"
+        }
+    },
+    "captions": {},
+    "streams": {
+        "adaptive_dash": {
+            "": {
+                "hardsub_locale": "",
+                "url": "https://pl.crunchyroll.com/evs3/727bd855b54497928bdccf793e66ddcb/assets/obuts40v4v4w3gn_,1783167.mp4,1783171.mp4,1783163.mp4,1783159.mp4,1783155.mp4,.urlset/manifest.mpd?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly9wbC5jcnVuY2h5cm9sbC5jb20vZXZzMy83MjdiZDg1NWI1NDQ5NzkyOGJkY2NmNzkzZTY2ZGRjYi9hc3NldHMvb2J1dHM0MHY0djR3M2duXywxNzgzMTY3Lm1wNCwxNzgzMTcxLm1wNCwxNzgzMTYzLm1wNCwxNzgzMTU5Lm1wNCwxNzgzMTU1Lm1wNCwudXJsc2V0L21hbmlmZXN0Lm1wZCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTY2MzUzMDc1N319fV19&Signature=ZxiwwmWG4QZlt1c5p797gejGqlBAIm4xbd7GVO7BpOV6UhHGJDFrVeYtnrt1pulkQXSLZbKhFxTTQCQ2Gp1Oi7EGSZJSC8zQjV9BuvELaN~4kj5SWGnlwpw~Sf0eg1KlwplcWMgjeXTQifXkzx6HPO3I--KOQ6aw-KOK9lMmvlHV1Qaq3-fPU11Q24GmBFuTL-1oaQkEkqio62EGvN8ASB2u2pRUC-jKFGWf8qd8h2~03n1uqodx~COP8HvaKHtubwc10s-2ZWbthGRRSnOELcnFQmzEmjycZqHEUk6LzY-ZOt418LOyBlcL7jhtHA7iDQTZhvdE9FVblK6J11Ffug__&Key-Pair-Id=APKAJMWSQ5S7ZB3MF5VA"
+            },
+            "en-US": {
+                "hardsub_locale": "en-US",
+                "url": "https://pl.crunchyroll.com/evs3/727bd855b54497928bdccf793e66ddcb/assets/obuts40v4v4w3gn_,1783165.mp4,1783169.mp4,1783161.mp4,1783157.mp4,1783153.mp4,.urlset/manifest.mpd?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly9wbC5jcnVuY2h5cm9sbC5jb20vZXZzMy83MjdiZDg1NWI1NDQ5NzkyOGJkY2NmNzkzZTY2ZGRjYi9hc3NldHMvb2J1dHM0MHY0djR3M2duXywxNzgzMTY1Lm1wNCwxNzgzMTY5Lm1wNCwxNzgzMTYxLm1wNCwxNzgzMTU3Lm1wNCwxNzgzMTUzLm1wNCwudXJsc2V0L21hbmlmZXN0Lm1wZCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTY2MzUzMDc1N319fV19&Signature=YxHgJ9x-kyROpBq~sDCLLGOIMByaf1mLkI7GU0F--NDl-gDpO5b0Xh9rRlb~eRTG-za0qkO-s0dwZdBFIBz4AuvblEVTu59WSF2pD6-FUEp~mxU9gNirgsuCE6euoPHfzIKq-q4azAn142Ln8oNOeVl~d1a~nriwSDKpHIWEXmAJV8i3dAcJNUQifSkc5OaFTxPZl9SlUcrYDrErcXxk-zx1nxI3EfJ8mgQIHvHI4P7cqHAQCjHSRQkI~~aZn7-shGwBnK6Jlvpm-KHB8Mpl2bLtyl2ZmlnOXjHKEf8CxsqJuEtCT-elDB7v~7-XI7SAnHh2SKLobAWGWvjELeMrwQ__&Key-Pair-Id=APKAJMWSQ5S7ZB3MF5VA"
+            },
+            "es-LA": {
+                "hardsub_locale": "es-LA",
+                "url": "https://pl.crunchyroll.com/evs3/727bd855b54497928bdccf793e66ddcb/assets/obuts40v4v4w3gn_,3262357.mp4,3262358.mp4,3262356.mp4,3262355.mp4,3262354.mp4,.urlset/manifest.mpd?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly9wbC5jcnVuY2h5cm9sbC5jb20vZXZzMy83MjdiZDg1NWI1NDQ5NzkyOGJkY2NmNzkzZTY2ZGRjYi9hc3NldHMvb2J1dHM0MHY0djR3M2duXywzMjYyMzU3Lm1wNCwzMjYyMzU4Lm1wNCwzMjYyMzU2Lm1wNCwzMjYyMzU1Lm1wNCwzMjYyMzU0Lm1wNCwudXJsc2V0L21hbmlmZXN0Lm1wZCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTY2MzUzMDc1N319fV19&Signature=Ip87BaVlLBrrfWnb9u6mQ5S-m9pg-H31MpueCoCmoAcjuNjobjuef6xabuxQmyTZwP2kb1Buxluctufb8HKxZweZAuImDyJ1bKz6nOQhrB-T89XM8ch8RL7O2Kt042eXNR0DGLD~hgONWuPTlc~dw7iNOXcg2KX0Sx3IHxXqrwvR6rrGsA~LGpRXOGeir5jbM4BFHjkv7FCenIoozWJmQ1EUDNF1ftw91tXjxp55wJ45mdVvI7RhFCYalUY1u4ib0cwDByzu8po5UM540WY5tSKbE1ctEqaqDlo~J8yegnt5037DA6iXVBY6RNK1nd-Y04aSFOGYyeYmkaKfKDmbRg__&Key-Pair-Id=APKAJMWSQ5S7ZB3MF5VA"
+            },
+            "pt-BR": {
+                "hardsub_locale": "pt-BR",
+                "url": "https://pl.crunchyroll.com/evs3/727bd855b54497928bdccf793e66ddcb/assets/obuts40v4v4w3gn_,3267150.mp4,3267151.mp4,3267149.mp4,3267148.mp4,3267147.mp4,.urlset/manifest.mpd?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly9wbC5jcnVuY2h5cm9sbC5jb20vZXZzMy83MjdiZDg1NWI1NDQ5NzkyOGJkY2NmNzkzZTY2ZGRjYi9hc3NldHMvb2J1dHM0MHY0djR3M2duXywzMjY3MTUwLm1wNCwzMjY3MTUxLm1wNCwzMjY3MTQ5Lm1wNCwzMjY3MTQ4Lm1wNCwzMjY3MTQ3Lm1wNCwudXJsc2V0L21hbmlmZXN0Lm1wZCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTY2MzUzMDc1N319fV19&Signature=JVk238BBmme3xjowXmWGRC~j~9N2Eipx1G8ydRLxkfG6zxC42-HBTxfc4BitlxHR1py0Io3F-mjuQpDBWfSpHSDycP62tQZrhicv67R6fBtnVCo7Bz2cYvvGxnZfnNIqDWLtgoNpqgne0E3LWx3f-CnH0i378Eoix3W2gvfvy8hQTZXLYcPozzrZmOTTUbDEgzxHg5TsMOrPj8fPrKl6Nob9iTXGea7EDWnNztFGxSkddRi0GcOo6NjYmmN9ergF4LzLBfvG0zKgAO9lxr47O0CrAVhPqgjC1Ca8Z0NR~gP8AN-Rfo~wuMcQojHpY4F-uYdXAG9dQxgewSqPz2RNvw__&Key-Pair-Id=APKAJMWSQ5S7ZB3MF5VA"
+            }
+        },
+        "adaptive_hls": {
+            "": {
+                "hardsub_locale": "",
+                "url": "https://pl.crunchyroll.com/evs3/727bd855b54497928bdccf793e66ddcb/assets/obuts40v4v4w3gn_,1783167.mp4,1783171.mp4,1783163.mp4,1783159.mp4,1783155.mp4,.urlset/master.m3u8?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly9wbC5jcnVuY2h5cm9sbC5jb20vZXZzMy83MjdiZDg1NWI1NDQ5NzkyOGJkY2NmNzkzZTY2ZGRjYi9hc3NldHMvb2J1dHM0MHY0djR3M2duXywxNzgzMTY3Lm1wNCwxNzgzMTcxLm1wNCwxNzgzMTYzLm1wNCwxNzgzMTU5Lm1wNCwxNzgzMTU1Lm1wNCwudXJsc2V0L21hc3Rlci5tM3U4IiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNjYzNTMwNzU3fX19XX0_&Signature=PR4zdAos-QxW2L3TDsrVS0163PHKEo8h1sIc6z3-gAYcQSr1dXxUL1AujKTqoUnWqobmzmqoFIR-1kOilWktAoFhGkkEj6XGIrpYOuVoyMPeoZYzWSZClnINb4vw9nrjCqkvHf3XeHJCmmeYnkF6iYCgP9Ofs8ASUZRcsnTFI3hma2gG159B4MDPaYUqVEstgmUUFtk7nRHuJtjJEBm7hTykq8Lo7YOt3tQaoUgVbycflUEq5AUkbANkbZZRwHCVaYBfAOuGOBE21U7KpxWWjjR6HG1P5bYumU4atDEuHYjuTw7atC97DFYuQpVLN~km~rF9Ww4NFnevatI7O7dTVA__&Key-Pair-Id=APKAJMWSQ5S7ZB3MF5VA"
+            },
+            "en-US": {
+                "hardsub_locale": "en-US",
+                "url": "https://pl.crunchyroll.com/evs3/727bd855b54497928bdccf793e66ddcb/assets/obuts40v4v4w3gn_,1783165.mp4,1783169.mp4,1783161.mp4,1783157.mp4,1783153.mp4,.urlset/master.m3u8?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly9wbC5jcnVuY2h5cm9sbC5jb20vZXZzMy83MjdiZDg1NWI1NDQ5NzkyOGJkY2NmNzkzZTY2ZGRjYi9hc3NldHMvb2J1dHM0MHY0djR3M2duXywxNzgzMTY1Lm1wNCwxNzgzMTY5Lm1wNCwxNzgzMTYxLm1wNCwxNzgzMTU3Lm1wNCwxNzgzMTUzLm1wNCwudXJsc2V0L21hc3Rlci5tM3U4IiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNjYzNTMwNzU3fX19XX0_&Signature=hrPjW134MMtaW2iGBS0k7qaTuUxU4aYNa292KHF5ZgK9oAxU19rMovxnfj~eZPoFOIm34Y1vC7yH6UCGQxQeJOI6c7eag~UtydUHQCXJ7AHgS0TPVv8uEBQit5CTZDS5K1PVP46jrwNJkRI3pyx-3uWlj5wvE3EFoOvHftKcmrf3vpUyNLRb4ZVctwUSogTuLRXSHkt6qM97pDGylEWrC1jUJmzVAxoi6hUjedYcUeMXsX6ATD2YHAoQT-W7KnICyjvNbeVxRYwtzyz4DIjSHZcTiodWwROWKIky5oltgZyeB42na-wYTSND1Qh5LhPBGNJ4GuRkuG6rFIDH7YWzdw__&Key-Pair-Id=APKAJMWSQ5S7ZB3MF5VA"
+            },
+            "es-LA": {
+                "hardsub_locale": "es-LA",
+                "url": "https://pl.crunchyroll.com/evs3/727bd855b54497928bdccf793e66ddcb/assets/obuts40v4v4w3gn_,3262357.mp4,3262358.mp4,3262356.mp4,3262355.mp4,3262354.mp4,.urlset/master.m3u8?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly9wbC5jcnVuY2h5cm9sbC5jb20vZXZzMy83MjdiZDg1NWI1NDQ5NzkyOGJkY2NmNzkzZTY2ZGRjYi9hc3NldHMvb2J1dHM0MHY0djR3M2duXywzMjYyMzU3Lm1wNCwzMjYyMzU4Lm1wNCwzMjYyMzU2Lm1wNCwzMjYyMzU1Lm1wNCwzMjYyMzU0Lm1wNCwudXJsc2V0L21hc3Rlci5tM3U4IiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNjYzNTMwNzU3fX19XX0_&Signature=g4HjPDhQ8wmDQrfBzUZHSMlMVC~RGDfWdYCkjlGo0G6vYv6t2alE5HW1Ue1rCTtWyRj7oCaA0LkLoPA3q1Xu4oSHcTXTEGrcVyx4g89Dj8-u2Oav~pSn7pJIimLJIT1tv4lhnrAWC7U81IRBWHDoqXTwB2lYQ9vedjrGc4sw1viJwidZdsQNMdThmMOkRyY4xhUfE9S1m~qm8JYQATzD1SSt5LHRp5QMBoQunAsUA5Vj2tP3mn2eggYZxKppfa2A9RrehfRcDoX2a5auAUVnCAeTCCRfYtZNhH7lV6D1ZFb~2nCasj4jn5Qf7cn2Grn0ObGcI88IQvddSOitr3KLiA__&Key-Pair-Id=APKAJMWSQ5S7ZB3MF5VA"
+            },
+            "pt-BR": {
+                "hardsub_locale": "pt-BR",
+                "url": "https://pl.crunchyroll.com/evs3/727bd855b54497928bdccf793e66ddcb/assets/obuts40v4v4w3gn_,3267150.mp4,3267151.mp4,3267149.mp4,3267148.mp4,3267147.mp4,.urlset/master.m3u8?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly9wbC5jcnVuY2h5cm9sbC5jb20vZXZzMy83MjdiZDg1NWI1NDQ5NzkyOGJkY2NmNzkzZTY2ZGRjYi9hc3NldHMvb2J1dHM0MHY0djR3M2duXywzMjY3MTUwLm1wNCwzMjY3MTUxLm1wNCwzMjY3MTQ5Lm1wNCwzMjY3MTQ4Lm1wNCwzMjY3MTQ3Lm1wNCwudXJsc2V0L21hc3Rlci5tM3U4IiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNjYzNTMwNzU3fX19XX0_&Signature=mF5yXPZqauBPkJGyn9964Jp9bKqnykZzVt2HPfdjnPRCTnVMrSxab6PcsGT4-~wJSn0UjreKA02vivRkmhB3ivDUs9qaGL-yNbUBpYzI4s-i83Mx92jDIXoLr2yOo5aEH~9V5AzdgK4HJe30nJmV5TAZ4rlus~YNLkoUw9A9aeH0UuoXpStG1ukcCN4h2LVpfzWNHJ~o7MTj0OHyaZh4VUbj92SJ7s27Oi-Oh5xKnq8ILVstKi8jsKts4J1eTzV9m1JXwObX0ChWo3g1B6hcUIw0whqD8FQUt3MtLj9LDQ4ZWaydPqfgXh0jxcqVNH7LNUw~mz4S1caZ4mFdjC~o9w__&Key-Pair-Id=APKAJMWSQ5S7ZB3MF5VA"
+            }
+        },
+        "download_dash": {
+            "": {
+                "hardsub_locale": "",
+                "url": "https://pl.crunchyroll.com/evs3/727bd855b54497928bdccf793e66ddcb/assets/obuts40v4v4w3gn_,1783163.mp4,1783167.mp4,1783159.mp4,1783155.mp4,.urlset/manifest.mpd?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly9wbC5jcnVuY2h5cm9sbC5jb20vZXZzMy83MjdiZDg1NWI1NDQ5NzkyOGJkY2NmNzkzZTY2ZGRjYi9hc3NldHMvb2J1dHM0MHY0djR3M2duXywxNzgzMTYzLm1wNCwxNzgzMTY3Lm1wNCwxNzgzMTU5Lm1wNCwxNzgzMTU1Lm1wNCwudXJsc2V0L21hbmlmZXN0Lm1wZCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTY2MzUzMDc1N319fV19&Signature=cj50Sa5XaWThzS4iDf8IEBvQRyz-Jks1WHI7l7efGXr~jzJq9xn-DnjYFR4vlKwdmPeXCgOaydjhPCkpfimcndxGCCU3jTlyyxiH3g1xiPkq9D6Nwz4EDKt8spM3Ie-0MO6Y0NWOfR5JxBU71BLKYyxJqfhcx8SoO9Dz5UdOYwv72pVaA0vGoZKeHzAzz5udde0Isf3dMPXzNI~pcGfSNQV3xrZYjg-2I2CAeZa3ymdJhLtBNzQTQ8w6pe1qVywbeSzqZFOXrS91WojHEhX31JkjoiI9Of1Vv-N7D~1k01Voao~IFfRUPq9bo9zGYY~i45HxsV69bGe1CfmiD09x3g__&Key-Pair-Id=APKAJMWSQ5S7ZB3MF5VA"
+            }
+        },
+        "download_hls": {
+            "": {
+                "hardsub_locale": "",
+                "url": "https://pl.crunchyroll.com/evs3/727bd855b54497928bdccf793e66ddcb/assets/obuts40v4v4w3gn_,1783163.mp4,1783167.mp4,1783159.mp4,1783155.mp4,.urlset/master.m3u8?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly9wbC5jcnVuY2h5cm9sbC5jb20vZXZzMy83MjdiZDg1NWI1NDQ5NzkyOGJkY2NmNzkzZTY2ZGRjYi9hc3NldHMvb2J1dHM0MHY0djR3M2duXywxNzgzMTYzLm1wNCwxNzgzMTY3Lm1wNCwxNzgzMTU5Lm1wNCwxNzgzMTU1Lm1wNCwudXJsc2V0L21hc3Rlci5tM3U4IiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNjYzNTMwNzU3fX19XX0_&Signature=M9dfcdpPwJKyKG~tLAlUjwQ4LJcSnh63RHiJn8-1OwRZrZIm4Z~HpGEWUcntA6cyGLcnMJaQwqq37ZX6YkabxrS2eQxxYIG0OXX3cDVGaEUxhAkKRTHTgHfEZA73pbB7Eqb1PJqL~gizivIAvEs4U8YbICSY-oQbXGh-8dE8L3o7sMRL3hZrwg10yYog0r~iWJSeimDFh2RDxeQkoKVqiH25FLqjPvl74LApDBmhgU9bXmpL2uHCyXVVfmQYfxoHZ3fKM2pecbkHN-f5ZEhkQ7~ZThJc6TY4B0~E9skn~lXUEgoiiIxU6PoS1jH9Jz761QeI6ukBf7pw7E5HXFA--A__&Key-Pair-Id=APKAJMWSQ5S7ZB3MF5VA"
+            }
+        },
+        "drm_adaptive_dash": {
+            "": {
+                "hardsub_locale": "",
+                "url": "https://pl.crunchyroll.com/evs3/a71bc82add816e3595c059a41f59cf9c/assets/p/obuts40v4v4w3gn_,1783167.mp4,1783171.mp4,1783163.mp4,1783159.mp4,1783155.mp4,.urlset/manifest.mpd?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly9wbC5jcnVuY2h5cm9sbC5jb20vZXZzMy9hNzFiYzgyYWRkODE2ZTM1OTVjMDU5YTQxZjU5Y2Y5Yy9hc3NldHMvcC9vYnV0czQwdjR2NHczZ25fLDE3ODMxNjcubXA0LDE3ODMxNzEubXA0LDE3ODMxNjMubXA0LDE3ODMxNTkubXA0LDE3ODMxNTUubXA0LC51cmxzZXQvbWFuaWZlc3QubXBkIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNjYzNTMwNzU3fX19XX0_&Signature=XA9fbC44FlTL0mns-FOSLk0vsdzQZHDqhKW8ZieaDIKfPWSXzVedh3bW8NT1zFVFFenbX~hvuS3uDcJ7ODtD-yLpkwJRBaIQLZAJXhdnEtukvUVsZ-DoN15M0J17ETyR8HqtzzWqehLUl91R-a2vcmNKAVs3O65fJmPlqxfcvNe1gJBP-FkOgpFaWuiVL8EaAJhsDRJ4xte7wdpcskNw9ESDVMW-TYt2VOjOuw~W7LWks-rwQJ-JMrry1MtM2pMwVxhAN5j0G2owFs9dw6YQuva8QctqmAPbFhLnr-w-IPOHRksfwzMOaYTkYfPsbFZpIlFO3iztF1eUOG4vQj6W3g__&Key-Pair-Id=APKAJMWSQ5S7ZB3MF5VA"
+            },
+            "en-US": {
+                "hardsub_locale": "en-US",
+                "url": "https://pl.crunchyroll.com/evs3/a71bc82add816e3595c059a41f59cf9c/assets/p/obuts40v4v4w3gn_,1783165.mp4,1783169.mp4,1783161.mp4,1783157.mp4,1783153.mp4,.urlset/manifest.mpd?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly9wbC5jcnVuY2h5cm9sbC5jb20vZXZzMy9hNzFiYzgyYWRkODE2ZTM1OTVjMDU5YTQxZjU5Y2Y5Yy9hc3NldHMvcC9vYnV0czQwdjR2NHczZ25fLDE3ODMxNjUubXA0LDE3ODMxNjkubXA0LDE3ODMxNjEubXA0LDE3ODMxNTcubXA0LDE3ODMxNTMubXA0LC51cmxzZXQvbWFuaWZlc3QubXBkIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNjYzNTMwNzU3fX19XX0_&Signature=C3UHXTVNCdv0nPAOyGnnExDa8dxBryAJ9~ZexR9-nFR1jSsXvxjk97xgirFcoxQTuKGaF2tu8r4f7uTyYE6OrWrxEx5GHgfDeeTiiVnQYrI3ZKt5YvKNOe-sQtKNcpgbMrUeXfDBZoFJriY4lTGQYWAKt7h6cRpReuiRuomwlhmhLT-1obNX7qTLVMIkwwcXR7H-wJa~rjh3xJpFuiYN0YaPM~mVrD1wQbRHq7IxrwzaOXwEOBdV5f6mzQfulgA6SQ2i36ndTW7VU3a6xB2e1Ox~S8Mlnwk9pcize3wsXKY8kOLYxZrjwnHUGq0x2OGMVWvtDvEFzPM8iNEAmWE76A__&Key-Pair-Id=APKAJMWSQ5S7ZB3MF5VA"
+            },
+            "es-LA": {
+                "hardsub_locale": "es-LA",
+                "url": "https://pl.crunchyroll.com/evs3/a71bc82add816e3595c059a41f59cf9c/assets/p/obuts40v4v4w3gn_,3262357.mp4,3262358.mp4,3262356.mp4,3262355.mp4,3262354.mp4,.urlset/manifest.mpd?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly9wbC5jcnVuY2h5cm9sbC5jb20vZXZzMy9hNzFiYzgyYWRkODE2ZTM1OTVjMDU5YTQxZjU5Y2Y5Yy9hc3NldHMvcC9vYnV0czQwdjR2NHczZ25fLDMyNjIzNTcubXA0LDMyNjIzNTgubXA0LDMyNjIzNTYubXA0LDMyNjIzNTUubXA0LDMyNjIzNTQubXA0LC51cmxzZXQvbWFuaWZlc3QubXBkIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNjYzNTMwNzU3fX19XX0_&Signature=r988gshQXSQg4vvZjMxlzoiQ5K7USAs9W1xaC55RU4HFNEjw5ASsCffhP3WJAkFZk2vs~9qNR05G21e0bIwrNYfuPRSzQBM-rBkgJBZ4ttqsF~qWgDE6fYBRVghmzS-ODsM1LZ-Jh~045kC7JiPuvQe3hDnT95icW3PQh5YtRpA45-xLh-gFJhtAsI7fscbB5DHyluSD~J-Unhiy-t9fBT9KrLj5Qu6WD-s0r8uUk4XXtf5DHnFKiyT9Iv1n4x8gjbGeqYcMHDq6ZRf3UkIirTrAzhCm6lBFolXEdTO5apWK8Hd3f3J9d5MMLJiLx3EUyCXT43tA95Xrc57m1BWpPA__&Key-Pair-Id=APKAJMWSQ5S7ZB3MF5VA"
+            },
+            "pt-BR": {
+                "hardsub_locale": "pt-BR",
+                "url": "https://pl.crunchyroll.com/evs3/a71bc82add816e3595c059a41f59cf9c/assets/p/obuts40v4v4w3gn_,3267150.mp4,3267151.mp4,3267149.mp4,3267148.mp4,3267147.mp4,.urlset/manifest.mpd?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly9wbC5jcnVuY2h5cm9sbC5jb20vZXZzMy9hNzFiYzgyYWRkODE2ZTM1OTVjMDU5YTQxZjU5Y2Y5Yy9hc3NldHMvcC9vYnV0czQwdjR2NHczZ25fLDMyNjcxNTAubXA0LDMyNjcxNTEubXA0LDMyNjcxNDkubXA0LDMyNjcxNDgubXA0LDMyNjcxNDcubXA0LC51cmxzZXQvbWFuaWZlc3QubXBkIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNjYzNTMwNzU3fX19XX0_&Signature=E~ySKtcodQl3IFpHAJamUFih5ZtlhpVDXgRLjeR1PLjFfasEByFXxgmn38GjI6H3SONBZEsLfcJ237jU~6y1NnkHXtfHNsmN1K-TUr8turfqtwXGhQlmGOTM-jhlfPQiX9ksWkcUrai~G1NBH3I3xaYc5Pk1GumzWPFuJgn-qdwV3xCaCzkPtaU0HeJjykfqtgPAS-vXH88UQZzUQiGcZ-ZHVTP4a-KygHN0J-cGHr2l77rN8XT8fQBBnpqXIAFadg-01e~cyYqrEQN73bK2GiJ5TNNB4HJnqo9rNLZoOuST24ubMcw0~Hj2pzY-Tp7JcswMOF53URKcM9QdKv5TvQ__&Key-Pair-Id=APKAJMWSQ5S7ZB3MF5VA"
+            }
+        },
+        "drm_adaptive_hls": {
+            "": {
+                "hardsub_locale": "",
+                "url": "https://pl.crunchyroll.com/evs3/a71bc82add816e3595c059a41f59cf9c/assets/p/obuts40v4v4w3gn_,1783167.mp4,1783171.mp4,1783163.mp4,1783159.mp4,1783155.mp4,.urlset/master.m3u8?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly9wbC5jcnVuY2h5cm9sbC5jb20vZXZzMy9hNzFiYzgyYWRkODE2ZTM1OTVjMDU5YTQxZjU5Y2Y5Yy9hc3NldHMvcC9vYnV0czQwdjR2NHczZ25fLDE3ODMxNjcubXA0LDE3ODMxNzEubXA0LDE3ODMxNjMubXA0LDE3ODMxNTkubXA0LDE3ODMxNTUubXA0LC51cmxzZXQvbWFzdGVyLm0zdTgiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE2NjM1MzA3NTd9fX1dfQ__&Signature=cFY8QUn1ym2OUq0OkZ~Ipbwe3v5cJAGxEX6r48SGO7cwjbVMgni7oGA6JZ9Jk~vemUjw1M7dOmiqEm7t-SvtLkq48O6uwJpF26TW2XhonsU8Hh~ozBxIO-bLaK-EbNv5OBQE5Q7ltLQzyVLXQBbMRZ~u0Nh5QWlct5d7S8t1SFueJYlLqUqVmpDt52hZW~lACzQRq2zyYzGMb0a2HAzZ4bVur-BHRIbk52ijQpnrtUYuztvLzeDimI1KhM6in4EN~oCX1mm~l1IAN-Le~wWmREZC-qgQ4CSmFuubqVFUZX4thNFJeywhV4ER5lfnCgvrpq0me~pSN9T0sSQH28hVhQ__&Key-Pair-Id=APKAJMWSQ5S7ZB3MF5VA"
+            },
+            "en-US": {
+                "hardsub_locale": "en-US",
+                "url": "https://pl.crunchyroll.com/evs3/a71bc82add816e3595c059a41f59cf9c/assets/p/obuts40v4v4w3gn_,1783165.mp4,1783169.mp4,1783161.mp4,1783157.mp4,1783153.mp4,.urlset/master.m3u8?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly9wbC5jcnVuY2h5cm9sbC5jb20vZXZzMy9hNzFiYzgyYWRkODE2ZTM1OTVjMDU5YTQxZjU5Y2Y5Yy9hc3NldHMvcC9vYnV0czQwdjR2NHczZ25fLDE3ODMxNjUubXA0LDE3ODMxNjkubXA0LDE3ODMxNjEubXA0LDE3ODMxNTcubXA0LDE3ODMxNTMubXA0LC51cmxzZXQvbWFzdGVyLm0zdTgiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE2NjM1MzA3NTd9fX1dfQ__&Signature=gIoTmoCIPRAfDPgBr7RhQLFAyPTzNfug4H2ft~IWWoZlugl7ixRwQg0c3KxyEjlqcqFYzo6Z8vJXqbL0Y8WTArLc~nUmp0cVQxBodyyYbhxWWVAvuFpEq0eeCveQZ1sfIJJQddwyBGIZRNBwUAarm92RgP59NsseW9MMl~7Sfd6qj-iDdqun6nbLsCFJPKddLPlzbZPgomBU~TtJz49GTPxyt-HNI9~bzqKAn58QoNlYC5EEZj9V-8a9K7-kfnBo6Nb4JXwhAPOec6B5fXwfdgeI3CSLOzAgYK0H2MUVB3i~0zp1l6kd4p2U8j4rObiQeh5CWCBpZz3mbNJUZxwqFQ__&Key-Pair-Id=APKAJMWSQ5S7ZB3MF5VA"
+            },
+            "es-LA": {
+                "hardsub_locale": "es-LA",
+                "url": "https://pl.crunchyroll.com/evs3/a71bc82add816e3595c059a41f59cf9c/assets/p/obuts40v4v4w3gn_,3262357.mp4,3262358.mp4,3262356.mp4,3262355.mp4,3262354.mp4,.urlset/master.m3u8?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly9wbC5jcnVuY2h5cm9sbC5jb20vZXZzMy9hNzFiYzgyYWRkODE2ZTM1OTVjMDU5YTQxZjU5Y2Y5Yy9hc3NldHMvcC9vYnV0czQwdjR2NHczZ25fLDMyNjIzNTcubXA0LDMyNjIzNTgubXA0LDMyNjIzNTYubXA0LDMyNjIzNTUubXA0LDMyNjIzNTQubXA0LC51cmxzZXQvbWFzdGVyLm0zdTgiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE2NjM1MzA3NTd9fX1dfQ__&Signature=TYUKHdlSeh0HNxfoZ-q7S1cYScM21kyV7PFrPLnXop2oI5Yvoj4djCKSaBE34B7v1LxVK1thZeEHtUf3hlLHhvnyHn9nBA0R6vhtnqKgfy7JDKDn7e4Zs8UjG7tctgap7Qb2w1sGQrZqTiYKKLx4uuEn634TLqthRSLYLlEPz5umz1XdZc~~v-H64a0fzPhAk~g4iWuwoZ1rEvsYrCtMWAyR38WDsL5iFw1cMBgpLjwat7~zyKedX~gV6FC5G4al7AvQfmiDSGZwyhL4TVXaih2LDZVh70UudO4KXhRJqTvtRlQPx8VnIUUOaDbc0NDfA6qevZ-y5ftxG86dcDulcQ__&Key-Pair-Id=APKAJMWSQ5S7ZB3MF5VA"
+            },
+            "pt-BR": {
+                "hardsub_locale": "pt-BR",
+                "url": "https://pl.crunchyroll.com/evs3/a71bc82add816e3595c059a41f59cf9c/assets/p/obuts40v4v4w3gn_,3267150.mp4,3267151.mp4,3267149.mp4,3267148.mp4,3267147.mp4,.urlset/master.m3u8?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly9wbC5jcnVuY2h5cm9sbC5jb20vZXZzMy9hNzFiYzgyYWRkODE2ZTM1OTVjMDU5YTQxZjU5Y2Y5Yy9hc3NldHMvcC9vYnV0czQwdjR2NHczZ25fLDMyNjcxNTAubXA0LDMyNjcxNTEubXA0LDMyNjcxNDkubXA0LDMyNjcxNDgubXA0LDMyNjcxNDcubXA0LC51cmxzZXQvbWFzdGVyLm0zdTgiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE2NjM1MzA3NTd9fX1dfQ__&Signature=AqmxA9AOkGj22Ll4iEqDKz3pRW2wEhovel6X3ZpK84kZob7ef2GLn28D1C-5KhjJhJ8Smod7m5MskAqWcgyMqywuoBoFwL0Fr9A5ejgTpOLReuYDnWBLiVzKZROHNTbPMBd63bXtlPhFyMs-UBEi5RBjSmkfb~h~hpKZgVSiQB6HY9UdIvNkiNP0RaNL9O6HgP-soSIfsdlwpxRYEAMyQzxZuUW882k3lAEul4jNqP~qWrBL5L1icevQ1SRPlNBGFCBMel72-1-4H3sDjDJecD4~a~iAV096kDHLu7js8FQPkHUbyiP3JE-WXTEuEY1rAUyHrtL~EaHhYBimcciVzQ__&Key-Pair-Id=APKAJMWSQ5S7ZB3MF5VA"
+            }
+        },
+        "drm_download_dash": {
+            "": {
+                "hardsub_locale": "",
+                "url": "https://pl.crunchyroll.com/evs3/a71bc82add816e3595c059a41f59cf9c/assets/p/obuts40v4v4w3gn_,1783163.mp4,1783167.mp4,1783159.mp4,1783155.mp4,.urlset/manifest.mpd?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly9wbC5jcnVuY2h5cm9sbC5jb20vZXZzMy9hNzFiYzgyYWRkODE2ZTM1OTVjMDU5YTQxZjU5Y2Y5Yy9hc3NldHMvcC9vYnV0czQwdjR2NHczZ25fLDE3ODMxNjMubXA0LDE3ODMxNjcubXA0LDE3ODMxNTkubXA0LDE3ODMxNTUubXA0LC51cmxzZXQvbWFuaWZlc3QubXBkIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNjYzNTMwNzU3fX19XX0_&Signature=Dha8HgrnVvt-Pnc7ISS7NN-JOdvPXk3lZKOKXjfOe0CaGicT1jeSNQv3dIg-xPoCepYW83mUKuSPG9rHs1sY9HBbyKUNzoc8ZuK3-r0mZ4m4Ibg2T1wwByhq7txReMHgsd9T0wECHDjnP3YKfvVozYRW0KRyHxioOym8IxIryLXN76Nt6XIpB85Ru5AAhQjmzUkDemIU9eTP9~LdhsyoAnfiwcMx8bFUis5O-4-XHVQyMQ5MPTsub-ZL9daLef9gm2iztYhRr7eO-K4Bwmywm8FZ1YEmfhbQN1FFFRLWejhZUKVLZO6-QEuePA0F8EhMoAQA5OLogG-7ODRUBhKVLg__&Key-Pair-Id=APKAJMWSQ5S7ZB3MF5VA"
+            }
+        },
+        "drm_download_hls": {
+            "": {
+                "hardsub_locale": "",
+                "url": "https://pl.crunchyroll.com/evs3/a71bc82add816e3595c059a41f59cf9c/assets/p/obuts40v4v4w3gn_,1783163.mp4,1783167.mp4,1783159.mp4,1783155.mp4,.urlset/master.m3u8?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly9wbC5jcnVuY2h5cm9sbC5jb20vZXZzMy9hNzFiYzgyYWRkODE2ZTM1OTVjMDU5YTQxZjU5Y2Y5Yy9hc3NldHMvcC9vYnV0czQwdjR2NHczZ25fLDE3ODMxNjMubXA0LDE3ODMxNjcubXA0LDE3ODMxNTkubXA0LDE3ODMxNTUubXA0LC51cmxzZXQvbWFzdGVyLm0zdTgiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE2NjM1MzA3NTd9fX1dfQ__&Signature=d7eZgmpNNiTmKKU7eaXXbna~V1eiXsmOmNca-5drOS37Q4KyaUDVrG4ZIRobcJj3Op7DiZu8RoZfqdLms6D4KmvjlmdzzQZb0DObZ~6bagY7Ro3t291pxJaYuzizgTnRdIdhmfbuP4LEvinR8bRQvlzNF7gDuPIaKiUr81YOH1F4ivOmi93sz2yhMj4geEJrHas-vaz8GRCySIB7BsMibtGBcaHFX72U~BhwmYTzD0Cz8zgcxKgfsJosK4sIu5ECRQ5YRfiHqpa2Y8~jS65r6de~1K0NyFYBrv-a8B7mHa8oR2s3-~7S-vyhTRcfvDI53G9dncaxmIs6iLVz~tb3Rg__&Key-Pair-Id=APKAJMWSQ5S7ZB3MF5VA"
+            }
+        },
+        "drm_multitrack_adaptive_hls_v2": {
+            "": {
+                "hardsub_locale": "",
+                "url": "https://pl.crunchyroll.com/evs3/a71bc82add816e3595c059a41f59cf9c/assets/p/obuts40v4v4w3gn_,1783167.mp4,1783171.mp4,1783163.mp4,1783159.mp4,1783155.mp4,39935.txt,.urlset/master.m3u8?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly9wbC5jcnVuY2h5cm9sbC5jb20vZXZzMy9hNzFiYzgyYWRkODE2ZTM1OTVjMDU5YTQxZjU5Y2Y5Yy9hc3NldHMvcC9vYnV0czQwdjR2NHczZ25fLDE3ODMxNjcubXA0LDE3ODMxNzEubXA0LDE3ODMxNjMubXA0LDE3ODMxNTkubXA0LDE3ODMxNTUubXA0LDM5OTM1LnR4dCwudXJsc2V0L21hc3Rlci5tM3U4IiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNjYzNTMwNzU3fX19XX0_&Signature=awQ5JA-6R~WKVgpKg1W1YFTequ-cNLo0wSLV77~zztkTry8rHahFYfheztX10-XowvVycqqKp8lBia6w5Qzxef1mBF83PYYBRLsKr0CsweRv9EU2ugJzOFqKVwaKGUFhzl5s1U6jXPlvkS3mOP8mdl3RbpI0TkMsSfCUGVVRkaFFtw2ZCPJGmfuwyn4M8GYcS8McRglBtfj5i-a8DRih-E2Iv9-agpGjN2PTVB6VNL4TfD26LhyuqFuXSyjV3GmDDdfX2hMwN3L5gjk7HklUe4~-iXjfSR3B1eUyM1Rhn8PM3L6xdd1rqRcQlPkCLfHCX-w1S1xoS-EoaJDdPUUgyw__&Key-Pair-Id=APKAJMWSQ5S7ZB3MF5VA"
+            },
+            "en-US": {
+                "hardsub_locale": "en-US",
+                "url": "https://pl.crunchyroll.com/evs3/a71bc82add816e3595c059a41f59cf9c/assets/p/obuts40v4v4w3gn_,1783165.mp4,1783169.mp4,1783161.mp4,1783157.mp4,1783153.mp4,39935.txt,.urlset/master.m3u8?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly9wbC5jcnVuY2h5cm9sbC5jb20vZXZzMy9hNzFiYzgyYWRkODE2ZTM1OTVjMDU5YTQxZjU5Y2Y5Yy9hc3NldHMvcC9vYnV0czQwdjR2NHczZ25fLDE3ODMxNjUubXA0LDE3ODMxNjkubXA0LDE3ODMxNjEubXA0LDE3ODMxNTcubXA0LDE3ODMxNTMubXA0LDM5OTM1LnR4dCwudXJsc2V0L21hc3Rlci5tM3U4IiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNjYzNTMwNzU3fX19XX0_&Signature=puDRaBiii1FqlAuNGYvtqlqeN1lYWjICXt2ikQzDY-jmg~fzBbx1A-O1TCvJaRKNRzz5BJ4lBxRhW1uiOk1aej2POlh~jkm4nZDe~EhuMF1ajTXcr5NDm4d8kiQcOidVsmT9JYQJoq4dqjTNPGo1-bB7LGH8b1qunQejVBWsl17uNE1-c9LOySs~mitmYrnrke81-Qwj4ZcIw3oJfL4gshj784jlVjHeH89ns1n9g~LeCOESFr4aU3eElhtcMTWD1mNoOpwJcNnub6gpk6gN-0KdFph9xZnTcXdbHrMrIfd~vNba2kNfv3hTHNaAcVHn2xccjDXFbOb2pnleZx8rTw__&Key-Pair-Id=APKAJMWSQ5S7ZB3MF5VA"
+            },
+            "es-LA": {
+                "hardsub_locale": "es-LA",
+                "url": "https://pl.crunchyroll.com/evs3/a71bc82add816e3595c059a41f59cf9c/assets/p/obuts40v4v4w3gn_,3262357.mp4,3262358.mp4,3262356.mp4,3262355.mp4,3262354.mp4,39935.txt,.urlset/master.m3u8?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly9wbC5jcnVuY2h5cm9sbC5jb20vZXZzMy9hNzFiYzgyYWRkODE2ZTM1OTVjMDU5YTQxZjU5Y2Y5Yy9hc3NldHMvcC9vYnV0czQwdjR2NHczZ25fLDMyNjIzNTcubXA0LDMyNjIzNTgubXA0LDMyNjIzNTYubXA0LDMyNjIzNTUubXA0LDMyNjIzNTQubXA0LDM5OTM1LnR4dCwudXJsc2V0L21hc3Rlci5tM3U4IiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNjYzNTMwNzU3fX19XX0_&Signature=XIebZgo5hrbUnpV029LHsY2JLGit8hcRWB0Tk-vZAXKCcpr8X13jGKmcqKIjvOVokArZksIlNL5k~GZIAwP7791hkIfqZqdtdF~PrnC3I15dgfQslM76KPtXSAa3B5Jy4xiQT3SuTl9JFeMv7sTKoM8yD9nyLk6HiITO3PV0kaCUfKWg8sndq8lYZsZdn2gbG4xJ0PC1gYpPMoNUf6rRQheuVh2h9HZDc~3DluOdq9Y~sRakAmpVvsOGD9PilJxzAWSd9an3HaJXCWCb8fYT3LrZJnfzCffZbuVNnMYLwl~6IwW5-c5DXYOOxZgrG2N7g98INxf6uWu3~Sti7lDWgA__&Key-Pair-Id=APKAJMWSQ5S7ZB3MF5VA"
+            },
+            "pt-BR": {
+                "hardsub_locale": "pt-BR",
+                "url": "https://pl.crunchyroll.com/evs3/a71bc82add816e3595c059a41f59cf9c/assets/p/obuts40v4v4w3gn_,3267150.mp4,3267151.mp4,3267149.mp4,3267148.mp4,3267147.mp4,39935.txt,.urlset/master.m3u8?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly9wbC5jcnVuY2h5cm9sbC5jb20vZXZzMy9hNzFiYzgyYWRkODE2ZTM1OTVjMDU5YTQxZjU5Y2Y5Yy9hc3NldHMvcC9vYnV0czQwdjR2NHczZ25fLDMyNjcxNTAubXA0LDMyNjcxNTEubXA0LDMyNjcxNDkubXA0LDMyNjcxNDgubXA0LDMyNjcxNDcubXA0LDM5OTM1LnR4dCwudXJsc2V0L21hc3Rlci5tM3U4IiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNjYzNTMwNzU3fX19XX0_&Signature=rIqgI20VeTYRNTgBghz1fPXbsXnLDJSFi9nAX0avyzserGDO-5tGnOXYUNTVhj73aQfgILypyTKvAs0VmG8j2XnA6GYNFlCpe7UL5ZsgRO5kZexKO5j5Z3P~4~bxQL7qUs3CdiunbN9K17DWWvMEytjsrfBgFc31ZJlapYRWa8u2SX6UYA~1Q1cnJmSjqYtlVsZJJcZTFtv-JcB7ktx0roVNoSjWoQRa1Nf~NhXB6Qh9X2FuN5vOdgmpA0B~jprW1uFnh2FZ05Tor2r4J0naXGvKY4AdVCtWyaMVrNe0ku0pNpM7tONNWDWRRpEqsabzs-OR8mGZwmkjR0FtrrauVg__&Key-Pair-Id=APKAJMWSQ5S7ZB3MF5VA"
+            }
+        },
+        "multitrack_adaptive_hls_v2": {
+            "": {
+                "hardsub_locale": "",
+                "url": "https://pl.crunchyroll.com/evs3/727bd855b54497928bdccf793e66ddcb/assets/obuts40v4v4w3gn_,1783167.mp4,1783171.mp4,1783163.mp4,1783159.mp4,1783155.mp4,39935.txt,.urlset/master.m3u8?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly9wbC5jcnVuY2h5cm9sbC5jb20vZXZzMy83MjdiZDg1NWI1NDQ5NzkyOGJkY2NmNzkzZTY2ZGRjYi9hc3NldHMvb2J1dHM0MHY0djR3M2duXywxNzgzMTY3Lm1wNCwxNzgzMTcxLm1wNCwxNzgzMTYzLm1wNCwxNzgzMTU5Lm1wNCwxNzgzMTU1Lm1wNCwzOTkzNS50eHQsLnVybHNldC9tYXN0ZXIubTN1OCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTY2MzUzMDc1N319fV19&Signature=Ju6-hahkwt1GAghBTa-O40nf~YbWl~AEtqHVHL9L3QssBQmhP3Q4mbkuhPbPHkfb05RwGksJqcuuf-l8HMv~VYgE9nveUsyxySJjZ2-IKgoCIoNixkNIcVUwBoOWKahE30NOTIO8AAoHcAEhHppBeN5ueliAWq-sEGZx7ruqrDp~XatGftsWnDNFZFx4Fs52sMMo~p89WU6-MCLCL1pO4krXCM6Vw8hsautqgn8ocVASFELkvRVo9MWtSdgwGCB1WK4nglcXdmdYiio4RKhEQMFneSHkkTkvNoA6ocaHIpkpe88krwud-KX-pFnWEohkHD0lz0P9CDhRGRm2v3tVZQ__&Key-Pair-Id=APKAJMWSQ5S7ZB3MF5VA"
+            },
+            "en-US": {
+                "hardsub_locale": "en-US",
+                "url": "https://pl.crunchyroll.com/evs3/727bd855b54497928bdccf793e66ddcb/assets/obuts40v4v4w3gn_,1783165.mp4,1783169.mp4,1783161.mp4,1783157.mp4,1783153.mp4,39935.txt,.urlset/master.m3u8?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly9wbC5jcnVuY2h5cm9sbC5jb20vZXZzMy83MjdiZDg1NWI1NDQ5NzkyOGJkY2NmNzkzZTY2ZGRjYi9hc3NldHMvb2J1dHM0MHY0djR3M2duXywxNzgzMTY1Lm1wNCwxNzgzMTY5Lm1wNCwxNzgzMTYxLm1wNCwxNzgzMTU3Lm1wNCwxNzgzMTUzLm1wNCwzOTkzNS50eHQsLnVybHNldC9tYXN0ZXIubTN1OCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTY2MzUzMDc1N319fV19&Signature=b50VMfLTznORpfNye7a6mgqQm3KXu6ujZgcz~xaKvv3VIJ4oca9DTnZrxj5cIvc8qF5dDQG7DleS3UWvuynq5qt9x8TgKm1iyTGvBEYrkdnS8MMGv1knBnQyilem9jjTwfOUvg1ErJMf38RSp6WbcXqdGYo9AQm23vC4hnDuo~LOGfnqDornHMe0vWPZi-zjBaWnkXvbzffX-C2noW7SvTJA8PdA34vfglgtk2pqyqlgxy4nn7odSzSWSwMNs6vs5AJBtKU9pTO~gzrjocOq~ucoZ0T7PIt~JT5ORYktxa9l2ZKRdvR0Cvxj44xqYXT9HPRsj9edmZqDWWNZD~a5Ag__&Key-Pair-Id=APKAJMWSQ5S7ZB3MF5VA"
+            },
+            "es-LA": {
+                "hardsub_locale": "es-LA",
+                "url": "https://pl.crunchyroll.com/evs3/727bd855b54497928bdccf793e66ddcb/assets/obuts40v4v4w3gn_,3262357.mp4,3262358.mp4,3262356.mp4,3262355.mp4,3262354.mp4,39935.txt,.urlset/master.m3u8?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly9wbC5jcnVuY2h5cm9sbC5jb20vZXZzMy83MjdiZDg1NWI1NDQ5NzkyOGJkY2NmNzkzZTY2ZGRjYi9hc3NldHMvb2J1dHM0MHY0djR3M2duXywzMjYyMzU3Lm1wNCwzMjYyMzU4Lm1wNCwzMjYyMzU2Lm1wNCwzMjYyMzU1Lm1wNCwzMjYyMzU0Lm1wNCwzOTkzNS50eHQsLnVybHNldC9tYXN0ZXIubTN1OCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTY2MzUzMDc1N319fV19&Signature=MtzCli02oHfruLn39wd6h8bH8Hgv8Uf7A6tEr0r7QPRgllGcxeV9KdIL3wO003BDZD7EsWQRmI7ezXxq5qblBGUZbGrNaO5lhXeuJ7Wxhv0Vsu-dwgBksDZBq1LsJITqrjGaoqKzI44BWXApO3zaZHBBj0ujOkRSSlHcVcBN1m3Wa7RWo~CrJ8cE9LxpW6uh0hrWNtD1V37~jrBScJdc1-NqzdkoR0Mg5D8yxEXtUp~A4qunayfgwt-37iezFj5PLrEXEUPEnZ04CmU4EWlm9aZGKBqVB8jfpJ91HQCBB5heWMKNVKo1Lb2YQ0tewc4NMRW2D1dRUy2KJHko7eKUXA__&Key-Pair-Id=APKAJMWSQ5S7ZB3MF5VA"
+            },
+            "pt-BR": {
+                "hardsub_locale": "pt-BR",
+                "url": "https://pl.crunchyroll.com/evs3/727bd855b54497928bdccf793e66ddcb/assets/obuts40v4v4w3gn_,3267150.mp4,3267151.mp4,3267149.mp4,3267148.mp4,3267147.mp4,39935.txt,.urlset/master.m3u8?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly9wbC5jcnVuY2h5cm9sbC5jb20vZXZzMy83MjdiZDg1NWI1NDQ5NzkyOGJkY2NmNzkzZTY2ZGRjYi9hc3NldHMvb2J1dHM0MHY0djR3M2duXywzMjY3MTUwLm1wNCwzMjY3MTUxLm1wNCwzMjY3MTQ5Lm1wNCwzMjY3MTQ4Lm1wNCwzMjY3MTQ3Lm1wNCwzOTkzNS50eHQsLnVybHNldC9tYXN0ZXIubTN1OCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTY2MzUzMDc1N319fV19&Signature=cXHq37z5A7rnIoHtZNcCEFVAZsvi4VxzMA-1iWMMBRcOdSPAp6OQgtWzVAg1vbfgSqnl0Xk5sqr8HqRKmBGKvdSb4I9CFW3mR9ShoXekqqukNkivRqNWMtQ~CxcDr5wfgMem6tTygYfSeqkpCsjcjqjUFAP6yimSQ6A~30kMfUNMhrFGKS9i51jpi6yT~4SDncckZAcfKVIgcGySyTHDOYO1gDJv9C3XUp3T5sIY6BbS5Ci4183o8xyZPR9Jf5A8hmjLo3Nh4wuGb0uf5FDhc5kEVpbLf8Cjq97gJiME3WN5OqbbaFlhNbzIhcZyyOMFcssdkz2nnWu5N-BDwGeWoA__&Key-Pair-Id=APKAJMWSQ5S7ZB3MF5VA"
+            }
+        },
+        "urls": {
+            "": {
+                "hardsub_locale": "",
+                "url": ""
+            }
+        },
+        "vo_adaptive_dash": {
+            "": {
+                "hardsub_locale": "",
+                "url": "https://v.vrv.co/evs3/727bd855b54497928bdccf793e66ddcb/assets/obuts40v4v4w3gn_,1783167.mp4,1783171.mp4,1783163.mp4,1783159.mp4,1783155.mp4,.urlset/manifest.mpd?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly92LnZydi5jby9ldnMzLzcyN2JkODU1YjU0NDk3OTI4YmRjY2Y3OTNlNjZkZGNiL2Fzc2V0cy9vYnV0czQwdjR2NHczZ25fLDE3ODMxNjcubXA0LDE3ODMxNzEubXA0LDE3ODMxNjMubXA0LDE3ODMxNTkubXA0LDE3ODMxNTUubXA0LC51cmxzZXQvbWFuaWZlc3QubXBkIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNjYzNTMwNzU3fX19XX0_&Signature=cjwrWyBY-XVuSJbHLpC0CXqHX4nbmOiEhj1qx70BiZIM2cgziyY089kLrNXXO4Fijr3l0B8mHF7XsqHg~xOFuErJtfY54rpVQJTnQVovNWG-n94C7L7OsNWh~xoGbcS-TGF7iPxRL3KoyP41Ut0GgFRqfBuU2lLtnCV7PxH0BS15AQl0sjN2cyHd5EG8SWfa2SOvWmjvKJK2K~cP0WsiWwv3gA3k6AO5kaTBY0PYCbxcPlGeytRmqCFw6azO6lvyIQhclN30H-Y3a899Rf7AJsI2c61yywld2Rh3pYv4nZmxMVD42tB4Zn~OI9MFz7iARkNhrtv2Nbg9PhQCrZw5qw__&Key-Pair-Id=APKAJMWSQ5S7ZB3MF5VA"
+            },
+            "en-US": {
+                "hardsub_locale": "en-US",
+                "url": "https://v.vrv.co/evs3/727bd855b54497928bdccf793e66ddcb/assets/obuts40v4v4w3gn_,1783165.mp4,1783169.mp4,1783161.mp4,1783157.mp4,1783153.mp4,.urlset/manifest.mpd?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly92LnZydi5jby9ldnMzLzcyN2JkODU1YjU0NDk3OTI4YmRjY2Y3OTNlNjZkZGNiL2Fzc2V0cy9vYnV0czQwdjR2NHczZ25fLDE3ODMxNjUubXA0LDE3ODMxNjkubXA0LDE3ODMxNjEubXA0LDE3ODMxNTcubXA0LDE3ODMxNTMubXA0LC51cmxzZXQvbWFuaWZlc3QubXBkIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNjYzNTMwNzU3fX19XX0_&Signature=o77mZTJW8Kz7bXMAyFabMKvGQOWj56em8X7pZEkAmc3yu6ejvp5EXjkxfi5tONBzf~HkYvLGUs5WcwiD3KOLpSEdJ1C4DJb55Eu~zyDdubk5PoB-t~xw-XrjMd1bVc7MyQb91C9fKdDo6IHfPjlu15H-yC-RMTe4kfC6q894ZwdIaNRCk6ay9OFod7llXQXBu94tlM6izU914iljons9I2fqUPjMZCtTO1ZlefwxrvTiJcvNDAdm6sZ~Des0-qrEuI4q4I8XM9631owmdBKwzoR4m5qEBelRgme3hEI8rDTRTfjuwIxAHU96mZwF6DxhGMAs39AaZ9229LQFn~ntSA__&Key-Pair-Id=APKAJMWSQ5S7ZB3MF5VA"
+            },
+            "es-LA": {
+                "hardsub_locale": "es-LA",
+                "url": "https://v.vrv.co/evs3/727bd855b54497928bdccf793e66ddcb/assets/obuts40v4v4w3gn_,3262357.mp4,3262358.mp4,3262356.mp4,3262355.mp4,3262354.mp4,.urlset/manifest.mpd?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly92LnZydi5jby9ldnMzLzcyN2JkODU1YjU0NDk3OTI4YmRjY2Y3OTNlNjZkZGNiL2Fzc2V0cy9vYnV0czQwdjR2NHczZ25fLDMyNjIzNTcubXA0LDMyNjIzNTgubXA0LDMyNjIzNTYubXA0LDMyNjIzNTUubXA0LDMyNjIzNTQubXA0LC51cmxzZXQvbWFuaWZlc3QubXBkIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNjYzNTMwNzU3fX19XX0_&Signature=E71IgjBOvOH~oia3pztT~k4PXeCuys3H3n1BoL38LnGFQ1aAgLd2lSSzLBa1ZYg1GEwOPgLGYATdeAK9leme9rm2R5-AzrfkYT6QmDp6u~c3SHWyqfP9XXcvj38D~DEVBpkpWvVf8dcndZT0byR~AiA~Enjglz-A~IujTRcIsiIDie8E7w5HrvbTnG4O77kh2UfPMjr7oy1VUS8dA3qyC7EbdA1mmJW-T9fc9OeVIsIfOHbbjgcmn0oYm2FCBQW5ZyXwu3DV47ghMiQ3FvzHFfN6q~Lfy1VLwN0uV0XTOkGCl3Qnj7jrS5XxfT79EHdHbYI56Aqwk~TEtRyV7~N95Q__&Key-Pair-Id=APKAJMWSQ5S7ZB3MF5VA"
+            },
+            "pt-BR": {
+                "hardsub_locale": "pt-BR",
+                "url": "https://v.vrv.co/evs3/727bd855b54497928bdccf793e66ddcb/assets/obuts40v4v4w3gn_,3267150.mp4,3267151.mp4,3267149.mp4,3267148.mp4,3267147.mp4,.urlset/manifest.mpd?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly92LnZydi5jby9ldnMzLzcyN2JkODU1YjU0NDk3OTI4YmRjY2Y3OTNlNjZkZGNiL2Fzc2V0cy9vYnV0czQwdjR2NHczZ25fLDMyNjcxNTAubXA0LDMyNjcxNTEubXA0LDMyNjcxNDkubXA0LDMyNjcxNDgubXA0LDMyNjcxNDcubXA0LC51cmxzZXQvbWFuaWZlc3QubXBkIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNjYzNTMwNzU3fX19XX0_&Signature=GGHJ27NHkRSt-1k7wUvdZq1A9c534M4AgxocX-deyqjVsuwy2lU1DFgjxujZDHj3EYT-lhj48zmYvgZKMjsc~3-vmVk9hplTMaGuwZzzQiC5KKY5eF9vKegd0DvSxPdkEWE6n13EJhNV-HDj3KC0c0KGy78nXLdF1chDbSWOQbAfs~JcAsSqT-vAGrWANeLPbeI3Qz5nEsY4Fw5QVoCY5mWDhMZodXZroMse9bz3krUWPRFLahZUMC4rD~ArtAwddpnVLzR74DuRAUyKCkzNX4qKF7mkxobUA~hIxiT69204IGHTsVf8gAj7ahSWe~-67HphnP1Nv8sd5zF1e1-r~g__&Key-Pair-Id=APKAJMWSQ5S7ZB3MF5VA"
+            }
+        },
+        "vo_adaptive_hls": {
+            "": {
+                "hardsub_locale": "",
+                "url": "https://v.vrv.co/evs3/727bd855b54497928bdccf793e66ddcb/assets/obuts40v4v4w3gn_,1783167.mp4,1783171.mp4,1783163.mp4,1783159.mp4,1783155.mp4,.urlset/master.m3u8?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly92LnZydi5jby9ldnMzLzcyN2JkODU1YjU0NDk3OTI4YmRjY2Y3OTNlNjZkZGNiL2Fzc2V0cy9vYnV0czQwdjR2NHczZ25fLDE3ODMxNjcubXA0LDE3ODMxNzEubXA0LDE3ODMxNjMubXA0LDE3ODMxNTkubXA0LDE3ODMxNTUubXA0LC51cmxzZXQvbWFzdGVyLm0zdTgiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE2NjM1MzA3NTd9fX1dfQ__&Signature=V44Ta2IyULrlGDAFLvCqhtSjLPcxtUT4InU806b17L7TKPWb88BRACav1QAQE55KcSDCku0Rp5~LTCusiszFBVwxxbkS4zOn3EhYaIJMAkc4nbzJV8XlOV~sAmK7ZjaugQ-UUUYVNLelzuupPCnimGmyP~Q53ShLedPidKtehxDdQ2XfKME8QDVmYWdEV7v~Y3Rkq8aeCkcVKaKhvHzevkeQjCSE7gyjmq3EjS7D5i6cHCyUnyAjHxOy~nlW5n42YpWOI-uFkGm5rHumm278eF2NusYn7yHH6EBP~kik2a1G2p-vEHLj-i4JzxTpTvx~A9lbrHiGNMzoX2MGLJ98KA__&Key-Pair-Id=APKAJMWSQ5S7ZB3MF5VA"
+            },
+            "en-US": {
+                "hardsub_locale": "en-US",
+                "url": "https://v.vrv.co/evs3/727bd855b54497928bdccf793e66ddcb/assets/obuts40v4v4w3gn_,1783165.mp4,1783169.mp4,1783161.mp4,1783157.mp4,1783153.mp4,.urlset/master.m3u8?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly92LnZydi5jby9ldnMzLzcyN2JkODU1YjU0NDk3OTI4YmRjY2Y3OTNlNjZkZGNiL2Fzc2V0cy9vYnV0czQwdjR2NHczZ25fLDE3ODMxNjUubXA0LDE3ODMxNjkubXA0LDE3ODMxNjEubXA0LDE3ODMxNTcubXA0LDE3ODMxNTMubXA0LC51cmxzZXQvbWFzdGVyLm0zdTgiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE2NjM1MzA3NTd9fX1dfQ__&Signature=Of36txflVANK9~RCaow5QXrsjnR~rLZRv~pBk5466SMNYNdkOS-qT3tb5TKLrgzkdtjhzS1Kmtvs67dGYbEaNo0vhzDglHmGUpqM7GKn87HzgKK6Xg9TN-FQHzI-uDFRFk3jlzQyZ~9bI7SaSqn4bCpnl8zSXx6cV3Uhhx89MubYNfuaXjwO9MF5pqyKA3FPTR6YJLTA1nVs1IVpiBSa9b-Y7H2LwodO3Mdtr84RoqrBfsSSWOSFZLM7CC0cFVpmEdmYdKETKIDA3vDxnIqKbNwTtlvVsSpUbhdXwca7IEDyaaqm4DgFl3UzQ0DDhi5d9OCBobAU~sHT9lHtoiRMmQ__&Key-Pair-Id=APKAJMWSQ5S7ZB3MF5VA"
+            },
+            "es-LA": {
+                "hardsub_locale": "es-LA",
+                "url": "https://v.vrv.co/evs3/727bd855b54497928bdccf793e66ddcb/assets/obuts40v4v4w3gn_,3262357.mp4,3262358.mp4,3262356.mp4,3262355.mp4,3262354.mp4,.urlset/master.m3u8?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly92LnZydi5jby9ldnMzLzcyN2JkODU1YjU0NDk3OTI4YmRjY2Y3OTNlNjZkZGNiL2Fzc2V0cy9vYnV0czQwdjR2NHczZ25fLDMyNjIzNTcubXA0LDMyNjIzNTgubXA0LDMyNjIzNTYubXA0LDMyNjIzNTUubXA0LDMyNjIzNTQubXA0LC51cmxzZXQvbWFzdGVyLm0zdTgiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE2NjM1MzA3NTd9fX1dfQ__&Signature=g3SzZWT48gMeJaitiy8JNg3wFu4ylxYDYx1BKrd5JjYtJZBUmV2g9co-mauirdYXK0h5bL4xcXsbpGNPsjc9lpRQDalZ6sGK7GmgX5Tx3Xk4I6jsbBED63mUJvrLRfTyq4EWaEGgJGD3cnrdWtRoCn08n7u0bN81-cS47w0ewmOAlxNbIyj37~UV1~qS6DygjOv5qxvJigE7JJuTtYpMb2QroN-AeugtJ8OEiNXHhJ-U62nrpcWPdssApa8idd~M3N9wr8IyEWUDZcBmhzIf1CxBiZS4-KE980xvgIDOsvTmWQD6Lwzm9IubwsTytFoI3d7aYjgxCLUrW6kGhig3ag__&Key-Pair-Id=APKAJMWSQ5S7ZB3MF5VA"
+            },
+            "pt-BR": {
+                "hardsub_locale": "pt-BR",
+                "url": "https://v.vrv.co/evs3/727bd855b54497928bdccf793e66ddcb/assets/obuts40v4v4w3gn_,3267150.mp4,3267151.mp4,3267149.mp4,3267148.mp4,3267147.mp4,.urlset/master.m3u8?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly92LnZydi5jby9ldnMzLzcyN2JkODU1YjU0NDk3OTI4YmRjY2Y3OTNlNjZkZGNiL2Fzc2V0cy9vYnV0czQwdjR2NHczZ25fLDMyNjcxNTAubXA0LDMyNjcxNTEubXA0LDMyNjcxNDkubXA0LDMyNjcxNDgubXA0LDMyNjcxNDcubXA0LC51cmxzZXQvbWFzdGVyLm0zdTgiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE2NjM1MzA3NTd9fX1dfQ__&Signature=P0Gnx~EZUMCZO9W9tFtTDj4E7~~bK9as5B-xDrvGeYD8ncVg7SlXfxxwGfSy~CZ~9ovXOQ08KpPQMADb-NxYlfbbZgHer2grYfF9o8x7HAUkfRACGWVn4Nw2zvPDUdjXR8O3eCeuaXV6l6S5VEe87LM0tWVHU~dBfYjePrVqzpcW1UBwYonLS-IlzVY2YeM9MbhJKaXTYUaIgKC28mbt6PMEUPIIyH0thUgAPdPYOHsQclzwAPcRRagYVVrCPTtC7NmTP5a~5ClYIgS9ujLgudw88XR4MnjrTP3LobBMgAI4oufwqyjv1EDaLAX8KmrdJyFD0HYpXUyg-05e7yDiEA__&Key-Pair-Id=APKAJMWSQ5S7ZB3MF5VA"
+            }
+        },
+        "vo_drm_adaptive_dash": {
+            "": {
+                "hardsub_locale": "",
+                "url": "https://v.vrv.co/evs3/a71bc82add816e3595c059a41f59cf9c/assets/p/obuts40v4v4w3gn_,1783167.mp4,1783171.mp4,1783163.mp4,1783159.mp4,1783155.mp4,.urlset/manifest.mpd?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly92LnZydi5jby9ldnMzL2E3MWJjODJhZGQ4MTZlMzU5NWMwNTlhNDFmNTljZjljL2Fzc2V0cy9wL29idXRzNDB2NHY0dzNnbl8sMTc4MzE2Ny5tcDQsMTc4MzE3MS5tcDQsMTc4MzE2My5tcDQsMTc4MzE1OS5tcDQsMTc4MzE1NS5tcDQsLnVybHNldC9tYW5pZmVzdC5tcGQiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE2NjM1MzA3NTd9fX1dfQ__&Signature=RYS4jwtQfFG8-ogC6AGGJpaLmKxDPy2nbY205dG0SqGeykuV3PIpHUVYI12lXU7BH3ieIbKU7MSmCu-W-GhS5Meiw39G2o77yPvIRL99-9q0f~VNm~xamCriP62oMrxa3jAekRArpC~W3plZ1GebsjuF3fpYQhgRIaTmeBnqqI9Z52bQg-Bk0frpfrJeIvm~1T3z8J3-soGprAnNUj~wLY8AFL48m4dphbTxwAwOQ6M8KBXjRniyLlQpTCZZYxn~xRzluo9eQYZSWCF6anKoujYxoXzkl-WqHBcAxpiHZXI050z8he1JKXja84yrfnyHhd9tSuIDocbNE9247QIGhw__&Key-Pair-Id=APKAJMWSQ5S7ZB3MF5VA"
+            },
+            "en-US": {
+                "hardsub_locale": "en-US",
+                "url": "https://v.vrv.co/evs3/a71bc82add816e3595c059a41f59cf9c/assets/p/obuts40v4v4w3gn_,1783165.mp4,1783169.mp4,1783161.mp4,1783157.mp4,1783153.mp4,.urlset/manifest.mpd?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly92LnZydi5jby9ldnMzL2E3MWJjODJhZGQ4MTZlMzU5NWMwNTlhNDFmNTljZjljL2Fzc2V0cy9wL29idXRzNDB2NHY0dzNnbl8sMTc4MzE2NS5tcDQsMTc4MzE2OS5tcDQsMTc4MzE2MS5tcDQsMTc4MzE1Ny5tcDQsMTc4MzE1My5tcDQsLnVybHNldC9tYW5pZmVzdC5tcGQiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE2NjM1MzA3NTd9fX1dfQ__&Signature=UtIbO7d2OvWh~UKK~VTq8FAduv~RaUPpLaGYUl4j42h5DOzaQqGaYMG7Pf3FDa~~8BwtzK-DJBUNRM1ZfwzXVY4v0vrAmBz5pyXstPjFVXRvN8oPRGmJNPtSA5G3~e81ZnHo0YT0DlvMsjEcyFIl0PTazkt7okI94j5ctY8vOd9pm6yY1~949JKANsEFwAs64q2BW6vxaSDg6zbOtlXP9XYN~jjPUSaZbzeI1U2i~jvi0Sod37G4VwDN5aP4PgbDiNjaasYxHOIh8neeS6WE4RvSjZlYThC60RbR5uSn4b9nEa7QZcBsxNmkDUoNSIPseCPzB1XLIigc0v8u4BRoyw__&Key-Pair-Id=APKAJMWSQ5S7ZB3MF5VA"
+            },
+            "es-LA": {
+                "hardsub_locale": "es-LA",
+                "url": "https://v.vrv.co/evs3/a71bc82add816e3595c059a41f59cf9c/assets/p/obuts40v4v4w3gn_,3262357.mp4,3262358.mp4,3262356.mp4,3262355.mp4,3262354.mp4,.urlset/manifest.mpd?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly92LnZydi5jby9ldnMzL2E3MWJjODJhZGQ4MTZlMzU5NWMwNTlhNDFmNTljZjljL2Fzc2V0cy9wL29idXRzNDB2NHY0dzNnbl8sMzI2MjM1Ny5tcDQsMzI2MjM1OC5tcDQsMzI2MjM1Ni5tcDQsMzI2MjM1NS5tcDQsMzI2MjM1NC5tcDQsLnVybHNldC9tYW5pZmVzdC5tcGQiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE2NjM1MzA3NTd9fX1dfQ__&Signature=FmC7bxON7EluIK27eYoTyz5aWmGs8vCcWP1ZTHQrUIVYbdpAY0XJly2FVVr3dy-GSU~B2ElE00aPUnjgBSR9LVgdhpSIAcmlhxqMPGz8P5ORnCF2f5xDKpeaWffV2XGqcR-rk45A4KyDNXuim84qYDbBltiLjNouK1IEpszcl6~aP2rEyaEx0WRH26oV~XMvgfVQBHU06OTMP2Nh8G1ZcKVLTV67Q2lIQlZc5gZ7s6sKL6It4draGj9ieGMoQBk2HrEv9nOz1UGY-u9ri4os0Pq0Bk9zLBfa7XjQctNEiVVdmO4AFCuOsZtbMWVk61EUai~ApWpMdHw-adCZx8fJHg__&Key-Pair-Id=APKAJMWSQ5S7ZB3MF5VA"
+            },
+            "pt-BR": {
+                "hardsub_locale": "pt-BR",
+                "url": "https://v.vrv.co/evs3/a71bc82add816e3595c059a41f59cf9c/assets/p/obuts40v4v4w3gn_,3267150.mp4,3267151.mp4,3267149.mp4,3267148.mp4,3267147.mp4,.urlset/manifest.mpd?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly92LnZydi5jby9ldnMzL2E3MWJjODJhZGQ4MTZlMzU5NWMwNTlhNDFmNTljZjljL2Fzc2V0cy9wL29idXRzNDB2NHY0dzNnbl8sMzI2NzE1MC5tcDQsMzI2NzE1MS5tcDQsMzI2NzE0OS5tcDQsMzI2NzE0OC5tcDQsMzI2NzE0Ny5tcDQsLnVybHNldC9tYW5pZmVzdC5tcGQiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE2NjM1MzA3NTd9fX1dfQ__&Signature=NrRbtF~wtvTapE2BIuYnz-7KZOVPA2pZDiorc3cdIDR3D8G3VDxG-ohi0Wipi2-t1ZYgSWJlLqrxPIpbvPe9kMOgH3zK15CEameyE6GOoavDBxU0wSV7mmYCeLYP889tYSFwx1dDEQQ37DjmCU93z8qq6JKlT-f2QiPyDNXnNK~SoaE0RLIMrMsUk-IlY~KDWkUjDvgBxNlKITJcck-842OWjsSyaXWknAV7eKN5ZFqW9hHHYkRXlETk8ZhUTOTTHw-lQ0f0oETBJl~qGiSuEvO1sNORUfhZmRjNmW0wCa73sgvO1tljHiIfo9aU9DBdjHcq50k5kWgoFTpxRSdS3w__&Key-Pair-Id=APKAJMWSQ5S7ZB3MF5VA"
+            }
+        },
+        "vo_drm_adaptive_hls": {
+            "": {
+                "hardsub_locale": "",
+                "url": "https://v.vrv.co/evs3/a71bc82add816e3595c059a41f59cf9c/assets/p/obuts40v4v4w3gn_,1783167.mp4,1783171.mp4,1783163.mp4,1783159.mp4,1783155.mp4,.urlset/master.m3u8?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly92LnZydi5jby9ldnMzL2E3MWJjODJhZGQ4MTZlMzU5NWMwNTlhNDFmNTljZjljL2Fzc2V0cy9wL29idXRzNDB2NHY0dzNnbl8sMTc4MzE2Ny5tcDQsMTc4MzE3MS5tcDQsMTc4MzE2My5tcDQsMTc4MzE1OS5tcDQsMTc4MzE1NS5tcDQsLnVybHNldC9tYXN0ZXIubTN1OCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTY2MzUzMDc1N319fV19&Signature=rS7X59JttOt~oHR4bQmp6S6i94liupPnu1mX~kQ~b518YZkmX20snwwCiAnTgxx1aRXWrMI7LsgPQKpnw5irf9r9w-Y~pFbqjKgx6EUdSkIBJvDI-zEyw0t1kZ1WQrz9IprzlGAZsD8RJPk0fCXo6lq-B81MXSI3vfW0p-XUSnpq4fsKee1tgzEBwt51hUIskBW4KB-tCc048f1mf4sJZq-BlIY-3QQ8ku8nJ2bPLpVIGBPpPq1~iKDqcM87D6cjsyvCnm6zr-h76~vAwd7L7VpNh82mRiCpGhfXw2sn3f84StezyFZ7YxJNCyH-BlogPzy6ecu-Uben2w7hhQ5Cew__&Key-Pair-Id=APKAJMWSQ5S7ZB3MF5VA"
+            },
+            "en-US": {
+                "hardsub_locale": "en-US",
+                "url": "https://v.vrv.co/evs3/a71bc82add816e3595c059a41f59cf9c/assets/p/obuts40v4v4w3gn_,1783165.mp4,1783169.mp4,1783161.mp4,1783157.mp4,1783153.mp4,.urlset/master.m3u8?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly92LnZydi5jby9ldnMzL2E3MWJjODJhZGQ4MTZlMzU5NWMwNTlhNDFmNTljZjljL2Fzc2V0cy9wL29idXRzNDB2NHY0dzNnbl8sMTc4MzE2NS5tcDQsMTc4MzE2OS5tcDQsMTc4MzE2MS5tcDQsMTc4MzE1Ny5tcDQsMTc4MzE1My5tcDQsLnVybHNldC9tYXN0ZXIubTN1OCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTY2MzUzMDc1N319fV19&Signature=G~t4Ins6zsBw5ntBLxxQTgz~40M12SiAu24UtvS750sCQL4ekMRJfgGYkJlTi-zq7iMfPeIk7kxeKQc~xlaKpAZjR7exSAwg8C~EcF9qaRY-ZIbK~WnEnhun0V466HsKV7Vq317VUHaXwfvtfs7J5cO86r9tFI1eoa1jYuvOIj7S6JFqzYIKERImMXbAHoEWDrs3EDVbM2ZVNFyJYiQ6q7z6MFEZcyFJ9Mo6LrWOmyDTEPvt6Nm6VsPo2noYWGtqVX6AIFZbeWmrKiZ8KJpCnkILuBOVGV60EBf3WPd7NwLEQXCBMmgbDwF7RpaxptShs01WYjA7cSs~0QvQDTmptw__&Key-Pair-Id=APKAJMWSQ5S7ZB3MF5VA"
+            },
+            "es-LA": {
+                "hardsub_locale": "es-LA",
+                "url": "https://v.vrv.co/evs3/a71bc82add816e3595c059a41f59cf9c/assets/p/obuts40v4v4w3gn_,3262357.mp4,3262358.mp4,3262356.mp4,3262355.mp4,3262354.mp4,.urlset/master.m3u8?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly92LnZydi5jby9ldnMzL2E3MWJjODJhZGQ4MTZlMzU5NWMwNTlhNDFmNTljZjljL2Fzc2V0cy9wL29idXRzNDB2NHY0dzNnbl8sMzI2MjM1Ny5tcDQsMzI2MjM1OC5tcDQsMzI2MjM1Ni5tcDQsMzI2MjM1NS5tcDQsMzI2MjM1NC5tcDQsLnVybHNldC9tYXN0ZXIubTN1OCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTY2MzUzMDc1N319fV19&Signature=krlI2SIGmrsJ4vOBsTnvfJnPf-tL6hwfiuKwYTkp7maMhwNUh1~jtmxpD-b~C7c12CGAygpLf5FiQvYE0zBDGshF~iHfFpSzbD7KYXVlKMSNraS2ravm3yfFF8BKrbax54Rd2JEH~ExhHkgAeJCnNe6EdUyXxxl79bETCjUFK9j7vB18X2MZFmVVSJ~fmLR0IWtq6wTaD-DVevrw6nfpG68rMwMPhs~vkCBqWqLYjjIALbFABLnQzK2PEs1K4P~EInU4pSAdrEXVtOUfQLuLrYosc-KxoXhjAK4u5McAqKXZE8t4mbjM-cJ-4gb3LOQx2KRyF2gvxz8wVhkWUcIUNg__&Key-Pair-Id=APKAJMWSQ5S7ZB3MF5VA"
+            },
+            "pt-BR": {
+                "hardsub_locale": "pt-BR",
+                "url": "https://v.vrv.co/evs3/a71bc82add816e3595c059a41f59cf9c/assets/p/obuts40v4v4w3gn_,3267150.mp4,3267151.mp4,3267149.mp4,3267148.mp4,3267147.mp4,.urlset/master.m3u8?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly92LnZydi5jby9ldnMzL2E3MWJjODJhZGQ4MTZlMzU5NWMwNTlhNDFmNTljZjljL2Fzc2V0cy9wL29idXRzNDB2NHY0dzNnbl8sMzI2NzE1MC5tcDQsMzI2NzE1MS5tcDQsMzI2NzE0OS5tcDQsMzI2NzE0OC5tcDQsMzI2NzE0Ny5tcDQsLnVybHNldC9tYXN0ZXIubTN1OCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTY2MzUzMDc1N319fV19&Signature=jMSL-o2SYSdfeRr7XgamuO9g8uT0PJNo~Uph~~Ji4DEReitP127wXOiIhomh6kvZklExwAVhgIR12h9euWrtvp35wgGCaVsb3ws3nbltubHTFSyk0zSoIF03brxVvLGrgY7U79ZxFuOhtkcokdCKJfJmcpnt0sz93h8LqEEsGZTAI~haW5eKHVGaoDocSX1eRw~FBw0u-00HbWSe~QCdy1xnDdXLcDn4K1RmcmUELHpk~2~ZaYnY8GmQrCMoQQ113a~5j~l2YXbQzqaeup100UNBg6oIRGUvCXPt-VVGZiviRdWl5Fdx1caGC8p-~ehJ8N0l6jQbgYddxwIHkLZCEA__&Key-Pair-Id=APKAJMWSQ5S7ZB3MF5VA"
+            }
+        }
+    },
+    "bifs": [
+        "https://v.vrv.co/evs3/727bd855b54497928bdccf793e66ddcb/assets/obuts40v4v4w3gn_bif.bif?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cCo6Ly92LnZydi5jby9ldnMzLzcyN2JkODU1YjU0NDk3OTI4YmRjY2Y3OTNlNjZkZGNiL2Fzc2V0cy9vYnV0czQwdjR2NHczZ25fYmlmLmJpZiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTY2MzUzMDc1N319fV19&Signature=RWAdkLhKCWTm7lHoeLPAl~u1OvL8Ze6B53ut4JvBUOiP5bf-hcHhq4GR5nbGL7pv2dMVVIbg6J7UbEXTPkb9kreEilYnTUb7~IaSvMRmnMVOEZLEbaQbI2claVc~AddEWdUV6LXAjO4B9B9Uia8MLpIpCwaf0L5nVcmOe0krpLlpYFpTI3sckSx7IpKdM4DLW~UAMHt1eptx6Vzah67n9y5zUW3-Q4~EV3zFk7d7eQeTVZMpAlAyfKOQkh5nJzK2V3FvREYIxm9ARvtAe1k9aczvBj5MM67UfHQkcgZ0f-46wspdCQwcDJsvAkqs0-lRb~n1Ck1kZAGa3AJeCXorPQ__&Key-Pair-Id=APKAJMWSQ5S7ZB3MF5VA"
+    ],
+    "versions": null
+}

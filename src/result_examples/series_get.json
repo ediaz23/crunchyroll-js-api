@@ -1,0 +1,164 @@
+{
+    "__class__": "series",
+    "__href__": "/cms/v2/CL/M3/crunchyroll/series/GR751KNZY",
+    "__resource_key__": "cms:/series/GR751KNZY",
+    "__links__": {
+        "series/channel": {
+            "href": "/cms/v2/CL/M3/crunchyroll/channels/crunchyroll"
+        },
+        "series/seasons": {
+            "href": "/cms/v2/CL/M3/crunchyroll/seasons?series_id=GR751KNZY"
+        }
+    },
+    "__actions__": {},
+    "id": "GR751KNZY",
+    "channel_id": "crunchyroll",
+    "title": "Attack on Titan",
+    "slug": "",
+    "slug_title": "attack-on-titan",
+    "description": "Muchos años atrás, la humanidad estuvo al borde de la extinción con la aparición de unas criaturas gigantes que devoraban a todas las personas. Huyendo, la humanidad consiguió sobrevivir en una ciudad fortificada de altas murallas que se ha convertido en el último reducto de la civilización contra los Titanes que campan a sus anchas por el mundo. Ahora esa paz está a punto de verse interrumpida por una cadena de acontecimientos que llevará a desvelar qué son los Titanes y cómo aparecieron.",
+    "extended_description": "",
+    "keywords": [],
+    "season_tags": [
+        "Primavera-2013",
+        "Verano-2013",
+        "Primavera-2017",
+        "Verano-2018",
+        "Primavera-2019",
+        "Otoño-2021",
+        "Otoño-2020",
+        "Invierno-2021",
+        "Invierno-2022"
+    ],
+    "images": {
+        "poster_tall": [
+            [
+                {
+                    "width": 60,
+                    "height": 90,
+                    "type": "poster_tall",
+                    "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/60x90/catalog/crunchyroll/a9d4c1493f80703fe86dd83fb3b37623.jpeg"
+                },
+                {
+                    "width": 120,
+                    "height": 180,
+                    "type": "poster_tall",
+                    "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/120x180/catalog/crunchyroll/a9d4c1493f80703fe86dd83fb3b37623.jpeg"
+                },
+                {
+                    "width": 240,
+                    "height": 360,
+                    "type": "poster_tall",
+                    "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/240x360/catalog/crunchyroll/a9d4c1493f80703fe86dd83fb3b37623.jpeg"
+                },
+                {
+                    "width": 480,
+                    "height": 720,
+                    "type": "poster_tall",
+                    "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/480x720/catalog/crunchyroll/a9d4c1493f80703fe86dd83fb3b37623.jpeg"
+                },
+                {
+                    "width": 750,
+                    "height": 1125,
+                    "type": "poster_tall",
+                    "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/750x1125/catalog/crunchyroll/a9d4c1493f80703fe86dd83fb3b37623.jpeg"
+                },
+                {
+                    "width": 960,
+                    "height": 1440,
+                    "type": "poster_tall",
+                    "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/960x1440/catalog/crunchyroll/a9d4c1493f80703fe86dd83fb3b37623.jpeg"
+                },
+                {
+                    "width": 1125,
+                    "height": 1688,
+                    "type": "poster_tall",
+                    "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1125x1688/catalog/crunchyroll/a9d4c1493f80703fe86dd83fb3b37623.jpeg"
+                },
+                {
+                    "width": 1200,
+                    "height": 1800,
+                    "type": "poster_tall",
+                    "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1200x1800/catalog/crunchyroll/a9d4c1493f80703fe86dd83fb3b37623.jpeg"
+                },
+                {
+                    "width": 1560,
+                    "height": 2340,
+                    "type": "poster_tall",
+                    "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1560x2340/catalog/crunchyroll/a9d4c1493f80703fe86dd83fb3b37623.jpeg"
+                }
+            ]
+        ],
+        "poster_wide": [
+            [
+                {
+                    "width": 320,
+                    "height": 180,
+                    "type": "poster_wide",
+                    "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/320x180/catalog/crunchyroll/9daa2f17d7ad2727d72fdeaae6e232de.jpeg"
+                },
+                {
+                    "width": 600,
+                    "height": 338,
+                    "type": "poster_wide",
+                    "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/600x338/catalog/crunchyroll/9daa2f17d7ad2727d72fdeaae6e232de.jpeg"
+                },
+                {
+                    "width": 640,
+                    "height": 360,
+                    "type": "poster_wide",
+                    "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/640x360/catalog/crunchyroll/9daa2f17d7ad2727d72fdeaae6e232de.jpeg"
+                },
+                {
+                    "width": 800,
+                    "height": 450,
+                    "type": "poster_wide",
+                    "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/800x450/catalog/crunchyroll/9daa2f17d7ad2727d72fdeaae6e232de.jpeg"
+                },
+                {
+                    "width": 1200,
+                    "height": 675,
+                    "type": "poster_wide",
+                    "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1200x675/catalog/crunchyroll/9daa2f17d7ad2727d72fdeaae6e232de.jpeg"
+                },
+                {
+                    "width": 1440,
+                    "height": 810,
+                    "type": "poster_wide",
+                    "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1440x810/catalog/crunchyroll/9daa2f17d7ad2727d72fdeaae6e232de.jpeg"
+                },
+                {
+                    "width": 1600,
+                    "height": 900,
+                    "type": "poster_wide",
+                    "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1600x900/catalog/crunchyroll/9daa2f17d7ad2727d72fdeaae6e232de.jpeg"
+                },
+                {
+                    "width": 1920,
+                    "height": 1080,
+                    "type": "poster_wide",
+                    "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1920x1080/catalog/crunchyroll/9daa2f17d7ad2727d72fdeaae6e232de.jpeg"
+                }
+            ]
+        ]
+    },
+    "episode_count": 97,
+    "season_count": 5,
+    "media_count": 97,
+    "content_provider": "Kodansha Ltd.",
+    "extended_maturity_rating": {},
+    "maturity_ratings": [
+        "TV-14"
+    ],
+    "is_mature": false,
+    "mature_blocked": false,
+    "is_subbed": true,
+    "is_dubbed": false,
+    "is_simulcast": false,
+    "seo_title": "Attack on Titan - Shingeki No Kyojin",
+    "seo_description": "Watch all episodes of Attack on Titan (Shingeki No Kyojin) and enter a world where the last of mankind fight to survive against massive, man-eating titans. ",
+    "availability_notes": "",
+    "audio_locales": [],
+    "subtitle_locales": [],
+    "series_launch_year": 2013
+}

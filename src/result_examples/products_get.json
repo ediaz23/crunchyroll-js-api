@@ -1,0 +1,89 @@
+{
+    "__class__": "collection",
+    "__href__": "/subs/v2/products?source=google-play",
+    "__links__": null,
+    "__actions__": null,
+    "total": 2,
+    "items": [
+        {
+            "fan_pack": {
+                "products": [
+                    {
+                        "__class__": "product",
+                        "__href__": "/subs/v2/products/crunchyroll.google.fanpack.monthly",
+                        "__links__": null,
+                        "__actions__": null,
+                        "sku": "crunchyroll.google.fanpack.monthly",
+                        "source": "google-play",
+                        "free_trial_duration": "P0D",
+                        "cycle_duration": "P1M",
+                        "tier": "fan_pack",
+                        "benefit_package": {
+                            "name": "fan_pack_non_english_intl",
+                            "benefits": [
+                                "cr_fan_pack",
+                                "catalog",
+                                "no_ads",
+                                "simulcast",
+                                "concurrent_streams.4",
+                                "offline_viewing",
+                                "cr_premium"
+                            ]
+                        }
+                    },
+                    {
+                        "__class__": "product",
+                        "__href__": "/subs/v2/products/crunchyroll.google.fanpack.annually",
+                        "__links__": null,
+                        "__actions__": null,
+                        "sku": "crunchyroll.google.fanpack.annually",
+                        "source": "google-play",
+                        "free_trial_duration": "P0D",
+                        "cycle_duration": "P1Y",
+                        "tier": "fan_pack",
+                        "benefit_package": {
+                            "name": "fan_pack_non_english_intl_annual",
+                            "benefits": [
+                                "cr_fan_pack",
+                                "catalog",
+                                "no_ads",
+                                "simulcast",
+                                "offline_viewing",
+                                "annual_discount.percent_16",
+                                "cr_premium",
+                                "concurrent_streams.4"
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "premium": {
+                "products": [
+                    {
+                        "__class__": "product",
+                        "__href__": "/subs/v2/products/crunchyroll.google.premium.monthly",
+                        "__links__": null,
+                        "__actions__": null,
+                        "sku": "crunchyroll.google.premium.monthly",
+                        "source": "google-play",
+                        "free_trial_duration": "P0D",
+                        "cycle_duration": "P1M",
+                        "tier": "premium",
+                        "benefit_package": {
+                            "name": "premium_non_english_intl",
+                            "benefits": [
+                                "cr_premium",
+                                "catalog",
+                                "no_ads",
+                                "simulcast",
+                                "concurrent_streams.1"
+                            ]
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}

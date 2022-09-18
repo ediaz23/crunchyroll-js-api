@@ -1,0 +1,156 @@
+{
+    "__class__": "movie_listing",
+    "__href__": "/cms/v2/CL/M3/crunchyroll/movie_listings/G6MG10746",
+    "__resource_key__": "cms:/movie_listings/G6MG10746",
+    "__links__": {
+        "movie_listing/channel": {
+            "href": "/cms/v2/CL/M3/crunchyroll/channels/crunchyroll"
+        },
+        "movie_listing/movies": {
+            "href": "/cms/v2/CL/M3/crunchyroll/movies?movie_listing_id=G6MG10746"
+        }
+    },
+    "__actions__": {},
+    "id": "G6MG10746",
+    "channel_id": "crunchyroll",
+    "title": "Mizu no Kotoba",
+    "slug": "",
+    "slug_title": "mizu-no-kotoba",
+    "description": "",
+    "extended_description": "",
+    "keywords": [],
+    "images": {
+        "poster_tall": [
+            [
+                {
+                    "width": 60,
+                    "height": 90,
+                    "type": "poster_tall",
+                    "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/60x90/catalog/crunchyroll/55047431e14daa0fbf62c4d4f9b121e6.jpeg"
+                },
+                {
+                    "width": 120,
+                    "height": 180,
+                    "type": "poster_tall",
+                    "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/120x180/catalog/crunchyroll/55047431e14daa0fbf62c4d4f9b121e6.jpeg"
+                },
+                {
+                    "width": 240,
+                    "height": 360,
+                    "type": "poster_tall",
+                    "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/240x360/catalog/crunchyroll/55047431e14daa0fbf62c4d4f9b121e6.jpeg"
+                },
+                {
+                    "width": 480,
+                    "height": 720,
+                    "type": "poster_tall",
+                    "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/480x720/catalog/crunchyroll/55047431e14daa0fbf62c4d4f9b121e6.jpeg"
+                },
+                {
+                    "width": 750,
+                    "height": 1125,
+                    "type": "poster_tall",
+                    "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/750x1125/catalog/crunchyroll/55047431e14daa0fbf62c4d4f9b121e6.jpeg"
+                },
+                {
+                    "width": 960,
+                    "height": 1440,
+                    "type": "poster_tall",
+                    "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/960x1440/catalog/crunchyroll/55047431e14daa0fbf62c4d4f9b121e6.jpeg"
+                },
+                {
+                    "width": 1125,
+                    "height": 1688,
+                    "type": "poster_tall",
+                    "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1125x1688/catalog/crunchyroll/55047431e14daa0fbf62c4d4f9b121e6.jpeg"
+                },
+                {
+                    "width": 1200,
+                    "height": 1800,
+                    "type": "poster_tall",
+                    "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1200x1800/catalog/crunchyroll/55047431e14daa0fbf62c4d4f9b121e6.jpeg"
+                },
+                {
+                    "width": 1560,
+                    "height": 2340,
+                    "type": "poster_tall",
+                    "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1560x2340/catalog/crunchyroll/55047431e14daa0fbf62c4d4f9b121e6.jpeg"
+                }
+            ]
+        ],
+        "poster_wide": [
+            [
+                {
+                    "width": 320,
+                    "height": 180,
+                    "type": "poster_wide",
+                    "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/320x180/catalog/crunchyroll/8b336bf9774d5712dedf2fcb7493f1f8.jpeg"
+                },
+                {
+                    "width": 600,
+                    "height": 338,
+                    "type": "poster_wide",
+                    "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/600x338/catalog/crunchyroll/8b336bf9774d5712dedf2fcb7493f1f8.jpeg"
+                },
+                {
+                    "width": 640,
+                    "height": 360,
+                    "type": "poster_wide",
+                    "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/640x360/catalog/crunchyroll/8b336bf9774d5712dedf2fcb7493f1f8.jpeg"
+                },
+                {
+                    "width": 800,
+                    "height": 450,
+                    "type": "poster_wide",
+                    "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/800x450/catalog/crunchyroll/8b336bf9774d5712dedf2fcb7493f1f8.jpeg"
+                },
+                {
+                    "width": 1200,
+                    "height": 675,
+                    "type": "poster_wide",
+                    "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1200x675/catalog/crunchyroll/8b336bf9774d5712dedf2fcb7493f1f8.jpeg"
+                },
+                {
+                    "width": 1440,
+                    "height": 810,
+                    "type": "poster_wide",
+                    "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1440x810/catalog/crunchyroll/8b336bf9774d5712dedf2fcb7493f1f8.jpeg"
+                },
+                {
+                    "width": 1600,
+                    "height": 900,
+                    "type": "poster_wide",
+                    "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1600x900/catalog/crunchyroll/8b336bf9774d5712dedf2fcb7493f1f8.jpeg"
+                },
+                {
+                    "width": 1920,
+                    "height": 1080,
+                    "type": "poster_wide",
+                    "source": "https://beta.crunchyroll.com/imgsrv/display/thumbnail/1920x1080/catalog/crunchyroll/8b336bf9774d5712dedf2fcb7493f1f8.jpeg"
+                }
+            ]
+        ]
+    },
+    "season_tags": [],
+    "hd_flag": false,
+    "is_premium_only": false,
+    "extended_maturity_rating": {},
+    "maturity_ratings": [
+        "PG-13"
+    ],
+    "is_mature": false,
+    "mature_blocked": false,
+    "movie_release_year": 2008,
+    "content_provider": "DIRECTIONS, Inc.",
+    "available_date": null,
+    "free_available_date": "1970-01-01T00:00:00Z",
+    "premium_date": null,
+    "premium_available_date": "1970-01-01T00:00:00Z",
+    "is_subbed": false,
+    "is_dubbed": true,
+    "seo_title": "",
+    "seo_description": "",
+    "available_offline": true,
+    "subtitle_locales": [],
+    "availability_notes": ""
+}

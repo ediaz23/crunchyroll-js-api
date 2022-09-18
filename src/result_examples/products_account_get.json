@@ -1,0 +1,37 @@
+{
+    "__class__": "collection",
+    "__href__": "/subscriptions/1024158720/products",
+    "__links__": null,
+    "__actions__": null,
+    "total": 1,
+    "items": [
+        {
+            "__class__": "subscription_product",
+            "__href__": "/subscriptions/1024158720/products/cr_fan_pack.1_month",
+            "__links__": null,
+            "__actions__": null,
+            "amount": "4300",
+            "tax_included": true,
+            "currency_code": "CLP",
+            "is_cancelled": false,
+            "effective_date": "2022-01-09T01:55:18Z",
+            "source": null,
+            "source_ref": null,
+            "product": {
+                "__class__": "product",
+                "__href__": "/products/cr_fan_pack.1_month",
+                "__links__": null,
+                "__actions__": null,
+                "sku": "cr_fan_pack.1_month",
+                "type": "bundle",
+                "name": "cr_fanpack",
+                "description": "",
+                "free_trial_duration": "P14D",
+                "cycle_duration": "P1M",
+                "is_subscribable": true,
+                "source": null
+            },
+            "active_free_trial": false
+        }
+    ]
+}
