@@ -8,10 +8,10 @@ const CONST = require('../const')
 /**
  * @param {import('./../controllers/clients').Clients} client
  * @param {String} listId
- * @param {{contentId: String}} item 
+ * @param {String} contentId 
  * @returns {Promise}
  */
-async function addItemToCustomList(client, listId, item) {
+async function addItemToCustomList(client, listId, contentId) {
     const fnName = 'addItemToCustomList'
     logger.debug(fnName)
     const queryData = {locale: await client.getLocale()}
@@ -24,7 +24,7 @@ async function addItemToCustomList(client, listId, item) {
             'Authorization': await client.getToken(),
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify({content_id: item.contentId})
+        body: JSON.stringify({content_id: contentId})
     }
     
     return utils.makeRequest(fnName, url, reqConfig)
@@ -33,10 +33,10 @@ async function addItemToCustomList(client, listId, item) {
 
 /**
  * @param {import('./../controllers/clients').Clients} client
- * @param {{contentId: String}} watchlistItem 
+ * @param {String} contentId 
  * @returns {Promise}
  */
-async function addWatchlistItem(client, watchlistItem) {
+async function addWatchlistItem(client, contentId) {
     const fnName = 'addWatchlistItem'
     logger.debug(fnName)
     const queryData = {locale: await client.getLocale()}
@@ -49,7 +49,7 @@ async function addWatchlistItem(client, watchlistItem) {
             'Authorization': await client.getToken(),
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify({content_id: watchlistItem.contentId})
+        body: JSON.stringify({content_id: contentId})
     }
     
     return utils.makeRequest(fnName, url, reqConfig)
@@ -59,17 +59,19 @@ async function addWatchlistItem(client, watchlistItem) {
 /**
  * @param {import('./../controllers/clients').Clients} client
  * @param {String} listId
- * @param {{contentId: String, location: String, refContentId: String}} item 
+ * @param {String} contentId
+ * @param {String} location
+ * @param {String} refContentId
  * @returns {Promise}
  */
-async function changeCustomListItemPosition(client, listId, item) {
+async function changeCustomListItemPosition(client, listId, contentId, location, refContentId) {
     const fnName = 'changeCustomListItemPosition'
     logger.debug(fnName)
     const queryData = {locale: await client.getLocale()}
     const queryStr = new URLSearchParams(queryData)
     const account = await client.getAccount()
-    const url = `/content/v1/custom-lists/${account.accountId}/${listId}/${item.contentId}/position?${queryStr}`
-    if (!['after', 'before'].includes(item.location)) {
+    const url = `/content/v1/custom-lists/${account.accountId}/${listId}/${contentId}/position?${queryStr}`
+    if (!['after', 'before'].includes(location)) {
         throw new Error(`Wrong location`)
     }
     const reqConfig = {
@@ -79,8 +81,8 @@ async function changeCustomListItemPosition(client, listId, item) {
             'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-            location: item.location,
-            ref_content_id: item.refContentId
+            location: location,
+            ref_content_id: refContentId
         })
     }
     
@@ -91,7 +93,7 @@ async function changeCustomListItemPosition(client, listId, item) {
 /**
  * @param {import('./../controllers/clients').Clients} client
  * @param {{title: String}} customList 
- * @returns {Promise}
+ * @returns {Promise<Object>}
  */
 async function createPrivateCustomList(client, customList) {
     const fnName = 'createPrivateCustomList'
@@ -116,16 +118,16 @@ async function createPrivateCustomList(client, customList) {
 /**
  * @param {import('./../controllers/clients').Clients} client
  * @param {String} listId
- * @param {{contentId: String}} item 
+ * @param {String} contentId 
  * @returns {Promise}
  */
-async function deleteCustomListItem(client, listId, item) {
+async function deleteCustomListItem(client, listId, contentId) {
     const fnName = 'deleteCustomListItem'
     logger.debug(fnName)
     const queryData = {locale: await client.getLocale()}
     const queryStr = new URLSearchParams(queryData)
     const account = await client.getAccount()
-    const url = `/content/v1/custom-lists/${account.accountId}/${listId}/${item.contentId}?${queryStr}`
+    const url = `/content/v1/custom-lists/${account.accountId}/${listId}/${contentId}?${queryStr}`
     const reqConfig = {
         method: 'delete',
         headers: {
@@ -163,16 +165,16 @@ async function deletePrivateCustomList(client, listId) {
 
 /**
  * @param {import('./../controllers/clients').Clients} client
- * @param {{contentId: String}} watchlistItem 
+ * @param {String} contentId 
  * @returns {Promise}
  */
-async function deleteWatchlistItem(client, watchlistItem) {
+async function deleteWatchlistItem(client, contentId) {
     const fnName = 'deleteWatchlistItem'
     logger.debug(fnName)
     const queryData = {locale: await client.getLocale()}
     const queryStr = new URLSearchParams(queryData)
     const account = await client.getAccount()
-    const url = `/content/v1/watchlist/${account.accountId}/${watchlistItem.contentId}?${queryStr}`
+    const url = `/content/v1/watchlist/${account.accountId}/${contentId}?${queryStr}`
     const reqConfig = {
         method: 'delete',
         headers: {
@@ -592,18 +594,18 @@ async function getWatchlist(client, quantity, start) {
 
 /**
  * @param {import('./../controllers/clients').Clients} client
- * @param {{contentId: String}} item
+ * @param {String} contentId
  * @returns {Promise<Object>} 
  */
-async function getWatchlistItems(client, item) {
+async function getWatchlistItems(client, contentId) {
     const fnName = 'getWatchlistItems'
     logger.debug(fnName)
     const queryData = {locale: await client.getLocale()}
     const query = new URLSearchParams(queryData)
     const account = await client.getAccount()
     let url = `/content/v1/watchlist/${account.accountId}`
-    if (item && item.contentId) {
-        url += `/${item.contentId}`
+    if (contentId) {
+        url += `/${contentId}`
     }
     url += `?${query}`
     const reqConfig = {
@@ -616,10 +618,11 @@ async function getWatchlistItems(client, item) {
 
 /**
  * @param {import('./../controllers/clients').Clients} client
- * @param {{contentId: String, playhead: Number}} playhead 
+ * @param {String} contentId
+ * @param {Number} playhead
  * @returns {Promise}
  */
-async function savePlayhead(client, playhead) {
+async function savePlayhead(client, contentId, playhead) {
     const fnName = 'savePlayhead'
     logger.debug(fnName)
     const queryData = {locale: await client.getLocale()}
@@ -633,8 +636,8 @@ async function savePlayhead(client, playhead) {
             'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-            content_id: playhead.contentId,
-            playhead: playhead.playhead
+            content_id: contentId,
+            playhead: playhead
         })
     }
     
@@ -731,23 +734,24 @@ async function updateCustomList(client, listId, updateList) {
 
 /**
  * @param {import('./../controllers/clients').Clients} client
- * @param {{isFavorite: Boolean, contentId: String}} updateList 
+ * @param {String} contentId
+ * @param {Boolean} isFavorite 
  * @returns {Promise}
  */
-async function updateWatchlistItemFavoriteStatus(client, updateList) {
+async function updateWatchlistItemFavoriteStatus(client, contentId, isFavorite) {
     const fnName = 'updateWatchlistItemFavoriteStatus'
     logger.debug(fnName)
     const queryData = {locale: await client.getLocale()}
     const queryStr = new URLSearchParams(queryData)
     const account = await client.getAccount()
-    const url = `/content/v1/watchlist/${account.accountId}/${updateList.contentId}?${queryStr}`
+    const url = `/content/v1/watchlist/${account.accountId}/${contentId}?${queryStr}`
     const reqConfig = {
         method: 'patch',
         headers: {
             'Authorization': await client.getToken(),
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ is_favorite: updateList.isFavorite })
+        body: JSON.stringify({ is_favorite: isFavorite })
     }
     
     return utils.makeRequest(fnName, url, reqConfig)
