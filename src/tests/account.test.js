@@ -4,49 +4,53 @@ const testUtils = require('./testUtils')
 const account = require('../services/account')
 
 
+/** @type {String} */
+let token = null
+
 /** @type {Clients} */
 let client = null
-beforeEach(() => {
+
+beforeEach(async () => {
     client = new Clients()
-    return client.loadFromLocal()
+    await client.loadFromLocal()
+    token = await client.getToken()
 })
 
-
-describe('Sbuscription', () => {
+describe('Account', () => {
     test('empty', () => {})
 
     /*test('Request Account', async() => {
-        return account.getAccountId(client).then(account => {
-            testUtils.existValue(account.accountId)
+        return account.getAccountId({ token }).then(account => {
+            testUtils.existValue(account.account_id)
             testUtils.existValue(account.created)
-            testUtils.existValue(account.externalId)
-            testUtils.existValue(account.emailVerified)
+            testUtils.existValue(account.external_id)
+            testUtils.existValue(account.email_verified)
         })
     })
     
     test('Request Profile', async() => {
-        return account.getProfile(client).then(profile => {
+        return account.getProfile({ token }).then(profile => {
             testUtils.existValue(profile.avatar)
-            testUtils.existValue(profile.crBetaOptIn)
-            testUtils.existValue(profile.crlegEmailVerified)
+            testUtils.existValue(profile.cr_beta_opt_in)
+            testUtils.existValue(profile.crleg_email_verified)
             testUtils.existValue(profile.email)
-            testUtils.existValue(profile.maturityRating)
-            testUtils.existValue(profile.optOutAndroidInAppMarketing)
-            testUtils.existValue(profile.optOutFreeTrials)
-            testUtils.existValue(profile.optOutNewMediaQueueUpdates)
-            testUtils.existValue(profile.optOutPmUpdates)
-            testUtils.existValue(profile.optOutPromotionalUpdates)
-            testUtils.existValue(profile.optOutQueueUpdates)
-            testUtils.existValue(profile.optOutStoreDeals)
-            testUtils.existValue(profile.preferredCommunicationLanguage)
-            testUtils.existValue(profile.preferredContentSubtitleLanguage)
-            testUtils.existValue(profile.qaUser)
+            testUtils.existValue(profile.maturity_rating)
+            testUtils.existValue(profile.opt_out_android_in_app_marketing)
+            testUtils.existValue(profile.opt_out_free_trials)
+            testUtils.existValue(profile.opt_out_new_media_queue_updates)
+            testUtils.existValue(profile.opt_out_pm_updates)
+            testUtils.existValue(profile.opt_out_promotional_updates)
+            testUtils.existValue(profile.opt_out_queue_updates)
+            testUtils.existValue(profile.opt_out_store_deals)
+            testUtils.existValue(profile.preferred_communication_language)
+            testUtils.existValue(profile.preferred_content_subtitle_language)
+            testUtils.existValue(profile.qa_user)
             testUtils.existValue(profile.username)
         })
     })
     
     test('Request Usernames', async() => {
-        return account.getUsernames(client).then(names => {
+        return account.getUsernames({ token }).then(names => {
             expect(names).toBeDefined()
             expect(names).toHaveProperty('usernames')
             testUtils.existValue(names.usernames)
@@ -55,6 +59,6 @@ describe('Sbuscription', () => {
     })
     
     test('Request Update Profile', async() => {
-        await account.updateProfile(client, {avatar: '16-the-god-of-high-school-jin-mori.png'})
+        await account.updateProfile({token, data: {avatar: '16-the-god-of-high-school-jin-mori.png'}})
     })*/
 })

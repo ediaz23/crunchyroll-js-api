@@ -5,61 +5,66 @@ const { URLSearchParams } = require('url')
 
 
 /**
- * @param {import('./../controllers/clients').Clients} client
- * @param {String} [source]
+ * @param {Object} obj
+ * @param {String} obj.token
+ * @param {String} obj.locale
+ * @param {String} [obj.source]
  * @returns {Promise<Object>}
- * @see error it's returning Forbidden
  */
-async function getProducts(client, source) {
+async function getProducts({ token, locale, source }) {
     const fnName = 'getProducts'
     logger.debug(fnName)
-    const queryData = {}
+    const queryData = { locale }
     utils.addParam(queryData, 'source', source ? source : 'google-play')
     const queryStr = new URLSearchParams(queryData)
     const url = `/subs/v2/products?${queryStr}`
     const reqConfig = {
         method: 'get',
-        headers: { 'Authorization': await client.getToken() }
+        headers: { 'Authorization': token }
     }
     return utils.makeRequest(fnName, url, reqConfig)
 }
 
 
 /**
- * @param {import('./../controllers/clients').Clients} client
+ * @param {Object} obj
+ * @param {String} obj.token
+ * @param {String} obj.locale
+ * @param {String} obj.externalId
  * @returns {Promise<Object>}
  */
-async function getUserBenefits(client) {
+async function getUserBenefits({ token, locale, externalId }) {
     const fnName = 'getUserBenefits'
     logger.debug(fnName)
-    const queryData = {locale: await client.getLocale()}
+    const queryData = { locale }
     const queryStr = new URLSearchParams(queryData)
-    const account = await client.getAccount()
 
-    const url = `/subs/v1/subscriptions/${account.externalId}/benefits?${queryStr}`
+    const url = `/subs/v1/subscriptions/${externalId}/benefits?${queryStr}`
     const reqConfig = {
         method: 'get',
-        headers: { 'Authorization': await client.getToken() }
+        headers: { 'Authorization': token }
     }
     return utils.makeRequest(fnName, url, reqConfig)
 }
 
 
 /**
- * @param {import('./../controllers/clients').Clients} client
+ * @param {Object} obj
+ * @param {String} obj.token
+ * @param {String} obj.locale
+ * @param {String} obj.externalId
  * @returns {Promise<Object>}
  */
-async function getUserSubscription(client) {
+async function getUserSubscription({ token, locale, externalId }) {
     const fnName = 'getUserSubscription'
     logger.debug(fnName)
-    const queryData = {locale: await client.getLocale()}
+    const queryData = { locale }
     const queryStr = new URLSearchParams(queryData)
-    const account = await client.getAccount()
 
-    const url = `/subs/v1/subscriptions/${account.externalId}/products?${queryStr}`
+    const url = `/subs/v1/subscriptions/${externalId}/products?${queryStr}`
     const reqConfig = {
         method: 'get',
-        headers: { 'Authorization': await client.getToken() }
+        headers: { 'Authorization': token }
     }
     return utils.makeRequest(fnName, url, reqConfig)
 }

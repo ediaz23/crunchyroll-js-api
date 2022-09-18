@@ -4,11 +4,25 @@ const testUtils = require('./testUtils')
 const subscription = require('../services/subscription')
 
 
+/** @type {String} */
+let token = null
+
+/** @type {String} */
+let locale = null
+
+/** @type {String} */
+let externalId = null
+
 /** @type {Clients} */
 let client = null
-beforeEach(() => {
+
+beforeEach(async () => {
     client = new Clients()
-    return client.loadFromLocal()
+    await client.loadFromLocal()
+    token = await client.getToken()
+    locale = await client.getLocale()
+    const account = await client.getAccount()
+    externalId = account.externalId
 })
 
 
@@ -16,7 +30,7 @@ describe('Sbuscription', () => {
     test('empty', () => {})
 
     /*test('Request Products', async() => {
-        return subscription.getProducts(client).then(res => {
+        return subscription.getProducts({token, locale}).then(res => {
             testUtils.itesmCheck(res)
             testUtils.resultCheck(res)
             testUtils.totalCheck(res)
@@ -24,7 +38,7 @@ describe('Sbuscription', () => {
     })
     
     test('Request User Benefist', async() => {
-        return subscription.getUserBenefits(client).then(res => {
+        return subscription.getUserBenefits({token, locale, externalId}).then(res => {
             testUtils.itesmCheck(res)
             testUtils.resultCheck(res)
             testUtils.totalCheck(res)
@@ -32,7 +46,7 @@ describe('Sbuscription', () => {
     })
     
     test('Request User Subscription', async() => {
-        return subscription.getUserSubscription(client).then(res => {
+        return subscription.getUserSubscription({token, locale, externalId}).then(res => {
             testUtils.itesmCheck(res)
             testUtils.resultCheck(res)
             testUtils.totalCheck(res)

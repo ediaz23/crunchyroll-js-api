@@ -3,7 +3,6 @@ const { URLSearchParams } = require('url')
 const config = require('../config/config.json')
 const utils = require('../utils')
 const logger = require('../logger')
-const { Tokens } = require('../models/tokens')
 
 
 /**
@@ -20,18 +19,20 @@ function getBasicToken() {
 
 /**
  * Make out system login
- * @param {import('../models/credentials').Credentials} credencials
- * @param {String} [grantType]
- * @param {String} [scope]
- * @returns {Promise<Tokens>}
+ * @param {Object} login
+ * @param {String} login.username user's email
+ * @param {String} login.password user's password
+ * @param {String} [login.grantType] login type
+ * @param {String} [login.scope]
+ * @returns {Promise<import('../types').Token>}
  */
-async function getToken(credencials, grantType, scope) {
+async function getToken({username, password, grantType, scope}) {
     const fnName = 'getToken'
     logger.debug(fnName)
     const basicToken = getBasicToken()
     const body = {
-        username: credencials.username,
-        password: credencials.password,
+        username: username,
+        password: password,
         grant_type: grantType ? grantType : 'password',
         scope: scope ? scope : 'offline_access'
     }
@@ -45,26 +46,26 @@ async function getToken(credencials, grantType, scope) {
             'ETP-Anonymous-ID': null,
         }
     }
-    const data = await utils.makeRequest(fnName, url, reqConfig)
-    const token = new Tokens()
-    data.created_date = new Date().toISOString()
-    token.fromJSON(data)
+    const token = await utils.makeRequest(fnName, url, reqConfig)
+    if (token) {
+        token.created_date = new Date().toISOString()
+    }
     return token
 }
 
 
 /**
  * Refresh access token.
- * @param {import('../models/tokens').Tokens} token 
- * @returns {Promise<Tokens>}
+ * @param {{refreshToken: String}}
+ * @returns {Promise<import('../types').Token>}
  */
-async function getRefreshToken(token) {
+async function getRefreshToken({refreshToken}) {
     const fnName = 'getRefreshToken'
     logger.debug(fnName)
     const basicToken = getBasicToken()
     const body = {
         grant_type: 'refresh_token',
-        refresh_token: token.refreshToken
+        refresh_token: refreshToken
     }
     const url = `/auth/v1/token`
     const reqConfig = {
@@ -76,25 +77,25 @@ async function getRefreshToken(token) {
             'ETP-Anonymous-ID': null,
         }
     }
-    const data = await utils.makeRequest(fnName, url, reqConfig)
-    const newToken = new Tokens()
-    data.created_date = new Date().toISOString()
-    newToken.fromJSON(data)
-    return newToken
+    const token = await utils.makeRequest(fnName, url, reqConfig)
+    if (token) {
+        token.created_date = new Date().toISOString()
+    }
+    return token
 }
 
 
 /**
  * revoke access token.
- * @param {import('../models/tokens').Tokens} token 
- * @returns {Promise}
+ * @param {{refreshToken: String}}
+ * @returns {Promise<{status: String}>}
  */
-async function revokeRefreshToken(token) {
+async function revokeRefreshToken({refreshToken}) {
     const fnName = 'revokeRefreshToken'
     logger.debug(fnName)
     const basicToken = getBasicToken()
     const body = {
-        token: token.refreshToken
+        token: refreshToken
     }
     const url = `/auth/v1/revoke`
     const reqConfig = {

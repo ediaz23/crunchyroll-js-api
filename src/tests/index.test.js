@@ -1,36 +1,45 @@
 
 const { Clients } = require('../controllers/clients')
+const testUtils = require('./testUtils')
 const index = require('../services/index')
 
 
+/** @type {String} */
+let token = null
+
 /** @type {Clients} */
 let client = null
-beforeEach(() => {
-    client = new Clients()
-    return client.loadFromLocal()
-})
 
+beforeEach(async () => {
+    client = new Clients()
+    await client.loadFromLocal()
+    token = await client.getToken()
+})
 
 describe('Index', () => {
     test('empty', () => {})
 
     /*test('Request Index', async() => {
-        return index.getIndexConfig(client).then(res => {
+        return index.getIndexConfig({ token }).then(res => {
+            const validateCms = cms => { 
+                expect(cms).not.toBeNull()
+                testUtils.existValue(cms.bucket)
+                testUtils.existValue(cms.policy)
+                testUtils.existValue(cms.signature)
+                testUtils.existValue(cms.key_pair_id)
+                testUtils.existValue(cms.expires)
+            }
             expect(res).not.toBeNull()
-            expect(res).toHaveProperty('bucket')
-            expect(res.bucket).not.toBeNull()
-            expect(res.bucket).not.toBe('')
-            expect(res).toHaveProperty('policy')
-            expect(res.policy).not.toBeNull()
-            expect(res.policy).not.toBe('')
-            expect(res).toHaveProperty('signature')
-            expect(res.signature).not.toBeNull()
-            expect(res.signature).not.toBe('')
-            expect(res).toHaveProperty('keyPairId')
-            expect(res.keyPairId).not.toBeNull()
-            expect(res.keyPairId).not.toBe('')
-            expect(res).toHaveProperty('expires')
-            expect(res.expires).not.toBeNull()
+            expect(res).toHaveProperty('cms')
+            expect(res).toHaveProperty('cms_beta')
+            expect(res).toHaveProperty('cms_web')
+            expect(res).toHaveProperty('service_available')
+            expect(res.service_available).not.toBeNull()
+            expect(res).toHaveProperty('default_marketing_opt_in')
+            expect(res.default_marketing_opt_in).not.toBeNull()
+            validateCms(res.cms)
+            validateCms(res.cms_beta)
+            validateCms(res.cms_web)
         })
     })*/
 })
