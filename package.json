@@ -8,17 +8,19 @@
     "lint": "npx eslint --ext .js ./",
     "test": "jest"
   },
+  "engines": {
+    "node": "^12.14.1 || ^12.21.0 || >=14.0.0"
+  },
+  "engineStrict": true,
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "jest": "^29.0.3",
     "node-fetch": "^2.6.7",
-    "pino": "^8.4.2",
-    "pino-pretty": "^9.1.0",
-    "save-dev": "^0.0.1-security"
+    "winston": "^3.8.2"
   },
   "devDependencies": {
-    "eslint": "^8.22.0"
+    "eslint": "^7.32.0",
+    "jest": "^28.1.3"
   }
 }

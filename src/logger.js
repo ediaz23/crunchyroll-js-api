@@ -1,18 +1,21 @@
 
-const pino = require('pino')
+const winston = require('winston');
 
-/**@type {pino.Logger} */
-const logger = pino({
+/** @type {winston.Logger} */
+const logger = winston.createLogger({
     level: process.env.LOG_LEVEL || 'info',
-    transport: {
-        target: 'pino-pretty',
-        options: {
-            colorize: true,
-            levelFirst: true, 
-            ignore: 'hostname', 
-            translateTime: true,
-        }
-    }
+    format: winston.format.combine(
+        winston.format.colorize(),
+        winston.format.splat(),
+        winston.format.timestamp(),
+        winston.format.printf(({ level, message, timestamp }) => {
+            if (message && !(typeof message === 'string' || message instanceof String)) {
+                message = JSON.stringify(message, null, '  ')
+            }
+            return `${timestamp} [${level}]: ${message} `
+        })
+    ),
+    transports: [new winston.transports.Console()],
 })
 
 

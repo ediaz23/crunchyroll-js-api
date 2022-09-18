@@ -51,7 +51,7 @@ class Clients extends BaseModel {
         }
     }
 
-    #update(key, data) {
+    _update(key, data) {
         if (data[key]) {
             if (data[key] instanceof BaseModel) {
                 this[key] = data[key]
@@ -63,7 +63,7 @@ class Clients extends BaseModel {
 
     update(data) {
         for(const key of Object.keys(data)) {
-            this.#update(key, data)
+            this._update(key, data)
         }
     }
     
