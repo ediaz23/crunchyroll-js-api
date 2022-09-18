@@ -93,6 +93,7 @@ class Clients {
      */
     async updateProfile(data) {
         this.client.update({profile: data})
+        await accountService.updateProfile(this, data)
         await this.saveToLocal()
     }
 
