@@ -20,15 +20,21 @@ const logger = winston.createLogger({
 
 
 process.on('uncaughtException', err => {
-  logger.error('uncaughtException')
-  logger.error(err)
-  process.exit(1)
+    logger.error('uncaughtException')
+    logger.error(err)
+    if (err.stack) {
+        logger.error(err.stack)
+    }
+    process.exit(1)
 })
 
 process.on('unhandledRejection', err => {
-  logger.error('unhandledRejection')
-  logger.error(err)
-  process.exit(1)
+    logger.error('unhandledRejection')
+    logger.error(err)
+    if (err.stack) {
+        logger.error(err.stack)
+    }
+    process.exit(1)
 })
 
 module.exports = logger

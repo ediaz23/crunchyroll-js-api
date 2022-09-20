@@ -1,5 +1,5 @@
 
-const { Clients } = require('../controllers/clients')
+const localStore = require('../localStore')
 const fs = require('fs')
 const auth = require('../services/auth')
 const testUtils = require('./testUtils')
@@ -9,15 +9,11 @@ const testUtils = require('./testUtils')
 let token = null
 
 /** @type {import('../types').Credential} */
-let credentials = null
-
-/** @type {Clients} */
-let client = null
+let credential = null
 
 beforeEach(async () => {
-    client = new Clients()
-    await client.loadFromLocal()
-    credentials = client.client.credentials
+    await localStore.loadFromLocal()
+    credential = localStore.storage.credential
 })
 
 /**
@@ -40,20 +36,18 @@ describe('Auth', () => {
     test('empty', () => {})
 
     test('Load Credentials', () => {
-        expect(fs.existsSync(client.authData)).toBe(true)
-        expect(client.client).toBeDefined()
-        expect(client.client).toHaveProperty('credentials')
+        expect(fs.existsSync(localStore.authDataFile())).toBe(true)
     })
 
     test('Credentials content', () => {
-        expect(credentials).not.toBeNull()
-        testUtils.existValue(credentials.username)
-        testUtils.existValue(credentials.password)
+        expect(credential).not.toBeNull()
+        testUtils.existValue(credential.username)
+        testUtils.existValue(credential.password)
     })
 
     test('Autenticate Wrong Email', async () => {
         await expect(async () => {
-            const credentialsWrong = {...credentials}
+            const credentialsWrong = {...credential}
             credentialsWrong.username += '1'
             await auth.getToken({...credentialsWrong})
         }).rejects.toThrowError(new Error('invalid_grant'))
@@ -61,14 +55,14 @@ describe('Auth', () => {
 
     test('Autenticate Wrong Password', async () => {
         await expect(async () => {
-            const credentialsWrong = {...credentials}
+            const credentialsWrong = {...credential}
             credentialsWrong.password += '1'
             await auth.getToken({...credentialsWrong})
         }).rejects.toThrowError(new Error('invalid_grant'))
     })
 
     test('Autenticate Okey', async () => {
-        token = await auth.getToken({...credentials})
+        token = await auth.getToken({...credential})
         validateToken(token)
     })
     

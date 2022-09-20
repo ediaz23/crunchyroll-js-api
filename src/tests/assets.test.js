@@ -1,5 +1,5 @@
 
-const { Clients } = require('../controllers/clients')
+const localStore = require('../localStore')
 const assets = require('../services/assets')
 const testUtils = require('./testUtils')
 
@@ -8,9 +8,8 @@ const testUtils = require('./testUtils')
 let token = null
 
 beforeEach(async () => {
-    const client = new Clients()
-    await client.loadFromLocal()
-    token = await client.getToken()
+    await localStore.loadFromLocal()
+    token = await localStore.getAuthToken()
 })
 
 describe('Assets', () => {

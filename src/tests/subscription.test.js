@@ -1,5 +1,5 @@
 
-const { Clients } = require('../controllers/clients')
+const localStore = require('../localStore')
 const testUtils = require('./testUtils')
 const subscription = require('../services/subscription')
 
@@ -11,13 +11,11 @@ let auth = null
 let externalId = null
 
 beforeEach(async () => {
-    const client = new Clients()
-    await client.loadFromLocal()
-    const token = await client.getToken()
-    const locale = await client.getLocale()
+    await localStore.loadFromLocal()
+    const token = await localStore.getAuthToken()
+    const locale = await localStore.getLocale()
     auth = { token, locale}
-    const account = await client.getAccount()
-    externalId = account.externalId
+    externalId = (await localStore.getAccount()).externalId
 })
 
 

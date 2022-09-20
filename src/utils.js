@@ -44,10 +44,6 @@ async function logRes(fnName, res) {
 async function makeRawRequest(url, reqConfig) {
     url = decodeURIComponent(`${config.url}${url}`)
     logger.debug(`${reqConfig.method} - ${url}`)
-    /** @todo quitar */
-    if (reqConfig.body && reqConfig.headers['Content-Type'] == 'application/json') {
-        logger.debug(JSON.stringify(JSON.parse(reqConfig.body), null, '    '))
-    }
     if (!reqConfig.headers) {
         reqConfig.headers = {}
     }
@@ -73,8 +69,6 @@ async function makeRequest(fnName, url, reqConfig) {
     let out = null
     try {
         out = await res.json()
-        /** @todo quitar */
-        logger.info(JSON.stringify(out, null,'    '))
     } catch(_e) {
         // nothing
     }

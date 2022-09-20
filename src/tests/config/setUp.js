@@ -1,11 +1,11 @@
 
-const { Clients } = require('../../controllers/clients')
+const localStore = require('../../localStore')
+
 
 async function setupApp () {
-    const client = new Clients()
-    await client.loadFromLocal()
-    client.client.tokens = null
-    await client.getToken()
+    await localStore.loadFromLocal()
+    localStore.storage.token = null
+    await localStore.getToken()
 }
 
 module.exports = setupApp

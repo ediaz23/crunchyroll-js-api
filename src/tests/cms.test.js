@@ -1,5 +1,5 @@
 
-const { Clients } = require('../controllers/clients')
+const localStore = require('../localStore')
 const testUtils = require('./testUtils')
 const cms = require('../services/cms')
 
@@ -8,11 +8,10 @@ const cms = require('../services/cms')
 let basicParam = null
 
 beforeEach(async () => {
-    const client = new Clients()
-    await client.loadFromLocal()
-    const token = await client.getToken()
-    const locale = await client.getLocale()
-    const cmsData = (await client.getCms()).toObject()
+    await localStore.loadFromLocal()
+    const token = await localStore.getAuthToken()
+    const locale = await localStore.getLocale()
+    const cmsData = await localStore.getCms()
     basicParam = { cmsAuth: { token, locale, ...cmsData } }
 })
 
