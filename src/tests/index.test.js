@@ -1,5 +1,5 @@
 
-const { Clients } = require('../controllers/clients')
+const localStore = require('../localStore')
 const testUtils = require('./testUtils')
 const index = require('../services/index')
 
@@ -8,9 +8,8 @@ const index = require('../services/index')
 let token = null
 
 beforeEach(async () => {
-    const client = new Clients()
-    await client.loadFromLocal()
-    token = await client.getToken()
+    await localStore.loadFromLocal()
+    token = await localStore.getAuthToken()
 })
 
 describe('Index', () => {

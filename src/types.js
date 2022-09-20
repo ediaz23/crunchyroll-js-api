@@ -14,6 +14,19 @@
  */
  
 /**
+ * @typedef TokenObj
+ * @type {Object}
+ * @property {String} accessToken
+ * @property {String} refreshToken
+ * @property {String} expiresIn
+ * @property {String} tokenType
+ * @property {String} scope
+ * @property {String} country
+ * @property {String} accountId
+ * @property {String} createdDate
+ */
+ 
+/**
  * @typedef Credential
  * @type {Object}
  * @property {String} username
@@ -26,6 +39,15 @@
  * @property {String} account_id
  * @property {String} external_id
  * @property {Boolean} email_verified
+ * @property {String} created
+ */
+ 
+ /**
+ * @typedef AccountObj
+ * @type {Object}
+ * @property {String} accountId
+ * @property {String} externalId
+ * @property {Boolean} emailVerified
  * @property {String} created
  */
  
@@ -58,6 +80,16 @@
  * @property {String} policy
  * @property {String} signature
  * @property {String} key_pair_id
+ * @property {String} expires
+ */
+ 
+ /**
+ * @typedef CmsObj
+ * @type {Object}
+ * @property {String} bucket
+ * @property {String} policy
+ * @property {String} signature
+ * @property {String} keyPairId
  * @property {String} expires
  */
  
@@ -113,7 +145,7 @@
  */
 
 /**
- * @typedef {AuthBase & import('./models/cms').Cms} CmsAuth
+ * @typedef {AuthBase & CmsObj} CmsAuth
  */
 
 /**
