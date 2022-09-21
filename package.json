@@ -1,7 +1,9 @@
 {
-  "name": "crunchyrolle_api",
+  "name": "crunchyroll_js_api",
+  "license": "Apache-2.0",
+  "description": "JavaScript API consumer for crunchyroll",
+  "homepage": "https://github.com/ediaz23/crunchyroll_js_api",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "play": "node index.js",
@@ -12,9 +14,16 @@
     "node": "^12.14.1 || ^12.21.0 || >=14.0.0"
   },
   "engineStrict": true,
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "crunchyroll",
+    "anime",
+    "api"
+  ],
+  "author": "Esteban Díaz <esteban.diazt23@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ediaz23/crunchyroll_js_api"
+  },
   "dependencies": {
     "node-fetch": "^2.6.7",
     "winston": "^3.8.2"
