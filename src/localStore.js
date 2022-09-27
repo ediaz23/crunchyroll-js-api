@@ -38,7 +38,7 @@ async function getAuthToken() {
         } else {
             data = await authService.getToken(storage.credential)
         }
-        storage.token = fromJSON(data)
+        storage.token = fromJSON(data)  // eslint-disable-line require-atomic-updates
         await saveToLocal()
         token = storage.token
     }
@@ -68,7 +68,7 @@ async function getCms() {
     }
     if (!cms) {
         cms = await indexService.getIndexConfig({ token: await getAuthToken()})
-        storage.cms = fromJSON(cms.cms)
+        storage.cms = fromJSON(cms.cms)    // eslint-disable-line require-atomic-updates
         cms = storage.cms
         await saveToLocal()
     }
@@ -82,7 +82,7 @@ async function getCms() {
 async function getAccount() {
     if (!storage.account || !storage.account.accountId) {
         const account = await accountService.getAccountId({ token: await getAuthToken() })
-        storage.account = fromJSON(account)
+        storage.account = fromJSON(account)    // eslint-disable-line require-atomic-updates
         await saveToLocal()
     }
     return storage.account

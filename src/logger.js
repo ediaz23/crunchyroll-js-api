@@ -1,21 +1,22 @@
 
 const winston = require('winston');
 
-/** @type {winston.Logger} */
-const logger = winston.createLogger({
+const config = winston.config;
+
+/** @type {winston.LoggerInstance} */
+const logger = new (winston.Logger)({
     level: process.env.LOG_LEVEL || 'info',
-    format: winston.format.combine(
-        winston.format.colorize(),
-        winston.format.splat(),
-        winston.format.timestamp(),
-        winston.format.printf(({ level, message, timestamp }) => {
-            if (message && !(typeof message === 'string' || message instanceof String)) {
-                message = JSON.stringify(message, null, '  ')
+    transports: [
+        new (winston.transports.Console)({
+            timestamp: () => Date.now(),
+            formatter: (options) => {
+                return options.timestamp() + ' ' +
+                      config.colorize(options.level, options.level.toUpperCase()) + ' ' +
+                      (options.message ? options.message : '') +
+                      (options.meta && Object.keys(options.meta).length ? '\n'+ JSON.stringify(options.meta, null, '  ') : '' );
             }
-            return `${timestamp} [${level}]: ${message} `
         })
-    ),
-    transports: [new winston.transports.Console()],
+    ]
 })
 
 

@@ -64,16 +64,12 @@ describe('Review', () => {
 
     test('addEpisodeRating wrong contentType', async() => {
         const param = {...basicParam, contentId: episodeId, rating: 'down', contentType: 'malo'}
-        await expect(async () => {
-            await review.addEpisodeRating(param)
-        }).rejects.toThrow()
+        await expect(review.addEpisodeRating(param)).rejects.toThrow()
     })
 
     test('addEpisodeRating wrong rating', async() => {
         const param = {...basicParam, contentId: episodeId, rating: 'malo'}
-        await expect(async () => {
-            await review.addEpisodeRating(param)
-        }).rejects.toThrow()
+        await expect(review.addEpisodeRating(param)).rejects.toThrow()
     })
 
     test('addEpisodeRating okey down', async() => {
@@ -103,16 +99,12 @@ describe('Review', () => {
     
     test('addRating wrong rating', async() => {
         const param = {...basicParam, contentId: serieId, rating: 'malo', contentType: 'series'}
-        await expect(async () => {
-            await review.addRating(param)
-        }).rejects.toThrow()
+        await expect(review.addRating(param)).rejects.toThrow()
     })
     
     test('addRating wrong contentType', async() => {
         const param = {...basicParam, contentId: serieId, rating: '5s', contentType: 'malo'}
-        await expect(async () => {
-            await review.addRating(param)
-        }).rejects.toThrow()
+        await expect(review.addRating(param)).rejects.toThrow()
     })
     
     test('getEpisodeRatings okey', async() => {
@@ -147,9 +139,7 @@ describe('Review', () => {
     
     test('getRatings wrong contentType', async() => {
         const param = {...basicParam, contentId: serieId, contentType: 'malo'}
-        await expect(async () => {
-            await review.getRatings(param)
-        }).rejects.toThrow()
+        await expect(review.getRatings(param)).rejects.toThrow()
     })
 
     test('removeRating okey', async() => {
@@ -159,23 +149,16 @@ describe('Review', () => {
 
     test('removeRating valid contentType', async() => {
         const param = {...basicParam, contentId: serieId, contentType: 'series'}
-        await expect(async () => {
-            await review.removeRating(param)
-        }).rejects.toThrow()
+        await expect(review.removeRating(param)).rejects.toThrow()
     })
     
     test('removeRating wrong contentType', async() => {
         const param = {...basicParam, contentId: serieId, contentType: 'malo'}
-        await expect(async () => {
-            await review.removeRating(param)
-        }).rejects.toThrow()
+        await expect(review.removeRating(param)).rejects.toThrow()
     })
     
     test('removeRating wrong key', async() => {
         const param = {...basicParam, contentId: serieId + '_1', contentType: 'series'}
-        await expect(async () => {
-            await review.removeRating(param)
-        }).rejects.toThrow()
+        await expect(review.removeRating(param)).rejects.toThrow()
     })
-    
 })
