@@ -3,7 +3,7 @@
   "license": "Apache-2.0",
   "description": "JavaScript API consumer for crunchyroll",
   "homepage": "https://github.com/ediaz23/crunchyroll_js_api",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.js",
   "scripts": {
     "play": "node index.js",
@@ -11,7 +11,7 @@
     "test": "jest"
   },
   "engines": {
-    "node": "^12.14.1 || ^12.21.0 || >=14.0.0"
+    "node": ">=8.12.0"
   },
   "engineStrict": true,
   "keywords": [
@@ -25,11 +25,12 @@
     "url": "https://github.com/ediaz23/crunchyroll_js_api"
   },
   "dependencies": {
+    "encoding": "^0.1.13",
     "node-fetch": "^2.6.7",
-    "winston": "^3.8.2"
+    "winston": "^2.4.6"
   },
   "devDependencies": {
-    "eslint": "^7.32.0",
-    "jest": "^28.1.3"
+    "eslint": "^6.5.0",
+    "jest": "^24.9.0"
   }
 }

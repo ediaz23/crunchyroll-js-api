@@ -46,19 +46,19 @@ describe('Auth', () => {
     })
 
     test('Autenticate Wrong Email', async () => {
-        await expect(async () => {
+        await expect(new Promise((res, rej) => {
             const credentialsWrong = {...credential}
             credentialsWrong.username += '1'
-            await auth.getToken({...credentialsWrong})
-        }).rejects.toThrowError(new Error('invalid_grant'))
+            auth.getToken({...credentialsWrong}).then(res).catch(rej)
+        })).rejects.toThrowError(new Error('invalid_grant'))
     }) 
 
     test('Autenticate Wrong Password', async () => {
-        await expect(async () => {
+        await expect(new Promise ((res, rej) => {
             const credentialsWrong = {...credential}
             credentialsWrong.password += '1'
-            await auth.getToken({...credentialsWrong})
-        }).rejects.toThrowError(new Error('invalid_grant'))
+            auth.getToken({...credentialsWrong}).then(res).catch(rej)
+        })).rejects.toThrowError(new Error('invalid_grant'))
     })
 
     test('Autenticate Okey', async () => {
@@ -76,5 +76,4 @@ describe('Auth', () => {
             expect(data).toEqual({status: "OK"})
         })
     })
-
 })

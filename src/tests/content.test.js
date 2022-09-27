@@ -345,6 +345,5 @@ describe('Content', () => {
         const param = {...basicParam, playheadBatch}
         return content.savePlayheadBatch(param)
     })
-
 })
 

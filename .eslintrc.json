@@ -1,18 +1,18 @@
 {
     "env": {
         "browser": true,
-        "es2021": true,
-        "node": true
+        "node": true,
+        "es6": true
     },
     "extends": "eslint:recommended",
     "parserOptions": {
-        "ecmaVersion": "latest",
+        "ecmaVersion": 2020,
         "sourceType": "module"
     },
     "rules": {
         "no-unused-vars": [
-          "error", 
-          { 
+          "error",
+          {
             "argsIgnorePattern": "^_",
             "varsIgnorePattern": "^_",
             "caughtErrorsIgnorePattern": "^_"
