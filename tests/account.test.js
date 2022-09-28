@@ -1,7 +1,7 @@
 
-const localStore = require('../localStore')
+const localStore = require('../src/localStore')
 const testUtils = require('./testUtils')
-const account = require('../services/account')
+const account = require('../src/services/account')
 
 
 /** @type {String} */

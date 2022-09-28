@@ -1,5 +1,5 @@
 
-const localStore = require('../../localStore')
+const localStore = require('../../src/localStore')
 
 
 async function setupApp () {

@@ -1,6 +1,6 @@
 
-const localStore = require('../localStore')
-const assets = require('../services/assets')
+const localStore = require('../src/localStore')
+const assets = require('../src/services/assets')
 const testUtils = require('./testUtils')
 
 
