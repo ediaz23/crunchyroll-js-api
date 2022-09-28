@@ -1,7 +1,7 @@
 
-const localStore = require('../localStore')
+const localStore = require('../src/localStore')
 const testUtils = require('./testUtils')
-const review = require('../services/review')
+const review = require('../src/services/review')
 
 
 /** @type {{account: import('../types').AccountAuth}} */

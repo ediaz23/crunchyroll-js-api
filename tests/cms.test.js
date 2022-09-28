@@ -1,7 +1,7 @@
 
-const localStore = require('../localStore')
+const localStore = require('../src/localStore')
 const testUtils = require('./testUtils')
-const cms = require('../services/cms')
+const cms = require('../src/services/cms')
 
 
 /** @type {{cmsAuth : import('../types').CmsAuth}} */

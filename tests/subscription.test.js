@@ -1,7 +1,7 @@
 
-const localStore = require('../localStore')
+const localStore = require('../src/localStore')
 const testUtils = require('./testUtils')
-const subscription = require('../services/subscription')
+const subscription = require('../src/services/subscription')
 
 
 /** @type {import('../types').AuthBase} */

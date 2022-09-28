@@ -1,7 +1,7 @@
 
-const localStore = require('../localStore')
+const localStore = require('../src/localStore')
 const fs = require('fs')
-const auth = require('../services/auth')
+const auth = require('../src/services/auth')
 const testUtils = require('./testUtils')
 
 
