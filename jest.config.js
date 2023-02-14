@@ -1,9 +1,12 @@
-module.exports = {
-	roots: [
-		"<rootDir>/"
-	],
-	globalSetup: "<rootDir>/tests/config/setUp.js",
-	testMatch: [
-		"**/tests/*.test.+(ts|tsx|js)",
-	],
+
+export default {
+    roots: [
+        '<rootDir>/'
+    ],
+    testEnvironment: 'node',
+    globalSetup: '<rootDir>/tests/config/setUp.js',
+    testMatch: [
+        '**/tests/*.test.+(ts|tsx|js)',
+    ],
+    transformIgnorePatterns: ['/node_modules'],
 }

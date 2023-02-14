@@ -1,5 +1,5 @@
 
-const expect = require('expect')
+import { expect } from '@jest/globals'
 
 /**
  * Check generic items result
@@ -48,7 +48,7 @@ function existValue(value) {
     expect(value).not.toBeNull()
 }
 
-module.exports = {
+export default {
     itesmCheck,
     resultCheck,
     totalCheck,

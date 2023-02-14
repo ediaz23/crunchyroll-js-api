@@ -1,7 +1,7 @@
 
-const localStore = require('../src/localStore')
-const testUtils = require('./testUtils')
-const index = require('../src/services/index')
+import localStore from '../src/localStore.js'
+import testUtils from './testUtils.js'
+import index from '../src/services/index.js'
 
 
 /** @type {String} */
@@ -13,11 +13,10 @@ beforeEach(async () => {
 })
 
 describe('Index', () => {
-    test('empty', () => {})
 
-    test('Request Index', async() => {
+    test('Request Index', async () => {
         return index.getIndexConfig({ token }).then(res => {
-            const validateCms = cms => { 
+            const validateCms = cms => {
                 expect(cms).not.toBeNull()
                 testUtils.existValue(cms.bucket)
                 testUtils.existValue(cms.policy)

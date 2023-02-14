@@ -1,8 +1,8 @@
 
-const localStore = require('../src/localStore')
-const fs = require('fs')
-const auth = require('../src/services/auth')
-const testUtils = require('./testUtils')
+import localStore from '../src/localStore.js'
+import fs from 'fs'
+import auth from '../src/services/auth.js'
+import testUtils from './testUtils.js'
 
 
 /** @type {import('../types').Token} */
@@ -33,10 +33,9 @@ function validateToken(token) {
 
 
 describe('Auth', () => {
-    test('empty', () => {})
 
-    test('Load Credentials', () => {
-        expect(fs.existsSync(localStore.authDataFile())).toBe(true)
+    test('Load Credentials', async () => {
+        expect(fs.existsSync(await localStore.authDataFile())).toBe(true)
     })
 
     test('Credentials content', () => {
@@ -47,33 +46,33 @@ describe('Auth', () => {
 
     test('Autenticate Wrong Email', async () => {
         await expect(new Promise((res, rej) => {
-            const credentialsWrong = {...credential}
+            const credentialsWrong = { ...credential }
             credentialsWrong.username += '1'
-            auth.getToken({...credentialsWrong}).then(res).catch(rej)
+            auth.getToken({ ...credentialsWrong }).then(res).catch(rej)
         })).rejects.toThrowError(new Error('invalid_grant'))
-    }) 
+    })
 
     test('Autenticate Wrong Password', async () => {
-        await expect(new Promise ((res, rej) => {
-            const credentialsWrong = {...credential}
+        await expect(new Promise((res, rej) => {
+            const credentialsWrong = { ...credential }
             credentialsWrong.password += '1'
-            auth.getToken({...credentialsWrong}).then(res).catch(rej)
+            auth.getToken({ ...credentialsWrong }).then(res).catch(rej)
         })).rejects.toThrowError(new Error('invalid_grant'))
     })
 
     test('Autenticate Okey', async () => {
-        token = await auth.getToken({...credential})
+        token = await auth.getToken({ ...credential })
         validateToken(token)
     })
-    
+
     test('Refresh Token Okey', async () => {
-        token = await auth.getRefreshToken({refreshToken: token.refresh_token})
+        token = await auth.getRefreshToken({ refreshToken: token.refresh_token })
         validateToken(token)
     })
 
     test('Revoke Refresh Token Okey', async () => {
-        return auth.revokeRefreshToken({refreshToken: token.refresh_token}).then(data => {
-            expect(data).toEqual({status: "OK"})
+        return auth.revokeRefreshToken({ refreshToken: token.refresh_token }).then(data => {
+            expect(data).toEqual({ status: "OK" })
         })
     })
 })

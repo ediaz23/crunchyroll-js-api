@@ -1,6 +1,7 @@
 
-const utils = require('../utils')
-const logger = require('../logger')
+import utils from '../utils.js'
+import logger from '../logger.js'
+
 
 /**
  * Return index data. Cms is set there
@@ -13,11 +14,11 @@ async function getIndexConfig({ token }) {
     const url = `/index/v2`
     const reqConfig = {
         method: 'get',
-        headers: {'Authorization': token}
+        headers: { 'Authorization': token }
     }
     return utils.makeRequest(fnName, url, reqConfig)
 }
 
-module.exports = {
+export default {
     getIndexConfig,
 }

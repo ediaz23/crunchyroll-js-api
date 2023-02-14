@@ -1,8 +1,7 @@
 
-const config = require('./config/config.json')
-const fetch = require('node-fetch')
-const logger = require('./logger')
-const CONST = require('./const')
+import config from './config/config.json'
+import logger from './logger.js'
+import CONST from './const.js'
 
 
 /**
@@ -19,12 +18,12 @@ async function logRes(fnName, res) {
             const r = await res.json()
             if (r && r.error) {
                 msg = r.error
-            } 
+            }
             logger.error(r)
-        } catch(_e) {
+        } catch (_e) {
             // ignore
         }
-        if (!msg) { 
+        if (!msg) {
             msg = res.statusText ? res.statusText : 'Unexpected error.'
         }
         logger.error(msg)
@@ -42,17 +41,26 @@ async function logRes(fnName, res) {
  * @returns {Promise<import('node-fetch').Response>}
  */
 async function makeRawRequest(url, reqConfig) {
+    let fetchFn = null
+    let Headers = {}
     url = decodeURIComponent(`${config.url}${url}`)
     logger.debug(`${reqConfig.method} - ${url}`)
     if (!reqConfig.headers) {
         reqConfig.headers = {}
     }
-    if (reqConfig.headers instanceof fetch.Headers) {
+    try {
+        fetchFn = await import('node-fetch')
+        Headers = fetchFn.Headers
+        fetchFn = fetchFn.default
+    } catch (_e) {
+        fetchFn = fetch
+    }
+    if (reqConfig.headers instanceof Headers) {
         reqConfig.headers.append('User-Agent', CONST.getUserAgent())
     } else {
         reqConfig.headers['User-Agent'] = CONST.getUserAgent()
     }
-    return fetch(url, reqConfig)
+    return fetchFn(url, reqConfig)
 }
 
 
@@ -69,7 +77,7 @@ async function makeRequest(fnName, url, reqConfig) {
     let out = null
     try {
         out = await res.json()
-    } catch(_e) {
+    } catch (_e) {
         // nothing
     }
     return out
@@ -112,12 +120,30 @@ function toSnake(str) {
     return str.replace(/[A-Z]/g, letter => `_${letter.toLowerCase()}`)
 }
 
-module.exports = {
-    camelCase: str => str.replace(/_([a-z])/g, (_m,w) => w.toUpperCase()),
+/**
+ * Return a toURLSearchParams object
+ * @param {Object} data
+ * @returns {Promise<import('url').URLSearchParams>}
+ */
+async function toURLSearchParams(data) {
+    let URLSearchParamsClass = null
+    try {
+        const url = await import('url')
+        URLSearchParamsClass = url.URLSearchParams
+    } catch (_e) {
+        URLSearchParamsClass = URLSearchParams
+    }
+    
+    return new URLSearchParamsClass(data)
+}
+
+export default {
+    camelCase: str => str.replace(/_([a-z])/g, (_m, w) => w.toUpperCase()),
     logRes,
     makeRawRequest,
     makeRequest,
     addParam,
     toCamel,
     toSnake,
+    toURLSearchParams,
 }

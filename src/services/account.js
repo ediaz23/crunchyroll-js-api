@@ -1,6 +1,6 @@
 
-const utils = require('../utils')
-const logger = require('../logger')
+import utils from '../utils.js'
+import logger from '../logger.js'
 
 
 /**
@@ -14,7 +14,7 @@ async function getAccountId({ token }) {
     const url = `/accounts/v1/me`
     const reqConfig = {
         method: 'get',
-        headers: {'Authorization': token}
+        headers: { 'Authorization': token }
     }
     return utils.makeRequest(fnName, url, reqConfig)
 }
@@ -31,7 +31,7 @@ async function getProfile({ token }) {
     const url = `/accounts/v1/me/profile`
     const reqConfig = {
         method: 'get',
-        headers: {'Authorization': token}
+        headers: { 'Authorization': token }
     }
     return utils.makeRequest(fnName, url, reqConfig)
 }
@@ -48,7 +48,7 @@ async function getUsernames({ token }) {
     const url = `/accounts/v1/usernames`
     const reqConfig = {
         method: 'get',
-        headers: {'Authorization': token}
+        headers: { 'Authorization': token }
     }
     return utils.makeRequest(fnName, url, reqConfig)
 }
@@ -72,12 +72,12 @@ async function updateProfile({ token, data }) {
             'Authorization': token,
             'Content-Type': 'application/json',
         },
-        body:  JSON.stringify(data),
+        body: JSON.stringify(data),
     }
     await utils.makeRequest(fnName, url, reqConfig)
 }
 
-module.exports = {
+export default {
     getAccountId,
     getProfile,
     getUsernames,

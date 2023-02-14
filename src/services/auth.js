@@ -1,9 +1,7 @@
 
-const utils = require('../utils')
-const logger = require('../logger')
-const { URLSearchParams } = require('url')
-const CONST = require('../const')
-
+import utils from '../utils.js'
+import logger from '../logger.js'
+import CONST from '../const.js'
 
 
 /**
@@ -11,7 +9,7 @@ const CONST = require('../const')
  * @returns {String}
  */
 function getBasicToken() {
-    const credenciales =  `${CONST.getClientId()}:${CONST.getClientSecret()}`
+    const credenciales = `${CONST.getClientId()}:${CONST.getClientSecret()}`
     let buff = Buffer.from(credenciales)
     let base64data = buff.toString('base64')
     return base64data
@@ -40,7 +38,7 @@ async function getToken({ username, password, grantType, scope }) {
     const url = `/auth/v1/token`
     const reqConfig = {
         method: 'post',
-        body:  new URLSearchParams(body),
+        body: await utils.toURLSearchParams(body),
         headers: {
             'Authorization': `Basic ${basicToken}`,
             'Content-Type': 'application/x-www-form-urlencoded',
@@ -71,7 +69,7 @@ async function getRefreshToken({ refreshToken }) {
     const url = `/auth/v1/token`
     const reqConfig = {
         method: 'post',
-        body:  new URLSearchParams(body),
+        body: await utils.toURLSearchParams(body),
         headers: {
             'Authorization': `Basic ${basicToken}`,
             'Content-Type': 'application/x-www-form-urlencoded',
@@ -101,7 +99,7 @@ async function revokeRefreshToken({ refreshToken }) {
     const url = `/auth/v1/revoke`
     const reqConfig = {
         method: 'post',
-        body:  new URLSearchParams(body),
+        body: await utils.toURLSearchParams(body),
         headers: {
             'Authorization': `Basic ${basicToken}`,
             'Content-Type': 'application/x-www-form-urlencoded',
@@ -112,7 +110,7 @@ async function revokeRefreshToken({ refreshToken }) {
 }
 
 
-module.exports = {
+export default {
     getToken,
     getRefreshToken,
     revokeRefreshToken,

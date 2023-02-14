@@ -12,7 +12,7 @@
  * @property {String} account_id
  * @property {String} created_date
  */
- 
+
 /**
  * @typedef TokenObj
  * @type {Object}
@@ -25,7 +25,7 @@
  * @property {String} accountId
  * @property {String} createdDate
  */
- 
+
 /**
  * @typedef Credential
  * @type {Object}
@@ -41,16 +41,16 @@
  * @property {Boolean} email_verified
  * @property {String} created
  */
- 
- /**
- * @typedef AccountObj
- * @type {Object}
- * @property {String} accountId
- * @property {String} externalId
- * @property {Boolean} emailVerified
- * @property {String} created
- */
- 
+
+/**
+* @typedef AccountObj
+* @type {Object}
+* @property {String} accountId
+* @property {String} externalId
+* @property {Boolean} emailVerified
+* @property {String} created
+*/
+
 /**
  * @typedef Profile
  * @type {Object}
@@ -72,7 +72,7 @@
  * @property {Boolean} qa_user
  * @property {String} username
  */
- 
+
 /**
  * @typedef Cms
  * @type {Object}
@@ -82,17 +82,17 @@
  * @property {String} key_pair_id
  * @property {String} expires
  */
- 
- /**
- * @typedef CmsObj
- * @type {Object}
- * @property {String} bucket
- * @property {String} policy
- * @property {String} signature
- * @property {String} keyPairId
- * @property {String} expires
- */
- 
+
+/**
+* @typedef CmsObj
+* @type {Object}
+* @property {String} bucket
+* @property {String} policy
+* @property {String} signature
+* @property {String} keyPairId
+* @property {String} expires
+*/
+
 /**
  * @typedef CmsContainer
  * @type {Object}
@@ -123,7 +123,7 @@
  * @property {String} unit
  * @property {Number} percentage
  */
- 
+
 /**
  * @typedef RatingStars
  * @type {Object}
@@ -163,4 +163,4 @@
  * @property {String} modified_at
  */
 
-export {}  // eslint-disable-line no-undef
+export default {}  // eslint-disable-line no-undef

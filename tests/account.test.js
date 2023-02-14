@@ -1,7 +1,7 @@
 
-const localStore = require('../src/localStore')
-const testUtils = require('./testUtils')
-const account = require('../src/services/account')
+import localStore from '../src/localStore.js'
+import testUtils from './testUtils.js'
+import account from '../src/services/account.js'
 
 
 /** @type {String} */
@@ -13,9 +13,8 @@ beforeEach(async () => {
 })
 
 describe('Account', () => {
-    test('empty', () => {})
 
-    test('Request Account', async() => {
+    test('Request Account', async () => {
         return account.getAccountId({ token }).then(account => {
             testUtils.existValue(account.account_id)
             testUtils.existValue(account.created)
@@ -23,8 +22,8 @@ describe('Account', () => {
             testUtils.existValue(account.email_verified)
         })
     })
-    
-    test('Request Profile', async() => {
+
+    test('Request Profile', async () => {
         return account.getProfile({ token }).then(profile => {
             testUtils.existValue(profile.avatar)
             testUtils.existValue(profile.cr_beta_opt_in)
@@ -44,8 +43,8 @@ describe('Account', () => {
             testUtils.existValue(profile.username)
         })
     })
-    
-    test('Request Usernames', async() => {
+
+    test('Request Usernames', async () => {
         return account.getUsernames({ token }).then(names => {
             expect(names).toBeDefined()
             expect(names).toHaveProperty('usernames')
@@ -53,8 +52,8 @@ describe('Account', () => {
             expect(names.usernames.length).toBeGreaterThan(0)
         })
     })
-    
-    test('Request Update Profile', async() => {
-        await account.updateProfile({ token, data: {avatar: '16-the-god-of-high-school-jin-mori.png'} })
+
+    test('Request Update Profile', async () => {
+        await account.updateProfile({ token, data: { avatar: '16-the-god-of-high-school-jin-mori.png' } })
     })
 })
