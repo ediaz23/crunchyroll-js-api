@@ -1,636 +1,2484 @@
 {
-  "supported": [
-    "ar-SA",
-    "de-DE",
-    "en-US",
-    "es-419",
-    "es-ES",
-    "fr-FR",
-    "it-IT",
-    "pt-BR",
-    "pt-PT",
-    "ru-RU"
-  ],
-  "supported_fallbacks": {
-    "ar-SA": ["en-US"],
-    "de-DE": ["en-US"],
-    "en-US": ["en-US"],
-    "es-419": ["es-ES", "en-US"],
-    "es-ES": ["es-419", "en-US"],
-    "fr-FR": ["en-US"],
-    "it-IT": ["en-US"],
-    "pt-BR": ["pt-PT", "en-US"],
-    "pt-PT": ["pt-BR", "en-US"],
-    "ru-RU": ["en-US"]
-  },
-  "mapping": {
-    "af": {"to":"en-US", "desc":"Afrikaans"},
-    "af-NA": {"to":"en-US", "desc":"Afrikaans (Namibia)"},
-    "af-ZA": {"to":"en-US", "desc":"Afrikaans (South Africa)"},
-    "agq": {"to":"en-US", "desc":"Aghem"},
-    "agq-CM": {"to":"en-US", "desc":"Aghem (Cameroon)"},
-    "ak": {"to":"en-US", "desc":"Akan"},
-    "ak-GH": {"to":"en-US", "desc":"Akan (Ghana)"},
-    "am": {"to":"en-US", "desc":"Amharic"},
-    "am-ET": {"to":"en-US", "desc":"Amharic (Ethiopia)"},
-    "ar": {"to":"ar-SA", "desc":"Arabic"},
-    "ar-SA": {"to":"ar-SA", "desc":"Arabic"},
-    "ar-001": {"to":"ar-SA", "desc":"Arabic (World)"},
-    "ar-AE": {"to":"ar-SA", "desc":"Arabic (United Arab Emirates)"},
-    "ar-BH": {"to":"ar-SA", "desc":"Arabic (Bahrain)"},
-    "ar-DJ": {"to":"ar-SA", "desc":"Arabic (Djibouti)"},
-    "ar-DZ": {"to":"ar-SA", "desc":"Arabic (Algeria)"},
-    "ar-EG": {"to":"ar-SA", "desc":"Arabic (Egypt)"},
-    "ar-EH": {"to":"ar-SA", "desc":"Arabic (Western Sahara)"},
-    "ar-ER": {"to":"ar-SA", "desc":"Arabic (Eritrea)"},
-    "ar-IL": {"to":"ar-SA", "desc":"Arabic (Israel)"},
-    "ar-IQ": {"to":"ar-SA", "desc":"Arabic (Iraq)"},
-    "ar-JO": {"to":"ar-SA", "desc":"Arabic (Jordan)"},
-    "ar-KM": {"to":"ar-SA", "desc":"Arabic (Comoros)"},
-    "ar-KW": {"to":"ar-SA", "desc":"Arabic (Kuwait)"},
-    "ar-LB": {"to":"ar-SA", "desc":"Arabic (Lebanon)"},
-    "ar-LY": {"to":"ar-SA", "desc":"Arabic (Libya)"},
-    "ar-MA": {"to":"ar-SA", "desc":"Arabic (Morocco)"},
-    "ar-MR": {"to":"ar-SA", "desc":"Arabic (Mauritania)"},
-    "ar-OM": {"to":"ar-SA", "desc":"Arabic (Oman)"},
-    "ar-PS": {"to":"ar-SA", "desc":"Arabic (Palestine)"},
-    "ar-QA": {"to":"ar-SA", "desc":"Arabic (Qatar)"},
-    "ar-SD": {"to":"ar-SA", "desc":"Arabic (Sudan)"},
-    "ar-SO": {"to":"ar-SA", "desc":"Arabic (Somalia)"},
-    "ar-SS": {"to":"ar-SA", "desc":"Arabic (South Sudan)"},
-    "ar-SY": {"to":"ar-SA", "desc":"Arabic (Syria)"},
-    "ar-TD": {"to":"ar-SA", "desc":"Arabic (Chad)"},
-    "ar-TN": {"to":"ar-SA", "desc":"Arabic (Tunisia)"},
-    "ar-YE": {"to":"ar-SA", "desc":"Arabic (Yemen)"},
-    "as": {"to":"en-US", "desc":"Assamese"},
-    "as-IN": {"to":"en-US", "desc":"Assamese (India)"},
-    "asa": {"to":"en-US", "desc":"Asu"},
-    "asa-TZ": {"to":"en-US", "desc":"Asu (Tanzania)"},
-    "az": {"to":"en-US", "desc":"Azerbaijani"},
-    "az-AZ": {"to":"en-US", "desc":"Azerbaijani (Cyrillic,Azerbaijan)"},
-    "bas": {"to":"en-US", "desc":"Basaa"},
-    "bas-CM": {"to":"en-US", "desc":"Basaa (Cameroon)"},
-    "be": {"to":"en-US", "desc":"Belarusian"},
-    "be-BY": {"to":"en-US", "desc":"Belarusian (Belarus)"},
-    "bem": {"to":"en-US", "desc":"Bemba"},
-    "bem-ZM": {"to":"en-US", "desc":"Bemba (Zambia)"},
-    "bez": {"to":"en-US", "desc":"Bena"},
-    "bez-TZ": {"to":"en-US", "desc":"Bena (Tanzania)"},
-    "bg": {"to":"en-US", "desc":"Bulgarian"},
-    "bg-BG": {"to":"en-US", "desc":"Bulgarian (Bulgaria)"},
-    "bm": {"to":"en-US", "desc":"Bambara"},
-    "bm-ML": {"to":"en-US", "desc":"Bambara (Mali)"},
-    "bn": {"to":"en-US", "desc":"Bengali"},
-    "bn-BD": {"to":"en-US", "desc":"Bengali (Bangladesh)"},
-    "bn-IN": {"to":"en-US", "desc":"Bengali (India)"},
-    "bo": {"to":"en-US", "desc":"Tibetan"},
-    "bo-CN": {"to":"en-US", "desc":"Tibetan (China)"},
-    "bo-IN": {"to":"en-US", "desc":"Tibetan (India)"},
-    "br": {"to":"en-US", "desc":"Breton"},
-    "br-FR": {"to":"en-US", "desc":"Breton (France)"},
-    "brx": {"to":"en-US", "desc":"Bodo"},
-    "brx-IN": {"to":"en-US", "desc":"Bodo (India)"},
-    "bs": {"to":"en-US", "desc":"Bosnian"},
-    "bs-BA": {"to":"en-US", "desc":"Bosnian (Cyrillic,Bosnia and Herzegovina)"},
-    "ca": {"to":"en-US", "desc":"Catalan"},
-    "ca-AD": {"to":"en-US", "desc":"Catalan (Andorra)"},
-    "ca-ES": {"to":"en-US", "desc":"Catalan (Spain)"},
-    "ca-FR": {"to":"en-US", "desc":"Catalan (France)"},
-    "ca-IT": {"to":"en-US", "desc":"Catalan (Italy)"},
-    "cgg": {"to":"en-US", "desc":"Chiga"},
-    "cgg-UG": {"to":"en-US", "desc":"Chiga (Uganda)"},
-    "chr": {"to":"en-US", "desc":"Cherokee"},
-    "chr-US": {"to":"en-US", "desc":"Cherokee (United States)"},
-    "cs": {"to":"en-US", "desc":"Czech"},
-    "cs-CZ": {"to":"en-US", "desc":"Czech (Czech Republic)"},
-    "cy": {"to":"en-US", "desc":"Welsh"},
-    "cy-GB": {"to":"en-US", "desc":"Welsh (United Kingdom)"},
-    "da": {"to":"en-US", "desc":"Danish"},
-    "da-DK": {"to":"en-US", "desc":"Danish (Denmark)"},
-    "da-GL": {"to":"en-US", "desc":"Danish (Greenland)"},
-    "dav": {"to":"en-US", "desc":"Taita"},
-    "dav-KE": {"to":"en-US", "desc":"Taita (Kenya)"},
-    "de": {"to":"de-DE", "desc":"German"},
-    "de-AT": {"to":"de-DE", "desc":"German (Austria)"},
-    "de-BE": {"to":"de-DE", "desc":"German (Belgium)"},
-    "de-CH": {"to":"de-DE", "desc":"German (Switzerland)"},
-    "de-DE": {"to":"de-DE", "desc":"German (Germany)"},
-    "de-LI": {"to":"de-DE", "desc":"German (Liechtenstein)"},
-    "de-LU": {"to":"de-DE", "desc":"German (Luxembourg)"},
-    "dje": {"to":"en-US", "desc":"Zarma"},
-    "dje-NE": {"to":"en-US", "desc":"Zarma (Niger)"},
-    "dua": {"to":"en-US", "desc":"Duala"},
-    "dua-CM": {"to":"en-US", "desc":"Duala (Cameroon)"},
-    "dyo": {"to":"en-US", "desc":"Jola-Fonyi"},
-    "dyo-SN": {"to":"en-US", "desc":"Jola-Fonyi (Senegal)"},
-    "dz": {"to":"en-US", "desc":"Dzongkha"},
-    "dz-BT": {"to":"en-US", "desc":"Dzongkha (Bhutan)"},
-    "ebu": {"to":"en-US", "desc":"Embu"},
-    "ebu-KE": {"to":"en-US", "desc":"Embu (Kenya)"},
-    "ee": {"to":"en-US", "desc":"Ewe"},
-    "ee-GH": {"to":"en-US", "desc":"Ewe (Ghana)"},
-    "ee-TG": {"to":"en-US", "desc":"Ewe (Togo)"},
-    "el": {"to":"en-US", "desc":"Greek"},
-    "el-CY": {"to":"en-US", "desc":"Greek (Cyprus)"},
-    "el-GR": {"to":"en-US", "desc":"Greek (Greece)"},
-    "en": {"to":"en-US", "desc":"English"},
-    "en-001": {"to":"en-US", "desc":"English (World)"},
-    "en-150": {"to":"en-US", "desc":"English (Europe)"},
-    "en-AG": {"to":"en-US", "desc":"English (Antigua and Barbuda)"},
-    "en-AI": {"to":"en-US", "desc":"English (Anguilla)"},
-    "en-AS": {"to":"en-US", "desc":"English (American Samoa)"},
-    "en-AU": {"to":"en-US", "desc":"English (Australia)"},
-    "en-BB": {"to":"en-US", "desc":"English (Barbados)"},
-    "en-BE": {"to":"en-US", "desc":"English (Belgium)"},
-    "en-BM": {"to":"en-US", "desc":"English (Bermuda)"},
-    "en-BS": {"to":"en-US", "desc":"English (Bahamas)"},
-    "en-BW": {"to":"en-US", "desc":"English (Botswana)"},
-    "en-BZ": {"to":"en-US", "desc":"English (Belize)"},
-    "en-CA": {"to":"en-US", "desc":"English (Canada)"},
-    "en-CC": {"to":"en-US", "desc":"English (Cocos (Keeling) Islands)"},
-    "en-CK": {"to":"en-US", "desc":"English (Cook Islands)"},
-    "en-CM": {"to":"en-US", "desc":"English (Cameroon)"},
-    "en-CX": {"to":"en-US", "desc":"English (Christmas Island)"},
-    "en-DG": {"to":"en-US", "desc":"English (Diego Garcia)"},
-    "en-DM": {"to":"en-US", "desc":"English (Dominica)"},
-    "en-ER": {"to":"en-US", "desc":"English (Eritrea)"},
-    "en-FJ": {"to":"en-US", "desc":"English (Fiji)"},
-    "en-FK": {"to":"en-US", "desc":"English (Falkland Islands (Islas Malvinas))"},
-    "en-FM": {"to":"en-US", "desc":"English (Micronesia)"},
-    "en-GB": {"to":"en-US", "desc":"English (United Kingdom)"},
-    "en-GD": {"to":"en-US", "desc":"English (Grenada)"},
-    "en-GG": {"to":"en-US", "desc":"English (Guernsey)"},
-    "en-GH": {"to":"en-US", "desc":"English (Ghana)"},
-    "en-GI": {"to":"en-US", "desc":"English (Gibraltar)"},
-    "en-GM": {"to":"en-US", "desc":"English (Gambia)"},
-    "en-GU": {"to":"en-US", "desc":"English (Guam)"},
-    "en-GY": {"to":"en-US", "desc":"English (Guyana)"},
-    "en-HK": {"to":"en-US", "desc":"English (Hong Kong)"},
-    "en-IE": {"to":"en-US", "desc":"English (Ireland)"},
-    "en-IM": {"to":"en-US", "desc":"English (Isle of Man)"},
-    "en-IN": {"to":"en-US", "desc":"English (India)"},
-    "en-IO": {"to":"en-US", "desc":"English (British Indian Ocean Territory)"},
-    "en-JE": {"to":"en-US", "desc":"English (Jersey)"},
-    "en-JM": {"to":"en-US", "desc":"English (Jamaica)"},
-    "en-KE": {"to":"en-US", "desc":"English (Kenya)"},
-    "en-KI": {"to":"en-US", "desc":"English (Kiribati)"},
-    "en-KN": {"to":"en-US", "desc":"English (Saint Kitts and Nevis)"},
-    "en-KY": {"to":"en-US", "desc":"English (Cayman Islands)"},
-    "en-LC": {"to":"en-US", "desc":"English (Saint Lucia)"},
-    "en-LR": {"to":"en-US", "desc":"English (Liberia)"},
-    "en-LS": {"to":"en-US", "desc":"English (Lesotho)"},
-    "en-MG": {"to":"en-US", "desc":"English (Madagascar)"},
-    "en-MH": {"to":"en-US", "desc":"English (Marshall Islands)"},
-    "en-MO": {"to":"en-US", "desc":"English (Macau)"},
-    "en-MP": {"to":"en-US", "desc":"English (Northern Mariana Islands)"},
-    "en-MS": {"to":"en-US", "desc":"English (Montserrat)"},
-    "en-MT": {"to":"en-US", "desc":"English (Malta)"},
-    "en-MU": {"to":"en-US", "desc":"English (Mauritius)"},
-    "en-MW": {"to":"en-US", "desc":"English (Malawi)"},
-    "en-NA": {"to":"en-US", "desc":"English (Namibia)"},
-    "en-NF": {"to":"en-US", "desc":"English (Norfolk Island)"},
-    "en-NG": {"to":"en-US", "desc":"English (Nigeria)"},
-    "en-NR": {"to":"en-US", "desc":"English (Nauru)"},
-    "en-NU": {"to":"en-US", "desc":"English (Niue)"},
-    "en-NZ": {"to":"en-US", "desc":"English (New Zealand)"},
-    "en-PG": {"to":"en-US", "desc":"English (Papua New Guinea)"},
-    "en-PH": {"to":"en-US", "desc":"English (Philippines)"},
-    "en-PK": {"to":"en-US", "desc":"English (Pakistan)"},
-    "en-PN": {"to":"en-US", "desc":"English (Pitcairn Islands)"},
-    "en-PR": {"to":"en-US", "desc":"English (Puerto Rico)"},
-    "en-PW": {"to":"en-US", "desc":"English (Palau)"},
-    "en-RW": {"to":"en-US", "desc":"English (Rwanda)"},
-    "en-SB": {"to":"en-US", "desc":"English (Solomon Islands)"},
-    "en-SC": {"to":"en-US", "desc":"English (Seychelles)"},
-    "en-SD": {"to":"en-US", "desc":"English (Sudan)"},
-    "en-SG": {"to":"en-US", "desc":"English (Singapore)"},
-    "en-SH": {"to":"en-US", "desc":"English (Saint Helena)"},
-    "en-SL": {"to":"en-US", "desc":"English (Sierra Leone)"},
-    "en-SS": {"to":"en-US", "desc":"English (South Sudan)"},
-    "en-SX": {"to":"en-US", "desc":"English (Sint Maarten)"},
-    "en-SZ": {"to":"en-US", "desc":"English (Swaziland)"},
-    "en-TC": {"to":"en-US", "desc":"English (Turks and Caicos Islands)"},
-    "en-TK": {"to":"en-US", "desc":"English (Tokelau)"},
-    "en-TO": {"to":"en-US", "desc":"English (Tonga)"},
-    "en-TT": {"to":"en-US", "desc":"English (Trinidad and Tobago)"},
-    "en-TV": {"to":"en-US", "desc":"English (Tuvalu)"},
-    "en-TZ": {"to":"en-US", "desc":"English (Tanzania)"},
-    "en-UG": {"to":"en-US", "desc":"English (Uganda)"},
-    "en-UM": {"to":"en-US", "desc":"English (U.S. Outlying Islands)"},
-    "en-US": {"to":"en-US", "desc":"English (United States)"},
-    "en-VC": {"to":"en-US", "desc":"English (St. Vincent & Grenadines)"},
-    "en-VG": {"to":"en-US", "desc":"English (British Virgin Islands)"},
-    "en-VI": {"to":"en-US", "desc":"English (U.S. Virgin Islands)"},
-    "en-VU": {"to":"en-US", "desc":"English (Vanuatu)"},
-    "en-WS": {"to":"en-US", "desc":"English (Samoa)"},
-    "en-ZA": {"to":"en-US", "desc":"English (South Africa)"},
-    "en-ZM": {"to":"en-US", "desc":"English (Zambia)"},
-    "en-ZW": {"to":"en-US", "desc":"English (Zimbabwe)"},
-    "eo": {"to":"en-US", "desc":"Esperanto"},
-    "es": {"to":"es-419", "desc":"Spanish"},
-    "es-419": {"to":"es-419", "desc":"Spanish (Latin America)"},
-    "es-AR": {"to":"es-419", "desc":"Spanish (Argentina)"},
-    "es-BO": {"to":"es-419", "desc":"Spanish (Bolivia)"},
-    "es-CL": {"to":"es-419", "desc":"Spanish (Chile)"},
-    "es-CO": {"to":"es-419", "desc":"Spanish (Colombia)"},
-    "es-CR": {"to":"es-419", "desc":"Spanish (Costa Rica)"},
-    "es-CU": {"to":"es-419", "desc":"Spanish (Cuba)"},
-    "es-DO": {"to":"es-419", "desc":"Spanish (Dominican Republic)"},
-    "es-EA": {"to":"es-419", "desc":"Spanish (Ceuta and Melilla)"},
-    "es-EC": {"to":"es-419", "desc":"Spanish (Ecuador)"},
-    "es-ES": {"to":"es-ES", "desc":"Spanish (Spain)"},
-    "es-GQ": {"to":"es-419", "desc":"Spanish (Equatorial Guinea)"},
-    "es-GT": {"to":"es-419", "desc":"Spanish (Guatemala)"},
-    "es-HN": {"to":"es-419", "desc":"Spanish (Honduras)"},
-    "es-IC": {"to":"es-419", "desc":"Spanish (Canary Islands)"},
-    "es-MX": {"to":"es-419", "desc":"Spanish (Mexico)"},
-    "es-NI": {"to":"es-419", "desc":"Spanish (Nicaragua)"},
-    "es-PA": {"to":"es-419", "desc":"Spanish (Panama)"},
-    "es-PE": {"to":"es-419", "desc":"Spanish (Peru)"},
-    "es-PH": {"to":"es-419", "desc":"Spanish (Philippines)"},
-    "es-PR": {"to":"es-419", "desc":"Spanish (Puerto Rico)"},
-    "es-PY": {"to":"es-419", "desc":"Spanish (Paraguay)"},
-    "es-SV": {"to":"es-419", "desc":"Spanish (El Salvador)"},
-    "es-US": {"to":"es-419", "desc":"Spanish (United States)"},
-    "es-UY": {"to":"es-419", "desc":"Spanish (Uruguay)"},
-    "es-VE": {"to":"es-419", "desc":"Spanish (Venezuela)"},
-    "et": {"to":"en-US", "desc":"Estonian"},
-    "et-EE": {"to":"en-US", "desc":"Estonian (Estonia)"},
-    "eu": {"to":"en-US", "desc":"Basque"},
-    "eu-ES": {"to":"en-US", "desc":"Basque (Spain)"},
-    "ewo": {"to":"en-US", "desc":"Ewondo"},
-    "ewo-CM": {"to":"en-US", "desc":"Ewondo (Cameroon)"},
-    "fa": {"to":"en-US", "desc":"Persian"},
-    "fa-AF": {"to":"en-US", "desc":"Persian (Afghanistan)"},
-    "fa-IR": {"to":"en-US", "desc":"Persian (Iran)"},
-    "ff": {"to":"en-US", "desc":"Fulah"},
-    "ff-SN": {"to":"en-US", "desc":"Fulah (Senegal)"},
-    "fi": {"to":"en-US", "desc":"Finnish"},
-    "fi-FI": {"to":"en-US", "desc":"Finnish (Finland)"},
-    "fil": {"to":"en-US", "desc":"Filipino"},
-    "fil-PH": {"to":"en-US", "desc":"Filipino (Philippines)"},
-    "fo": {"to":"en-US", "desc":"Faroese"},
-    "fo-FO": {"to":"en-US", "desc":"Faroese (Faroe Islands)"},
-    "fr": {"to":"fr-FR", "desc":"French"},
-    "fr-BE": {"to":"fr-FR", "desc":"French (Belgium)"},
-    "fr-BF": {"to":"fr-FR", "desc":"French (Burkina Faso)"},
-    "fr-BI": {"to":"fr-FR", "desc":"French (Burundi)"},
-    "fr-BJ": {"to":"fr-FR", "desc":"French (Benin)"},
-    "fr-BL": {"to":"fr-FR", "desc":"French (Saint Barthélemy)"},
-    "fr-CA": {"to":"fr-FR", "desc":"French (Canada)"},
-    "fr-CD": {"to":"fr-FR", "desc":"French (Congo (DRC))"},
-    "fr-CF": {"to":"fr-FR", "desc":"French (Central African Republic)"},
-    "fr-CG": {"to":"fr-FR", "desc":"French (Congo (Republic))"},
-    "fr-CH": {"to":"fr-FR", "desc":"French (Switzerland)"},
-    "fr-CI": {"to":"fr-FR", "desc":"French (Côte d’Ivoire)"},
-    "fr-CM": {"to":"fr-FR", "desc":"French (Cameroon)"},
-    "fr-DJ": {"to":"fr-FR", "desc":"French (Djibouti)"},
-    "fr-DZ": {"to":"fr-FR", "desc":"French (Algeria)"},
-    "fr-FR": {"to":"fr-FR", "desc":"French (France)"},
-    "fr-GA": {"to":"fr-FR", "desc":"French (Gabon)"},
-    "fr-GF": {"to":"fr-FR", "desc":"French (French Guiana)"},
-    "fr-GN": {"to":"fr-FR", "desc":"French (Guinea)"},
-    "fr-GP": {"to":"fr-FR", "desc":"French (Guadeloupe)"},
-    "fr-GQ": {"to":"fr-FR", "desc":"French (Equatorial Guinea)"},
-    "fr-HT": {"to":"fr-FR", "desc":"French (Haiti)"},
-    "fr-KM": {"to":"fr-FR", "desc":"French (Comoros)"},
-    "fr-LU": {"to":"fr-FR", "desc":"French (Luxembourg)"},
-    "fr-MA": {"to":"fr-FR", "desc":"French (Morocco)"},
-    "fr-MC": {"to":"fr-FR", "desc":"French (Monaco)"},
-    "fr-MF": {"to":"fr-FR", "desc":"French (Saint Martin)"},
-    "fr-MG": {"to":"fr-FR", "desc":"French (Madagascar)"},
-    "fr-ML": {"to":"fr-FR", "desc":"French (Mali)"},
-    "fr-MQ": {"to":"fr-FR", "desc":"French (Martinique)"},
-    "fr-MR": {"to":"fr-FR", "desc":"French (Mauritania)"},
-    "fr-MU": {"to":"fr-FR", "desc":"French (Mauritius)"},
-    "fr-NC": {"to":"fr-FR", "desc":"French (New Caledonia)"},
-    "fr-NE": {"to":"fr-FR", "desc":"French (Niger)"},
-    "fr-PF": {"to":"fr-FR", "desc":"French (French Polynesia)"},
-    "fr-PM": {"to":"fr-FR", "desc":"French (Saint Pierre and Miquelon)"},
-    "fr-RE": {"to":"fr-FR", "desc":"French (Réunion)"},
-    "fr-RW": {"to":"fr-FR", "desc":"French (Rwanda)"},
-    "fr-SC": {"to":"fr-FR", "desc":"French (Seychelles)"},
-    "fr-SN": {"to":"fr-FR", "desc":"French (Senegal)"},
-    "fr-SY": {"to":"fr-FR", "desc":"French (Syria)"},
-    "fr-TD": {"to":"fr-FR", "desc":"French (Chad)"},
-    "fr-TG": {"to":"fr-FR", "desc":"French (Togo)"},
-    "fr-TN": {"to":"fr-FR", "desc":"French (Tunisia)"},
-    "fr-VU": {"to":"fr-FR", "desc":"French (Vanuatu)"},
-    "fr-WF": {"to":"fr-FR", "desc":"French (Wallis and Futuna)"},
-    "fr-YT": {"to":"fr-FR", "desc":"French (Mayotte)"},
-    "ga": {"to":"en-US", "desc":"Irish"},
-    "ga-IE": {"to":"en-US", "desc":"Irish (Ireland)"},
-    "gl": {"to":"en-US", "desc":"Galician"},
-    "gl-ES": {"to":"en-US", "desc":"Galician (Spain)"},
-    "gsw": {"to":"en-US", "desc":"Swiss German"},
-    "gsw-CH": {"to":"en-US", "desc":"Swiss German (Switzerland)"},
-    "gsw-LI": {"to":"en-US", "desc":"Swiss German (Liechtenstein)"},
-    "gu": {"to":"en-US", "desc":"Gujarati"},
-    "gu-IN": {"to":"en-US", "desc":"Gujarati (India)"},
-    "guz": {"to":"en-US", "desc":"Gusii"},
-    "guz-KE": {"to":"en-US", "desc":"Gusii (Kenya)"},
-    "gv": {"to":"en-US", "desc":"Manx"},
-    "gv-IM": {"to":"en-US", "desc":"Manx (Isle of Man)"},
-    "ha": {"to":"en-US", "desc":"Hausa"},
-    "ha-GH": {"to":"en-US", "desc":"Hausa (Latin,Ghana)"},
-    "ha-NE": {"to":"en-US", "desc":"Hausa (Latin,Niger)"},
-    "ha-NG": {"to":"en-US", "desc":"Hausa (Latin,Nigeria)"},
-    "haw": {"to":"en-US", "desc":"Hawaiian"},
-    "haw-US": {"to":"en-US", "desc":"Hawaiian (United States)"},
-    "iw": {"to":"en-US", "desc":"Hebrew"},
-    "iw-IL": {"to":"en-US", "desc":"Hebrew (Israel)"},
-    "hi": {"to":"en-US", "desc":"Hindi"},
-    "hi-IN": {"to":"en-US", "desc":"Hindi (India)"},
-    "hr": {"to":"en-US", "desc":"Croatian"},
-    "hr-BA": {"to":"en-US", "desc":"Croatian (Bosnia and Herzegovina)"},
-    "hr-HR": {"to":"en-US", "desc":"Croatian (Croatia)"},
-    "hu": {"to":"en-US", "desc":"Hungarian"},
-    "hu-HU": {"to":"en-US", "desc":"Hungarian (Hungary)"},
-    "hy": {"to":"en-US", "desc":"Armenian"},
-    "hy-AM": {"to":"en-US", "desc":"Armenian (Armenia)"},
-    "in": {"to":"en-US", "desc":"Indonesian"},
-    "in-ID": {"to":"en-US", "desc":"Indonesian (Indonesia)"},
-    "ig": {"to":"en-US", "desc":"Igbo"},
-    "ig-NG": {"to":"en-US", "desc":"Igbo (Nigeria)"},
-    "ii": {"to":"en-US", "desc":"Sichuan Yi"},
-    "ii-CN": {"to":"en-US", "desc":"Sichuan Yi (China)"},
-    "is": {"to":"en-US", "desc":"Icelandic"},
-    "is-IS": {"to":"en-US", "desc":"Icelandic (Iceland)"},
-    "it": {"to":"it-IT", "desc":"Italian"},
-    "it-CH": {"to":"it-IT", "desc":"Italian (Switzerland)"},
-    "it-IT": {"to":"it-IT", "desc":"Italian (Italy)"},
-    "it-SM": {"to":"it-IT", "desc":"Italian (San Marino)"},
-    "ja": {"to":"en-US", "desc":"Japanese"},
-    "ja-JP": {"to":"en-US", "desc":"Japanese (Japan)"},
-    "jgo": {"to":"en-US", "desc":"Ngomba"},
-    "jgo-CM": {"to":"en-US", "desc":"Ngomba (Cameroon)"},
-    "jmc": {"to":"en-US", "desc":"Machame"},
-    "jmc-TZ": {"to":"en-US", "desc":"Machame (Tanzania)"},
-    "ka": {"to":"en-US", "desc":"Georgian"},
-    "ka-GE": {"to":"en-US", "desc":"Georgian (Georgia)"},
-    "kab": {"to":"en-US", "desc":"Kabyle"},
-    "kab-DZ": {"to":"en-US", "desc":"Kabyle (Algeria)"},
-    "kam": {"to":"en-US", "desc":"Kamba"},
-    "kam-KE": {"to":"en-US", "desc":"Kamba (Kenya)"},
-    "kde": {"to":"en-US", "desc":"Makonde"},
-    "kde-TZ": {"to":"en-US", "desc":"Makonde (Tanzania)"},
-    "kea": {"to":"en-US", "desc":"Kabuverdianu"},
-    "kea-CV": {"to":"en-US", "desc":"Kabuverdianu (Cape Verde)"},
-    "khq": {"to":"en-US", "desc":"Koyra Chiini"},
-    "khq-ML": {"to":"en-US", "desc":"Koyra Chiini (Mali)"},
-    "ki": {"to":"en-US", "desc":"Kikuyu"},
-    "ki-KE": {"to":"en-US", "desc":"Kikuyu (Kenya)"},
-    "kk": {"to":"en-US", "desc":"Kazakh"},
-    "kk-KZ": {"to":"en-US", "desc":"Kazakh (Cyrillic,Kazakhstan)"},
-    "kkj": {"to":"en-US", "desc":"Kako"},
-    "kkj-CM": {"to":"en-US", "desc":"Kako (Cameroon)"},
-    "kl": {"to":"en-US", "desc":"Kalaallisut"},
-    "kl-GL": {"to":"en-US", "desc":"Kalaallisut (Greenland)"},
-    "kln": {"to":"en-US", "desc":"Kalenjin"},
-    "kln-KE": {"to":"en-US", "desc":"Kalenjin (Kenya)"},
-    "km": {"to":"en-US", "desc":"Khmer"},
-    "km-KH": {"to":"en-US", "desc":"Khmer (Cambodia)"},
-    "kn": {"to":"en-US", "desc":"Kannada"},
-    "kn-IN": {"to":"en-US", "desc":"Kannada (India)"},
-    "ko": {"to":"en-US", "desc":"Korean"},
-    "ko-KP": {"to":"en-US", "desc":"Korean (North Korea)"},
-    "ko-KR": {"to":"en-US", "desc":"Korean (South Korea)"},
-    "kok": {"to":"en-US", "desc":"Konkani"},
-    "kok-IN": {"to":"en-US", "desc":"Konkani (India)"},
-    "ks": {"to":"en-US", "desc":"Kashmiri"},
-    "ks-IN": {"to":"en-US", "desc":"Kashmiri (Arabic,India)"},
-    "ksb": {"to":"en-US", "desc":"Shambala"},
-    "ksb-TZ": {"to":"en-US", "desc":"Shambala (Tanzania)"},
-    "ksf": {"to":"en-US", "desc":"Bafia"},
-    "ksf-CM": {"to":"en-US", "desc":"Bafia (Cameroon)"},
-    "kw": {"to":"en-US", "desc":"Cornish"},
-    "kw-GB": {"to":"en-US", "desc":"Cornish (United Kingdom)"},
-    "ky": {"to":"en-US", "desc":"Kyrgyz"},
-    "ky-KG": {"to":"en-US", "desc":"Kyrgyz (Cyrillic,Kyrgyzstan)"},
-    "lag": {"to":"en-US", "desc":"Langi"},
-    "lag-TZ": {"to":"en-US", "desc":"Langi (Tanzania)"},
-    "lg": {"to":"en-US", "desc":"Ganda"},
-    "lg-UG": {"to":"en-US", "desc":"Ganda (Uganda)"},
-    "lkt": {"to":"en-US", "desc":"Lakota"},
-    "lkt-US": {"to":"en-US", "desc":"Lakota (United States)"},
-    "ln": {"to":"en-US", "desc":"Lingala"},
-    "ln-AO": {"to":"en-US", "desc":"Lingala (Angola)"},
-    "ln-CD": {"to":"en-US", "desc":"Lingala (Congo (DRC))"},
-    "ln-CF": {"to":"en-US", "desc":"Lingala (Central African Republic)"},
-    "ln-CG": {"to":"en-US", "desc":"Lingala (Congo (Republic))"},
-    "lo": {"to":"en-US", "desc":"Lao"},
-    "lo-LA": {"to":"en-US", "desc":"Lao (Laos)"},
-    "lt": {"to":"en-US", "desc":"Lithuanian"},
-    "lt-LT": {"to":"en-US", "desc":"Lithuanian (Lithuania)"},
-    "lu": {"to":"en-US", "desc":"Luba-Katanga"},
-    "lu-CD": {"to":"en-US", "desc":"Luba-Katanga (Congo (DRC))"},
-    "luo": {"to":"en-US", "desc":"Luo"},
-    "luo-KE": {"to":"en-US", "desc":"Luo (Kenya)"},
-    "luy": {"to":"en-US", "desc":"Luyia"},
-    "luy-KE": {"to":"en-US", "desc":"Luyia (Kenya)"},
-    "lv": {"to":"en-US", "desc":"Latvian"},
-    "lv-LV": {"to":"en-US", "desc":"Latvian (Latvia)"},
-    "mas": {"to":"en-US", "desc":"Masai"},
-    "mas-KE": {"to":"en-US", "desc":"Masai (Kenya)"},
-    "mas-TZ": {"to":"en-US", "desc":"Masai (Tanzania)"},
-    "mer": {"to":"en-US", "desc":"Meru"},
-    "mer-KE": {"to":"en-US", "desc":"Meru (Kenya)"},
-    "mfe": {"to":"en-US", "desc":"Morisyen"},
-    "mfe-MU": {"to":"en-US", "desc":"Morisyen (Mauritius)"},
-    "mg": {"to":"en-US", "desc":"Malagasy"},
-    "mg-MG": {"to":"en-US", "desc":"Malagasy (Madagascar)"},
-    "mgh": {"to":"en-US", "desc":"Makhuwa-Meetto"},
-    "mgh-MZ": {"to":"en-US", "desc":"Makhuwa-Meetto (Mozambique)"},
-    "mgo": {"to":"en-US", "desc":"Meta'"},
-    "mgo-CM": {"to":"en-US", "desc":"Meta' (Cameroon)"},
-    "mk": {"to":"en-US", "desc":"Macedonian"},
-    "mk-MK": {"to":"en-US", "desc":"Macedonian (Macedonia (FYROM))"},
-    "ml": {"to":"en-US", "desc":"Malayalam"},
-    "ml-IN": {"to":"en-US", "desc":"Malayalam (India)"},
-    "mn": {"to":"en-US", "desc":"Mongolian"},
-    "mn-MN": {"to":"en-US", "desc":"Mongolian (Cyrillic,Mongolia)"},
-    "mr": {"to":"en-US", "desc":"Marathi"},
-    "mr-IN": {"to":"en-US", "desc":"Marathi (India)"},
-    "ms": {"to":"en-US", "desc":"Malay"},
-    "ms-BN": {"to":"en-US", "desc":"Malay (Latin,Brunei)"},
-    "ms-MY": {"to":"en-US", "desc":"Malay (Latin,Malaysia)"},
-    "ms-SG": {"to":"en-US", "desc":"Malay (Latin,Singapore)"},
-    "mt": {"to":"en-US", "desc":"Maltese"},
-    "mt-MT": {"to":"en-US", "desc":"Maltese (Malta)"},
-    "mua": {"to":"en-US", "desc":"Mundang"},
-    "mua-CM": {"to":"en-US", "desc":"Mundang (Cameroon)"},
-    "my": {"to":"en-US", "desc":"Burmese"},
-    "my-MM": {"to":"en-US", "desc":"Burmese (Myanmar (Burma))"},
-    "naq": {"to":"en-US", "desc":"Nama"},
-    "naq-NA": {"to":"en-US", "desc":"Nama (Namibia)"},
-    "nb": {"to":"en-US", "desc":"Norwegian Bokmål"},
-    "nb-NO": {"to":"en-US", "desc":"Norwegian Bokmål (Norway)"},
-    "nb-SJ": {"to":"en-US", "desc":"Norwegian Bokmål (Svalbard and Jan Mayen)"},
-    "nd": {"to":"en-US", "desc":"North Ndebele"},
-    "nd-ZW": {"to":"en-US", "desc":"North Ndebele (Zimbabwe)"},
-    "ne": {"to":"en-US", "desc":"Nepali"},
-    "ne-IN": {"to":"en-US", "desc":"Nepali (India)"},
-    "ne-NP": {"to":"en-US", "desc":"Nepali (Nepal)"},
-    "nl": {"to":"en-US", "desc":"Dutch"},
-    "nl-AW": {"to":"en-US", "desc":"Dutch (Aruba)"},
-    "nl-BE": {"to":"en-US", "desc":"Dutch (Belgium)"},
-    "nl-BQ": {"to":"en-US", "desc":"Dutch (Caribbean Netherlands)"},
-    "nl-CW": {"to":"en-US", "desc":"Dutch (Curaçao)"},
-    "nl-NL": {"to":"en-US", "desc":"Dutch (Netherlands)"},
-    "nl-SR": {"to":"en-US", "desc":"Dutch (Suriname)"},
-    "nl-SX": {"to":"en-US", "desc":"Dutch (Sint Maarten)"},
-    "nmg": {"to":"en-US", "desc":"Kwasio"},
-    "nmg-CM": {"to":"en-US", "desc":"Kwasio (Cameroon)"},
-    "nn": {"to":"en-US", "desc":"Norwegian Nynorsk"},
-    "nn-NO": {"to":"en-US", "desc":"Norwegian Nynorsk (Norway)"},
-    "nnh": {"to":"en-US", "desc":"Ngiemboon"},
-    "nnh-CM": {"to":"en-US", "desc":"Ngiemboon (Cameroon)"},
-    "nus": {"to":"en-US", "desc":"Nuer"},
-    "nus-SD": {"to":"en-US", "desc":"Nuer (Sudan)"},
-    "nyn": {"to":"en-US", "desc":"Nyankole"},
-    "nyn-UG": {"to":"en-US", "desc":"Nyankole (Uganda)"},
-    "om": {"to":"en-US", "desc":"Oromo"},
-    "om-ET": {"to":"en-US", "desc":"Oromo (Ethiopia)"},
-    "om-KE": {"to":"en-US", "desc":"Oromo (Kenya)"},
-    "or": {"to":"en-US", "desc":"Oriya"},
-    "or-IN": {"to":"en-US", "desc":"Oriya (India)"},
-    "pa": {"to":"en-US", "desc":"Punjabi"},
-    "pa-PK": {"to":"en-US", "desc":"Punjabi (Arabic,Pakistan)"},
-    "pa-IN": {"to":"en-US", "desc":"Punjabi (Gurmukhi,India)"},
-    "pl": {"to":"en-US", "desc":"Polish"},
-    "pl-PL": {"to":"en-US", "desc":"Polish (Poland)"},
-    "ps": {"to":"en-US", "desc":"Pashto"},
-    "ps-AF": {"to":"en-US", "desc":"Pashto (Afghanistan)"},
-    "pt": {"to":"pt-BR", "desc":"Portuguese"},
-    "pt-AO": {"to":"pt-BR", "desc":"Portuguese (Angola)"},
-    "pt-BR": {"to":"pt-BR", "desc":"Portuguese (Brazil)"},
-    "pt-CV": {"to":"pt-BR", "desc":"Portuguese (Cape Verde)"},
-    "pt-GW": {"to":"pt-BR", "desc":"Portuguese (Guinea-Bissau)"},
-    "pt-MO": {"to":"pt-BR", "desc":"Portuguese (Macau)"},
-    "pt-MZ": {"to":"pt-BR", "desc":"Portuguese (Mozambique)"},
-    "pt-PT": {"to":"pt-PT", "desc":"Portuguese (Portugal)"},
-    "pt-ST": {"to":"pt-BR", "desc":"Portuguese (São Tomé and Príncipe)"},
-    "pt-TL": {"to":"pt-BR", "desc":"Portuguese (Timor-Leste)"},
-    "rm": {"to":"en-US", "desc":"Romansh"},
-    "rm-CH": {"to":"en-US", "desc":"Romansh (Switzerland)"},
-    "rn": {"to":"en-US", "desc":"Rundi"},
-    "rn-BI": {"to":"en-US", "desc":"Rundi (Burundi)"},
-    "ro": {"to":"en-US", "desc":"Romanian"},
-    "ro-MD": {"to":"en-US", "desc":"Romanian (Moldova)"},
-    "ro-RO": {"to":"en-US", "desc":"Romanian (Romania)"},
-    "rof": {"to":"en-US", "desc":"Rombo"},
-    "rof-TZ": {"to":"en-US", "desc":"Rombo (Tanzania)"},
-    "ru": {"to":"ru-RU", "desc":"Russian"},
-    "ru-BY": {"to":"ru-RU", "desc":"Russian (Belarus)"},
-    "ru-KG": {"to":"ru-RU", "desc":"Russian (Kyrgyzstan)"},
-    "ru-KZ": {"to":"ru-RU", "desc":"Russian (Kazakhstan)"},
-    "ru-MD": {"to":"ru-RU", "desc":"Russian (Moldova)"},
-    "ru-RU": {"to":"ru-RU", "desc":"Russian (Russia)"},
-    "ru-UA": {"to":"ru-RU", "desc":"Russian (Ukraine)"},
-    "rw": {"to":"en-US", "desc":"Kinyarwanda"},
-    "rw-RW": {"to":"en-US", "desc":"Kinyarwanda (Rwanda)"},
-    "rwk": {"to":"en-US", "desc":"Rwa"},
-    "rwk-TZ": {"to":"en-US", "desc":"Rwa (Tanzania)"},
-    "saq": {"to":"en-US", "desc":"Samburu"},
-    "saq-KE": {"to":"en-US", "desc":"Samburu (Kenya)"},
-    "sbp": {"to":"en-US", "desc":"Sangu"},
-    "sbp-TZ": {"to":"en-US", "desc":"Sangu (Tanzania)"},
-    "seh": {"to":"en-US", "desc":"Sena"},
-    "seh-MZ": {"to":"en-US", "desc":"Sena (Mozambique)"},
-    "ses": {"to":"en-US", "desc":"Koyraboro Senni"},
-    "ses-ML": {"to":"en-US", "desc":"Koyraboro Senni (Mali)"},
-    "sg": {"to":"en-US", "desc":"Sango"},
-    "sg-CF": {"to":"en-US", "desc":"Sango (Central African Republic)"},
-    "shi": {"to":"en-US", "desc":"Tachelhit"},
-    "shi-MA": {"to":"en-US", "desc":"Tachelhit (Latin,Morocco)"},
-    "si": {"to":"en-US", "desc":"Sinhala"},
-    "si-LK": {"to":"en-US", "desc":"Sinhala (Sri Lanka)"},
-    "sk": {"to":"en-US", "desc":"Slovak"},
-    "sk-SK": {"to":"en-US", "desc":"Slovak (Slovakia)"},
-    "sl": {"to":"en-US", "desc":"Slovenian"},
-    "sl-SI": {"to":"en-US", "desc":"Slovenian (Slovenia)"},
-    "sn": {"to":"en-US", "desc":"Shona"},
-    "sn-ZW": {"to":"en-US", "desc":"Shona (Zimbabwe)"},
-    "so": {"to":"en-US", "desc":"Somali"},
-    "so-DJ": {"to":"en-US", "desc":"Somali (Djibouti)"},
-    "so-ET": {"to":"en-US", "desc":"Somali (Ethiopia)"},
-    "so-KE": {"to":"en-US", "desc":"Somali (Kenya)"},
-    "so-SO": {"to":"en-US", "desc":"Somali (Somalia)"},
-    "sq": {"to":"en-US", "desc":"Albanian"},
-    "sq-AL": {"to":"en-US", "desc":"Albanian (Albania)"},
-    "sq-MK": {"to":"en-US", "desc":"Albanian (Macedonia (FYROM))"},
-    "sq-XK": {"to":"en-US", "desc":"Albanian (Kosovo)"},
-    "sr": {"to":"en-US", "desc":"Serbian"},
-    "sr-BA": {"to":"en-US", "desc":"Serbian (Cyrillic,Bosnia and Herzegovina)"},
-    "sr-ME": {"to":"en-US", "desc":"Serbian (Cyrillic,Montenegro)"},
-    "sr-RS": {"to":"en-US", "desc":"Serbian (Cyrillic,Serbia)"},
-    "sr-XK": {"to":"en-US", "desc":"Serbian (Cyrillic,Kosovo)"},
-    "sv": {"to":"en-US", "desc":"Swedish"},
-    "sv-AX": {"to":"en-US", "desc":"Swedish (Åland Islands)"},
-    "sv-FI": {"to":"en-US", "desc":"Swedish (Finland)"},
-    "sv-SE": {"to":"en-US", "desc":"Swedish (Sweden)"},
-    "sw": {"to":"en-US", "desc":"Swahili"},
-    "sw-KE": {"to":"en-US", "desc":"Swahili (Kenya)"},
-    "sw-TZ": {"to":"en-US", "desc":"Swahili (Tanzania)"},
-    "sw-UG": {"to":"en-US", "desc":"Swahili (Uganda)"},
-    "swc": {"to":"en-US", "desc":"Congo Swahili"},
-    "swc-CD": {"to":"en-US", "desc":"Congo Swahili (Congo (DRC))"},
-    "ta": {"to":"en-US", "desc":"Tamil"},
-    "ta-IN": {"to":"en-US", "desc":"Tamil (India)"},
-    "ta-LK": {"to":"en-US", "desc":"Tamil (Sri Lanka)"},
-    "ta-MY": {"to":"en-US", "desc":"Tamil (Malaysia)"},
-    "ta-SG": {"to":"en-US", "desc":"Tamil (Singapore)"},
-    "te": {"to":"en-US", "desc":"Telugu"},
-    "te-IN": {"to":"en-US", "desc":"Telugu (India)"},
-    "teo": {"to":"en-US", "desc":"Teso"},
-    "teo-KE": {"to":"en-US", "desc":"Teso (Kenya)"},
-    "teo-UG": {"to":"en-US", "desc":"Teso (Uganda)"},
-    "th": {"to":"en-US", "desc":"Thai"},
-    "th-TH": {"to":"en-US", "desc":"Thai (Thailand)"},
-    "ti": {"to":"en-US", "desc":"Tigrinya"},
-    "ti-ER": {"to":"en-US", "desc":"Tigrinya (Eritrea)"},
-    "ti-ET": {"to":"en-US", "desc":"Tigrinya (Ethiopia)"},
-    "to": {"to":"en-US", "desc":"Tongan"},
-    "to-TO": {"to":"en-US", "desc":"Tongan (Tonga)"},
-    "tr": {"to":"en-US", "desc":"Turkish"},
-    "tr-CY": {"to":"en-US", "desc":"Turkish (Cyprus)"},
-    "tr-TR": {"to":"en-US", "desc":"Turkish (Turkey)"},
-    "twq": {"to":"en-US", "desc":"Tasawaq"},
-    "twq-NE": {"to":"en-US", "desc":"Tasawaq (Niger)"},
-    "tzm": {"to":"en-US", "desc":"Central Atlas Tamazight"},
-    "tzm-MA": {"to":"en-US", "desc":"Central Atlas Tamazight (Latin,Morocco)"},
-    "ug": {"to":"en-US", "desc":"Uyghur"},
-    "ug-CN": {"to":"en-US", "desc":"Uyghur (Arabic,China)"},
-    "uk": {"to":"en-US", "desc":"Ukrainian"},
-    "uk-UA": {"to":"en-US", "desc":"Ukrainian (Ukraine)"},
-    "ur": {"to":"en-US", "desc":"Urdu"},
-    "ur-IN": {"to":"en-US", "desc":"Urdu (India)"},
-    "ur-PK": {"to":"en-US", "desc":"Urdu (Pakistan)"},
-    "uz": {"to":"en-US", "desc":"Uzbek"},
-    "uz-AF": {"to":"en-US", "desc":"Uzbek (Arabic,Afghanistan)"},
-    "uz-UZ": {"to":"en-US", "desc":"Uzbek (Cyrillic,Uzbekistan)"},
-    "vai": {"to":"en-US", "desc":"Vai"},
-    "vai-LR": {"to":"en-US", "desc":"Vai (Latin,Liberia)"},
-    "vi": {"to":"en-US", "desc":"Vietnamese"},
-    "vi-VN": {"to":"en-US", "desc":"Vietnamese (Vietnam)"},
-    "vun": {"to":"en-US", "desc":"Vunjo"},
-    "vun-TZ": {"to":"en-US", "desc":"Vunjo (Tanzania)"},
-    "xog": {"to":"en-US", "desc":"Soga"},
-    "xog-UG": {"to":"en-US", "desc":"Soga (Uganda)"},
-    "yav": {"to":"en-US", "desc":"Yangben"},
-    "yav-CM": {"to":"en-US", "desc":"Yangben (Cameroon)"},
-    "yo": {"to":"en-US", "desc":"Yoruba"},
-    "yo-BJ": {"to":"en-US", "desc":"Yoruba (Benin)"},
-    "yo-NG": {"to":"en-US", "desc":"Yoruba (Nigeria)"},
-    "zgh": {"to":"en-US", "desc":"Standard Moroccan Tamazight"},
-    "zgh-MA": {"to":"en-US", "desc":"Standard Moroccan Tamazight (Morocco)"},
-    "zh": {"to":"en-US", "desc":"Chinese"},
-    "zh-CN": {"to":"en-US", "desc":"Chinese (Simplified Han,China)"},
-    "zh-HK": {"to":"en-US", "desc":"Chinese (Simplified Han,Hong Kong)"},
-    "zh-MO": {"to":"en-US", "desc":"Chinese (Simplified Han,Macau)"},
-    "zh-SG": {"to":"en-US", "desc":"Chinese (Simplified Han,Singapore)"},
-    "zh-TW": {"to":"en-US", "desc":"Chinese (Traditional Han,Taiwan)"},
-    "zu": {"to":"en-US", "desc":"Zulu"},
-    "zu-ZA": {"to":"en-US", "desc":"Zulu (South Africa)"}
-  }
+    "supported": [
+        "ar-SA",
+        "de-DE",
+        "en-US",
+        "es-419",
+        "es-ES",
+        "fr-FR",
+        "it-IT",
+        "pt-BR",
+        "pt-PT",
+        "ru-RU"
+    ],
+    "supported_fallbacks": {
+        "ar-SA": [
+            "en-US"
+        ],
+        "de-DE": [
+            "en-US"
+        ],
+        "en-US": [
+            "en-US"
+        ],
+        "es-419": [
+            "es-ES",
+            "en-US"
+        ],
+        "es-ES": [
+            "es-419",
+            "en-US"
+        ],
+        "fr-FR": [
+            "en-US"
+        ],
+        "it-IT": [
+            "en-US"
+        ],
+        "pt-BR": [
+            "pt-PT",
+            "en-US"
+        ],
+        "pt-PT": [
+            "pt-BR",
+            "en-US"
+        ],
+        "ru-RU": [
+            "en-US"
+        ]
+    },
+    "mapping": {
+        "af": {
+            "to": "en-US",
+            "desc": "Afrikaans"
+        },
+        "af-NA": {
+            "to": "en-US",
+            "desc": "Afrikaans (Namibia)"
+        },
+        "af-ZA": {
+            "to": "en-US",
+            "desc": "Afrikaans (South Africa)"
+        },
+        "agq": {
+            "to": "en-US",
+            "desc": "Aghem"
+        },
+        "agq-CM": {
+            "to": "en-US",
+            "desc": "Aghem (Cameroon)"
+        },
+        "ak": {
+            "to": "en-US",
+            "desc": "Akan"
+        },
+        "ak-GH": {
+            "to": "en-US",
+            "desc": "Akan (Ghana)"
+        },
+        "am": {
+            "to": "en-US",
+            "desc": "Amharic"
+        },
+        "am-ET": {
+            "to": "en-US",
+            "desc": "Amharic (Ethiopia)"
+        },
+        "ar": {
+            "to": "ar-SA",
+            "desc": "Arabic"
+        },
+        "ar-SA": {
+            "to": "ar-SA",
+            "desc": "Arabic"
+        },
+        "ar-001": {
+            "to": "ar-SA",
+            "desc": "Arabic (World)"
+        },
+        "ar-AE": {
+            "to": "ar-SA",
+            "desc": "Arabic (United Arab Emirates)"
+        },
+        "ar-BH": {
+            "to": "ar-SA",
+            "desc": "Arabic (Bahrain)"
+        },
+        "ar-DJ": {
+            "to": "ar-SA",
+            "desc": "Arabic (Djibouti)"
+        },
+        "ar-DZ": {
+            "to": "ar-SA",
+            "desc": "Arabic (Algeria)"
+        },
+        "ar-EG": {
+            "to": "ar-SA",
+            "desc": "Arabic (Egypt)"
+        },
+        "ar-EH": {
+            "to": "ar-SA",
+            "desc": "Arabic (Western Sahara)"
+        },
+        "ar-ER": {
+            "to": "ar-SA",
+            "desc": "Arabic (Eritrea)"
+        },
+        "ar-IL": {
+            "to": "ar-SA",
+            "desc": "Arabic (Israel)"
+        },
+        "ar-IQ": {
+            "to": "ar-SA",
+            "desc": "Arabic (Iraq)"
+        },
+        "ar-JO": {
+            "to": "ar-SA",
+            "desc": "Arabic (Jordan)"
+        },
+        "ar-KM": {
+            "to": "ar-SA",
+            "desc": "Arabic (Comoros)"
+        },
+        "ar-KW": {
+            "to": "ar-SA",
+            "desc": "Arabic (Kuwait)"
+        },
+        "ar-LB": {
+            "to": "ar-SA",
+            "desc": "Arabic (Lebanon)"
+        },
+        "ar-LY": {
+            "to": "ar-SA",
+            "desc": "Arabic (Libya)"
+        },
+        "ar-MA": {
+            "to": "ar-SA",
+            "desc": "Arabic (Morocco)"
+        },
+        "ar-MR": {
+            "to": "ar-SA",
+            "desc": "Arabic (Mauritania)"
+        },
+        "ar-OM": {
+            "to": "ar-SA",
+            "desc": "Arabic (Oman)"
+        },
+        "ar-PS": {
+            "to": "ar-SA",
+            "desc": "Arabic (Palestine)"
+        },
+        "ar-QA": {
+            "to": "ar-SA",
+            "desc": "Arabic (Qatar)"
+        },
+        "ar-SD": {
+            "to": "ar-SA",
+            "desc": "Arabic (Sudan)"
+        },
+        "ar-SO": {
+            "to": "ar-SA",
+            "desc": "Arabic (Somalia)"
+        },
+        "ar-SS": {
+            "to": "ar-SA",
+            "desc": "Arabic (South Sudan)"
+        },
+        "ar-SY": {
+            "to": "ar-SA",
+            "desc": "Arabic (Syria)"
+        },
+        "ar-TD": {
+            "to": "ar-SA",
+            "desc": "Arabic (Chad)"
+        },
+        "ar-TN": {
+            "to": "ar-SA",
+            "desc": "Arabic (Tunisia)"
+        },
+        "ar-YE": {
+            "to": "ar-SA",
+            "desc": "Arabic (Yemen)"
+        },
+        "as": {
+            "to": "en-US",
+            "desc": "Assamese"
+        },
+        "as-IN": {
+            "to": "en-US",
+            "desc": "Assamese (India)"
+        },
+        "asa": {
+            "to": "en-US",
+            "desc": "Asu"
+        },
+        "asa-TZ": {
+            "to": "en-US",
+            "desc": "Asu (Tanzania)"
+        },
+        "az": {
+            "to": "en-US",
+            "desc": "Azerbaijani"
+        },
+        "az-AZ": {
+            "to": "en-US",
+            "desc": "Azerbaijani (Cyrillic,Azerbaijan)"
+        },
+        "bas": {
+            "to": "en-US",
+            "desc": "Basaa"
+        },
+        "bas-CM": {
+            "to": "en-US",
+            "desc": "Basaa (Cameroon)"
+        },
+        "be": {
+            "to": "en-US",
+            "desc": "Belarusian"
+        },
+        "be-BY": {
+            "to": "en-US",
+            "desc": "Belarusian (Belarus)"
+        },
+        "bem": {
+            "to": "en-US",
+            "desc": "Bemba"
+        },
+        "bem-ZM": {
+            "to": "en-US",
+            "desc": "Bemba (Zambia)"
+        },
+        "bez": {
+            "to": "en-US",
+            "desc": "Bena"
+        },
+        "bez-TZ": {
+            "to": "en-US",
+            "desc": "Bena (Tanzania)"
+        },
+        "bg": {
+            "to": "en-US",
+            "desc": "Bulgarian"
+        },
+        "bg-BG": {
+            "to": "en-US",
+            "desc": "Bulgarian (Bulgaria)"
+        },
+        "bm": {
+            "to": "en-US",
+            "desc": "Bambara"
+        },
+        "bm-ML": {
+            "to": "en-US",
+            "desc": "Bambara (Mali)"
+        },
+        "bn": {
+            "to": "en-US",
+            "desc": "Bengali"
+        },
+        "bn-BD": {
+            "to": "en-US",
+            "desc": "Bengali (Bangladesh)"
+        },
+        "bn-IN": {
+            "to": "en-US",
+            "desc": "Bengali (India)"
+        },
+        "bo": {
+            "to": "en-US",
+            "desc": "Tibetan"
+        },
+        "bo-CN": {
+            "to": "en-US",
+            "desc": "Tibetan (China)"
+        },
+        "bo-IN": {
+            "to": "en-US",
+            "desc": "Tibetan (India)"
+        },
+        "br": {
+            "to": "en-US",
+            "desc": "Breton"
+        },
+        "br-FR": {
+            "to": "en-US",
+            "desc": "Breton (France)"
+        },
+        "brx": {
+            "to": "en-US",
+            "desc": "Bodo"
+        },
+        "brx-IN": {
+            "to": "en-US",
+            "desc": "Bodo (India)"
+        },
+        "bs": {
+            "to": "en-US",
+            "desc": "Bosnian"
+        },
+        "bs-BA": {
+            "to": "en-US",
+            "desc": "Bosnian (Cyrillic,Bosnia and Herzegovina)"
+        },
+        "ca": {
+            "to": "en-US",
+            "desc": "Catalan"
+        },
+        "ca-AD": {
+            "to": "en-US",
+            "desc": "Catalan (Andorra)"
+        },
+        "ca-ES": {
+            "to": "en-US",
+            "desc": "Catalan (Spain)"
+        },
+        "ca-FR": {
+            "to": "en-US",
+            "desc": "Catalan (France)"
+        },
+        "ca-IT": {
+            "to": "en-US",
+            "desc": "Catalan (Italy)"
+        },
+        "cgg": {
+            "to": "en-US",
+            "desc": "Chiga"
+        },
+        "cgg-UG": {
+            "to": "en-US",
+            "desc": "Chiga (Uganda)"
+        },
+        "chr": {
+            "to": "en-US",
+            "desc": "Cherokee"
+        },
+        "chr-US": {
+            "to": "en-US",
+            "desc": "Cherokee (United States)"
+        },
+        "cs": {
+            "to": "en-US",
+            "desc": "Czech"
+        },
+        "cs-CZ": {
+            "to": "en-US",
+            "desc": "Czech (Czech Republic)"
+        },
+        "cy": {
+            "to": "en-US",
+            "desc": "Welsh"
+        },
+        "cy-GB": {
+            "to": "en-US",
+            "desc": "Welsh (United Kingdom)"
+        },
+        "da": {
+            "to": "en-US",
+            "desc": "Danish"
+        },
+        "da-DK": {
+            "to": "en-US",
+            "desc": "Danish (Denmark)"
+        },
+        "da-GL": {
+            "to": "en-US",
+            "desc": "Danish (Greenland)"
+        },
+        "dav": {
+            "to": "en-US",
+            "desc": "Taita"
+        },
+        "dav-KE": {
+            "to": "en-US",
+            "desc": "Taita (Kenya)"
+        },
+        "de": {
+            "to": "de-DE",
+            "desc": "German"
+        },
+        "de-AT": {
+            "to": "de-DE",
+            "desc": "German (Austria)"
+        },
+        "de-BE": {
+            "to": "de-DE",
+            "desc": "German (Belgium)"
+        },
+        "de-CH": {
+            "to": "de-DE",
+            "desc": "German (Switzerland)"
+        },
+        "de-DE": {
+            "to": "de-DE",
+            "desc": "German (Germany)"
+        },
+        "de-LI": {
+            "to": "de-DE",
+            "desc": "German (Liechtenstein)"
+        },
+        "de-LU": {
+            "to": "de-DE",
+            "desc": "German (Luxembourg)"
+        },
+        "dje": {
+            "to": "en-US",
+            "desc": "Zarma"
+        },
+        "dje-NE": {
+            "to": "en-US",
+            "desc": "Zarma (Niger)"
+        },
+        "dua": {
+            "to": "en-US",
+            "desc": "Duala"
+        },
+        "dua-CM": {
+            "to": "en-US",
+            "desc": "Duala (Cameroon)"
+        },
+        "dyo": {
+            "to": "en-US",
+            "desc": "Jola-Fonyi"
+        },
+        "dyo-SN": {
+            "to": "en-US",
+            "desc": "Jola-Fonyi (Senegal)"
+        },
+        "dz": {
+            "to": "en-US",
+            "desc": "Dzongkha"
+        },
+        "dz-BT": {
+            "to": "en-US",
+            "desc": "Dzongkha (Bhutan)"
+        },
+        "ebu": {
+            "to": "en-US",
+            "desc": "Embu"
+        },
+        "ebu-KE": {
+            "to": "en-US",
+            "desc": "Embu (Kenya)"
+        },
+        "ee": {
+            "to": "en-US",
+            "desc": "Ewe"
+        },
+        "ee-GH": {
+            "to": "en-US",
+            "desc": "Ewe (Ghana)"
+        },
+        "ee-TG": {
+            "to": "en-US",
+            "desc": "Ewe (Togo)"
+        },
+        "el": {
+            "to": "en-US",
+            "desc": "Greek"
+        },
+        "el-CY": {
+            "to": "en-US",
+            "desc": "Greek (Cyprus)"
+        },
+        "el-GR": {
+            "to": "en-US",
+            "desc": "Greek (Greece)"
+        },
+        "en": {
+            "to": "en-US",
+            "desc": "English"
+        },
+        "en-001": {
+            "to": "en-US",
+            "desc": "English (World)"
+        },
+        "en-150": {
+            "to": "en-US",
+            "desc": "English (Europe)"
+        },
+        "en-AG": {
+            "to": "en-US",
+            "desc": "English (Antigua and Barbuda)"
+        },
+        "en-AI": {
+            "to": "en-US",
+            "desc": "English (Anguilla)"
+        },
+        "en-AS": {
+            "to": "en-US",
+            "desc": "English (American Samoa)"
+        },
+        "en-AU": {
+            "to": "en-US",
+            "desc": "English (Australia)"
+        },
+        "en-BB": {
+            "to": "en-US",
+            "desc": "English (Barbados)"
+        },
+        "en-BE": {
+            "to": "en-US",
+            "desc": "English (Belgium)"
+        },
+        "en-BM": {
+            "to": "en-US",
+            "desc": "English (Bermuda)"
+        },
+        "en-BS": {
+            "to": "en-US",
+            "desc": "English (Bahamas)"
+        },
+        "en-BW": {
+            "to": "en-US",
+            "desc": "English (Botswana)"
+        },
+        "en-BZ": {
+            "to": "en-US",
+            "desc": "English (Belize)"
+        },
+        "en-CA": {
+            "to": "en-US",
+            "desc": "English (Canada)"
+        },
+        "en-CC": {
+            "to": "en-US",
+            "desc": "English (Cocos (Keeling) Islands)"
+        },
+        "en-CK": {
+            "to": "en-US",
+            "desc": "English (Cook Islands)"
+        },
+        "en-CM": {
+            "to": "en-US",
+            "desc": "English (Cameroon)"
+        },
+        "en-CX": {
+            "to": "en-US",
+            "desc": "English (Christmas Island)"
+        },
+        "en-DG": {
+            "to": "en-US",
+            "desc": "English (Diego Garcia)"
+        },
+        "en-DM": {
+            "to": "en-US",
+            "desc": "English (Dominica)"
+        },
+        "en-ER": {
+            "to": "en-US",
+            "desc": "English (Eritrea)"
+        },
+        "en-FJ": {
+            "to": "en-US",
+            "desc": "English (Fiji)"
+        },
+        "en-FK": {
+            "to": "en-US",
+            "desc": "English (Falkland Islands (Islas Malvinas))"
+        },
+        "en-FM": {
+            "to": "en-US",
+            "desc": "English (Micronesia)"
+        },
+        "en-GB": {
+            "to": "en-US",
+            "desc": "English (United Kingdom)"
+        },
+        "en-GD": {
+            "to": "en-US",
+            "desc": "English (Grenada)"
+        },
+        "en-GG": {
+            "to": "en-US",
+            "desc": "English (Guernsey)"
+        },
+        "en-GH": {
+            "to": "en-US",
+            "desc": "English (Ghana)"
+        },
+        "en-GI": {
+            "to": "en-US",
+            "desc": "English (Gibraltar)"
+        },
+        "en-GM": {
+            "to": "en-US",
+            "desc": "English (Gambia)"
+        },
+        "en-GU": {
+            "to": "en-US",
+            "desc": "English (Guam)"
+        },
+        "en-GY": {
+            "to": "en-US",
+            "desc": "English (Guyana)"
+        },
+        "en-HK": {
+            "to": "en-US",
+            "desc": "English (Hong Kong)"
+        },
+        "en-IE": {
+            "to": "en-US",
+            "desc": "English (Ireland)"
+        },
+        "en-IM": {
+            "to": "en-US",
+            "desc": "English (Isle of Man)"
+        },
+        "en-IN": {
+            "to": "en-US",
+            "desc": "English (India)"
+        },
+        "en-IO": {
+            "to": "en-US",
+            "desc": "English (British Indian Ocean Territory)"
+        },
+        "en-JE": {
+            "to": "en-US",
+            "desc": "English (Jersey)"
+        },
+        "en-JM": {
+            "to": "en-US",
+            "desc": "English (Jamaica)"
+        },
+        "en-KE": {
+            "to": "en-US",
+            "desc": "English (Kenya)"
+        },
+        "en-KI": {
+            "to": "en-US",
+            "desc": "English (Kiribati)"
+        },
+        "en-KN": {
+            "to": "en-US",
+            "desc": "English (Saint Kitts and Nevis)"
+        },
+        "en-KY": {
+            "to": "en-US",
+            "desc": "English (Cayman Islands)"
+        },
+        "en-LC": {
+            "to": "en-US",
+            "desc": "English (Saint Lucia)"
+        },
+        "en-LR": {
+            "to": "en-US",
+            "desc": "English (Liberia)"
+        },
+        "en-LS": {
+            "to": "en-US",
+            "desc": "English (Lesotho)"
+        },
+        "en-MG": {
+            "to": "en-US",
+            "desc": "English (Madagascar)"
+        },
+        "en-MH": {
+            "to": "en-US",
+            "desc": "English (Marshall Islands)"
+        },
+        "en-MO": {
+            "to": "en-US",
+            "desc": "English (Macau)"
+        },
+        "en-MP": {
+            "to": "en-US",
+            "desc": "English (Northern Mariana Islands)"
+        },
+        "en-MS": {
+            "to": "en-US",
+            "desc": "English (Montserrat)"
+        },
+        "en-MT": {
+            "to": "en-US",
+            "desc": "English (Malta)"
+        },
+        "en-MU": {
+            "to": "en-US",
+            "desc": "English (Mauritius)"
+        },
+        "en-MW": {
+            "to": "en-US",
+            "desc": "English (Malawi)"
+        },
+        "en-NA": {
+            "to": "en-US",
+            "desc": "English (Namibia)"
+        },
+        "en-NF": {
+            "to": "en-US",
+            "desc": "English (Norfolk Island)"
+        },
+        "en-NG": {
+            "to": "en-US",
+            "desc": "English (Nigeria)"
+        },
+        "en-NR": {
+            "to": "en-US",
+            "desc": "English (Nauru)"
+        },
+        "en-NU": {
+            "to": "en-US",
+            "desc": "English (Niue)"
+        },
+        "en-NZ": {
+            "to": "en-US",
+            "desc": "English (New Zealand)"
+        },
+        "en-PG": {
+            "to": "en-US",
+            "desc": "English (Papua New Guinea)"
+        },
+        "en-PH": {
+            "to": "en-US",
+            "desc": "English (Philippines)"
+        },
+        "en-PK": {
+            "to": "en-US",
+            "desc": "English (Pakistan)"
+        },
+        "en-PN": {
+            "to": "en-US",
+            "desc": "English (Pitcairn Islands)"
+        },
+        "en-PR": {
+            "to": "en-US",
+            "desc": "English (Puerto Rico)"
+        },
+        "en-PW": {
+            "to": "en-US",
+            "desc": "English (Palau)"
+        },
+        "en-RW": {
+            "to": "en-US",
+            "desc": "English (Rwanda)"
+        },
+        "en-SB": {
+            "to": "en-US",
+            "desc": "English (Solomon Islands)"
+        },
+        "en-SC": {
+            "to": "en-US",
+            "desc": "English (Seychelles)"
+        },
+        "en-SD": {
+            "to": "en-US",
+            "desc": "English (Sudan)"
+        },
+        "en-SG": {
+            "to": "en-US",
+            "desc": "English (Singapore)"
+        },
+        "en-SH": {
+            "to": "en-US",
+            "desc": "English (Saint Helena)"
+        },
+        "en-SL": {
+            "to": "en-US",
+            "desc": "English (Sierra Leone)"
+        },
+        "en-SS": {
+            "to": "en-US",
+            "desc": "English (South Sudan)"
+        },
+        "en-SX": {
+            "to": "en-US",
+            "desc": "English (Sint Maarten)"
+        },
+        "en-SZ": {
+            "to": "en-US",
+            "desc": "English (Swaziland)"
+        },
+        "en-TC": {
+            "to": "en-US",
+            "desc": "English (Turks and Caicos Islands)"
+        },
+        "en-TK": {
+            "to": "en-US",
+            "desc": "English (Tokelau)"
+        },
+        "en-TO": {
+            "to": "en-US",
+            "desc": "English (Tonga)"
+        },
+        "en-TT": {
+            "to": "en-US",
+            "desc": "English (Trinidad and Tobago)"
+        },
+        "en-TV": {
+            "to": "en-US",
+            "desc": "English (Tuvalu)"
+        },
+        "en-TZ": {
+            "to": "en-US",
+            "desc": "English (Tanzania)"
+        },
+        "en-UG": {
+            "to": "en-US",
+            "desc": "English (Uganda)"
+        },
+        "en-UM": {
+            "to": "en-US",
+            "desc": "English (U.S. Outlying Islands)"
+        },
+        "en-US": {
+            "to": "en-US",
+            "desc": "English (United States)"
+        },
+        "en-VC": {
+            "to": "en-US",
+            "desc": "English (St. Vincent & Grenadines)"
+        },
+        "en-VG": {
+            "to": "en-US",
+            "desc": "English (British Virgin Islands)"
+        },
+        "en-VI": {
+            "to": "en-US",
+            "desc": "English (U.S. Virgin Islands)"
+        },
+        "en-VU": {
+            "to": "en-US",
+            "desc": "English (Vanuatu)"
+        },
+        "en-WS": {
+            "to": "en-US",
+            "desc": "English (Samoa)"
+        },
+        "en-ZA": {
+            "to": "en-US",
+            "desc": "English (South Africa)"
+        },
+        "en-ZM": {
+            "to": "en-US",
+            "desc": "English (Zambia)"
+        },
+        "en-ZW": {
+            "to": "en-US",
+            "desc": "English (Zimbabwe)"
+        },
+        "eo": {
+            "to": "en-US",
+            "desc": "Esperanto"
+        },
+        "es": {
+            "to": "es-419",
+            "desc": "Spanish"
+        },
+        "es-419": {
+            "to": "es-419",
+            "desc": "Spanish (Latin America)"
+        },
+        "es-AR": {
+            "to": "es-419",
+            "desc": "Spanish (Argentina)"
+        },
+        "es-BO": {
+            "to": "es-419",
+            "desc": "Spanish (Bolivia)"
+        },
+        "es-CL": {
+            "to": "es-419",
+            "desc": "Spanish (Chile)"
+        },
+        "es-CO": {
+            "to": "es-419",
+            "desc": "Spanish (Colombia)"
+        },
+        "es-CR": {
+            "to": "es-419",
+            "desc": "Spanish (Costa Rica)"
+        },
+        "es-CU": {
+            "to": "es-419",
+            "desc": "Spanish (Cuba)"
+        },
+        "es-DO": {
+            "to": "es-419",
+            "desc": "Spanish (Dominican Republic)"
+        },
+        "es-EA": {
+            "to": "es-419",
+            "desc": "Spanish (Ceuta and Melilla)"
+        },
+        "es-EC": {
+            "to": "es-419",
+            "desc": "Spanish (Ecuador)"
+        },
+        "es-ES": {
+            "to": "es-ES",
+            "desc": "Spanish (Spain)"
+        },
+        "es-GQ": {
+            "to": "es-419",
+            "desc": "Spanish (Equatorial Guinea)"
+        },
+        "es-GT": {
+            "to": "es-419",
+            "desc": "Spanish (Guatemala)"
+        },
+        "es-HN": {
+            "to": "es-419",
+            "desc": "Spanish (Honduras)"
+        },
+        "es-IC": {
+            "to": "es-419",
+            "desc": "Spanish (Canary Islands)"
+        },
+        "es-MX": {
+            "to": "es-419",
+            "desc": "Spanish (Mexico)"
+        },
+        "es-NI": {
+            "to": "es-419",
+            "desc": "Spanish (Nicaragua)"
+        },
+        "es-PA": {
+            "to": "es-419",
+            "desc": "Spanish (Panama)"
+        },
+        "es-PE": {
+            "to": "es-419",
+            "desc": "Spanish (Peru)"
+        },
+        "es-PH": {
+            "to": "es-419",
+            "desc": "Spanish (Philippines)"
+        },
+        "es-PR": {
+            "to": "es-419",
+            "desc": "Spanish (Puerto Rico)"
+        },
+        "es-PY": {
+            "to": "es-419",
+            "desc": "Spanish (Paraguay)"
+        },
+        "es-SV": {
+            "to": "es-419",
+            "desc": "Spanish (El Salvador)"
+        },
+        "es-US": {
+            "to": "es-419",
+            "desc": "Spanish (United States)"
+        },
+        "es-UY": {
+            "to": "es-419",
+            "desc": "Spanish (Uruguay)"
+        },
+        "es-VE": {
+            "to": "es-419",
+            "desc": "Spanish (Venezuela)"
+        },
+        "et": {
+            "to": "en-US",
+            "desc": "Estonian"
+        },
+        "et-EE": {
+            "to": "en-US",
+            "desc": "Estonian (Estonia)"
+        },
+        "eu": {
+            "to": "en-US",
+            "desc": "Basque"
+        },
+        "eu-ES": {
+            "to": "en-US",
+            "desc": "Basque (Spain)"
+        },
+        "ewo": {
+            "to": "en-US",
+            "desc": "Ewondo"
+        },
+        "ewo-CM": {
+            "to": "en-US",
+            "desc": "Ewondo (Cameroon)"
+        },
+        "fa": {
+            "to": "en-US",
+            "desc": "Persian"
+        },
+        "fa-AF": {
+            "to": "en-US",
+            "desc": "Persian (Afghanistan)"
+        },
+        "fa-IR": {
+            "to": "en-US",
+            "desc": "Persian (Iran)"
+        },
+        "ff": {
+            "to": "en-US",
+            "desc": "Fulah"
+        },
+        "ff-SN": {
+            "to": "en-US",
+            "desc": "Fulah (Senegal)"
+        },
+        "fi": {
+            "to": "en-US",
+            "desc": "Finnish"
+        },
+        "fi-FI": {
+            "to": "en-US",
+            "desc": "Finnish (Finland)"
+        },
+        "fil": {
+            "to": "en-US",
+            "desc": "Filipino"
+        },
+        "fil-PH": {
+            "to": "en-US",
+            "desc": "Filipino (Philippines)"
+        },
+        "fo": {
+            "to": "en-US",
+            "desc": "Faroese"
+        },
+        "fo-FO": {
+            "to": "en-US",
+            "desc": "Faroese (Faroe Islands)"
+        },
+        "fr": {
+            "to": "fr-FR",
+            "desc": "French"
+        },
+        "fr-BE": {
+            "to": "fr-FR",
+            "desc": "French (Belgium)"
+        },
+        "fr-BF": {
+            "to": "fr-FR",
+            "desc": "French (Burkina Faso)"
+        },
+        "fr-BI": {
+            "to": "fr-FR",
+            "desc": "French (Burundi)"
+        },
+        "fr-BJ": {
+            "to": "fr-FR",
+            "desc": "French (Benin)"
+        },
+        "fr-BL": {
+            "to": "fr-FR",
+            "desc": "French (Saint Barthélemy)"
+        },
+        "fr-CA": {
+            "to": "fr-FR",
+            "desc": "French (Canada)"
+        },
+        "fr-CD": {
+            "to": "fr-FR",
+            "desc": "French (Congo (DRC))"
+        },
+        "fr-CF": {
+            "to": "fr-FR",
+            "desc": "French (Central African Republic)"
+        },
+        "fr-CG": {
+            "to": "fr-FR",
+            "desc": "French (Congo (Republic))"
+        },
+        "fr-CH": {
+            "to": "fr-FR",
+            "desc": "French (Switzerland)"
+        },
+        "fr-CI": {
+            "to": "fr-FR",
+            "desc": "French (Côte d’Ivoire)"
+        },
+        "fr-CM": {
+            "to": "fr-FR",
+            "desc": "French (Cameroon)"
+        },
+        "fr-DJ": {
+            "to": "fr-FR",
+            "desc": "French (Djibouti)"
+        },
+        "fr-DZ": {
+            "to": "fr-FR",
+            "desc": "French (Algeria)"
+        },
+        "fr-FR": {
+            "to": "fr-FR",
+            "desc": "French (France)"
+        },
+        "fr-GA": {
+            "to": "fr-FR",
+            "desc": "French (Gabon)"
+        },
+        "fr-GF": {
+            "to": "fr-FR",
+            "desc": "French (French Guiana)"
+        },
+        "fr-GN": {
+            "to": "fr-FR",
+            "desc": "French (Guinea)"
+        },
+        "fr-GP": {
+            "to": "fr-FR",
+            "desc": "French (Guadeloupe)"
+        },
+        "fr-GQ": {
+            "to": "fr-FR",
+            "desc": "French (Equatorial Guinea)"
+        },
+        "fr-HT": {
+            "to": "fr-FR",
+            "desc": "French (Haiti)"
+        },
+        "fr-KM": {
+            "to": "fr-FR",
+            "desc": "French (Comoros)"
+        },
+        "fr-LU": {
+            "to": "fr-FR",
+            "desc": "French (Luxembourg)"
+        },
+        "fr-MA": {
+            "to": "fr-FR",
+            "desc": "French (Morocco)"
+        },
+        "fr-MC": {
+            "to": "fr-FR",
+            "desc": "French (Monaco)"
+        },
+        "fr-MF": {
+            "to": "fr-FR",
+            "desc": "French (Saint Martin)"
+        },
+        "fr-MG": {
+            "to": "fr-FR",
+            "desc": "French (Madagascar)"
+        },
+        "fr-ML": {
+            "to": "fr-FR",
+            "desc": "French (Mali)"
+        },
+        "fr-MQ": {
+            "to": "fr-FR",
+            "desc": "French (Martinique)"
+        },
+        "fr-MR": {
+            "to": "fr-FR",
+            "desc": "French (Mauritania)"
+        },
+        "fr-MU": {
+            "to": "fr-FR",
+            "desc": "French (Mauritius)"
+        },
+        "fr-NC": {
+            "to": "fr-FR",
+            "desc": "French (New Caledonia)"
+        },
+        "fr-NE": {
+            "to": "fr-FR",
+            "desc": "French (Niger)"
+        },
+        "fr-PF": {
+            "to": "fr-FR",
+            "desc": "French (French Polynesia)"
+        },
+        "fr-PM": {
+            "to": "fr-FR",
+            "desc": "French (Saint Pierre and Miquelon)"
+        },
+        "fr-RE": {
+            "to": "fr-FR",
+            "desc": "French (Réunion)"
+        },
+        "fr-RW": {
+            "to": "fr-FR",
+            "desc": "French (Rwanda)"
+        },
+        "fr-SC": {
+            "to": "fr-FR",
+            "desc": "French (Seychelles)"
+        },
+        "fr-SN": {
+            "to": "fr-FR",
+            "desc": "French (Senegal)"
+        },
+        "fr-SY": {
+            "to": "fr-FR",
+            "desc": "French (Syria)"
+        },
+        "fr-TD": {
+            "to": "fr-FR",
+            "desc": "French (Chad)"
+        },
+        "fr-TG": {
+            "to": "fr-FR",
+            "desc": "French (Togo)"
+        },
+        "fr-TN": {
+            "to": "fr-FR",
+            "desc": "French (Tunisia)"
+        },
+        "fr-VU": {
+            "to": "fr-FR",
+            "desc": "French (Vanuatu)"
+        },
+        "fr-WF": {
+            "to": "fr-FR",
+            "desc": "French (Wallis and Futuna)"
+        },
+        "fr-YT": {
+            "to": "fr-FR",
+            "desc": "French (Mayotte)"
+        },
+        "ga": {
+            "to": "en-US",
+            "desc": "Irish"
+        },
+        "ga-IE": {
+            "to": "en-US",
+            "desc": "Irish (Ireland)"
+        },
+        "gl": {
+            "to": "en-US",
+            "desc": "Galician"
+        },
+        "gl-ES": {
+            "to": "en-US",
+            "desc": "Galician (Spain)"
+        },
+        "gsw": {
+            "to": "en-US",
+            "desc": "Swiss German"
+        },
+        "gsw-CH": {
+            "to": "en-US",
+            "desc": "Swiss German (Switzerland)"
+        },
+        "gsw-LI": {
+            "to": "en-US",
+            "desc": "Swiss German (Liechtenstein)"
+        },
+        "gu": {
+            "to": "en-US",
+            "desc": "Gujarati"
+        },
+        "gu-IN": {
+            "to": "en-US",
+            "desc": "Gujarati (India)"
+        },
+        "guz": {
+            "to": "en-US",
+            "desc": "Gusii"
+        },
+        "guz-KE": {
+            "to": "en-US",
+            "desc": "Gusii (Kenya)"
+        },
+        "gv": {
+            "to": "en-US",
+            "desc": "Manx"
+        },
+        "gv-IM": {
+            "to": "en-US",
+            "desc": "Manx (Isle of Man)"
+        },
+        "ha": {
+            "to": "en-US",
+            "desc": "Hausa"
+        },
+        "ha-GH": {
+            "to": "en-US",
+            "desc": "Hausa (Latin,Ghana)"
+        },
+        "ha-NE": {
+            "to": "en-US",
+            "desc": "Hausa (Latin,Niger)"
+        },
+        "ha-NG": {
+            "to": "en-US",
+            "desc": "Hausa (Latin,Nigeria)"
+        },
+        "haw": {
+            "to": "en-US",
+            "desc": "Hawaiian"
+        },
+        "haw-US": {
+            "to": "en-US",
+            "desc": "Hawaiian (United States)"
+        },
+        "iw": {
+            "to": "en-US",
+            "desc": "Hebrew"
+        },
+        "iw-IL": {
+            "to": "en-US",
+            "desc": "Hebrew (Israel)"
+        },
+        "hi": {
+            "to": "en-US",
+            "desc": "Hindi"
+        },
+        "hi-IN": {
+            "to": "en-US",
+            "desc": "Hindi (India)"
+        },
+        "hr": {
+            "to": "en-US",
+            "desc": "Croatian"
+        },
+        "hr-BA": {
+            "to": "en-US",
+            "desc": "Croatian (Bosnia and Herzegovina)"
+        },
+        "hr-HR": {
+            "to": "en-US",
+            "desc": "Croatian (Croatia)"
+        },
+        "hu": {
+            "to": "en-US",
+            "desc": "Hungarian"
+        },
+        "hu-HU": {
+            "to": "en-US",
+            "desc": "Hungarian (Hungary)"
+        },
+        "hy": {
+            "to": "en-US",
+            "desc": "Armenian"
+        },
+        "hy-AM": {
+            "to": "en-US",
+            "desc": "Armenian (Armenia)"
+        },
+        "in": {
+            "to": "en-US",
+            "desc": "Indonesian"
+        },
+        "in-ID": {
+            "to": "en-US",
+            "desc": "Indonesian (Indonesia)"
+        },
+        "ig": {
+            "to": "en-US",
+            "desc": "Igbo"
+        },
+        "ig-NG": {
+            "to": "en-US",
+            "desc": "Igbo (Nigeria)"
+        },
+        "ii": {
+            "to": "en-US",
+            "desc": "Sichuan Yi"
+        },
+        "ii-CN": {
+            "to": "en-US",
+            "desc": "Sichuan Yi (China)"
+        },
+        "is": {
+            "to": "en-US",
+            "desc": "Icelandic"
+        },
+        "is-IS": {
+            "to": "en-US",
+            "desc": "Icelandic (Iceland)"
+        },
+        "it": {
+            "to": "it-IT",
+            "desc": "Italian"
+        },
+        "it-CH": {
+            "to": "it-IT",
+            "desc": "Italian (Switzerland)"
+        },
+        "it-IT": {
+            "to": "it-IT",
+            "desc": "Italian (Italy)"
+        },
+        "it-SM": {
+            "to": "it-IT",
+            "desc": "Italian (San Marino)"
+        },
+        "ja": {
+            "to": "en-US",
+            "desc": "Japanese"
+        },
+        "ja-JP": {
+            "to": "en-US",
+            "desc": "Japanese (Japan)"
+        },
+        "jgo": {
+            "to": "en-US",
+            "desc": "Ngomba"
+        },
+        "jgo-CM": {
+            "to": "en-US",
+            "desc": "Ngomba (Cameroon)"
+        },
+        "jmc": {
+            "to": "en-US",
+            "desc": "Machame"
+        },
+        "jmc-TZ": {
+            "to": "en-US",
+            "desc": "Machame (Tanzania)"
+        },
+        "ka": {
+            "to": "en-US",
+            "desc": "Georgian"
+        },
+        "ka-GE": {
+            "to": "en-US",
+            "desc": "Georgian (Georgia)"
+        },
+        "kab": {
+            "to": "en-US",
+            "desc": "Kabyle"
+        },
+        "kab-DZ": {
+            "to": "en-US",
+            "desc": "Kabyle (Algeria)"
+        },
+        "kam": {
+            "to": "en-US",
+            "desc": "Kamba"
+        },
+        "kam-KE": {
+            "to": "en-US",
+            "desc": "Kamba (Kenya)"
+        },
+        "kde": {
+            "to": "en-US",
+            "desc": "Makonde"
+        },
+        "kde-TZ": {
+            "to": "en-US",
+            "desc": "Makonde (Tanzania)"
+        },
+        "kea": {
+            "to": "en-US",
+            "desc": "Kabuverdianu"
+        },
+        "kea-CV": {
+            "to": "en-US",
+            "desc": "Kabuverdianu (Cape Verde)"
+        },
+        "khq": {
+            "to": "en-US",
+            "desc": "Koyra Chiini"
+        },
+        "khq-ML": {
+            "to": "en-US",
+            "desc": "Koyra Chiini (Mali)"
+        },
+        "ki": {
+            "to": "en-US",
+            "desc": "Kikuyu"
+        },
+        "ki-KE": {
+            "to": "en-US",
+            "desc": "Kikuyu (Kenya)"
+        },
+        "kk": {
+            "to": "en-US",
+            "desc": "Kazakh"
+        },
+        "kk-KZ": {
+            "to": "en-US",
+            "desc": "Kazakh (Cyrillic,Kazakhstan)"
+        },
+        "kkj": {
+            "to": "en-US",
+            "desc": "Kako"
+        },
+        "kkj-CM": {
+            "to": "en-US",
+            "desc": "Kako (Cameroon)"
+        },
+        "kl": {
+            "to": "en-US",
+            "desc": "Kalaallisut"
+        },
+        "kl-GL": {
+            "to": "en-US",
+            "desc": "Kalaallisut (Greenland)"
+        },
+        "kln": {
+            "to": "en-US",
+            "desc": "Kalenjin"
+        },
+        "kln-KE": {
+            "to": "en-US",
+            "desc": "Kalenjin (Kenya)"
+        },
+        "km": {
+            "to": "en-US",
+            "desc": "Khmer"
+        },
+        "km-KH": {
+            "to": "en-US",
+            "desc": "Khmer (Cambodia)"
+        },
+        "kn": {
+            "to": "en-US",
+            "desc": "Kannada"
+        },
+        "kn-IN": {
+            "to": "en-US",
+            "desc": "Kannada (India)"
+        },
+        "ko": {
+            "to": "en-US",
+            "desc": "Korean"
+        },
+        "ko-KP": {
+            "to": "en-US",
+            "desc": "Korean (North Korea)"
+        },
+        "ko-KR": {
+            "to": "en-US",
+            "desc": "Korean (South Korea)"
+        },
+        "kok": {
+            "to": "en-US",
+            "desc": "Konkani"
+        },
+        "kok-IN": {
+            "to": "en-US",
+            "desc": "Konkani (India)"
+        },
+        "ks": {
+            "to": "en-US",
+            "desc": "Kashmiri"
+        },
+        "ks-IN": {
+            "to": "en-US",
+            "desc": "Kashmiri (Arabic,India)"
+        },
+        "ksb": {
+            "to": "en-US",
+            "desc": "Shambala"
+        },
+        "ksb-TZ": {
+            "to": "en-US",
+            "desc": "Shambala (Tanzania)"
+        },
+        "ksf": {
+            "to": "en-US",
+            "desc": "Bafia"
+        },
+        "ksf-CM": {
+            "to": "en-US",
+            "desc": "Bafia (Cameroon)"
+        },
+        "kw": {
+            "to": "en-US",
+            "desc": "Cornish"
+        },
+        "kw-GB": {
+            "to": "en-US",
+            "desc": "Cornish (United Kingdom)"
+        },
+        "ky": {
+            "to": "en-US",
+            "desc": "Kyrgyz"
+        },
+        "ky-KG": {
+            "to": "en-US",
+            "desc": "Kyrgyz (Cyrillic,Kyrgyzstan)"
+        },
+        "lag": {
+            "to": "en-US",
+            "desc": "Langi"
+        },
+        "lag-TZ": {
+            "to": "en-US",
+            "desc": "Langi (Tanzania)"
+        },
+        "lg": {
+            "to": "en-US",
+            "desc": "Ganda"
+        },
+        "lg-UG": {
+            "to": "en-US",
+            "desc": "Ganda (Uganda)"
+        },
+        "lkt": {
+            "to": "en-US",
+            "desc": "Lakota"
+        },
+        "lkt-US": {
+            "to": "en-US",
+            "desc": "Lakota (United States)"
+        },
+        "ln": {
+            "to": "en-US",
+            "desc": "Lingala"
+        },
+        "ln-AO": {
+            "to": "en-US",
+            "desc": "Lingala (Angola)"
+        },
+        "ln-CD": {
+            "to": "en-US",
+            "desc": "Lingala (Congo (DRC))"
+        },
+        "ln-CF": {
+            "to": "en-US",
+            "desc": "Lingala (Central African Republic)"
+        },
+        "ln-CG": {
+            "to": "en-US",
+            "desc": "Lingala (Congo (Republic))"
+        },
+        "lo": {
+            "to": "en-US",
+            "desc": "Lao"
+        },
+        "lo-LA": {
+            "to": "en-US",
+            "desc": "Lao (Laos)"
+        },
+        "lt": {
+            "to": "en-US",
+            "desc": "Lithuanian"
+        },
+        "lt-LT": {
+            "to": "en-US",
+            "desc": "Lithuanian (Lithuania)"
+        },
+        "lu": {
+            "to": "en-US",
+            "desc": "Luba-Katanga"
+        },
+        "lu-CD": {
+            "to": "en-US",
+            "desc": "Luba-Katanga (Congo (DRC))"
+        },
+        "luo": {
+            "to": "en-US",
+            "desc": "Luo"
+        },
+        "luo-KE": {
+            "to": "en-US",
+            "desc": "Luo (Kenya)"
+        },
+        "luy": {
+            "to": "en-US",
+            "desc": "Luyia"
+        },
+        "luy-KE": {
+            "to": "en-US",
+            "desc": "Luyia (Kenya)"
+        },
+        "lv": {
+            "to": "en-US",
+            "desc": "Latvian"
+        },
+        "lv-LV": {
+            "to": "en-US",
+            "desc": "Latvian (Latvia)"
+        },
+        "mas": {
+            "to": "en-US",
+            "desc": "Masai"
+        },
+        "mas-KE": {
+            "to": "en-US",
+            "desc": "Masai (Kenya)"
+        },
+        "mas-TZ": {
+            "to": "en-US",
+            "desc": "Masai (Tanzania)"
+        },
+        "mer": {
+            "to": "en-US",
+            "desc": "Meru"
+        },
+        "mer-KE": {
+            "to": "en-US",
+            "desc": "Meru (Kenya)"
+        },
+        "mfe": {
+            "to": "en-US",
+            "desc": "Morisyen"
+        },
+        "mfe-MU": {
+            "to": "en-US",
+            "desc": "Morisyen (Mauritius)"
+        },
+        "mg": {
+            "to": "en-US",
+            "desc": "Malagasy"
+        },
+        "mg-MG": {
+            "to": "en-US",
+            "desc": "Malagasy (Madagascar)"
+        },
+        "mgh": {
+            "to": "en-US",
+            "desc": "Makhuwa-Meetto"
+        },
+        "mgh-MZ": {
+            "to": "en-US",
+            "desc": "Makhuwa-Meetto (Mozambique)"
+        },
+        "mgo": {
+            "to": "en-US",
+            "desc": "Meta'"
+        },
+        "mgo-CM": {
+            "to": "en-US",
+            "desc": "Meta' (Cameroon)"
+        },
+        "mk": {
+            "to": "en-US",
+            "desc": "Macedonian"
+        },
+        "mk-MK": {
+            "to": "en-US",
+            "desc": "Macedonian (Macedonia (FYROM))"
+        },
+        "ml": {
+            "to": "en-US",
+            "desc": "Malayalam"
+        },
+        "ml-IN": {
+            "to": "en-US",
+            "desc": "Malayalam (India)"
+        },
+        "mn": {
+            "to": "en-US",
+            "desc": "Mongolian"
+        },
+        "mn-MN": {
+            "to": "en-US",
+            "desc": "Mongolian (Cyrillic,Mongolia)"
+        },
+        "mr": {
+            "to": "en-US",
+            "desc": "Marathi"
+        },
+        "mr-IN": {
+            "to": "en-US",
+            "desc": "Marathi (India)"
+        },
+        "ms": {
+            "to": "en-US",
+            "desc": "Malay"
+        },
+        "ms-BN": {
+            "to": "en-US",
+            "desc": "Malay (Latin,Brunei)"
+        },
+        "ms-MY": {
+            "to": "en-US",
+            "desc": "Malay (Latin,Malaysia)"
+        },
+        "ms-SG": {
+            "to": "en-US",
+            "desc": "Malay (Latin,Singapore)"
+        },
+        "mt": {
+            "to": "en-US",
+            "desc": "Maltese"
+        },
+        "mt-MT": {
+            "to": "en-US",
+            "desc": "Maltese (Malta)"
+        },
+        "mua": {
+            "to": "en-US",
+            "desc": "Mundang"
+        },
+        "mua-CM": {
+            "to": "en-US",
+            "desc": "Mundang (Cameroon)"
+        },
+        "my": {
+            "to": "en-US",
+            "desc": "Burmese"
+        },
+        "my-MM": {
+            "to": "en-US",
+            "desc": "Burmese (Myanmar (Burma))"
+        },
+        "naq": {
+            "to": "en-US",
+            "desc": "Nama"
+        },
+        "naq-NA": {
+            "to": "en-US",
+            "desc": "Nama (Namibia)"
+        },
+        "nb": {
+            "to": "en-US",
+            "desc": "Norwegian Bokmål"
+        },
+        "nb-NO": {
+            "to": "en-US",
+            "desc": "Norwegian Bokmål (Norway)"
+        },
+        "nb-SJ": {
+            "to": "en-US",
+            "desc": "Norwegian Bokmål (Svalbard and Jan Mayen)"
+        },
+        "nd": {
+            "to": "en-US",
+            "desc": "North Ndebele"
+        },
+        "nd-ZW": {
+            "to": "en-US",
+            "desc": "North Ndebele (Zimbabwe)"
+        },
+        "ne": {
+            "to": "en-US",
+            "desc": "Nepali"
+        },
+        "ne-IN": {
+            "to": "en-US",
+            "desc": "Nepali (India)"
+        },
+        "ne-NP": {
+            "to": "en-US",
+            "desc": "Nepali (Nepal)"
+        },
+        "nl": {
+            "to": "en-US",
+            "desc": "Dutch"
+        },
+        "nl-AW": {
+            "to": "en-US",
+            "desc": "Dutch (Aruba)"
+        },
+        "nl-BE": {
+            "to": "en-US",
+            "desc": "Dutch (Belgium)"
+        },
+        "nl-BQ": {
+            "to": "en-US",
+            "desc": "Dutch (Caribbean Netherlands)"
+        },
+        "nl-CW": {
+            "to": "en-US",
+            "desc": "Dutch (Curaçao)"
+        },
+        "nl-NL": {
+            "to": "en-US",
+            "desc": "Dutch (Netherlands)"
+        },
+        "nl-SR": {
+            "to": "en-US",
+            "desc": "Dutch (Suriname)"
+        },
+        "nl-SX": {
+            "to": "en-US",
+            "desc": "Dutch (Sint Maarten)"
+        },
+        "nmg": {
+            "to": "en-US",
+            "desc": "Kwasio"
+        },
+        "nmg-CM": {
+            "to": "en-US",
+            "desc": "Kwasio (Cameroon)"
+        },
+        "nn": {
+            "to": "en-US",
+            "desc": "Norwegian Nynorsk"
+        },
+        "nn-NO": {
+            "to": "en-US",
+            "desc": "Norwegian Nynorsk (Norway)"
+        },
+        "nnh": {
+            "to": "en-US",
+            "desc": "Ngiemboon"
+        },
+        "nnh-CM": {
+            "to": "en-US",
+            "desc": "Ngiemboon (Cameroon)"
+        },
+        "nus": {
+            "to": "en-US",
+            "desc": "Nuer"
+        },
+        "nus-SD": {
+            "to": "en-US",
+            "desc": "Nuer (Sudan)"
+        },
+        "nyn": {
+            "to": "en-US",
+            "desc": "Nyankole"
+        },
+        "nyn-UG": {
+            "to": "en-US",
+            "desc": "Nyankole (Uganda)"
+        },
+        "om": {
+            "to": "en-US",
+            "desc": "Oromo"
+        },
+        "om-ET": {
+            "to": "en-US",
+            "desc": "Oromo (Ethiopia)"
+        },
+        "om-KE": {
+            "to": "en-US",
+            "desc": "Oromo (Kenya)"
+        },
+        "or": {
+            "to": "en-US",
+            "desc": "Oriya"
+        },
+        "or-IN": {
+            "to": "en-US",
+            "desc": "Oriya (India)"
+        },
+        "pa": {
+            "to": "en-US",
+            "desc": "Punjabi"
+        },
+        "pa-PK": {
+            "to": "en-US",
+            "desc": "Punjabi (Arabic,Pakistan)"
+        },
+        "pa-IN": {
+            "to": "en-US",
+            "desc": "Punjabi (Gurmukhi,India)"
+        },
+        "pl": {
+            "to": "en-US",
+            "desc": "Polish"
+        },
+        "pl-PL": {
+            "to": "en-US",
+            "desc": "Polish (Poland)"
+        },
+        "ps": {
+            "to": "en-US",
+            "desc": "Pashto"
+        },
+        "ps-AF": {
+            "to": "en-US",
+            "desc": "Pashto (Afghanistan)"
+        },
+        "pt": {
+            "to": "pt-BR",
+            "desc": "Portuguese"
+        },
+        "pt-AO": {
+            "to": "pt-BR",
+            "desc": "Portuguese (Angola)"
+        },
+        "pt-BR": {
+            "to": "pt-BR",
+            "desc": "Portuguese (Brazil)"
+        },
+        "pt-CV": {
+            "to": "pt-BR",
+            "desc": "Portuguese (Cape Verde)"
+        },
+        "pt-GW": {
+            "to": "pt-BR",
+            "desc": "Portuguese (Guinea-Bissau)"
+        },
+        "pt-MO": {
+            "to": "pt-BR",
+            "desc": "Portuguese (Macau)"
+        },
+        "pt-MZ": {
+            "to": "pt-BR",
+            "desc": "Portuguese (Mozambique)"
+        },
+        "pt-PT": {
+            "to": "pt-PT",
+            "desc": "Portuguese (Portugal)"
+        },
+        "pt-ST": {
+            "to": "pt-BR",
+            "desc": "Portuguese (São Tomé and Príncipe)"
+        },
+        "pt-TL": {
+            "to": "pt-BR",
+            "desc": "Portuguese (Timor-Leste)"
+        },
+        "rm": {
+            "to": "en-US",
+            "desc": "Romansh"
+        },
+        "rm-CH": {
+            "to": "en-US",
+            "desc": "Romansh (Switzerland)"
+        },
+        "rn": {
+            "to": "en-US",
+            "desc": "Rundi"
+        },
+        "rn-BI": {
+            "to": "en-US",
+            "desc": "Rundi (Burundi)"
+        },
+        "ro": {
+            "to": "en-US",
+            "desc": "Romanian"
+        },
+        "ro-MD": {
+            "to": "en-US",
+            "desc": "Romanian (Moldova)"
+        },
+        "ro-RO": {
+            "to": "en-US",
+            "desc": "Romanian (Romania)"
+        },
+        "rof": {
+            "to": "en-US",
+            "desc": "Rombo"
+        },
+        "rof-TZ": {
+            "to": "en-US",
+            "desc": "Rombo (Tanzania)"
+        },
+        "ru": {
+            "to": "ru-RU",
+            "desc": "Russian"
+        },
+        "ru-BY": {
+            "to": "ru-RU",
+            "desc": "Russian (Belarus)"
+        },
+        "ru-KG": {
+            "to": "ru-RU",
+            "desc": "Russian (Kyrgyzstan)"
+        },
+        "ru-KZ": {
+            "to": "ru-RU",
+            "desc": "Russian (Kazakhstan)"
+        },
+        "ru-MD": {
+            "to": "ru-RU",
+            "desc": "Russian (Moldova)"
+        },
+        "ru-RU": {
+            "to": "ru-RU",
+            "desc": "Russian (Russia)"
+        },
+        "ru-UA": {
+            "to": "ru-RU",
+            "desc": "Russian (Ukraine)"
+        },
+        "rw": {
+            "to": "en-US",
+            "desc": "Kinyarwanda"
+        },
+        "rw-RW": {
+            "to": "en-US",
+            "desc": "Kinyarwanda (Rwanda)"
+        },
+        "rwk": {
+            "to": "en-US",
+            "desc": "Rwa"
+        },
+        "rwk-TZ": {
+            "to": "en-US",
+            "desc": "Rwa (Tanzania)"
+        },
+        "saq": {
+            "to": "en-US",
+            "desc": "Samburu"
+        },
+        "saq-KE": {
+            "to": "en-US",
+            "desc": "Samburu (Kenya)"
+        },
+        "sbp": {
+            "to": "en-US",
+            "desc": "Sangu"
+        },
+        "sbp-TZ": {
+            "to": "en-US",
+            "desc": "Sangu (Tanzania)"
+        },
+        "seh": {
+            "to": "en-US",
+            "desc": "Sena"
+        },
+        "seh-MZ": {
+            "to": "en-US",
+            "desc": "Sena (Mozambique)"
+        },
+        "ses": {
+            "to": "en-US",
+            "desc": "Koyraboro Senni"
+        },
+        "ses-ML": {
+            "to": "en-US",
+            "desc": "Koyraboro Senni (Mali)"
+        },
+        "sg": {
+            "to": "en-US",
+            "desc": "Sango"
+        },
+        "sg-CF": {
+            "to": "en-US",
+            "desc": "Sango (Central African Republic)"
+        },
+        "shi": {
+            "to": "en-US",
+            "desc": "Tachelhit"
+        },
+        "shi-MA": {
+            "to": "en-US",
+            "desc": "Tachelhit (Latin,Morocco)"
+        },
+        "si": {
+            "to": "en-US",
+            "desc": "Sinhala"
+        },
+        "si-LK": {
+            "to": "en-US",
+            "desc": "Sinhala (Sri Lanka)"
+        },
+        "sk": {
+            "to": "en-US",
+            "desc": "Slovak"
+        },
+        "sk-SK": {
+            "to": "en-US",
+            "desc": "Slovak (Slovakia)"
+        },
+        "sl": {
+            "to": "en-US",
+            "desc": "Slovenian"
+        },
+        "sl-SI": {
+            "to": "en-US",
+            "desc": "Slovenian (Slovenia)"
+        },
+        "sn": {
+            "to": "en-US",
+            "desc": "Shona"
+        },
+        "sn-ZW": {
+            "to": "en-US",
+            "desc": "Shona (Zimbabwe)"
+        },
+        "so": {
+            "to": "en-US",
+            "desc": "Somali"
+        },
+        "so-DJ": {
+            "to": "en-US",
+            "desc": "Somali (Djibouti)"
+        },
+        "so-ET": {
+            "to": "en-US",
+            "desc": "Somali (Ethiopia)"
+        },
+        "so-KE": {
+            "to": "en-US",
+            "desc": "Somali (Kenya)"
+        },
+        "so-SO": {
+            "to": "en-US",
+            "desc": "Somali (Somalia)"
+        },
+        "sq": {
+            "to": "en-US",
+            "desc": "Albanian"
+        },
+        "sq-AL": {
+            "to": "en-US",
+            "desc": "Albanian (Albania)"
+        },
+        "sq-MK": {
+            "to": "en-US",
+            "desc": "Albanian (Macedonia (FYROM))"
+        },
+        "sq-XK": {
+            "to": "en-US",
+            "desc": "Albanian (Kosovo)"
+        },
+        "sr": {
+            "to": "en-US",
+            "desc": "Serbian"
+        },
+        "sr-BA": {
+            "to": "en-US",
+            "desc": "Serbian (Cyrillic,Bosnia and Herzegovina)"
+        },
+        "sr-ME": {
+            "to": "en-US",
+            "desc": "Serbian (Cyrillic,Montenegro)"
+        },
+        "sr-RS": {
+            "to": "en-US",
+            "desc": "Serbian (Cyrillic,Serbia)"
+        },
+        "sr-XK": {
+            "to": "en-US",
+            "desc": "Serbian (Cyrillic,Kosovo)"
+        },
+        "sv": {
+            "to": "en-US",
+            "desc": "Swedish"
+        },
+        "sv-AX": {
+            "to": "en-US",
+            "desc": "Swedish (Åland Islands)"
+        },
+        "sv-FI": {
+            "to": "en-US",
+            "desc": "Swedish (Finland)"
+        },
+        "sv-SE": {
+            "to": "en-US",
+            "desc": "Swedish (Sweden)"
+        },
+        "sw": {
+            "to": "en-US",
+            "desc": "Swahili"
+        },
+        "sw-KE": {
+            "to": "en-US",
+            "desc": "Swahili (Kenya)"
+        },
+        "sw-TZ": {
+            "to": "en-US",
+            "desc": "Swahili (Tanzania)"
+        },
+        "sw-UG": {
+            "to": "en-US",
+            "desc": "Swahili (Uganda)"
+        },
+        "swc": {
+            "to": "en-US",
+            "desc": "Congo Swahili"
+        },
+        "swc-CD": {
+            "to": "en-US",
+            "desc": "Congo Swahili (Congo (DRC))"
+        },
+        "ta": {
+            "to": "en-US",
+            "desc": "Tamil"
+        },
+        "ta-IN": {
+            "to": "en-US",
+            "desc": "Tamil (India)"
+        },
+        "ta-LK": {
+            "to": "en-US",
+            "desc": "Tamil (Sri Lanka)"
+        },
+        "ta-MY": {
+            "to": "en-US",
+            "desc": "Tamil (Malaysia)"
+        },
+        "ta-SG": {
+            "to": "en-US",
+            "desc": "Tamil (Singapore)"
+        },
+        "te": {
+            "to": "en-US",
+            "desc": "Telugu"
+        },
+        "te-IN": {
+            "to": "en-US",
+            "desc": "Telugu (India)"
+        },
+        "teo": {
+            "to": "en-US",
+            "desc": "Teso"
+        },
+        "teo-KE": {
+            "to": "en-US",
+            "desc": "Teso (Kenya)"
+        },
+        "teo-UG": {
+            "to": "en-US",
+            "desc": "Teso (Uganda)"
+        },
+        "th": {
+            "to": "en-US",
+            "desc": "Thai"
+        },
+        "th-TH": {
+            "to": "en-US",
+            "desc": "Thai (Thailand)"
+        },
+        "ti": {
+            "to": "en-US",
+            "desc": "Tigrinya"
+        },
+        "ti-ER": {
+            "to": "en-US",
+            "desc": "Tigrinya (Eritrea)"
+        },
+        "ti-ET": {
+            "to": "en-US",
+            "desc": "Tigrinya (Ethiopia)"
+        },
+        "to": {
+            "to": "en-US",
+            "desc": "Tongan"
+        },
+        "to-TO": {
+            "to": "en-US",
+            "desc": "Tongan (Tonga)"
+        },
+        "tr": {
+            "to": "en-US",
+            "desc": "Turkish"
+        },
+        "tr-CY": {
+            "to": "en-US",
+            "desc": "Turkish (Cyprus)"
+        },
+        "tr-TR": {
+            "to": "en-US",
+            "desc": "Turkish (Turkey)"
+        },
+        "twq": {
+            "to": "en-US",
+            "desc": "Tasawaq"
+        },
+        "twq-NE": {
+            "to": "en-US",
+            "desc": "Tasawaq (Niger)"
+        },
+        "tzm": {
+            "to": "en-US",
+            "desc": "Central Atlas Tamazight"
+        },
+        "tzm-MA": {
+            "to": "en-US",
+            "desc": "Central Atlas Tamazight (Latin,Morocco)"
+        },
+        "ug": {
+            "to": "en-US",
+            "desc": "Uyghur"
+        },
+        "ug-CN": {
+            "to": "en-US",
+            "desc": "Uyghur (Arabic,China)"
+        },
+        "uk": {
+            "to": "en-US",
+            "desc": "Ukrainian"
+        },
+        "uk-UA": {
+            "to": "en-US",
+            "desc": "Ukrainian (Ukraine)"
+        },
+        "ur": {
+            "to": "en-US",
+            "desc": "Urdu"
+        },
+        "ur-IN": {
+            "to": "en-US",
+            "desc": "Urdu (India)"
+        },
+        "ur-PK": {
+            "to": "en-US",
+            "desc": "Urdu (Pakistan)"
+        },
+        "uz": {
+            "to": "en-US",
+            "desc": "Uzbek"
+        },
+        "uz-AF": {
+            "to": "en-US",
+            "desc": "Uzbek (Arabic,Afghanistan)"
+        },
+        "uz-UZ": {
+            "to": "en-US",
+            "desc": "Uzbek (Cyrillic,Uzbekistan)"
+        },
+        "vai": {
+            "to": "en-US",
+            "desc": "Vai"
+        },
+        "vai-LR": {
+            "to": "en-US",
+            "desc": "Vai (Latin,Liberia)"
+        },
+        "vi": {
+            "to": "en-US",
+            "desc": "Vietnamese"
+        },
+        "vi-VN": {
+            "to": "en-US",
+            "desc": "Vietnamese (Vietnam)"
+        },
+        "vun": {
+            "to": "en-US",
+            "desc": "Vunjo"
+        },
+        "vun-TZ": {
+            "to": "en-US",
+            "desc": "Vunjo (Tanzania)"
+        },
+        "xog": {
+            "to": "en-US",
+            "desc": "Soga"
+        },
+        "xog-UG": {
+            "to": "en-US",
+            "desc": "Soga (Uganda)"
+        },
+        "yav": {
+            "to": "en-US",
+            "desc": "Yangben"
+        },
+        "yav-CM": {
+            "to": "en-US",
+            "desc": "Yangben (Cameroon)"
+        },
+        "yo": {
+            "to": "en-US",
+            "desc": "Yoruba"
+        },
+        "yo-BJ": {
+            "to": "en-US",
+            "desc": "Yoruba (Benin)"
+        },
+        "yo-NG": {
+            "to": "en-US",
+            "desc": "Yoruba (Nigeria)"
+        },
+        "zgh": {
+            "to": "en-US",
+            "desc": "Standard Moroccan Tamazight"
+        },
+        "zgh-MA": {
+            "to": "en-US",
+            "desc": "Standard Moroccan Tamazight (Morocco)"
+        },
+        "zh": {
+            "to": "en-US",
+            "desc": "Chinese"
+        },
+        "zh-CN": {
+            "to": "en-US",
+            "desc": "Chinese (Simplified Han,China)"
+        },
+        "zh-HK": {
+            "to": "en-US",
+            "desc": "Chinese (Simplified Han,Hong Kong)"
+        },
+        "zh-MO": {
+            "to": "en-US",
+            "desc": "Chinese (Simplified Han,Macau)"
+        },
+        "zh-SG": {
+            "to": "en-US",
+            "desc": "Chinese (Simplified Han,Singapore)"
+        },
+        "zh-TW": {
+            "to": "en-US",
+            "desc": "Chinese (Traditional Han,Taiwan)"
+        },
+        "zu": {
+            "to": "en-US",
+            "desc": "Zulu"
+        },
+        "zu-ZA": {
+            "to": "en-US",
+            "desc": "Zulu (South Africa)"
+        }
+    }
 }

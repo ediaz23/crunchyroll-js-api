@@ -1,10 +1,8 @@
 
-const fs = require('fs')
-const path = require('path')
-const utils = require('./utils')
-const authService = require('./services/auth')
-const indexService = require('./services/index')
-const accountService = require('./services/account')
+import utils from './utils.js'
+import authService from './services/auth.js'
+import indexService from './services/index.js'
+import accountService from './services/account.js'
 
 
 /**
@@ -23,7 +21,7 @@ const storage = {}
  */
 async function getAuthToken() {
     let token = null
-    
+
     if (storage.token && storage.token.accessToken) {
         const now = new Date()
         const diff = (now - new Date(storage.token.createdDate)) / 1000
@@ -67,12 +65,12 @@ async function getCms() {
         }
     }
     if (!cms) {
-        cms = await indexService.getIndexConfig({ token: await getAuthToken()})
+        cms = await indexService.getIndexConfig({ token: await getAuthToken() })
         storage.cms = fromJSON(cms.cms)    // eslint-disable-line require-atomic-updates
         cms = storage.cms
         await saveToLocal()
     }
-    
+
     return cms
 }
 
@@ -100,13 +98,23 @@ async function getLocale() {
 /**
  * Load from persistence data
  * @returns {Promise}
- */    
+ */
 async function loadFromLocal() {
-    const authData = authDataFile()
-    if (fs.existsSync(authData)) {
-        const data = fs.readFileSync(authData)
-        const jsonData = JSON.parse(data)
-        Object.assign(storage, fromJSON(jsonData))
+    const authData = await authDataFile()
+    try {
+        const fs = (await import('fs')).default
+        if (fs.existsSync(authData)) {
+            const data = fs.readFileSync(authData)
+            const jsonData = JSON.parse(data)
+            Object.assign(storage, fromJSON(jsonData))
+        }
+    } catch (_e) {
+        const data64 = localStorage.getItem(authData)
+        if (data64) {
+            const data = atob(data64)
+            const jsonData = JSON.parse(data)
+            Object.assign(storage, fromJSON(jsonData))
+        }
     }
 }
 
@@ -116,7 +124,14 @@ async function loadFromLocal() {
  * @returns {Promise}
  */
 async function saveToLocal() {
-    fs.writeFileSync(authDataFile(), JSON.stringify(toJSON(storage), null, '\t'))
+    const authData = await authDataFile()
+    const data = JSON.stringify(toJSON(storage), null, '\t')
+    try {
+        const fs = (await import('fs')).default
+        fs.writeFileSync(authData, data)
+    } catch (_e) {
+        localStorage.setItem(authData, btoa(data))
+    }
 }
 
 
@@ -167,14 +182,21 @@ function swapObjectJson(jsonData, func) {
 
 /**
  * Disk file with credential data
- * @returns {String} 
+ * @returns {Promise<String>}
  */
-function authDataFile() {
-    return path.resolve('.') + '/authData.json'
+async function authDataFile() {
+    let out = ''
+    try {
+        const path = (await import('path')).default
+        out = path.resolve('.') + '/authData.json'
+    } catch (_e) {
+        out = 'crunchyData'
+    }
+    return out
 }
 
 
-module.exports = {
+export default {
     storage,
     getAuthToken,
     getToken,
@@ -185,4 +207,3 @@ module.exports = {
     authDataFile,
     getAccount,
 }
-

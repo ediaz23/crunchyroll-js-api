@@ -1,8 +1,7 @@
 
-const utils = require('../utils')
-const logger = require('../logger')
-const { URLSearchParams } = require('url')
-const CONST = require('../const')
+import utils from '../utils.js'
+import logger from '../logger.js'
+import CONST from '../const.js'
 
 
 /**
@@ -19,7 +18,7 @@ async function addEpisodeRating({ account, contentId, rating, contentType }) {
     const contentTypes = CONST.getContentTypes()
     const ratingTypes = CONST.getRatingEpisodeTypes()
     const queryData = { locale: account.locale }
-    const queryStr = new URLSearchParams(queryData)
+    const queryStr = await utils.toURLSearchParams(queryData)
     contentType = contentType ? contentType : 'episode'
     if (!contentTypes.includes(contentType)) {
         throw new Error(`ContentType ${contentType} is not valid.`)
@@ -54,7 +53,7 @@ async function addRating({ account, contentId, rating, contentType }) {
     const ratingTypes = CONST.getRatingContentTypes()
     const contentTypes = CONST.getContentTypes()
     const queryData = { locale: account.locale }
-    const queryStr = new URLSearchParams(queryData)
+    const queryStr = await utils.toURLSearchParams(queryData)
     if (!contentTypes.includes(contentType)) {
         throw new Error(`ContentType ${contentType} is not valid.`)
     }
@@ -86,7 +85,7 @@ async function _getRatings({ account, contentId, contentType }) {
     logger.debug(fnName)
     const types = CONST.getContentTypes()
     const queryData = { locale: account.locale }
-    const queryStr = new URLSearchParams(queryData)
+    const queryStr = await utils.toURLSearchParams(queryData)
     if (!types.includes(contentType)) {
         throw new Error(`ContentType ${contentType} is not valid.`)
     }
@@ -134,7 +133,7 @@ async function removeRating({ account, contentId, contentType }) {
     logger.debug(fnName)
     const types = CONST.getContentTypes()
     const queryData = { locale: account.locale }
-    const queryStr = new URLSearchParams(queryData)
+    const queryStr = await utils.toURLSearchParams(queryData)
     if (!types.includes(contentType)) {
         throw new Error(`ContentType ${contentType} is not valid.`)
     }
@@ -147,7 +146,7 @@ async function removeRating({ account, contentId, contentType }) {
 }
 
 
-module.exports = {
+export default {
     addEpisodeRating,
     addRating,
     getEpisodeRatings,

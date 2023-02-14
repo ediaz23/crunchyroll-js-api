@@ -1,7 +1,6 @@
 
-const utils = require('../utils')
-const logger = require('../logger')
-const { URLSearchParams } = require('url')
+import utils from '../utils.js'
+import logger from '../logger.js'
 
 /**
 how to call 
@@ -34,15 +33,15 @@ async function getConfigDelta({ auth, appId, appVersion }) {
     logger.debug(fnName)
     const queryData = { locale: auth.locale }
     utils.addParam(queryData, 'app_version', appVersion, val => val)
-    const query = new URLSearchParams(queryData)
+    const query = await utils.toURLSearchParams(queryData)
     let url = `/config-delta/v2/apps/${appId}/config_delta?${query}`
     const reqConfig = {
         method: 'get',
-        headers: {'Authorization': auth.token}
+        headers: { 'Authorization': auth.token }
     }
     return utils.makeRequest(fnName, url, reqConfig)
 }
 
-module.exports = {
+export default {
     getConfigDelta
 }

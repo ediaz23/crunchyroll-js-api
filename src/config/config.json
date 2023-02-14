@@ -13,17 +13,54 @@
     "app_id": "cr-android",
     "os_release_version": "13",
     "preferred_subtitles_options": [
-		{ "code": "en-US", "title": "English" },
-		{ "code": "es-419", "title": "Español" },
-		{ "code": "es-ES", "title": "Español (España)" },
-		{ "code": "pt-BR", "title": "Português (Brasil)" },
-		{ "code": "pt-PT", "title": "Português (Portugal)" },
-		{ "code": "fr-FR", "title": "Français" },
-		{ "code": "de-DE", "title": "Deutsch" },
-		{ "code": "it-IT", "title": "Italiano" },
-		{ "code": "ru-RU", "title": "Pусский" },
-		{ "code": "ar-SA", "title": "عربى"},
-		{ "code": "hi-IN", "title": "इंडिया" }
+        {
+            "code": "en-US",
+            "title": "English"
+        },
+        {
+            "code": "es-419",
+            "title": "Español"
+        },
+        {
+            "code": "es-ES",
+            "title": "Español (España)"
+        },
+        {
+            "code": "pt-BR",
+            "title": "Português (Brasil)"
+        },
+        {
+            "code": "pt-PT",
+            "title": "Português (Portugal)"
+        },
+        {
+            "code": "fr-FR",
+            "title": "Français"
+        },
+        {
+            "code": "de-DE",
+            "title": "Deutsch"
+        },
+        {
+            "code": "it-IT",
+            "title": "Italiano"
+        },
+        {
+            "code": "ru-RU",
+            "title": "Pусский"
+        },
+        {
+            "code": "ar-SA",
+            "title": "عربى"
+        },
+        {
+            "code": "hi-IN",
+            "title": "इंडिया"
+        }
     ],
-    "content_types": ["series", "movie_listing", "episode"]
+    "content_types": [
+        "series",
+        "movie_listing",
+        "episode"
+    ]
 }

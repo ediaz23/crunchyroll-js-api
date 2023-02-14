@@ -1,7 +1,7 @@
 
-const localStore = require('../src/localStore')
-const testUtils = require('./testUtils')
-const content = require('../src/services/content')
+import localStore from '../src/localStore.js'
+import testUtils from './testUtils.js'
+import content from '../src/services/content.js'
 
 
 /** @type {{account: import('../types').AccountAuth}} */
@@ -16,16 +16,15 @@ beforeEach(async () => {
 })
 
 
-const customListTitlle='Prueba'
-const contentList=['GYXM79M56', 'G6NQ5DWZ6', 'GR751KNZY']
-const contentId=contentList[0]
-let listId=null, category=null, episodeId=null, serieId=null, movieListingId=null
+const customListTitlle = 'Prueba'
+const contentList = ['GYXM79M56', 'G6NQ5DWZ6', 'GR751KNZY']
+const contentId = contentList[0]
+let listId = null, category = null, episodeId = null, serieId = null, movieListingId = null
 
 describe('Content', () => {
-    test('empty', () => {})
 
-    test('createPrivateCustomList okey', async() => {
-        const param = {...basicParam, title: customListTitlle}
+    test('createPrivateCustomList okey', async () => {
+        const param = { ...basicParam, title: customListTitlle }
         return content.createPrivateCustomList(param).then(res => {
             expect(res).not.toBeNull()
             expect(res).toHaveProperty('list_id')
@@ -37,58 +36,62 @@ describe('Content', () => {
             listId = res.list_id
         })
     })
-    
-    test('addItemToCustomList okey', async() => {
-        const param = {...basicParam, listId}
+
+    test('addItemToCustomList okey', async () => {
+        const param = { ...basicParam, listId }
         for await (const item of contentList) {
-            await content.addItemToCustomList({...param, contentId: item})
+            await content.addItemToCustomList({ ...param, contentId: item })
         }
     })
 
-    test('changeCustomListItemPosition wrong position', async() => {
-        const param = {...basicParam, listId, contentId: contentList[2],
-            location: 'malo', refContentId: contentList[1]}
+    test('changeCustomListItemPosition wrong position', async () => {
+        const param = {
+            ...basicParam, listId, contentId: contentList[2],
+            location: 'malo', refContentId: contentList[1]
+        }
         await expect(content.changeCustomListItemPosition(param)).rejects.toThrow();
     })
-    
-    test('changeCustomListItemPosition okey', async() => {
-        const param = {...basicParam, listId, contentId: contentList[2],
-            location: 'before', refContentId: contentList[0]}
+
+    test('changeCustomListItemPosition okey', async () => {
+        const param = {
+            ...basicParam, listId, contentId: contentList[2],
+            location: 'before', refContentId: contentList[0]
+        }
         await content.changeCustomListItemPosition(param)
     })
 
-    test('getCustomListItems okey', async() => {
-        const param = {...basicParam, listId}
-        return content.getCustomListItems(param).then(res => {
-            testUtils.itesmCheck(res)
-        })
-    })
-    
-    test('getCustomListItems size 1 okey', async() => {
-        const param = {...basicParam, listId, pageSize: 1}
+    test('getCustomListItems okey', async () => {
+        const param = { ...basicParam, listId }
         return content.getCustomListItems(param).then(res => {
             testUtils.itesmCheck(res)
         })
     })
 
-    test('getCustomListItems order desc okey', async() => {
-        const param = {...basicParam, listId, order: 'desc'}
+    test('getCustomListItems size 1 okey', async () => {
+        const param = { ...basicParam, listId, pageSize: 1 }
         return content.getCustomListItems(param).then(res => {
             testUtils.itesmCheck(res)
         })
     })
-    
-    test('deleteCustomListItem okey', async() => {
-        const param = {...basicParam, listId, contentId}
+
+    test('getCustomListItems order desc okey', async () => {
+        const param = { ...basicParam, listId, order: 'desc' }
+        return content.getCustomListItems(param).then(res => {
+            testUtils.itesmCheck(res)
+        })
+    })
+
+    test('deleteCustomListItem okey', async () => {
+        const param = { ...basicParam, listId, contentId }
         return content.deleteCustomListItem(param)
-    }) 
-    
-    test('updateCustomList okey', async() => {
-        const param = {...basicParam, listId, title: 'Editado'}
+    })
+
+    test('updateCustomList okey', async () => {
+        const param = { ...basicParam, listId, title: 'Editado' }
         return content.updateCustomList(param)
     })
 
-    test('getCustomLists okey', async() => {
+    test('getCustomLists okey', async () => {
         return content.getCustomLists(basicParam).then(res => {
             expect(res).not.toBeNull()
             testUtils.itesmCheck(res)
@@ -97,23 +100,23 @@ describe('Content', () => {
             expect(res).toHaveProperty('max_private')
         })
     })
-    
-    test('deletePrivateCustomList okey', async() => {
-        const param = {...basicParam, listId}
-        return content.deletePrivateCustomList(param)
-    }) 
 
-    test('addWatchlistItem okey', async() => {
-        const param = {...basicParam, contentId}
+    test('deletePrivateCustomList okey', async () => {
+        const param = { ...basicParam, listId }
+        return content.deletePrivateCustomList(param)
+    })
+
+    test('addWatchlistItem okey', async () => {
+        const param = { ...basicParam, contentId }
         return content.addWatchlistItem(param)
     })
 
-    test('addWatchlistItem wrong', async() => {
-        const param = {...basicParam, contentId}
+    test('addWatchlistItem wrong', async () => {
+        const param = { ...basicParam, contentId }
         await expect(content.addWatchlistItem(param)).rejects.toThrow()
     })
-    
-    test('getWatchlist okey', async() => {
+
+    test('getWatchlist okey', async () => {
         return content.getWatchlist(basicParam).then(res => {
             testUtils.resultCheck(res)
             testUtils.itesmCheck(res)
@@ -121,14 +124,14 @@ describe('Content', () => {
         })
     })
 
-    test('getWatchlistItems okey', async() => {
+    test('getWatchlistItems okey', async () => {
         return content.getWatchlistItems(basicParam).then(res => {
             expect(res).not.toBeNull()
         })
     })
-    
-    test('getWatchlistItems content okey', async() => {
-        const param = {...basicParam, contentId}
+
+    test('getWatchlistItems content okey', async () => {
+        const param = { ...basicParam, contentId }
         return content.getWatchlistItems(param).then(res => {
             expect(res).not.toBeNull()
             expect(res).toHaveProperty(contentId)
@@ -138,119 +141,119 @@ describe('Content', () => {
         })
     })
 
-    test('updateWatchlistItemFavoriteStatus true okey', async() => {
-        const param = {...basicParam, contentId, isFavorite: true}
+    test('updateWatchlistItemFavoriteStatus true okey', async () => {
+        const param = { ...basicParam, contentId, isFavorite: true }
         return content.updateWatchlistItemFavoriteStatus(param)
     })
-    
-    test('updateWatchlistItemFavoriteStatus false okey', async() => {
-        const param = {...basicParam, contentId, isFavorite: false}
+
+    test('updateWatchlistItemFavoriteStatus false okey', async () => {
+        const param = { ...basicParam, contentId, isFavorite: false }
         return content.updateWatchlistItemFavoriteStatus(param)
     })
-    
-    test('deleteWatchlistItem okey', async() => {
-        const param = {...basicParam, contentId}
+
+    test('deleteWatchlistItem okey', async () => {
+        const param = { ...basicParam, contentId }
         return content.deleteWatchlistItem(param)
     })
-    
-    test('getCategories okey', async() => {
-        const param = {...basicParam}
+
+    test('getCategories okey', async () => {
+        const param = { ...basicParam }
         return content.getCategories(param).then(res => {
             testUtils.resultCheck(res)
             testUtils.itesmCheck(res)
             category = res.items[0].tenant_category
         })
     })
-    
-    test('getCategories okey', async() => {
-        const param = {...basicParam, includeSubcategories: true}
+
+    test('getCategories okey', async () => {
+        const param = { ...basicParam, includeSubcategories: true }
         return content.getCategories(param).then(res => {
             testUtils.resultCheck(res)
             testUtils.itesmCheck(res)
         })
     })
-    
-    test('getBrowseAll okey', async() => {
-        const param = {...basicParam, quantity: 1}
+
+    test('getBrowseAll okey', async () => {
+        const param = { ...basicParam, quantity: 1 }
         return content.getBrowseAll(param).then(res => {
             testUtils.resultCheck(res)
             testUtils.itesmCheck(res)
         })
     })
 
-    test('getBrowseAll category okey', async() => {
-        const param = {...basicParam, quantity: 1, category}
+    test('getBrowseAll category okey', async () => {
+        const param = { ...basicParam, quantity: 1, category }
         return content.getBrowseAll(param).then(res => {
             testUtils.resultCheck(res)
             testUtils.itesmCheck(res)
         })
     })
-    
-    test('getBrowseByCategories category okey', async() => {
-        const param = {...basicParam, quantity: 1, category}
+
+    test('getBrowseByCategories category okey', async () => {
+        const param = { ...basicParam, quantity: 1, category }
         return content.getBrowseByCategories(param).then(res => {
             testUtils.resultCheck(res)
             testUtils.itesmCheck(res)
         })
     })
 
-    test('getBrowseIndex okey', async() => {
-        const param = {...basicParam}
+    test('getBrowseIndex okey', async () => {
+        const param = { ...basicParam }
         return content.getBrowseIndex(param).then(res => {
             testUtils.resultCheck(res)
             testUtils.itesmCheck(res)
         })
     })
 
-    test('getBrowseIndex category okey', async() => {
-        const param = {...basicParam, category}
+    test('getBrowseIndex category okey', async () => {
+        const param = { ...basicParam, category }
         return content.getBrowseIndex(param).then(res => {
             testUtils.resultCheck(res)
             testUtils.itesmCheck(res)
         })
     })
-    
-    test('getSubcategories okey', async() => {
-        const param = {...basicParam, parentCategory: category}
+
+    test('getSubcategories okey', async () => {
+        const param = { ...basicParam, parentCategory: category }
         return content.getSubcategories(param).then(res => {
             testUtils.resultCheck(res)
             testUtils.itesmCheck(res)
         })
     })
-    
-    test('getHomeFeed okey', async() => {
-        const param = {...basicParam}
+
+    test('getHomeFeed okey', async () => {
+        const param = { ...basicParam }
         return content.getHomeFeed(param).then(res => {
             testUtils.resultCheck(res)
             testUtils.itesmCheck(res)
         })
     })
 
-    test('getWatchHistory okey', async() => {
-        const param = {...basicParam}
+    test('getWatchHistory okey', async () => {
+        const param = { ...basicParam }
         return content.getWatchHistory(param).then(res => {
             testUtils.itesmCheck(res)
         })
     })
-    
-    test('getSeasonList okey', async() => {
-        const param = {...basicParam}
+
+    test('getSeasonList okey', async () => {
+        const param = { ...basicParam }
         return content.getSeasonList(param).then(res => {
             testUtils.resultCheck(res)
             testUtils.itesmCheck(res)
         })
     })
-    
-    test('search okey', async() => {
-        const param = {...basicParam, queryStr: 'tate'}
+
+    test('search okey', async () => {
+        const param = { ...basicParam, queryStr: 'tate' }
         return content.search(param).then(res => {
             testUtils.resultCheck(res)
             testUtils.itesmCheck(res)
         })
     })
 
-    test('search episode okey', async() => {
-        const param = {...basicParam, queryStr: 'un nuevo rugido', quantity: 1, type: 'episode'}
+    test('search episode okey', async () => {
+        const param = { ...basicParam, queryStr: 'un nuevo rugido', quantity: 1, type: 'episode' }
         return content.search(param).then(res => {
             testUtils.resultCheck(res)
             testUtils.itesmCheck(res)
@@ -259,32 +262,32 @@ describe('Content', () => {
         })
     })
 
-    test('search episode movie okey', async() => {
-        const param = {...basicParam, queryStr: 'fullmetal', quantity: 1, type: 'movie_listing'}
+    test('search episode movie okey', async () => {
+        const param = { ...basicParam, queryStr: 'fullmetal', quantity: 1, type: 'movie_listing' }
         return content.search(param).then(res => {
             testUtils.resultCheck(res)
             testUtils.itesmCheck(res)
-            movieListingId=res.items[0].items[0].id
+            movieListingId = res.items[0].items[0].id
         })
     })
 
-    test('getSimilar okey', async() => {
-        const param = {...basicParam, contentId: serieId}
+    test('getSimilar okey', async () => {
+        const param = { ...basicParam, contentId: serieId }
         return content.getSimilar(param).then(res => {
             testUtils.resultCheck(res)
             testUtils.itesmCheck(res)
         })
     })
-    
-    test('getNextEpisodePanel okey', async() => {
-        const param = {...basicParam, episodeId}
+
+    test('getNextEpisodePanel okey', async () => {
+        const param = { ...basicParam, episodeId }
         return content.getNextEpisodePanel(param).then(res => {
             expect(res).not.toBeNull()
         })
     })
-    
-    test('getUpNextEpisode okey', async() => {
-        const param = {...basicParam, serieId}
+
+    test('getUpNextEpisode okey', async () => {
+        const param = { ...basicParam, serieId }
         return content.getUpNextEpisode(param).then(res => {
             expect(res).not.toBeNull()
             expect(res).toHaveProperty('playhead')
@@ -295,8 +298,8 @@ describe('Content', () => {
         })
     })
 
-    test('getUpNextMovie okey', async() => {
-        const param = {...basicParam, movieListingId}
+    test('getUpNextMovie okey', async () => {
+        const param = { ...basicParam, movieListingId }
         return content.getUpNextMovie(param).then(res => {
             expect(res).not.toBeNull()
             expect(res).toHaveProperty('playhead')
@@ -307,8 +310,8 @@ describe('Content', () => {
         })
     })
 
-    test('getPlayheads okey', async() => {
-        const param = {...basicParam, contentId: episodeId}
+    test('getPlayheads okey', async () => {
+        const param = { ...basicParam, contentId: episodeId }
         return content.getPlayheads(param).then(res => {
             expect(res).not.toBeNull()
             expect(res).toHaveProperty(episodeId)
@@ -319,9 +322,9 @@ describe('Content', () => {
             expect(res[episodeId]).toHaveProperty('content_id')
         })
     })
-    
-    test('getPlayheadsUnsynced okey', async() => {
-        const param = {...basicParam, contentId: episodeId}
+
+    test('getPlayheadsUnsynced okey', async () => {
+        const param = { ...basicParam, contentId: episodeId }
         return content.getPlayheadsUnsynced(param).then(res => {
             expect(res).not.toBeNull()
             expect(res).toHaveProperty(episodeId)
@@ -332,18 +335,17 @@ describe('Content', () => {
             expect(res[episodeId]).toHaveProperty('content_id')
         })
     })
-    
-    test('savePlayhead okey', async() => {
-        const param = {...basicParam, contentId: episodeId, playhead: 300}
+
+    test('savePlayhead okey', async () => {
+        const param = { ...basicParam, contentId: episodeId, playhead: 300 }
         return content.savePlayhead(param)
     })
 
-    test('savePlayheadBatch okey', async() => {
+    test('savePlayheadBatch okey', async () => {
         const item = { dateWatched: (new Date()).toISOString(), playhead: 350 }
-        const playheadBatch = { batch: {}}
+        const playheadBatch = { batch: {} }
         playheadBatch.batch[episodeId] = item
-        const param = {...basicParam, playheadBatch}
+        const param = { ...basicParam, playheadBatch }
         return content.savePlayheadBatch(param)
     })
 })
-

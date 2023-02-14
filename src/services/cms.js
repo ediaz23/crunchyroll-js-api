@@ -1,7 +1,6 @@
 
-const utils = require('../utils')
-const logger = require('../logger')
-const { URLSearchParams } = require('url')
+import utils from '../utils.js'
+import logger from '../logger.js'
 
 
 /**
@@ -27,7 +26,7 @@ async function getEpisode({ cmsAuth, episodeId }) {
     const fnName = 'getEpisode'
     logger.debug(fnName)
     const queryData = await getBaseParams(cmsAuth)
-    const queryStr = new URLSearchParams(queryData)
+    const queryStr = await utils.toURLSearchParams(queryData)
     const url = `/cms/v2${cmsAuth.bucket}/episodes/${episodeId}?${queryStr}`
     const reqConfig = {
         method: 'get',
@@ -48,7 +47,7 @@ async function getEpisodes({ cmsAuth, seasonId }) {
     logger.debug(fnName)
     const queryData = await getBaseParams(cmsAuth)
     utils.addParam(queryData, 'season_id', seasonId, val => val)
-    const queryStr = new URLSearchParams(queryData)
+    const queryStr = await utils.toURLSearchParams(queryData)
     const url = `/cms/v2${cmsAuth.bucket}/episodes?${queryStr}`
     const reqConfig = {
         method: 'get',
@@ -68,7 +67,7 @@ async function getMovie({ cmsAuth, movieId }) {
     const fnName = 'getMovie'
     logger.debug(fnName)
     const queryData = await getBaseParams(cmsAuth)
-    const queryStr = new URLSearchParams(queryData)
+    const queryStr = await utils.toURLSearchParams(queryData)
     const url = `/cms/v2${cmsAuth.bucket}/movies/${movieId}?${queryStr}`
     const reqConfig = {
         method: 'get',
@@ -88,7 +87,7 @@ async function getMovieListing({ cmsAuth, movieListingId }) {
     const fnName = 'getMovieListing'
     logger.debug(fnName)
     const queryData = await getBaseParams(cmsAuth)
-    const queryStr = new URLSearchParams(queryData)
+    const queryStr = await utils.toURLSearchParams(queryData)
     const url = `/cms/v2${cmsAuth.bucket}/movie_listings/${movieListingId}?${queryStr}`
     const reqConfig = {
         method: 'get',
@@ -108,7 +107,7 @@ async function getMovieListingExtras({ cmsAuth, movieListingId }) {
     const fnName = 'getMovieListingExtras'
     logger.debug(fnName)
     const queryData = await getBaseParams(cmsAuth)
-    const queryStr = new URLSearchParams(queryData)
+    const queryStr = await utils.toURLSearchParams(queryData)
     const url = `/cms/v2${cmsAuth.bucket}/movie_listings/${movieListingId}/extra_videos?${queryStr}`
     const reqConfig = {
         method: 'get',
@@ -129,7 +128,7 @@ async function getMovies({ cmsAuth, movieListingId }) {
     logger.debug(fnName)
     const queryData = await getBaseParams(cmsAuth)
     utils.addParam(queryData, 'movie_listing_id', movieListingId, val => val)
-    const queryStr = new URLSearchParams(queryData)
+    const queryStr = await utils.toURLSearchParams(queryData)
     const url = `/cms/v2${cmsAuth.bucket}/movies?${queryStr}`
     const reqConfig = {
         method: 'get',
@@ -185,7 +184,7 @@ async function _getPanels({ cmsAuth, panelId, fields }) {
     logger.debug(fnName)
     const queryData = await getBaseParams(cmsAuth)
     utils.addParam(queryData, 'fields', fields, val => val && val.startsWith('items('))
-    const queryStr = new URLSearchParams(queryData)
+    const queryStr = await utils.toURLSearchParams(queryData)
     const url = `/cms/v2${cmsAuth.bucket}/objects/${panelId}?${queryStr}`
     const reqConfig = {
         method: 'get',
@@ -208,7 +207,7 @@ async function getSeason({ cmsAuth, seasonId }) {
     const fnName = 'getSeason'
     logger.debug(fnName)
     const queryData = await getBaseParams(cmsAuth)
-    const queryStr = new URLSearchParams(queryData)
+    const queryStr = await utils.toURLSearchParams(queryData)
     const url = `/cms/v2${cmsAuth.bucket}/seasons/${seasonId}?${queryStr}`
     const reqConfig = {
         method: 'get',
@@ -228,7 +227,7 @@ async function getSeasonExtras({ cmsAuth, seasonId }) {
     const fnName = 'getSeasonExtras'
     logger.debug(fnName)
     const queryData = await getBaseParams(cmsAuth)
-    const queryStr = new URLSearchParams(queryData)
+    const queryStr = await utils.toURLSearchParams(queryData)
     const url = `/cms/v2${cmsAuth.bucket}/seasons/${seasonId}/extra_videos?${queryStr}`
     const reqConfig = {
         method: 'get',
@@ -249,7 +248,7 @@ async function getSeasons({ cmsAuth, serieId }) {
     logger.debug(fnName)
     const queryData = await getBaseParams(cmsAuth)
     utils.addParam(queryData, 'series_id', serieId, val => val)
-    const queryStr = new URLSearchParams(queryData)
+    const queryStr = await utils.toURLSearchParams(queryData)
     const url = `/cms/v2${cmsAuth.bucket}/seasons?${queryStr}`
     const reqConfig = {
         method: 'get',
@@ -269,7 +268,7 @@ async function getSeries({ cmsAuth, serieId }) {
     const fnName = 'getSeries'
     logger.debug(fnName)
     const queryData = await getBaseParams(cmsAuth)
-    const queryStr = new URLSearchParams(queryData)
+    const queryStr = await utils.toURLSearchParams(queryData)
     const url = `/cms/v2${cmsAuth.bucket}/series/${serieId}?${queryStr}`
     const reqConfig = {
         method: 'get',
@@ -289,7 +288,7 @@ async function getStreamsWithURL({ cmsAuth, streamUrl }) {
     const fnName = 'getStreamsWithURL'
     logger.debug(fnName)
     const queryData = await getBaseParams(cmsAuth)
-    const queryStr = new URLSearchParams(queryData)
+    const queryStr = await utils.toURLSearchParams(queryData)
     const url = `${streamUrl}?${queryStr}`
     const reqConfig = {
         method: 'get',
@@ -309,7 +308,7 @@ async function getStreams({ cmsAuth, contentId }) {
     const fnName = 'getStreams'
     logger.debug(fnName)
     const queryData = await getBaseParams(cmsAuth)
-    const queryStr = new URLSearchParams(queryData)
+    const queryStr = await utils.toURLSearchParams(queryData)
     const url = `/cms/v2${cmsAuth.bucket}/videos/${contentId}/streams?${queryStr}`
     const reqConfig = {
         method: 'get',
@@ -331,7 +330,7 @@ async function lookup({ cmsAuth, externalId, channelId }) {
     const queryData = await getBaseParams(cmsAuth)
     utils.addParam(queryData, 'external_id', externalId, val => val)
     utils.addParam(queryData, 'channel_id', channelId ? channelId : 'crunchyroll', val => val)
-    const queryStr = new URLSearchParams(queryData)
+    const queryStr = await utils.toURLSearchParams(queryData)
     const url = `/cms/v2${cmsAuth.bucket}/lookup?${queryStr}`
     const reqConfig = {
         method: 'get',
@@ -340,7 +339,7 @@ async function lookup({ cmsAuth, externalId, channelId }) {
     return utils.makeRequest(fnName, url, reqConfig)
 }
 
-module.exports = {
+export default {
     getEpisode,
     getEpisodes,
     getMovie,

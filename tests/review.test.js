@@ -1,7 +1,7 @@
 
-const localStore = require('../src/localStore')
-const testUtils = require('./testUtils')
-const review = require('../src/services/review')
+import localStore from '../src/localStore.js'
+import testUtils from './testUtils.js'
+import review from '../src/services/review.js'
 
 
 /** @type {{account: import('../types').AccountAuth}} */
@@ -46,7 +46,7 @@ function checkRatingResult(res) {
     }
     expect(res).toBeDefined()
     expect(res).not.toBeNull()
-    for (let i=1; i<=5; ++i) {
+    for (let i = 1; i <= 5; ++i) {
         expect(res).toHaveProperty(`${i}s`)
         starRating(res[`${i}s`])
     }
@@ -57,108 +57,107 @@ function checkRatingResult(res) {
     testUtils.existValue(res.total)
 }
 
-const episodeId='GWDU8KN73', serieId='GR751KNZY'
+const episodeId = 'GWDU8KN73', serieId = 'GR751KNZY'
 
 describe('Review', () => {
-    test('empty', () => {})
 
-    test('addEpisodeRating wrong contentType', async() => {
-        const param = {...basicParam, contentId: episodeId, rating: 'down', contentType: 'malo'}
+    test('addEpisodeRating wrong contentType', async () => {
+        const param = { ...basicParam, contentId: episodeId, rating: 'down', contentType: 'malo' }
         await expect(review.addEpisodeRating(param)).rejects.toThrow()
     })
 
-    test('addEpisodeRating wrong rating', async() => {
-        const param = {...basicParam, contentId: episodeId, rating: 'malo'}
+    test('addEpisodeRating wrong rating', async () => {
+        const param = { ...basicParam, contentId: episodeId, rating: 'malo' }
         await expect(review.addEpisodeRating(param)).rejects.toThrow()
     })
 
-    test('addEpisodeRating okey down', async() => {
-        const param = {...basicParam, contentId: episodeId, rating: 'down'}
+    test('addEpisodeRating okey down', async () => {
+        const param = { ...basicParam, contentId: episodeId, rating: 'down' }
         return review.addEpisodeRating(param).then(res => {
             checkEpisodeRatingResult(res)
             expect(res.rating).toEqual('down')
         })
     })
-    
-    test('addEpisodeRating okey up', async() => {
-        const param = {...basicParam, contentId: episodeId, rating: 'up'}
+
+    test('addEpisodeRating okey up', async () => {
+        const param = { ...basicParam, contentId: episodeId, rating: 'up' }
         return review.addEpisodeRating(param).then(res => {
             checkEpisodeRatingResult(res)
             expect(res.rating).toEqual('up')
         })
     })
-    
-    test('addRating okey', async() => {
-        const param = {...basicParam, contentId: serieId, rating: '5s', contentType: 'series'}
+
+    test('addRating okey', async () => {
+        const param = { ...basicParam, contentId: serieId, rating: '5s', contentType: 'series' }
         return review.addRating(param).then(res => {
             checkRatingResult(res)
             testUtils.existValue(res.rating)
             expect(res.rating).toEqual('5s')
         })
     })
-    
-    test('addRating wrong rating', async() => {
-        const param = {...basicParam, contentId: serieId, rating: 'malo', contentType: 'series'}
+
+    test('addRating wrong rating', async () => {
+        const param = { ...basicParam, contentId: serieId, rating: 'malo', contentType: 'series' }
         await expect(review.addRating(param)).rejects.toThrow()
     })
-    
-    test('addRating wrong contentType', async() => {
-        const param = {...basicParam, contentId: serieId, rating: '5s', contentType: 'malo'}
+
+    test('addRating wrong contentType', async () => {
+        const param = { ...basicParam, contentId: serieId, rating: '5s', contentType: 'malo' }
         await expect(review.addRating(param)).rejects.toThrow()
     })
-    
-    test('getEpisodeRatings okey', async() => {
-        const param = {...basicParam, contentId: episodeId}
+
+    test('getEpisodeRatings okey', async () => {
+        const param = { ...basicParam, contentId: episodeId }
         return review.getEpisodeRatings(param).then(res => {
             checkEpisodeRatingResult(res)
             expect(res).toHaveProperty('rating')
         })
     })
-    
-    test('getEpisodeRatings wrong key', async() => {
-        const param = {...basicParam, contentId: episodeId + '_1'}
+
+    test('getEpisodeRatings wrong key', async () => {
+        const param = { ...basicParam, contentId: episodeId + '_1' }
         return review.getEpisodeRatings(param).then(res => {
             checkEpisodeRatingResult(res)
             expect(res).toHaveProperty('rating')
         })
     })
-    
-    test('getRatings okey', async() => {
-        const param = {...basicParam, contentId: serieId, contentType: 'series'}
+
+    test('getRatings okey', async () => {
+        const param = { ...basicParam, contentId: serieId, contentType: 'series' }
         return review.getRatings(param).then(res => {
             checkRatingResult(res)
         })
     })
-    
-    test('getRatings wrong key', async() => {
-        const param = {...basicParam, contentId: serieId + '_1', contentType: 'series'}
+
+    test('getRatings wrong key', async () => {
+        const param = { ...basicParam, contentId: serieId + '_1', contentType: 'series' }
         return review.getRatings(param).then(res => {
             checkRatingResult(res)
         })
     })
-    
-    test('getRatings wrong contentType', async() => {
-        const param = {...basicParam, contentId: serieId, contentType: 'malo'}
+
+    test('getRatings wrong contentType', async () => {
+        const param = { ...basicParam, contentId: serieId, contentType: 'malo' }
         await expect(review.getRatings(param)).rejects.toThrow()
     })
 
-    test('removeRating okey', async() => {
-        const param = {...basicParam, contentId: episodeId, contentType: 'episode'}
+    test('removeRating okey', async () => {
+        const param = { ...basicParam, contentId: episodeId, contentType: 'episode' }
         return review.removeRating(param)
     })
 
-    test('removeRating valid contentType', async() => {
-        const param = {...basicParam, contentId: serieId, contentType: 'series'}
+    test('removeRating valid contentType', async () => {
+        const param = { ...basicParam, contentId: serieId, contentType: 'series' }
         await expect(review.removeRating(param)).rejects.toThrow()
     })
-    
-    test('removeRating wrong contentType', async() => {
-        const param = {...basicParam, contentId: serieId, contentType: 'malo'}
+
+    test('removeRating wrong contentType', async () => {
+        const param = { ...basicParam, contentId: serieId, contentType: 'malo' }
         await expect(review.removeRating(param)).rejects.toThrow()
     })
-    
-    test('removeRating wrong key', async() => {
-        const param = {...basicParam, contentId: serieId + '_1', contentType: 'series'}
+
+    test('removeRating wrong key', async () => {
+        const param = { ...basicParam, contentId: serieId + '_1', contentType: 'series' }
         await expect(review.removeRating(param)).rejects.toThrow()
     })
 })

@@ -1,5 +1,5 @@
 
-const config = require('./config/config.json')
+import config from './config/config.json'
 
 
 /**
@@ -53,7 +53,7 @@ function getClientSecret() {
 }
 
 
-module.exports = {
+export default {
     getUserAgent,
     getContentTypes,
     getRatingContentTypes,

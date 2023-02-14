@@ -1,7 +1,6 @@
 
-const utils = require('../utils')
-const logger = require('../logger')
-const { URLSearchParams } = require('url')
+import utils from '../utils.js'
+import logger from '../logger.js'
 
 
 /**
@@ -15,7 +14,7 @@ async function getProducts({ auth, source }) {
     logger.debug(fnName)
     const queryData = { locale: auth.locale }
     utils.addParam(queryData, 'source', source ? source : 'google-play')
-    const queryStr = new URLSearchParams(queryData)
+    const queryStr = await utils.toURLSearchParams(queryData)
     const url = `/subs/v2/products?${queryStr}`
     const reqConfig = {
         method: 'get',
@@ -35,7 +34,7 @@ async function getUserBenefits({ auth, externalId }) {
     const fnName = 'getUserBenefits'
     logger.debug(fnName)
     const queryData = { locale: auth.locale }
-    const queryStr = new URLSearchParams(queryData)
+    const queryStr = await utils.toURLSearchParams(queryData)
     const url = `/subs/v1/subscriptions/${externalId}/benefits?${queryStr}`
     const reqConfig = {
         method: 'get',
@@ -55,7 +54,7 @@ async function getUserSubscription({ auth, externalId }) {
     const fnName = 'getUserSubscription'
     logger.debug(fnName)
     const queryData = { locale: auth.locale }
-    const queryStr = new URLSearchParams(queryData)
+    const queryStr = await utils.toURLSearchParams(queryData)
     const url = `/subs/v1/subscriptions/${externalId}/products?${queryStr}`
     const reqConfig = {
         method: 'get',
@@ -65,7 +64,7 @@ async function getUserSubscription({ auth, externalId }) {
 }
 
 
-module.exports = {
+export default {
     getProducts,
     getUserBenefits,
     getUserSubscription
