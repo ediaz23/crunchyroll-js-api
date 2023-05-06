@@ -1,6 +1,9 @@
 
-const LEVEL = process?.env?.LOG_LEVEL || 'info'
+let LEVEL = 'info'
 
+if (process && process.env && process.env.LOG_LEVEL) {
+    LEVEL = process.env.LOG_LEVEL
+}
 
 const formatObj = obj => {
     let extra = ''

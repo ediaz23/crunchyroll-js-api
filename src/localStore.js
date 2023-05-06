@@ -14,6 +14,16 @@ import accountService from './services/account.js'
  */
 /** @type {Storage} */
 const storage = {}
+/**
+ * @type {Function}
+ * @param {Object} data
+ */
+let externalSaveData = null
+/**
+ * @type {Function}
+ * @returns {Object}
+ */
+let externalLoadData = null
 
 
 /**
@@ -100,21 +110,26 @@ async function getLocale() {
  * @returns {Promise}
  */
 async function loadFromLocal() {
+    let data = null
     const authData = await authDataFile()
     try {
         const fs = (await import('fs')).default
         if (fs.existsSync(authData)) {
-            const data = fs.readFileSync(authData)
-            const jsonData = JSON.parse(data)
-            Object.assign(storage, fromJSON(jsonData))
+            data = fs.readFileSync(authData)
         }
     } catch (_e) {
-        const data64 = localStorage.getItem(authData)
-        if (data64) {
-            const data = atob(data64)
-            const jsonData = JSON.parse(data)
-            Object.assign(storage, fromJSON(jsonData))
+        if (externalLoadData) {
+            data = await externalLoadData()
+        } else {
+            const data64 = localStorage.getItem(authData)
+            if (data64) {
+                data = atob(data64)
+            }
         }
+    }
+    if (data) {
+        const jsonData = JSON.parse(data)
+        Object.assign(storage, fromJSON(jsonData))
     }
 }
 
@@ -130,7 +145,11 @@ async function saveToLocal() {
         const fs = (await import('fs')).default
         fs.writeFileSync(authData, data)
     } catch (_e) {
-        localStorage.setItem(authData, btoa(data))
+        if (externalSaveData) {
+            await externalSaveData(data)
+        } else {
+            localStorage.setItem(authData, btoa(data))
+        }
     }
 }
 
@@ -196,6 +215,26 @@ async function authDataFile() {
 }
 
 
+/**
+ * Set function to save and load data from external storage
+ * @param {{save: Function, load: Function}}
+ */
+function setExternalStorage({ save, load }) {
+    externalLoadData = load
+    externalSaveData = save
+}
+
+/**
+ * Set credentials of an account
+ * @param {{username: String, password: String}}
+ * @returns {Promise}
+ */
+async function setNewCredentials(credential) {
+    Object.assign(storage, { credential })
+    await saveToLocal()
+}
+
+
 export default {
     storage,
     getAuthToken,
@@ -206,4 +245,6 @@ export default {
     saveToLocal,
     authDataFile,
     getAccount,
+    setExternalStorage,
+    setNewCredentials,
 }
