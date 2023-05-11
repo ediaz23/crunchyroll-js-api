@@ -226,11 +226,11 @@ function setExternalStorage({ save, load }) {
 
 /**
  * Set credentials of an account
- * @param {{username: String, password: String}}
+ * @param {Storage} newData
  * @returns {Promise}
  */
-async function setNewCredentials(credential) {
-    Object.assign(storage, { credential })
+async function setNewData(newData) {
+    Object.assign(storage, newData)
     await saveToLocal()
 }
 
@@ -246,5 +246,5 @@ export default {
     authDataFile,
     getAccount,
     setExternalStorage,
-    setNewCredentials,
+    setNewData,
 }
