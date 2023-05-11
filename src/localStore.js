@@ -62,6 +62,16 @@ async function getToken() {
     return storage.token
 }
 
+/**
+ * @returns {Promise}
+ */
+async function revokeToken() {
+    if (storage.token) {
+        await authService.revokeRefreshToken(storage.token)
+    }
+    storage.token = null
+    await saveToLocal()
+}
 
 /**
  * @returns {Promise<import('./types').CmsObj>}
@@ -247,4 +257,5 @@ export default {
     getAccount,
     setExternalStorage,
     setNewData,
+    revokeToken,
 }

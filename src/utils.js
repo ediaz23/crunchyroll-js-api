@@ -2,6 +2,7 @@
 import config from './config/config.json'
 import logger from './logger.js'
 import CONST from './const.js'
+import CrunchyrollError from './error.js'
 
 
 /**
@@ -13,21 +14,19 @@ import CONST from './const.js'
 async function logRes(fnName, res) {
     if (![200, 202, 204].includes(res.status)) {
         logger.error(`Status Code: ${res.status} - ${fnName}`)
-        let msg = null
+        let result = null
         try {
-            const r = await res.json()
-            if (r && r.error) {
-                msg = r.error
-            }
-            logger.error(r)
+            result = await res.json()
+            logger.error(result)
         } catch (_e) {
             // ignore
         }
-        if (!msg) {
-            msg = res.statusText ? res.statusText : 'Unexpected error.'
+        if (result) {
+            throw new CrunchyrollError(result.error, result.code)
+        } else {
+            logger.error(res.statusText)
+            throw new Error(res.statusText)
         }
-        logger.error(msg)
-        throw new Error(msg)
     } else {
         logger.debug(`Status Code: ${res.status} - ${fnName}`)
     }
@@ -42,7 +41,6 @@ async function logRes(fnName, res) {
  */
 async function makeRawRequest(url, reqConfig) {
     let fetchFn = null
-    let Headers = {}
     url = decodeURIComponent(`${config.url}${url}`)
     logger.debug(`${reqConfig.method} - ${url}`)
     if (!reqConfig.headers) {
@@ -50,14 +48,10 @@ async function makeRawRequest(url, reqConfig) {
     }
     try {
         fetchFn = await import('node-fetch')
-        Headers = fetchFn.Headers
         fetchFn = fetchFn.default
+        reqConfig.headers.append('User-Agent', CONST.getUserAgent())
     } catch (_e) {
         fetchFn = fetch
-    }
-    if (reqConfig.headers instanceof Headers) {
-        reqConfig.headers.append('User-Agent', CONST.getUserAgent())
-    } else {
         reqConfig.headers['User-Agent'] = CONST.getUserAgent()
     }
     return fetchFn(url, reqConfig)
@@ -127,13 +121,17 @@ function toSnake(str) {
  */
 async function toURLSearchParams(data) {
     let URLSearchParamsClass = null
+
     try {
         const url = await import('url')
-        URLSearchParamsClass = url.URLSearchParams
+        if (url.URLSearchParams) {
+            URLSearchParamsClass = url.URLSearchParams
+        } else {
+            throw new Error()
+        }
     } catch (_e) {
         URLSearchParamsClass = URLSearchParams
     }
-    
     return new URLSearchParamsClass(data)
 }
 

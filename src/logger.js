@@ -5,6 +5,25 @@ if (process && process.env && process.env.LOG_LEVEL) {
     LEVEL = process.env.LOG_LEVEL
 }
 
+/**
+   @type {{
+    info: Function,
+    error: Function,
+    debug: Function,
+    setLevel: Function
+}}
+ */
+const logger = {
+    info: () => { },
+    error: () => { },
+    debug: () => { },
+    setLevel: () => { },
+}
+
+if (!console.debug) { console.debug = console.log }
+if (!console.info) { console.info = console.log }
+if (!console.error) { console.error = console.log }
+
 const formatObj = obj => {
     let extra = ''
     const keys = Object.keys(obj)
@@ -29,26 +48,15 @@ const getMessage = (message, level) => {
     return `${Date.now()} ${colors[level]}${level.toUpperCase()}\x1b[0m ${message}`
 }
 
-function configBrowserLogger() {
-    /**
-       @type {{
-        info: Function,
-        error: Function,
-        debug: Function,
-    }}
-     */
-    const logger = {
-        info: () => { },
-        error: () => { },
-        debug: () => { },
+function configBrowserLogger(newLevel) {
+    if (!newLevel) {
+        newLevel = LEVEL
     }
-
-    if (!console.debug) { console.debug = console.log }
-    if (!console.info) { console.info = console.log }
-    if (!console.error) { console.error = console.log }
-
+    logger.debug = () => {}
+    logger.info = () => {}
+    logger.error = () => {}
     /*eslint-disable */
-    switch (LEVEL) {
+    switch (newLevel) {
         case 'silent': break;
         case 'debug': logger.debug = msg => { console.debug(getMessage(msg, 'debug')) };
         case 'info': logger.info = msg => { console.info(getMessage(msg, 'info')) };
@@ -58,14 +66,7 @@ function configBrowserLogger() {
     return logger
 }
 
-/**
-   @type {{
-    info: Function,
-    error: Function,
-    debug: Function,
-}}
- */
-let logger = {}
-logger = configBrowserLogger()
+logger.setLevel = configBrowserLogger
+logger.setLevel()
 
 export default logger
