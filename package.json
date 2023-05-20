@@ -6,7 +6,7 @@
     "version": "1.0.1",
     "main": "index.js",
     "scripts": {
-        "play": "node --experimental-specifier-resolution=node index.js",
+        "play": "node --experimental-specifier-resolution=node main.js",
         "lint": "npx eslint --ext .js ./",
         "test": "node --experimental-vm-modules --experimental-specifier-resolution=node ./node_modules/.bin/jest"
     },
