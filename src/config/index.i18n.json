@@ -11,6 +11,35 @@
         "pt-PT",
         "ru-RU"
     ],
+    "audio_languages": [
+        "en-US",
+        "en-IN",
+        "de-DE",
+        "es-419",
+        "es-ES",
+        "fr-FR",
+        "it-IT",
+        "pt-BR",
+        "pt-PT",
+        "ru-RU",
+        "ar-SA",
+        "hi-IN",
+        "zh-CN",
+        "ko-KR"
+    ],
+    "text_languages": [
+        "en-US",
+        "de-DE",
+        "es-419",
+        "es-ES",
+        "fr-FR",
+        "it-IT",
+        "pt-BR",
+        "pt-PT",
+        "ru-RU",
+        "ar-SA",
+        "hi-IN"
+    ],
     "supported_fallbacks": {
         "ar-SA": [
             "en-US"

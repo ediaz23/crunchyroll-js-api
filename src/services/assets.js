@@ -21,4 +21,3 @@ async function getAvatar({ token }) {
 export default {
     getAvatar,
 }
-
