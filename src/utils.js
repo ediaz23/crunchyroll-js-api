@@ -49,7 +49,10 @@ async function makeRawRequest(url, reqConfig) {
     try {
         fetchFn = await import('node-fetch')
         fetchFn = fetchFn.default
-        reqConfig.headers.append('User-Agent', CONST.getUserAgent())
+        if (!(fetchFn instanceof Function)) {
+            throw 'not a function'
+        }
+        reqConfig.headers['User-Agent'] = CONST.getUserAgent()
     } catch (_e) {
         fetchFn = fetch
         reqConfig.headers['User-Agent'] = CONST.getUserAgent()

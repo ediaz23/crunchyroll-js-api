@@ -27,6 +27,7 @@ if (!console.error) { console.error = console.log }
 const formatObj = obj => {
     let extra = ''
     const keys = Object.keys(obj)
+
     if (keys.length) {
         if (keys.length === 2 && keys.includes('message') && keys.includes('stack')) {
             /** @type {Error} */
@@ -35,6 +36,8 @@ const formatObj = obj => {
         } else {
             extra = '\n' + JSON.stringify(obj, null, '  ')
         }
+    } else if (obj instanceof Error) {
+        extra = `\n  message:${obj.name}\n  stack:${obj.stack}`
     }
     return extra
 }
@@ -52,9 +55,9 @@ function configBrowserLogger(newLevel) {
     if (!newLevel) {
         newLevel = LEVEL
     }
-    logger.debug = () => {}
-    logger.info = () => {}
-    logger.error = () => {}
+    logger.debug = () => { }
+    logger.info = () => { }
+    logger.error = () => { }
     /*eslint-disable */
     switch (newLevel) {
         case 'silent': break;
