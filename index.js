@@ -15,6 +15,7 @@ import content from './src/services/content.js'
 import index from './src/services/index.js'
 import review from './src/services/review.js'
 import subscription from './src/services/subscription.js'
+import utils from './src/utils.js'
 
 export const api = {
     account,
@@ -36,6 +37,7 @@ export { logger }
 export { localStore }
 export { CrunchyrollError }
 export { types }
+export { utils }
 
 export default {
     logger,
@@ -44,4 +46,5 @@ export default {
     types,
     config,
     api,
+    utils,
 }

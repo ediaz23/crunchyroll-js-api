@@ -6,6 +6,13 @@ import CrunchyrollError from './error.js'
 
 
 /**
+ * In browsers cors make imposible make some request because of that
+ * provide a custum function to make request
+ * @type {Function}
+ */
+let fetchFunction = null
+
+/**
  * log api response
  * @param {String} fnName
  * @param {import('node-fetch').Response} res
@@ -40,22 +47,23 @@ async function logRes(fnName, res) {
  * @returns {Promise<import('node-fetch').Response>}
  */
 async function makeRawRequest(url, reqConfig) {
-    let fetchFn = null
+    let fetchFn = fetchFunction
     url = decodeURIComponent(`${config.url}${url}`)
     logger.debug(`${reqConfig.method} - ${url}`)
     if (!reqConfig.headers) {
         reqConfig.headers = {}
     }
+    reqConfig.headers['User-Agent'] = CONST.getUserAgent()
     try {
-        fetchFn = await import('node-fetch')
-        fetchFn = fetchFn.default
-        if (!(fetchFn instanceof Function)) {
-            throw 'not a function'
+        if (!fetchFn) {
+            fetchFn = await import('node-fetch')
+            fetchFn = fetchFn.default
+            if (!(fetchFn instanceof Function)) {
+                throw 'not a function'
+            }
         }
-        reqConfig.headers['User-Agent'] = CONST.getUserAgent()
     } catch (_e) {
-        fetchFn = fetch
-        reqConfig.headers['User-Agent'] = CONST.getUserAgent()
+        fetchFn = fetchFunction || fetch
     }
     return fetchFn(url, reqConfig)
 }
@@ -138,6 +146,14 @@ async function toURLSearchParams(data) {
     return new URLSearchParamsClass(data)
 }
 
+/**
+ * Set custom function to make request
+ * @param {Function} fetchFn
+ */
+function setFetchFunction(fetchFn) {
+    fetchFunction = fetchFn
+}
+
 export default {
     camelCase: str => str.replace(/_([a-z])/g, (_m, w) => w.toUpperCase()),
     logRes,
@@ -147,4 +163,5 @@ export default {
     toCamel,
     toSnake,
     toURLSearchParams,
+    setFetchFunction,
 }
