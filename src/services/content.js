@@ -265,7 +265,7 @@ async function getWatchlist({ account, quantity, start }) {
 /**
  * @param {Object} obj
  * @param {import('../types').AccountAuth} obj.account
- * @param {Number} [obj.contentId]
+ * @param {String} [obj.contentId]
  * @returns {Promise<Object>} 
  */
 async function getWatchlistItems({ account, contentId }) {
