@@ -6,6 +6,7 @@ import testUtils from './testUtils.js'
 import content2 from '../src/services/content2.js'
 import account from '../src/services/account.js'
 
+
 /** @type {{account: import('../types').AccountAuth}} */
 let basicParam = null
 
@@ -29,6 +30,7 @@ beforeEach(async () => {
 const customListTitlle = 'PruebaV2'
 const contentList = ['GYXM79M56', 'G6NQ5DWZ6', 'GR751KNZY']
 const contentId = contentList[0]
+const musicVideoId = 'MV67B29FAD'
 let listId = null, category = null, episodeId = null, serieId = null, movieListingId = null
 
 xdescribe('Content', () => {
@@ -122,6 +124,13 @@ xdescribe('Content', () => {
         return content2.deletePrivateCustomList(param)
     })
 
+    test('getHistory okey', async () => {
+        return content2.getHistory(basicParam).then(res => {
+            testUtils.resultCheck_v2(res)
+            testUtils.checkPlayhead_v2(res.data[0])
+        })
+    })
+
     test('addWatchlistItem okey', async () => {
         const param = { ...basicParam, contentId }
         return content2.addWatchlistItem(param)
@@ -206,6 +215,20 @@ xdescribe('Content', () => {
     test('getHomeFeed okey', async () => {
         const param = { ...basicParam }
         return content2.getHomeFeed(param).then(res => {
+            testUtils.resultCheck_v2(res)
+        })
+    })
+
+    test('getMusicFeed okey', async () => {
+        const param = { ...basicParam }
+        return content2.getMusicFeed(param).then(res => {
+            testUtils.resultCheck_v2(res)
+        })
+    })
+
+    test('getMusicVideo okey', async () => {
+        const param = { ...basicParam, musicIds: [musicVideoId] }
+        return content2.getMusicVideo(param).then(res => {
             testUtils.resultCheck_v2(res)
         })
     })

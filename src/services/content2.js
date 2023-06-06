@@ -496,6 +496,50 @@ async function getHomeFeed({ account, quantity, start }) {
 /**
  * @param {Object} obj
  * @param {import('../types').AccountAuth} obj.account
+ * @param {Number} [obj.quantity] Number of records in a result
+ * @param {Number} [obj.start] Offset to request
+ * @returns {Promise<{items: Array<Object>}>}
+ */
+async function getMusicFeed({ account, quantity, start }) {
+    const fnName = 'getMusicFeed'
+    logger.debug(fnName)
+    const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
+    utils.addParam(queryData, 'n', quantity, val => val > 0)
+    utils.addParam(queryData, 'start', start, val => val >= 0)
+    const query = await utils.toURLSearchParams(queryData)
+    const url = `/content/v2/music/landing_feed?${query}`
+    const reqConfig = {
+        method: 'get',
+        headers: { 'Authorization': account.token }
+    }
+    return utils.makeRequest(fnName, url, reqConfig)
+}
+
+
+/**
+ * @param {Object} obj
+ * @param {import('../types').AccountAuth} obj.account
+ * @param {Array<String>} [obj.musicIds]
+ * @returns {Promise<{items: Array<Object>}>}
+ */
+async function getMusicVideo({ account, musicIds }) {
+    const fnName = 'getMusicVideo'
+    logger.debug(fnName)
+    const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
+    const query = await utils.toURLSearchParams(queryData)
+    const url = `/content/v2/music/music_videos/${musicIds.join(',')}?${query}`
+    const reqConfig = {
+        method: 'get',
+        headers: { 'Authorization': account.token }
+    }
+    return utils.makeRequest(fnName, url, reqConfig)
+}
+
+
+
+/**
+ * @param {Object} obj
+ * @param {import('../types').AccountAuth} obj.account
  * @param {Number} obj.page it has to be > 1
  * @param {Number} obj.pageSize
  * @returns {Promise<Object>} 
@@ -514,6 +558,29 @@ async function getWatchHistory({ account, page, pageSize }) {
             'Authorization': account.token,
             'upload_offline_playheads': true,
         }
+    }
+    return utils.makeRequest(fnName, url, reqConfig)
+}
+
+
+/**
+ * @param {Object} obj
+ * @param {import('../types').AccountAuth} obj.account
+ * @param {Number} obj.quantity
+ * @param {Boolean} obj.ratings
+ * @returns {Promise<{total: Number, data: Array<Object>, meta: Object}>}
+ */
+async function getHistory({ account, quantity, ratings }) {
+    const fnName = 'getHistory'
+    logger.debug(fnName)
+    const queryData = { locale: account.locale }
+    utils.addParam(queryData, 'n', quantity, val => val > 0)
+    utils.addParam(queryData, 'ratings', ratings)
+    const query = await utils.toURLSearchParams(queryData)
+    const url = `/content/v2/discover/${account.accountId}/history?${query}`
+    const reqConfig = {
+        method: 'get',
+        headers: { 'Authorization': account.token }
     }
     return utils.makeRequest(fnName, url, reqConfig)
 }
@@ -704,7 +771,10 @@ export default {
     getCategories,
     getCustomListItems,
     getCustomLists,
+    getHistory,
     getHomeFeed,
+    getMusicFeed,
+    getMusicVideo,
     getPlayheads,
     getSeasonList,
     getSimilar,

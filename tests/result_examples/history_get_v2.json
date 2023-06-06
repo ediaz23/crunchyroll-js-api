@@ -1,0 +1,173 @@
+{
+    "total": 45,
+    "data": [
+        {
+            "playhead": 300,
+            "fully_watched": false,
+            "new": false,
+            "panel": {
+                "episode_metadata": {
+                    "audio_locale": "de-DE",
+                    "availability_ends": "9998-11-30T08:00:00Z",
+                    "availability_notes": "",
+                    "availability_starts": "2022-03-08T17:00:00Z",
+                    "available_date": null,
+                    "available_offline": true,
+                    "closed_captions_available": false,
+                    "duration_ms": 1422109,
+                    "eligible_region": "CL",
+                    "episode": "2",
+                    "episode_air_date": "2022-03-08T09:00:00Z",
+                    "episode_number": 2,
+                    "extended_maturity_rating": {},
+                    "free_available_date": "2022-03-08T17:00:00Z",
+                    "identifier": "GP5HJ85WM|S1|E2",
+                    "is_clip": false,
+                    "is_dubbed": true,
+                    "is_mature": false,
+                    "is_premium_only": true,
+                    "is_subbed": true,
+                    "mature_blocked": false,
+                    "maturity_ratings": [
+                        "TV-14"
+                    ],
+                    "premium_available_date": "2022-03-08T17:00:00Z",
+                    "premium_date": null,
+                    "season_id": "GR49C7MXZ",
+                    "season_number": 1,
+                    "season_slug_title": "the-dungeon-of-black-company-german-dub",
+                    "season_title": "The Dungeon of Black Company (German Dub)",
+                    "sequence_number": 2,
+                    "series_id": "GP5HJ85WM",
+                    "series_slug_title": "the-dungeon-of-black-company",
+                    "series_title": "The Dungeon of Black Company",
+                    "subtitle_locales": [],
+                    "upload_date": "2022-03-08T09:00:00Z",
+                    "versions": [
+                        {
+                            "audio_locale": "ja-JP",
+                            "guid": "GWDU8K1ZG",
+                            "is_premium_only": false,
+                            "media_guid": "GEMFZG9VK",
+                            "original": true,
+                            "season_guid": "GY49C73V2",
+                            "variant": ""
+                        },
+                        {
+                            "audio_locale": "es-419",
+                            "guid": "GG1U2E8MX",
+                            "is_premium_only": false,
+                            "media_guid": "G71F4VQ53",
+                            "original": false,
+                            "season_guid": "G619CP31G",
+                            "variant": ""
+                        },
+                        {
+                            "audio_locale": "pt-BR",
+                            "guid": "GG1U2E8EG",
+                            "is_premium_only": false,
+                            "media_guid": "G71F4VQV9",
+                            "original": false,
+                            "season_guid": "GYJQC1M09",
+                            "variant": ""
+                        },
+                        {
+                            "audio_locale": "en-US",
+                            "guid": "G7PU4VQZ1",
+                            "is_premium_only": false,
+                            "media_guid": "G4GFQXNJV",
+                            "original": false,
+                            "season_guid": "GRNQCJZ11",
+                            "variant": ""
+                        },
+                        {
+                            "audio_locale": "fr-FR",
+                            "guid": "GEVUZKNQ3",
+                            "is_premium_only": true,
+                            "media_guid": "GXMFQ9Z4M",
+                            "original": false,
+                            "season_guid": "G6X0C4K77",
+                            "variant": ""
+                        },
+                        {
+                            "audio_locale": "de-DE",
+                            "guid": "G7PU40JDD",
+                            "is_premium_only": true,
+                            "media_guid": "G4GFQZ877",
+                            "original": false,
+                            "season_guid": "GR49C7MXZ",
+                            "variant": ""
+                        }
+                    ]
+                },
+                "images": {
+                    "thumbnail": [
+                        [
+                            {
+                                "height": 180,
+                                "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/320x180/catalog/crunchyroll/ea85eb7e09b66b6aaf6a4a00a360bfa2.jpe",
+                                "type": "thumbnail",
+                                "width": 320
+                            },
+                            {
+                                "height": 338,
+                                "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/600x338/catalog/crunchyroll/ea85eb7e09b66b6aaf6a4a00a360bfa2.jpe",
+                                "type": "thumbnail",
+                                "width": 600
+                            },
+                            {
+                                "height": 360,
+                                "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/640x360/catalog/crunchyroll/ea85eb7e09b66b6aaf6a4a00a360bfa2.jpe",
+                                "type": "thumbnail",
+                                "width": 640
+                            },
+                            {
+                                "height": 450,
+                                "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/800x450/catalog/crunchyroll/ea85eb7e09b66b6aaf6a4a00a360bfa2.jpe",
+                                "type": "thumbnail",
+                                "width": 800
+                            },
+                            {
+                                "height": 675,
+                                "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/1200x675/catalog/crunchyroll/ea85eb7e09b66b6aaf6a4a00a360bfa2.jpe",
+                                "type": "thumbnail",
+                                "width": 1200
+                            },
+                            {
+                                "height": 810,
+                                "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/1440x810/catalog/crunchyroll/ea85eb7e09b66b6aaf6a4a00a360bfa2.jpe",
+                                "type": "thumbnail",
+                                "width": 1440
+                            },
+                            {
+                                "height": 900,
+                                "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/1600x900/catalog/crunchyroll/ea85eb7e09b66b6aaf6a4a00a360bfa2.jpe",
+                                "type": "thumbnail",
+                                "width": 1600
+                            },
+                            {
+                                "height": 1080,
+                                "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/1920x1080/catalog/crunchyroll/ea85eb7e09b66b6aaf6a4a00a360bfa2.jpe",
+                                "type": "thumbnail",
+                                "width": 1920
+                            }
+                        ]
+                    ]
+                },
+                "title": "An Un-ANT-icipated Encounter",
+                "slug_title": "an-un-ant-icipated-encounter",
+                "type": "episode",
+                "linked_resource_key": "cms:/episodes/G7PU40JDD",
+                "description": "Though Kinji's plan to make easy money ultimately failed, the revenue he generated during his temporary success was noticed by his superiors. Kinji and Wanibe are transferred to a more dangerous division, to do a job they are totally unqualified for.",
+                "promo_title": "",
+                "external_id": "EPI.839302",
+                "promo_description": "",
+                "channel_id": "crunchyroll",
+                "slug": "",
+                "id": "G7PU40JDD",
+                "streams_link": "/content/v2/cms/videos/G4GFQZ877/streams"
+            }
+        }
+    ],
+    "meta": {}
+}
