@@ -60,4 +60,5 @@ export default {
     getRatingEpisodeTypes,
     getClientId,
     getClientSecret,
+    sortByValues: ['popularity', 'newly_added', 'alphabetical']
 }

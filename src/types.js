@@ -69,6 +69,7 @@
  * @property {Boolean} opt_out_store_deals
  * @property {String} preferred_communication_language
  * @property {String} preferred_content_subtitle_language
+ * @property {String} preferred_content_audio_language
  * @property {Boolean} qa_user
  * @property {String} username
  */
@@ -152,6 +153,7 @@
  * @typedef AccountParamSub
  * @type {Object}
  * @property {String} accountId
+ * @property {String} audioLanguage
  * @typedef {AuthBase & AccountParamSub} AccountAuth
  */
 

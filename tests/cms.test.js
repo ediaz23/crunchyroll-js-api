@@ -1,4 +1,6 @@
 
+import { expect } from '@jest/globals'
+
 import localStore from '../src/localStore.js'
 import testUtils from './testUtils.js'
 import cms from '../src/services/cms.js'
@@ -9,6 +11,7 @@ let basicParam = null
 
 beforeEach(async () => {
     await localStore.loadFromLocal()
+    localStore.setExternalStorage({ save: testUtils.saveToLocal })
     const token = await localStore.getAuthToken()
     const locale = await localStore.getLocale()
     const cmsData = await localStore.getCms()

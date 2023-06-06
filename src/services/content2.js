@@ -2,6 +2,7 @@
 import utils from '../utils.js'
 import logger from '../logger.js'
 import CONST from '../const.js'
+import CrunchyrollError from '../error.js'
 
 
 /**
@@ -14,7 +15,7 @@ import CONST from '../const.js'
 async function addItemToCustomList({ account, listId, contentId }) {
     const fnName = 'addItemToCustomList'
     logger.debug(fnName)
-    const queryData = { locale: account.locale }
+    const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
     const queryStr = await utils.toURLSearchParams(queryData)
     const url = `/content/v2/${account.accountId}/custom-lists/${listId}?${queryStr}`
     const reqConfig = {
@@ -42,12 +43,10 @@ async function addItemToCustomList({ account, listId, contentId }) {
 async function changeCustomListItemPosition({ account, listId, contentId, location, refContentId }) {
     const fnName = 'changeCustomListItemPosition'
     logger.debug(fnName)
-    const queryData = { locale: account.locale }
+    const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
     const queryStr = await utils.toURLSearchParams(queryData)
     const url = `/content/v2/${account.accountId}/custom-lists/${listId}/${contentId}/position?${queryStr}`
-    if (!['after', 'before'].includes(location)) {
-        throw new Error(`Wrong location`)
-    }
+    if (!['after', 'before'].includes(location)) { throw new CrunchyrollError(`Wrong location`) }
     const reqConfig = {
         method: 'put',
         headers: {
@@ -70,18 +69,20 @@ async function changeCustomListItemPosition({ account, listId, contentId, locati
  * @param {String} obj.listId
  * @param {String} [obj.page]
  * @param {String} [obj.pageSize]
- * @param {String} [obj.sortBy] manual, date_added
+ * @param {String} [obj.sort] manual, date_added
  * @param {String} [obj.order] asc, desc
  * @returns {Promise<Object>}
  */
-async function getCustomListItems({ account, listId, page, pageSize, sortBy, order }) {
+async function getCustomListItems({ account, listId, page, pageSize, sort, order }) {
     const fnName = 'getCustomListItems'
     logger.debug(fnName)
-    const queryData = { locale: account.locale }
+    const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
     utils.addParam(queryData, 'page', page)
     utils.addParam(queryData, 'page_size', pageSize)
-    utils.addParam(queryData, 'sort_by', sortBy, val => ['manual', 'date_added'].includes(val))
-    utils.addParam(queryData, 'order', order, val => ['asc', 'desc'].includes(val))
+    if (sort && !['manual', 'date_added'].includes(sort)) { throw new CrunchyrollError('Wrong sort value') }
+    utils.addParam(queryData, 'sort_by', sort)
+    if (order && !['asc', 'desc'].includes(order)) { throw new CrunchyrollError('Wrong order value') }
+    utils.addParam(queryData, 'order', order)
     const query = await utils.toURLSearchParams(queryData)
     const url = `/content/v2/${account.accountId}/custom-lists/${listId}?${query}`
     const reqConfig = {
@@ -102,7 +103,7 @@ async function getCustomListItems({ account, listId, page, pageSize, sortBy, ord
 async function deleteCustomListItem({ account, listId, contentId }) {
     const fnName = 'deleteCustomListItem'
     logger.debug(fnName)
-    const queryData = { locale: account.locale }
+    const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
     const queryStr = await utils.toURLSearchParams(queryData)
     const url = `/content/v2/${account.accountId}/custom-lists/${listId}/${contentId}?${queryStr}`
     const reqConfig = {
@@ -121,12 +122,12 @@ async function deleteCustomListItem({ account, listId, contentId }) {
  * @param {Object} obj
  * @param {import('../types').AccountAuth} obj.account
  * @param {String} obj.title
- * @returns {Promise<import('../types').CustomListResponse>}
+ * @returns {Promise<{data: Array<import('../types').CustomListResponse>}>}
  */
 async function createPrivateCustomList({ account, title }) {
     const fnName = 'createPrivateCustomList'
     logger.debug(fnName)
-    const queryData = { locale: account.locale }
+    const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
     const queryStr = await utils.toURLSearchParams(queryData)
     const url = `/content/v2/${account.accountId}/custom-lists?${queryStr}`
     const reqConfig = {
@@ -145,12 +146,12 @@ async function createPrivateCustomList({ account, title }) {
 /**
  * @param {Object} obj
  * @param {import('../types').AccountAuth} obj.account
- * @returns {Promise<Object>}
+ * @returns {Promise<{total: Number, data: Object, meta: Object}>}
  */
 async function getCustomLists({ account }) {
     const fnName = 'getCustomLists'
     logger.debug(fnName)
-    const queryData = { locale: account.locale }
+    const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
     const query = await utils.toURLSearchParams(queryData)
     const url = `/content/v2/${account.accountId}/custom-lists?${query}`
     const reqConfig = {
@@ -171,7 +172,7 @@ async function getCustomLists({ account }) {
 async function updateCustomList({ account, listId, title }) {
     const fnName = 'updateCustomList'
     logger.debug(fnName)
-    const queryData = { locale: account.locale }
+    const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
     const queryStr = await utils.toURLSearchParams(queryData)
     const url = `/content/v2/${account.accountId}/custom-lists/${listId}?${queryStr}`
     const reqConfig = {
@@ -196,7 +197,7 @@ async function updateCustomList({ account, listId, title }) {
 async function deletePrivateCustomList({ account, listId }) {
     const fnName = 'deletePrivateCustomList'
     logger.debug(fnName)
-    const queryData = { locale: account.locale }
+    const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
     const queryStr = await utils.toURLSearchParams(queryData)
     const url = `/content/v2/${account.accountId}/custom-lists/${listId}?${queryStr}`
     const reqConfig = {
@@ -220,7 +221,7 @@ async function deletePrivateCustomList({ account, listId }) {
 async function addWatchlistItem({ account, contentId }) {
     const fnName = 'addWatchlistItem'
     logger.debug(fnName)
-    const queryData = { locale: account.locale }
+    const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
     const queryStr = await utils.toURLSearchParams(queryData)
     const url = `/content/v2/${account.accountId}/watchlist?${queryStr}`
     const reqConfig = {
@@ -246,7 +247,7 @@ async function addWatchlistItem({ account, contentId }) {
 async function getWatchlist({ account, quantity, start }) {
     const fnName = 'getWatchlist'
     logger.debug(fnName)
-    const queryData = { locale: account.locale }
+    const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
     utils.addParam(queryData, 'n', quantity, val => val > 0)
     utils.addParam(queryData, 'start', start, val => val >= 0)
     const query = await utils.toURLSearchParams(queryData)
@@ -271,7 +272,7 @@ async function getWatchlist({ account, quantity, start }) {
 async function getWatchlistItems({ account, contentIds }) {
     const fnName = 'getWatchlistItems'
     logger.debug(fnName)
-    const queryData = { locale: account.locale }
+    const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
     if (contentIds && contentIds.length) {
         utils.addParam(queryData, 'content_ids', contentIds.join(','))
     }
@@ -288,14 +289,14 @@ async function getWatchlistItems({ account, contentIds }) {
 /**
  * @param {Object} obj
  * @param {import('../types').AccountAuth} obj.account
- * @param {Number} obj.contentId
+ * @param {String} obj.contentId
  * @param {Boolean} obj.isFavorite 
  * @returns {Promise}
  */
 async function updateWatchlistItemFavoriteStatus({ account, contentId, isFavorite }) {
     const fnName = 'updateWatchlistItemFavoriteStatus'
     logger.debug(fnName)
-    const queryData = { locale: account.locale }
+    const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
     const queryStr = await utils.toURLSearchParams(queryData)
     const url = `/content/v2/${account.accountId}/watchlist/${contentId}?${queryStr}`
     const reqConfig = {
@@ -314,13 +315,13 @@ async function updateWatchlistItemFavoriteStatus({ account, contentId, isFavorit
 /**
  * @param {Object} obj
  * @param {import('../types').AccountAuth} obj.account
- * @param {Number} obj.contentId
+ * @param {String} obj.contentId
  * @returns {Promise}
  */
 async function deleteWatchlistItem({ account, contentId }) {
     const fnName = 'deleteWatchlistItem'
     logger.debug(fnName)
-    const queryData = { locale: account.locale }
+    const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
     const queryStr = await utils.toURLSearchParams(queryData)
     const url = `/content/v2/${account.accountId}/watchlist/${contentId}?${queryStr}`
     const reqConfig = {
@@ -340,20 +341,29 @@ async function deleteWatchlistItem({ account, contentId }) {
  * @param {import('../types').AccountAuth} obj.account
  * @param {Number} [obj.quantity] Number of records in a result
  * @param {Number} [obj.start] Offset to request
- * @param {String} [obj.category] Category
+ * @param {Array<String>} [obj.category] Category
  * @param {String} [obj.query] Search pattern
  * @param {String} [obj.seasonTag] season tag
- * @returns {Promise<{total: Number, items: Array<Object>}>}
+ * @param {String} [obj.sort] sort results
+ * @param {String} [obj.type] type for search, example episode
+ * @param {Boolean} [obj.ratings]
+ * @returns {Promise<{total: Number, data: Array<Object>, meta: Object}>}
  */
-async function _getBrowseAll({ account, quantity, start, category, query, seasonTag }) {
+async function _getBrowseAll({ account, quantity, start, category, query, seasonTag, sort, type, ratings }) {
     const fnName = '_getBrowseAll'
     logger.debug(fnName)
-    const queryData = { locale: account.locale }
+    const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
     utils.addParam(queryData, 'n', quantity, val => val > 0)
     utils.addParam(queryData, 'start', start, val => val >= 0)
-    utils.addParam(queryData, 'categories', category)
+    if (category && category.length) {
+        utils.addParam(queryData, 'categories', category.join(','))
+    }
     utils.addParam(queryData, 'q', query)
     utils.addParam(queryData, 'season_tag', seasonTag)
+    if (sort && !CONST.sortByValues.includes(sort)) { throw new CrunchyrollError('Wrong sort value') }
+    utils.addParam(queryData, 'sort_by', sort)
+    utils.addParam(queryData, 'type', type)
+    utils.addParam(queryData, 'ratings', ratings)
     const queryStr = await utils.toURLSearchParams(queryData)
     const url = `/content/v2/discover/browse?${queryStr}`
     const reqConfig = {
@@ -372,10 +382,10 @@ async function _getBrowseAll({ account, quantity, start, category, query, season
  * @param {import('../types').AccountAuth} obj.account
  * @param {Number} [obj.quantity] Number of records in a result
  * @param {Number} [obj.start] Offset to request
- * @param {String} [obj.category] Category
+ * @param {Array<String>} [obj.category] Category
  * @param {String} [obj.query] Search pattern
  * @param {String} [obj.seasonTag]
- * @returns {Promise<{total: Number, items: Array<Object>}>}
+ * @returns {Promise<{total: Number, data: Array<Object>, meta: Object}>}
  */
 async function getBrowseAll({ account, quantity, start, category, query, seasonTag }) {
     return _getBrowseAll({ account, quantity, start, category, query, seasonTag })
@@ -385,29 +395,21 @@ async function getBrowseAll({ account, quantity, start, category, query, seasonT
 /**
  * @param {Object} obj
  * @param {import('../types').AccountAuth} obj.account
- * @param {String} obj.category Category
- * @param {Number} [obj.quantity] Number of records in a result
- * @param {Number} [obj.start] Offset to request
- * @param {String} [obj.query] Search pattern
- * @param {String} [obj.seasonTag]
- * @returns {Promise<{total: Number, items: Array<Object>}>}
+ * @param {Array<String>} [obj.category] Category
+ * @param {String} [obj.sort] sort results
+ * @param {Boolean} [obj.ratings]
+ * @returns {Promise<{total: Number, data: Array<Object>, meta: Object}>}
  */
-async function getBrowseByCategories({ account, quantity, start, category, query, seasonTag }) {
-    return getBrowseAll({ account, quantity, start, category, query, seasonTag })
-}
-
-
-/**
- * @param {Object} obj
- * @param {import('../types').AccountAuth} obj.account
- * @param {String} [obj.category] Category
- * @returns {Promise<{total: Number, items: Array<Object>}>}
- */
-async function getBrowseIndex({ account, category }) {
+async function getBrowseIndex({ account, category, sort, ratings }) {
     const fnName = 'getBrowseIndex'
     logger.debug(fnName)
-    const queryData = { locale: account.locale }
-    utils.addParam(queryData, 'categories', category)
+    const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
+    if (category && category.length) {
+        utils.addParam(queryData, 'categories', category.join(','))
+    }
+    if (sort && !CONST.sortByValues.includes(sort)) { throw new CrunchyrollError('Wrong sort value') }
+    utils.addParam(queryData, 'sort_by', sort)
+    utils.addParam(queryData, 'ratings', ratings)
     const queryStr = await utils.toURLSearchParams(queryData)
     const url = `/content/v2/discover/browse/index?${queryStr}`
     const reqConfig = {
@@ -424,14 +426,12 @@ async function getBrowseIndex({ account, category }) {
 /**
  * @param {Object} obj
  * @param {import('../types').AccountAuth} obj.account
- * @param {Boolean} [obj.includeSubcategories]
- * @returns {Promise<{total: Number, items: Array<Object>}>}
+ * @returns {Promise<{total: Number, data: Array<Object>, meta: Object}>}
  */
-async function getCategories({ account, includeSubcategories }) {
+async function getCategories({ account }) {
     const fnName = 'getCategories'
     logger.debug(fnName)
-    const queryData = { locale: account.locale }
-    utils.addParam(queryData, 'include_subcategories', includeSubcategories)
+    const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
     const query = await utils.toURLSearchParams(queryData)
     const url = `/content/v2/discover/categories?${query}`
     const reqConfig = {
@@ -449,13 +449,13 @@ async function getCategories({ account, includeSubcategories }) {
  * @param {Object} obj
  * @param {import('../types').AccountAuth} obj.account
  * @param {Number} obj.parentCategory Offset to request
- * @returns {Promise<{total: Number, items: Array<Object>}>}
+ * @returns {Promise<{total: Number, data: Array<Object>, meta: Object}>}
  */
 async function getSubcategories({ account, parentCategory }) {
     const fnName = 'getSubcategories'
     logger.debug(fnName)
-    const queryData = { locale: account.locale }
-    utils.addParam(queryData, 'parent_category', parentCategory, val => !!val)
+    const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
+    utils.addParam(queryData, 'parent_category', parentCategory)
     const queryStr = await utils.toURLSearchParams(queryData)
     const url = `/content/v2/discover/categories/${parentCategory}/sub_categories?${queryStr}`
     const reqConfig = {
@@ -475,16 +475,14 @@ async function getSubcategories({ account, parentCategory }) {
  * @param {import('../types').AccountAuth} obj.account
  * @param {Number} [obj.quantity] Number of records in a result
  * @param {Number} [obj.start] Offset to request
- * @param {String} [obj.audio] Audio language
  * @returns {Promise<{items: Array<Object>}>}
  */
-async function getHomeFeed({ account, quantity, start, audio }) {
+async function getHomeFeed({ account, quantity, start }) {
     const fnName = 'getHomeFeed'
     logger.debug(fnName)
-    const queryData = { locale: account.locale }
+    const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
     utils.addParam(queryData, 'n', quantity, val => val > 0)
     utils.addParam(queryData, 'start', start, val => val >= 0)
-    utils.addParam(queryData, 'preferred_audio_language', audio)
     const query = await utils.toURLSearchParams(queryData)
     const url = `/content/v2/discover/${account.accountId}/home_feed?${query}`
     const reqConfig = {
@@ -505,7 +503,7 @@ async function getHomeFeed({ account, quantity, start, audio }) {
 async function getWatchHistory({ account, page, pageSize }) {
     const fnName = 'getWatchHistory'
     logger.debug(fnName)
-    const queryData = { locale: account.locale }
+    const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
     utils.addParam(queryData, 'page', page, val => val > 0)
     utils.addParam(queryData, 'page_size', pageSize, val => val > 0)
     const query = await utils.toURLSearchParams(queryData)
@@ -529,7 +527,7 @@ async function getWatchHistory({ account, page, pageSize }) {
 async function getSeasonList({ account }) {
     const fnName = 'getSeasonList'
     logger.debug(fnName)
-    const queryData = { locale: account.locale }
+    const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
     const query = await utils.toURLSearchParams(queryData)
     const url = `/content/v2/discover/seasonal_tags?${query}`
     const reqConfig = {
@@ -546,12 +544,12 @@ async function getSeasonList({ account }) {
  * @param {Number} obj.contentId Offset to request
  * @param {Number} [obj.quantity] Number of records in a result
  * @param {Number} [obj.start] Offset to request
- * @returns {Promise<{total: Number, items: Array<Object>}>}
+ * @returns {Promise<{total: Number, data: Array<Object>, meta: Object}>}
  */
 async function getSimilar({ account, contentId, quantity, start }) {
     const fnName = 'getSimilar'
     logger.debug(fnName)
-    const queryData = { locale: account.locale }
+    const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
     utils.addParam(queryData, 'n', quantity, val => val > 0)
     utils.addParam(queryData, 'start', start, val => val >= 0)
     const queryStr = await utils.toURLSearchParams(queryData)
@@ -571,12 +569,12 @@ async function getSimilar({ account, contentId, quantity, start }) {
  * @param {Object} obj
  * @param {import('../types').AccountAuth} obj.account
  * @param {String} obj.contentId
- * @returns {Promise<Object>} 
+ * @returns {Promise<{total: Number, data: Array<Object>, meta: Object}>} 
  */
 async function getUpNext({ account, contentId }) {
     const fnName = 'getUpNext'
     logger.debug(fnName)
-    const queryData = { locale: account.locale }
+    const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
     const query = await utils.toURLSearchParams(queryData)
     const url = `/content/v2/discover/up_next/${contentId}?${query}`
     const reqConfig = {
@@ -600,7 +598,7 @@ async function getUpNext({ account, contentId }) {
 async function _getPlayheads({ account, contentIds, uploadOfflinePlayheads }) {
     const fnName = '_getPlayheads'
     logger.debug(fnName)
-    const queryData = { locale: account.locale }
+    const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
     utils.addParam(queryData, 'content_ids', contentIds.join(','))
     const query = await utils.toURLSearchParams(queryData)
     const url = `/content/v2/${account.accountId}/playheads?${query}`
@@ -629,17 +627,6 @@ async function getPlayheads({ account, contentIds }) {
 /**
  * @param {Object} obj
  * @param {import('../types').AccountAuth} obj.account
- * @param {Array<String>} obj.contentIds
- * @returns {Promise<Object>} 
- */
-async function getPlayheadsUnsynced({ account, contentIds }) {
-    return _getPlayheads({ account, contentIds, uploadOfflinePlayheads: false })
-}
-
-
-/**
- * @param {Object} obj
- * @param {import('../types').AccountAuth} obj.account
  * @param {String} obj.contentId
  * @param {Number} obj.playhead
  * @returns {Promise}
@@ -647,7 +634,7 @@ async function getPlayheadsUnsynced({ account, contentIds }) {
 async function savePlayhead({ account, contentId, playhead }) {
     const fnName = 'savePlayhead'
     logger.debug(fnName)
-    const queryData = { locale: account.locale }
+    const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
     const queryStr = await utils.toURLSearchParams(queryData)
     const url = `/content/v2/${account.accountId}/playheads?${queryStr}`
     const reqConfig = {
@@ -673,18 +660,23 @@ async function savePlayhead({ account, contentId, playhead }) {
  * @param {Number} [obj.quantity] Number of records in a result
  * @param {Number} [obj.start] Offset to request
  * @param {Array<String>} [obj.type] Can be top_results, series, movie_listing, episode
- * @returns {Promise<Object>} 
+ * @returns {Promise<{total: Number, data: Array<Object>, meta: Object}>} 
  */
 async function search({ account, queryStr, quantity, start, type }) {
     const fnName = 'search'
     logger.debug(fnName)
     const types = CONST.getContentTypes().concat(['top_results', 'music'])
-    const queryData = { locale: account.locale }
+    const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
     utils.addParam(queryData, 'q', queryStr)
     utils.addParam(queryData, 'n', quantity, val => val > 0)
     utils.addParam(queryData, 'start', start, val => val >= 0)
     if (type && type.length) {
-        utils.addParam(queryData, 'type', type.filter(val => types.includes(val)).join(','))
+        for (const t of type) {
+            if (!types.includes(t)) {
+                throw new CrunchyrollError('Wrong type value.')
+            }
+        }
+        utils.addParam(queryData, 'type', type.join(','))
     }
     const query = await utils.toURLSearchParams(queryData)
     const url = `/content/v2/discover/search?${query}`
@@ -708,14 +700,12 @@ export default {
     deletePrivateCustomList,
     deleteWatchlistItem,
     getBrowseAll,
-    getBrowseByCategories,
     getBrowseIndex,
     getCategories,
     getCustomListItems,
     getCustomLists,
     getHomeFeed,
     getPlayheads,
-    getPlayheadsUnsynced,
     getSeasonList,
     getSimilar,
     getSubcategories,

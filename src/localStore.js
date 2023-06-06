@@ -152,14 +152,14 @@ async function saveToLocal() {
     const authData = await authDataFile()
     const data = JSON.stringify(toJSON(storage), null, '\t')
     try {
-        const fs = (await import('fs')).default
-        fs.writeFileSync(authData, data)
-    } catch (_e) {
         if (externalSaveData) {
             await externalSaveData(data)
         } else {
-            localStorage.setItem(authData, btoa(data))
+            const fs = (await import('fs')).default
+            fs.writeFileSync(authData, data)
         }
+    } catch (_e) {
+        localStorage.setItem(authData, btoa(data))
     }
 }
 
@@ -230,8 +230,12 @@ async function authDataFile() {
  * @param {{save: Function, load: Function}}
  */
 function setExternalStorage({ save, load }) {
-    externalLoadData = load
-    externalSaveData = save
+    if (load !== undefined) {
+        externalLoadData = load
+    }
+    if (save !== undefined) {
+        externalSaveData = save
+    }
 }
 
 /**

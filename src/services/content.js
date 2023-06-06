@@ -289,7 +289,7 @@ async function getWatchlistItems({ account, contentId }) {
 /**
  * @param {Object} obj
  * @param {import('../types').AccountAuth} obj.account
- * @param {Number} obj.contentId
+ * @param {String} obj.contentId
  * @param {Boolean} obj.isFavorite 
  * @returns {Promise}
  */
@@ -315,7 +315,7 @@ async function updateWatchlistItemFavoriteStatus({ account, contentId, isFavorit
 /**
  * @param {Object} obj
  * @param {import('../types').AccountAuth} obj.account
- * @param {Number} obj.contentId
+ * @param {String} obj.contentId
  * @returns {Promise}
  */
 async function deleteWatchlistItem({ account, contentId }) {

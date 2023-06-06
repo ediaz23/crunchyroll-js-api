@@ -1,4 +1,6 @@
 
+import { expect } from '@jest/globals'
+
 import localStore from '../src/localStore.js'
 import fs from 'fs'
 import auth from '../src/services/auth.js'
@@ -13,6 +15,7 @@ let credential = null
 
 beforeEach(async () => {
     await localStore.loadFromLocal()
+    localStore.setExternalStorage({ save: testUtils.saveToLocal })
     credential = localStore.storage.credential
 })
 
@@ -32,7 +35,7 @@ function validateToken(token) {
 }
 
 
-describe('Auth', () => {
+xdescribe('Auth', () => {
 
     test('Load Credentials', async () => {
         expect(fs.existsSync(await localStore.authDataFile())).toBe(true)

@@ -1,4 +1,6 @@
 
+import { expect } from '@jest/globals'
+
 import localStore from '../src/localStore.js'
 import assets from '../src/services/assets.js'
 import testUtils from './testUtils.js'
@@ -9,6 +11,7 @@ let token = null
 
 beforeEach(async () => {
     await localStore.loadFromLocal()
+    localStore.setExternalStorage({ save: testUtils.saveToLocal })
     token = await localStore.getAuthToken()
 })
 

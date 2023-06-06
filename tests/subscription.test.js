@@ -12,6 +12,7 @@ let externalId = null
 
 beforeEach(async () => {
     await localStore.loadFromLocal()
+    localStore.setExternalStorage({ save: testUtils.saveToLocal })
     const token = await localStore.getAuthToken()
     const locale = await localStore.getLocale()
     auth = { token, locale }
