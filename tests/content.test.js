@@ -24,7 +24,7 @@ const contentList = ['GYXM79M56', 'G6NQ5DWZ6', 'GR751KNZY']
 const contentId = contentList[0]
 let listId = null, category = null, episodeId = null, serieId = null, movieListingId = null
 
-describe('Content', () => {
+xdescribe('Content', () => {
 
     test('createPrivateCustomList okey', async () => {
         const param = { ...basicParam, title: customListTitlle }

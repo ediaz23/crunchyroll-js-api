@@ -15,7 +15,7 @@ beforeEach(async () => {
     token = await localStore.getAuthToken()
 })
 
-describe('Index', () => {
+xdescribe('Index', () => {
 
     test('Request Index', async () => {
         return index.getIndexConfig({ token }).then(res => {

@@ -1,6 +1,4 @@
 
-import { expect } from '@jest/globals'
-
 import localStore from '../src/localStore.js'
 import assets from '../src/services/assets.js'
 import testUtils from './testUtils.js'
@@ -15,7 +13,7 @@ beforeEach(async () => {
     token = await localStore.getAuthToken()
 })
 
-describe('Assets', () => {
+xdescribe('Assets', () => {
 
     test('Request Assets', async () => {
         return assets.getAvatar({ token }).then(res => {

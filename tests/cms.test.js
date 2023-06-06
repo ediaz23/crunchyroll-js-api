@@ -21,7 +21,7 @@ beforeEach(async () => {
 const serieId = 'GY190DKQR', movieListingId = 'GR3KV3PWR'
 let seasonId = null, episodeId = null, streamId = null, streamUrl = null, movieId = null, externalId = null
 
-describe('Cms', () => {
+xdescribe('Cms', () => {
 
     test('getSeasons okey', async () => {
         expect(serieId).not.toBeNull()

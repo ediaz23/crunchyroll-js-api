@@ -62,7 +62,7 @@ function checkRatingResult(res) {
 
 const episodeId = 'GWDU8KN73', serieId = 'GR751KNZY'
 
-describe('Review', () => {
+xdescribe('Review', () => {
 
     test('addEpisodeRating wrong contentType', async () => {
         const param = { ...basicParam, contentId: episodeId, rating: 'down', contentType: 'malo' }

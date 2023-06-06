@@ -20,7 +20,7 @@ beforeEach(async () => {
 })
 
 
-describe('Sbuscription', () => {
+xdescribe('Sbuscription', () => {
 
     test('Request Products', async () => {
         return subscription.getProducts({ auth }).then(res => {

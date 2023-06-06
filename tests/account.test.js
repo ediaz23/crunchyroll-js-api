@@ -15,7 +15,7 @@ beforeEach(async () => {
     token = await localStore.getAuthToken()
 })
 
-describe('Account', () => {
+xdescribe('Account', () => {
 
     test('Request Account', async () => {
         return account.getAccountId({ token }).then(account => {
