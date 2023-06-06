@@ -1,0 +1,96 @@
+{
+    "total": 9,
+    "data": [
+        {
+            "id": "adventure",
+            "parent_category_id": "action",
+            "localization": {
+                "title": "Aventura",
+                "description": "¡Disfruta con los héroes y de cómo persiguen sus sueños!",
+                "locale": "es-419"
+            },
+            "slug": "adventure"
+        },
+        {
+            "id": "comedy",
+            "parent_category_id": "action",
+            "localization": {
+                "title": "Comedia",
+                "description": "Ríe a carcajadas con chistes clásicos y bromas modernas sin sentido.",
+                "locale": "es-419"
+            },
+            "slug": "comedy"
+        },
+        {
+            "id": "drama",
+            "parent_category_id": "action",
+            "localization": {
+                "title": "Drama",
+                "description": "Hoy buscas algo más profundo, ¡algo con más sentimiento!",
+                "locale": "es-419"
+            },
+            "slug": "drama"
+        },
+        {
+            "id": "fantasy",
+            "parent_category_id": "action",
+            "localization": {
+                "title": "Fantasia",
+                "description": "¡La magia y los monstruos no son nada contra los aventureros!",
+                "locale": "es-419"
+            },
+            "slug": "fantasy"
+        },
+        {
+            "id": "historical",
+            "parent_category_id": "action",
+            "localization": {
+                "title": "Histórico",
+                "description": "Algunas cosas me las enseñaron en clase de historia, pero otras... No sé...",
+                "locale": "es-419"
+            },
+            "slug": "historical"
+        },
+        {
+            "id": "post-apocalyptic",
+            "parent_category_id": "action",
+            "localization": {
+                "title": "Post-apocalíptico",
+                "description": "Cuando todo llega a su fin, solo queda sobrevivir.",
+                "locale": "es-419"
+            },
+            "slug": "post-apocalyptic"
+        },
+        {
+            "id": "sci-fi",
+            "parent_category_id": "action",
+            "localization": {
+                "title": "Ciencia Ficción",
+                "description": "Tecnología, espacio, paradojas temporales, ¡hackea tus gustos con esta selección!",
+                "locale": "es-419"
+            },
+            "slug": "sci-fi"
+        },
+        {
+            "id": "supernatural",
+            "parent_category_id": "action",
+            "localization": {
+                "title": "Sobrenatural",
+                "description": "Fantasmas, espíritus, posesiones, ¡y todo tipo de criaturas!",
+                "locale": "es-419"
+            },
+            "slug": "supernatural"
+        },
+        {
+            "id": "thriller",
+            "parent_category_id": "action",
+            "localization": {
+                "title": "Thriller",
+                "description": "Una estupenda selección de series que te pondrán el vello de punta y te harán gritar: \"¡No entres ahí!\".",
+                "locale": "es-419"
+            },
+            "slug": "thriller"
+        }
+    ],
+    "meta": {}
+}

@@ -1,0 +1,155 @@
+{
+    "total": 1466,
+    "data": [
+        {
+            "promo_description": "",
+            "type": "series",
+            "last_public": "2019-10-11T07:16:16Z",
+            "new": false,
+            "slug": "",
+            "linked_resource_key": "cms:/series/GYE5X75GR",
+            "external_id": "SRZ.192242",
+            "id": "GYE5X75GR",
+            "promo_title": "",
+            "images": {
+                "poster_tall": [
+                    [
+                        {
+                            "height": 90,
+                            "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/60x90/catalog/crunchyroll/1b95d5f8110840d5b1ab4c93a669d164.jpe",
+                            "type": "poster_tall",
+                            "width": 60
+                        },
+                        {
+                            "height": 180,
+                            "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/120x180/catalog/crunchyroll/1b95d5f8110840d5b1ab4c93a669d164.jpe",
+                            "type": "poster_tall",
+                            "width": 120
+                        },
+                        {
+                            "height": 360,
+                            "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/240x360/catalog/crunchyroll/1b95d5f8110840d5b1ab4c93a669d164.jpe",
+                            "type": "poster_tall",
+                            "width": 240
+                        },
+                        {
+                            "height": 720,
+                            "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/480x720/catalog/crunchyroll/1b95d5f8110840d5b1ab4c93a669d164.jpe",
+                            "type": "poster_tall",
+                            "width": 480
+                        },
+                        {
+                            "height": 1125,
+                            "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/750x1125/catalog/crunchyroll/1b95d5f8110840d5b1ab4c93a669d164.jpe",
+                            "type": "poster_tall",
+                            "width": 750
+                        },
+                        {
+                            "height": 1440,
+                            "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/960x1440/catalog/crunchyroll/1b95d5f8110840d5b1ab4c93a669d164.jpe",
+                            "type": "poster_tall",
+                            "width": 960
+                        },
+                        {
+                            "height": 1688,
+                            "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/1125x1688/catalog/crunchyroll/1b95d5f8110840d5b1ab4c93a669d164.jpe",
+                            "type": "poster_tall",
+                            "width": 1125
+                        },
+                        {
+                            "height": 1800,
+                            "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/1200x1800/catalog/crunchyroll/1b95d5f8110840d5b1ab4c93a669d164.jpe",
+                            "type": "poster_tall",
+                            "width": 1200
+                        },
+                        {
+                            "height": 2340,
+                            "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/1560x2340/catalog/crunchyroll/1b95d5f8110840d5b1ab4c93a669d164.jpe",
+                            "type": "poster_tall",
+                            "width": 1560
+                        }
+                    ]
+                ],
+                "poster_wide": [
+                    [
+                        {
+                            "height": 180,
+                            "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/320x180/catalog/crunchyroll/0b97ea20d46f80100ca31a158ab34379.jpe",
+                            "type": "poster_wide",
+                            "width": 320
+                        },
+                        {
+                            "height": 338,
+                            "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/600x338/catalog/crunchyroll/0b97ea20d46f80100ca31a158ab34379.jpe",
+                            "type": "poster_wide",
+                            "width": 600
+                        },
+                        {
+                            "height": 360,
+                            "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/640x360/catalog/crunchyroll/0b97ea20d46f80100ca31a158ab34379.jpe",
+                            "type": "poster_wide",
+                            "width": 640
+                        },
+                        {
+                            "height": 450,
+                            "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/800x450/catalog/crunchyroll/0b97ea20d46f80100ca31a158ab34379.jpe",
+                            "type": "poster_wide",
+                            "width": 800
+                        },
+                        {
+                            "height": 675,
+                            "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/1200x675/catalog/crunchyroll/0b97ea20d46f80100ca31a158ab34379.jpe",
+                            "type": "poster_wide",
+                            "width": 1200
+                        },
+                        {
+                            "height": 810,
+                            "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/1440x810/catalog/crunchyroll/0b97ea20d46f80100ca31a158ab34379.jpe",
+                            "type": "poster_wide",
+                            "width": 1440
+                        },
+                        {
+                            "height": 900,
+                            "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/1600x900/catalog/crunchyroll/0b97ea20d46f80100ca31a158ab34379.jpe",
+                            "type": "poster_wide",
+                            "width": 1600
+                        },
+                        {
+                            "height": 1080,
+                            "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/1920x1080/catalog/crunchyroll/0b97ea20d46f80100ca31a158ab34379.jpe",
+                            "type": "poster_wide",
+                            "width": 1920
+                        }
+                    ]
+                ]
+            },
+            "description": "",
+            "channel_id": "crunchyroll",
+            "title": "11eyes",
+            "slug_title": "11eyes",
+            "series_metadata": {
+                "audio_locales": [
+                    "ja-JP"
+                ],
+                "availability_notes": "",
+                "episode_count": 12,
+                "extended_description": "",
+                "extended_maturity_rating": {},
+                "is_dubbed": false,
+                "is_mature": false,
+                "is_simulcast": false,
+                "is_subbed": true,
+                "mature_blocked": false,
+                "maturity_ratings": [
+                    "TV-14"
+                ],
+                "season_count": 1,
+                "series_launch_year": 2009,
+                "subtitle_locales": [
+                    "en-US"
+                ]
+            }
+        }
+    ],
+    "meta": {}
+}

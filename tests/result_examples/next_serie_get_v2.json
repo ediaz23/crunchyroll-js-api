@@ -1,0 +1,235 @@
+{
+    "total": 1,
+    "data": [
+        {
+            "fully_watched": false,
+            "never_watched": true,
+            "panel": {
+                "description": "Naofumi Iwatani es un joven otaku universitario al que invocan a otro mundo como uno de los cuatro héroes elegidos, aunque para su desgracia, es el héroe menos poderoso de todos. Esto no desanima a Naofumi, quien espera poder apoyar a sus compañeros con su habilidad y confiar en el resto de héroes...",
+                "slug": "",
+                "channel_id": "crunchyroll",
+                "title": "El héroe del escudo",
+                "promo_title": "",
+                "type": "episode",
+                "episode_metadata": {
+                    "ad_breaks": [
+                        {
+                            "offset_ms": 0,
+                            "type": "preroll"
+                        },
+                        {
+                            "offset_ms": 405730,
+                            "type": "midroll"
+                        },
+                        {
+                            "offset_ms": 811460,
+                            "type": "midroll"
+                        },
+                        {
+                            "offset_ms": 1217190,
+                            "type": "midroll"
+                        },
+                        {
+                            "offset_ms": 1622920,
+                            "type": "midroll"
+                        },
+                        {
+                            "offset_ms": 2028650,
+                            "type": "midroll"
+                        },
+                        {
+                            "offset_ms": 2434380,
+                            "type": "midroll"
+                        }
+                    ],
+                    "audio_locale": "es-419",
+                    "availability_ends": "9998-11-30T08:00:00Z",
+                    "availability_notes": "",
+                    "availability_starts": "2023-01-19T08:00:00Z",
+                    "available_date": null,
+                    "available_offline": true,
+                    "closed_captions_available": false,
+                    "duration_ms": 2840115,
+                    "eligible_region": "CL",
+                    "episode": "1",
+                    "episode_air_date": "2019-01-09T22:00:00+09:00",
+                    "episode_number": 1,
+                    "extended_maturity_rating": {},
+                    "free_available_date": "2023-01-19T08:00:00Z",
+                    "identifier": "G6W4QKX0R|S1|E1",
+                    "is_clip": false,
+                    "is_dubbed": true,
+                    "is_mature": false,
+                    "is_premium_only": false,
+                    "is_subbed": true,
+                    "mature_blocked": false,
+                    "maturity_ratings": [
+                        "TV-14"
+                    ],
+                    "premium_available_date": "2021-08-10T19:00:00Z",
+                    "premium_date": null,
+                    "season_id": "GR2PCV20D",
+                    "season_number": 1,
+                    "season_slug_title": "the-rising-of-the-shield-hero-spanish-dub",
+                    "season_title": "[LAT] [S1] The Rising of the Shield Hero",
+                    "sequence_number": 1,
+                    "series_id": "G6W4QKX0R",
+                    "series_slug_title": "the-rising-of-the-shield-hero",
+                    "series_title": "The Rising of the Shield Hero",
+                    "subtitle_locales": [
+                        "es-419"
+                    ],
+                    "upload_date": "2019-01-09T22:00:00+09:00",
+                    "versions": [
+                        {
+                            "audio_locale": "ja-JP",
+                            "guid": "GRKE2J1GR",
+                            "is_premium_only": false,
+                            "media_guid": "G25F0MMGE",
+                            "original": true,
+                            "season_guid": "G6G5XKP26",
+                            "variant": ""
+                        },
+                        {
+                            "audio_locale": "en-US",
+                            "guid": "G6J04M44R",
+                            "is_premium_only": false,
+                            "media_guid": "G9XFEKX10",
+                            "original": false,
+                            "season_guid": "GR1XPEP7R",
+                            "variant": ""
+                        },
+                        {
+                            "audio_locale": "de-DE",
+                            "guid": "GYG53K3DY",
+                            "is_premium_only": true,
+                            "media_guid": "GXMFQN0VW",
+                            "original": false,
+                            "season_guid": "GYW47K7Q6",
+                            "variant": ""
+                        },
+                        {
+                            "audio_locale": "fr-FR",
+                            "guid": "G8WUN2XKK",
+                            "is_premium_only": true,
+                            "media_guid": "GQ9FGEJXX",
+                            "original": false,
+                            "season_guid": "G6P8CXQKG",
+                            "variant": ""
+                        },
+                        {
+                            "audio_locale": "es-419",
+                            "guid": "GN7UDWEZP",
+                            "is_premium_only": false,
+                            "media_guid": "GVMF0PEVQ",
+                            "original": false,
+                            "season_guid": "GR2PCV20D",
+                            "variant": ""
+                        },
+                        {
+                            "audio_locale": "pt-BR",
+                            "guid": "G8WUN2XW1",
+                            "is_premium_only": false,
+                            "media_guid": "GQ9FGEJ93",
+                            "original": false,
+                            "season_guid": "GY8VCPDNG",
+                            "variant": ""
+                        },
+                        {
+                            "audio_locale": "it-IT",
+                            "guid": "G7PU4ZN9M",
+                            "is_premium_only": false,
+                            "media_guid": "G4GFQJ421",
+                            "original": false,
+                            "season_guid": "G6JQC1XG5",
+                            "variant": ""
+                        },
+                        {
+                            "audio_locale": "ar-SA",
+                            "guid": "G9DUEQV3M",
+                            "is_premium_only": false,
+                            "media_guid": "G1QF40ZM1",
+                            "original": false,
+                            "season_guid": "GYNQCJ799",
+                            "variant": ""
+                        },
+                        {
+                            "audio_locale": "es-ES",
+                            "guid": "GX9UQG80E",
+                            "is_premium_only": false,
+                            "media_guid": "GJKF2GDVW",
+                            "original": false,
+                            "season_guid": "G6K5CN40J",
+                            "variant": ""
+                        }
+                    ]
+                },
+                "streams_link": "/content/v2/cms/videos/GVMF0PEVQ/streams",
+                "id": "GN7UDWEZP",
+                "promo_description": "",
+                "linked_resource_key": "cms:/episodes/GN7UDWEZP",
+                "external_id": "EPI.816719",
+                "slug_title": "the-shield-hero",
+                "images": {
+                    "thumbnail": [
+                        [
+                            {
+                                "height": 180,
+                                "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/320x180/catalog/crunchyroll/6eb559f1c500b79103aef9cdb7df2501.jpe",
+                                "type": "thumbnail",
+                                "width": 320
+                            },
+                            {
+                                "height": 338,
+                                "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/600x338/catalog/crunchyroll/6eb559f1c500b79103aef9cdb7df2501.jpe",
+                                "type": "thumbnail",
+                                "width": 600
+                            },
+                            {
+                                "height": 360,
+                                "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/640x360/catalog/crunchyroll/6eb559f1c500b79103aef9cdb7df2501.jpe",
+                                "type": "thumbnail",
+                                "width": 640
+                            },
+                            {
+                                "height": 450,
+                                "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/800x450/catalog/crunchyroll/6eb559f1c500b79103aef9cdb7df2501.jpe",
+                                "type": "thumbnail",
+                                "width": 800
+                            },
+                            {
+                                "height": 675,
+                                "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/1200x675/catalog/crunchyroll/6eb559f1c500b79103aef9cdb7df2501.jpe",
+                                "type": "thumbnail",
+                                "width": 1200
+                            },
+                            {
+                                "height": 810,
+                                "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/1440x810/catalog/crunchyroll/6eb559f1c500b79103aef9cdb7df2501.jpe",
+                                "type": "thumbnail",
+                                "width": 1440
+                            },
+                            {
+                                "height": 900,
+                                "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/1600x900/catalog/crunchyroll/6eb559f1c500b79103aef9cdb7df2501.jpe",
+                                "type": "thumbnail",
+                                "width": 1600
+                            },
+                            {
+                                "height": 1080,
+                                "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/1920x1080/catalog/crunchyroll/6eb559f1c500b79103aef9cdb7df2501.jpe",
+                                "type": "thumbnail",
+                                "width": 1920
+                            }
+                        ]
+                    ]
+                }
+            },
+            "playhead": 0,
+            "shortcut": false
+        }
+    ],
+    "meta": {
+        "versions_considered": true
+    }
+}

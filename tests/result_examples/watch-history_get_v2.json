@@ -1,0 +1,316 @@
+{
+    "total": 2,
+    "data": [
+        {
+            "id": "GJKF27X8M",
+            "date_played": "2023-06-05T04:45:14Z",
+            "parent_id": "G65VQD2D6",
+            "parent_type": "movie_listing",
+            "playhead": 60,
+            "fully_watched": false,
+            "panel": {
+                "linked_resource_key": "cms:/movies/GJKF27X8M",
+                "movie_metadata": {
+                    "ad_breaks": [
+                        {
+                            "offset_ms": 0,
+                            "type": "preroll"
+                        },
+                        {
+                            "offset_ms": 1460870,
+                            "type": "midroll"
+                        },
+                        {
+                            "offset_ms": 2021430,
+                            "type": "midroll"
+                        },
+                        {
+                            "offset_ms": 3732350,
+                            "type": "midroll"
+                        },
+                        {
+                            "offset_ms": 4365000,
+                            "type": "midroll"
+                        },
+                        {
+                            "offset_ms": 5870120,
+                            "type": "midroll"
+                        },
+                        {
+                            "offset_ms": 422540,
+                            "type": "midroll"
+                        },
+                        {
+                            "offset_ms": 973340,
+                            "type": "midroll"
+                        },
+                        {
+                            "offset_ms": 2585080,
+                            "type": "midroll"
+                        },
+                        {
+                            "offset_ms": 3013010,
+                            "type": "midroll"
+                        }
+                    ],
+                    "availability_notes": "",
+                    "available_offline": true,
+                    "closed_captions_available": false,
+                    "duration_ms": 6300445,
+                    "extended_maturity_rating": {},
+                    "is_dubbed": false,
+                    "is_mature": false,
+                    "is_premium_only": true,
+                    "is_subbed": true,
+                    "mature_blocked": false,
+                    "maturity_ratings": [
+                        "PG-13"
+                    ],
+                    "movie_listing_id": "G65VQD2D6",
+                    "movie_listing_slug_title": "fullmetal-alchemist-the-conqueror-of-shamballa",
+                    "movie_listing_title": "Fullmetal Alchemist: El conquistador de Shamballa"
+                },
+                "id": "GJKF27X8M",
+                "external_id": "MED.719013",
+                "description": "Han pasado dos años desde que Edward Elric acbase en nuestro mundo y estamos en Munich, Alemania, en el año 1923.Sin sus poderes alquímicos lleva una nueva vida.",
+                "images": {
+                    "thumbnail": [
+                        [
+                            {
+                                "height": 180,
+                                "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/320x180/catalog/crunchyroll/78903fbfcda190550e4507219075c5ce.jpe",
+                                "type": "thumbnail",
+                                "width": 320
+                            },
+                            {
+                                "height": 338,
+                                "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/600x338/catalog/crunchyroll/78903fbfcda190550e4507219075c5ce.jpe",
+                                "type": "thumbnail",
+                                "width": 600
+                            },
+                            {
+                                "height": 360,
+                                "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/640x360/catalog/crunchyroll/78903fbfcda190550e4507219075c5ce.jpe",
+                                "type": "thumbnail",
+                                "width": 640
+                            },
+                            {
+                                "height": 450,
+                                "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/800x450/catalog/crunchyroll/78903fbfcda190550e4507219075c5ce.jpe",
+                                "type": "thumbnail",
+                                "width": 800
+                            },
+                            {
+                                "height": 675,
+                                "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/1200x675/catalog/crunchyroll/78903fbfcda190550e4507219075c5ce.jpe",
+                                "type": "thumbnail",
+                                "width": 1200
+                            },
+                            {
+                                "height": 810,
+                                "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/1440x810/catalog/crunchyroll/78903fbfcda190550e4507219075c5ce.jpe",
+                                "type": "thumbnail",
+                                "width": 1440
+                            },
+                            {
+                                "height": 900,
+                                "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/1600x900/catalog/crunchyroll/78903fbfcda190550e4507219075c5ce.jpe",
+                                "type": "thumbnail",
+                                "width": 1600
+                            },
+                            {
+                                "height": 1080,
+                                "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/1920x1080/catalog/crunchyroll/78903fbfcda190550e4507219075c5ce.jpe",
+                                "type": "thumbnail",
+                                "width": 1920
+                            }
+                        ]
+                    ]
+                },
+                "title": "Fullmetal Alchemist: El conquistador de Shamballa",
+                "type": "movie",
+                "promo_title": "",
+                "slug_title": "fullmetal-alchemist-the-conqueror-of-shamballa",
+                "promo_description": "",
+                "channel_id": "crunchyroll",
+                "slug": ""
+            }
+        },
+        {
+            "id": "GMKUX5137",
+            "date_played": "2023-06-05T04:19:00Z",
+            "parent_id": "GY5P48XEY",
+            "parent_type": "series",
+            "playhead": 52,
+            "fully_watched": false,
+            "panel": {
+                "title": "Crueldad",
+                "channel_id": "crunchyroll",
+                "slug": "",
+                "images": {
+                    "thumbnail": [
+                        [
+                            {
+                                "height": 180,
+                                "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/320x180/catalog/crunchyroll/db617c3bb6a6097394baf707239ff109.jpe",
+                                "type": "thumbnail",
+                                "width": 320
+                            },
+                            {
+                                "height": 338,
+                                "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/600x338/catalog/crunchyroll/db617c3bb6a6097394baf707239ff109.jpe",
+                                "type": "thumbnail",
+                                "width": 600
+                            },
+                            {
+                                "height": 360,
+                                "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/640x360/catalog/crunchyroll/db617c3bb6a6097394baf707239ff109.jpe",
+                                "type": "thumbnail",
+                                "width": 640
+                            },
+                            {
+                                "height": 450,
+                                "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/800x450/catalog/crunchyroll/db617c3bb6a6097394baf707239ff109.jpe",
+                                "type": "thumbnail",
+                                "width": 800
+                            },
+                            {
+                                "height": 675,
+                                "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/1200x675/catalog/crunchyroll/db617c3bb6a6097394baf707239ff109.jpe",
+                                "type": "thumbnail",
+                                "width": 1200
+                            },
+                            {
+                                "height": 810,
+                                "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/1440x810/catalog/crunchyroll/db617c3bb6a6097394baf707239ff109.jpe",
+                                "type": "thumbnail",
+                                "width": 1440
+                            },
+                            {
+                                "height": 900,
+                                "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/1600x900/catalog/crunchyroll/db617c3bb6a6097394baf707239ff109.jpe",
+                                "type": "thumbnail",
+                                "width": 1600
+                            },
+                            {
+                                "height": 1080,
+                                "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/1920x1080/catalog/crunchyroll/db617c3bb6a6097394baf707239ff109.jpe",
+                                "type": "thumbnail",
+                                "width": 1920
+                            }
+                        ]
+                    ]
+                },
+                "episode_metadata": {
+                    "ad_breaks": [
+                        {
+                            "offset_ms": 0,
+                            "type": "preroll"
+                        },
+                        {
+                            "offset_ms": 355015,
+                            "type": "midroll"
+                        },
+                        {
+                            "offset_ms": 710030,
+                            "type": "midroll"
+                        },
+                        {
+                            "offset_ms": 1065045,
+                            "type": "midroll"
+                        }
+                    ],
+                    "audio_locale": "es-419",
+                    "availability_ends": "9998-11-30T08:00:00Z",
+                    "availability_notes": "",
+                    "availability_starts": "2023-01-19T08:00:00Z",
+                    "available_date": null,
+                    "available_offline": true,
+                    "closed_captions_available": false,
+                    "duration_ms": 1420061,
+                    "eligible_region": "CL",
+                    "episode": "1",
+                    "episode_air_date": "2019-04-06T23:30:00+09:00",
+                    "episode_number": 1,
+                    "extended_maturity_rating": {},
+                    "free_available_date": "2023-01-19T08:00:00Z",
+                    "identifier": "GY5P48XEY|S1|E1",
+                    "is_clip": false,
+                    "is_dubbed": true,
+                    "is_mature": false,
+                    "is_premium_only": false,
+                    "is_subbed": true,
+                    "mature_blocked": false,
+                    "maturity_ratings": [
+                        "TV-14"
+                    ],
+                    "premium_available_date": "2021-10-04T21:00:00Z",
+                    "premium_date": null,
+                    "season_id": "GYZXCM75X",
+                    "season_number": 1,
+                    "season_slug_title": "demon-slayer-kimetsu-no-yaiba-spanish-dub",
+                    "season_title": "[LAT] Demon Slayer: Kimetsu no Yaiba",
+                    "sequence_number": 1,
+                    "series_id": "GY5P48XEY",
+                    "series_slug_title": "demon-slayer-kimetsu-no-yaiba",
+                    "series_title": "Demon Slayer: Kimetsu no Yaiba",
+                    "subtitle_locales": [
+                        "es-419"
+                    ],
+                    "upload_date": "2019-04-06T23:30:00+09:00",
+                    "versions": [
+                        {
+                            "audio_locale": "ja-JP",
+                            "guid": "GRG5JD92R",
+                            "is_premium_only": false,
+                            "media_guid": "G8MFNKW40",
+                            "original": true,
+                            "season_guid": "GRW4JP20Y",
+                            "variant": ""
+                        },
+                        {
+                            "audio_locale": "en-US",
+                            "guid": "G9DUEDM08",
+                            "is_premium_only": false,
+                            "media_guid": "G1QF4X17N",
+                            "original": false,
+                            "season_guid": "G68VCPDQ2",
+                            "variant": ""
+                        },
+                        {
+                            "audio_locale": "es-419",
+                            "guid": "GMKUX5137",
+                            "is_premium_only": false,
+                            "media_guid": "GPPFK09X4",
+                            "original": false,
+                            "season_guid": "GYZXCM75X",
+                            "variant": ""
+                        },
+                        {
+                            "audio_locale": "pt-BR",
+                            "guid": "G14U4X75J",
+                            "is_premium_only": false,
+                            "media_guid": "GKKF38EW2",
+                            "original": false,
+                            "season_guid": "GRQ4CZD8P",
+                            "variant": ""
+                        }
+                    ]
+                },
+                "external_id": "EPI.819470",
+                "type": "episode",
+                "promo_title": "",
+                "linked_resource_key": "cms:/episodes/GMKUX5137",
+                "streams_link": "/content/v2/cms/videos/GPPFK09X4/streams",
+                "promo_description": "",
+                "slug_title": "cruelty",
+                "id": "GMKUX5137",
+                "description": "Tanjiro es un joven muy trabajador que se esfuerza mucho por cuidar de su madre y sus hermanos, pero cuando un día nevado baja de la montaña a vender carbón, jamás habría esperado encontrarse lo que se encontró al regresar a casa."
+            }
+        }
+    ],
+    "meta": {
+        "prev_page": "",
+        "next_page": ""
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "total": 1,
+    "data": [
+        {
+            "list_id": "12df0138-17e3-4b23-8849-4490ec816903",
+            "is_public": false,
+            "total": 2,
+            "modified_at": "2023-06-06T02:52:41Z",
+            "title": "Editado"
+        }
+    ],
+    "meta": {
+        "total_public": 0,
+        "total_private": 1,
+        "max_private": 10
+    }
+}
