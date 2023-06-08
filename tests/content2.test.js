@@ -16,7 +16,7 @@ beforeEach(async () => {
     const token = await localStore.getAuthToken()
     const profile = await account.getProfile({ token })
     const accountId = (await localStore.getToken()).accountId
-    basicParam = basicParam = {
+    basicParam = {
         account: {
             token,
             accountId,
@@ -33,7 +33,7 @@ const contentId = contentList[0]
 const musicVideoId = 'MV67B29FAD'
 let listId = null, category = null, episodeId = null, serieId = null, movieListingId = null
 
-xdescribe('Content', () => {
+xdescribe('Content2', () => {
 
     test('createPrivateCustomList okey', async () => {
         const param = { ...basicParam, title: customListTitlle }
@@ -229,6 +229,13 @@ xdescribe('Content', () => {
     test('getMusicVideo okey', async () => {
         const param = { ...basicParam, musicIds: [musicVideoId] }
         return content2.getMusicVideo(param).then(res => {
+            testUtils.resultCheck_v2(res)
+        })
+    })
+
+    test('getContent okey', async () => {
+        const param = { ...basicParam, objectIds: [contentId] }
+        return content2.getObjects(param).then(res => {
             testUtils.resultCheck_v2(res)
         })
     })

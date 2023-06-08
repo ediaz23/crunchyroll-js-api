@@ -1,0 +1,161 @@
+{
+    "total": 1,
+    "data": [
+        {
+            "channel_id": "crunchyroll",
+            "series_metadata": {
+                "audio_locales": [
+                    "ja-JP"
+                ],
+                "availability_notes": "Los subtítulos en español pueden tardar en aparecer tras el lanzamiento del episodio por motivos de producción.",
+                "episode_count": 101,
+                "extended_description": "",
+                "extended_maturity_rating": {},
+                "is_dubbed": false,
+                "is_mature": false,
+                "is_simulcast": false,
+                "is_subbed": true,
+                "mature_blocked": false,
+                "maturity_ratings": [
+                    "TV-14"
+                ],
+                "season_count": 1,
+                "series_launch_year": 2020,
+                "subtitle_locales": [
+                    "it-IT",
+                    "de-DE",
+                    "es-419",
+                    "es-ES",
+                    "en-US",
+                    "ar-SA",
+                    "ru-RU",
+                    "fr-FR",
+                    "pt-BR"
+                ]
+            },
+            "id": "GYXM79M56",
+            "images": {
+                "poster_tall": [
+                    [
+                        {
+                            "height": 90,
+                            "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/60x90/catalog/crunchyroll/cba230badc3a1559995f8f7503af4788.jpe",
+                            "type": "poster_tall",
+                            "width": 60
+                        },
+                        {
+                            "height": 180,
+                            "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/120x180/catalog/crunchyroll/cba230badc3a1559995f8f7503af4788.jpe",
+                            "type": "poster_tall",
+                            "width": 120
+                        },
+                        {
+                            "height": 360,
+                            "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/240x360/catalog/crunchyroll/cba230badc3a1559995f8f7503af4788.jpe",
+                            "type": "poster_tall",
+                            "width": 240
+                        },
+                        {
+                            "height": 720,
+                            "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/480x720/catalog/crunchyroll/cba230badc3a1559995f8f7503af4788.jpe",
+                            "type": "poster_tall",
+                            "width": 480
+                        },
+                        {
+                            "height": 1125,
+                            "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/750x1125/catalog/crunchyroll/cba230badc3a1559995f8f7503af4788.jpe",
+                            "type": "poster_tall",
+                            "width": 750
+                        },
+                        {
+                            "height": 1440,
+                            "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/960x1440/catalog/crunchyroll/cba230badc3a1559995f8f7503af4788.jpe",
+                            "type": "poster_tall",
+                            "width": 960
+                        },
+                        {
+                            "height": 1688,
+                            "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/1125x1688/catalog/crunchyroll/cba230badc3a1559995f8f7503af4788.jpe",
+                            "type": "poster_tall",
+                            "width": 1125
+                        },
+                        {
+                            "height": 1800,
+                            "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/1200x1800/catalog/crunchyroll/cba230badc3a1559995f8f7503af4788.jpe",
+                            "type": "poster_tall",
+                            "width": 1200
+                        },
+                        {
+                            "height": 2340,
+                            "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/1560x2340/catalog/crunchyroll/cba230badc3a1559995f8f7503af4788.jpe",
+                            "type": "poster_tall",
+                            "width": 1560
+                        }
+                    ]
+                ],
+                "poster_wide": [
+                    [
+                        {
+                            "height": 180,
+                            "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/320x180/catalog/crunchyroll/11c6b367ea0fa9fe2cd570c90811f953.jpe",
+                            "type": "poster_wide",
+                            "width": 320
+                        },
+                        {
+                            "height": 338,
+                            "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/600x338/catalog/crunchyroll/11c6b367ea0fa9fe2cd570c90811f953.jpe",
+                            "type": "poster_wide",
+                            "width": 600
+                        },
+                        {
+                            "height": 360,
+                            "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/640x360/catalog/crunchyroll/11c6b367ea0fa9fe2cd570c90811f953.jpe",
+                            "type": "poster_wide",
+                            "width": 640
+                        },
+                        {
+                            "height": 450,
+                            "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/800x450/catalog/crunchyroll/11c6b367ea0fa9fe2cd570c90811f953.jpe",
+                            "type": "poster_wide",
+                            "width": 800
+                        },
+                        {
+                            "height": 675,
+                            "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/1200x675/catalog/crunchyroll/11c6b367ea0fa9fe2cd570c90811f953.jpe",
+                            "type": "poster_wide",
+                            "width": 1200
+                        },
+                        {
+                            "height": 810,
+                            "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/1440x810/catalog/crunchyroll/11c6b367ea0fa9fe2cd570c90811f953.jpe",
+                            "type": "poster_wide",
+                            "width": 1440
+                        },
+                        {
+                            "height": 900,
+                            "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/1600x900/catalog/crunchyroll/11c6b367ea0fa9fe2cd570c90811f953.jpe",
+                            "type": "poster_wide",
+                            "width": 1600
+                        },
+                        {
+                            "height": 1080,
+                            "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/1920x1080/catalog/crunchyroll/11c6b367ea0fa9fe2cd570c90811f953.jpe",
+                            "type": "poster_wide",
+                            "width": 1920
+                        }
+                    ]
+                ]
+            },
+            "promo_description": "",
+            "title": "DRAGON QUEST The Adventure of Dai",
+            "description": "El mundo estuvo una vez a merced de Hadler, el Señor Oscuro, pero recuperó la paz gracias a un espadachín conocido como \"el héroe\" y su grupo de compañeros. Han pasado los años y en la isla Derlín, una isla perdida en el oceáno del sur, acabaron viviendo todos los monstruos que en su día sirvieron al Señor Oscuro.",
+            "external_id": "SRZ.279982",
+            "promo_title": "",
+            "type": "series",
+            "slug_title": "dragon-quest-the-adventure-of-dai",
+            "slug": "",
+            "linked_resource_key": "cms:/series/GYXM79M56"
+        }
+    ],
+    "meta": {}
+}

@@ -589,6 +589,28 @@ async function getHistory({ account, quantity, ratings }) {
 /**
  * @param {Object} obj
  * @param {import('../types').AccountAuth} obj.account
+ * @param {Array<String>} obj.objectIds
+ * @param {Boolean} obj.ratings
+ * @returns {Promise<{total: Number, data: Array<Object>, meta: Object}>}
+ */
+async function getObjects({ account, objectIds, ratings }) {
+    const fnName = 'getObjects'
+    logger.debug(fnName)
+    const queryData = { locale: account.locale }
+    utils.addParam(queryData, 'ratings', ratings)
+    const query = await utils.toURLSearchParams(queryData)
+    const url = `/content/v2/cms/objects/${objectIds.join(',')}?${query}`
+    const reqConfig = {
+        method: 'get',
+        headers: { 'Authorization': account.token }
+    }
+    return utils.makeRequest(fnName, url, reqConfig)
+}
+
+
+/**
+ * @param {Object} obj
+ * @param {import('../types').AccountAuth} obj.account
  * @returns {Promise<{items: Array<{id: String, localization: Object}>}>} 
  */
 async function getSeasonList({ account }) {
@@ -775,6 +797,7 @@ export default {
     getHomeFeed,
     getMusicFeed,
     getMusicVideo,
+    getObjects,
     getPlayheads,
     getSeasonList,
     getSimilar,
