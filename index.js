@@ -12,6 +12,7 @@ import assets from './src/services/assets.js'
 import auth from './src/services/auth.js'
 import cms from './src/services/cms.js'
 import content from './src/services/content.js'
+import content2 from './src/services/content2.js'
 import index from './src/services/index.js'
 import review from './src/services/review.js'
 import subscription from './src/services/subscription.js'
@@ -23,6 +24,7 @@ export const api = {
     auth,
     cms,
     content,
+    content2,
     index,
     review,
     subscription,
