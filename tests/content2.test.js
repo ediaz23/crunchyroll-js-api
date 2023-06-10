@@ -6,8 +6,6 @@ import testUtils from './testUtils.js'
 import content2 from '../src/services/content2.js'
 import account from '../src/services/account.js'
 
-import fs from 'fs'
-
 
 /** @type {{account: import('../types').AccountAuth}} */
 let basicParam = null
@@ -310,6 +308,13 @@ xdescribe('Content2', () => {
             testUtils.resultCheck_v2(res)
             testUtils.itesmCheck(res.data[0])
             movieListingId = res.data[0].items[0].id
+        })
+    })
+
+    test('getRecommendations okey', async () => {
+        const param = { ...basicParam }
+        return content2.getRecommendations(param).then(res => {
+            testUtils.resultCheck_v2(res)
         })
     })
 

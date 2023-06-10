@@ -465,11 +465,6 @@ async function getSubcategories({ account, parentCategory }) {
     return utils.makeRequest(fnName, url, reqConfig)
 }
 
-// getCollection
-// getContinueWatching
-// getCuratedFeed
-
-
 /**
  * @param {Object} obj
  * @param {import('../types').AccountAuth} obj.account
@@ -690,6 +685,29 @@ async function getObjects({ account, objectIds, ratings }) {
 /**
  * @param {Object} obj
  * @param {import('../types').AccountAuth} obj.account
+ * @param {Number} [obj.quantity] Number of records in a result
+ * @param {Number} [obj.start] Offset to request
+ * @returns {Promise<{total: Number, data: Array<Object>, meta: Object}>}
+ */
+async function getRecommendations({ account, quantity, start }) {
+    const fnName = 'getRecommendations'
+    logger.debug(fnName)
+    const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
+    utils.addParam(queryData, 'n', quantity, val => val > 0)
+    utils.addParam(queryData, 'start', start, val => val >= 0)
+    const queryStr = await utils.toURLSearchParams(queryData)
+    const url = `/content/v2/discover/${account.accountId}/recommendations?${queryStr}`
+    const reqConfig = {
+        method: 'get',
+        headers: { 'Authorization': account.token }
+    }
+    return utils.makeRequest(fnName, url, reqConfig)
+}
+
+
+/**
+ * @param {Object} obj
+ * @param {import('../types').AccountAuth} obj.account
  * @returns {Promise<{items: Array<{id: String, localization: Object}>}>} 
  */
 async function getSeasonList({ account }) {
@@ -724,10 +742,7 @@ async function getSimilar({ account, contentId, quantity, start }) {
     const url = `/content/v2/discover/${account.accountId}/similar_to/${contentId}?${queryStr}`
     const reqConfig = {
         method: 'get',
-        headers: {
-            'Authorization': account.token,
-            'add_watchlist_status': true,
-        }
+        headers: { 'Authorization': account.token }
     }
     return utils.makeRequest(fnName, url, reqConfig)
 }
@@ -747,10 +762,7 @@ async function getUpNext({ account, contentId }) {
     const url = `/content/v2/discover/up_next/${contentId}?${query}`
     const reqConfig = {
         method: 'get',
-        headers: {
-            'Authorization': account.token,
-            'upload_offline_playheads': true
-        }
+        headers: { 'Authorization': account.token }
     }
     return utils.makeRequest(fnName, url, reqConfig)
 }
@@ -882,6 +894,7 @@ export default {
     getMusicVideo,
     getObjects,
     getPlayheads,
+    getRecommendations,
     getSeasonList,
     getSimilar,
     getSubcategories,
