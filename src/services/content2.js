@@ -519,6 +519,26 @@ async function getMusicFeed({ account, quantity, start }) {
 /**
  * @param {Object} obj
  * @param {import('../types').AccountAuth} obj.account
+ * @param {Array<String>} [obj.artistIds]
+ * @returns {Promise<{items: Array<Object>}>}
+ */
+async function getMusicArtist({ account, artistIds }) {
+    const fnName = 'getMusicArtist'
+    logger.debug(fnName)
+    const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
+    const query = await utils.toURLSearchParams(queryData)
+    const url = `/content/v2/music/artists/${artistIds.join(',')}?${query}`
+    const reqConfig = {
+        method: 'get',
+        headers: { 'Authorization': account.token }
+    }
+    return utils.makeRequest(fnName, url, reqConfig)
+}
+
+
+/**
+ * @param {Object} obj
+ * @param {import('../types').AccountAuth} obj.account
  * @param {Array<String>} [obj.musicIds]
  * @returns {Promise<{items: Array<Object>}>}
  */
@@ -534,7 +554,6 @@ async function getMusicVideo({ account, musicIds }) {
     }
     return utils.makeRequest(fnName, url, reqConfig)
 }
-
 
 
 /**
@@ -796,6 +815,7 @@ export default {
     getHistory,
     getHomeFeed,
     getMusicFeed,
+    getMusicArtist,
     getMusicVideo,
     getObjects,
     getPlayheads,

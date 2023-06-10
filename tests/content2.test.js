@@ -31,6 +31,7 @@ const customListTitlle = 'PruebaV2'
 const contentList = ['GYXM79M56', 'G6NQ5DWZ6', 'GR751KNZY']
 const contentId = contentList[0]
 const musicVideoId = 'MV67B29FAD'
+const musicArtistId = 'MA2B631720'
 let listId = null, category = null, episodeId = null, serieId = null, movieListingId = null
 
 xdescribe('Content2', () => {
@@ -153,7 +154,6 @@ xdescribe('Content2', () => {
         })
     })
 
-
     test('updateWatchlistItemFavoriteStatus true okey', async () => {
         const param = { ...basicParam, contentId, isFavorite: true }
         return content2.updateWatchlistItemFavoriteStatus(param)
@@ -222,6 +222,13 @@ xdescribe('Content2', () => {
     test('getMusicFeed okey', async () => {
         const param = { ...basicParam }
         return content2.getMusicFeed(param).then(res => {
+            testUtils.resultCheck_v2(res)
+        })
+    })
+
+    test('getMusicArtist okey', async () => {
+        const param = { ...basicParam, artistIds: [musicArtistId] }
+        return content2.getMusicArtist(param).then(res => {
             testUtils.resultCheck_v2(res)
         })
     })
