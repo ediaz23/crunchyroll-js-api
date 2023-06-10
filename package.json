@@ -3,7 +3,7 @@
     "license": "Apache-2.0",
     "description": "JavaScript API consumer for crunchyroll",
     "homepage": "https://github.com/ediaz23/crunchyroll_js_api",
-    "version": "1.2.0",
+    "version": "1.2.1",
     "main": "index.js",
     "scripts": {
         "play": "node --experimental-specifier-resolution=node main.js",

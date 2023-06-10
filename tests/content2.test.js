@@ -6,6 +6,8 @@ import testUtils from './testUtils.js'
 import content2 from '../src/services/content2.js'
 import account from '../src/services/account.js'
 
+import fs from 'fs'
+
 
 /** @type {{account: import('../types').AccountAuth}} */
 let basicParam = null
@@ -31,7 +33,8 @@ const customListTitlle = 'PruebaV2'
 const contentList = ['GYXM79M56', 'G6NQ5DWZ6', 'GR751KNZY']
 const contentId = contentList[0]
 const musicVideoId = 'MV67B29FAD'
-const musicArtistId = 'MA2B631720'
+const artistId = 'MA6480DAB5'
+const concertId = 'MC547A7654'
 let listId = null, category = null, episodeId = null, serieId = null, movieListingId = null
 
 xdescribe('Content2', () => {
@@ -227,8 +230,30 @@ xdescribe('Content2', () => {
     })
 
     test('getMusicArtist okey', async () => {
-        const param = { ...basicParam, artistIds: [musicArtistId] }
+        const param = { ...basicParam, artistIds: [artistId] }
         return content2.getMusicArtist(param).then(res => {
+            testUtils.resultCheck_v2(res)
+        })
+    })
+
+    test('getMusicArtistConcerts okey', async () => {
+        const param = { ...basicParam, artistId }
+        return content2.getMusicArtistConcerts(param).then(res => {
+            testUtils.resultCheck_v2(res)
+        })
+    })
+
+    test('getMusicArtistVideos okey', async () => {
+        const param = { ...basicParam, artistId }
+        return content2.getMusicArtistVideos(param).then(res => {
+            testUtils.resultCheck_v2(res)
+
+        })
+    })
+
+    test('getMusicConcerts okey', async () => {
+        const param = { ...basicParam, concertIds: [concertId] }
+        return content2.getMusicConcerts(param).then(res => {
             testUtils.resultCheck_v2(res)
         })
     })

@@ -539,6 +539,66 @@ async function getMusicArtist({ account, artistIds }) {
 /**
  * @param {Object} obj
  * @param {import('../types').AccountAuth} obj.account
+ * @param {Array<String>} [obj.artistIds]
+ * @returns {Promise<{items: Array<Object>}>}
+ */
+async function getMusicArtistConcerts({ account, artistId }) {
+    const fnName = 'getMusicArtistConcerts'
+    logger.debug(fnName)
+    const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
+    const query = await utils.toURLSearchParams(queryData)
+    const url = `/content/v2/music/artists/${artistId}/concerts?${query}`
+    const reqConfig = {
+        method: 'get',
+        headers: { 'Authorization': account.token }
+    }
+    return utils.makeRequest(fnName, url, reqConfig)
+}
+
+
+/**
+ * @param {Object} obj
+ * @param {import('../types').AccountAuth} obj.account
+ * @param {String} obj.artistId
+ * @returns {Promise<{items: Array<Object>}>}
+ */
+async function getMusicArtistVideos({ account, artistId }) {
+    const fnName = 'getMusicArtistVideos'
+    logger.debug(fnName)
+    const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
+    const query = await utils.toURLSearchParams(queryData)
+    const url = `/content/v2/music/artists/${artistId}/music_videos?${query}`
+    const reqConfig = {
+        method: 'get',
+        headers: { 'Authorization': account.token }
+    }
+    return utils.makeRequest(fnName, url, reqConfig)
+}
+
+
+/**
+ * @param {Object} obj
+ * @param {import('../types').AccountAuth} obj.account
+ * @param {Array<String>} [obj.concertIds]
+ * @returns {Promise<{items: Array<Object>}>}
+ */
+async function getMusicConcerts({ account, concertIds }) {
+    const fnName = 'getMusicConcerts'
+    logger.debug(fnName)
+    const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
+    const query = await utils.toURLSearchParams(queryData)
+    const url = `/content/v2/music/concerts/${concertIds.join(',')}?${query}`
+    const reqConfig = {
+        method: 'get',
+        headers: { 'Authorization': account.token }
+    }
+    return utils.makeRequest(fnName, url, reqConfig)
+}
+
+
+/**
+ * @param {Object} obj
+ * @param {import('../types').AccountAuth} obj.account
  * @param {Array<String>} [obj.musicIds]
  * @returns {Promise<{items: Array<Object>}>}
  */
@@ -816,6 +876,9 @@ export default {
     getHomeFeed,
     getMusicFeed,
     getMusicArtist,
+    getMusicArtistConcerts,
+    getMusicArtistVideos,
+    getMusicConcerts,
     getMusicVideo,
     getObjects,
     getPlayheads,

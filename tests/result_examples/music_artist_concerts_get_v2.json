@@ -1,0 +1,366 @@
+{
+    "total": 4,
+    "data": [
+        {
+            "title": "SHOKO NAKAGAWA First Concert -Donyoku Matsuri-",
+            "createdAt": "2023-02-28T12:46:44.82Z",
+            "images": {
+                "thumbnail": [
+                    {
+                        "height": 180,
+                        "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/320x180/catalog/music/2dea35dc1ac19e648cdccda1b5df7873.JPEG",
+                        "type": "thumbnail",
+                        "width": 320
+                    },
+                    {
+                        "height": 338,
+                        "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/600x338/catalog/music/2dea35dc1ac19e648cdccda1b5df7873.JPEG",
+                        "type": "thumbnail",
+                        "width": 600
+                    },
+                    {
+                        "height": 360,
+                        "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/640x360/catalog/music/2dea35dc1ac19e648cdccda1b5df7873.JPEG",
+                        "type": "thumbnail",
+                        "width": 640
+                    },
+                    {
+                        "height": 450,
+                        "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/800x450/catalog/music/2dea35dc1ac19e648cdccda1b5df7873.JPEG",
+                        "type": "thumbnail",
+                        "width": 800
+                    },
+                    {
+                        "height": 675,
+                        "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/1200x675/catalog/music/2dea35dc1ac19e648cdccda1b5df7873.JPEG",
+                        "type": "thumbnail",
+                        "width": 1200
+                    },
+                    {
+                        "height": 810,
+                        "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/1440x810/catalog/music/2dea35dc1ac19e648cdccda1b5df7873.JPEG",
+                        "type": "thumbnail",
+                        "width": 1440
+                    },
+                    {
+                        "height": 900,
+                        "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/1600x900/catalog/music/2dea35dc1ac19e648cdccda1b5df7873.JPEG",
+                        "type": "thumbnail",
+                        "width": 1600
+                    },
+                    {
+                        "height": 1080,
+                        "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/1920x1080/catalog/music/2dea35dc1ac19e648cdccda1b5df7873.JPEG",
+                        "type": "thumbnail",
+                        "width": 1920
+                    }
+                ]
+            },
+            "isPremiumOnly": true,
+            "isPublic": true,
+            "licensor": "BMG",
+            "matureBlocked": false,
+            "originalRelease": "2008-01-01T00:00:00Z",
+            "updatedAt": "2023-05-31T07:11:22.763Z",
+            "streams_link": "/content/v2/music/MC51D55EA6/streams",
+            "description": "La popular idol Shoko Nakagawa, también conocida como Shokotan, dará su primer concierto en el Shibuya C.C.Lemon Hall en Tokio en octubre.",
+            "hash": "a945f9bebd134c9c4f94ac98413adfa8",
+            "id": "MC51D55EA6",
+            "sequenceNumber": 0,
+            "availability": {
+                "endDate": "2099-05-14T00:00:00Z",
+                "startDate": "2023-05-31T13:00:00Z"
+            },
+            "genres": [
+                {
+                    "displayValue": "J-Pop",
+                    "id": "j-pop"
+                }
+            ],
+            "publishDate": "2023-05-31T13:00:00Z",
+            "type": "musicConcert",
+            "artist": {
+                "id": "MA6480DAB5",
+                "name": "Shoko Nakagawa",
+                "slug": "shoko-nakagawa"
+            },
+            "copyright": "© 2008 Sony Music Labels Inc.",
+            "durationMs": 5205000,
+            "isMature": false,
+            "maturityRatings": {},
+            "readyToPublish": true,
+            "slug": "shoko-nakagawa-first-concert-donyoku-matsuri-"
+        },
+        {
+            "readyToPublish": true,
+            "slug": "shoko-nakagawa-chou-donyoku-matsuri-in-nippon-budokan",
+            "updatedAt": "2023-05-31T07:11:22.911Z",
+            "id": "MC547A7654",
+            "isMature": false,
+            "licensor": "BMG",
+            "maturityRatings": {},
+            "isPublic": true,
+            "originalRelease": "2010-02-10T00:00:00Z",
+            "title": "SHOKO NAKAGAWA Chou Donyoku Matsuri In Nippon Budokan",
+            "streams_link": "/content/v2/music/MC547A7654/streams",
+            "artist": {
+                "id": "MA6480DAB5",
+                "name": "Shoko Nakagawa",
+                "slug": "shoko-nakagawa"
+            },
+            "genres": [
+                {
+                    "displayValue": "J-Pop",
+                    "id": "j-pop"
+                }
+            ],
+            "images": {
+                "thumbnail": [
+                    {
+                        "height": 180,
+                        "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/320x180/catalog/music/7e9983d85ae09d9fa6e9c2c6ac1fa6bc.JPEG",
+                        "type": "thumbnail",
+                        "width": 320
+                    },
+                    {
+                        "height": 338,
+                        "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/600x338/catalog/music/7e9983d85ae09d9fa6e9c2c6ac1fa6bc.JPEG",
+                        "type": "thumbnail",
+                        "width": 600
+                    },
+                    {
+                        "height": 360,
+                        "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/640x360/catalog/music/7e9983d85ae09d9fa6e9c2c6ac1fa6bc.JPEG",
+                        "type": "thumbnail",
+                        "width": 640
+                    },
+                    {
+                        "height": 450,
+                        "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/800x450/catalog/music/7e9983d85ae09d9fa6e9c2c6ac1fa6bc.JPEG",
+                        "type": "thumbnail",
+                        "width": 800
+                    },
+                    {
+                        "height": 675,
+                        "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/1200x675/catalog/music/7e9983d85ae09d9fa6e9c2c6ac1fa6bc.JPEG",
+                        "type": "thumbnail",
+                        "width": 1200
+                    },
+                    {
+                        "height": 810,
+                        "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/1440x810/catalog/music/7e9983d85ae09d9fa6e9c2c6ac1fa6bc.JPEG",
+                        "type": "thumbnail",
+                        "width": 1440
+                    },
+                    {
+                        "height": 900,
+                        "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/1600x900/catalog/music/7e9983d85ae09d9fa6e9c2c6ac1fa6bc.JPEG",
+                        "type": "thumbnail",
+                        "width": 1600
+                    },
+                    {
+                        "height": 1080,
+                        "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/1920x1080/catalog/music/7e9983d85ae09d9fa6e9c2c6ac1fa6bc.JPEG",
+                        "type": "thumbnail",
+                        "width": 1920
+                    }
+                ]
+            },
+            "isPremiumOnly": true,
+            "description": "Un video completo del legendario concierto de Shoko Nakagawa, su primera actuación en el Nippon Budokan, que tuvo lugar el 24 de octubre de 2009.",
+            "hash": "bf0996c61c037a5bed58ae513bd15dfe",
+            "matureBlocked": false,
+            "publishDate": "2023-05-31T13:00:00Z",
+            "sequenceNumber": 0,
+            "availability": {
+                "endDate": "2099-05-14T00:00:00Z",
+                "startDate": "2023-05-31T13:00:00Z"
+            },
+            "copyright": "© 2010 Sony Music Labels Inc.",
+            "createdAt": "2023-02-28T12:46:44.82Z",
+            "durationMs": 6450000,
+            "type": "musicConcert"
+        },
+        {
+            "licensor": "BMG",
+            "matureBlocked": false,
+            "type": "musicConcert",
+            "copyright": "© 2012 Sony Music Labels Inc.",
+            "description": "Shoko Nakagawa ha alcanzado su décimo aniversario desde su debut. ¡Su primera gira por Asia, junto con los conciertos en Japón, ahora está disponible como video!",
+            "genres": [
+                {
+                    "displayValue": "J-Pop",
+                    "id": "j-pop"
+                }
+            ],
+            "hash": "69ebb99ca332d857e7f9bf5f51735de8",
+            "publishDate": "2023-05-31T13:00:00Z",
+            "sequenceNumber": 0,
+            "slug": "shoko-nakagawa-uchi-live-soto-live-",
+            "title": "SHOKO NAKAGAWA -UCHI-LIVE, SOTO-LIVE!!-",
+            "availability": {
+                "endDate": "2099-05-14T00:00:00Z",
+                "startDate": "2023-05-31T13:00:00Z"
+            },
+            "durationMs": 8848000,
+            "isPublic": true,
+            "maturityRatings": {},
+            "updatedAt": "2023-05-31T07:11:23.156Z",
+            "isMature": false,
+            "isPremiumOnly": true,
+            "artist": {
+                "id": "MA6480DAB5",
+                "name": "Shoko Nakagawa",
+                "slug": "shoko-nakagawa"
+            },
+            "createdAt": "2023-02-28T12:46:44.82Z",
+            "id": "MC954E7E2A",
+            "images": {
+                "thumbnail": [
+                    {
+                        "height": 180,
+                        "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/320x180/catalog/music/493cbe7ca86d3144aff0dbb84d6c2f5e.JPEG",
+                        "type": "thumbnail",
+                        "width": 320
+                    },
+                    {
+                        "height": 338,
+                        "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/600x338/catalog/music/493cbe7ca86d3144aff0dbb84d6c2f5e.JPEG",
+                        "type": "thumbnail",
+                        "width": 600
+                    },
+                    {
+                        "height": 360,
+                        "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/640x360/catalog/music/493cbe7ca86d3144aff0dbb84d6c2f5e.JPEG",
+                        "type": "thumbnail",
+                        "width": 640
+                    },
+                    {
+                        "height": 450,
+                        "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/800x450/catalog/music/493cbe7ca86d3144aff0dbb84d6c2f5e.JPEG",
+                        "type": "thumbnail",
+                        "width": 800
+                    },
+                    {
+                        "height": 675,
+                        "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/1200x675/catalog/music/493cbe7ca86d3144aff0dbb84d6c2f5e.JPEG",
+                        "type": "thumbnail",
+                        "width": 1200
+                    },
+                    {
+                        "height": 810,
+                        "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/1440x810/catalog/music/493cbe7ca86d3144aff0dbb84d6c2f5e.JPEG",
+                        "type": "thumbnail",
+                        "width": 1440
+                    },
+                    {
+                        "height": 900,
+                        "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/1600x900/catalog/music/493cbe7ca86d3144aff0dbb84d6c2f5e.JPEG",
+                        "type": "thumbnail",
+                        "width": 1600
+                    },
+                    {
+                        "height": 1080,
+                        "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/1920x1080/catalog/music/493cbe7ca86d3144aff0dbb84d6c2f5e.JPEG",
+                        "type": "thumbnail",
+                        "width": 1920
+                    }
+                ]
+            },
+            "originalRelease": "2012-12-26T00:00:00Z",
+            "readyToPublish": true,
+            "streams_link": "/content/v2/music/MC954E7E2A/streams"
+        },
+        {
+            "createdAt": "2023-02-28T12:46:44.82Z",
+            "maturityRatings": {},
+            "originalRelease": "2011-03-16T00:00:00Z",
+            "sequenceNumber": 0,
+            "title": "SHOKO NAKAGAWA CHOU DONYOKU MATSURI IN MAKUHARI MESSE -BLUE STAR & PINK STAR",
+            "type": "musicConcert",
+            "updatedAt": "2023-05-31T07:11:23.035Z",
+            "artist": {
+                "id": "MA6480DAB5",
+                "name": "Shoko Nakagawa",
+                "slug": "shoko-nakagawa"
+            },
+            "hash": "69ed9645145a2de8bb01e2e375f97cc1",
+            "id": "MC67B66140",
+            "slug": "shoko-nakagawa-chou-donyoku-matsuri-in-makuhari-messe-blue-star--pink-star",
+            "genres": [
+                {
+                    "displayValue": "J-Pop",
+                    "id": "j-pop"
+                }
+            ],
+            "copyright": "© 2011 Sony Music Labels Inc.",
+            "durationMs": 15191000,
+            "images": {
+                "thumbnail": [
+                    {
+                        "height": 180,
+                        "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/320x180/catalog/music/53b09f03b779decb45967c01e6855622.JPEG",
+                        "type": "thumbnail",
+                        "width": 320
+                    },
+                    {
+                        "height": 338,
+                        "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/600x338/catalog/music/53b09f03b779decb45967c01e6855622.JPEG",
+                        "type": "thumbnail",
+                        "width": 600
+                    },
+                    {
+                        "height": 360,
+                        "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/640x360/catalog/music/53b09f03b779decb45967c01e6855622.JPEG",
+                        "type": "thumbnail",
+                        "width": 640
+                    },
+                    {
+                        "height": 450,
+                        "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/800x450/catalog/music/53b09f03b779decb45967c01e6855622.JPEG",
+                        "type": "thumbnail",
+                        "width": 800
+                    },
+                    {
+                        "height": 675,
+                        "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/1200x675/catalog/music/53b09f03b779decb45967c01e6855622.JPEG",
+                        "type": "thumbnail",
+                        "width": 1200
+                    },
+                    {
+                        "height": 810,
+                        "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/1440x810/catalog/music/53b09f03b779decb45967c01e6855622.JPEG",
+                        "type": "thumbnail",
+                        "width": 1440
+                    },
+                    {
+                        "height": 900,
+                        "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/1600x900/catalog/music/53b09f03b779decb45967c01e6855622.JPEG",
+                        "type": "thumbnail",
+                        "width": 1600
+                    },
+                    {
+                        "height": 1080,
+                        "source": "https://www.crunchyroll.com/imgsrv/display/thumbnail/1920x1080/catalog/music/53b09f03b779decb45967c01e6855622.JPEG",
+                        "type": "thumbnail",
+                        "width": 1920
+                    }
+                ]
+            },
+            "isPremiumOnly": true,
+            "isPublic": true,
+            "licensor": "BMG",
+            "publishDate": "2023-05-31T13:00:00Z",
+            "availability": {
+                "endDate": "2099-05-14T00:00:00Z",
+                "startDate": "2023-05-31T13:00:00Z"
+            },
+            "isMature": false,
+            "matureBlocked": false,
+            "readyToPublish": true,
+            "streams_link": "/content/v2/music/MC67B66140/streams",
+            "description": "Un producto visual completo del primer concierto de dos días de Shoko Nakagawa en el Makuhari Messe los días 13 y 14 de noviembre de 2010, para conmemorar el quinto aniversario de su debut en CD."
+        }
+    ],
+    "meta": {}
+}
