@@ -349,8 +349,8 @@ async function deleteWatchlistItem({ account, contentId }) {
  * @param {Boolean} [obj.ratings]
  * @returns {Promise<{total: Number, data: Array<Object>, meta: Object}>}
  */
-async function _getBrowseAll({ account, quantity, start, category, query, seasonTag, sort, type, ratings }) {
-    const fnName = '_getBrowseAll'
+async function getBrowseAll({ account, quantity, start, category, query, seasonTag, sort, type, ratings }) {
+    const fnName = 'getBrowseAll'
     logger.debug(fnName)
     const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
     utils.addParam(queryData, 'n', quantity, val => val > 0)
@@ -374,21 +374,6 @@ async function _getBrowseAll({ account, quantity, start, category, query, season
         }
     }
     return utils.makeRequest(fnName, url, reqConfig)
-}
-
-
-/**
- * @param {Object} obj
- * @param {import('../types').AccountAuth} obj.account
- * @param {Number} [obj.quantity] Number of records in a result
- * @param {Number} [obj.start] Offset to request
- * @param {Array<String>} [obj.category] Category
- * @param {String} [obj.query] Search pattern
- * @param {String} [obj.seasonTag]
- * @returns {Promise<{total: Number, data: Array<Object>, meta: Object}>}
- */
-async function getBrowseAll({ account, quantity, start, category, query, seasonTag }) {
-    return _getBrowseAll({ account, quantity, start, category, query, seasonTag })
 }
 
 
