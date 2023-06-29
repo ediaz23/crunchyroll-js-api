@@ -242,14 +242,16 @@ async function addWatchlistItem({ account, contentId }) {
  * @param {import('../types').AccountAuth} obj.account
  * @param {Number} obj.quantity Number of records in a result
  * @param {Number} obj.start Offset to request
+ * @param {Boolean} [obj.ratings]
  * @returns {Promise<Object>} 
  */
-async function getWatchlist({ account, quantity, start }) {
+async function getWatchlist({ account, quantity, start, ratings }) {
     const fnName = 'getWatchlist'
     logger.debug(fnName)
     const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
     utils.addParam(queryData, 'n', quantity, val => val > 0)
     utils.addParam(queryData, 'start', start, val => val >= 0)
+    utils.addParam(queryData, 'ratings', ratings)
     const query = await utils.toURLSearchParams(queryData)
     const url = `/content/v2/discover/${account.accountId}/watchlist?${query}`
     const reqConfig = {
@@ -672,14 +674,16 @@ async function getObjects({ account, objectIds, ratings }) {
  * @param {import('../types').AccountAuth} obj.account
  * @param {Number} [obj.quantity] Number of records in a result
  * @param {Number} [obj.start] Offset to request
+ * @param {Boolean} [obj.ratings]
  * @returns {Promise<{total: Number, data: Array<Object>, meta: Object}>}
  */
-async function getRecommendations({ account, quantity, start }) {
+async function getRecommendations({ account, quantity, start, ratings }) {
     const fnName = 'getRecommendations'
     logger.debug(fnName)
     const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
     utils.addParam(queryData, 'n', quantity, val => val > 0)
     utils.addParam(queryData, 'start', start, val => val >= 0)
+    utils.addParam(queryData, 'ratings', ratings)
     const queryStr = await utils.toURLSearchParams(queryData)
     const url = `/content/v2/discover/${account.accountId}/recommendations?${queryStr}`
     const reqConfig = {
@@ -715,14 +719,16 @@ async function getSeasonList({ account }) {
  * @param {Number} obj.contentId Offset to request
  * @param {Number} [obj.quantity] Number of records in a result
  * @param {Number} [obj.start] Offset to request
+ * @param {Boolean} [obj.ratings]
  * @returns {Promise<{total: Number, data: Array<Object>, meta: Object}>}
  */
-async function getSimilar({ account, contentId, quantity, start }) {
+async function getSimilar({ account, contentId, quantity, start, ratings }) {
     const fnName = 'getSimilar'
     logger.debug(fnName)
     const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
     utils.addParam(queryData, 'n', quantity, val => val > 0)
     utils.addParam(queryData, 'start', start, val => val >= 0)
+    utils.addParam(queryData, 'ratings', ratings)
     const queryStr = await utils.toURLSearchParams(queryData)
     const url = `/content/v2/discover/${account.accountId}/similar_to/${contentId}?${queryStr}`
     const reqConfig = {
