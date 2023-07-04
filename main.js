@@ -2,7 +2,7 @@
 import logger from './src/logger.js'
 import localStore from './src/localStore.js'
 import account from './src/services/account.js'
-import content2 from './src/services/content2.js'
+import content from './src/services/contentjs'
 import fs from 'fs'
 
 const getContentParam = async (profile) => {
@@ -18,19 +18,19 @@ const getContentParam = async (profile) => {
 
 const createObjects = async (profile, objectIds) => {
     const account = await getContentParam(profile)
-    const data = await content2.getObjects({ account, objectIds })
+    const data = await content.getObjects({ account, objectIds })
     fs.writeFileSync(`objects-${objectIds.sort().join('-').substring(0, 200)}.json`, JSON.stringify(data, null, '    '))
 }
 
 const createArtist = async (profile, artistIds) => {
     const account = await getContentParam(profile)
-    const data = await content2.getMusicArtist({ account, artistIds })
+    const data = await content.getMusicArtist({ account, artistIds })
     fs.writeFileSync(`artist-${artistIds.sort().join('-').substring(0, 200)}.json`, JSON.stringify(data, null, '    '))
 }
 
 const createMusic = async (profile, concertIds) => {
     const account = await getContentParam(profile)
-    const data = await content2.getMusicConcerts({ account, concertIds })
+    const data = await content.getMusicConcerts({ account, concertIds })
     fs.writeFileSync(`concerts-${concertIds.sort().join('-').substring(0, 200)}.json`, JSON.stringify(data, null, '    '))
 }
 

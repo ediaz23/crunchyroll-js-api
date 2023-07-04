@@ -3,7 +3,7 @@ import { expect } from '@jest/globals'
 
 import localStore from '../src/localStore.js'
 import testUtils from './testUtils.js'
-import content2 from '../src/services/content2.js'
+import content from '../src/services/content.js'
 import account from '../src/services/account.js'
 
 
@@ -35,11 +35,11 @@ const artistId = 'MA6480DAB5'
 const concertId = 'MC547A7654'
 let listId = null, category = null, episodeId = null, serieId = null, movieListingId = null
 
-xdescribe('Content2', () => {
+describe('Content', () => {
 
     test('createPrivateCustomList okey', async () => {
         const param = { ...basicParam, title: customListTitlle }
-        return content2.createPrivateCustomList(param).then(res => {
+        return content.createPrivateCustomList(param).then(res => {
             testUtils.existValue(res)
             expect(res).toHaveProperty('data')
             testUtils.existValue(res.data)
@@ -60,7 +60,7 @@ xdescribe('Content2', () => {
     test('addItemToCustomList okey', async () => {
         const param = { ...basicParam, listId }
         for await (const item of contentList) {
-            await content2.addItemToCustomList({ ...param, contentId: item })
+            await content.addItemToCustomList({ ...param, contentId: item })
         }
     })
 
@@ -69,7 +69,7 @@ xdescribe('Content2', () => {
             ...basicParam, listId, contentId: contentList[2],
             location: 'malo', refContentId: contentList[1]
         }
-        await expect(content2.changeCustomListItemPosition(param)).rejects.toThrow()
+        await expect(content.changeCustomListItemPosition(param)).rejects.toThrow()
     })
 
     test('changeCustomListItemPosition okey', async () => {
@@ -77,42 +77,42 @@ xdescribe('Content2', () => {
             ...basicParam, listId, contentId: contentList[2],
             location: 'before', refContentId: contentList[0]
         }
-        await expect(content2.changeCustomListItemPosition(param)).resolves.toBeNull()
+        await expect(content.changeCustomListItemPosition(param)).resolves.toBeNull()
     })
 
     test('getCustomListItems okey', async () => {
         const param = { ...basicParam, listId }
-        return content2.getCustomListItems(param).then(res => {
+        return content.getCustomListItems(param).then(res => {
             testUtils.itesmCheck_v2(res)
         })
     })
 
     test('getCustomListItems size 1 okey', async () => {
         const param = { ...basicParam, listId, pageSize: 1 }
-        return content2.getCustomListItems(param).then(res => {
+        return content.getCustomListItems(param).then(res => {
             testUtils.itesmCheck_v2(res)
         })
     })
 
     test('getCustomListItems order desc okey', async () => {
         const param = { ...basicParam, listId, order: 'desc' }
-        return content2.getCustomListItems(param).then(res => {
+        return content.getCustomListItems(param).then(res => {
             testUtils.itesmCheck_v2(res)
         })
     })
 
     test('deleteCustomListItem okey', async () => {
         const param = { ...basicParam, listId, contentId }
-        return content2.deleteCustomListItem(param)
+        return content.deleteCustomListItem(param)
     })
 
     test('updateCustomList okey', async () => {
         const param = { ...basicParam, listId, title: 'EditadoV2' }
-        return content2.updateCustomList(param)
+        return content.updateCustomList(param)
     })
 
     test('getCustomLists okey', async () => {
-        return content2.getCustomLists(basicParam).then(res => {
+        return content.getCustomLists(basicParam).then(res => {
             testUtils.resultCheck_v2(res)
             const { meta } = res
             expect(meta).toHaveProperty('total_public')
@@ -123,11 +123,11 @@ xdescribe('Content2', () => {
 
     test('deletePrivateCustomList okey', async () => {
         const param = { ...basicParam, listId }
-        return content2.deletePrivateCustomList(param)
+        return content.deletePrivateCustomList(param)
     })
 
     test('getHistory okey', async () => {
-        return content2.getHistory(basicParam).then(res => {
+        return content.getHistory(basicParam).then(res => {
             testUtils.resultCheck_v2(res)
             testUtils.checkPlayhead_v2(res.data[0])
         })
@@ -135,44 +135,44 @@ xdescribe('Content2', () => {
 
     test('addWatchlistItem okey', async () => {
         const param = { ...basicParam, contentId }
-        return content2.addWatchlistItem(param)
+        return content.addWatchlistItem(param)
     })
 
     test('addWatchlistItem wrong', async () => {
         const param = { ...basicParam, contentId }
-        await expect(content2.addWatchlistItem(param)).rejects.toThrow()
+        await expect(content.addWatchlistItem(param)).rejects.toThrow()
     })
 
     test('getWatchlist okey', async () => {
-        return content2.getWatchlist(basicParam).then(res => {
+        return content.getWatchlist(basicParam).then(res => {
             testUtils.resultCheck_v2(res)
         })
     })
 
     test('getWatchlistItems okey', async () => {
-        return content2.getWatchlistItems(basicParam).then(res => {
+        return content.getWatchlistItems(basicParam).then(res => {
             testUtils.resultCheck_v2(res)
         })
     })
 
     test('updateWatchlistItemFavoriteStatus true okey', async () => {
         const param = { ...basicParam, contentId, isFavorite: true }
-        return content2.updateWatchlistItemFavoriteStatus(param)
+        return content.updateWatchlistItemFavoriteStatus(param)
     })
 
     test('updateWatchlistItemFavoriteStatus false okey', async () => {
         const param = { ...basicParam, contentId, isFavorite: false }
-        return content2.updateWatchlistItemFavoriteStatus(param)
+        return content.updateWatchlistItemFavoriteStatus(param)
     })
 
     test('deleteWatchlistItem okey', async () => {
         const param = { ...basicParam, contentId }
-        return content2.deleteWatchlistItem(param)
+        return content.deleteWatchlistItem(param)
     })
 
     test('getCategories okey', async () => {
         const param = { ...basicParam }
-        return content2.getCategories(param).then(res => {
+        return content.getCategories(param).then(res => {
             testUtils.resultCheck_v2(res)
             category = res.data[0].id
         })
@@ -180,70 +180,70 @@ xdescribe('Content2', () => {
 
     test('getBrowseAll okey', async () => {
         const param = { ...basicParam, quantity: 1 }
-        return content2.getBrowseAll(param).then(res => {
+        return content.getBrowseAll(param).then(res => {
             testUtils.resultCheck_v2(res)
         })
     })
 
     test('getBrowseAll category okey', async () => {
         const param = { ...basicParam, quantity: 1, category: [category] }
-        return content2.getBrowseAll(param).then(res => {
+        return content.getBrowseAll(param).then(res => {
             testUtils.resultCheck_v2(res)
         })
     })
 
     test('getBrowseIndex okey', async () => {
         const param = { ...basicParam }
-        return content2.getBrowseIndex(param).then(res => {
+        return content.getBrowseIndex(param).then(res => {
             testUtils.resultCheck_v2(res)
         })
     })
 
     test('getBrowseIndex category okey', async () => {
         const param = { ...basicParam, category: [category] }
-        return content2.getBrowseIndex(param).then(res => {
+        return content.getBrowseIndex(param).then(res => {
             testUtils.resultCheck_v2(res)
         })
     })
 
     test('getSubcategories okey', async () => {
         const param = { ...basicParam, parentCategory: category }
-        return content2.getSubcategories(param).then(res => {
+        return content.getSubcategories(param).then(res => {
             testUtils.resultCheck_v2(res)
         })
     })
 
     test('getHomeFeed okey', async () => {
         const param = { ...basicParam }
-        return content2.getHomeFeed(param).then(res => {
+        return content.getHomeFeed(param).then(res => {
             testUtils.resultCheck_v2(res)
         })
     })
 
     test('getMusicFeed okey', async () => {
         const param = { ...basicParam }
-        return content2.getMusicFeed(param).then(res => {
+        return content.getMusicFeed(param).then(res => {
             testUtils.resultCheck_v2(res)
         })
     })
 
     test('getMusicArtist okey', async () => {
         const param = { ...basicParam, artistIds: [artistId] }
-        return content2.getMusicArtist(param).then(res => {
+        return content.getMusicArtist(param).then(res => {
             testUtils.resultCheck_v2(res)
         })
     })
 
     test('getMusicArtistConcerts okey', async () => {
         const param = { ...basicParam, artistId }
-        return content2.getMusicArtistConcerts(param).then(res => {
+        return content.getMusicArtistConcerts(param).then(res => {
             testUtils.resultCheck_v2(res)
         })
     })
 
     test('getMusicArtistVideos okey', async () => {
         const param = { ...basicParam, artistId }
-        return content2.getMusicArtistVideos(param).then(res => {
+        return content.getMusicArtistVideos(param).then(res => {
             testUtils.resultCheck_v2(res)
 
         })
@@ -251,42 +251,42 @@ xdescribe('Content2', () => {
 
     test('getMusicConcerts okey', async () => {
         const param = { ...basicParam, concertIds: [concertId] }
-        return content2.getMusicConcerts(param).then(res => {
+        return content.getMusicConcerts(param).then(res => {
             testUtils.resultCheck_v2(res)
         })
     })
 
     test('getMusicVideo okey', async () => {
         const param = { ...basicParam, musicIds: [musicVideoId] }
-        return content2.getMusicVideo(param).then(res => {
+        return content.getMusicVideo(param).then(res => {
             testUtils.resultCheck_v2(res)
         })
     })
 
     test('getContent okey', async () => {
         const param = { ...basicParam, objectIds: [contentId] }
-        return content2.getObjects(param).then(res => {
+        return content.getObjects(param).then(res => {
             testUtils.resultCheck_v2(res)
         })
     })
 
     test('getWatchHistory okey', async () => {
         const param = { ...basicParam }
-        return content2.getWatchHistory(param).then(res => {
+        return content.getWatchHistory(param).then(res => {
             testUtils.resultCheck_v2(res)
         })
     })
 
     test('getSeasonList okey', async () => {
         const param = { ...basicParam }
-        return content2.getSeasonList(param).then(res => {
+        return content.getSeasonList(param).then(res => {
             testUtils.resultCheck_v2(res)
         })
     })
 
     test('search okey', async () => {
         const param = { ...basicParam, queryStr: 'tate' }
-        return content2.search(param).then(res => {
+        return content.search(param).then(res => {
             testUtils.resultCheck_v2(res)
             testUtils.itesmCheck(res.data[0])
         })
@@ -294,7 +294,7 @@ xdescribe('Content2', () => {
 
     test('search episode okey', async () => {
         const param = { ...basicParam, queryStr: 'un nuevo rugido', quantity: 1, type: ['episode'] }
-        return content2.search(param).then(res => {
+        return content.search(param).then(res => {
             testUtils.resultCheck_v2(res)
             testUtils.itesmCheck(res.data[0])
             episodeId = res.data[0].items[0].id
@@ -304,7 +304,7 @@ xdescribe('Content2', () => {
 
     test('search episode movie okey', async () => {
         const param = { ...basicParam, queryStr: 'fullmetal', quantity: 1, type: ['movie_listing'] }
-        return content2.search(param).then(res => {
+        return content.search(param).then(res => {
             testUtils.resultCheck_v2(res)
             testUtils.itesmCheck(res.data[0])
             movieListingId = res.data[0].items[0].id
@@ -313,21 +313,21 @@ xdescribe('Content2', () => {
 
     test('getRecommendations okey', async () => {
         const param = { ...basicParam }
-        return content2.getRecommendations(param).then(res => {
+        return content.getRecommendations(param).then(res => {
             testUtils.resultCheck_v2(res)
         })
     })
 
     test('getSimilar okey', async () => {
         const param = { ...basicParam, contentId: serieId }
-        return content2.getSimilar(param).then(res => {
+        return content.getSimilar(param).then(res => {
             testUtils.resultCheck_v2(res)
         })
     })
 
     test('getNextEpisode okey', async () => {
         const param = { ...basicParam, contentId: episodeId }
-        return content2.getUpNext(param).then(res => {
+        return content.getUpNext(param).then(res => {
             testUtils.resultCheck_v2(res)
             testUtils.checkPlayhead_v2(res.data[0])
         })
@@ -335,7 +335,7 @@ xdescribe('Content2', () => {
 
     test('getUpNextSerie okey', async () => {
         const param = { ...basicParam, contentId: serieId }
-        return content2.getUpNext(param).then(res => {
+        return content.getUpNext(param).then(res => {
             testUtils.resultCheck_v2(res)
             testUtils.checkPlayhead_v2(res.data[0])
             expect(res.data[0]).toHaveProperty('never_watched')
@@ -345,7 +345,7 @@ xdescribe('Content2', () => {
 
     test('getUpNextMovie okey', async () => {
         const param = { ...basicParam, contentId: movieListingId }
-        return content2.getUpNext(param).then(res => {
+        return content.getUpNext(param).then(res => {
             testUtils.resultCheck_v2(res)
             testUtils.checkPlayhead_v2(res.data[0])
             expect(res.data[0]).toHaveProperty('never_watched')
@@ -355,7 +355,7 @@ xdescribe('Content2', () => {
 
     test('getPlayheads okey', async () => {
         const param = { ...basicParam, contentIds: [episodeId] }
-        return content2.getPlayheads(param).then(res => {
+        return content.getPlayheads(param).then(res => {
             testUtils.resultCheck_v2(res)
             expect(res.data[0]).toHaveProperty('content_id')
             expect(res.data[0].content_id).toBeDefined()
@@ -370,7 +370,7 @@ xdescribe('Content2', () => {
 
     test('savePlayhead okey', async () => {
         const param = { ...basicParam, contentId: episodeId, playhead: 300 }
-        return content2.savePlayhead(param)
+        return content.savePlayhead(param)
     })
 
 })
