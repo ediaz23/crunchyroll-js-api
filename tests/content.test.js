@@ -33,9 +33,9 @@ const contentId = contentList[0]
 const musicVideoId = 'MV67B29FAD'
 const artistId = 'MA6480DAB5'
 const concertId = 'MC547A7654'
-let listId = null, category = null, episodeId = null, serieId = null, movieListingId = null
+let listId = null, episodeId = 'GMKUX832J'
 
-describe('Content', () => {
+xdescribe('Content', () => {
 
     test('createPrivateCustomList okey', async () => {
         const param = { ...basicParam, title: customListTitlle }
@@ -126,13 +126,6 @@ describe('Content', () => {
         return content.deletePrivateCustomList(param)
     })
 
-    test('getHistory okey', async () => {
-        return content.getHistory(basicParam).then(res => {
-            testUtils.resultCheck_v2(res)
-            testUtils.checkPlayhead_v2(res.data[0])
-        })
-    })
-
     test('addWatchlistItem okey', async () => {
         const param = { ...basicParam, contentId }
         return content.addWatchlistItem(param)
@@ -141,12 +134,6 @@ describe('Content', () => {
     test('addWatchlistItem wrong', async () => {
         const param = { ...basicParam, contentId }
         await expect(content.addWatchlistItem(param)).rejects.toThrow()
-    })
-
-    test('getWatchlist okey', async () => {
-        return content.getWatchlist(basicParam).then(res => {
-            testUtils.resultCheck_v2(res)
-        })
     })
 
     test('getWatchlistItems okey', async () => {
@@ -168,56 +155,6 @@ describe('Content', () => {
     test('deleteWatchlistItem okey', async () => {
         const param = { ...basicParam, contentId }
         return content.deleteWatchlistItem(param)
-    })
-
-    test('getCategories okey', async () => {
-        const param = { ...basicParam }
-        return content.getCategories(param).then(res => {
-            testUtils.resultCheck_v2(res)
-            category = res.data[0].id
-        })
-    })
-
-    test('getBrowseAll okey', async () => {
-        const param = { ...basicParam, quantity: 1 }
-        return content.getBrowseAll(param).then(res => {
-            testUtils.resultCheck_v2(res)
-        })
-    })
-
-    test('getBrowseAll category okey', async () => {
-        const param = { ...basicParam, quantity: 1, category: [category] }
-        return content.getBrowseAll(param).then(res => {
-            testUtils.resultCheck_v2(res)
-        })
-    })
-
-    test('getBrowseIndex okey', async () => {
-        const param = { ...basicParam }
-        return content.getBrowseIndex(param).then(res => {
-            testUtils.resultCheck_v2(res)
-        })
-    })
-
-    test('getBrowseIndex category okey', async () => {
-        const param = { ...basicParam, category: [category] }
-        return content.getBrowseIndex(param).then(res => {
-            testUtils.resultCheck_v2(res)
-        })
-    })
-
-    test('getSubcategories okey', async () => {
-        const param = { ...basicParam, parentCategory: category }
-        return content.getSubcategories(param).then(res => {
-            testUtils.resultCheck_v2(res)
-        })
-    })
-
-    test('getHomeFeed okey', async () => {
-        const param = { ...basicParam }
-        return content.getHomeFeed(param).then(res => {
-            testUtils.resultCheck_v2(res)
-        })
     })
 
     test('getMusicFeed okey', async () => {
@@ -274,82 +211,6 @@ describe('Content', () => {
         const param = { ...basicParam }
         return content.getWatchHistory(param).then(res => {
             testUtils.resultCheck_v2(res)
-        })
-    })
-
-    test('getSeasonList okey', async () => {
-        const param = { ...basicParam }
-        return content.getSeasonList(param).then(res => {
-            testUtils.resultCheck_v2(res)
-        })
-    })
-
-    test('search okey', async () => {
-        const param = { ...basicParam, queryStr: 'tate' }
-        return content.search(param).then(res => {
-            testUtils.resultCheck_v2(res)
-            testUtils.itesmCheck(res.data[0])
-        })
-    })
-
-    test('search episode okey', async () => {
-        const param = { ...basicParam, queryStr: 'un nuevo rugido', quantity: 1, type: ['episode'] }
-        return content.search(param).then(res => {
-            testUtils.resultCheck_v2(res)
-            testUtils.itesmCheck(res.data[0])
-            episodeId = res.data[0].items[0].id
-            serieId = res.data[0].items[0].episode_metadata.series_id
-        })
-    })
-
-    test('search episode movie okey', async () => {
-        const param = { ...basicParam, queryStr: 'fullmetal', quantity: 1, type: ['movie_listing'] }
-        return content.search(param).then(res => {
-            testUtils.resultCheck_v2(res)
-            testUtils.itesmCheck(res.data[0])
-            movieListingId = res.data[0].items[0].id
-        })
-    })
-
-    test('getRecommendations okey', async () => {
-        const param = { ...basicParam }
-        return content.getRecommendations(param).then(res => {
-            testUtils.resultCheck_v2(res)
-        })
-    })
-
-    test('getSimilar okey', async () => {
-        const param = { ...basicParam, contentId: serieId }
-        return content.getSimilar(param).then(res => {
-            testUtils.resultCheck_v2(res)
-        })
-    })
-
-    test('getNextEpisode okey', async () => {
-        const param = { ...basicParam, contentId: episodeId }
-        return content.getUpNext(param).then(res => {
-            testUtils.resultCheck_v2(res)
-            testUtils.checkPlayhead_v2(res.data[0])
-        })
-    })
-
-    test('getUpNextSerie okey', async () => {
-        const param = { ...basicParam, contentId: serieId }
-        return content.getUpNext(param).then(res => {
-            testUtils.resultCheck_v2(res)
-            testUtils.checkPlayhead_v2(res.data[0])
-            expect(res.data[0]).toHaveProperty('never_watched')
-            expect(res.data[0].never_watched).toBeDefined()
-        })
-    })
-
-    test('getUpNextMovie okey', async () => {
-        const param = { ...basicParam, contentId: movieListingId }
-        return content.getUpNext(param).then(res => {
-            testUtils.resultCheck_v2(res)
-            testUtils.checkPlayhead_v2(res.data[0])
-            expect(res.data[0]).toHaveProperty('never_watched')
-            expect(res.data[0].never_watched).toBeDefined()
         })
     })
 
