@@ -14,6 +14,7 @@ import oldCms from './src/services/old.cms.js'
 import oldContent from './src/services/old.content.js'
 import content from './src/services/content.js'
 import discover from './src/services/discover.js'
+import music from './src/services/music.js'
 import index from './src/services/index.js'
 import review from './src/services/review.js'
 import subscription from './src/services/subscription.js'
@@ -26,11 +27,12 @@ export const api = {
     content,
     discover,
     index,
+    music,
     review,
     subscription,
     old: {
-        content: oldContent,
         cms: oldCms,
+        content: oldContent,
     }
 }
 export const config = {

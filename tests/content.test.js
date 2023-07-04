@@ -30,9 +30,6 @@ beforeEach(async () => {
 const customListTitlle = 'PruebaV2'
 const contentList = ['GYXM79M56', 'G6NQ5DWZ6', 'GR751KNZY']
 const contentId = contentList[0]
-const musicVideoId = 'MV67B29FAD'
-const artistId = 'MA6480DAB5'
-const concertId = 'MC547A7654'
 let listId = null, episodeId = 'GMKUX832J'
 
 xdescribe('Content', () => {
@@ -155,49 +152,6 @@ xdescribe('Content', () => {
     test('deleteWatchlistItem okey', async () => {
         const param = { ...basicParam, contentId }
         return content.deleteWatchlistItem(param)
-    })
-
-    test('getMusicFeed okey', async () => {
-        const param = { ...basicParam }
-        return content.getMusicFeed(param).then(res => {
-            testUtils.resultCheck_v2(res)
-        })
-    })
-
-    test('getMusicArtist okey', async () => {
-        const param = { ...basicParam, artistIds: [artistId] }
-        return content.getMusicArtist(param).then(res => {
-            testUtils.resultCheck_v2(res)
-        })
-    })
-
-    test('getMusicArtistConcerts okey', async () => {
-        const param = { ...basicParam, artistId }
-        return content.getMusicArtistConcerts(param).then(res => {
-            testUtils.resultCheck_v2(res)
-        })
-    })
-
-    test('getMusicArtistVideos okey', async () => {
-        const param = { ...basicParam, artistId }
-        return content.getMusicArtistVideos(param).then(res => {
-            testUtils.resultCheck_v2(res)
-
-        })
-    })
-
-    test('getMusicConcerts okey', async () => {
-        const param = { ...basicParam, concertIds: [concertId] }
-        return content.getMusicConcerts(param).then(res => {
-            testUtils.resultCheck_v2(res)
-        })
-    })
-
-    test('getMusicVideo okey', async () => {
-        const param = { ...basicParam, musicIds: [musicVideoId] }
-        return content.getMusicVideo(param).then(res => {
-            testUtils.resultCheck_v2(res)
-        })
     })
 
     test('getContent okey', async () => {
