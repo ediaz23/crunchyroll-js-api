@@ -24,7 +24,7 @@ function itesmCheck_v2(res, length) {
     expect(res).toHaveProperty('total')
     expect(res).toHaveProperty('data')
     expect(Array.isArray(res.data)).toBe(true)
-    if (length) {
+    if (length !== undefined) {
         expect(res.total).toBe(length)
         expect(res.data.length).toBe(length)
     } else {
