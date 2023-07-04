@@ -3,7 +3,7 @@ import { expect } from '@jest/globals'
 
 import localStore from '../src/localStore.js'
 import testUtils from './testUtils.js'
-import cms from '../src/services/cms.js'
+import cms from '../src/services/old.cms.js'
 
 
 /** @type {{cmsAuth : import('../types').CmsAuth}} */
@@ -21,7 +21,7 @@ beforeEach(async () => {
 const serieId = 'GY190DKQR', movieListingId = 'GR3KV3PWR'
 let seasonId = null, episodeId = null, streamId = null, streamUrl = null, movieId = null, externalId = null
 
-xdescribe('Cms', () => {
+xdescribe('Old Cms', () => {
 
     test('getSeasons okey', async () => {
         expect(serieId).not.toBeNull()
