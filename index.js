@@ -15,6 +15,7 @@ import oldContent from './src/services/old.content.js'
 import content from './src/services/content.js'
 import discover from './src/services/discover.js'
 import music from './src/services/music.js'
+import cms from './src/services/cms.js'
 import index from './src/services/index.js'
 import review from './src/services/review.js'
 import subscription from './src/services/subscription.js'
@@ -24,6 +25,7 @@ export const api = {
     account,
     assets,
     auth,
+    cms,
     content,
     discover,
     index,

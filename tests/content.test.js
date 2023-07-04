@@ -154,13 +154,6 @@ xdescribe('Content', () => {
         return content.deleteWatchlistItem(param)
     })
 
-    test('getContent okey', async () => {
-        const param = { ...basicParam, objectIds: [contentId] }
-        return content.getObjects(param).then(res => {
-            testUtils.resultCheck_v2(res)
-        })
-    })
-
     test('getWatchHistory okey', async () => {
         const param = { ...basicParam }
         return content.getWatchHistory(param).then(res => {
