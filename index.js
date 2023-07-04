@@ -10,8 +10,8 @@ import i18n from './src/config/index.i18n.json'
 import account from './src/services/account.js'
 import assets from './src/services/assets.js'
 import auth from './src/services/auth.js'
-import cms from './src/services/cms.js'
-import content from './src/services/content.js'
+import oldCms from './src/services/old.cms.js'
+import oldContent from './src/services/old.content.js'
 import content2 from './src/services/content2.js'
 import index from './src/services/index.js'
 import review from './src/services/review.js'
@@ -22,12 +22,14 @@ export const api = {
     account,
     assets,
     auth,
-    cms,
-    content,
     content2,
     index,
     review,
     subscription,
+    old: {
+        content: oldContent,
+        cms: oldCms,
+    }
 }
 export const config = {
     production,

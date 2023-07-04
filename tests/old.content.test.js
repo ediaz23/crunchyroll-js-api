@@ -3,7 +3,7 @@ import { expect } from '@jest/globals'
 
 import localStore from '../src/localStore.js'
 import testUtils from './testUtils.js'
-import content from '../src/services/content.js'
+import content from '../src/services/old.content.js'
 
 
 /** @type {{account: import('../types').AccountAuth}} */
@@ -24,7 +24,7 @@ const contentList = ['GYXM79M56', 'G6NQ5DWZ6', 'GR751KNZY']
 const contentId = contentList[0]
 let listId = null, category = null, episodeId = null, serieId = null, movieListingId = null
 
-xdescribe('Content', () => {
+xdescribe('Old Content', () => {
 
     test('createPrivateCustomList okey', async () => {
         const param = { ...basicParam, title: customListTitlle }
