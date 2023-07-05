@@ -183,7 +183,7 @@ async function getSeasonExtras({ account, seasonId }) {
 /**
  * @param {Object} obj
  * @param {import('../types').AccountAuth} obj.account
- * @param {String} obj.seasonId
+ * @param {String} obj.serieId
  * @returns {Promise<Object>}
  */
 async function getSeasons({ account, serieId }) {
