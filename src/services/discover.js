@@ -106,12 +106,14 @@ async function getBrowseIndex({ account, category, sort, ratings }) {
 /**
  * @param {Object} obj
  * @param {import('../types').AccountAuth} obj.account
+ * @param {String} obj.contentId
  * @returns {Promise<{total: Number, data: Array<Object>, meta: Object}>}
  */
-async function getCategories({ account }) {
+async function getCategories({ account, contentId }) {
     const fnName = 'getCategories'
     logger.debug(fnName)
     const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
+    utils.addParam(queryData, 'guid', contentId)
     const query = await utils.toURLSearchParams(queryData)
     const url = `/content/v2/discover/categories?${query}`
     const reqConfig = {
