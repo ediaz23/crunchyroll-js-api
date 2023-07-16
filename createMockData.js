@@ -3,7 +3,11 @@ import logger from './src/logger.js'
 import localStore from './src/localStore.js'
 import accountService from './src/services/account.js'
 import fetch from 'node-fetch'
-import content2 from './src/services/content2.js'
+import content from './src/services/content.js'
+import discover from './src/services/discover.js'
+import cms from './src/services/cms.js'
+import music from './src/services/music.js'
+
 import fs from 'fs'
 
 
@@ -80,21 +84,23 @@ async function getMockData(name, params) {
         let res
         const account = await getContentParam()
         if (name === 'objects') {
-            res = await content2.getObjects({ account, ...params })
+            res = await cms.getObjects({ account, ...params })
         } else if (name === 'concerts') {
-            res = await content2.getMusicConcerts({ account, concertIds: params })
+            res = await music.getConcerts({ account, concertIds: params })
         } else if (name === 'similar') {
-            res = await content2.getSimilar({ account, ...params })
+            res = await discover.getSimilar({ account, ...params })
         } else if (name === 'artist') {
-            res = await content2.getMusicArtist({ account, artistIds: params })
+            res = await music.getArtist({ account, artistIds: params })
         } else if (name === 'browse') {
-            res = await content2.getBrowseAll({ account, ...params })
+            res = await discover.getBrowseAll({ account, ...params })
         } else if (name === 'discoverWatchlist') {
-            res = await content2.getWatchlist({ account, ...params })
+            res = await discover.getWatchlist({ account, ...params })
         } else if (name === 'discoverHistory') {
-            res = await content2.getHistory({ account, ...params })
+            res = await discover.getHistory({ account, ...params })
         } else if (name === 'discoverRecomendantion') {
-            res = await content2.getRecommendations({ account, params })
+            res = await discover.getRecommendations({ account, ...params })
+        } else if (name === 'categories') {
+            res = await discover.getCategories({ account, ...params })
         } else {
             throw new Error('no existe ' + name)
         }
@@ -119,7 +125,7 @@ const getObjects = async (profile, params) => {
             out = await getMockData('objects', params)
         } else {
             const account = await getContentParam(profile)
-            out = await content2.getObjects({ account, ...params })
+            out = await content.getObjects({ account, ...params })
         }
     } catch (error) {
         await translateError(error)
@@ -140,7 +146,7 @@ const getMusicArtists = async (profile, artistIds) => {
             out = await getMockData('artist', artistIds)
         } else {
             const account = await getContentParam(profile)
-            out = await content2.getMusicArtist({ account, artistIds })
+            out = await music.getArtist({ account, artistIds })
         }
     } catch (error) {
         await translateError(error)
@@ -161,7 +167,7 @@ const getMusicConcerts = async (profile, concertIds) => {
             out = await getMockData('concerts', concertIds)
         } else {
             const account = await getContentParam(profile)
-            out = await content2.getMusicConcerts({ account, concertIds })
+            out = await music.getConcerts({ account, concertIds })
         }
     } catch (error) {
         await translateError(error)
@@ -182,7 +188,7 @@ const getMusicVideos = async (profile, musicIds) => {
             out = await getMockData('musicVideo', musicIds)
         } else {
             const account = await getContentParam(profile)
-            out = await content2.getMusicVideo({ account, musicIds })
+            out = await music.getVideo({ account, musicIds })
         }
     } catch (error) {
         await translateError(error)
@@ -202,10 +208,10 @@ const getHistory = async (profile, params) => {
     let out = null
     try {
         if (__DEV__ && LOAD_MOCK_DATA) {
-            out = await getMockData('discoverHistory')
+            out = await getMockData('discoverHistory', params)
         } else {
             const account = await getContentParam(profile)
-            out = await content2.getHistory({ account, ...params })
+            out = await discover.getHistory({ account, ...params })
         }
     } catch (error) {
         await translateError(error)
@@ -225,10 +231,10 @@ const getWatchlist = async (profile, params) => {
     let out = null
     try {
         if (__DEV__ && LOAD_MOCK_DATA) {
-            out = await getMockData('discoverWatchlist')
+            out = await getMockData('discoverWatchlist', params)
         } else {
             const account = await getContentParam(profile)
-            out = await content2.getWatchlist({ account, ...params })
+            out = await discover.getWatchlist({ account, ...params })
         }
     } catch (error) {
         await translateError(error)
@@ -248,10 +254,10 @@ const getRecomendation = async (profile, params) => {
     let out = null
     try {
         if (__DEV__ && LOAD_MOCK_DATA) {
-            out = await getMockData('discoverRecomendantion')
+            out = await getMockData('discoverRecomendantion', params)
         } else {
             const account = await getContentParam(profile)
-            out = await content2.getRecommendations({ account, params })
+            out = await discover.getRecommendations({ account, ...params })
         }
     } catch (error) {
         await translateError(error)
@@ -275,7 +281,7 @@ const getSimilar = async (profile, params) => {
             out = await getMockData('similar', params)
         } else {
             const account = await getContentParam(profile)
-            out = await content2.getSimilar({ account, ...params })
+            out = await discover.getSimilar({ account, ...params })
         }
     } catch (error) {
         await translateError(error)
@@ -304,7 +310,7 @@ const getBrowseAll = async (profile, params) => {
             out = await getMockData('browse', params)
         } else {
             const account = await getContentParam(profile)
-            out = await content2.getBrowseAll({ account, ...params })
+            out = await discover.getBrowseAll({ account, ...params })
         }
     } catch (error) {
         await translateError(error)
@@ -490,6 +496,7 @@ const processDynamicCollection = async (carousel, profile) => {
     } else {
         new Error(`Dynamic Collection not supported ${carousel.resource_type} - ${carousel.response_type}`)
     }
+
     return { ...carousel, items: res.data }
 }
 
@@ -514,7 +521,15 @@ const processItemFeed = async (carousel, profile) => {
     } else {
         new Error(`Feed not supported ${carousel.resource_type} - ${carousel.response_type}`)
     }
-    return res
+    return res.then(async (res2) => {
+        if (res2.items) {
+            await Promise.all(
+                res2.items
+                .map(val => val.id)
+                .map(contentId => getMockData('categories', { contentId }))
+            )
+        }
+    })
 }
 
 /**
@@ -547,7 +562,7 @@ const postProcessHomefeed = async (feed) => {
 
 
 const homefeed = async (profile) => {
-    const feedStr = fs.readFileSync('../crunchyroll-webos-stream/src/mock-data/homefeed.json').toString()
+    const feedStr = fs.readFileSync('../crunchyroll-webos-stream/src/mock-data/data/homefeed.json').toString()
     const homefeed = JSON.parse(feedStr)
     for await (const feed of await postProcessHomefeed(homefeed.data)) {
         try {
@@ -560,6 +575,7 @@ const homefeed = async (profile) => {
     }
 }
 
+
 async function main() {
     logger.setLevel('debug')
     await localStore.loadFromLocal()
@@ -568,6 +584,7 @@ async function main() {
     fs.mkdirSync('mock', { recursive: true })
     PROFILE = profile
     await homefeed(profile)
+    //    await objectCategories(profile)
 }
 
 main().catch(e => {
