@@ -24,10 +24,7 @@ async function getWatchlist({ account, quantity, start, ratings }) {
     const url = `/content/v2/discover/${account.accountId}/watchlist?${query}`
     const reqConfig = {
         method: 'get',
-        headers: {
-            'Authorization': account.token,
-            'upload_offline_playheads': true,
-        }
+        headers: { Authorization: account.token }
     }
     return utils.makeRequest(fnName, url, reqConfig)
 }
@@ -65,7 +62,7 @@ async function getBrowseAll({ account, quantity, start, category, query, seasonT
     const reqConfig = {
         method: 'get',
         headers: {
-            'Authorization': account.token,
+            Authorization: account.token,
             'add_watchlist_status': true,
         }
     }
@@ -96,7 +93,7 @@ async function getBrowseIndex({ account, category, sort, ratings }) {
     const reqConfig = {
         method: 'get',
         headers: {
-            'Authorization': account.token,
+            Authorization: account.token,
             'add_watchlist_status': true,
         }
     }
@@ -119,7 +116,7 @@ async function getCategories({ account, contentId }) {
     const reqConfig = {
         method: 'get',
         headers: {
-            'Authorization': account.token,
+            Authorization: account.token,
             'add_watchlist_status': true,
         }
     }
@@ -266,12 +263,31 @@ async function getSimilar({ account, contentId, quantity, start, ratings }) {
  * @param {String} obj.contentId
  * @returns {Promise<{total: Number, data: Array<Object>, meta: Object}>} 
  */
-async function getUpNext({ account, contentId }) {
-    const fnName = 'getUpNext'
+async function getNext({ account, contentId }) {
+    const fnName = 'getNext'
     logger.debug(fnName)
     const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
     const query = await utils.toURLSearchParams(queryData)
     const url = `/content/v2/discover/up_next/${contentId}?${query}`
+    const reqConfig = {
+        method: 'get',
+        headers: { 'Authorization': account.token }
+    }
+    return utils.makeRequest(fnName, url, reqConfig)
+}
+
+/**
+ * @param {Object} obj
+ * @param {import('../types').AccountAuth} obj.account
+ * @param {String} obj.contentId
+ * @returns {Promise<{total: Number, data: Array<Object>, meta: Object}>} 
+ */
+async function getPrev({ account, contentId }) {
+    const fnName = 'getPrev'
+    logger.debug(fnName)
+    const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
+    const query = await utils.toURLSearchParams(queryData)
+    const url = `/content/v2/discover/previous_episode/${contentId}?${query}`
     const reqConfig = {
         method: 'get',
         headers: { 'Authorization': account.token }
@@ -308,10 +324,7 @@ async function search({ account, queryStr, quantity, start, type }) {
     const url = `/content/v2/discover/search?${query}`
     const reqConfig = {
         method: 'get',
-        headers: {
-            'Authorization': account.token,
-            'upload_offline_playheads': true,
-        }
+        headers: { Authorization: account.token }
     }
     return utils.makeRequest(fnName, url, reqConfig)
 }
@@ -327,6 +340,7 @@ export default {
     getRecommendations,
     getSeasonList,
     getSimilar,
-    getUpNext,
+    getNext,
+    getPrev,
     search,
 }

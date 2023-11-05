@@ -26,6 +26,7 @@ beforeEach(async () => {
     }
 })
 
+
 let category = null, episodeId = null, serieId = null, movieListingId = null
 
 xdescribe('Discover', () => {
@@ -122,7 +123,7 @@ xdescribe('Discover', () => {
 
     test('getNextEpisode okey', async () => {
         const param = { ...basicParam, contentId: episodeId }
-        return discover.getUpNext(param).then(res => {
+        return discover.getNext(param).then(res => {
             testUtils.resultCheck_v2(res)
             testUtils.checkPlayhead_v2(res.data[0])
         })
@@ -130,7 +131,7 @@ xdescribe('Discover', () => {
 
     test('getUpNextSerie okey', async () => {
         const param = { ...basicParam, contentId: serieId }
-        return discover.getUpNext(param).then(res => {
+        return discover.getNext(param).then(res => {
             testUtils.resultCheck_v2(res)
             testUtils.checkPlayhead_v2(res.data[0])
             expect(res.data[0]).toHaveProperty('never_watched')
@@ -140,7 +141,35 @@ xdescribe('Discover', () => {
 
     test('getUpNextMovie okey', async () => {
         const param = { ...basicParam, contentId: movieListingId }
-        return discover.getUpNext(param).then(res => {
+        return discover.getNext(param).then(res => {
+            testUtils.resultCheck_v2(res)
+            testUtils.checkPlayhead_v2(res.data[0])
+            expect(res.data[0]).toHaveProperty('never_watched')
+            expect(res.data[0].never_watched).toBeDefined()
+        })
+    })
+
+    test('getPrevEpisode okey', async () => {
+        const param = { ...basicParam, contentId: episodeId }
+        return discover.getPrev(param).then(res => {
+            testUtils.resultCheck_v2(res)
+            testUtils.checkPlayhead_v2(res.data[0])
+        })
+    })
+
+    test('getUpPrevSerie okey', async () => {
+        const param = { ...basicParam, contentId: serieId }
+        return discover.getPrev(param).then(res => {
+            testUtils.resultCheck_v2(res)
+            testUtils.checkPlayhead_v2(res.data[0])
+            expect(res.data[0]).toHaveProperty('never_watched')
+            expect(res.data[0].never_watched).toBeDefined()
+        })
+    })
+
+    test('getUpPrevMovie okey', async () => {
+        const param = { ...basicParam, contentId: movieListingId }
+        return discover.getPrev(param).then(res => {
             testUtils.resultCheck_v2(res)
             testUtils.checkPlayhead_v2(res.data[0])
             expect(res.data[0]).toHaveProperty('never_watched')
@@ -168,5 +197,4 @@ xdescribe('Discover', () => {
             testUtils.resultCheck_v2(res)
         })
     })
-
 })
