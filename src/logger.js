@@ -38,17 +38,23 @@ const formatObj = obj => {
         }
     } else if (obj instanceof Error) {
         extra = `\n  message:${obj.name}\n  stack:${obj.stack}`
+    } else if (obj instanceof Set) {
+        extra = '[' + Array.from(obj).toString() + ']'
     }
     return extra
 }
 
-const colors = { debug: '\x1b[34m', info: '\x1b[32m', error: '\x1b[31m' }
+const colors = { debug: '\x1b[33m', info: '\x1b[32m', error: '\x1b[31m' }
 
 const getMessage = (message, level) => {
     if (!(typeof (message) === 'string' || message instanceof String)) {
         message = formatObj(message)
     }
-    return `${Date.now()} ${colors[level]}${level.toUpperCase()}\x1b[0m ${message}`
+    const error = new Error();
+    /** @type {String} */
+    const callerFile = error.stack.split('\n')[3]
+    const RESET_COLOR = '\x1b[0m'
+    return `${Date.now()} ${colors[level]}${level.toUpperCase()} ${message} ${callerFile.trim()} ${RESET_COLOR}`
 }
 
 function configBrowserLogger(newLevel) {
