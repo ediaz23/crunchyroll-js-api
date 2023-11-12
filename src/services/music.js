@@ -20,7 +20,7 @@ async function getFeed({ account, quantity, start }) {
     const url = `/content/v2/music/landing_feed?${query}`
     const reqConfig = {
         method: 'get',
-        headers: { 'Authorization': account.token }
+        headers: { Authorization: account.token }
     }
     return utils.makeRequest(fnName, url, reqConfig)
 }
@@ -40,7 +40,7 @@ async function getArtist({ account, artistIds }) {
     const url = `/content/v2/music/artists/${artistIds.join(',')}?${query}`
     const reqConfig = {
         method: 'get',
-        headers: { 'Authorization': account.token }
+        headers: { Authorization: account.token }
     }
     return utils.makeRequest(fnName, url, reqConfig)
 }
@@ -60,7 +60,7 @@ async function getArtistConcerts({ account, artistId }) {
     const url = `/content/v2/music/artists/${artistId}/concerts?${query}`
     const reqConfig = {
         method: 'get',
-        headers: { 'Authorization': account.token }
+        headers: { Authorization: account.token }
     }
     return utils.makeRequest(fnName, url, reqConfig)
 }
@@ -80,7 +80,7 @@ async function getArtistVideos({ account, artistId }) {
     const url = `/content/v2/music/artists/${artistId}/music_videos?${query}`
     const reqConfig = {
         method: 'get',
-        headers: { 'Authorization': account.token }
+        headers: { Authorization: account.token }
     }
     return utils.makeRequest(fnName, url, reqConfig)
 }
@@ -100,7 +100,7 @@ async function getConcerts({ account, concertIds }) {
     const url = `/content/v2/music/concerts/${concertIds.join(',')}?${query}`
     const reqConfig = {
         method: 'get',
-        headers: { 'Authorization': account.token }
+        headers: { Authorization: account.token }
     }
     return utils.makeRequest(fnName, url, reqConfig)
 }
@@ -120,16 +120,55 @@ async function getVideo({ account, musicIds }) {
     const url = `/content/v2/music/music_videos/${musicIds.join(',')}?${query}`
     const reqConfig = {
         method: 'get',
-        headers: { 'Authorization': account.token }
+        headers: { Authorization: account.token }
+    }
+    return utils.makeRequest(fnName, url, reqConfig)
+}
+
+/**
+ * @param {import('../types').AccountAuth} obj.account
+ * @param {String} obj.streamUrl
+ * @returns {Promise<Object>}
+ */
+async function getStreamsWithURL({ account, streamUrl }) {
+    const fnName = 'getStreamsWithURL'
+    logger.debug(fnName)
+    const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
+    const queryStr = await utils.toURLSearchParams(queryData)
+    const url = `${streamUrl}?${queryStr}`
+    const reqConfig = {
+        method: 'get',
+        headers: { Authorization: account.token }
+    }
+    return utils.makeRequest(fnName, url, reqConfig)
+}
+
+/**
+ * @param {Object} obj
+ * @param {import('../types').AccountAuth} obj.account
+ * @param {String} obj.contentId
+ * @returns {Promise<Object>}
+ */
+async function getStreams({ account, contentId }) {
+    const fnName = 'getStreams'
+    logger.debug(fnName)
+    const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
+    const queryStr = await utils.toURLSearchParams(queryData)
+    const url = `/content/v2/music/${contentId}/streams?${queryStr}`
+    const reqConfig = {
+        method: 'get',
+        headers: { Authorization: account.token }
     }
     return utils.makeRequest(fnName, url, reqConfig)
 }
 
 export default {
-    getFeed,
     getArtist,
     getArtistConcerts,
     getArtistVideos,
     getConcerts,
+    getFeed,
+    getStreams,
+    getStreamsWithURL,
     getVideo,
 }

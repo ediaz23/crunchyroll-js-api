@@ -56,7 +56,6 @@ xdescribe('Music', () => {
         const param = { ...basicParam, artistId }
         return music.getArtistVideos(param).then(res => {
             testUtils.resultCheck_v2(res)
-
         })
     })
 
@@ -70,6 +69,13 @@ xdescribe('Music', () => {
     test('getVideo okey', async () => {
         const param = { ...basicParam, musicIds: [musicVideoId] }
         return music.getVideo(param).then(res => {
+            testUtils.resultCheck_v2(res)
+        })
+    })
+
+    test('getStreams okey', async () => {
+        const param = { ...basicParam, contentId: concertId }
+        return music.getStreams(param).then(res => {
             testUtils.resultCheck_v2(res)
         })
     })

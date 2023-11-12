@@ -20,7 +20,7 @@ async function addItemToCustomList({ account, listId, contentId }) {
     const reqConfig = {
         method: 'post',
         headers: {
-            'Authorization': account.token,
+            Authorization: account.token,
             'Content-Type': 'application/json',
         },
         body: JSON.stringify({ content_id: contentId })
@@ -49,7 +49,7 @@ async function changeCustomListItemPosition({ account, listId, contentId, locati
     const reqConfig = {
         method: 'put',
         headers: {
-            'Authorization': account.token,
+            Authorization: account.token,
             'Content-Type': 'application/json',
         },
         body: JSON.stringify({
@@ -86,7 +86,7 @@ async function getCustomListItems({ account, listId, page, pageSize, sort, order
     const url = `/content/v2/${account.accountId}/custom-lists/${listId}?${query}`
     const reqConfig = {
         method: 'get',
-        headers: { 'Authorization': account.token }
+        headers: { Authorization: account.token }
     }
     return utils.makeRequest(fnName, url, reqConfig)
 }
@@ -108,7 +108,7 @@ async function deleteCustomListItem({ account, listId, contentId }) {
     const reqConfig = {
         method: 'delete',
         headers: {
-            'Authorization': account.token,
+            Authorization: account.token,
             'Content-Type': 'application/json',
         },
     }
@@ -132,7 +132,7 @@ async function createPrivateCustomList({ account, title }) {
     const reqConfig = {
         method: 'post',
         headers: {
-            'Authorization': account.token,
+            Authorization: account.token,
             'Content-Type': 'application/json',
         },
         body: JSON.stringify({ title })
@@ -155,7 +155,7 @@ async function getCustomLists({ account }) {
     const url = `/content/v2/${account.accountId}/custom-lists?${query}`
     const reqConfig = {
         method: 'get',
-        headers: { 'Authorization': account.token }
+        headers: { Authorization: account.token }
     }
     return utils.makeRequest(fnName, url, reqConfig)
 }
@@ -177,7 +177,7 @@ async function updateCustomList({ account, listId, title }) {
     const reqConfig = {
         method: 'patch',
         headers: {
-            'Authorization': account.token,
+            Authorization: account.token,
             'Content-Type': 'application/json',
         },
         body: JSON.stringify({ title })
@@ -202,7 +202,7 @@ async function deletePrivateCustomList({ account, listId }) {
     const reqConfig = {
         method: 'delete',
         headers: {
-            'Authorization': account.token,
+            Authorization: account.token,
             'Content-Type': 'application/json',
         },
     }
@@ -226,7 +226,7 @@ async function addWatchlistItem({ account, contentId }) {
     const reqConfig = {
         method: 'post',
         headers: {
-            'Authorization': account.token,
+            Authorization: account.token,
             'Content-Type': 'application/json',
         },
         body: JSON.stringify({ content_id: contentId })
@@ -252,7 +252,7 @@ async function getWatchlistItems({ account, contentIds }) {
     let url = `/content/v2/${account.accountId}/watchlist?${query}`
     const reqConfig = {
         method: 'get',
-        headers: { 'Authorization': account.token }
+        headers: { Authorization: account.token }
     }
     return utils.makeRequest(fnName, url, reqConfig)
 }
@@ -274,7 +274,7 @@ async function updateWatchlistItemFavoriteStatus({ account, contentId, isFavorit
     const reqConfig = {
         method: 'patch',
         headers: {
-            'Authorization': account.token,
+            Authorization: account.token,
             'Content-Type': 'application/json',
         },
         body: JSON.stringify({ is_favorite: isFavorite })
@@ -299,7 +299,7 @@ async function deleteWatchlistItem({ account, contentId }) {
     const reqConfig = {
         method: 'delete',
         headers: {
-            'Authorization': account.token,
+            Authorization: account.token,
             'Content-Type': 'application/json',
         },
     }
@@ -325,8 +325,8 @@ async function getWatchHistory({ account, page, pageSize }) {
     const reqConfig = {
         method: 'get',
         headers: {
-            'Authorization': account.token,
-            'upload_offline_playheads': true,
+            Authorization: account.token,
+            upload_offline_playheads: true,
         }
     }
     return utils.makeRequest(fnName, url, reqConfig)
@@ -349,8 +349,8 @@ async function _getPlayheads({ account, contentIds, uploadOfflinePlayheads }) {
     const reqConfig = {
         method: 'get',
         headers: {
-            'Authorization': account.token,
-            'upload_offline_playheads': uploadOfflinePlayheads
+            Authorization: account.token,
+            upload_offline_playheads: uploadOfflinePlayheads
         }
     }
     return utils.makeRequest(fnName, url, reqConfig)
@@ -384,7 +384,7 @@ async function savePlayhead({ account, contentId, playhead }) {
     const reqConfig = {
         method: 'post',
         headers: {
-            'Authorization': account.token,
+            Authorization: account.token,
             'Content-Type': 'application/json',
         },
         body: JSON.stringify({
