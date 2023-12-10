@@ -52,7 +52,7 @@ async function getBrowseAll({ account, quantity, start, category, query, seasonT
         utils.addParam(queryData, 'categories', category.join(','))
     }
     utils.addParam(queryData, 'q', query)
-    utils.addParam(queryData, 'season_tag', seasonTag)
+    utils.addParam(queryData, 'seasonal_tag', seasonTag)
     if (sort && !CONST.sortByValues.includes(sort)) { throw new CrunchyrollError('Wrong sort value') }
     utils.addParam(queryData, 'sort_by', sort)
     utils.addParam(queryData, 'type', type)
