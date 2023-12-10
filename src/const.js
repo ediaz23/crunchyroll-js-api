@@ -41,7 +41,7 @@ function getRatingEpisodeTypes() {
  * @returns {String}
  */
 function getClientId() {
-    return config.client_id
+    return config.beta.client_id
 }
 
 
@@ -49,9 +49,15 @@ function getClientId() {
  * @returns {String}
  */
 function getClientSecret() {
-    return config.client_secret
+    return config.beta.client_secret
 }
 
+/**
+ * @return {String}
+ */
+function getBaseUrl() {
+    return config.beta.url
+}
 
 export default {
     getUserAgent,
@@ -60,5 +66,6 @@ export default {
     getRatingEpisodeTypes,
     getClientId,
     getClientSecret,
+    getBaseUrl,
     sortByValues: ['popularity', 'newly_added', 'alphabetical']
 }

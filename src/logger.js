@@ -54,7 +54,7 @@ const getMessage = (message, level) => {
     /** @type {String} */
     const callerFile = error.stack.split('\n')[3]
     const RESET_COLOR = '\x1b[0m'
-    return `${Date.now()} ${colors[level]}${level.toUpperCase()} ${message} ${callerFile.trim()} ${RESET_COLOR}`
+    return `${Date.now()} ${colors[level]}${level.toUpperCase()} ${message} ${(callerFile || '').trim()} ${RESET_COLOR}`
 }
 
 function configBrowserLogger(newLevel) {

@@ -48,7 +48,7 @@ async function logRes(fnName, res) {
  */
 async function makeRawRequest(url, reqConfig) {
     let fetchFn = fetchFunction
-    url = decodeURIComponent(`${config.url}${url}`)
+    url = decodeURIComponent(`${CONST.getBaseUrl()}${url}`)
     logger.debug(`${reqConfig.method} - ${url}`)
     if (!reqConfig.headers) {
         reqConfig.headers = {}

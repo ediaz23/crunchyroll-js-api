@@ -9,7 +9,7 @@
         "play": "node --experimental-specifier-resolution=node main.js",
         "lint": "npx eslint --ext .js ./",
         "test": "node --experimental-vm-modules --experimental-specifier-resolution=node ./node_modules/.bin/jest",
-        "mock": "node  --experimental-specifier-resolution=node createMockData.js"
+        "mock": "node --experimental-specifier-resolution=node createMockData.js"
     },
     "engines": {
         "node": ">=14.20.0"
