@@ -298,18 +298,18 @@ async function getPrev({ account, contentId }) {
 /**
  * @param {Object} obj
  * @param {import('../types').AccountAuth} obj.account
- * @param {String} obj.queryStr search partner
+ * @param {String} obj.query search partner
  * @param {Number} [obj.quantity] Number of records in a result
  * @param {Number} [obj.start] Offset to request
  * @param {Array<String>} [obj.type] Can be top_results, series, movie_listing, episode
  * @returns {Promise<{total: Number, data: Array<Object>, meta: Object}>} 
  */
-async function search({ account, queryStr, quantity, start, type }) {
+async function search({ account, query, quantity, start, type }) {
     const fnName = 'search'
     logger.debug(fnName)
     const types = CONST.getContentTypes().concat(['top_results', 'music'])
     const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
-    utils.addParam(queryData, 'q', queryStr)
+    utils.addParam(queryData, 'q', query)
     utils.addParam(queryData, 'n', quantity, val => val > 0)
     utils.addParam(queryData, 'start', start, val => val >= 0)
     if (type && type.length) {
@@ -320,8 +320,8 @@ async function search({ account, queryStr, quantity, start, type }) {
         }
         utils.addParam(queryData, 'type', type.join(','))
     }
-    const query = await utils.toURLSearchParams(queryData)
-    const url = `/content/v2/discover/search?${query}`
+    const queryStr = await utils.toURLSearchParams(queryData)
+    const url = `/content/v2/discover/search?${queryStr}`
     const reqConfig = {
         method: 'get',
         headers: { Authorization: account.token }

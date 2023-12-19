@@ -32,7 +32,7 @@ let category = null, episodeId = null, serieId = null, movieListingId = null
 xdescribe('Discover', () => {
 
     test('search okey', async () => {
-        const param = { ...basicParam, queryStr: 'tate' }
+        const param = { ...basicParam, query: 'tate' }
         return discover.search(param).then(res => {
             testUtils.resultCheck_v2(res)
             testUtils.itesmCheck(res.data[0])
@@ -40,7 +40,7 @@ xdescribe('Discover', () => {
     })
 
     test('search episode okey', async () => {
-        const param = { ...basicParam, queryStr: 'un nuevo rugido', quantity: 1, type: ['episode'] }
+        const param = { ...basicParam, query: 'un nuevo rugido', quantity: 1, type: ['episode'] }
         return discover.search(param).then(res => {
             testUtils.resultCheck_v2(res)
             testUtils.itesmCheck(res.data[0])
@@ -50,7 +50,7 @@ xdescribe('Discover', () => {
     })
 
     test('search episode movie okey', async () => {
-        const param = { ...basicParam, queryStr: 'fullmetal', quantity: 1, type: ['movie_listing'] }
+        const param = { ...basicParam, query: 'fullmetal', quantity: 1, type: ['movie_listing'] }
         return discover.search(param).then(res => {
             testUtils.resultCheck_v2(res)
             testUtils.itesmCheck(res.data[0])
