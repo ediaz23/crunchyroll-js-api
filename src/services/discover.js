@@ -8,18 +8,21 @@ import CrunchyrollError from '../error.js'
 /**
  * @param {Object} obj
  * @param {import('../types').AccountAuth} obj.account
- * @param {Number} obj.quantity Number of records in a result
- * @param {Number} obj.start Offset to request
+ * @param {Number} [obj.quantity] Number of records in a result
+ * @param {Number} [obj.start] Offset to request
  * @param {Boolean} [obj.ratings]
- * @returns {Promise<Object>} 
+ * @param {String} [obj.order] Order
+ * @returns {Promise<{total: Number, data: Array<Object>}>} 
  */
-async function getWatchlist({ account, quantity, start, ratings }) {
+async function getWatchlist({ account, quantity, start, ratings, order }) {
     const fnName = 'getWatchlist'
     logger.debug(fnName)
     const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
     utils.addParam(queryData, 'n', quantity, val => val > 0)
     utils.addParam(queryData, 'start', start, val => val >= 0)
     utils.addParam(queryData, 'ratings', ratings)
+    if (order && !['desc', 'asc'].includes(order)) { throw new CrunchyrollError('Wrong order value') }
+    utils.addParam(queryData, 'order', order)
     const query = await utils.toURLSearchParams(queryData)
     const url = `/content/v2/discover/${account.accountId}/watchlist?${query}`
     const reqConfig = {

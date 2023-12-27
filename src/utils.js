@@ -1,5 +1,4 @@
 
-import config from './config/config.json'
 import logger from './logger.js'
 import CONST from './const.js'
 import CrunchyrollError from './error.js'
