@@ -19,6 +19,7 @@ import cms from './src/services/cms.js'
 import index from './src/services/index.js'
 import review from './src/services/review.js'
 import subscription from './src/services/subscription.js'
+import drm from './src/services/drm.js'
 import utils from './src/utils.js'
 
 export const api = {
@@ -28,6 +29,7 @@ export const api = {
     cms,
     content,
     discover,
+    drm,
     index,
     music,
     review,

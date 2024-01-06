@@ -1,6 +1,7 @@
 
 import utils from '../utils.js'
 import logger from '../logger.js'
+import { getStaticUrl } from '../const.js'
 
 
 /**
@@ -255,6 +256,32 @@ async function getStreams({ account, contentId }) {
     return utils.makeRequest(fnName, url, reqConfig)
 }
 
+
+/**
+ * @param {Object} obj
+ * @param {import('../types').AccountAuth} obj.account
+ * @param {String} obj.contentId
+ * @returns {Promise<Object>}
+ */
+async function getSkiptEvents({ account, contentId }) {
+    const fnName = 'getSkiptEvents'
+    logger.debug(fnName)
+    const url = `${getStaticUrl()}/skip-events/production/${contentId}.json`
+    const reqConfig = {
+        method: 'get',
+        headers: { 'Authorization': account.token },
+        baseUrlIncluded: true,
+    }
+    let out = null
+    try {
+        out = await utils.makeRequest(fnName, url, reqConfig)
+    } catch (e) {
+        // ignore any error
+    }
+    return out
+}
+
+
 export default {
     getEpisode,
     getEpisodes,
@@ -269,4 +296,5 @@ export default {
     getSeries,
     getStreamsWithURL,
     getStreams,
+    getSkiptEvents,
 }

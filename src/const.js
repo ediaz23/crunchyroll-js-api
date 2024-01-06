@@ -6,7 +6,7 @@ import config from './config/config.json'
  * Returning user-agent
  * @return {String}
  */
-function getUserAgent() {
+export function getUserAgent() {
     return `Crunchyroll/${config.version_name} Android/${config.os_release_version}`
 }
 
@@ -14,7 +14,7 @@ function getUserAgent() {
  * Return content types
  * @returns {Array<String>}
  */
-function getContentTypes() {
+export function getContentTypes() {
     return config.content_types
 }
 
@@ -23,7 +23,7 @@ function getContentTypes() {
  * Return possible values for series rating.
  * @returns {Array<String>}
  */
-function getRatingContentTypes() {
+export function getRatingContentTypes() {
     return ['1s', '2s', '3s', '4s', '5s']
 }
 
@@ -32,7 +32,7 @@ function getRatingContentTypes() {
  * Return possible values for episodes rating.
  * @returns {Array<String>}
  */
-function getRatingEpisodeTypes() {
+export function getRatingEpisodeTypes() {
     return ['up', 'down']
 }
 
@@ -40,7 +40,7 @@ function getRatingEpisodeTypes() {
 /**
  * @returns {String}
  */
-function getClientId() {
+export function getClientId() {
     return config.beta.client_id
 }
 
@@ -48,15 +48,64 @@ function getClientId() {
 /**
  * @returns {String}
  */
-function getClientSecret() {
+export function getClientSecret() {
     return config.beta.client_secret
 }
+
 
 /**
  * @return {String}
  */
-function getBaseUrl() {
+export function getBaseUrl() {
     return config.beta.url
+}
+
+
+/**
+ * @return {String}
+ */
+export function getDrmUrl() {
+    return config.url_drm
+}
+
+
+/**
+ * @return {String}
+ */
+export function getPlUrl() {
+    return config.url_pl
+}
+
+
+/**
+ * @return {String}
+ */
+export function getStaticUrl() {
+    return config.url_static
+}
+
+
+/**
+ * @return {String}
+ */
+export function getAccountingId() {
+    return config.accounting_id
+}
+
+
+/**
+ * @return {String}
+ */
+export function getLicenseUrl() {
+    return config.url_license
+}
+
+
+/**
+ * @return {String}
+ */
+export function getSecurePlayWidevineLicenceUrl() {
+    return `${getLicenseUrl()}/v1/license/widevine?specConform=true`
 }
 
 export default {
@@ -67,5 +116,11 @@ export default {
     getClientId,
     getClientSecret,
     getBaseUrl,
+    getDrmUrl,
+    getPlUrl,
+    getAccountingId,
+    getStaticUrl,
+    getLicenseUrl,
+    getSecurePlayWidevineLicenceUrl,
     sortByValues: ['popularity', 'newly_added', 'alphabetical']
 }

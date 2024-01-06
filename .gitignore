@@ -10,6 +10,5 @@ __pycache__/
 node_modules/
 /.env
 /build/
-package-lock.json
 /test/
 /authData.json

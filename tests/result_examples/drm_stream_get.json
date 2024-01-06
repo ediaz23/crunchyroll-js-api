@@ -1,0 +1,111 @@
+{
+    "assetId": "1f14dfa0103bb69d86fad3a129bbbbfd",
+    "audioLocale": "ja-JP",
+    "bifs": "",
+    "burnedInLocale": "",
+    "captions": {},
+    "hardSubs": {
+        "en-US": {
+            "hlang": "en-US",
+            "url": "",
+            "quality": "adaptive"
+        },
+        "de-DE": {
+            "hlang": "de-DE",
+            "url": "",
+            "quality": "adaptive"
+        },
+        "es-419": {
+            "hlang": "es-419",
+            "url": "",
+            "quality": "adaptive"
+        },
+        "fr-FR": {
+            "hlang": "fr-FR",
+            "url": "",
+            "quality": "adaptive"
+        },
+        "it-IT": {
+            "hlang": "it-IT",
+            "url": "",
+            "quality": "adaptive"
+        },
+        "pt-BR": {
+            "hlang": "pt-BR",
+            "url": "",
+            "quality": "adaptive"
+        }
+    },
+    "session": {
+        "renewSeconds": 270,
+        "noNetworkRetryIntervalSeconds": 30,
+        "noNetworkTimeoutSeconds": 370,
+        "maximumPauseSeconds": 900,
+        "endOfVideoUnloadSeconds": 300,
+        "sessionExpirationSeconds": 21600,
+        "usesStreamLimits": true
+    },
+    "subtitles": {
+        "en-US": {
+            "format": "ass",
+            "language": "en-US",
+            "url": ""
+        },
+        "de-DE": {
+            "format": "ass",
+            "language": "de-DE",
+            "url": ""
+        },
+        "es-419": {
+            "format": "ass",
+            "language": "es-419",
+            "url": ""
+        },
+        "fr-FR": {
+            "format": "ass",
+            "language": "fr-FR",
+            "url": ""
+        },
+        "it-IT": {
+            "format": "ass",
+            "language": "it-IT",
+            "url": ""
+        },
+        "pt-BR": {
+            "format": "ass",
+            "language": "pt-BR",
+            "url": ""
+        }
+    },
+    "token": "",
+    "url": "",
+    "versions": [
+        {
+            "audio_locale": "ja-JP",
+            "guid": "GRMGQX55R",
+            "is_premium_only": false,
+            "media_guid": "GJKF2153W",
+            "original": true,
+            "season_guid": "GRK587V16",
+            "variant": ""
+        },
+        {
+            "audio_locale": "es-419",
+            "guid": "GWDU8GK2D",
+            "is_premium_only": false,
+            "media_guid": "GEMFZKG7E",
+            "original": false,
+            "season_guid": "GY8VCP2DD",
+            "variant": ""
+        },
+        {
+            "audio_locale": "pt-BR",
+            "guid": "G9DUE77N1",
+            "is_premium_only": false,
+            "media_guid": "G1QF422JW",
+            "original": false,
+            "season_guid": "GRZXCMP7P",
+            "variant": ""
+        }
+    ]
+}

@@ -18,7 +18,7 @@ let fetchFunction = null
  * @returns {Promise}
  */
 async function logRes(fnName, res) {
-    if (![200, 202, 204].includes(res.status)) {
+    if (!(200 <= res.status && res.status < 300)) {
         logger.error(`Status Code: ${res.status} - ${fnName}`)
         let result = null
         try {
@@ -47,7 +47,12 @@ async function logRes(fnName, res) {
  */
 async function makeRawRequest(url, reqConfig) {
     let fetchFn = fetchFunction
-    url = decodeURIComponent(`${CONST.getBaseUrl()}${url}`)
+    if (reqConfig.baseUrlIncluded) {
+        url = decodeURIComponent(`${url}`)
+        delete reqConfig.baseUrlIncluded
+    } else {
+        url = decodeURIComponent(`${CONST.getBaseUrl()}${url}`)
+    }
     logger.debug(`${reqConfig.method} - ${url}`)
     if (!reqConfig.headers) {
         reqConfig.headers = {}
