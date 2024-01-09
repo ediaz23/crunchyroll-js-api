@@ -2,7 +2,7 @@
 import logger from './src/logger.js'
 import localStore from './src/localStore.js'
 import account from './src/services/account.js'
-import content from './src/services/contentjs'
+import content from './src/services/content.js'
 import fs from 'fs'
 
 const getContentParam = async (profile) => {

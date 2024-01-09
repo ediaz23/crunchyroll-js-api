@@ -27,6 +27,14 @@
  */
 
 /**
+ * @typedef Device
+ * @type {Object}
+ * @property {String} id
+ * @property {String} name
+ * @property {String} type
+ */
+
+/**
  * @typedef Credential
  * @type {Object}
  * @property {String} username

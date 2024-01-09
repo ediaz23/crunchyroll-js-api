@@ -7,16 +7,20 @@ import auth from '../src/services/auth.js'
 import testUtils from './testUtils.js'
 
 
-/** @type {import('../types').Token} */
+/** @type {import('../src/types').Token} */
 let token = null
 
-/** @type {import('../types').Credential} */
+/** @type {import('../src/types').Credential} */
 let credential = null
+
+/** @type {import('../src/types').Device} */
+let device = null
 
 beforeEach(async () => {
     await localStore.loadFromLocal()
     localStore.setExternalStorage({ save: testUtils.saveToLocal })
     credential = localStore.storage.credential
+    device = localStore.storage.device
 })
 
 /**
@@ -45,13 +49,15 @@ xdescribe('Auth', () => {
         expect(credential).not.toBeNull()
         testUtils.existValue(credential.username)
         testUtils.existValue(credential.password)
+        testUtils.existValue(device)
+        testUtils.existValue(device.id)
     })
 
     test('Autenticate Wrong Email', async () => {
         await expect(new Promise((res, rej) => {
             const credentialsWrong = { ...credential }
             credentialsWrong.username += '1'
-            auth.getToken({ ...credentialsWrong }).then(res).catch(rej)
+            auth.getToken({ ...credentialsWrong, device }).then(res).catch(rej)
         })).rejects.toThrowError(new Error('invalid_grant'))
     })
 
@@ -59,12 +65,12 @@ xdescribe('Auth', () => {
         await expect(new Promise((res, rej) => {
             const credentialsWrong = { ...credential }
             credentialsWrong.password += '1'
-            auth.getToken({ ...credentialsWrong }).then(res).catch(rej)
+            auth.getToken({ ...credentialsWrong, device }).then(res).catch(rej)
         })).rejects.toThrowError(new Error('invalid_grant'))
     })
 
     test('Autenticate Okey', async () => {
-        token = await auth.getToken({ ...credential })
+        token = await auth.getToken({ ...credential, device})
         validateToken(token)
     })
 

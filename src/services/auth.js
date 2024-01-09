@@ -21,11 +21,12 @@ function getBasicToken() {
  * @param {Object} login
  * @param {String} login.username user's email
  * @param {String} login.password user's password
+ * @param {import('../types.js').Device} login.device Device
  * @param {String} [login.grantType] login type
  * @param {String} [login.scope]
  * @returns {Promise<import('../types').Token>}
  */
-async function getToken({ username, password, grantType, scope }) {
+async function getToken({ username, password, device, grantType, scope }) {
     const fnName = 'getToken'
     logger.debug(fnName)
     const basicToken = getBasicToken()
@@ -33,14 +34,17 @@ async function getToken({ username, password, grantType, scope }) {
         username: username,
         password: password,
         grant_type: grantType ? grantType : 'password',
-        scope: scope ? scope : 'offline_access'
+        scope: scope ? scope : 'offline_access',
+        device_id: device.id,
+        device_name: device.name,
+        device_type: device.type
     }
     const url = `/auth/v1/token`
     const reqConfig = {
         method: 'post',
         body: await utils.toURLSearchParams(body),
         headers: {
-            'Authorization': `Basic ${basicToken}`,
+            Authorization: `Basic ${basicToken}`,
             'Content-Type': 'application/x-www-form-urlencoded',
             'ETP-Anonymous-ID': null,
         }

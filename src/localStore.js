@@ -8,6 +8,7 @@ import accountService from './services/account.js'
 /**
  * @typedef {Object} Storage
  * @property {import('./types').Credential} credential
+ * @property {import('./types').Device} device
  * @property {import('./types').TokenObj} token
  * @property {import('./types').CmsObj} cms
  * @property {import('./types').AccountObj} account
@@ -44,7 +45,7 @@ async function getAuthToken() {
         if (storage.token && storage.token.refreshToken) {
             data = await authService.getRefreshToken(storage.token)
         } else {
-            data = await authService.getToken(storage.credential)
+            data = await authService.getToken({ ...storage.credential, device: storage.device })
         }
         storage.token = fromJSON(data)  // eslint-disable-line require-atomic-updates
         await saveToLocal()

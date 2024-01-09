@@ -1,6 +1,11 @@
 {
-	"credential": {
-		"username": "",
-		"password": ""
-	}
+    "credential": {
+        "username": "",
+        "password": ""
+    },
+    "device": {
+        "id": "uuid",
+        "name": "Smart TV Nano",
+        "type": "webOS"
+    }
 }

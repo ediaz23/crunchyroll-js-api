@@ -8,8 +8,8 @@
     },
     "beta": {
         "url": "https://beta-api.crunchyroll.com",
-        "client_id": "bsnpi3bfoheqikh_nunb",
-        "client_secret": "OlLXqh7dEAXuOAeyu0g8N6tClDY8Bpuf"
+        "client_id": "oedarmxstlh1jvawimnq",
+        "client_secret": "9lEhvHZJD32juV5dW9VOS57dopdJpgo1"
     },
     "url_legacy": "https://www.crunchyroll.com",
     "url_static": "https://static.crunchyroll.com",
@@ -20,7 +20,7 @@
     "cast_id": "4D84B31C",
     "url_eec": "https://eec.crunchyroll.com",
     "app_config": "app-config-default-production.json",
-    "version_name": "3.24.1",
+    "version_name": "3.46.2",
     "app_id": "cr-android",
     "os_release_version": "13",
     "preferred_subtitles_options": [
