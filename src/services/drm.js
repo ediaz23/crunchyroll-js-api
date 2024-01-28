@@ -78,13 +78,13 @@ async function revokeToken({ account, episodeId, token }) {
  * @param {Object} obj
  * @param {import('../types').AccountAuth} obj.account
  * @param {String} obj.assetId
+ * @param {String} obj.sessionId `${new Date().getTime()}-${account.accountId}`
  * @returns {Promise<{custom_data: String, token: String}>}
  */
-async function getAuth({ account, assetId }) {
+async function getAuth({ account, assetId, sessionId }) {
     const fnName = 'getAuth'
     logger.debug(fnName)
     const url = `${getPlUrl()}/drm/v1/auth`
-    const time = new Date().getTime()
     const reqConfig = {
         method: 'post',
         headers: { Authorization: account.token },
@@ -92,12 +92,13 @@ async function getAuth({ account, assetId }) {
         body: JSON.stringify({
             accounting_id: getAccountingId(),
             asset_id: assetId,
-            session_id: `${time}-${account.accountId}`,
+            session_id: sessionId,
             user_id: account.accountId,
         })
     }
     return utils.makeRequest(fnName, url, reqConfig)
 }
+
 
 export default {
     getStream,
