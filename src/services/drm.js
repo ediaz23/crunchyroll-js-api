@@ -77,6 +77,25 @@ async function revokeToken({ account, episodeId, token }) {
 /**
  * @param {Object} obj
  * @param {import('../types').AccountAuth} obj.account
+ * @param {String} obj.episodeId
+ * @param {String} obj.token
+ * @returns {Promise}
+ */
+async function deleteToken({ account, episodeId, token }) {
+    const fnName = 'deleteToken'
+    logger.debug(fnName)
+    const url = `${getDrmUrl()}/v1/token/${episodeId}/${token}`
+    const reqConfig = {
+        method: 'delete',
+        headers: { Authorization: account.token },
+        baseUrlIncluded: true,
+    }
+    return utils.makeRequest(fnName, url, reqConfig)
+}
+
+/**
+ * @param {Object} obj
+ * @param {import('../types').AccountAuth} obj.account
  * @param {String} obj.assetId
  * @param {String} obj.sessionId `${new Date().getTime()}-${account.accountId}`
  * @returns {Promise<{custom_data: String, token: String}>}
@@ -105,4 +124,5 @@ export default {
     getAuth,
     keepAlive,
     revokeToken,
+    deleteToken,
 }
