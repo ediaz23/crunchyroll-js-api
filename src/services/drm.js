@@ -8,13 +8,18 @@ import { getDrmUrl, getPlUrl, getAccountingId } from '../const.js'
  * @param {import('../types').AccountAuth} obj.account
  * @param {String} obj.episodeId
  * @param {String} [obj.type] only null or music
+ * @param {String} [obj.browser] browser name
  * @returns {Promise<Object>}
  */
-async function getStream({ account, episodeId, type }) {
+async function getStream({ account, episodeId, type, browser }) {
     const fnName = 'getStream'
     logger.debug(fnName)
     type = type ? `/${type}` : ''
-    const url = `${getDrmUrl()}/v1${type}/${episodeId}/web/chrome/play`
+    browser = browser || 'chrome'
+    if (!['chrome', 'firefox', 'safari', 'explorer'].includes(browser)) {
+        throw new Error('Wrong browser, ' + browser)
+    }
+    const url = `${getDrmUrl()}/v1${type}/${episodeId}/web/${browser}/play`
     const reqConfig = {
         method: 'get',
         headers: { Authorization: account.token },
