@@ -1,5 +1,5 @@
 
-let LEVEL = 'info'
+let LEVEL = 'info', COLOR_ACTIVE = true
 
 if (process && process.env && process.env.LOG_LEVEL) {
     LEVEL = process.env.LOG_LEVEL
@@ -10,7 +10,8 @@ if (process && process.env && process.env.LOG_LEVEL) {
     info: Function,
     error: Function,
     debug: Function,
-    setLevel: Function
+    setLevel: Function,
+    activeColor: Function,
 }}
  */
 const logger = {
@@ -18,6 +19,7 @@ const logger = {
     error: () => { },
     debug: () => { },
     setLevel: () => { },
+    activeColor: active => { COLOR_ACTIVE = active },
 }
 
 if (!console.debug) { console.debug = console.log }
@@ -44,7 +46,7 @@ const formatObj = obj => {
     return extra
 }
 
-const colors = { debug: '\x1b[33m', info: '\x1b[32m', error: '\x1b[31m' }
+const colors = { debug: '\x1b[33m', info: '\x1b[32m', error: '\x1b[31m', reset: '\x1b[0m' }
 
 const getMessage = (message, level) => {
     if (!(typeof (message) === 'string' || message instanceof String)) {
@@ -53,8 +55,11 @@ const getMessage = (message, level) => {
     const error = new Error();
     /** @type {String} */
     const callerFile = error.stack.split('\n')[3]
-    const RESET_COLOR = '\x1b[0m'
-    return `${Date.now()} ${colors[level]}${level.toUpperCase()} ${message} ${(callerFile || '').trim()} ${RESET_COLOR}`
+    let color = colors[level], resetColor = colors['reset']
+    if (!COLOR_ACTIVE) {
+        color = resetColor = ''
+    }
+    return `${Date.now()} ${color}${level.toUpperCase()} ${message} ${(callerFile || '').trim()} ${resetColor}`
 }
 
 function configBrowserLogger(newLevel) {
