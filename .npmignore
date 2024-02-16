@@ -1,0 +1,12 @@
+mock
+node_modules
+tests
+authData.example.json
+authData.json
+jest.config.js
+main.js
+.git
+.gitignore
+.npmignore
+.settings
+.project
