@@ -10,3 +10,6 @@ main.js
 .npmignore
 .settings
 .project
+.eslintignore
+.eslintrc.json
+
