@@ -1,6 +1,7 @@
 
 import path from 'path'
 import TerserPlugin from 'terser-webpack-plugin'
+import GenerateFilePlugin from 'generate-file-webpack-plugin'
 
 const __filename = new URL(import.meta.url).pathname
 const __dirname = path.dirname(__filename)
@@ -35,7 +36,23 @@ const developmentConfig = {
             }
         ]
     },
-    devtool: 'source-map'
+    devtool: 'source-map',
+    plugins: [
+        new GenerateFilePlugin({
+            file: 'index.js', // Nombre del archivo a generar
+            content: `
+export default await (async () => {
+    let out = null
+    if (process?.env?.NODE_ENV === 'development') {
+        out = await import('./crunchyroll-js-api.debug.js')
+    } else {
+        out = await import('./crunchyroll-js-api.min.js')
+    }
+    return out
+})()
+            `,
+        }),
+    ]
 }
 
 const productionConfig = { ...developmentConfig }
