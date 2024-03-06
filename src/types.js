@@ -5,7 +5,7 @@
  * @type {Object}
  * @property {String} access_token
  * @property {String} refresh_token
- * @property {String} expires_in
+ * @property {Number} expires_in
  * @property {String} token_type
  * @property {String} scope
  * @property {String} country
@@ -18,7 +18,7 @@
  * @type {Object}
  * @property {String} accessToken
  * @property {String} refreshToken
- * @property {String} expiresIn
+ * @property {Number} expiresIn
  * @property {String} tokenType
  * @property {String} scope
  * @property {String} country
@@ -172,6 +172,14 @@
  * @property {String} list_id
  * @property {Number} total
  * @property {String} modified_at
+ */
+
+/**
+ * @typedef CrunchyRequestTmp
+ * @type {Object}
+ * @property {Boolean} [baseUrlIncluded]
+ * 
+ * @typedef {CrunchyRequestTmp & import('node-fetch').Request} CrunchyRequest
  */
 
 export default {}  // eslint-disable-line no-undef

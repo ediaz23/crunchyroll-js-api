@@ -29,6 +29,7 @@ async function getWatchlist({ account, quantity, start, ratings, order }) {
         method: 'get',
         headers: { Authorization: account.token }
     }
+    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig)
 }
 
@@ -69,6 +70,7 @@ async function getBrowseAll({ account, quantity, start, category, query, seasonT
             'add_watchlist_status': true,
         }
     }
+    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig)
 }
 
@@ -100,6 +102,7 @@ async function getBrowseIndex({ account, category, sort, ratings }) {
             'add_watchlist_status': true,
         }
     }
+    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig)
 }
 
@@ -123,6 +126,7 @@ async function getCategories({ account, contentId }) {
             'add_watchlist_status': true,
         }
     }
+    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig)
 }
 
@@ -141,8 +145,9 @@ async function getSubcategories({ account, parentCategory }) {
     const url = `/content/v2/discover/categories/${parentCategory}/sub_categories?${queryStr}`
     const reqConfig = {
         method: 'get',
-        headers: { 'Authorization': account.token }
+        headers: { Authorization: account.token }
     }
+    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig)
 }
 
@@ -163,8 +168,9 @@ async function getHomeFeed({ account, quantity, start }) {
     const url = `/content/v2/discover/${account.accountId}/home_feed?${query}`
     const reqConfig = {
         method: 'get',
-        headers: { 'Authorization': account.token }
+        headers: { Authorization: account.token }
     }
+    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig)
 }
 
@@ -185,8 +191,9 @@ async function getHistory({ account, quantity, ratings }) {
     const url = `/content/v2/discover/${account.accountId}/history?${query}`
     const reqConfig = {
         method: 'get',
-        headers: { 'Authorization': account.token }
+        headers: { Authorization: account.token }
     }
+    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig)
 }
 
@@ -209,8 +216,9 @@ async function getRecommendations({ account, quantity, start, ratings }) {
     const url = `/content/v2/discover/${account.accountId}/recommendations?${queryStr}`
     const reqConfig = {
         method: 'get',
-        headers: { 'Authorization': account.token }
+        headers: { Authorization: account.token }
     }
+    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig)
 }
 
@@ -228,8 +236,9 @@ async function getSeasonList({ account }) {
     const url = `/content/v2/discover/seasonal_tags?${query}`
     const reqConfig = {
         method: 'get',
-        headers: { 'Authorization': account.token }
+        headers: { Authorization: account.token }
     }
+    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig)
 }
 
@@ -254,8 +263,9 @@ async function getSimilar({ account, contentId, quantity, start, ratings }) {
     const url = `/content/v2/discover/${account.accountId}/similar_to/${contentId}?${queryStr}`
     const reqConfig = {
         method: 'get',
-        headers: { 'Authorization': account.token }
+        headers: { Authorization: account.token }
     }
+    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig)
 }
 
@@ -274,8 +284,9 @@ async function getNext({ account, contentId }) {
     const url = `/content/v2/discover/up_next/${contentId}?${query}`
     const reqConfig = {
         method: 'get',
-        headers: { 'Authorization': account.token }
+        headers: { Authorization: account.token }
     }
+    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig)
 }
 
@@ -293,8 +304,9 @@ async function getPrev({ account, contentId }) {
     const url = `/content/v2/discover/previous_episode/${contentId}?${query}`
     const reqConfig = {
         method: 'get',
-        headers: { 'Authorization': account.token }
+        headers: { Authorization: account.token }
     }
+    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig)
 }
 
@@ -329,6 +341,7 @@ async function search({ account, query, quantity, start, type }) {
         method: 'get',
         headers: { Authorization: account.token }
     }
+    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig)
 }
 

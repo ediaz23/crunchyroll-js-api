@@ -30,11 +30,12 @@ async function addEpisodeRating({ account, contentId, rating, contentType }) {
     const reqConfig = {
         method: 'put',
         headers: {
-            'Authorization': account.token,
+            Authorization: account.token,
             'Content-Type': 'application/json',
         },
         body: JSON.stringify({ rating: rating})
     }
+    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig)
 }
 
@@ -64,11 +65,12 @@ async function addRating({ account, contentId, rating, contentType }) {
     const reqConfig = {
         method: 'put',
         headers: {
-            'Authorization': account.token,
+            Authorization: account.token,
             'Content-Type': 'application/json',
         },
         body: JSON.stringify({ rating: rating})
     }
+    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig)
 }
 
@@ -92,8 +94,9 @@ async function _getRatings({ account, contentId, contentType }) {
     const url = `/content-reviews/v2/user/${account.accountId}/rating/${contentType}/${contentId}?${queryStr}`
     const reqConfig = {
         method: 'get',
-        headers: { 'Authorization': account.token }
+        headers: { Authorization: account.token }
     }
+    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig)
 }
 
@@ -140,8 +143,9 @@ async function removeRating({ account, contentId, contentType }) {
     const url = `/content-reviews/v2/user/${account.accountId}/rating/${contentType}/${contentId}?${queryStr}`
     const reqConfig = {
         method: 'delete',
-        headers: { 'Authorization': account.token }
+        headers: { Authorization: account.token }
     }
+    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig)
 }
 

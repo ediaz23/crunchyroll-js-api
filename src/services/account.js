@@ -5,7 +5,7 @@ import logger from '../logger.js'
 
 /**
  * Return account info
- * @param {{token: String}}
+ * @param {{token: String}} obj
  * @returns {Promise<import('../types').Account>}
  */
 async function getAccountId({ token }) {
@@ -14,15 +14,16 @@ async function getAccountId({ token }) {
     const url = `/accounts/v1/me`
     const reqConfig = {
         method: 'get',
-        headers: { 'Authorization': token }
+        headers: { Authorization: token }
     }
+    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig)
 }
 
 
 /**
  * Return profile info
- * @param {{token: String}}
+ * @param {{token: String}} obj
  * @returns {Promise<import('../types').Profile>}
  */
 async function getProfile({ token }) {
@@ -31,15 +32,16 @@ async function getProfile({ token }) {
     const url = `/accounts/v1/me/profile`
     const reqConfig = {
         method: 'get',
-        headers: { 'Authorization': token }
+        headers: { Authorization: token }
     }
+    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig)
 }
 
 
 /**
  * Return user names, idk what it is
- * @param {{token: String}}
+ * @param {{token: String}} obj
  * @returns {Promise<{usernames: Array<String>}>}
  */
 async function getUsernames({ token }) {
@@ -48,8 +50,9 @@ async function getUsernames({ token }) {
     const url = `/accounts/v1/usernames`
     const reqConfig = {
         method: 'get',
-        headers: { 'Authorization': token }
+        headers: { Authorization: token }
     }
+    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig)
 }
 
@@ -59,7 +62,7 @@ async function getUsernames({ token }) {
  * @param {{
     token: String,
     data: import('../types').Profile,
- }}
+ }} obj
  * @returns {Promise}
  */
 async function updateProfile({ token, data }) {
@@ -69,11 +72,12 @@ async function updateProfile({ token, data }) {
     const reqConfig = {
         method: 'patch',
         headers: {
-            'Authorization': token,
+            Authorization: token,
             'Content-Type': 'application/json',
         },
         body: JSON.stringify(data),
     }
+    // @ts-expect-error
     await utils.makeRequest(fnName, url, reqConfig)
 }
 

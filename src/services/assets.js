@@ -4,7 +4,7 @@ import logger from '../logger.js'
 
 /**
  * Return Avatar list
- * @param {{token: String}}
+ * @param {{token: String}} obj
  * @returns {Promise<{items: Array<String>}>}
  */
 async function getAvatar({ token }) {
@@ -13,8 +13,9 @@ async function getAvatar({ token }) {
     const url = `/assets/v1/avatar`
     const reqConfig = {
         method: 'get',
-        headers: { 'Authorization': token }
+        headers: { Authorization: token }
     }
+    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig)
 }
 

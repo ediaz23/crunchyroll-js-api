@@ -49,6 +49,7 @@ async function getToken({ username, password, device, grantType, scope }) {
             'ETP-Anonymous-ID': null,
         }
     }
+    // @ts-expect-error
     const token = await utils.makeRequest(fnName, url, reqConfig)
     if (token) {
         token.created_date = new Date().toISOString()
@@ -59,7 +60,7 @@ async function getToken({ username, password, device, grantType, scope }) {
 
 /**
  * Refresh access token.
- * @param {{refreshToken: String}}
+ * @param {{refreshToken: String}} obj
  * @returns {Promise<import('../types').Token>}
  */
 async function getRefreshToken({ refreshToken }) {
@@ -75,11 +76,12 @@ async function getRefreshToken({ refreshToken }) {
         method: 'post',
         body: await utils.toURLSearchParams(body),
         headers: {
-            'Authorization': `Basic ${basicToken}`,
+            Authorization: `Basic ${basicToken}`,
             'Content-Type': 'application/x-www-form-urlencoded',
             'ETP-Anonymous-ID': null,
         }
     }
+    // @ts-expect-error
     const token = await utils.makeRequest(fnName, url, reqConfig)
     if (token) {
         token.created_date = new Date().toISOString()
@@ -90,7 +92,7 @@ async function getRefreshToken({ refreshToken }) {
 
 /**
  * revoke access token.
- * @param {{refreshToken: String}}
+ * @param {{refreshToken: String}} obj
  * @returns {Promise<{status: String}>}
  */
 async function revokeRefreshToken({ refreshToken }) {
@@ -105,11 +107,12 @@ async function revokeRefreshToken({ refreshToken }) {
         method: 'post',
         body: await utils.toURLSearchParams(body),
         headers: {
-            'Authorization': `Basic ${basicToken}`,
+            Authorization: `Basic ${basicToken}`,
             'Content-Type': 'application/x-www-form-urlencoded',
             'ETP-Anonymous-ID': null,
         }
     }
+    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig)
 }
 

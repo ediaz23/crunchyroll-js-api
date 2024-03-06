@@ -18,8 +18,9 @@ async function getEpisode({ account, episodeId }) {
     const url = `/content/v2/cms/episodes/${episodeId}?${queryStr}`
     const reqConfig = {
         method: 'get',
-        headers: { 'Authorization': account.token }
+        headers: { Authorization: account.token }
     }
+    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig)
 }
 
@@ -38,15 +39,16 @@ async function getEpisodes({ account, seasonId }) {
     const url = `/content/v2/cms/seasons/${seasonId}/episodes?${queryStr}`
     const reqConfig = {
         method: 'get',
-        headers: { 'Authorization': account.token }
+        headers: { Authorization: account.token }
     }
+    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig)
 }
 
 
 /**
  * @param {Object} obj
- * @param {import('../types').CmsAuth} obj.cmsAuth
+ * @param {import('../types').AccountAuth} obj.account
  * @param {String} obj.movieId
  * @returns {Promise<Object>}
  */
@@ -58,8 +60,9 @@ async function getMovie({ account, movieId }) {
     const url = `/content/v2/cms/movies/${movieId}?${queryStr}`
     const reqConfig = {
         method: 'get',
-        headers: { 'Authorization': account.token }
+        headers: { Authorization: account.token }
     }
+    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig)
 }
 
@@ -78,8 +81,9 @@ async function getMovieListing({ account, movieListingId }) {
     const url = `/content/v2/cms/movie_listings/${movieListingId}?${queryStr}`
     const reqConfig = {
         method: 'get',
-        headers: { 'Authorization': account.token }
+        headers: { Authorization: account.token }
     }
+    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig)
 }
 
@@ -97,8 +101,9 @@ async function getMovieListingExtras({ account, movieListingId }) {
     const url = `/content/v2/cms/movie_listings/${movieListingId}/extra_videos?${queryStr}`
     const reqConfig = {
         method: 'get',
-        headers: { 'Authorization': account.token }
+        headers: { Authorization: account.token }
     }
+    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig)
 }
 
@@ -117,8 +122,9 @@ async function getMovies({ account, movieListingId }) {
     const url = `/content/v2/cms/movie_listings/${movieListingId}/movies?${queryStr}`
     const reqConfig = {
         method: 'get',
-        headers: { 'Authorization': account.token }
+        headers: { Authorization: account.token }
     }
+    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig)
 }
 
@@ -138,8 +144,9 @@ async function getObjects({ account, objectIds, ratings }) {
     const url = `/content/v2/cms/objects/${objectIds.join(',')}?${query}`
     const reqConfig = {
         method: 'get',
-        headers: { 'Authorization': account.token }
+        headers: { Authorization: account.token }
     }
+    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig)
 }
 
@@ -157,8 +164,9 @@ async function getSeason({ account, seasonId }) {
     const url = `/content/v2/cms/seasons/${seasonId}?${queryStr}`
     const reqConfig = {
         method: 'get',
-        headers: { 'Authorization': account.token }
+        headers: { Authorization: account.token }
     }
+    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig)
 }
 
@@ -176,8 +184,9 @@ async function getSeasonExtras({ account, seasonId }) {
     const url = `/content/v2/cms/seasons/${seasonId}/extra_videos?${queryStr}`
     const reqConfig = {
         method: 'get',
-        headers: { 'Authorization': account.token }
+        headers: { Authorization: account.token }
     }
+    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig)
 }
 
@@ -195,8 +204,9 @@ async function getSeasons({ account, serieId }) {
     const url = `/content/v2/cms/series/${serieId}/seasons?${queryStr}`
     const reqConfig = {
         method: 'get',
-        headers: { 'Authorization': account.token }
+        headers: { Authorization: account.token }
     }
+    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig)
 }
 
@@ -214,12 +224,14 @@ async function getSeries({ account, serieId }) {
     const url = `/content/v2/cms/series/${serieId}?${queryStr}`
     const reqConfig = {
         method: 'get',
-        headers: { 'Authorization': account.token }
+        headers: { Authorization: account.token }
     }
+    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig)
 }
 
 /**
+ * @param {Object} obj
  * @param {import('../types').AccountAuth} obj.account
  * @param {String} obj.streamUrl
  * @returns {Promise<Object>}
@@ -232,8 +244,9 @@ async function getStreamsWithURL({ account, streamUrl }) {
     const url = `${streamUrl}?${queryStr}`
     const reqConfig = {
         method: 'get',
-        headers: { 'Authorization': account.token }
+        headers: { Authorization: account.token }
     }
+    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig)
 }
 
@@ -251,8 +264,9 @@ async function getStreams({ account, contentId }) {
     const url = `/content/v2/cms/videos/${contentId}/streams?${queryStr}`
     const reqConfig = {
         method: 'get',
-        headers: { 'Authorization': account.token }
+        headers: { Authorization: account.token }
     }
+    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig)
 }
 
@@ -269,11 +283,12 @@ async function getSkiptEvents({ account, contentId }) {
     const url = `${getStaticUrl()}/skip-events/production/${contentId}.json`
     const reqConfig = {
         method: 'get',
-        headers: { 'Authorization': account.token },
+        headers: { Authorization: account.token },
         baseUrlIncluded: true,
     }
     let out = null
     try {
+        // @ts-expect-error
         out = await utils.makeRequest(fnName, url, reqConfig)
     } catch (e) {
         // ignore any error

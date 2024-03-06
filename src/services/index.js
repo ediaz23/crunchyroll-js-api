@@ -5,7 +5,7 @@ import logger from '../logger.js'
 
 /**
  * Return index data. Cms is set there
- * @param {{token: String}}
+ * @param {{token: String}} obj
  * @returns {Promise<import('../types').CmsContainer>}
  */
 async function getIndexConfig({ token }) {
@@ -14,8 +14,9 @@ async function getIndexConfig({ token }) {
     const url = `/index/v2`
     const reqConfig = {
         method: 'get',
-        headers: { 'Authorization': token }
+        headers: { Authorization: token }
     }
+    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig)
 }
 

@@ -25,6 +25,7 @@ async function getStream({ account, episodeId, type, browser }) {
         headers: { Authorization: account.token },
         baseUrlIncluded: true,
     }
+    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig)
 }
 
@@ -53,13 +54,14 @@ async function keepAlive({ account, token, episodeId, playhead }) {
         // #endif
     }
     body = new FormDataFn()
-    body.append('position', playhead)
+    body.append('position', playhead.toString())
     const reqConfig = {
         method: 'PATCH',
         headers: { Authorization: account.token },
         baseUrlIncluded: true,
         body,
     }
+    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig)
 }
 
@@ -79,6 +81,7 @@ async function revokeToken({ account, episodeId, token }) {
         headers: { Authorization: account.token },
         baseUrlIncluded: true,
     }
+    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig)
 }
 
@@ -98,6 +101,7 @@ async function deleteToken({ account, episodeId, token }) {
         headers: { Authorization: account.token },
         baseUrlIncluded: true,
     }
+    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig)
 }
 
@@ -123,6 +127,7 @@ async function getAuth({ account, assetId, sessionId }) {
             user_id: account.accountId,
         })
     }
+    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig)
 }
 

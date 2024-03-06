@@ -25,7 +25,7 @@ async function addItemToCustomList({ account, listId, contentId }) {
         },
         body: JSON.stringify({ content_id: contentId })
     }
-
+    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig)
 }
 
@@ -57,7 +57,7 @@ async function changeCustomListItemPosition({ account, listId, contentId, locati
             ref_content_id: refContentId
         })
     }
-
+    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig)
 }
 
@@ -88,6 +88,7 @@ async function getCustomListItems({ account, listId, page, pageSize, sort, order
         method: 'get',
         headers: { Authorization: account.token }
     }
+    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig)
 }
 
@@ -112,7 +113,7 @@ async function deleteCustomListItem({ account, listId, contentId }) {
             'Content-Type': 'application/json',
         },
     }
-
+    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig)
 }
 
@@ -137,7 +138,7 @@ async function createPrivateCustomList({ account, title }) {
         },
         body: JSON.stringify({ title })
     }
-
+    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig)
 }
 
@@ -157,6 +158,7 @@ async function getCustomLists({ account }) {
         method: 'get',
         headers: { Authorization: account.token }
     }
+    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig)
 }
 
@@ -182,7 +184,7 @@ async function updateCustomList({ account, listId, title }) {
         },
         body: JSON.stringify({ title })
     }
-
+    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig)
 }
 
@@ -206,7 +208,7 @@ async function deletePrivateCustomList({ account, listId }) {
             'Content-Type': 'application/json',
         },
     }
-
+    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig)
 }
 
@@ -231,7 +233,7 @@ async function addWatchlistItem({ account, contentId }) {
         },
         body: JSON.stringify({ content_id: contentId })
     }
-
+    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig)
 }
 
@@ -254,6 +256,7 @@ async function getWatchlistItems({ account, contentIds }) {
         method: 'get',
         headers: { Authorization: account.token }
     }
+    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig)
 }
 
@@ -279,7 +282,7 @@ async function updateWatchlistItemFavoriteStatus({ account, contentId, isFavorit
         },
         body: JSON.stringify({ is_favorite: isFavorite })
     }
-
+    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig)
 }
 
@@ -303,7 +306,7 @@ async function deleteWatchlistItem({ account, contentId }) {
             'Content-Type': 'application/json',
         },
     }
-
+    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig)
 }
 
@@ -329,6 +332,7 @@ async function getWatchHistory({ account, page, pageSize }) {
             upload_offline_playheads: true,
         }
     }
+    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig)
 }
 
@@ -353,6 +357,7 @@ async function _getPlayheads({ account, contentIds, uploadOfflinePlayheads }) {
             upload_offline_playheads: uploadOfflinePlayheads
         }
     }
+    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig)
 }
 
@@ -392,7 +397,7 @@ async function savePlayhead({ account, contentId, playhead }) {
             playhead: playhead
         })
     }
-
+    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig)
 }
 

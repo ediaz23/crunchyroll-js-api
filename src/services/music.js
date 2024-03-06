@@ -22,6 +22,7 @@ async function getFeed({ account, quantity, start }) {
         method: 'get',
         headers: { Authorization: account.token }
     }
+    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig)
 }
 
@@ -42,6 +43,7 @@ async function getArtist({ account, artistIds }) {
         method: 'get',
         headers: { Authorization: account.token }
     }
+    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig)
 }
 
@@ -49,7 +51,7 @@ async function getArtist({ account, artistIds }) {
 /**
  * @param {Object} obj
  * @param {import('../types').AccountAuth} obj.account
- * @param {Array<String>} [obj.artistIds]
+ * @param {Array<String>} [obj.artistId]
  * @returns {Promise<{items: Array<Object>}>}
  */
 async function getArtistConcerts({ account, artistId }) {
@@ -62,6 +64,7 @@ async function getArtistConcerts({ account, artistId }) {
         method: 'get',
         headers: { Authorization: account.token }
     }
+    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig)
 }
 
@@ -82,6 +85,7 @@ async function getArtistVideos({ account, artistId }) {
         method: 'get',
         headers: { Authorization: account.token }
     }
+    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig)
 }
 
@@ -102,6 +106,7 @@ async function getConcerts({ account, concertIds }) {
         method: 'get',
         headers: { Authorization: account.token }
     }
+    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig)
 }
 
@@ -122,10 +127,12 @@ async function getVideo({ account, musicIds }) {
         method: 'get',
         headers: { Authorization: account.token }
     }
+    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig)
 }
 
 /**
+ * @param {Object} obj
  * @param {import('../types').AccountAuth} obj.account
  * @param {String} obj.streamUrl
  * @returns {Promise<Object>}
@@ -140,6 +147,7 @@ async function getStreamsWithURL({ account, streamUrl }) {
         method: 'get',
         headers: { Authorization: account.token }
     }
+    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig)
 }
 
@@ -159,6 +167,7 @@ async function getStreams({ account, contentId }) {
         method: 'get',
         headers: { Authorization: account.token }
     }
+    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig)
 }
 

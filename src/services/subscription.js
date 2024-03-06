@@ -18,8 +18,9 @@ async function getProducts({ auth, source }) {
     const url = `/subs/v2/products?${queryStr}`
     const reqConfig = {
         method: 'get',
-        headers: { 'Authorization': auth.token }
+        headers: { Authorization: auth.token }
     }
+    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig)
 }
 
@@ -38,8 +39,9 @@ async function getUserBenefits({ auth, externalId }) {
     const url = `/subs/v1/subscriptions/${externalId}/benefits?${queryStr}`
     const reqConfig = {
         method: 'get',
-        headers: { 'Authorization': auth.token }
+        headers: { Authorization: auth.token }
     }
+    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig)
 }
 
@@ -58,8 +60,9 @@ async function getUserSubscription({ auth, externalId }) {
     const url = `/subs/v1/subscriptions/${externalId}/products?${queryStr}`
     const reqConfig = {
         method: 'get',
-        headers: { 'Authorization': auth.token }
+        headers: { Authorization: auth.token }
     }
+    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig)
 }
 

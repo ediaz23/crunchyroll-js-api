@@ -20,6 +20,7 @@ let fetchFunction = null
 async function logRes(fnName, res) {
     if (!(200 <= res.status && res.status < 300)) {
         logger.error(`Status Code: ${res.status} - ${fnName}`)
+        /** @type {Object} */
         let result = null
         try {
             result = await res.json()
@@ -38,7 +39,6 @@ async function logRes(fnName, res) {
     }
 }
 
-
 /**
  * Make http request and return raw response
  * @param {String} url
@@ -47,14 +47,17 @@ async function logRes(fnName, res) {
  */
 async function makeRawRequest(url, reqConfig) {
     let fetchFn = null
+    // @ts-expect-error
     if (reqConfig.baseUrlIncluded) {
         url = decodeURIComponent(`${url}`)
+        // @ts-expect-error
         delete reqConfig.baseUrlIncluded
     } else {
         url = decodeURIComponent(`${CONST.getBaseUrl()}${url}`)
     }
     logger.debug(`${reqConfig.method} - ${url}`)
     if (!reqConfig.headers) {
+        // @ts-expect-error
         reqConfig.headers = {}
     }
     reqConfig.headers['User-Agent'] = CONST.getUserAgent()
@@ -100,7 +103,7 @@ async function makeRequest(fnName, url, reqConfig) {
  * @param {Object} data
  * @param {String} key
  * @param {Object} value
- * @param {Function} validator
+ * @param {Function} [validator]
  */
 function addParam(data, key, value, validator) {
     if (value !== undefined) {
@@ -114,7 +117,7 @@ function addParam(data, key, value, validator) {
 
 /**
  * Convert snake case to camel case
- * @param {String}
+ * @param {String} str
  * @returns {String}
  */
 function toCamel(str) {
@@ -124,7 +127,7 @@ function toCamel(str) {
 
 /**
  * Convert camel case to snake case
- * @param {String}
+ * @param {String} str
  * @returns {String}
  */
 function toSnake(str) {

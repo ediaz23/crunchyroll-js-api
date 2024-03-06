@@ -14,7 +14,7 @@ import accountService from './services/account.js'
  * @property {import('./types').AccountObj} account
  */
 /** @type {Storage} */
-const storage = {}
+const storage = { credential: null, device: null, token: null, cms: null, account: null }
 /**
  * @type {Function}
  * @param {Object} data
@@ -35,7 +35,7 @@ async function getAuthToken() {
 
     if (storage.token && storage.token.accessToken) {
         const now = new Date()
-        const diff = (now - new Date(storage.token.createdDate)) / 1000
+        const diff = (now.getTime() - (new Date(storage.token.createdDate)).getTime()) / 1000
         if (diff < storage.token.expiresIn) {
             token = storage.token
         }
@@ -170,7 +170,7 @@ async function saveToLocal() {
 
 
 /**
- * @param {Object}
+ * @param {Object} jsonData
  * @returns {Object}
  */
 function fromJSON(jsonData) {
@@ -179,7 +179,7 @@ function fromJSON(jsonData) {
 
 
 /**
- * @param {Object}
+ * @param {Object} jsonData
  * @returns {Object}
  */
 function toJSON(jsonData) {
@@ -188,7 +188,8 @@ function toJSON(jsonData) {
 
 
 /**
- * @param {Object}
+ * @param {Object} jsonData
+ * @param {Function} func
  * @returns {Object}
  */
 function swapObjectJson(jsonData, func) {
@@ -231,7 +232,7 @@ async function authDataFile() {
 
 /**
  * Set function to save and load data from external storage
- * @param {{save: Function, load: Function}}
+ * @param {{save: Function, load: Function}} obj
  */
 function setExternalStorage({ save, load }) {
     if (load !== undefined) {
