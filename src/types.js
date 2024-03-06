@@ -136,6 +136,7 @@
 /**
  * @typedef RatingStars
  * @type {Object}
+ * @ts-ignore
  * @property {RatingBasic} [1s]
  * @property {RatingBasic} [2s]
  * @property {RatingBasic} [3s]

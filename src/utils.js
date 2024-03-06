@@ -46,7 +46,7 @@ async function logRes(fnName, res) {
  * @returns {Promise<import('node-fetch').Response>}
  */
 async function makeRawRequest(url, reqConfig) {
-    let fetchFn = fetchFunction
+    let fetchFn = null
     if (reqConfig.baseUrlIncluded) {
         url = decodeURIComponent(`${url}`)
         delete reqConfig.baseUrlIncluded
@@ -58,16 +58,18 @@ async function makeRawRequest(url, reqConfig) {
         reqConfig.headers = {}
     }
     reqConfig.headers['User-Agent'] = CONST.getUserAgent()
-    try {
-        if (!fetchFn) {
+
+    if (fetchFunction) {
+        fetchFn = fetchFunction
+    } else {
+        try {
+            fetchFn = window.fetch
+        } catch (_e) {
+            // #if process.env.NODE_COMPILING !== 'true'
             fetchFn = await import('node-fetch')
             fetchFn = fetchFn.default
-            if (!(fetchFn instanceof Function)) {
-                throw 'not a function'
-            }
+            // #endif
         }
-    } catch (_e) {
-        fetchFn = fetchFunction || fetch
     }
     return fetchFn(url, reqConfig)
 }
@@ -138,14 +140,16 @@ async function toURLSearchParams(data) {
     let URLSearchParamsClass = null
 
     try {
+        URLSearchParamsClass = window.URLSearchParams
+    } catch (_e) {
+        // #if process.env.NODE_COMPILING !== 'true'
         const url = await import('url')
         if (url.URLSearchParams) {
             URLSearchParamsClass = url.URLSearchParams
         } else {
             throw new Error()
         }
-    } catch (_e) {
-        URLSearchParamsClass = URLSearchParams
+        // #endif
     }
     return new URLSearchParamsClass(data)
 }

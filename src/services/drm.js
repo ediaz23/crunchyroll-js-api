@@ -43,11 +43,14 @@ async function keepAlive({ account, token, episodeId, playhead }) {
     const queryStr = await utils.toURLSearchParams(queryData)
     const url = `${getDrmUrl()}/v1/token/${episodeId}/${token}/keepAlive?${queryStr}`
     let body = null, FormDataFn = null
+
     try {
+        FormDataFn = window.FormData
+    } catch (_e) {
+        // #if process.env.NODE_COMPILING !== 'true'
         FormDataFn = await import('form-data')
         FormDataFn = FormDataFn.default
-    } catch (_e) {
-        FormDataFn = window.FormData
+        // #endif
     }
     body = new FormDataFn()
     body.append('position', playhead)

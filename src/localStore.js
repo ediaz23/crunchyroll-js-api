@@ -124,19 +124,21 @@ async function loadFromLocal() {
     let data = null
     const authData = await authDataFile()
     try {
-        const fs = (await import('fs')).default
-        if (fs.existsSync(authData)) {
-            data = fs.readFileSync(authData)
-        }
-    } catch (_e) {
         if (externalLoadData) {
             data = await externalLoadData()
         } else {
-            const data64 = localStorage.getItem(authData)
+            const data64 = window.localStorage.getItem(authData)
             if (data64) {
                 data = atob(data64)
             }
         }
+    } catch (_e) {
+        // #if process.env.NODE_COMPILING !== 'true'
+        const fs = (await import('fs')).default
+        if (fs.existsSync(authData)) {
+            data = fs.readFileSync(authData)
+        }
+        // #endif
     }
     if (data) {
         const jsonData = JSON.parse(data)
@@ -156,11 +158,13 @@ async function saveToLocal() {
         if (externalSaveData) {
             await externalSaveData(data)
         } else {
-            const fs = (await import('fs')).default
-            fs.writeFileSync(authData, data)
+            window.localStorage.setItem(authData, btoa(data))
         }
     } catch (_e) {
-        localStorage.setItem(authData, btoa(data))
+        // #if process.env.NODE_COMPILING !== 'true'
+        const fs = (await import('fs')).default
+        fs.writeFileSync(authData, data)
+        // #endif
     }
 }
 
@@ -215,13 +219,12 @@ function swapObjectJson(jsonData, func) {
  * @returns {Promise<String>}
  */
 async function authDataFile() {
-    let out = ''
-    try {
-        const path = (await import('path')).default
-        out = path.resolve('.') + '/authData.json'
-    } catch (_e) {
-        out = 'crunchyData'
-    }
+    let out = 'crunchyData'
+
+    // #if process.env.NODE_COMPILING !== 'true'
+    const path = (await import('path')).default
+    out = path.resolve('.') + '/authData.json'
+    // #endif
     return out
 }
 

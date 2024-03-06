@@ -4,12 +4,16 @@
     "description": "JavaScript API consumer for crunchyroll",
     "homepage": "https://github.com/ediaz23/crunchyroll_js_api",
     "version": "1.2.4",
-    "main": "index.js",
+    "main": "dist/crunchyroll-js-api.min.js",
+    "types": "dist/types.d.ts",
     "scripts": {
         "play": "node --experimental-specifier-resolution=node main.js",
         "lint": "npx eslint --ext .js ./",
         "test": "node --experimental-vm-modules --experimental-specifier-resolution=node ./node_modules/.bin/jest",
-        "mock": "node --experimental-specifier-resolution=node createMockData.js"
+        "mock": "node --experimental-specifier-resolution=node createMockData.js",
+        "pack": "NODE_COMPILING=true webpack --config webpack.config.js",
+        "types": "npx tsc --allowJs --checkJs --outDir ./dist --declaration src/types.js",
+        "build": "npm run types && npm run pack"
     },
     "engines": {
         "node": ">=14.20.0"
@@ -30,7 +34,12 @@
         "eslint": "^8.34.0",
         "form-data": "^4.0.0",
         "jest": "^29.4.2",
-        "node-fetch": "^3.3.0"
+        "node-fetch": "^3.3.0",
+        "terser-webpack-plugin": "^5.3.10",
+        "typescript": "^5.3.3",
+        "webpack": "^5.90.3",
+        "webpack-cli": "^5.1.4",
+        "webpack-conditional-loader": "^1.0.12"
     },
     "type": "module"
 }
