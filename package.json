@@ -29,6 +29,7 @@
     },
     "exports": {
         "development": "./dist/crunchyroll-js-api.debug.js",
+        "production": "./dist/crunchyroll-js-api.min.js",
         "default": "./dist/crunchyroll-js-api.min.js",
         "types": "./dist/types/index.d.ts"
     },

@@ -1,15 +1,21 @@
 mock
 node_modules
+src
 tests
 authData.example.json
 authData.json
+createMockData.js
 jest.config.js
 main.js
+package-lock.json
+tsconfig.json
+webpack.config.js
+.eslintignore
+.eslintrc.json
 .git
 .gitignore
 .npmignore
-.settings
+.npmrc
 .project
-.eslintignore
-.eslintrc.json
+.settings
 
