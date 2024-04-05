@@ -36,7 +36,7 @@ async function getAuthToken() {
     if (storage.token && storage.token.accessToken) {
         const now = new Date()
         const diff = (now.getTime() - (new Date(storage.token.createdDate)).getTime()) / 1000
-        if (diff < storage.token.expiresIn) {
+        if (diff < (storage.token.expiresIn - 5)) {
             token = storage.token
         }
     }
