@@ -8,8 +8,8 @@
     },
     "beta": {
         "url": "https://beta-api.crunchyroll.com",
-        "client_id": "oedarmxstlh1jvawimnq",
-        "client_secret": "9lEhvHZJD32juV5dW9VOS57dopdJpgo1"
+        "client_id": "nmvjshfknymxxkg7fbh9",
+        "client_secret": "ZYIVrBWUPbcXDtbD22VSLa6b4WQos3zX"
     },
     "url_legacy": "https://www.crunchyroll.com",
     "url_static": "https://static.crunchyroll.com",
