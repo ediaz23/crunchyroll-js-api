@@ -38,7 +38,6 @@ async function getProfile({ token }) {
     return utils.makeRequest(fnName, url, reqConfig)
 }
 
-
 /**
  * Return user names, idk what it is
  * @param {{token: String}} obj
@@ -81,9 +80,104 @@ async function updateProfile({ token, data }) {
     await utils.makeRequest(fnName, url, reqConfig)
 }
 
+/**
+ * Update profile
+ * @param {{
+    token: String,
+    data: import('../types').ProfileCreate,
+ }} obj
+ * @returns {Promise}
+ */
+async function createMultiProfile({ token, data }) {
+    const fnName = 'createMultiProfile'
+    logger.debug(fnName)
+    const url = `/accounts/v1/me/multiprofile`
+    const reqConfig = {
+        method: 'post',
+        headers: {
+            Authorization: token,
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+    }
+    // @ts-expect-error
+    await utils.makeRequest(fnName, url, reqConfig)
+}
+
+/**
+ * Update profile
+ * @param {{
+    token: String,
+    profileId: String,
+ }} obj
+ * @returns {Promise}
+ */
+async function deleteMultiProfile({ token, profileId }) {
+    const fnName = 'deleteMultiProfile'
+    logger.debug(fnName)
+    const url = `/accounts/v1/me/multiprofile/${profileId}`
+    const reqConfig = {
+        method: 'delete',
+        headers: {
+            Authorization: token,
+            'Content-Type': 'application/json',
+        },
+    }
+    // @ts-expect-error
+    await utils.makeRequest(fnName, url, reqConfig)
+}
+
+
+/**
+ * Return profile info
+ * @param {{token: String}} obj
+ * @returns {Promise<Array<import('../types').Profile>>}
+ */
+async function getMultiProfiles({ token }) {
+    const fnName = 'getMultiProfiles'
+    logger.debug(fnName)
+    const url = `/accounts/v1/me/multiprofile`
+    const reqConfig = {
+        method: 'get',
+        headers: { Authorization: token }
+    }
+    // @ts-expect-error
+    return utils.makeRequest(fnName, url, reqConfig)
+}
+
+/**
+ * Update profile
+ * @param {{
+    token: String,
+    data: import('../types').Profile,
+    profileId: String,
+ }} obj
+ * @returns {Promise}
+ */
+async function updateMultiProfile({ token, data, profileId }) {
+    const fnName = 'updateMultiProfile'
+    logger.debug(fnName)
+    const url = `/accounts/v1/me/multiprofile/${profileId}`
+    const reqConfig = {
+        method: 'patch',
+        headers: {
+            Authorization: token,
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+    }
+    // @ts-expect-error
+    await utils.makeRequest(fnName, url, reqConfig)
+}
+
+
 export default {
+    createMultiProfile,
+    deleteMultiProfile,
     getAccountId,
     getProfile,
+    getMultiProfiles,
     getUsernames,
-    updateProfile
+    updateProfile,
+    updateMultiProfile
 }

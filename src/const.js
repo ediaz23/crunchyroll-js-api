@@ -100,6 +100,9 @@ export function getLicenseUrl() {
     return config.url_license
 }
 
+export function getMainUrl() {
+    return config.main.url
+}
 
 /**
  * @return {String}
@@ -122,5 +125,6 @@ export default {
     getStaticUrl,
     getLicenseUrl,
     getSecurePlayWidevineLicenceUrl,
+    getMainUrl,
     sortByValues: ['popularity', 'newly_added', 'alphabetical']
 }

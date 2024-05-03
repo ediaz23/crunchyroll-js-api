@@ -16,7 +16,13 @@ beforeEach(async () => {
 xdescribe('Assets', () => {
 
     test('Request Assets', async () => {
-        return assets.getAvatar({ token }).then(res => {
+        return assets.getAvatar({ token, lang: await localStore.getLocale() }).then(res => {
+            testUtils.itesmCheck(res)
+        })
+    })
+
+    test('Request Wallpaper', async () => {
+        return assets.getWallpaper({ token, lang: await localStore.getLocale() }).then(res => {
             testUtils.itesmCheck(res)
         })
     })

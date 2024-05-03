@@ -63,6 +63,7 @@
  * @typedef Profile
  * @type {Object}
  * @property {String} avatar
+ * @property {String} [wallpaper]
  * @property {Boolean} cr_beta_opt_in
  * @property {Boolean} crleg_email_verified
  * @property {String} email
@@ -80,6 +81,9 @@
  * @property {String} preferred_content_audio_language
  * @property {Boolean} qa_user
  * @property {String} username
+ * @property {Boolean} [can_switch]
+ * @property {Boolean} [is_primary]
+ * @property {Boolean} [is_selected]
  */
 
 /**
@@ -180,6 +184,23 @@
  * @property {Boolean} [baseUrlIncluded]
  * 
  * @typedef {CrunchyRequestTmp & import('node-fetch').Request} CrunchyRequest
+ */
+
+/**
+ * @typedef ProfileCreate
+ * @type {Object}
+ * @property {String} username
+ * @property {String} avatar
+ * @property {String} avatar
+ * @property {String} wallpaper
+ * @property {String} profile_name
+ */
+
+/**
+ * @typedef AssesItem
+ * @type {Object}
+ * @property {String} title
+ * @property {Array<{id: String, title: String}>} assets
  */
 
 export default {}  // eslint-disable-line no-undef

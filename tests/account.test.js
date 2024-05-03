@@ -15,6 +15,8 @@ beforeEach(async () => {
     token = await localStore.getAuthToken()
 })
 
+let profileUsername = 'npc55555555', profileId = null
+
 xdescribe('Account', () => {
 
     test('Request Account', async () => {
@@ -59,4 +61,42 @@ xdescribe('Account', () => {
     test('Request Update Profile', async () => {
         await account.updateProfile({ token, data: { avatar: '16-the-god-of-high-school-jin-mori.png' } })
     })
+
+    xtest('Create Multi Profile', async () => {
+        const data = {
+            username: profileUsername,
+            avatar: 'solo_sungjinwoo.png',
+            wallpaper: 'crbrand_product_multipleprofilesbackgroundassets_4k-08.png',
+            profile_name: 'test'
+        }
+        return account.createMultiProfile({ token, data })
+    })
+
+    test('Request Multi Profile', async () => {
+        return account.getMultiProfiles({ token }).then(res => {
+            expect(Array.isArray(res.profiles)).toBe(true)
+            for (const profile of res.profiles) {
+                testUtils.existValue(profile.profile_id)
+                testUtils.existValue(profile.avatar)
+                testUtils.existValue(profile.username)
+                testUtils.existValue(profile.maturity_rating)
+                testUtils.existValue(profile.preferred_communication_language)
+                if (profile.username === profileUsername) {
+                    profileId = profile.profile_id
+                }
+            }
+        })
+    })
+
+    test('Update Multi Profile', async () => {
+        testUtils.existValue(profileId)
+        const data = { profile_name: 'test edit' }
+        return account.updateMultiProfile({ token, data, profileId })
+    })
+
+    xtest('Delete Multi Profile', async () => {
+        testUtils.existValue(profileId)
+        return account.deleteMultiProfile({ token, profileId })
+    })
+
 })
