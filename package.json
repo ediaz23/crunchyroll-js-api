@@ -3,6 +3,7 @@
     "license": "Apache-2.0",
     "description": "JavaScript API consumer for crunchyroll",
     "homepage": "https://github.com/ediaz23/crunchyroll_js_api",
+    "types": "./dist/types/index.d.ts",
     "version": "1.2.8",
     "scripts": {
         "play": "node --experimental-specifier-resolution=node main.js",
@@ -30,11 +31,11 @@
     "exports": {
         "development": "./dist/crunchyroll-js-api.debug.js",
         "production": "./dist/crunchyroll-js-api.min.js",
-        "default": "./dist/crunchyroll-js-api.min.js",
-        "types": "./dist/types/index.d.ts"
+        "default": "./dist/crunchyroll-js-api.min.js"
     },
     "dependencies": {},
     "devDependencies": {
+        "copy-webpack-plugin": "^11.0.0",
         "eslint": "^8.34.0",
         "form-data": "^4.0.0",
         "jest": "^29.4.2",

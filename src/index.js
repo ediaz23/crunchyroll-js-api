@@ -2,7 +2,6 @@
 import CrunchyrollError from './error.js'
 import logger from './logger.js'
 import localStore from './localStore.js'
-import types from './types.js'
 import configApp from './config/config.json'
 import account from './services/account.js'
 import assets from './services/assets.js'
@@ -16,8 +15,9 @@ import review from './services/review.js'
 import subscription from './services/subscription.js'
 import drm from './services/drm.js'
 import utils from './utils.js'
+export * as Types from './types.js'
 
-export const api = {
+const api = {
     account,
     assets,
     auth,
@@ -30,21 +30,27 @@ export const api = {
     review,
     subscription,
 }
-export const config = {
+
+const config = {
     configApp,
 }
-export { logger }
-export { localStore }
-export { CrunchyrollError }
-export { types }
-export { utils }
 
-export default {
+const CrunchyrollAPI = {
     logger,
     localStore,
     CrunchyrollError,
-    types,
     config,
     api,
     utils,
 }
+
+export {
+    logger,
+    localStore,
+    CrunchyrollError,
+    config,
+    api,
+    utils,
+}
+
+export default CrunchyrollAPI
