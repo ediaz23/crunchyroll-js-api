@@ -64,7 +64,9 @@
 /**
  * @typedef Profile
  * @type {Object}
+ * @property {String} profile_id
  * @property {String} avatar
+ * @property {String} profile_name
  * @property {String} [wallpaper]
  * @property {Boolean} cr_beta_opt_in
  * @property {Boolean} crleg_email_verified
@@ -78,6 +80,7 @@
  * @property {Boolean} opt_out_promotional_updates
  * @property {Boolean} opt_out_queue_updates
  * @property {Boolean} opt_out_store_deals
+ * @property {Object} extended_maturity_rating
  * @property {String} preferred_communication_language
  * @property {String} preferred_content_subtitle_language
  * @property {String} preferred_content_audio_language
@@ -86,6 +89,8 @@
  * @property {Boolean} [can_switch]
  * @property {Boolean} [is_primary]
  * @property {Boolean} [is_selected]
+ * @property {Boolean} [do_not_sell]
+ * @property {Boolean} [age_consent]
  */
 
 /**
@@ -213,6 +218,14 @@
  * @type {Object}
  * @property {String} title
  * @property {Array<{id: String, title: String}>} assets
+ */
+
+/**
+ * @typedef ProfileResponse
+ * @type {Object}
+ * @property {Array<Profile>} profiles
+ * @property {Number} tier_max_profiles
+ * @property {Number} max_profiles
  */
 
 export default {}  // eslint-disable-line no-undef

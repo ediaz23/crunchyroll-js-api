@@ -131,7 +131,7 @@ async function deleteMultiProfile({ token, profileId }) {
 /**
  * Return profile info
  * @param {{token: String}} obj
- * @returns {Promise<Array<import('../types').Profile>>}
+ * @returns {Promise<import('../types').ProfileResponse>}
  */
 async function getMultiProfiles({ token }) {
     const fnName = 'getMultiProfiles'
