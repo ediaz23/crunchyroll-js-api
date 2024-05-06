@@ -10,6 +10,7 @@
  * @property {String} scope
  * @property {String} country
  * @property {String} account_id
+ * @property {String} profile_id
  * @property {String} created_date
  */
 
@@ -23,6 +24,7 @@
  * @property {String} scope
  * @property {String} country
  * @property {String} accountId
+ * @property {String} profileId
  * @property {String} createdDate
  */
 
@@ -105,6 +107,16 @@
 * @property {String} keyPairId
 * @property {String} expires
 */
+
+/**
+ * @typedef Storage
+ * @type {Object}
+ * @property {Credential} credential
+ * @property {Device} device
+ * @property {TokenObj} token
+ * @property {CmsObj} cms
+ * @property {AccountObj} account
+ */
 
 /**
  * @typedef CmsContainer

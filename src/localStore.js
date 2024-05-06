@@ -5,26 +5,44 @@ import indexService from './services/index.js'
 import accountService from './services/account.js'
 
 
-/**
- * @typedef {Object} Storage
- * @property {import('./types').Credential} credential
- * @property {import('./types').Device} device
- * @property {import('./types').TokenObj} token
- * @property {import('./types').CmsObj} cms
- * @property {import('./types').AccountObj} account
- */
-/** @type {Storage} */
-const storage = { credential: null, device: null, token: null, cms: null, account: null }
+/** @type {import('./types.js').Storage} */
+const storage = {
+    credential: null,
+    device: null,
+    token: null,
+    cms: null,
+    account: null
+}
+
 /**
  * @type {Function}
  * @param {Object} data
  */
 let externalSaveData = null
+
 /**
  * @type {Function}
  * @returns {Object}
  */
 let externalLoadData = null
+
+
+/**
+ * @param {Object} jsonData
+ * @returns {Object}
+ */
+function fromJSON(jsonData) {
+    return swapObjectJson(jsonData, utils.toCamel)
+}
+
+
+/**
+ * @param {Object} jsonData
+ * @returns {Object}
+ */
+function toJSON(jsonData) {
+    return swapObjectJson(jsonData, utils.toSnake)
+}
 
 
 /**
@@ -43,15 +61,27 @@ async function getAuthToken() {
     if (!token) {
         let data = null
         if (storage.token && storage.token.refreshToken) {
-            data = await authService.getRefreshToken(storage.token)
+            data = await authService.getRefreshToken({ ...storage.token, device: storage.device })
         } else {
             data = await authService.getToken({ ...storage.credential, device: storage.device })
         }
-        storage.token = fromJSON(data)  // eslint-disable-line require-atomic-updates
+        storage.token = fromJSON(data)
         await saveToLocal()
         token = storage.token
     }
     return `${token.tokenType} ${token.accessToken}`
+}
+
+
+/**
+ * @param {String} profileId
+ * @returns {Promise<import('./types').TokenObj>}
+ */
+async function switchProfile(profileId) {
+    const data = await authService.switchProfile({ ...storage.token, device: storage.device, profileId })
+    storage.token = fromJSON(data)
+    await saveToLocal()
+    return storage.token
 }
 
 
@@ -87,7 +117,7 @@ async function getCms() {
     }
     if (!cms) {
         cms = await indexService.getIndexConfig({ token: await getAuthToken() })
-        storage.cms = fromJSON(cms.cms)    // eslint-disable-line require-atomic-updates
+        storage.cms = fromJSON(cms.cms)
         cms = storage.cms
         await saveToLocal()
     }
@@ -101,7 +131,7 @@ async function getCms() {
 async function getAccount() {
     if (!storage.account || !storage.account.accountId) {
         const account = await accountService.getAccountId({ token: await getAuthToken() })
-        storage.account = fromJSON(account)    // eslint-disable-line require-atomic-updates
+        storage.account = fromJSON(account)
         await saveToLocal()
     }
     return storage.account
@@ -166,24 +196,6 @@ async function saveToLocal() {
         fs.writeFileSync(authData, data)
         // #endif
     }
-}
-
-
-/**
- * @param {Object} jsonData
- * @returns {Object}
- */
-function fromJSON(jsonData) {
-    return swapObjectJson(jsonData, utils.toCamel)
-}
-
-
-/**
- * @param {Object} jsonData
- * @returns {Object}
- */
-function toJSON(jsonData) {
-    return swapObjectJson(jsonData, utils.toSnake)
 }
 
 
@@ -266,5 +278,6 @@ export default {
     getAccount,
     setExternalStorage,
     setNewData,
+    switchProfile,
     revokeToken,
 }

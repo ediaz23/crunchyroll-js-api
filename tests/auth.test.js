@@ -24,12 +24,13 @@ beforeEach(async () => {
 })
 
 /**
- * @param {import('../types').Token} token
+ * @param {import('../src/types').Token} token
  */
 function validateToken(token) {
     expect(token).toBeDefined()
     expect(token.access_token).not.toBeNull()
     expect(token.account_id).not.toBeNull()
+    expect(token.profile_id).not.toBeNull()
     expect(token.country).not.toBeNull()
     expect(token.created_date).not.toBeNull()
     expect(token.expires_in).not.toBe(0)
@@ -70,16 +71,28 @@ xdescribe('Auth', () => {
     })
 
     test('Autenticate Okey', async () => {
-        token = await auth.getToken({ ...credential, device})
+        token = await auth.getToken({ device, ...credential })
+        validateToken(token)
+    })
+
+    test('switchProfile Okey', async () => {
+        testUtils.existValue(token)
+        testUtils.existValue(token.refresh_token)
+        testUtils.existValue(token.profile_id)
+        token = await auth.switchProfile({ device, refreshToken: token.refresh_token, profileId: token.profile_id })
         validateToken(token)
     })
 
     test('Refresh Token Okey', async () => {
-        token = await auth.getRefreshToken({ refreshToken: token.refresh_token })
+        testUtils.existValue(token)
+        testUtils.existValue(token.refresh_token)
+        token = await auth.getRefreshToken({ device, refreshToken: token.refresh_token })
         validateToken(token)
     })
 
     test('Revoke Refresh Token Okey', async () => {
+        testUtils.existValue(token)
+        testUtils.existValue(token.refresh_token)
         return auth.revokeRefreshToken({ refreshToken: token.refresh_token }).then(data => {
             expect(data).toEqual({ status: "OK" })
         })
