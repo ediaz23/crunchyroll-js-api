@@ -29,7 +29,7 @@ async function logRes(fnName, res) {
             // ignore
         }
         if (result) {
-            throw new CrunchyrollError(result.error, result.code)
+            throw new CrunchyrollError(result.error, result.code, result.context)
         } else {
             logger.error(res.statusText)
             throw new Error(res.statusText)
