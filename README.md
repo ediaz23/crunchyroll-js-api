@@ -20,12 +20,20 @@ This software is intended for personal use only. Do not use it for illegal purpo
 copyrighted content without permission. We do not condone or support piracy, and any misuse of this 
 software is not the responsibility of the project contributors or maintainers.
 
+## Build
+
+Run build:
+
+```
+npm run build
+```
+
 ## Linter (ESlint)
 
 Run linter:
 
 ```
-npx eslint --ext .js ./
+npm run lint
 ```
 
 ## Test (jest)
