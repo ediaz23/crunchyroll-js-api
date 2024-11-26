@@ -228,4 +228,28 @@
  * @property {Number} max_profiles
  */
 
+/**
+ * @typedef HomeProps
+ * @type {Object}
+ * @property {String} [description]
+ * @property {String} [title]
+ * @property {String} [analyticsId]
+ * @property {String} [contentId]
+ * @property {String} [tallImage]
+ * @property {String} [wideImage]
+ * @property {String} [logoImage]
+ * @property {String} [link]
+ * @property {String} [musicVideoId]
+ */
+
+/**
+ * @typedef HomeItem
+ * @type {Object}
+ * @property {String} type
+ * @property {String} id
+ * @property {String} parentId
+ * @property {HomeProps} props
+ * @property {Array<HomeItem>} children
+ */
+
 export default {}  // eslint-disable-line no-undef

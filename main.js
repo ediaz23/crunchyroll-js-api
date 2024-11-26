@@ -3,7 +3,7 @@ import logger from './src/logger.js'
 import localStore from './src/localStore.js'
 import account from './src/services/account.js'
 import content from './src/services/content.js'
-import drm from './src/services/drm.js'
+import discover from './src/services/discover.js'
 import fs from 'fs'
 
 const getContentParam = async (profile) => {
@@ -210,12 +210,13 @@ async function main() {
     const token = await localStore.getAuthToken()
     const profile = await account.getProfile({ token })
     const accountCred = await getContentParam(profile)
-    console.log(accountCred)
+    const home = await discover.getHome({ account: accountCred })
+    //    console.log(accountCred)
     //    const stream = await drm.getStream({ account: accountCred, episodeId })
     //    const sessionId = `${new Date().getTime()}-${accountCred.accountId}`
     //    const out = await drm.getAuth({ account: accountCred, assetId: stream.assetId, sessionId })
-//    const out = await drm.getWidevineLicense({ account: accountCred, assetId: stream.assetId, sessionId })
-//    console.log(JSON.stringify(out, null, '    '))
+    //    const out = await drm.getWidevineLicense({ account: accountCred, assetId: stream.assetId, sessionId })
+    console.log(JSON.stringify(home, null, '    '))
 
 }
 

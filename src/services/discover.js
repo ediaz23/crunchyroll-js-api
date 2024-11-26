@@ -74,7 +74,6 @@ async function getBrowseAll({ account, quantity, start, category, query, seasonT
     return utils.makeRequest(fnName, url, reqConfig)
 }
 
-
 /**
  * @param {Object} obj
  * @param {import('../types').AccountAuth} obj.account
@@ -177,6 +176,27 @@ async function getHomeFeed({ account, quantity, start }) {
 /**
  * @param {Object} obj
  * @param {import('../types').AccountAuth} obj.account
+ * @param {Number} [obj.start] Offset to request
+ * @returns {Promise<import('../types').HomeItem>}
+ */
+async function getHome({ account }) {
+    const fnName = 'getHome'
+    logger.debug(fnName)
+    const queryData = { locale: account.locale }
+    const query = await utils.toURLSearchParams(queryData)
+    const url = `https://www.crunchyroll.com/f/v1/home?${query}`
+    const reqConfig = {
+        method: 'get',
+        headers: { Authorization: account.token },
+        baseUrlIncluded: true,
+    }
+    // @ts-expect-error
+    return utils.makeRequest(fnName, url, reqConfig)
+}
+
+/**
+ * @param {Object} obj
+ * @param {import('../types').AccountAuth} obj.account
  * @param {Number} obj.quantity
  * @param {Boolean} obj.ratings
  * @returns {Promise<{total: Number, data: Array<Object>, meta: Object}>}
@@ -222,7 +242,6 @@ async function getRecommendations({ account, quantity, start, ratings }) {
     return utils.makeRequest(fnName, url, reqConfig)
 }
 
-
 /**
  * @param {Object} obj
  * @param {import('../types').AccountAuth} obj.account
@@ -241,7 +260,6 @@ async function getSeasonList({ account }) {
     // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig)
 }
-
 
 /**
  * @param {Object} obj
@@ -268,7 +286,6 @@ async function getSimilar({ account, contentId, quantity, start, ratings }) {
     // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig)
 }
-
 
 /**
  * @param {Object} obj
@@ -351,6 +368,7 @@ export default {
     getBrowseIndex,
     getCategories,
     getSubcategories,
+    getHome,
     getHomeFeed,
     getHistory,
     getRecommendations,
