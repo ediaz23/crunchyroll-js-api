@@ -210,6 +210,7 @@ async function main() {
     const token = await localStore.getAuthToken()
     const profile = await account.getProfile({ token })
     const accountCred = await getContentParam(profile)
+    console.log(accountCred)
     //    const stream = await drm.getStream({ account: accountCred, episodeId })
     //    const sessionId = `${new Date().getTime()}-${accountCred.accountId}`
     //    const out = await drm.getAuth({ account: accountCred, assetId: stream.assetId, sessionId })

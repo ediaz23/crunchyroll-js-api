@@ -3,13 +3,13 @@
     "vilo": "https://static.crunchyroll.com/vilos",
     "main": {
         "url": "https://www.crunchyroll.com",
-        "client_id": "noaihdevm_6iyg0a8l0q",
+        "client_id": "ltccxd10yl6cqcn1acx1",
         "client_secret": ""
     },
     "beta": {
         "url": "https://beta-api.crunchyroll.com",
-        "client_id": "wjb1_ta8mkv7_kxhqzv7",
-        "client_secret": "2yRZX4cJl_o234jkaMitSmsKQYFiJP_5"
+        "client_id": "gewoo3hubkzp0evqszbd",
+        "client_secret": "K3aSb9s_LYeq9WPEAHfmGqS70nIICTY-"
     },
     "url_legacy": "https://www.crunchyroll.com",
     "url_static": "https://static.crunchyroll.com",
@@ -20,7 +20,7 @@
     "cast_id": "4D84B31C",
     "url_eec": "https://eec.crunchyroll.com",
     "app_config": "app-config-default-production.json",
-    "version_name": "3.46.2",
+    "version_name": "3.70.4",
     "app_id": "cr-android",
     "os_release_version": "13",
     "content_types": [
