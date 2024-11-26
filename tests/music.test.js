@@ -9,6 +9,7 @@ import account from '../src/services/account.js'
 let basicParam = null
 
 beforeEach(async () => {
+    await testUtils.wait()
     await localStore.loadFromLocal()
     localStore.setExternalStorage({ save: testUtils.saveToLocal })
     const token = await localStore.getAuthToken()

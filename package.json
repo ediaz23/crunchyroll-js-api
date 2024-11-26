@@ -15,7 +15,7 @@
         "build": "npm run types && npm run pack"
     },
     "engines": {
-        "node": ">=14.20.0"
+        "node": ">=18.20.2"
     },
     "engineStrict": true,
     "keywords": [

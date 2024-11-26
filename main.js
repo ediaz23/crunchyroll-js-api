@@ -6,31 +6,21 @@ import content from './src/services/content.js'
 import discover from './src/services/discover.js'
 import fs from 'fs'
 
-const getContentParam = async (profile) => {
-    const token = await localStore.getAuthToken()
-    const accountId = (await localStore.getToken()).accountId
-    return {
-        token,
-        accountId,
-        locale: profile.preferred_communication_language,
-        audioLanguage: profile.preferred_content_audio_language,
-    }
-}
 
 const createObjects = async (profile, objectIds) => {
-    const account = await getContentParam(profile)
+    const account = await localStore.getContentParam(profile)
     const data = await content.getObjects({ account, objectIds })
     fs.writeFileSync(`objects-${objectIds.sort().join('-').substring(0, 200)}.json`, JSON.stringify(data, null, '    '))
 }
 
 const createArtist = async (profile, artistIds) => {
-    const account = await getContentParam(profile)
+    const account = await localStore.getContentParam(profile)
     const data = await content.getMusicArtist({ account, artistIds })
     fs.writeFileSync(`artist-${artistIds.sort().join('-').substring(0, 200)}.json`, JSON.stringify(data, null, '    '))
 }
 
 const createMusic = async (profile, concertIds) => {
-    const account = await getContentParam(profile)
+    const account = await localStore.getContentParam(profile)
     const data = await content.getMusicConcerts({ account, concertIds })
     fs.writeFileSync(`concerts-${concertIds.sort().join('-').substring(0, 200)}.json`, JSON.stringify(data, null, '    '))
 }
@@ -209,7 +199,7 @@ async function main() {
     await localStore.loadFromLocal()
     const token = await localStore.getAuthToken()
     const profile = await account.getProfile({ token })
-    const accountCred = await getContentParam(profile)
+    const accountCred = await localStore.getContentParam(profile)
     const home = await discover.getHome({ account: accountCred })
     //    console.log(accountCred)
     //    const stream = await drm.getStream({ account: accountCred, episodeId })

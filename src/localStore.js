@@ -139,6 +139,22 @@ async function getAccount() {
 
 
 /**
+ * Return basic params to query api
+ * @param {import('./types').Profile} profile
+ * @returns {Promise<import('./types').AccountAuth>}
+ */
+async function getContentParam(profile) {
+    const token = await getToken()
+    return {
+        token: `${token.tokenType} ${token.accessToken}`,
+        accountId: token.accountId,
+        locale: profile.preferred_communication_language,
+        audioLanguage: profile.preferred_content_audio_language,
+    }
+}
+
+
+/**
  * @todo maybe add a extra field to save locale, and return profile.preferredContentSubtitleLanguage too
  */
 async function getLocale() {
@@ -272,6 +288,7 @@ export default {
     getToken,
     getLocale,
     getCms,
+    getContentParam,
     loadFromLocal,
     saveToLocal,
     authDataFile,

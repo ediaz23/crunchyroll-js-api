@@ -8,6 +8,7 @@ import testUtils from './testUtils.js'
 let token = null
 
 beforeEach(async () => {
+    await testUtils.wait()
     await localStore.loadFromLocal()
     localStore.setExternalStorage({ save: testUtils.saveToLocal })
     token = await localStore.getAuthToken()

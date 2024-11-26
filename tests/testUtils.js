@@ -103,6 +103,11 @@ function checkPlayhead_v2(data) {
     expect(data.panel).toBeDefined()
 }
 
+async function wait() {
+    await new Promise((resolve) => setTimeout(resolve, 500))
+}
+
+
 export default {
     itesmCheck,
     resultCheck,
@@ -112,4 +117,5 @@ export default {
     saveToLocal,
     resultCheck_v2,
     checkPlayhead_v2,
+    wait,
 }

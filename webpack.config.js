@@ -33,17 +33,14 @@ const developmentConfig = {
                 use: {
                     loader: 'webpack-conditional-loader'
                 }
+            },
+            {
+                test: /\.json$/,
+                type: 'json'
             }
         ]
     },
-    plugins: [
-        new CopyPlugin({
-            patterns: [{
-                from: path.resolve(__dirname, 'src/config/config.json'),
-                to: path.resolve(outputPath, 'types/config/config.json')
-            }]
-        })
-    ],
+    plugins: [],
     devtool: 'source-map'
 }
 
