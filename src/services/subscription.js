@@ -5,7 +5,7 @@ import logger from '../logger.js'
 
 /**
  * @param {Object} obj
- * @param {import('../types').AuthBase} obj.auth
+ * @param {import('../types').AccountAuth} obj.auth
  * @param {String} [obj.source]
  * @returns {Promise<Object>}
  */
@@ -27,7 +27,7 @@ async function getProducts({ auth, source }) {
 
 /**
  * @param {Object} obj
- * @param {import('../types').AuthBase} obj.auth
+ * @param {import('../types').AccountAuth} obj.auth
  * @param {String} obj.externalId
  * @returns {Promise<Object>}
  */
@@ -48,7 +48,7 @@ async function getUserBenefits({ auth, externalId }) {
 
 /**
  * @param {Object} obj
- * @param {import('../types').AuthBase} obj.auth
+ * @param {import('../types').AccountAuth} obj.auth
  * @param {String} obj.externalId
  * @returns {Promise<Object>}
  */

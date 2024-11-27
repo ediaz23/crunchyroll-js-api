@@ -49,16 +49,16 @@ function toJSON(jsonData) {
  * @returns {Promise<String>}
  */
 async function getAuthToken() {
-    let token = null
+    let tokenObj = null
 
     if (storage.token && storage.token.accessToken) {
         const now = new Date()
         const diff = (now.getTime() - (new Date(storage.token.createdDate)).getTime()) / 1000
         if (diff < (storage.token.expiresIn - 5)) {
-            token = storage.token
+            tokenObj = storage.token
         }
     }
-    if (!token) {
+    if (!tokenObj) {
         let data = null
         if (storage.token && storage.token.refreshToken) {
             data = await authService.getRefreshToken({ ...storage.token, device: storage.device })
@@ -66,10 +66,11 @@ async function getAuthToken() {
             data = await authService.getToken({ ...storage.credential, device: storage.device })
         }
         storage.token = fromJSON(data)
+        storage.token.token = `${storage.token.tokenType} ${storage.token.accessToken}`
         await saveToLocal()
-        token = storage.token
+        tokenObj = storage.token
     }
-    return `${token.tokenType} ${token.accessToken}`
+    return tokenObj.token
 }
 
 
@@ -80,6 +81,7 @@ async function getAuthToken() {
 async function switchProfile(profileId) {
     const data = await authService.switchProfile({ ...storage.token, device: storage.device, profileId })
     storage.token = fromJSON(data)
+    storage.token.token = `${storage.token.tokenType} ${storage.token.accessToken}`
     await saveToLocal()
     return storage.token
 }
@@ -140,15 +142,13 @@ async function getAccount() {
 
 /**
  * Return basic params to query api
+ * @param {import('./types').Profile} profile
  * @returns {Promise<import('./types').AccountAuth>}
  */
-async function getContentParam() {
+async function getContentParam(profile) {
     const tokenObj = await getToken()
-    const token = `${tokenObj.tokenType} ${tokenObj.accessToken}`
-    const profile = await accountService.getProfile({ token })
     return {
-        token,
-        accountId: tokenObj.accountId,
+        ...tokenObj,
         locale: profile.preferred_communication_language,
         audioLanguage: profile.preferred_content_audio_language,
     }

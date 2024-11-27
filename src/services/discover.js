@@ -184,7 +184,7 @@ async function getHome({ account }) {
     logger.debug(fnName)
     const queryData = { locale: account.locale }
     const query = await utils.toURLSearchParams(queryData)
-    const url = `https://www.crunchyroll.com/f/v1/home?${query}`
+    const url = `${config.url}/f/v1/home?${query}`
     const reqConfig = {
         method: 'get',
         headers: { Authorization: account.token },
@@ -339,7 +339,7 @@ async function getPrev({ account, contentId }) {
 async function search({ account, query, quantity, start, type }) {
     const fnName = 'search'
     logger.debug(fnName)
-    const types = config.content_types.concat(['top_results', 'music'])
+    const types = config.contentTypes.concat(['top_results', 'music'])
     const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
     utils.addParam(queryData, 'q', query)
     utils.addParam(queryData, 'n', quantity, val => val > 0)

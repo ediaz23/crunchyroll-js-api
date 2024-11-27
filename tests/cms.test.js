@@ -1,7 +1,6 @@
 
 import { expect } from '@jest/globals'
 
-import localStore from '../src/localStore.js'
 import testUtils from './testUtils.js'
 import cms from '../src/services/cms.js'
 
@@ -11,7 +10,7 @@ let account = null
 
 beforeEach(async () => {
     await testUtils.init()
-    account = await localStore.getContentParam()
+    account = await testUtils.getContentParam()
 })
 
 const contentList = ['GYXM79M56', 'G6NQ5DWZ6', 'GR751KNZY']

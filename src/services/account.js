@@ -1,11 +1,13 @@
 
 import utils from '../utils.js'
 import logger from '../logger.js'
+import config from '../config.js'
 
 
 /**
  * Return account info
- * @param {{token: String}} obj
+ * @param {Object} obj
+ * @param {String} obj.token
  * @returns {Promise<import('../types').Account>}
  */
 async function getAccountId({ token }) {
@@ -23,7 +25,9 @@ async function getAccountId({ token }) {
 
 /**
  * Return profile info
- * @param {{token: String}} obj
+ * @deprecated
+ * @param {Object} obj
+ * @param {String} obj.token
  * @returns {Promise<import('../types').Profile>}
  */
 async function getProfile({ token }) {
@@ -32,7 +36,7 @@ async function getProfile({ token }) {
     const url = `/accounts/v1/me/profile`
     const reqConfig = {
         method: 'get',
-        headers: { Authorization: token }
+        headers: { Authorization: token },
     }
     // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig)
@@ -40,7 +44,8 @@ async function getProfile({ token }) {
 
 /**
  * Return user names, idk what it is
- * @param {{token: String}} obj
+ * @param {Object} obj
+ * @param {String} obj.token
  * @returns {Promise<{usernames: Array<String>}>}
  */
 async function getUsernames({ token }) {
@@ -58,10 +63,9 @@ async function getUsernames({ token }) {
 
 /**
  * Update profile
- * @param {{
-    token: String,
-    data: import('../types').Profile,
- }} obj
+ * @param {Object} obj
+ * @param {String} obj.token
+ * @param {import('../types').Profile} obj.data
  * @returns {Promise}
  */
 async function updateProfile({ token, data }) {
@@ -82,10 +86,9 @@ async function updateProfile({ token, data }) {
 
 /**
  * Update profile
- * @param {{
-    token: String,
-    data: import('../types').ProfileCreate,
- }} obj
+ * @param {Object} obj
+ * @param {String} obj.token
+ * @param {import('../types').ProfileCreate} obj.data
  * @returns {Promise}
  */
 async function createMultiProfile({ token, data }) {
@@ -105,11 +108,10 @@ async function createMultiProfile({ token, data }) {
 }
 
 /**
- * Update profile
- * @param {{
-    token: String,
-    profileId: String,
- }} obj
+ * Delete profile
+ * @param {Object} obj
+ * @param {String} obj.token
+ * @param {String} obj.profileId
  * @returns {Promise}
  */
 async function deleteMultiProfile({ token, profileId }) {
@@ -130,7 +132,8 @@ async function deleteMultiProfile({ token, profileId }) {
 
 /**
  * Return profile info
- * @param {{token: String}} obj
+ * @param {Object} obj
+ * @param {String} obj.token
  * @returns {Promise<import('../types').ProfileResponse>}
  */
 async function getMultiProfiles({ token }) {
@@ -147,11 +150,10 @@ async function getMultiProfiles({ token }) {
 
 /**
  * Update profile
- * @param {{
-    token: String,
-    data: import('../types').Profile,
-    profileId: String,
- }} obj
+ * @param {Object} obj
+ * @param {String} obj.token
+ * @param {import('../types').Profile} obj.data
+ * @param {String} obj.profileId
  * @returns {Promise}
  */
 async function updateMultiProfile({ token, data, profileId }) {
@@ -170,12 +172,32 @@ async function updateMultiProfile({ token, data, profileId }) {
     await utils.makeRequest(fnName, url, reqConfig)
 }
 
+/**
+ * Return profile info
+ * @param {Object} obj
+ * @param {String} obj.token
+ * @param {String} obj.profileId
+ * @returns {Promise<import('../types').Profile>}
+ */
+async function getMultiProfile({ token, profileId }) {
+    const fnName = 'getMultiProfiles'
+    logger.debug(fnName)
+    const url = `/accounts/v1/me/multiprofile/${profileId}`
+    const reqConfig = {
+        method: 'get',
+        headers: { Authorization: token },
+    }
+    // @ts-expect-error
+    return utils.makeRequest(fnName, url, reqConfig)
+}
+
 
 export default {
     createMultiProfile,
     deleteMultiProfile,
     getAccountId,
     getProfile,
+    getMultiProfile,
     getMultiProfiles,
     getUsernames,
     updateProfile,

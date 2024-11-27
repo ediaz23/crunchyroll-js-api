@@ -282,7 +282,7 @@ async function getStreams({ account, contentId }) {
 async function getSkiptEvents({ account, contentId }) {
     const fnName = 'getSkiptEvents'
     logger.debug(fnName)
-    const url = `${config.url_static}/skip-events/production/${contentId}.json`
+    const url = `${config.urlStatic}/skip-events/production/${contentId}.json`
     const reqConfig = {
         method: 'get',
         headers: { Authorization: account.token },

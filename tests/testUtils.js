@@ -4,6 +4,7 @@ import fs from 'fs'
 import { expect } from '@jest/globals'
 
 import localStore from '../src/localStore.js'
+import { api } from '../src/index.js'
 
 
 /**
@@ -114,6 +115,17 @@ async function init() {
     }
 }
 
+let profile = null
+/**
+ * @returns {Promise<import('../src/types').AccountAuth>}
+ */
+async function getContentParam() {
+    if (!profile) {
+        const tokenObj = await localStore.getToken()
+        profile = await api.account.getMultiProfile(tokenObj)
+    }
+    return await localStore.getContentParam(profile)
+}
 
 export default {
     itesmCheck,
@@ -124,4 +136,5 @@ export default {
     resultCheck_v2,
     checkPlayhead_v2,
     init,
+    getContentParam,
 }

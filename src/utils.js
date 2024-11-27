@@ -16,7 +16,7 @@ let fetchFunction = null
  * @return {String}
  */
 function getUserAgent() {
-    return `Crunchyroll/${config.version_name} Android/${config.os_release_version}`
+    return `Crunchyroll/${config.versionName} Android/${config.osReleaseVersion}`
 }
 
 /**
@@ -62,7 +62,7 @@ async function makeRawRequest(url, reqConfig) {
         // @ts-expect-error
         delete reqConfig.baseUrlIncluded
     } else {
-        url = decodeURIComponent(`${config.beta_url}${url}`)
+        url = decodeURIComponent(`${config.urlBeta}${url}`)
     }
     logger.debug(`${reqConfig.method} - ${url}`)
     if (!reqConfig.headers) {

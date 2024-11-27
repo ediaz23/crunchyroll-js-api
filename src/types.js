@@ -21,6 +21,7 @@
  * @property {String} refreshToken
  * @property {Number} expiresIn
  * @property {String} tokenType
+ * @property {String} token
  * @property {String} scope
  * @property {String} country
  * @property {String} accountId
@@ -174,9 +175,9 @@
 /**
  * @typedef AccountParamSub
  * @type {Object}
- * @property {String} accountId
+ * @property {String} locale
  * @property {String} audioLanguage
- * @typedef {AuthBase & AccountParamSub} AccountAuth
+ * @typedef {TokenObj & AccountParamSub} AccountAuth
  */
 
 /**

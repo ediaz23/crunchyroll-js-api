@@ -28,17 +28,24 @@ async function main() {
     logger.setLevel('debug')
     const episodeId = 'GWDU8KN73'
     await localStore.loadFromLocal()
-    await localStore.getAuthToken()
-    const account = await localStore.getContentParam()
-//    await api.discover.markAsWatched({ account, contentId: episodeId })
-        const data = await api.music.getFeed({ account })
+    const tokenObj = await localStore.getToken()
+    const profile = await api.account.getMultiProfile(tokenObj)
+    const account = await localStore.getContentParam(profile)
+    //    await api.discover.markAsWatched({ account, contentId: episodeId })
+    //    const data = await api.music.getFeed({ account })
+    //    const data = await api.discover.getHome({ account })
+    const data = await api.discover.search({
+        account,
+        query: 'un nuevo rugido',
+        quantity: 1,
+        type: ['episode']
+    })
     //    console.log(accountCred)
     //    const stream = await drm.getStream({ account: accountCred, episodeId })
     //    const sessionId = `${new Date().getTime()}-${accountCred.accountId}`
     //    const out = await drm.getAuth({ account: accountCred, assetId: stream.assetId, sessionId })
     //    const out = await drm.getWidevineLicense({ account: accountCred, assetId: stream.assetId, sessionId })
-    console.log(JSON.stringify(data, null, '    '))
-
+        console.log(JSON.stringify(data, null, '    '))
 }
 
 main().catch(e => {

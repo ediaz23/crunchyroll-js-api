@@ -12,7 +12,7 @@ let externalId = null
 
 beforeEach(async () => {
     await testUtils.init()
-    auth = await localStore.getContentParam()
+    auth = await testUtils.getContentParam()
     externalId = (await localStore.getAccount()).externalId
 })
 

@@ -1,7 +1,6 @@
 
 import { expect } from '@jest/globals'
 
-import localStore from '../src/localStore.js'
 import testUtils from './testUtils.js'
 import index from '../src/services/index.js'
 
@@ -11,7 +10,7 @@ let token = null
 
 beforeEach(async () => {
     await testUtils.init()
-    token = await localStore.getAuthToken()
+    token = (await testUtils.getContentParam()).token
 })
 
 describe('Index', () => {

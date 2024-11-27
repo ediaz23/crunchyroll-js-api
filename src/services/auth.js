@@ -9,7 +9,7 @@ import config from '../config.js'
  * @returns {String}
  */
 function getBasicToken() {
-    const credenciales = `${config.client_id}:${config.client_secret}`
+    const credenciales = `${config.clientId}:${config.clientSecret}`
     let buff = Buffer.from(credenciales)
     let base64data = buff.toString('base64')
     return base64data
@@ -47,7 +47,7 @@ async function getToken({ device, grantType, scope, username, password }) {
             Authorization: `Basic ${basicToken}`,
             'Content-Type': 'application/x-www-form-urlencoded',
             'ETP-Anonymous-ID': null,
-        }
+        },
     }
     // @ts-expect-error
     const token = await utils.makeRequest(fnName, url, reqConfig)
@@ -87,7 +87,7 @@ async function getRefreshToken({ device, grantType, scope, refreshToken }) {
             Authorization: `Basic ${basicToken}`,
             'Content-Type': 'application/x-www-form-urlencoded',
             'ETP-Anonymous-ID': null,
-        }
+        },
     }
     // @ts-expect-error
     const token = await utils.makeRequest(fnName, url, reqConfig)
@@ -118,7 +118,7 @@ async function revokeRefreshToken({ refreshToken }) {
             Authorization: `Basic ${basicToken}`,
             'Content-Type': 'application/x-www-form-urlencoded',
             'ETP-Anonymous-ID': null,
-        }
+        },
     }
     // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig)
@@ -135,7 +135,7 @@ async function revokeRefreshToken({ refreshToken }) {
  * @param {String} login.profileId profile id for switch
  * @returns {Promise<import('../types').Token>}
  */
-async function switchProfile({ device, grantType, scope, refreshToken, profileId, }) {
+async function switchProfile({ device, grantType, scope, refreshToken, profileId }) {
     const fnName = 'switchProfile'
     logger.debug(fnName)
     const basicToken = getBasicToken()
@@ -156,7 +156,7 @@ async function switchProfile({ device, grantType, scope, refreshToken, profileId
             Authorization: `Basic ${basicToken}`,
             'Content-Type': 'application/x-www-form-urlencoded',
             'ETP-Anonymous-ID': null,
-        }
+        },
     }
     // @ts-expect-error
     const token = await utils.makeRequest(fnName, url, reqConfig)

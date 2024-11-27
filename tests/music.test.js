@@ -1,5 +1,4 @@
 
-import localStore from '../src/localStore.js'
 import testUtils from './testUtils.js'
 import music from '../src/services/music.js'
 
@@ -9,7 +8,7 @@ let account = null
 
 beforeEach(async () => {
     await testUtils.init()
-    account = await localStore.getContentParam()
+    account = await testUtils.getContentParam()
 })
 
 

@@ -1,5 +1,4 @@
 
-import localStore from '../src/localStore.js'
 import assets from '../src/services/assets.js'
 import testUtils from './testUtils.js'
 
@@ -9,7 +8,7 @@ let account = null
 
 beforeEach(async () => {
     await testUtils.init()
-    account = await localStore.getContentParam()
+    account = await testUtils.getContentParam()
 })
 
 describe('Assets', () => {
