@@ -1,7 +1,7 @@
 
 import utils from '../utils.js'
 import logger from '../logger.js'
-import CONST from '../const.js'
+import config from '../config.js'
 
 
 /**
@@ -9,7 +9,7 @@ import CONST from '../const.js'
  * @returns {String}
  */
 function getBasicToken() {
-    const credenciales = `${CONST.getClientId()}:${CONST.getClientSecret()}`
+    const credenciales = `${config.client_id}:${config.client_secret}`
     let buff = Buffer.from(credenciales)
     let base64data = buff.toString('base64')
     return base64data
@@ -36,8 +36,8 @@ async function getToken({ device, grantType, scope, username, password }) {
         device_id: device.id,
         device_name: device.name,
         device_type: device.type,
-        username: username,
-        password: password,
+        username,
+        password,
     }
     const url = `/auth/v1/token`
     const reqConfig = {

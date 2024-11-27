@@ -1,7 +1,7 @@
 
 import utils from '../utils.js'
 import logger from '../logger.js'
-import CONST from '../const.js'
+import config from '../config.js'
 import CrunchyrollError from '../error.js'
 
 
@@ -57,7 +57,7 @@ async function getBrowseAll({ account, quantity, start, category, query, seasonT
     }
     utils.addParam(queryData, 'q', query)
     utils.addParam(queryData, 'seasonal_tag', seasonTag)
-    if (sort && !CONST.sortByValues.includes(sort)) { throw new CrunchyrollError('Wrong sort value') }
+    if (sort && !config.sortByValues.includes(sort)) { throw new CrunchyrollError('Wrong sort value') }
     utils.addParam(queryData, 'sort_by', sort)
     utils.addParam(queryData, 'type', type)
     utils.addParam(queryData, 'ratings', ratings)
@@ -89,7 +89,7 @@ async function getBrowseIndex({ account, category, sort, ratings }) {
     if (category && category.length) {
         utils.addParam(queryData, 'categories', category.join(','))
     }
-    if (sort && !CONST.sortByValues.includes(sort)) { throw new CrunchyrollError('Wrong sort value') }
+    if (sort && !config.sortByValues.includes(sort)) { throw new CrunchyrollError('Wrong sort value') }
     utils.addParam(queryData, 'sort_by', sort)
     utils.addParam(queryData, 'ratings', ratings)
     const queryStr = await utils.toURLSearchParams(queryData)
@@ -339,7 +339,7 @@ async function getPrev({ account, contentId }) {
 async function search({ account, query, quantity, start, type }) {
     const fnName = 'search'
     logger.debug(fnName)
-    const types = CONST.getContentTypes().concat(['top_results', 'music'])
+    const types = config.content_types.concat(['top_results', 'music'])
     const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
     utils.addParam(queryData, 'q', query)
     utils.addParam(queryData, 'n', quantity, val => val > 0)

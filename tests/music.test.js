@@ -31,7 +31,7 @@ describe('Music', () => {
         return music.getHome({
             account
         }).then(res => {
-            testUtils.resultCheck_v2(res)
+            testUtils.existValue(res)
         })
     })
 

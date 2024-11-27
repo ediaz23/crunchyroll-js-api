@@ -1,7 +1,8 @@
 
 import utils from '../utils.js'
 import logger from '../logger.js'
-import { getDrmUrl, getPlUrl, getAccountingId } from '../const.js'
+import config from '../config.js'
+
 
 /**
  * @param {Object} obj
@@ -19,7 +20,7 @@ async function getStream({ account, episodeId, type, browser }) {
     if (!['chrome', 'firefox', 'safari', 'explorer'].includes(browser)) {
         throw new Error('Wrong browser, ' + browser)
     }
-    const url = `${getDrmUrl()}/v1${type}/${episodeId}/web/${browser}/play`
+    const url = `${config.url_drm}/v1${type}/${episodeId}/web/${browser}/play`
     const reqConfig = {
         method: 'get',
         headers: { Authorization: account.token },
@@ -42,7 +43,7 @@ async function keepAlive({ account, token, episodeId, playhead }) {
     logger.debug(fnName)
     const queryData = { playhead }
     const queryStr = await utils.toURLSearchParams(queryData)
-    const url = `${getDrmUrl()}/v1/token/${episodeId}/${token}/keepAlive?${queryStr}`
+    const url = `${config.url_drm}/v1/token/${episodeId}/${token}/keepAlive?${queryStr}`
     let body = null, FormDataFn = null
 
     try {
@@ -75,7 +76,7 @@ async function keepAlive({ account, token, episodeId, playhead }) {
 async function revokeToken({ account, episodeId, token }) {
     const fnName = 'revokeToken'
     logger.debug(fnName)
-    const url = `${getDrmUrl()}/v1/token/${episodeId}/${token}/delete`
+    const url = `${config.url_drm}/v1/token/${episodeId}/${token}/delete`
     const reqConfig = {
         method: 'post',
         headers: { Authorization: account.token },
@@ -95,7 +96,7 @@ async function revokeToken({ account, episodeId, token }) {
 async function deleteToken({ account, episodeId, token }) {
     const fnName = 'deleteToken'
     logger.debug(fnName)
-    const url = `${getDrmUrl()}/v1/token/${episodeId}/${token}`
+    const url = `${config.url_drm}/v1/token/${episodeId}/${token}`
     const reqConfig = {
         method: 'delete',
         headers: { Authorization: account.token },
@@ -115,13 +116,13 @@ async function deleteToken({ account, episodeId, token }) {
 async function getAuth({ account, assetId, sessionId }) {
     const fnName = 'getAuth'
     logger.debug(fnName)
-    const url = `${getPlUrl()}/drm/v1/auth`
+    const url = `${config.url_pl}/drm/v1/auth`
     const reqConfig = {
         method: 'post',
         headers: { Authorization: account.token },
         baseUrlIncluded: true,
         body: JSON.stringify({
-            accounting_id: getAccountingId(),
+            accounting_id: config.accounting_id,
             asset_id: assetId,
             session_id: sessionId,
             user_id: account.accountId,

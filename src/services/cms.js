@@ -1,7 +1,7 @@
 
 import utils from '../utils.js'
 import logger from '../logger.js'
-import { getStaticUrl } from '../const.js'
+import config from '../config.js'
 
 
 /**
@@ -282,7 +282,7 @@ async function getStreams({ account, contentId }) {
 async function getSkiptEvents({ account, contentId }) {
     const fnName = 'getSkiptEvents'
     logger.debug(fnName)
-    const url = `${getStaticUrl()}/skip-events/production/${contentId}.json`
+    const url = `${config.url_static}/skip-events/production/${contentId}.json`
     const reqConfig = {
         method: 'get',
         headers: { Authorization: account.token },

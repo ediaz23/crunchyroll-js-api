@@ -1,7 +1,7 @@
 
 import utils from '../utils.js'
 import logger from '../logger.js'
-import CONST from '../const.js'
+import config from '../config.js'
 
 
 /**
@@ -15,15 +15,13 @@ import CONST from '../const.js'
 async function addEpisodeRating({ account, contentId, rating, contentType }) {
     const fnName = 'addEpisodeRating'
     logger.debug(fnName)
-    const contentTypes = CONST.getContentTypes()
-    const ratingTypes = CONST.getRatingEpisodeTypes()
     const queryData = { locale: account.locale }
     const queryStr = await utils.toURLSearchParams(queryData)
     contentType = contentType ? contentType : 'episode'
-    if (!contentTypes.includes(contentType)) {
+    if (!config.content_types.includes(contentType)) {
         throw new Error(`ContentType ${contentType} is not valid.`)
     }
-    if (!ratingTypes.includes(rating)) {
+    if (!config.ratingEpisodeTypes.includes(rating)) {
         throw new Error(`Rating ${rating} is not valid.`)
     }
     const url = `/content-reviews/v2/user/${account.accountId}/rating/${contentType}/${contentId}?${queryStr}`
@@ -51,14 +49,12 @@ async function addEpisodeRating({ account, contentId, rating, contentType }) {
 async function addRating({ account, contentId, rating, contentType }) {
     const fnName = 'addRating'
     logger.debug(fnName)
-    const ratingTypes = CONST.getRatingContentTypes()
-    const contentTypes = CONST.getContentTypes()
     const queryData = { locale: account.locale }
     const queryStr = await utils.toURLSearchParams(queryData)
-    if (!contentTypes.includes(contentType)) {
+    if (!config.content_types.includes(contentType)) {
         throw new Error(`ContentType ${contentType} is not valid.`)
     }
-    if (!ratingTypes.includes(rating)) {
+    if (!config.ratingContentTypes.includes(rating)) {
         throw new Error(`Rating ${rating} is not valid.`)
     }
     const url = `/content-reviews/v2/user/${account.accountId}/rating/${contentType}/${contentId}?${queryStr}`
@@ -85,10 +81,9 @@ async function addRating({ account, contentId, rating, contentType }) {
 async function _getRatings({ account, contentId, contentType }) {
     const fnName = '_getRatings'
     logger.debug(fnName)
-    const types = CONST.getContentTypes()
     const queryData = { locale: account.locale }
     const queryStr = await utils.toURLSearchParams(queryData)
-    if (!types.includes(contentType)) {
+    if (!config.content_types.includes(contentType)) {
         throw new Error(`ContentType ${contentType} is not valid.`)
     }
     const url = `/content-reviews/v2/user/${account.accountId}/rating/${contentType}/${contentId}?${queryStr}`
@@ -134,10 +129,9 @@ async function getRatings({ account, contentId, contentType }) {
 async function removeRating({ account, contentId, contentType }) {
     const fnName = 'removeRating'
     logger.debug(fnName)
-    const types = CONST.getContentTypes()
     const queryData = { locale: account.locale }
     const queryStr = await utils.toURLSearchParams(queryData)
-    if (!types.includes(contentType)) {
+    if (!config.content_types.includes(contentType)) {
         throw new Error(`ContentType ${contentType} is not valid.`)
     }
     const url = `/content-reviews/v2/user/${account.accountId}/rating/${contentType}/${contentId}?${queryStr}`

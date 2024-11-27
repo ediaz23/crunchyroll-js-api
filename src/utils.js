@@ -1,6 +1,6 @@
 
 import logger from './logger.js'
-import CONST from './const.js'
+import config from './config.js'
 import CrunchyrollError from './error.js'
 
 
@@ -10,6 +10,14 @@ import CrunchyrollError from './error.js'
  * @type {Function}
  */
 let fetchFunction = null
+
+/**
+ * Returning user-agent
+ * @return {String}
+ */
+function getUserAgent() {
+    return `Crunchyroll/${config.version_name} Android/${config.os_release_version}`
+}
 
 /**
  * log api response
@@ -54,14 +62,14 @@ async function makeRawRequest(url, reqConfig) {
         // @ts-expect-error
         delete reqConfig.baseUrlIncluded
     } else {
-        url = decodeURIComponent(`${CONST.getBaseUrl()}${url}`)
+        url = decodeURIComponent(`${config.beta_url}${url}`)
     }
     logger.debug(`${reqConfig.method} - ${url}`)
     if (!reqConfig.headers) {
         // @ts-expect-error
         reqConfig.headers = {}
     }
-    reqConfig.headers['User-Agent'] = CONST.getUserAgent()
+    reqConfig.headers['User-Agent'] = getUserAgent()
 
     if (fetchFunction) {
         fetchFn = fetchFunction
@@ -176,4 +184,5 @@ export default {
     toSnake,
     toURLSearchParams,
     setFetchFunction,
+    getUserAgent,
 }

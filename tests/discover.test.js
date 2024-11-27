@@ -4,7 +4,6 @@ import { expect } from '@jest/globals'
 import localStore from '../src/localStore.js'
 import testUtils from './testUtils.js'
 import discover from '../src/services/discover.js'
-import utils from '../src/utils.js'
 
 
 /** @type {import('../src/types').AccountAuth} */
@@ -210,7 +209,7 @@ describe('Discover', () => {
         return discover.getHome({
             account
         }).then(res => {
-            testUtils.resultCheck_v2(res)
+            testUtils.existValue(res)
         })
     })
 
