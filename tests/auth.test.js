@@ -17,9 +17,7 @@ let credential = null
 let device = null
 
 beforeEach(async () => {
-    await testUtils.wait()
-    await localStore.loadFromLocal()
-    localStore.setExternalStorage({ save: testUtils.saveToLocal })
+    await testUtils.init()
     credential = localStore.storage.credential
     device = localStore.storage.device
 })

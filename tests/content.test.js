@@ -4,27 +4,14 @@ import { expect } from '@jest/globals'
 import localStore from '../src/localStore.js'
 import testUtils from './testUtils.js'
 import content from '../src/services/content.js'
-import account from '../src/services/account.js'
 
 
-/** @type {{account: import('../types').AccountAuth}} */
-let basicParam = null
+/** @type {import('../src/types').AccountAuth} */
+let account = null
 
 beforeEach(async () => {
-    await testUtils.wait()
-    await localStore.loadFromLocal()
-    localStore.setExternalStorage({ save: testUtils.saveToLocal })
-    const token = await localStore.getAuthToken()
-    const profile = await account.getProfile({ token })
-    const accountId = (await localStore.getToken()).accountId
-    basicParam = {
-        account: {
-            token,
-            accountId,
-            locale: profile.preferred_communication_language,
-            audioLanguage: profile.preferred_content_audio_language
-        }
-    }
+    await testUtils.init()
+    account = await localStore.getContentParam()
 })
 
 
@@ -33,11 +20,13 @@ const contentList = ['GYXM79M56', 'G6NQ5DWZ6', 'GR751KNZY']
 const contentId = contentList[0]
 let listId = null, episodeId = 'GMKUX832J'
 
-xdescribe('Content', () => {
+describe('Content', () => {
 
     test('createPrivateCustomList okey', async () => {
-        const param = { ...basicParam, title: customListTitlle }
-        return content.createPrivateCustomList(param).then(res => {
+        return content.createPrivateCustomList({
+            account,
+            title: customListTitlle
+        }).then(res => {
             testUtils.existValue(res)
             expect(res).toHaveProperty('data')
             testUtils.existValue(res.data)
@@ -56,61 +45,80 @@ xdescribe('Content', () => {
     })
 
     test('addItemToCustomList okey', async () => {
-        const param = { ...basicParam, listId }
         for await (const item of contentList) {
-            await content.addItemToCustomList({ ...param, contentId: item })
+            await content.addItemToCustomList({ account, listId, contentId: item })
         }
     })
 
     test('changeCustomListItemPosition wrong position', async () => {
-        const param = {
-            ...basicParam, listId, contentId: contentList[2],
-            location: 'malo', refContentId: contentList[1]
-        }
-        await expect(content.changeCustomListItemPosition(param)).rejects.toThrow()
+        await expect(content.changeCustomListItemPosition({
+            account,
+            listId,
+            contentId: contentList[2],
+            location: 'malo',
+            refContentId: contentList[1]
+        })).rejects.toThrow()
     })
 
     test('changeCustomListItemPosition okey', async () => {
-        const param = {
-            ...basicParam, listId, contentId: contentList[2],
-            location: 'before', refContentId: contentList[0]
-        }
-        await expect(content.changeCustomListItemPosition(param)).resolves.toBeNull()
+        await expect(content.changeCustomListItemPosition({
+            account,
+            listId,
+            contentId: contentList[2],
+            location: 'before',
+            refContentId: contentList[0]
+        })).resolves.toBeNull()
     })
 
     test('getCustomListItems okey', async () => {
-        const param = { ...basicParam, listId }
-        return content.getCustomListItems(param).then(res => {
+        return content.getCustomListItems({
+            account,
+            listId
+        }).then(res => {
             testUtils.itesmCheck_v2(res)
         })
     })
 
     test('getCustomListItems size 1 okey', async () => {
-        const param = { ...basicParam, listId, pageSize: 1 }
-        return content.getCustomListItems(param).then(res => {
+        return content.getCustomListItems({
+            account,
+            listId,
+            pageSize: 1
+        }).then(res => {
             testUtils.itesmCheck_v2(res)
         })
     })
 
     test('getCustomListItems order desc okey', async () => {
-        const param = { ...basicParam, listId, order: 'desc' }
-        return content.getCustomListItems(param).then(res => {
+        return content.getCustomListItems({
+            account,
+            listId,
+            order: 'desc'
+        }).then(res => {
             testUtils.itesmCheck_v2(res)
         })
     })
 
     test('deleteCustomListItem okey', async () => {
-        const param = { ...basicParam, listId, contentId }
-        return content.deleteCustomListItem(param)
+        return content.deleteCustomListItem({
+            account,
+            listId,
+            contentId
+        })
     })
 
     test('updateCustomList okey', async () => {
-        const param = { ...basicParam, listId, title: 'EditadoV2' }
-        return content.updateCustomList(param)
+        return content.updateCustomList({
+            account,
+            listId,
+            title: 'EditadoV2'
+        })
     })
 
     test('getCustomLists okey', async () => {
-        return content.getCustomLists(basicParam).then(res => {
+        return content.getCustomLists({
+            account
+        }).then(res => {
             testUtils.resultCheck_v2(res)
             const { meta } = res
             expect(meta).toHaveProperty('total_public')
@@ -120,52 +128,71 @@ xdescribe('Content', () => {
     })
 
     test('deletePrivateCustomList okey', async () => {
-        const param = { ...basicParam, listId }
-        return content.deletePrivateCustomList(param)
+        return content.deletePrivateCustomList({
+            account,
+            listId
+        })
     })
 
     test('addWatchlistItem okey', async () => {
-        const param = { ...basicParam, contentId }
-        return content.addWatchlistItem(param)
+        return content.addWatchlistItem({
+            account,
+            contentId
+        })
     })
 
     test('addWatchlistItem wrong', async () => {
-        const param = { ...basicParam, contentId }
-        await expect(content.addWatchlistItem(param)).rejects.toThrow()
+        await expect(content.addWatchlistItem({
+            account,
+            contentId
+        })).rejects.toThrow()
     })
 
     test('getWatchlistItems okey', async () => {
-        return content.getWatchlistItems(basicParam).then(res => {
-            testUtils.resultCheck_v2(res)
+        return content.getWatchlistItems({
+            account
+        }).then(res => {
+            testUtils.itesmCheck_v2(res)
         })
     })
 
     test('updateWatchlistItemFavoriteStatus true okey', async () => {
-        const param = { ...basicParam, contentId, isFavorite: true }
-        return content.updateWatchlistItemFavoriteStatus(param)
+        return content.updateWatchlistItemFavoriteStatus({
+            account,
+            contentId,
+            isFavorite: true
+        })
     })
 
     test('updateWatchlistItemFavoriteStatus false okey', async () => {
-        const param = { ...basicParam, contentId, isFavorite: false }
-        return content.updateWatchlistItemFavoriteStatus(param)
+        return content.updateWatchlistItemFavoriteStatus({
+            account,
+            contentId,
+            isFavorite: false
+        })
     })
 
     test('deleteWatchlistItem okey', async () => {
-        const param = { ...basicParam, contentId }
-        return content.deleteWatchlistItem(param)
+        return content.deleteWatchlistItem({
+            account,
+            contentId
+        })
     })
 
     test('getWatchHistory okey', async () => {
-        const param = { ...basicParam }
-        return content.getWatchHistory(param).then(res => {
-            testUtils.resultCheck_v2(res)
+        return content.getWatchHistory({
+            account
+        }).then(res => {
+            testUtils.itesmCheck_v2(res)
         })
     })
 
     test('getPlayheads okey', async () => {
-        const param = { ...basicParam, contentIds: [episodeId] }
-        return content.getPlayheads(param).then(res => {
-            testUtils.resultCheck_v2(res)
+        return content.getPlayheads({
+            account,
+            contentIds: [episodeId]
+        }).then(res => {
+            testUtils.itesmCheck_v2(res)
             expect(res.data[0]).toHaveProperty('content_id')
             expect(res.data[0].content_id).toBeDefined()
             expect(res.data[0]).toHaveProperty('playhead')
@@ -178,8 +205,11 @@ xdescribe('Content', () => {
     })
 
     test('savePlayhead okey', async () => {
-        const param = { ...basicParam, contentId: episodeId, playhead: 300 }
-        return content.savePlayhead(param)
+        return content.savePlayhead({
+            account,
+            contentId: episodeId,
+            playhead: 300
+        })
     })
 
 })

@@ -140,14 +140,15 @@ async function getAccount() {
 
 /**
  * Return basic params to query api
- * @param {import('./types').Profile} profile
  * @returns {Promise<import('./types').AccountAuth>}
  */
-async function getContentParam(profile) {
-    const token = await getToken()
+async function getContentParam() {
+    const tokenObj = await getToken()
+    const token = `${tokenObj.tokenType} ${tokenObj.accessToken}`
+    const profile = await accountService.getProfile({ token })
     return {
-        token: `${token.tokenType} ${token.accessToken}`,
-        accountId: token.accountId,
+        token,
+        accountId: tokenObj.accountId,
         locale: profile.preferred_communication_language,
         audioLanguage: profile.preferred_content_audio_language,
     }
@@ -182,7 +183,7 @@ async function loadFromLocal() {
         // #if process.env.NODE_COMPILING !== 'true'
         const fs = (await import('fs')).default
         if (fs.existsSync(authData)) {
-            data = fs.readFileSync(authData)
+            data = fs.readFileSync(authData, 'utf-8')
         }
         // #endif
     }

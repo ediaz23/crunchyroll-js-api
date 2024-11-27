@@ -72,15 +72,7 @@
  * @property {Boolean} crleg_email_verified
  * @property {String} email
  * @property {String} maturity_rating
- * @property {Boolean} opt_out_android_in_app_marketing
- * @property {Boolean} opt_out_free_trials
- * @property {Boolean} opt_out_new_media_queue_updates
- * @property {Boolean} opt_out_newsletters
- * @property {Boolean} opt_out_pm_updates
- * @property {Boolean} opt_out_promotional_updates
- * @property {Boolean} opt_out_queue_updates
- * @property {Boolean} opt_out_store_deals
- * @property {Object} extended_maturity_rating
+ * @property {{BR: String, UN: String}} extended_maturity_rating
  * @property {String} preferred_communication_language
  * @property {String} preferred_content_subtitle_language
  * @property {String} preferred_content_audio_language

@@ -10,13 +10,11 @@ import index from '../src/services/index.js'
 let token = null
 
 beforeEach(async () => {
-    await testUtils.wait()
-    await localStore.loadFromLocal()
-    localStore.setExternalStorage({ save: testUtils.saveToLocal })
+    await testUtils.init()
     token = await localStore.getAuthToken()
 })
 
-xdescribe('Index', () => {
+describe('Index', () => {
 
     test('Request Index', async () => {
         return index.getIndexConfig({ token }).then(res => {

@@ -1,7 +1,10 @@
 
 import path from 'path'
-import * as fs from 'fs'
+import fs from 'fs'
 import { expect } from '@jest/globals'
+
+import localStore from '../src/localStore.js'
+
 
 /**
  * Check generic items result
@@ -12,6 +15,7 @@ function itesmCheck(res) {
     expect(res).toHaveProperty('items')
     expect(Array.isArray(res.items)).toBe(true)
     expect(res.items.length).toBeGreaterThan(0)
+    return res
 }
 
 
@@ -31,6 +35,7 @@ function itesmCheck_v2(res, length) {
         expect(res.total).toBeGreaterThan(0)
         expect(res.data.length).toBeGreaterThan(0)
     }
+    return res
 }
 
 
@@ -46,6 +51,7 @@ function resultCheck(res) {
     expect(res.__href__).not.toBeNull()
     expect(res).toHaveProperty('__links__')
     expect(res).toHaveProperty('__actions__')
+    return res
 }
 
 /**
@@ -56,6 +62,7 @@ function resultCheck_v2(res) {
     itesmCheck_v2(res)
     expect(res).toHaveProperty('meta')
     expect(res.meta).toBeDefined()
+    return res
 }
 
 
@@ -66,6 +73,7 @@ function resultCheck_v2(res) {
 function totalCheck(res) {
     expect(res).toHaveProperty('total')
     expect(res.items.length).toEqual(res.total)
+    return res
 }
 
 
@@ -77,16 +85,6 @@ function existValue(value) {
     expect(value).toBeDefined()
     expect(value).not.toBe('')
     expect(value).not.toBeNull()
-}
-
-
-/**
- * Fake function to stora data
- * @returns {Promise}
- */
-async function saveToLocal(data) {
-    const authData = path.resolve('.') + '/authData.json'
-    fs.writeFileSync(authData, data)
 }
 
 
@@ -103,8 +101,17 @@ function checkPlayhead_v2(data) {
     expect(data.panel).toBeDefined()
 }
 
-async function wait() {
-    await new Promise((resolve) => setTimeout(resolve, 500))
+async function init() {
+    if (!localStore.storage.token) {
+        const authPathFile = path.resolve('.') + '/authData.json'
+        localStore.setExternalStorage({
+            load: () => fs.readFileSync(authPathFile, 'utf-8'),
+            save: data => fs.writeFileSync(authPathFile, data)
+        })
+        await localStore.loadFromLocal()
+    } else {
+        await new Promise(res => setTimeout(res, 1000))
+    }
 }
 
 
@@ -114,8 +121,7 @@ export default {
     totalCheck,
     existValue,
     itesmCheck_v2,
-    saveToLocal,
     resultCheck_v2,
     checkPlayhead_v2,
-    wait,
+    init,
 }

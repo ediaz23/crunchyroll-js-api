@@ -4,27 +4,27 @@ import assets from '../src/services/assets.js'
 import testUtils from './testUtils.js'
 
 
-/** @type {String} */
-let token = null
+/** @type {import('../src/types').AccountAuth} */
+let account = null
 
 beforeEach(async () => {
-    await testUtils.wait()
-    await localStore.loadFromLocal()
-    localStore.setExternalStorage({ save: testUtils.saveToLocal })
-    token = await localStore.getAuthToken()
+    await testUtils.init()
+    account = await localStore.getContentParam()
 })
 
-xdescribe('Assets', () => {
+describe('Assets', () => {
 
     test('Request Assets', async () => {
-        return assets.getAvatar({ token, lang: await localStore.getLocale() }).then(res => {
-            testUtils.itesmCheck(res)
-        })
+        return assets.getAvatar({
+            token: account.token,
+            lang: account.locale
+        }).then(testUtils.itesmCheck)
     })
 
     test('Request Wallpaper', async () => {
-        return assets.getWallpaper({ token, lang: await localStore.getLocale() }).then(res => {
-            testUtils.itesmCheck(res)
-        })
+        return assets.getWallpaper({
+            token: account.token,
+            lang: account.locale
+        }).then(testUtils.itesmCheck)
     })
 })

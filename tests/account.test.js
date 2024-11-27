@@ -10,15 +10,13 @@ import account from '../src/services/account.js'
 let token = null
 
 beforeEach(async () => {
-    await testUtils.wait()
-    await localStore.loadFromLocal()
-    localStore.setExternalStorage({ save: testUtils.saveToLocal })
+    await testUtils.init()
     token = await localStore.getAuthToken()
 })
 
-let profileUsername = 'npc55555555', profileId = null
+let profileId = null
 
-xdescribe('Account', () => {
+describe('Account', () => {
 
     test('Request Account', async () => {
         return account.getAccountId({ token }).then(account => {
@@ -35,15 +33,10 @@ xdescribe('Account', () => {
             testUtils.existValue(profile.cr_beta_opt_in)
             testUtils.existValue(profile.crleg_email_verified)
             testUtils.existValue(profile.email)
+            testUtils.existValue(profile.extended_maturity_rating)
             testUtils.existValue(profile.maturity_rating)
-            testUtils.existValue(profile.opt_out_android_in_app_marketing)
-            testUtils.existValue(profile.opt_out_free_trials)
-            testUtils.existValue(profile.opt_out_new_media_queue_updates)
-            testUtils.existValue(profile.opt_out_pm_updates)
-            testUtils.existValue(profile.opt_out_promotional_updates)
-            testUtils.existValue(profile.opt_out_queue_updates)
-            testUtils.existValue(profile.opt_out_store_deals)
             testUtils.existValue(profile.preferred_communication_language)
+            testUtils.existValue(profile.preferred_content_audio_language)
             testUtils.existValue(profile.preferred_content_subtitle_language)
             testUtils.existValue(profile.qa_user)
             testUtils.existValue(profile.username)
@@ -65,7 +58,7 @@ xdescribe('Account', () => {
 
     xtest('Create Multi Profile', async () => {
         const data = {
-            username: profileUsername,
+            username: 'npc55555555',
             avatar: 'solo_sungjinwoo.png',
             wallpaper: 'crbrand_product_multipleprofilesbackgroundassets_4k-08.png',
             profile_name: 'test'
@@ -82,16 +75,14 @@ xdescribe('Account', () => {
                 testUtils.existValue(profile.username)
                 testUtils.existValue(profile.maturity_rating)
                 testUtils.existValue(profile.preferred_communication_language)
-                if (profile.username === profileUsername) {
-                    profileId = profile.profile_id
-                }
             }
+            profileId = res.profiles[res.profiles.length - 1].profile_id
         })
     })
 
     test('Update Multi Profile', async () => {
         testUtils.existValue(profileId)
-        const data = { profile_name: 'test edit' }
+        const data = { profile_name: 'Ma' }
         return account.updateMultiProfile({ token, data, profileId })
     })
 

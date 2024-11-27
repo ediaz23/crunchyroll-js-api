@@ -231,6 +231,7 @@ async function getSeries({ account, serieId }) {
 }
 
 /**
+ * @deprecated
  * @param {Object} obj
  * @param {import('../types').AccountAuth} obj.account
  * @param {String} obj.streamUrl
@@ -251,6 +252,7 @@ async function getStreamsWithURL({ account, streamUrl }) {
 }
 
 /**
+ * @deprecated
  * @param {Object} obj
  * @param {import('../types').AccountAuth} obj.account
  * @param {String} obj.contentId

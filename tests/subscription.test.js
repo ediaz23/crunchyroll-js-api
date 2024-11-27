@@ -4,24 +4,20 @@ import testUtils from './testUtils.js'
 import subscription from '../src/services/subscription.js'
 
 
-/** @type {import('../types').AuthBase} */
+/** @type {import('../src/types').AccountAuth} */
 let auth = null
 
 /** @type {String} */
 let externalId = null
 
 beforeEach(async () => {
-    await testUtils.wait()
-    await localStore.loadFromLocal()
-    localStore.setExternalStorage({ save: testUtils.saveToLocal })
-    const token = await localStore.getAuthToken()
-    const locale = await localStore.getLocale()
-    auth = { token, locale }
+    await testUtils.init()
+    auth = await localStore.getContentParam()
     externalId = (await localStore.getAccount()).externalId
 })
 
 
-xdescribe('Sbuscription', () => {
+describe('Subscription', () => {
 
     test('Request Products', async () => {
         return subscription.getProducts({ auth }).then(res => {

@@ -197,9 +197,8 @@ async function main() {
     logger.setLevel('debug')
     const episodeId = 'GWDU8KN73'
     await localStore.loadFromLocal()
-    const token = await localStore.getAuthToken()
-    const profile = await account.getProfile({ token })
-    const accountCred = await localStore.getContentParam(profile)
+    await localStore.getAuthToken()
+    const accountCred = await localStore.getContentParam()
     const home = await discover.getHome({ account: accountCred })
     //    console.log(accountCred)
     //    const stream = await drm.getStream({ account: accountCred, episodeId })

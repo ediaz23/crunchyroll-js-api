@@ -8,7 +8,7 @@
     "scripts": {
         "play": "node --experimental-specifier-resolution=node main.js",
         "lint": "npx eslint --ext .js ./",
-        "test": "node --experimental-vm-modules --experimental-specifier-resolution=node ./node_modules/.bin/jest",
+        "test": "node --experimental-vm-modules --experimental-specifier-resolution=node ./node_modules/.bin/jest --runInBand",
         "mock": "node --experimental-specifier-resolution=node createMockData.js",
         "pack": "NODE_COMPILING=true webpack --config webpack.config.js",
         "types": "npx tsc",

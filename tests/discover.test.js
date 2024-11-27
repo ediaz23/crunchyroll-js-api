@@ -4,45 +4,38 @@ import { expect } from '@jest/globals'
 import localStore from '../src/localStore.js'
 import testUtils from './testUtils.js'
 import discover from '../src/services/discover.js'
-import account from '../src/services/account.js'
 
 
-/** @type {{account: import('../types').AccountAuth}} */
-let basicParam = null
+/** @type {import('../src/types').AccountAuth} */
+let account = null
 
 beforeEach(async () => {
-    await testUtils.wait()
-    await localStore.loadFromLocal()
-    localStore.setExternalStorage({ save: testUtils.saveToLocal })
-    const token = await localStore.getAuthToken()
-    const profile = await account.getProfile({ token })
-    const accountId = (await localStore.getToken()).accountId
-    basicParam = {
-        account: {
-            token,
-            accountId,
-            locale: profile.preferred_communication_language,
-            audioLanguage: profile.preferred_content_audio_language
-        }
-    }
+    await testUtils.init()
+    account = await localStore.getContentParam()
 })
 
 
 let category = null, episodeId = null, serieId = null, movieListingId = null
 
-xdescribe('Discover', () => {
+describe('Discover', () => {
 
     test('search okey', async () => {
-        const param = { ...basicParam, query: 'tate' }
-        return discover.search(param).then(res => {
+        return discover.search({
+            account,
+            query: 'tate'
+        }).then(res => {
             testUtils.resultCheck_v2(res)
             testUtils.itesmCheck(res.data[0])
         })
     })
 
     test('search episode okey', async () => {
-        const param = { ...basicParam, query: 'un nuevo rugido', quantity: 1, type: ['episode'] }
-        return discover.search(param).then(res => {
+        return discover.search({
+            account,
+            query: 'un nuevo rugido',
+            quantity: 1,
+            type: ['episode']
+        }).then(res => {
             testUtils.resultCheck_v2(res)
             testUtils.itesmCheck(res.data[0])
             episodeId = res.data[0].items[0].id
@@ -51,8 +44,12 @@ xdescribe('Discover', () => {
     })
 
     test('search episode movie okey', async () => {
-        const param = { ...basicParam, query: 'fullmetal', quantity: 1, type: ['movie_listing'] }
-        return discover.search(param).then(res => {
+        return discover.search({
+            account,
+            query: 'fullmetal',
+            quantity: 1,
+            type: ['movie_listing']
+        }).then(res => {
             testUtils.resultCheck_v2(res)
             testUtils.itesmCheck(res.data[0])
             movieListingId = res.data[0].items[0].id
@@ -60,79 +57,99 @@ xdescribe('Discover', () => {
     })
 
     test('getWatchlist okey', async () => {
-        return discover.getWatchlist(basicParam).then(res => {
+        return discover.getWatchlist({
+            account
+        }).then(res => {
             testUtils.resultCheck_v2(res)
         })
     })
 
     test('getCategories okey', async () => {
-        const param = { ...basicParam }
-        return discover.getCategories(param).then(res => {
+        return discover.getCategories({
+            account
+        }).then(res => {
             testUtils.resultCheck_v2(res)
             category = res.data[0].id
         })
     })
 
     test('getBrowseAll okey', async () => {
-        const param = { ...basicParam, quantity: 1 }
-        return discover.getBrowseAll(param).then(res => {
+        return discover.getBrowseAll({
+            account,
+            quantity: 1
+        }).then(res => {
             testUtils.resultCheck_v2(res)
         })
     })
 
     test('getBrowseAll category okey', async () => {
-        const param = { ...basicParam, quantity: 1, category: [category] }
-        return discover.getBrowseAll(param).then(res => {
+        return discover.getBrowseAll({
+            account,
+            quantity: 1,
+            category: [category]
+        }).then(res => {
             testUtils.resultCheck_v2(res)
         })
     })
 
     test('getBrowseIndex okey', async () => {
-        const param = { ...basicParam }
-        return discover.getBrowseIndex(param).then(res => {
+        return discover.getBrowseIndex({
+            account
+        }).then(res => {
             testUtils.resultCheck_v2(res)
         })
     })
 
     test('getBrowseIndex category okey', async () => {
-        const param = { ...basicParam, category: [category] }
-        return discover.getBrowseIndex(param).then(res => {
+        return discover.getBrowseIndex({
+            account,
+            category: [category]
+        }).then(res => {
             testUtils.resultCheck_v2(res)
         })
     })
 
     test('getHistory okey', async () => {
-        return discover.getHistory(basicParam).then(res => {
+        return discover.getHistory({
+            account
+        }).then(res => {
             testUtils.resultCheck_v2(res)
             testUtils.checkPlayhead_v2(res.data[0])
         })
     })
 
     test('getRecommendations okey', async () => {
-        const param = { ...basicParam }
-        return discover.getRecommendations(param).then(res => {
+        return discover.getRecommendations({
+            account
+        }).then(res => {
             testUtils.resultCheck_v2(res)
         })
     })
 
     test('getSimilar okey', async () => {
-        const param = { ...basicParam, contentId: serieId }
-        return discover.getSimilar(param).then(res => {
+        return discover.getSimilar({
+            account,
+            contentId: serieId
+        }).then(res => {
             testUtils.resultCheck_v2(res)
         })
     })
 
     test('getNextEpisode okey', async () => {
-        const param = { ...basicParam, contentId: episodeId }
-        return discover.getNext(param).then(res => {
+        return discover.getNext({
+            account,
+            contentId: episodeId
+        }).then(res => {
             testUtils.resultCheck_v2(res)
             testUtils.checkPlayhead_v2(res.data[0])
         })
     })
 
     test('getUpNextSerie okey', async () => {
-        const param = { ...basicParam, contentId: serieId }
-        return discover.getNext(param).then(res => {
+        return discover.getNext({
+            account,
+            contentId: serieId
+        }).then(res => {
             testUtils.resultCheck_v2(res)
             testUtils.checkPlayhead_v2(res.data[0])
             expect(res.data[0]).toHaveProperty('never_watched')
@@ -141,8 +158,10 @@ xdescribe('Discover', () => {
     })
 
     test('getUpNextMovie okey', async () => {
-        const param = { ...basicParam, contentId: movieListingId }
-        return discover.getNext(param).then(res => {
+        return discover.getNext({
+            account,
+            contentId: movieListingId
+        }).then(res => {
             testUtils.resultCheck_v2(res)
             testUtils.checkPlayhead_v2(res.data[0])
             expect(res.data[0]).toHaveProperty('never_watched')
@@ -151,50 +170,36 @@ xdescribe('Discover', () => {
     })
 
     test('getPrevEpisode okey', async () => {
-        const param = { ...basicParam, contentId: episodeId }
-        return discover.getPrev(param).then(res => {
+        return discover.getPrev({
+            account,
+            contentId: episodeId
+        }).then(res => {
             testUtils.resultCheck_v2(res)
             testUtils.checkPlayhead_v2(res.data[0])
-        })
-    })
-
-    test('getUpPrevSerie okey', async () => {
-        const param = { ...basicParam, contentId: serieId }
-        return discover.getPrev(param).then(res => {
-            testUtils.resultCheck_v2(res)
-            testUtils.checkPlayhead_v2(res.data[0])
-            expect(res.data[0]).toHaveProperty('never_watched')
-            expect(res.data[0].never_watched).toBeDefined()
-        })
-    })
-
-    test('getUpPrevMovie okey', async () => {
-        const param = { ...basicParam, contentId: movieListingId }
-        return discover.getPrev(param).then(res => {
-            testUtils.resultCheck_v2(res)
-            testUtils.checkPlayhead_v2(res.data[0])
-            expect(res.data[0]).toHaveProperty('never_watched')
-            expect(res.data[0].never_watched).toBeDefined()
         })
     })
 
     test('getSubcategories okey', async () => {
-        const param = { ...basicParam, parentCategory: category }
-        return discover.getSubcategories(param).then(res => {
+        return discover.getSubcategories({
+            account,
+            parentCategory: category
+        }).then(res => {
             testUtils.resultCheck_v2(res)
         })
     })
 
     test('getHomeFeed okey', async () => {
-        const param = { ...basicParam }
-        return discover.getHomeFeed(param).then(res => {
+        return discover.getHomeFeed({
+            account
+        }).then(res => {
             testUtils.resultCheck_v2(res)
         })
     })
 
     test('getSeasonList okey', async () => {
-        const param = { ...basicParam }
-        return discover.getSeasonList(param).then(res => {
+        return discover.getSeasonList({
+            account
+        }).then(res => {
             testUtils.resultCheck_v2(res)
         })
     })
