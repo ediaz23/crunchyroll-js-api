@@ -4,6 +4,7 @@ import { expect } from '@jest/globals'
 import localStore from '../src/localStore.js'
 import testUtils from './testUtils.js'
 import discover from '../src/services/discover.js'
+import utils from '../src/utils.js'
 
 
 /** @type {import('../src/types').AccountAuth} */
@@ -170,12 +171,21 @@ describe('Discover', () => {
     })
 
     test('getPrevEpisode okey', async () => {
+        testUtils.existValue(episodeId)
         return discover.getPrev({
             account,
             contentId: episodeId
         }).then(res => {
             testUtils.resultCheck_v2(res)
             testUtils.checkPlayhead_v2(res.data[0])
+        })
+    })
+
+    test('getPrevEpisode okey', async () => {
+        testUtils.existValue(episodeId)
+        return discover.markAsWatched({
+            account,
+            contentId: episodeId
         })
     })
 
@@ -190,6 +200,14 @@ describe('Discover', () => {
 
     test('getHomeFeed okey', async () => {
         return discover.getHomeFeed({
+            account
+        }).then(res => {
+            testUtils.resultCheck_v2(res)
+        })
+    })
+
+    test('getHome okey', async () => {
+        return discover.getHome({
             account
         }).then(res => {
             testUtils.resultCheck_v2(res)

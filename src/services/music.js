@@ -30,6 +30,30 @@ async function getFeed({ account, quantity, start }) {
 /**
  * @param {Object} obj
  * @param {import('../types').AccountAuth} obj.account
+ * @param {Number} [obj.quantity] Number of records in a result
+ * @param {Number} [obj.start] Offset to request
+ * @returns {Promise<{items: Array<Object>}>}
+ */
+async function getHome({ account, quantity, start }) {
+    const fnName = 'getHome'
+    logger.debug(fnName)
+    const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
+    utils.addParam(queryData, 'n', quantity, val => val > 0)
+    utils.addParam(queryData, 'start', start, val => val >= 0)
+    const query = await utils.toURLSearchParams(queryData)
+    const url = `/content/v2/music/${account.accountId}/landing_feed?${query}`
+    const reqConfig = {
+        method: 'get',
+        headers: { Authorization: account.token }
+    }
+    // @ts-expect-error
+    return utils.makeRequest(fnName, url, reqConfig)
+}
+
+
+/**
+ * @param {Object} obj
+ * @param {import('../types').AccountAuth} obj.account
  * @param {Array<String>} [obj.artistIds]
  * @returns {Promise<{items: Array<Object>}>}
  */
@@ -132,6 +156,7 @@ async function getVideo({ account, musicIds }) {
 }
 
 /**
+ * @deprecated
  * @param {Object} obj
  * @param {import('../types').AccountAuth} obj.account
  * @param {String} obj.streamUrl
@@ -152,6 +177,7 @@ async function getStreamsWithURL({ account, streamUrl }) {
 }
 
 /**
+ * @deprecated
  * @param {Object} obj
  * @param {import('../types').AccountAuth} obj.account
  * @param {String} obj.contentId
@@ -171,13 +197,35 @@ async function getStreams({ account, contentId }) {
     return utils.makeRequest(fnName, url, reqConfig)
 }
 
+/**
+ * @param {Object} obj
+ * @param {import('../types').AccountAuth} obj.account
+ * @param {Number} obj.contentId Number of records in a result
+ * @returns {Promise<{items: Array<Object>}>}
+ */
+async function getFeatured({ account, contentId }) {
+    const fnName = 'getFeatured'
+    logger.debug(fnName)
+    const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
+    const queryStr = await utils.toURLSearchParams(queryData)
+    const url = `/content/v2/music/featured/${contentId}?${queryStr}`
+    const reqConfig = {
+        method: 'get',
+        headers: { Authorization: account.token }
+    }
+    // @ts-expect-error
+    return utils.makeRequest(fnName, url, reqConfig)
+}
+
 export default {
     getArtist,
     getArtistConcerts,
     getArtistVideos,
     getConcerts,
     getFeed,
+    getHome,
     getStreams,
     getStreamsWithURL,
     getVideo,
+    getFeatured,
 }

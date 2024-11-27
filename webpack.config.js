@@ -1,7 +1,6 @@
 
 import path from 'path'
 import TerserPlugin from 'terser-webpack-plugin'
-import CopyPlugin from 'copy-webpack-plugin'
 
 const __filename = new URL(import.meta.url).pathname
 const __dirname = path.dirname(__filename)

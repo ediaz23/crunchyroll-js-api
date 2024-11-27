@@ -362,6 +362,26 @@ async function search({ account, query, quantity, start, type }) {
     return utils.makeRequest(fnName, url, reqConfig)
 }
 
+/**
+ * @param {Object} obj
+ * @param {import('../types').AccountAuth} obj.account
+ * @param {Number} obj.contentId Offset to request
+ * @returns {Promise}
+ */
+async function markAsWatched({ account, contentId }) {
+    const fnName = 'markAsWatched'
+    logger.debug(fnName)
+    const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
+    const query = await utils.toURLSearchParams(queryData)
+    const url = `/content/v2/discover/${account.accountId}/mark_as_watched/${contentId}?${query}`
+    const reqConfig = {
+        method: 'post',
+        headers: { Authorization: account.token }
+    }
+    // @ts-expect-error
+    return utils.makeRequest(fnName, url, reqConfig)
+}
+
 export default {
     getWatchlist,
     getBrowseAll,
@@ -377,4 +397,5 @@ export default {
     getNext,
     getPrev,
     search,
+    markAsWatched,
 }
