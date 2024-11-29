@@ -17,30 +17,6 @@ async function getFeed({ account, quantity, start }) {
     utils.addParam(queryData, 'n', quantity, val => val > 0)
     utils.addParam(queryData, 'start', start, val => val >= 0)
     const query = await utils.toURLSearchParams(queryData)
-    const url = `/content/v2/music/landing_feed?${query}`
-    const reqConfig = {
-        method: 'get',
-        headers: { Authorization: account.token }
-    }
-    // @ts-expect-error
-    return utils.makeRequest(fnName, url, reqConfig)
-}
-
-
-/**
- * @param {Object} obj
- * @param {import('../types').AccountAuth} obj.account
- * @param {Number} [obj.quantity] Number of records in a result
- * @param {Number} [obj.start] Offset to request
- * @returns {Promise<{items: Array<Object>}>}
- */
-async function getHome({ account, quantity, start }) {
-    const fnName = 'getHome'
-    logger.debug(fnName)
-    const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
-    utils.addParam(queryData, 'n', quantity, val => val > 0)
-    utils.addParam(queryData, 'start', start, val => val >= 0)
-    const query = await utils.toURLSearchParams(queryData)
     const url = `/content/v2/music/${account.accountId}/landing_feed?${query}`
     const reqConfig = {
         method: 'get',
@@ -223,7 +199,6 @@ export default {
     getArtistVideos,
     getConcerts,
     getFeed,
-    getHome,
     getStreams,
     getStreamsWithURL,
     getVideo,

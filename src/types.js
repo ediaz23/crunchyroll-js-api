@@ -30,6 +30,15 @@
  */
 
 /**
+ * @typedef DeviceCode
+ * @type {Object}
+ * @property {String} user_code
+ * @property {String} device_code
+ * @property {Number} interval
+ * @property {Number} expires_in
+ */
+
+/**
  * @typedef Device
  * @type {Object}
  * @property {String} id

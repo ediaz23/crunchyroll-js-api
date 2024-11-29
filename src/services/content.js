@@ -401,6 +401,49 @@ async function savePlayhead({ account, contentId, playhead }) {
     return utils.makeRequest(fnName, url, reqConfig)
 }
 
+/**
+ * @param {Object} obj
+ * @param {import('../types').AccountAuth} obj.account
+ * @param {String} obj.method http method
+ * @param {Boolean} [obj.baseUrlIncluded]
+ * @param {String} obj.url if url incluse a domain pass baseUrlIncluded=true
+ * @param {Object} [obj.body]
+ * @param {Object} [obj.headers]
+ * @param {Object} [obj.queryParams]
+ * @returns {Promise<Object>}
+ */
+async function getData({
+    account,
+    method = 'get',
+    baseUrlIncluded = false,
+    url,
+    body = null,
+    headers = {},
+    queryParams = {},
+}) {
+    const fnName = 'getData'
+    logger.debug(fnName)
+    const queryData = {
+        locale: account.locale,
+        preferred_audio_language: account.audioLanguage,
+        ...queryParams,
+    }
+    const queryStr = await utils.toURLSearchParams(queryData)
+    const urlStr = `${url}?${queryStr}`
+    const reqConfig = {
+        method,
+        headers: {
+            Authorization: account.token,
+            'Content-Type': 'application/json',
+            ...headers,
+        },
+        baseUrlIncluded,
+        body: body && JSON.stringify(body),
+    }
+    // @ts-expect-error
+    return utils.makeRequest(fnName, urlStr, reqConfig)
+}
+
 
 export default {
     addItemToCustomList,
@@ -412,6 +455,7 @@ export default {
     deleteWatchlistItem,
     getCustomListItems,
     getCustomLists,
+    getData,
     getPlayheads,
     getWatchHistory,
     getWatchlistItems,

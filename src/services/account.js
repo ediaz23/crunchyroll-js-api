@@ -1,8 +1,6 @@
 
 import utils from '../utils.js'
 import logger from '../logger.js'
-import config from '../config.js'
-
 
 /**
  * Return account info

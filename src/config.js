@@ -2,8 +2,8 @@
 export default {
     production: 'cr-production',
     vilo: 'https://static.crunchyroll.com/vilos',
-    clientId: 'gewoo3hubkzp0evqszbd',
-    clientSecret: 'K3aSb9s_LYeq9WPEAHfmGqS70nIICTY-',
+    clientId: 'xunihvedbt3mbisuhevt',
+    clientSecret: '1kIS5dyTvjE0_rqaA3YeAh0bUXUmxW11',
     clientIdSso: 'ltccxd10yl6cqcn1acx1',
     url: 'https://www.crunchyroll.com',
     urlBeta: 'https://beta-api.crunchyroll.com',

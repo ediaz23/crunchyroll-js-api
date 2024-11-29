@@ -2,7 +2,7 @@
 import CrunchyrollError from './error.js'
 import logger from './logger.js'
 import localStore from './localStore.js'
-import configApp from './config.js'
+import config from './config.js'
 import account from './services/account.js'
 import assets from './services/assets.js'
 import auth from './services/auth.js'
@@ -29,10 +29,6 @@ const api = {
     music,
     review,
     subscription,
-}
-
-const config = {
-    configApp,
 }
 
 const CrunchyrollAPI = {

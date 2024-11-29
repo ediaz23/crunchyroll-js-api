@@ -16,6 +16,9 @@ let credential = null
 /** @type {import('../src/types').Device} */
 let device = null
 
+/** @type {String} */
+let deviceCode = null
+
 beforeEach(async () => {
     await testUtils.init()
     credential = localStore.storage.credential
@@ -37,7 +40,6 @@ function validateToken(token) {
     expect(token.scope).not.toBeNull()
     expect(token.token_type).not.toBeNull()
 }
-
 
 xdescribe('Auth', () => {
 
@@ -74,7 +76,7 @@ xdescribe('Auth', () => {
         validateToken(token)
     })
 
-    test('switchProfile Okey', async () => {
+    test('SwitchProfile Okey', async () => {
         testUtils.existValue(token)
         testUtils.existValue(token.refresh_token)
         testUtils.existValue(token.profile_id)
@@ -105,4 +107,27 @@ xdescribe('Auth', () => {
             expect(data).toEqual({ status: "OK" })
         })
     })
+
+    test('DeviceCode', async () => {
+        return auth.getDeviceCode().then(deviceObj => {
+            testUtils.existValue(deviceObj)
+            testUtils.existValue(deviceObj.user_code)
+            testUtils.existValue(deviceObj.device_code)
+            testUtils.existValue(deviceObj.interval)
+            testUtils.existValue(deviceObj.expires_in)
+            deviceCode = deviceObj.device_code
+        })
+    })
+
+    test('DeviceAuthToken', async () => {
+        testUtils.existValue(device)
+        testUtils.existValue(deviceCode)
+        return auth.getDeviceAuth({
+            device,
+            deviceCode
+        }).then(out => {
+            expect(out).toBeNull()
+        })
+    })
+
 })

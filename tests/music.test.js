@@ -26,14 +26,6 @@ describe('Music', () => {
         })
     })
 
-    test('getHome okey', async () => {
-        return music.getHome({
-            account
-        }).then(res => {
-            testUtils.existValue(res)
-        })
-    })
-
     test('getArtist okey', async () => {
         return music.getArtist({
             account,
