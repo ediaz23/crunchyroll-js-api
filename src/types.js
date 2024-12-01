@@ -36,6 +36,7 @@
  * @property {String} device_code
  * @property {Number} interval
  * @property {Number} expires_in
+ * @property {Date} created_date
  */
 
 /**

@@ -35,7 +35,11 @@ async function getDeviceCode() {
         },
     }
     // @ts-expect-error
-    return utils.makeRequest(fnName, url, reqConfig)
+    const token = await utils.makeRequest(fnName, url, reqConfig)
+    if (token) {
+        token.created_date = new Date().toISOString()
+    }
+    return token
 }
 
 /**

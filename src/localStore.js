@@ -3,6 +3,7 @@ import utils from './utils.js'
 import authService from './services/auth.js'
 import indexService from './services/index.js'
 import accountService from './services/account.js'
+import CrunchyrollError from './error.js'
 
 
 /** @type {import('./types.js').Storage} */
@@ -46,6 +47,21 @@ function toJSON(jsonData) {
 
 
 /**
+ * @param {Object} [data]
+ * @returns {Promise}
+ */
+async function saveToken(data) {
+    if (data) {
+        storage.token = fromJSON(data)
+        storage.token.token = `${storage.token.tokenType} ${storage.token.accessToken}`
+    } else {
+        storage.token = null
+    }
+    await saveToLocal()
+}
+
+
+/**
  * @returns {Promise<String>}
  */
 async function getAuthToken() {
@@ -61,14 +77,21 @@ async function getAuthToken() {
     if (!tokenObj) {
         let data = null
         if (storage.token && storage.token.refreshToken) {
-            data = await authService.getRefreshToken({ ...storage.token, device: storage.device })
-        } else {
-            data = await authService.getToken({ ...storage.credential, device: storage.device })
+            data = await authService.getRefreshToken({
+                ...storage.token,
+                device: storage.device
+            })
+        } else if (storage.credential) {
+            data = await authService.getToken({
+                ...storage.credential,
+                device: storage.device
+            })
         }
-        storage.token = fromJSON(data)
-        storage.token.token = `${storage.token.tokenType} ${storage.token.accessToken}`
-        await saveToLocal()
+        await saveToken(data)
         tokenObj = storage.token
+    }
+    if (!tokenObj) {
+        throw new CrunchyrollError('No auth token found.')
     }
     return tokenObj.token
 }
@@ -79,10 +102,12 @@ async function getAuthToken() {
  * @returns {Promise<import('./types').TokenObj>}
  */
 async function switchProfile(profileId) {
-    const data = await authService.switchProfile({ ...storage.token, device: storage.device, profileId })
-    storage.token = fromJSON(data)
-    storage.token.token = `${storage.token.tokenType} ${storage.token.accessToken}`
-    await saveToLocal()
+    const data = await authService.switchProfile({
+        ...storage.token,
+        device: storage.device,
+        profileId
+    })
+    await saveToken(data)
     return storage.token
 }
 
@@ -95,6 +120,7 @@ async function getToken() {
     return storage.token
 }
 
+
 /**
  * @returns {Promise}
  */
@@ -105,6 +131,7 @@ async function revokeToken() {
     storage.token = null
     await saveToLocal()
 }
+
 
 /**
  * @returns {Promise<import('./types').CmsObj>}
@@ -126,6 +153,7 @@ async function getCms() {
 
     return cms
 }
+
 
 /**
  * @returns {Promise<import('./types').AccountObj>}
@@ -272,6 +300,7 @@ function setExternalStorage({ save, load }) {
     }
 }
 
+
 /**
  * Set credentials of an account
  * @param {Storage} newData
@@ -294,6 +323,7 @@ export default {
     saveToLocal,
     authDataFile,
     getAccount,
+    saveToken,
     setExternalStorage,
     setNewData,
     switchProfile,
