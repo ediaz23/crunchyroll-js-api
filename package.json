@@ -4,7 +4,7 @@
     "description": "JavaScript API consumer for crunchyroll",
     "homepage": "https://github.com/ediaz23/crunchyroll_js_api",
     "types": "./dist/types/index.d.ts",
-    "version": "1.4.0",
+    "version": "1.4.1",
     "scripts": {
         "play": "node --experimental-specifier-resolution=node main.js",
         "lint": "npx eslint --ext .js ./",
