@@ -19,6 +19,9 @@ const logger = {
     error: () => { },
     debug: () => { },
     setLevel: () => { },
+    /**
+     * @param {Boolean} active
+     */
     activeColor: active => { COLOR_ACTIVE = active },
 }
 
@@ -26,6 +29,9 @@ if (!console.debug) { console.debug = console.log }
 if (!console.info) { console.info = console.log }
 if (!console.error) { console.error = console.log }
 
+/**
+ * @param {Object} obj
+ */
 const formatObj = obj => {
     let extra = ''
     const keys = Object.keys(obj)
@@ -48,6 +54,10 @@ const formatObj = obj => {
 
 const colors = { debug: '\x1b[33m', info: '\x1b[32m', error: '\x1b[31m', reset: '\x1b[0m' }
 
+/**
+ * @param {any} message
+ * @param {String} level
+ */
 const getMessage = (message, level) => {
     if (!(typeof (message) === 'string' || message instanceof String)) {
         message = formatObj(message)
@@ -59,9 +69,13 @@ const getMessage = (message, level) => {
     if (!COLOR_ACTIVE) {
         color = resetColor = ''
     }
-    return `${Date.now()} ${color}${level.toUpperCase()} ${message} ${(callerFile || '').trim()} ${resetColor}`
+    const date = new Date().toISOString()
+    return `${date} ${color}${level.toUpperCase()} ${message} ${(callerFile || '').trim()} ${resetColor}`
 }
 
+/**
+ * @param {String} newLevel
+ */
 function configBrowserLogger(newLevel) {
     if (!newLevel) {
         newLevel = LEVEL
