@@ -292,7 +292,7 @@ async function getSkiptEvents({ account, contentId }) {
     try {
         // @ts-expect-error
         out = await utils.makeRequest(fnName, url, reqConfig)
-    } catch (e) {
+    } catch (_e) {
         // ignore any error
     }
     return out

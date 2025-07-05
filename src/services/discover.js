@@ -176,7 +176,6 @@ async function getHomeFeed({ account, quantity, start }) {
 /**
  * @param {Object} obj
  * @param {import('../types').AccountAuth} obj.account
- * @param {Number} [obj.start] Offset to request
  * @returns {Promise<import('../types').HomeItem>}
  */
 async function getHome({ account }) {
@@ -185,6 +184,35 @@ async function getHome({ account }) {
     const queryData = { locale: account.locale }
     const query = await utils.toURLSearchParams(queryData)
     const url = `${config.url}/f/v1/home?${query}`
+    const reqConfig = {
+        method: 'get',
+        headers: { Authorization: account.token },
+        baseUrlIncluded: true,
+    }
+    // @ts-expect-error
+    return utils.makeRequest(fnName, url, reqConfig)
+}
+
+/**
+ * @param {Object} obj
+ * @param {import('../types').AccountAuth} obj.account
+ * @param {String} obj.collectionId
+  * @param {Boolean} obj.ratings
+ * @param {String} [obj.vendor]
+ * @returns {Promise<import('../types').HomeItem>}
+ */
+async function getPersonalRecomendation({ account, collectionId, ratings, vendor }) {
+    const fnName = 'getPersonalRecomendation'
+    logger.debug(fnName)
+    const queryData = {
+        collectionId,
+        ratings,
+        vendor,
+        locale: account.locale,
+        profileId: account.profileId,
+    }
+    const query = await utils.toURLSearchParams(queryData)
+    const url = `${config.url}/personalization/v2/personalization?${query}`
     const reqConfig = {
         method: 'get',
         headers: { Authorization: account.token },
@@ -390,6 +418,7 @@ export default {
     getSubcategories,
     getHome,
     getHomeFeed,
+    getPersonalRecomendation,
     getHistory,
     getRecommendations,
     getSeasonList,

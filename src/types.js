@@ -255,4 +255,4 @@
  * @property {Array<HomeItem>} children
  */
 
-export default {}  // eslint-disable-line no-undef
+export default {}
