@@ -12,9 +12,10 @@ import CrunchyrollError from '../error.js'
  * @param {Number} [obj.start] Offset to request
  * @param {Boolean} [obj.ratings]
  * @param {String} [obj.order] Order
+ * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
  * @returns {Promise<{total: Number, data: Array<Object>}>} 
  */
-async function getWatchlist({ account, quantity, start, ratings, order }) {
+async function getWatchlist({ account, quantity, start, ratings, order, fnConfig }) {
     const fnName = 'getWatchlist'
     logger.debug(fnName)
     const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
@@ -30,7 +31,7 @@ async function getWatchlist({ account, quantity, start, ratings, order }) {
         headers: { Authorization: account.token }
     }
     // @ts-expect-error
-    return utils.makeRequest(fnName, url, reqConfig)
+    return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
 /**
@@ -44,9 +45,10 @@ async function getWatchlist({ account, quantity, start, ratings, order }) {
  * @param {String} [obj.sort] sort results
  * @param {String} [obj.type] type for search, example episode
  * @param {Boolean} [obj.ratings]
+ * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
  * @returns {Promise<{total: Number, data: Array<Object>, meta: Object}>}
  */
-async function getBrowseAll({ account, quantity, start, category, query, seasonTag, sort, type, ratings }) {
+async function getBrowseAll({ account, quantity, start, category, query, seasonTag, sort, type, ratings, fnConfig }) {
     const fnName = 'getBrowseAll'
     logger.debug(fnName)
     const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
@@ -71,7 +73,7 @@ async function getBrowseAll({ account, quantity, start, category, query, seasonT
         }
     }
     // @ts-expect-error
-    return utils.makeRequest(fnName, url, reqConfig)
+    return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
 /**
@@ -80,9 +82,10 @@ async function getBrowseAll({ account, quantity, start, category, query, seasonT
  * @param {Array<String>} [obj.category] Category
  * @param {String} [obj.sort] sort results
  * @param {Boolean} [obj.ratings]
+ * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
  * @returns {Promise<{total: Number, data: Array<Object>, meta: Object}>}
  */
-async function getBrowseIndex({ account, category, sort, ratings }) {
+async function getBrowseIndex({ account, category, sort, ratings, fnConfig }) {
     const fnName = 'getBrowseIndex'
     logger.debug(fnName)
     const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
@@ -102,16 +105,17 @@ async function getBrowseIndex({ account, category, sort, ratings }) {
         }
     }
     // @ts-expect-error
-    return utils.makeRequest(fnName, url, reqConfig)
+    return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
 /**
  * @param {Object} obj
  * @param {import('../types').AccountAuth} obj.account
  * @param {String} obj.contentId
+ * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
  * @returns {Promise<{total: Number, data: Array<Object>, meta: Object}>}
  */
-async function getCategories({ account, contentId }) {
+async function getCategories({ account, contentId, fnConfig }) {
     const fnName = 'getCategories'
     logger.debug(fnName)
     const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
@@ -126,16 +130,17 @@ async function getCategories({ account, contentId }) {
         }
     }
     // @ts-expect-error
-    return utils.makeRequest(fnName, url, reqConfig)
+    return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
 /**
  * @param {Object} obj
  * @param {import('../types').AccountAuth} obj.account
  * @param {Number} obj.parentCategory Offset to request
+ * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
  * @returns {Promise<{total: Number, data: Array<Object>, meta: Object}>}
  */
-async function getSubcategories({ account, parentCategory }) {
+async function getSubcategories({ account, parentCategory, fnConfig }) {
     const fnName = 'getSubcategories'
     logger.debug(fnName)
     const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
@@ -147,7 +152,7 @@ async function getSubcategories({ account, parentCategory }) {
         headers: { Authorization: account.token }
     }
     // @ts-expect-error
-    return utils.makeRequest(fnName, url, reqConfig)
+    return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
 /**
@@ -155,9 +160,10 @@ async function getSubcategories({ account, parentCategory }) {
  * @param {import('../types').AccountAuth} obj.account
  * @param {Number} [obj.quantity] Number of records in a result
  * @param {Number} [obj.start] Offset to request
+ * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
  * @returns {Promise<{items: Array<Object>}>}
  */
-async function getHomeFeed({ account, quantity, start }) {
+async function getHomeFeed({ account, quantity, start, fnConfig }) {
     const fnName = 'getHomeFeed'
     logger.debug(fnName)
     const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
@@ -170,15 +176,16 @@ async function getHomeFeed({ account, quantity, start }) {
         headers: { Authorization: account.token }
     }
     // @ts-expect-error
-    return utils.makeRequest(fnName, url, reqConfig)
+    return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
 /**
  * @param {Object} obj
  * @param {import('../types').AccountAuth} obj.account
+ * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
  * @returns {Promise<import('../types').HomeItem>}
  */
-async function getHome({ account }) {
+async function getHome({ account, fnConfig }) {
     const fnName = 'getHome'
     logger.debug(fnName)
     const queryData = { locale: account.locale }
@@ -190,18 +197,19 @@ async function getHome({ account }) {
         baseUrlIncluded: true,
     }
     // @ts-expect-error
-    return utils.makeRequest(fnName, url, reqConfig)
+    return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
 /**
  * @param {Object} obj
  * @param {import('../types').AccountAuth} obj.account
  * @param {String} obj.collectionId
-  * @param {Boolean} obj.ratings
+ * @param {Boolean} obj.ratings
  * @param {String} [obj.vendor]
+ * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
  * @returns {Promise<import('../types').HomeItem>}
  */
-async function getPersonalRecomendation({ account, collectionId, ratings, vendor }) {
+async function getPersonalRecomendation({ account, collectionId, ratings, vendor, fnConfig }) {
     const fnName = 'getPersonalRecomendation'
     logger.debug(fnName)
     const queryData = {
@@ -219,7 +227,7 @@ async function getPersonalRecomendation({ account, collectionId, ratings, vendor
         baseUrlIncluded: true,
     }
     // @ts-expect-error
-    return utils.makeRequest(fnName, url, reqConfig)
+    return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
 /**
@@ -227,9 +235,10 @@ async function getPersonalRecomendation({ account, collectionId, ratings, vendor
  * @param {import('../types').AccountAuth} obj.account
  * @param {Number} obj.quantity
  * @param {Boolean} obj.ratings
+ * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
  * @returns {Promise<{total: Number, data: Array<Object>, meta: Object}>}
  */
-async function getHistory({ account, quantity, ratings }) {
+async function getHistory({ account, quantity, ratings, fnConfig }) {
     const fnName = 'getHistory'
     logger.debug(fnName)
     const queryData = { locale: account.locale }
@@ -242,7 +251,7 @@ async function getHistory({ account, quantity, ratings }) {
         headers: { Authorization: account.token }
     }
     // @ts-expect-error
-    return utils.makeRequest(fnName, url, reqConfig)
+    return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
 /**
@@ -251,9 +260,10 @@ async function getHistory({ account, quantity, ratings }) {
  * @param {Number} [obj.quantity] Number of records in a result
  * @param {Number} [obj.start] Offset to request
  * @param {Boolean} [obj.ratings]
+ * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
  * @returns {Promise<{total: Number, data: Array<Object>, meta: Object}>}
  */
-async function getRecommendations({ account, quantity, start, ratings }) {
+async function getRecommendations({ account, quantity, start, ratings, fnConfig }) {
     const fnName = 'getRecommendations'
     logger.debug(fnName)
     const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
@@ -267,15 +277,16 @@ async function getRecommendations({ account, quantity, start, ratings }) {
         headers: { Authorization: account.token }
     }
     // @ts-expect-error
-    return utils.makeRequest(fnName, url, reqConfig)
+    return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
 /**
  * @param {Object} obj
  * @param {import('../types').AccountAuth} obj.account
+ * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
  * @returns {Promise<{items: Array<{id: String, localization: Object}>}>} 
  */
-async function getSeasonList({ account }) {
+async function getSeasonList({ account, fnConfig }) {
     const fnName = 'getSeasonList'
     logger.debug(fnName)
     const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
@@ -286,7 +297,7 @@ async function getSeasonList({ account }) {
         headers: { Authorization: account.token }
     }
     // @ts-expect-error
-    return utils.makeRequest(fnName, url, reqConfig)
+    return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
 /**
@@ -296,9 +307,10 @@ async function getSeasonList({ account }) {
  * @param {Number} [obj.quantity] Number of records in a result
  * @param {Number} [obj.start] Offset to request
  * @param {Boolean} [obj.ratings]
+ * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
  * @returns {Promise<{total: Number, data: Array<Object>, meta: Object}>}
  */
-async function getSimilar({ account, contentId, quantity, start, ratings }) {
+async function getSimilar({ account, contentId, quantity, start, ratings, fnConfig }) {
     const fnName = 'getSimilar'
     logger.debug(fnName)
     const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
@@ -312,16 +324,17 @@ async function getSimilar({ account, contentId, quantity, start, ratings }) {
         headers: { Authorization: account.token }
     }
     // @ts-expect-error
-    return utils.makeRequest(fnName, url, reqConfig)
+    return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
 /**
  * @param {Object} obj
  * @param {import('../types').AccountAuth} obj.account
  * @param {String} obj.contentId
+ * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
  * @returns {Promise<{total: Number, data: Array<Object>, meta: Object}>} 
  */
-async function getNext({ account, contentId }) {
+async function getNext({ account, contentId, fnConfig }) {
     const fnName = 'getNext'
     logger.debug(fnName)
     const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
@@ -332,16 +345,17 @@ async function getNext({ account, contentId }) {
         headers: { Authorization: account.token }
     }
     // @ts-expect-error
-    return utils.makeRequest(fnName, url, reqConfig)
+    return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
 /**
  * @param {Object} obj
  * @param {import('../types').AccountAuth} obj.account
  * @param {String} obj.contentId
+ * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
  * @returns {Promise<{total: Number, data: Array<Object>, meta: Object}>} 
  */
-async function getPrev({ account, contentId }) {
+async function getPrev({ account, contentId, fnConfig }) {
     const fnName = 'getPrev'
     logger.debug(fnName)
     const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
@@ -352,7 +366,7 @@ async function getPrev({ account, contentId }) {
         headers: { Authorization: account.token }
     }
     // @ts-expect-error
-    return utils.makeRequest(fnName, url, reqConfig)
+    return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
 /**
@@ -362,9 +376,10 @@ async function getPrev({ account, contentId }) {
  * @param {Number} [obj.quantity] Number of records in a result
  * @param {Number} [obj.start] Offset to request
  * @param {Array<String>} [obj.type] Can be top_results, series, movie_listing, episode
+ * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
  * @returns {Promise<{total: Number, data: Array<Object>, meta: Object}>} 
  */
-async function search({ account, query, quantity, start, type }) {
+async function search({ account, query, quantity, start, type, fnConfig }) {
     const fnName = 'search'
     logger.debug(fnName)
     const types = config.contentTypes.concat(['top_results', 'music'])
@@ -387,16 +402,17 @@ async function search({ account, query, quantity, start, type }) {
         headers: { Authorization: account.token }
     }
     // @ts-expect-error
-    return utils.makeRequest(fnName, url, reqConfig)
+    return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
 /**
  * @param {Object} obj
  * @param {import('../types').AccountAuth} obj.account
  * @param {Number} obj.contentId Offset to request
+ * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
  * @returns {Promise}
  */
-async function markAsWatched({ account, contentId }) {
+async function markAsWatched({ account, contentId, fnConfig }) {
     const fnName = 'markAsWatched'
     logger.debug(fnName)
     const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
@@ -407,7 +423,7 @@ async function markAsWatched({ account, contentId }) {
         headers: { Authorization: account.token }
     }
     // @ts-expect-error
-    return utils.makeRequest(fnName, url, reqConfig)
+    return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
 export default {

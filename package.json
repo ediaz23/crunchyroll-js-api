@@ -4,7 +4,7 @@
     "description": "JavaScript API consumer for crunchyroll",
     "homepage": "https://github.com/ediaz23/crunchyroll_js_api",
     "types": "./dist/types/index.d.ts",
-    "version": "1.4.4",
+    "version": "1.5.0",
     "scripts": {
         "play": "node --experimental-specifier-resolution=node main.js",
         "lint": "npx eslint --ext .js ./",
@@ -46,7 +46,7 @@
         "node-fetch": "^3.3.2",
         "terser-webpack-plugin": "^5.3.14",
         "typescript": "^5.8.3",
-        "webpack": "^5.99.9",
+        "webpack": "^5.100.0",
         "webpack-cli": "^6.0.1",
         "webpack-conditional-loader": "^1.0.12"
     },

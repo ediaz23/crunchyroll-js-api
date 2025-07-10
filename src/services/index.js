@@ -5,10 +5,12 @@ import logger from '../logger.js'
 
 /**
  * Return index data. Cms is set there
- * @param {{token: String}} obj
+ * @param {Object} obj
+ * @param {String} obj.token
+ * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
  * @returns {Promise<import('../types').CmsContainer>}
  */
-async function getIndexConfig({ token }) {
+async function getIndexConfig({ token, fnConfig }) {
     const fnName = 'getIndexConfig'
     logger.debug(fnName)
     const url = `/index/v2`
@@ -17,7 +19,7 @@ async function getIndexConfig({ token }) {
         headers: { Authorization: token }
     }
     // @ts-expect-error
-    return utils.makeRequest(fnName, url, reqConfig)
+    return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
 export default {

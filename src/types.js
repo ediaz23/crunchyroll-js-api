@@ -255,4 +255,12 @@
  * @property {Array<HomeItem>} children
  */
 
+/**
+ * @typedef FetchConfig
+ * @type {Object}
+ * @property {Boolean} [direct] turn on return response as raw content
+ * @property {Boolean} [cache] use cache
+ * @property {Boolean} [sync] turn on sync mode
+ */
+
 export default {}

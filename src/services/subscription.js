@@ -7,9 +7,10 @@ import logger from '../logger.js'
  * @param {Object} obj
  * @param {import('../types').AccountAuth} obj.auth
  * @param {String} [obj.source]
+ * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
  * @returns {Promise<Object>}
  */
-async function getProducts({ auth, source }) {
+async function getProducts({ auth, source, fnConfig }) {
     const fnName = 'getProducts'
     logger.debug(fnName)
     const queryData = { locale: auth.locale }
@@ -21,7 +22,7 @@ async function getProducts({ auth, source }) {
         headers: { Authorization: auth.token }
     }
     // @ts-expect-error
-    return utils.makeRequest(fnName, url, reqConfig)
+    return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
 
@@ -29,9 +30,10 @@ async function getProducts({ auth, source }) {
  * @param {Object} obj
  * @param {import('../types').AccountAuth} obj.auth
  * @param {String} obj.externalId
+ * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
  * @returns {Promise<Object>}
  */
-async function getUserBenefits({ auth, externalId }) {
+async function getUserBenefits({ auth, externalId, fnConfig }) {
     const fnName = 'getUserBenefits'
     logger.debug(fnName)
     const queryData = { locale: auth.locale }
@@ -42,7 +44,7 @@ async function getUserBenefits({ auth, externalId }) {
         headers: { Authorization: auth.token }
     }
     // @ts-expect-error
-    return utils.makeRequest(fnName, url, reqConfig)
+    return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
 
@@ -50,9 +52,10 @@ async function getUserBenefits({ auth, externalId }) {
  * @param {Object} obj
  * @param {import('../types').AccountAuth} obj.auth
  * @param {String} obj.externalId
+ * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
  * @returns {Promise<Object>}
  */
-async function getUserSubscription({ auth, externalId }) {
+async function getUserSubscription({ auth, externalId, fnConfig }) {
     const fnName = 'getUserSubscription'
     logger.debug(fnName)
     const queryData = { locale: auth.locale }
@@ -63,7 +66,7 @@ async function getUserSubscription({ auth, externalId }) {
         headers: { Authorization: auth.token }
     }
     // @ts-expect-error
-    return utils.makeRequest(fnName, url, reqConfig)
+    return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
 

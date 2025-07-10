@@ -6,9 +6,10 @@ import logger from '../logger.js'
  * Return account info
  * @param {Object} obj
  * @param {String} obj.token
+ * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
  * @returns {Promise<import('../types').Account>}
  */
-async function getAccountId({ token }) {
+async function getAccountId({ token, fnConfig }) {
     const fnName = 'getAccountId'
     logger.debug(fnName)
     const url = `/accounts/v1/me`
@@ -17,7 +18,7 @@ async function getAccountId({ token }) {
         headers: { Authorization: token }
     }
     // @ts-expect-error
-    return utils.makeRequest(fnName, url, reqConfig)
+    return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
 
@@ -26,9 +27,10 @@ async function getAccountId({ token }) {
  * @deprecated
  * @param {Object} obj
  * @param {String} obj.token
+ * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
  * @returns {Promise<import('../types').Profile>}
  */
-async function getProfile({ token }) {
+async function getProfile({ token, fnConfig }) {
     const fnName = 'getProfile'
     logger.debug(fnName)
     const url = `/accounts/v1/me/profile`
@@ -37,16 +39,17 @@ async function getProfile({ token }) {
         headers: { Authorization: token },
     }
     // @ts-expect-error
-    return utils.makeRequest(fnName, url, reqConfig)
+    return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
 /**
  * Return user names, idk what it is
  * @param {Object} obj
  * @param {String} obj.token
+ * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
  * @returns {Promise<{usernames: Array<String>}>}
  */
-async function getUsernames({ token }) {
+async function getUsernames({ token, fnConfig }) {
     const fnName = 'getAccountId'
     logger.debug(fnName)
     const url = `/accounts/v1/usernames`
@@ -55,7 +58,7 @@ async function getUsernames({ token }) {
         headers: { Authorization: token }
     }
     // @ts-expect-error
-    return utils.makeRequest(fnName, url, reqConfig)
+    return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
 
@@ -64,9 +67,10 @@ async function getUsernames({ token }) {
  * @param {Object} obj
  * @param {String} obj.token
  * @param {import('../types').Profile} obj.data
+ * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
  * @returns {Promise}
  */
-async function updateProfile({ token, data }) {
+async function updateProfile({ token, data, fnConfig }) {
     const fnName = 'updateProfile'
     logger.debug(fnName)
     const url = `/accounts/v1/me/profile`
@@ -79,7 +83,7 @@ async function updateProfile({ token, data }) {
         body: JSON.stringify(data),
     }
     // @ts-expect-error
-    await utils.makeRequest(fnName, url, reqConfig)
+    await utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
 /**
@@ -87,9 +91,10 @@ async function updateProfile({ token, data }) {
  * @param {Object} obj
  * @param {String} obj.token
  * @param {import('../types').ProfileCreate} obj.data
+ * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
  * @returns {Promise}
  */
-async function createMultiProfile({ token, data }) {
+async function createMultiProfile({ token, data, fnConfig }) {
     const fnName = 'createMultiProfile'
     logger.debug(fnName)
     const url = `/accounts/v1/me/multiprofile`
@@ -102,7 +107,7 @@ async function createMultiProfile({ token, data }) {
         body: JSON.stringify(data),
     }
     // @ts-expect-error
-    await utils.makeRequest(fnName, url, reqConfig)
+    await utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
 /**
@@ -110,9 +115,10 @@ async function createMultiProfile({ token, data }) {
  * @param {Object} obj
  * @param {String} obj.token
  * @param {String} obj.profileId
+ * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
  * @returns {Promise}
  */
-async function deleteMultiProfile({ token, profileId }) {
+async function deleteMultiProfile({ token, profileId, fnConfig }) {
     const fnName = 'deleteMultiProfile'
     logger.debug(fnName)
     const url = `/accounts/v1/me/multiprofile/${profileId}`
@@ -124,7 +130,7 @@ async function deleteMultiProfile({ token, profileId }) {
         },
     }
     // @ts-expect-error
-    await utils.makeRequest(fnName, url, reqConfig)
+    await utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
 
@@ -132,9 +138,10 @@ async function deleteMultiProfile({ token, profileId }) {
  * Return profile info
  * @param {Object} obj
  * @param {String} obj.token
+ * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
  * @returns {Promise<import('../types').ProfileResponse>}
  */
-async function getMultiProfiles({ token }) {
+async function getMultiProfiles({ token, fnConfig }) {
     const fnName = 'getMultiProfiles'
     logger.debug(fnName)
     const url = `/accounts/v1/me/multiprofile`
@@ -143,7 +150,7 @@ async function getMultiProfiles({ token }) {
         headers: { Authorization: token }
     }
     // @ts-expect-error
-    return utils.makeRequest(fnName, url, reqConfig)
+    return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
 /**
@@ -152,9 +159,10 @@ async function getMultiProfiles({ token }) {
  * @param {String} obj.token
  * @param {import('../types').Profile} obj.data
  * @param {String} obj.profileId
+ * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
  * @returns {Promise}
  */
-async function updateMultiProfile({ token, data, profileId }) {
+async function updateMultiProfile({ token, data, profileId, fnConfig }) {
     const fnName = 'updateMultiProfile'
     logger.debug(fnName)
     const url = `/accounts/v1/me/multiprofile/${profileId}`
@@ -167,7 +175,7 @@ async function updateMultiProfile({ token, data, profileId }) {
         body: JSON.stringify(data),
     }
     // @ts-expect-error
-    await utils.makeRequest(fnName, url, reqConfig)
+    await utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
 /**
@@ -175,9 +183,10 @@ async function updateMultiProfile({ token, data, profileId }) {
  * @param {Object} obj
  * @param {String} obj.token
  * @param {String} obj.profileId
+ * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
  * @returns {Promise<import('../types').Profile>}
  */
-async function getMultiProfile({ token, profileId }) {
+async function getMultiProfile({ token, profileId, fnConfig }) {
     const fnName = 'getMultiProfiles'
     logger.debug(fnName)
     const url = `/accounts/v1/me/multiprofile/${profileId}`
@@ -186,7 +195,7 @@ async function getMultiProfile({ token, profileId }) {
         headers: { Authorization: token },
     }
     // @ts-expect-error
-    return utils.makeRequest(fnName, url, reqConfig)
+    return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
 

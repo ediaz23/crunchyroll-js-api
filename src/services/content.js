@@ -9,9 +9,10 @@ import CrunchyrollError from '../error.js'
  * @param {import('../types').AccountAuth} obj.account
  * @param {String} obj.listId
  * @param {String} obj.contentId
+ * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
  * @returns {Promise}
  */
-async function addItemToCustomList({ account, listId, contentId }) {
+async function addItemToCustomList({ account, listId, contentId, fnConfig }) {
     const fnName = 'addItemToCustomList'
     logger.debug(fnName)
     const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
@@ -26,7 +27,7 @@ async function addItemToCustomList({ account, listId, contentId }) {
         body: JSON.stringify({ content_id: contentId })
     }
     // @ts-expect-error
-    return utils.makeRequest(fnName, url, reqConfig)
+    return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
 
@@ -37,9 +38,10 @@ async function addItemToCustomList({ account, listId, contentId }) {
  * @param {String} obj.contentId
  * @param {String} obj.location
  * @param {String} obj.refContentId
+ * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
  * @returns {Promise}
  */
-async function changeCustomListItemPosition({ account, listId, contentId, location, refContentId }) {
+async function changeCustomListItemPosition({ account, listId, contentId, location, refContentId, fnConfig }) {
     const fnName = 'changeCustomListItemPosition'
     logger.debug(fnName)
     const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
@@ -58,7 +60,7 @@ async function changeCustomListItemPosition({ account, listId, contentId, locati
         })
     }
     // @ts-expect-error
-    return utils.makeRequest(fnName, url, reqConfig)
+    return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
 
@@ -70,9 +72,10 @@ async function changeCustomListItemPosition({ account, listId, contentId, locati
  * @param {String} [obj.pageSize]
  * @param {String} [obj.sort] manual, date_added
  * @param {String} [obj.order] asc, desc
+ * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
  * @returns {Promise<Object>}
  */
-async function getCustomListItems({ account, listId, page, pageSize, sort, order }) {
+async function getCustomListItems({ account, listId, page, pageSize, sort, order, fnConfig }) {
     const fnName = 'getCustomListItems'
     logger.debug(fnName)
     const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
@@ -89,7 +92,7 @@ async function getCustomListItems({ account, listId, page, pageSize, sort, order
         headers: { Authorization: account.token }
     }
     // @ts-expect-error
-    return utils.makeRequest(fnName, url, reqConfig)
+    return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
 
@@ -98,9 +101,10 @@ async function getCustomListItems({ account, listId, page, pageSize, sort, order
  * @param {import('../types').AccountAuth} obj.account
  * @param {String} obj.listId
  * @param {String} obj.contentId 
+ * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
  * @returns {Promise}
  */
-async function deleteCustomListItem({ account, listId, contentId }) {
+async function deleteCustomListItem({ account, listId, contentId, fnConfig }) {
     const fnName = 'deleteCustomListItem'
     logger.debug(fnName)
     const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
@@ -114,7 +118,7 @@ async function deleteCustomListItem({ account, listId, contentId }) {
         },
     }
     // @ts-expect-error
-    return utils.makeRequest(fnName, url, reqConfig)
+    return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
 
@@ -122,9 +126,10 @@ async function deleteCustomListItem({ account, listId, contentId }) {
  * @param {Object} obj
  * @param {import('../types').AccountAuth} obj.account
  * @param {String} obj.title
+ * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
  * @returns {Promise<{data: Array<import('../types').CustomListResponse>}>}
  */
-async function createPrivateCustomList({ account, title }) {
+async function createPrivateCustomList({ account, title, fnConfig }) {
     const fnName = 'createPrivateCustomList'
     logger.debug(fnName)
     const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
@@ -139,16 +144,17 @@ async function createPrivateCustomList({ account, title }) {
         body: JSON.stringify({ title })
     }
     // @ts-expect-error
-    return utils.makeRequest(fnName, url, reqConfig)
+    return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
 
 /**
  * @param {Object} obj
  * @param {import('../types').AccountAuth} obj.account
+ * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
  * @returns {Promise<{total: Number, data: Object, meta: Object}>}
  */
-async function getCustomLists({ account }) {
+async function getCustomLists({ account, fnConfig }) {
     const fnName = 'getCustomLists'
     logger.debug(fnName)
     const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
@@ -159,7 +165,7 @@ async function getCustomLists({ account }) {
         headers: { Authorization: account.token }
     }
     // @ts-expect-error
-    return utils.makeRequest(fnName, url, reqConfig)
+    return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
 
@@ -168,9 +174,10 @@ async function getCustomLists({ account }) {
  * @param {import('../types').AccountAuth} obj.account
  * @param {String} obj.listId
  * @param {String} obj.title
+ * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
  * @returns {Promise}
  */
-async function updateCustomList({ account, listId, title }) {
+async function updateCustomList({ account, listId, title, fnConfig }) {
     const fnName = 'updateCustomList'
     logger.debug(fnName)
     const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
@@ -185,7 +192,7 @@ async function updateCustomList({ account, listId, title }) {
         body: JSON.stringify({ title })
     }
     // @ts-expect-error
-    return utils.makeRequest(fnName, url, reqConfig)
+    return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
 
@@ -193,9 +200,10 @@ async function updateCustomList({ account, listId, title }) {
  * @param {Object} obj
  * @param {import('../types').AccountAuth} obj.account
  * @param {String} obj.listId
+ * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
  * @returns {Promise}
  */
-async function deletePrivateCustomList({ account, listId }) {
+async function deletePrivateCustomList({ account, listId, fnConfig }) {
     const fnName = 'deletePrivateCustomList'
     logger.debug(fnName)
     const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
@@ -209,7 +217,7 @@ async function deletePrivateCustomList({ account, listId }) {
         },
     }
     // @ts-expect-error
-    return utils.makeRequest(fnName, url, reqConfig)
+    return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
 
@@ -217,9 +225,10 @@ async function deletePrivateCustomList({ account, listId }) {
  * @param {Object} obj
  * @param {import('../types').AccountAuth} obj.account
  * @param {String} obj.contentId
+ * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
  * @returns {Promise}
  */
-async function addWatchlistItem({ account, contentId }) {
+async function addWatchlistItem({ account, contentId, fnConfig }) {
     const fnName = 'addWatchlistItem'
     logger.debug(fnName)
     const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
@@ -234,16 +243,17 @@ async function addWatchlistItem({ account, contentId }) {
         body: JSON.stringify({ content_id: contentId })
     }
     // @ts-expect-error
-    return utils.makeRequest(fnName, url, reqConfig)
+    return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
 /**
  * @param {Object} obj
  * @param {import('../types').AccountAuth} obj.account
  * @param {Array<String>} [obj.contentIds]
+ * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
  * @returns {Promise<Object>} 
  */
-async function getWatchlistItems({ account, contentIds }) {
+async function getWatchlistItems({ account, contentIds, fnConfig }) {
     const fnName = 'getWatchlistItems'
     logger.debug(fnName)
     const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
@@ -257,7 +267,7 @@ async function getWatchlistItems({ account, contentIds }) {
         headers: { Authorization: account.token }
     }
     // @ts-expect-error
-    return utils.makeRequest(fnName, url, reqConfig)
+    return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
 
@@ -265,10 +275,11 @@ async function getWatchlistItems({ account, contentIds }) {
  * @param {Object} obj
  * @param {import('../types').AccountAuth} obj.account
  * @param {String} obj.contentId
- * @param {Boolean} obj.isFavorite 
+ * @param {Boolean} obj.isFavorite
+ * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
  * @returns {Promise}
  */
-async function updateWatchlistItemFavoriteStatus({ account, contentId, isFavorite }) {
+async function updateWatchlistItemFavoriteStatus({ account, contentId, isFavorite, fnConfig }) {
     const fnName = 'updateWatchlistItemFavoriteStatus'
     logger.debug(fnName)
     const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
@@ -283,7 +294,7 @@ async function updateWatchlistItemFavoriteStatus({ account, contentId, isFavorit
         body: JSON.stringify({ is_favorite: isFavorite })
     }
     // @ts-expect-error
-    return utils.makeRequest(fnName, url, reqConfig)
+    return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
 
@@ -291,9 +302,10 @@ async function updateWatchlistItemFavoriteStatus({ account, contentId, isFavorit
  * @param {Object} obj
  * @param {import('../types').AccountAuth} obj.account
  * @param {String} obj.contentId
+ * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
  * @returns {Promise}
  */
-async function deleteWatchlistItem({ account, contentId }) {
+async function deleteWatchlistItem({ account, contentId, fnConfig }) {
     const fnName = 'deleteWatchlistItem'
     logger.debug(fnName)
     const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
@@ -307,7 +319,7 @@ async function deleteWatchlistItem({ account, contentId }) {
         },
     }
     // @ts-expect-error
-    return utils.makeRequest(fnName, url, reqConfig)
+    return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
 /**
@@ -315,9 +327,10 @@ async function deleteWatchlistItem({ account, contentId }) {
  * @param {import('../types').AccountAuth} obj.account
  * @param {Number} obj.page it has to be > 1
  * @param {Number} obj.pageSize
+ * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
  * @returns {Promise<Object>} 
  */
-async function getWatchHistory({ account, page, pageSize }) {
+async function getWatchHistory({ account, page, pageSize, fnConfig }) {
     const fnName = 'getWatchHistory'
     logger.debug(fnName)
     const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
@@ -333,7 +346,7 @@ async function getWatchHistory({ account, page, pageSize }) {
         }
     }
     // @ts-expect-error
-    return utils.makeRequest(fnName, url, reqConfig)
+    return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
 /**
@@ -341,9 +354,10 @@ async function getWatchHistory({ account, page, pageSize }) {
  * @param {import('../types').AccountAuth} obj.account
  * @param {Array<String>} obj.contentIds
  * @param {Boolean} obj.uploadOfflinePlayheads 
+ * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
  * @returns {Promise<Object>} 
  */
-async function _getPlayheads({ account, contentIds, uploadOfflinePlayheads }) {
+async function _getPlayheads({ account, contentIds, uploadOfflinePlayheads, fnConfig }) {
     const fnName = '_getPlayheads'
     logger.debug(fnName)
     const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
@@ -358,7 +372,7 @@ async function _getPlayheads({ account, contentIds, uploadOfflinePlayheads }) {
         }
     }
     // @ts-expect-error
-    return utils.makeRequest(fnName, url, reqConfig)
+    return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
 
@@ -366,10 +380,11 @@ async function _getPlayheads({ account, contentIds, uploadOfflinePlayheads }) {
  * @param {Object} obj
  * @param {import('../types').AccountAuth} obj.account
  * @param {Array<String>} obj.contentIds
+ * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
  * @returns {Promise<Object>} 
  */
-async function getPlayheads({ account, contentIds }) {
-    return _getPlayheads({ account, contentIds, uploadOfflinePlayheads: true })
+async function getPlayheads({ account, contentIds, fnConfig }) {
+    return _getPlayheads({ account, contentIds, uploadOfflinePlayheads: true, fnConfig })
 }
 
 
@@ -378,9 +393,10 @@ async function getPlayheads({ account, contentIds }) {
  * @param {import('../types').AccountAuth} obj.account
  * @param {String} obj.contentId
  * @param {Number} obj.playhead
+ * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
  * @returns {Promise}
  */
-async function savePlayhead({ account, contentId, playhead }) {
+async function savePlayhead({ account, contentId, playhead, fnConfig }) {
     const fnName = 'savePlayhead'
     logger.debug(fnName)
     const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
@@ -398,7 +414,7 @@ async function savePlayhead({ account, contentId, playhead }) {
         })
     }
     // @ts-expect-error
-    return utils.makeRequest(fnName, url, reqConfig)
+    return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
 /**
@@ -410,6 +426,7 @@ async function savePlayhead({ account, contentId, playhead }) {
  * @param {Object} [obj.body]
  * @param {Object} [obj.headers]
  * @param {Object} [obj.queryParams]
+ * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
  * @returns {Promise<Object>}
  */
 async function getData({
@@ -420,6 +437,7 @@ async function getData({
     body = null,
     headers = {},
     queryParams = {},
+    fnConfig,
 }) {
     const fnName = 'getData'
     logger.debug(fnName)
@@ -441,7 +459,7 @@ async function getData({
         body: body && JSON.stringify(body),
     }
     // @ts-expect-error
-    return utils.makeRequest(fnName, urlStr, reqConfig)
+    return utils.makeRequest(fnName, urlStr, reqConfig, fnConfig)
 }
 
 

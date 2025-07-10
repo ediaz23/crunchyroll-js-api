@@ -6,7 +6,7 @@ import CrunchyrollError from './error.js'
 
 /**
  * In browsers cors make imposible make some request because of that
- * provide a custum function to make request
+ * provide a custom function to make request
  * @type {Function}
  */
 let fetchFunction = null
@@ -52,9 +52,10 @@ async function logRes(fnName, res) {
  * Make http request and return raw response
  * @param {String} url
  * @param {import('node-fetch').Request} reqConfig
+ * @param {import('./types').FetchConfig} [fnConfig]
  * @returns {Promise<import('node-fetch').Response>}
  */
-async function makeRawRequest(url, reqConfig) {
+async function makeRawRequest(url, reqConfig, fnConfig) {
     let fetchFn = null
     // @ts-expect-error
     if (reqConfig.baseUrlIncluded) {
@@ -83,7 +84,7 @@ async function makeRawRequest(url, reqConfig) {
             // #endif
         }
     }
-    return fetchFn(url, reqConfig)
+    return fetchFn(url, reqConfig, fnConfig || {})
 }
 
 
@@ -92,10 +93,11 @@ async function makeRawRequest(url, reqConfig) {
  * @param {String} fnName for loggin
  * @param {String} url
  * @param {import('node-fetch').Request} reqConfig
+ * @param {import('./types').FetchConfig} [fnConfig]
  * @returns {Promise<Object>}
  */
-async function makeRequest(fnName, url, reqConfig) {
-    const res = await makeRawRequest(url, reqConfig)
+async function makeRequest(fnName, url, reqConfig, fnConfig) {
+    const res = await makeRawRequest(url, reqConfig, fnConfig)
     await logRes(fnName, res)
     let out = null
     try {
@@ -174,8 +176,15 @@ function setFetchFunction(fetchFn) {
     fetchFunction = fetchFn
 }
 
+/**
+ * @param {String} str
+ */
+function camelCase(str) {
+    return str.replace(/_([a-z])/g, (_m, w) => w.toUpperCase())
+}
+
 export default {
-    camelCase: str => str.replace(/_([a-z])/g, (_m, w) => w.toUpperCase()),
+    camelCase,
     logRes,
     makeRawRequest,
     makeRequest,

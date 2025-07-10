@@ -17,9 +17,11 @@ function getBasicToken() {
 
 /**
  * Get device code for easy login
+ * @param {Object} obj
+ * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
  * @returns {Promise<import('../types').DeviceCode>}
  */
-async function getDeviceCode() {
+async function getDeviceCode(obj) {
     const fnName = 'getDeviceCode'
     logger.debug(fnName)
     const basicToken = getBasicToken()
@@ -34,8 +36,9 @@ async function getDeviceCode() {
             'etp-anonymous-id': null,
         },
     }
+    const { fnConfig } = (obj || {})
     // @ts-expect-error
-    const token = await utils.makeRequest(fnName, url, reqConfig)
+    const token = await utils.makeRequest(fnName, url, reqConfig, fnConfig)
     if (token) {
         token.created_date = new Date().toISOString()
     }
@@ -47,9 +50,10 @@ async function getDeviceCode() {
  * @param {Object} obj
  * @param {import('../types.js').Device} obj.device Device
  * @param {String} obj.deviceCode login type
+ * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
  * @returns {Promise<import('../types').Token>}
  */
-async function getDeviceAuth({ device, deviceCode }) {
+async function getDeviceAuth({ device, deviceCode, fnConfig }) {
     const fnName = 'getDeviceAuth'
     logger.debug(fnName)
     const basicToken = getBasicToken()
@@ -69,7 +73,7 @@ async function getDeviceAuth({ device, deviceCode }) {
         },
     }
     // @ts-expect-error
-    return utils.makeRequest(fnName, url, reqConfig)
+    return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
 /**
@@ -79,9 +83,10 @@ async function getDeviceAuth({ device, deviceCode }) {
  * @param {Object} obj.credentials login type
  * @param {String} obj.grantType login type
  * @param {String} [obj.scope]
+ * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
  * @returns {Promise<import('../types').Token>}
  */
-async function _makeLogin({ device, credentials, grantType, scope }) {
+async function _makeLogin({ device, credentials, grantType, scope, fnConfig }) {
     const fnName = '_makeLogin'
     logger.debug(fnName)
     const basicToken = getBasicToken()
@@ -104,7 +109,7 @@ async function _makeLogin({ device, credentials, grantType, scope }) {
         },
     }
     // @ts-expect-error
-    const token = await utils.makeRequest(fnName, url, reqConfig)
+    const token = await utils.makeRequest(fnName, url, reqConfig, fnConfig)
     if (token) {
         token.created_date = new Date().toISOString()
     }
@@ -119,9 +124,10 @@ async function _makeLogin({ device, credentials, grantType, scope }) {
  * @param {String} [obj.scope]
  * @param {String} obj.username user's email
  * @param {String} obj.password user's password
+ * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
  * @returns {Promise<import('../types').Token>}
  */
-async function getToken({ device, scope, username, password }) {
+async function getToken({ device, scope, username, password, fnConfig }) {
     const fnName = 'getToken'
     logger.debug(fnName)
     return _makeLogin({
@@ -129,6 +135,7 @@ async function getToken({ device, scope, username, password }) {
         scope,
         grantType: 'password',
         credentials: { username, password },
+        fnConfig,
     })
 }
 
@@ -140,9 +147,10 @@ async function getToken({ device, scope, username, password }) {
  * @param {String} [obj.scope]
  * @param {String} obj.phone user's phone
  * @param {String} obj.verification_code
+ * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
  * @returns {Promise<import('../types').Token>}
  */
-async function getTokenWithPhone({ device, scope, phone, verification_code }) {
+async function getTokenWithPhone({ device, scope, phone, verification_code, fnConfig }) {
     const fnName = 'getTokenWithPhone'
     logger.debug(fnName)
     return _makeLogin({
@@ -150,6 +158,7 @@ async function getTokenWithPhone({ device, scope, phone, verification_code }) {
         scope,
         grantType: 'phone',
         credentials: { phone_number: phone, verification_code },
+        fnConfig,
     })
 }
 
@@ -160,9 +169,10 @@ async function getTokenWithPhone({ device, scope, phone, verification_code }) {
  * @param {String} [obj.scope]
  * @param {String} obj.code
  * @param {String} obj.code_verifier
+ * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
  * @returns {Promise<import('../types').Token>}
  */
-async function getTokenWithCode({ device, scope, code, code_verifier }) {
+async function getTokenWithCode({ device, scope, code, code_verifier, fnConfig }) {
     const fnName = 'getTokenWithCode'
     logger.debug(fnName)
     return _makeLogin({
@@ -170,6 +180,7 @@ async function getTokenWithCode({ device, scope, code, code_verifier }) {
         scope,
         grantType: 'authorization_code',
         credentials: { code, code_verifier: code_verifier },
+        fnConfig,
     })
 }
 
@@ -180,9 +191,10 @@ async function getTokenWithCode({ device, scope, code, code_verifier }) {
  * @param {import('../types.js').Device} obj.device Device
  * @param {String} [obj.scope]
  * @param {String} obj.refreshToken refresh token from login
+ * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
  * @returns {Promise<import('../types').Token>}
  */
-async function getRefreshToken({ device, scope, refreshToken }) {
+async function getRefreshToken({ device, scope, refreshToken, fnConfig }) {
     const fnName = 'getRefreshToken'
     logger.debug(fnName)
     return _makeLogin({
@@ -190,6 +202,7 @@ async function getRefreshToken({ device, scope, refreshToken }) {
         scope,
         grantType: 'refresh_token',
         credentials: { refresh_token: refreshToken },
+        fnConfig,
     })
 }
 
@@ -201,9 +214,10 @@ async function getRefreshToken({ device, scope, refreshToken }) {
  * @param {String} [obj.scope]
  * @param {String} obj.refreshToken refresh token from login
  * @param {String} obj.profileId profile id for switch
+ * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
  * @returns {Promise<import('../types').Token>}
  */
-async function switchProfile({ device, scope, refreshToken, profileId }) {
+async function switchProfile({ device, scope, refreshToken, profileId, fnConfig }) {
     const fnName = 'switchProfile'
     logger.debug(fnName)
     return _makeLogin({
@@ -211,15 +225,18 @@ async function switchProfile({ device, scope, refreshToken, profileId }) {
         scope,
         grantType: 'refresh_token_profile_id',
         credentials: { refresh_token: refreshToken, profile_id: profileId },
+        fnConfig,
     })
 }
 
 /**
  * revoke access token.
- * @param {{refreshToken: String}} obj
+ * @param {Object} obj
+ * @param {String} obj.refreshToken
+ * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
  * @returns {Promise<{status: String}>}
  */
-async function revokeRefreshToken({ refreshToken }) {
+async function revokeRefreshToken({ refreshToken, fnConfig }) {
     const fnName = 'revokeRefreshToken'
     logger.debug(fnName)
     const basicToken = getBasicToken()
@@ -235,7 +252,7 @@ async function revokeRefreshToken({ refreshToken }) {
         },
     }
     // @ts-expect-error
-    return utils.makeRequest(fnName, url, reqConfig)
+    return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
 

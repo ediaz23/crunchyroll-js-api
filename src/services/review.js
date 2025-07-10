@@ -10,9 +10,10 @@ import config from '../config.js'
  * @param {String} obj.contentId
  * @param {String} obj.rating
  * @param {String} [obj.contentType]
+ * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
  * @returns {Promise<import('../types').RatingEpisode>}
  */
-async function addEpisodeRating({ account, contentId, rating, contentType }) {
+async function addEpisodeRating({ account, contentId, rating, contentType, fnConfig }) {
     const fnName = 'addEpisodeRating'
     logger.debug(fnName)
     const queryData = { locale: account.locale }
@@ -31,10 +32,10 @@ async function addEpisodeRating({ account, contentId, rating, contentType }) {
             Authorization: account.token,
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ rating: rating})
+        body: JSON.stringify({ rating: rating })
     }
     // @ts-expect-error
-    return utils.makeRequest(fnName, url, reqConfig)
+    return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
 
@@ -44,9 +45,10 @@ async function addEpisodeRating({ account, contentId, rating, contentType }) {
  * @param {String} obj.contentId
  * @param {String} obj.rating
  * @param {String} obj.contentType
+ * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
  * @returns {Promise<import('../types').RatingStars>}
  */
-async function addRating({ account, contentId, rating, contentType }) {
+async function addRating({ account, contentId, rating, contentType, fnConfig }) {
     const fnName = 'addRating'
     logger.debug(fnName)
     const queryData = { locale: account.locale }
@@ -64,10 +66,10 @@ async function addRating({ account, contentId, rating, contentType }) {
             Authorization: account.token,
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ rating: rating})
+        body: JSON.stringify({ rating: rating })
     }
     // @ts-expect-error
-    return utils.makeRequest(fnName, url, reqConfig)
+    return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
 
@@ -76,9 +78,10 @@ async function addRating({ account, contentId, rating, contentType }) {
  * @param {import('../types').AccountAuth} obj.account
  * @param {String} obj.contentId
  * @param {String} obj.contentType
+ * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
  * @returns {Promise<Object>}
  */
-async function _getRatings({ account, contentId, contentType }) {
+async function _getRatings({ account, contentId, contentType, fnConfig }) {
     const fnName = '_getRatings'
     logger.debug(fnName)
     const queryData = { locale: account.locale }
@@ -92,7 +95,7 @@ async function _getRatings({ account, contentId, contentType }) {
         headers: { Authorization: account.token }
     }
     // @ts-expect-error
-    return utils.makeRequest(fnName, url, reqConfig)
+    return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
 
@@ -100,10 +103,11 @@ async function _getRatings({ account, contentId, contentType }) {
  * @param {Object} obj
  * @param {import('../types').AccountAuth} obj.account
  * @param {String} obj.contentId
+ * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
  * @returns {Promise<import('../types').RatingEpisode>}
  */
-async function getEpisodeRatings({ account, contentId }) {
-    return _getRatings({ account, contentId, contentType: 'episode' })
+async function getEpisodeRatings({ account, contentId, fnConfig }) {
+    return _getRatings({ account, contentId, contentType: 'episode', fnConfig })
 }
 
 
@@ -112,10 +116,11 @@ async function getEpisodeRatings({ account, contentId }) {
  * @param {import('../types').AccountAuth} obj.account
  * @param {String} obj.contentId
  * @param {String} obj.contentType
+ * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
  * @returns {Promise<import('../types').RatingStars>}
  */
-async function getRatings({ account, contentId, contentType }) {
-    return _getRatings({ account, contentId, contentType })
+async function getRatings({ account, contentId, contentType, fnConfig }) {
+    return _getRatings({ account, contentId, contentType, fnConfig })
 }
 
 
@@ -124,9 +129,10 @@ async function getRatings({ account, contentId, contentType }) {
  * @param {import('../types').AccountAuth} obj.account
  * @param {String} obj.contentId
  * @param {String} obj.contentType
+ * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
  * @returns {Promise}
  */
-async function removeRating({ account, contentId, contentType }) {
+async function removeRating({ account, contentId, contentType, fnConfig }) {
     const fnName = 'removeRating'
     logger.debug(fnName)
     const queryData = { locale: account.locale }
@@ -140,7 +146,7 @@ async function removeRating({ account, contentId, contentType }) {
         headers: { Authorization: account.token }
     }
     // @ts-expect-error
-    return utils.makeRequest(fnName, url, reqConfig)
+    return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
 

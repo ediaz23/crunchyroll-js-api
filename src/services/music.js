@@ -8,9 +8,10 @@ import logger from '../logger.js'
  * @param {import('../types').AccountAuth} obj.account
  * @param {Number} [obj.quantity] Number of records in a result
  * @param {Number} [obj.start] Offset to request
+ * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
  * @returns {Promise<{items: Array<Object>}>}
  */
-async function getFeed({ account, quantity, start }) {
+async function getFeed({ account, quantity, start, fnConfig }) {
     const fnName = 'getFeed'
     logger.debug(fnName)
     const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
@@ -23,7 +24,7 @@ async function getFeed({ account, quantity, start }) {
         headers: { Authorization: account.token }
     }
     // @ts-expect-error
-    return utils.makeRequest(fnName, url, reqConfig)
+    return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
 
@@ -31,9 +32,10 @@ async function getFeed({ account, quantity, start }) {
  * @param {Object} obj
  * @param {import('../types').AccountAuth} obj.account
  * @param {Array<String>} [obj.artistIds]
+ * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
  * @returns {Promise<{items: Array<Object>}>}
  */
-async function getArtist({ account, artistIds }) {
+async function getArtist({ account, artistIds, fnConfig }) {
     const fnName = 'getArtist'
     logger.debug(fnName)
     const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
@@ -44,7 +46,7 @@ async function getArtist({ account, artistIds }) {
         headers: { Authorization: account.token }
     }
     // @ts-expect-error
-    return utils.makeRequest(fnName, url, reqConfig)
+    return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
 
@@ -52,9 +54,10 @@ async function getArtist({ account, artistIds }) {
  * @param {Object} obj
  * @param {import('../types').AccountAuth} obj.account
  * @param {Array<String>} [obj.artistId]
+ * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
  * @returns {Promise<{items: Array<Object>}>}
  */
-async function getArtistConcerts({ account, artistId }) {
+async function getArtistConcerts({ account, artistId, fnConfig }) {
     const fnName = 'getArtistConcerts'
     logger.debug(fnName)
     const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
@@ -65,7 +68,7 @@ async function getArtistConcerts({ account, artistId }) {
         headers: { Authorization: account.token }
     }
     // @ts-expect-error
-    return utils.makeRequest(fnName, url, reqConfig)
+    return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
 
@@ -73,9 +76,10 @@ async function getArtistConcerts({ account, artistId }) {
  * @param {Object} obj
  * @param {import('../types').AccountAuth} obj.account
  * @param {String} obj.artistId
+ * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
  * @returns {Promise<{items: Array<Object>}>}
  */
-async function getArtistVideos({ account, artistId }) {
+async function getArtistVideos({ account, artistId, fnConfig }) {
     const fnName = 'getArtistVideos'
     logger.debug(fnName)
     const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
@@ -86,7 +90,7 @@ async function getArtistVideos({ account, artistId }) {
         headers: { Authorization: account.token }
     }
     // @ts-expect-error
-    return utils.makeRequest(fnName, url, reqConfig)
+    return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
 
@@ -94,9 +98,10 @@ async function getArtistVideos({ account, artistId }) {
  * @param {Object} obj
  * @param {import('../types').AccountAuth} obj.account
  * @param {Array<String>} [obj.concertIds]
+ * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
  * @returns {Promise<{items: Array<Object>}>}
  */
-async function getConcerts({ account, concertIds }) {
+async function getConcerts({ account, concertIds, fnConfig }) {
     const fnName = 'getConcerts'
     logger.debug(fnName)
     const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
@@ -107,7 +112,7 @@ async function getConcerts({ account, concertIds }) {
         headers: { Authorization: account.token }
     }
     // @ts-expect-error
-    return utils.makeRequest(fnName, url, reqConfig)
+    return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
 
@@ -115,9 +120,10 @@ async function getConcerts({ account, concertIds }) {
  * @param {Object} obj
  * @param {import('../types').AccountAuth} obj.account
  * @param {Array<String>} [obj.musicIds]
+ * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
  * @returns {Promise<{items: Array<Object>}>}
  */
-async function getVideo({ account, musicIds }) {
+async function getVideo({ account, musicIds, fnConfig }) {
     const fnName = 'getVideo'
     logger.debug(fnName)
     const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
@@ -128,7 +134,7 @@ async function getVideo({ account, musicIds }) {
         headers: { Authorization: account.token }
     }
     // @ts-expect-error
-    return utils.makeRequest(fnName, url, reqConfig)
+    return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
 /**
@@ -136,9 +142,10 @@ async function getVideo({ account, musicIds }) {
  * @param {Object} obj
  * @param {import('../types').AccountAuth} obj.account
  * @param {String} obj.streamUrl
+ * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
  * @returns {Promise<Object>}
  */
-async function getStreamsWithURL({ account, streamUrl }) {
+async function getStreamsWithURL({ account, streamUrl, fnConfig }) {
     const fnName = 'getStreamsWithURL'
     logger.debug(fnName)
     const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
@@ -149,7 +156,7 @@ async function getStreamsWithURL({ account, streamUrl }) {
         headers: { Authorization: account.token }
     }
     // @ts-expect-error
-    return utils.makeRequest(fnName, url, reqConfig)
+    return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
 /**
@@ -157,9 +164,10 @@ async function getStreamsWithURL({ account, streamUrl }) {
  * @param {Object} obj
  * @param {import('../types').AccountAuth} obj.account
  * @param {String} obj.contentId
+ * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
  * @returns {Promise<Object>}
  */
-async function getStreams({ account, contentId }) {
+async function getStreams({ account, contentId, fnConfig }) {
     const fnName = 'getStreams'
     logger.debug(fnName)
     const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
@@ -170,16 +178,17 @@ async function getStreams({ account, contentId }) {
         headers: { Authorization: account.token }
     }
     // @ts-expect-error
-    return utils.makeRequest(fnName, url, reqConfig)
+    return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
 /**
  * @param {Object} obj
  * @param {import('../types').AccountAuth} obj.account
  * @param {Number} obj.contentId Number of records in a result
+ * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
  * @returns {Promise<{items: Array<Object>}>}
  */
-async function getFeatured({ account, contentId }) {
+async function getFeatured({ account, contentId, fnConfig }) {
     const fnName = 'getFeatured'
     logger.debug(fnName)
     const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
@@ -190,7 +199,7 @@ async function getFeatured({ account, contentId }) {
         headers: { Authorization: account.token }
     }
     // @ts-expect-error
-    return utils.makeRequest(fnName, url, reqConfig)
+    return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
 export default {

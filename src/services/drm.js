@@ -10,9 +10,10 @@ import config from '../config.js'
  * @param {String} obj.episodeId
  * @param {String} [obj.type] only null or music
  * @param {String} [obj.browser] browser name
+ * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
  * @returns {Promise<Object>}
  */
-async function getStream({ account, episodeId, type, browser }) {
+async function getStream({ account, episodeId, type, browser, fnConfig }) {
     const fnName = 'getStream'
     logger.debug(fnName)
     type = type ? `/${type}` : ''
@@ -27,7 +28,7 @@ async function getStream({ account, episodeId, type, browser }) {
         baseUrlIncluded: true,
     }
     // @ts-expect-error
-    return utils.makeRequest(fnName, url, reqConfig)
+    return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
 /**
@@ -36,9 +37,10 @@ async function getStream({ account, episodeId, type, browser }) {
  * @param {String} obj.episodeId
  * @param {String} obj.token
  * @param {Number} obj.playhead
+ * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
  * @returns {Promise}
  */
-async function keepAlive({ account, token, episodeId, playhead }) {
+async function keepAlive({ account, token, episodeId, playhead, fnConfig }) {
     const fnName = 'keepAlive'
     logger.debug(fnName)
     const queryData = { playhead }
@@ -63,7 +65,7 @@ async function keepAlive({ account, token, episodeId, playhead }) {
         body,
     }
     // @ts-expect-error
-    return utils.makeRequest(fnName, url, reqConfig)
+    return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
 /**
@@ -71,9 +73,10 @@ async function keepAlive({ account, token, episodeId, playhead }) {
  * @param {import('../types').AccountAuth} obj.account
  * @param {String} obj.episodeId
  * @param {String} obj.token
+ * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
  * @returns {Promise}
  */
-async function revokeToken({ account, episodeId, token }) {
+async function revokeToken({ account, episodeId, token, fnConfig }) {
     const fnName = 'revokeToken'
     logger.debug(fnName)
     const url = `${config.urlDrm}/v1/token/${episodeId}/${token}/delete`
@@ -83,7 +86,7 @@ async function revokeToken({ account, episodeId, token }) {
         baseUrlIncluded: true,
     }
     // @ts-expect-error
-    return utils.makeRequest(fnName, url, reqConfig)
+    return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
 /**
@@ -91,9 +94,10 @@ async function revokeToken({ account, episodeId, token }) {
  * @param {import('../types').AccountAuth} obj.account
  * @param {String} obj.episodeId
  * @param {String} obj.token
+ * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
  * @returns {Promise}
  */
-async function deleteToken({ account, episodeId, token }) {
+async function deleteToken({ account, episodeId, token, fnConfig }) {
     const fnName = 'deleteToken'
     logger.debug(fnName)
     const url = `${config.urlDrm}/v1/token/${episodeId}/${token}`
@@ -103,7 +107,7 @@ async function deleteToken({ account, episodeId, token }) {
         baseUrlIncluded: true,
     }
     // @ts-expect-error
-    return utils.makeRequest(fnName, url, reqConfig)
+    return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
 /**
@@ -111,9 +115,10 @@ async function deleteToken({ account, episodeId, token }) {
  * @param {import('../types').AccountAuth} obj.account
  * @param {String} obj.assetId
  * @param {String} obj.sessionId `${new Date().getTime()}-${account.accountId}`
+ * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
  * @returns {Promise<{custom_data: String, token: String}>}
  */
-async function getAuth({ account, assetId, sessionId }) {
+async function getAuth({ account, assetId, sessionId, fnConfig }) {
     const fnName = 'getAuth'
     logger.debug(fnName)
     const url = `${config.urlPl}/drm/v1/auth`
@@ -129,7 +134,7 @@ async function getAuth({ account, assetId, sessionId }) {
         })
     }
     // @ts-expect-error
-    return utils.makeRequest(fnName, url, reqConfig)
+    return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
 
