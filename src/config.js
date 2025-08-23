@@ -16,7 +16,7 @@ export default {
     castId: '4D84B31C',
     urlEec: 'https://eec.crunchyroll.com',
     appConfig: 'app-config-default-production.json',
-    versionName: '3.70.4',
+    versionName: '3.89.2',
     appId: 'cr-android',
     osReleaseVersion: '13',
     contentTypes: ['series', 'movie_listing', 'episode'],

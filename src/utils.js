@@ -16,7 +16,11 @@ let fetchFunction = null
  * @return {String}
  */
 function getUserAgent() {
-    return `Crunchyroll/${config.versionName} Android/${config.osReleaseVersion}`
+    // config.versionName -> from app/main/AndroidManifest.xml versionName
+    // config.osReleaseVersion -> what i want
+    // defaultAgent -> generate 
+    const defaultAgent = `Dalvik/2.1.0 (Linux; U; Android ${config.osReleaseVersion}; Pixel 7 Build/TQ3A.230805.001)`
+    return `Crunchyroll/${config.versionName} Android/${config.osReleaseVersion} ${defaultAgent}`
 }
 
 /**

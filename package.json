@@ -4,7 +4,7 @@
     "description": "JavaScript API consumer for crunchyroll",
     "homepage": "https://github.com/ediaz23/crunchyroll_js_api",
     "types": "./dist/types/index.d.ts",
-    "version": "1.5.0",
+    "version": "1.5.1",
     "scripts": {
         "play": "node --experimental-specifier-resolution=node main.js",
         "lint": "npx eslint --ext .js ./",
@@ -33,6 +33,11 @@
         "production": "./dist/crunchyroll-js-api.min.js",
         "default": "./dist/crunchyroll-js-api.min.js"
     },
+    "files": [
+        "dist",
+        "LICENSE",
+        "README.md"
+    ],
     "devDependencies": {
         "@eslint/js": "^9.30.1",
         "@types/node": "^18.19.115",

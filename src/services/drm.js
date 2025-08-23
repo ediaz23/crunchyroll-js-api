@@ -10,18 +10,23 @@ import config from '../config.js'
  * @param {String} obj.episodeId
  * @param {String} [obj.type] only null or music
  * @param {String} [obj.browser] browser name
+ * @param {String} [obj.plataform] plataform name
  * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
  * @returns {Promise<Object>}
  */
-async function getStream({ account, episodeId, type, browser, fnConfig }) {
+async function getStream({ account, episodeId, type, browser, plataform, fnConfig }) {
     const fnName = 'getStream'
     logger.debug(fnName)
     type = type ? `/${type}` : ''
     browser = browser || 'chrome'
-    if (!['chrome', 'firefox', 'safari', 'explorer'].includes(browser)) {
+    if (!['chrome', 'firefox', 'safari', 'explorer', 'phone', 'lg'].includes(browser)) {
         throw new Error('Wrong browser, ' + browser)
     }
-    const url = `${config.urlDrm}/v1${type}/${episodeId}/web/${browser}/play`
+    plataform = plataform || 'web'
+    if (!['web', 'android', 'tv'].includes(plataform)) {
+        throw new Error('Wrong plataform, ' + plataform)
+    }
+    const url = `${config.urlDrm}/v1${type}/${episodeId}/${plataform}/${browser}/play`
     const reqConfig = {
         method: 'get',
         headers: { Authorization: account.token },
@@ -76,27 +81,6 @@ async function keepAlive({ account, token, episodeId, playhead, fnConfig }) {
  * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
  * @returns {Promise}
  */
-async function revokeToken({ account, episodeId, token, fnConfig }) {
-    const fnName = 'revokeToken'
-    logger.debug(fnName)
-    const url = `${config.urlDrm}/v1/token/${episodeId}/${token}/delete`
-    const reqConfig = {
-        method: 'post',
-        headers: { Authorization: account.token },
-        baseUrlIncluded: true,
-    }
-    // @ts-expect-error
-    return utils.makeRequest(fnName, url, reqConfig, fnConfig)
-}
-
-/**
- * @param {Object} obj
- * @param {import('../types').AccountAuth} obj.account
- * @param {String} obj.episodeId
- * @param {String} obj.token
- * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
- * @returns {Promise}
- */
 async function deleteToken({ account, episodeId, token, fnConfig }) {
     const fnName = 'deleteToken'
     logger.debug(fnName)
@@ -111,6 +95,29 @@ async function deleteToken({ account, episodeId, token, fnConfig }) {
 }
 
 /**
+ * @deprecated
+ * @param {Object} obj
+ * @param {import('../types').AccountAuth} obj.account
+ * @param {String} obj.episodeId
+ * @param {String} obj.token
+ * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
+ * @returns {Promise}
+ */
+async function revokeToken({ account, episodeId, token, fnConfig }) {
+    const fnName = 'revokeToken'
+    logger.debug(fnName)
+    const url = `${config.urlDrm}/v1/token/${episodeId}/${token}/delete`
+    const reqConfig = {
+        method: 'post',
+        headers: { Authorization: account.token },
+        baseUrlIncluded: true,
+    }
+    // @ts-expect-error
+    return utils.makeRequest(fnName, url, reqConfig, fnConfig)
+}
+
+/**
+ * @deprecated
  * @param {Object} obj
  * @param {import('../types').AccountAuth} obj.account
  * @param {String} obj.assetId
