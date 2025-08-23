@@ -17,7 +17,6 @@ import config from '../config.js'
 async function getStream({ account, episodeId, type, browser, plataform, fnConfig }) {
     const fnName = 'getStream'
     logger.debug(fnName)
-    type = type ? `/${type}` : ''
     browser = browser || 'chrome'
     if (!['chrome', 'firefox', 'safari', 'explorer', 'phone', 'lg'].includes(browser)) {
         throw new Error('Wrong browser, ' + browser)
@@ -26,7 +25,8 @@ async function getStream({ account, episodeId, type, browser, plataform, fnConfi
     if (!['web', 'android', 'tv'].includes(plataform)) {
         throw new Error('Wrong plataform, ' + plataform)
     }
-    const url = `${config.urlDrm}/v1${type}/${episodeId}/${plataform}/${browser}/play`
+    const version = type ? `v1/${type}` : 'v1'
+    const url = `${config.urlDrm}/${version}/${episodeId}/${plataform}/${browser}/play`
     const reqConfig = {
         method: 'get',
         headers: { Authorization: account.token },

@@ -12,6 +12,11 @@ import CrunchyrollError from './error.js'
 let fetchFunction = null
 
 /**
+ * allow to set specific userAgent
+ */
+let userAgent = null
+
+/**
  * Returning user-agent
  * @return {String}
  */
@@ -20,7 +25,15 @@ function getUserAgent() {
     // config.osReleaseVersion -> what i want
     // defaultAgent -> generate 
     const defaultAgent = `Dalvik/2.1.0 (Linux; U; Android ${config.osReleaseVersion}; Pixel 7 Build/TQ3A.230805.001)`
-    return `Crunchyroll/${config.versionName} Android/${config.osReleaseVersion} ${defaultAgent}`
+    return userAgent || `Crunchyroll/${config.versionName} Android/${config.osReleaseVersion} ${defaultAgent}`
+}
+
+/**
+ * set new userAgent
+ * @param {String} newUserAgent
+ */
+function setUserAgent(newUserAgent) {
+    userAgent = newUserAgent
 }
 
 /**
@@ -198,4 +211,5 @@ export default {
     toURLSearchParams,
     setFetchFunction,
     getUserAgent,
+    setUserAgent,
 }
