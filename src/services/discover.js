@@ -44,11 +44,26 @@ async function getWatchlist({ account, quantity, start, ratings, order, fnConfig
  * @param {String} [obj.seasonTag] season tag
  * @param {String} [obj.sort] sort results
  * @param {String} [obj.type] type for search, example episode
- * @param {Boolean} [obj.ratings]
+ * @param {Boolean} [obj.ratings] add rating info
+ * @param {Boolean} [obj.isSubbed]
+ * @param {Boolean} [obj.isDubbed]
  * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
  * @returns {Promise<{total: Number, data: Array<Object>, meta: Object}>}
  */
-async function getBrowseAll({ account, quantity, start, category, query, seasonTag, sort, type, ratings, fnConfig }) {
+async function getBrowseAll({
+    account,
+    quantity,
+    start,
+    category,
+    query,
+    seasonTag,
+    sort,
+    type,
+    ratings,
+    isSubbed,
+    isDubbed,
+    fnConfig }) {
+
     const fnName = 'getBrowseAll'
     logger.debug(fnName)
     const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
@@ -63,6 +78,8 @@ async function getBrowseAll({ account, quantity, start, category, query, seasonT
     utils.addParam(queryData, 'sort_by', sort)
     utils.addParam(queryData, 'type', type)
     utils.addParam(queryData, 'ratings', ratings)
+    utils.addParam(queryData, 'is_subbed', isSubbed)
+    utils.addParam(queryData, 'is_dubbed', isDubbed)
     const queryStr = await utils.toURLSearchParams(queryData)
     const url = `/content/v2/discover/browse?${queryStr}`
     const reqConfig = {

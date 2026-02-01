@@ -4,7 +4,7 @@
     "description": "JavaScript API consumer for crunchyroll",
     "homepage": "https://github.com/ediaz23/crunchyroll_js_api",
     "types": "./dist/types/index.d.ts",
-    "version": "1.5.1",
+    "version": "1.5.2",
     "scripts": {
         "play": "node --experimental-specifier-resolution=node main.js",
         "lint": "npx eslint --ext .js ./",
@@ -26,7 +26,7 @@
     "author": "Esteban Díaz <esteban.diazt23@gmail.com>",
     "repository": {
         "type": "git",
-        "url": "https://github.com/ediaz23/crunchyroll_js_api"
+        "url": "git+https://github.com/ediaz23/crunchyroll_js_api.git"
     },
     "exports": {
         "development": "./dist/crunchyroll-js-api.debug.js",
