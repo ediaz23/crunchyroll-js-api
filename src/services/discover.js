@@ -229,13 +229,11 @@ async function getHome({ account, fnConfig }) {
 async function getPersonalRecomendation({ account, collectionId, ratings, vendor, fnConfig }) {
     const fnName = 'getPersonalRecomendation'
     logger.debug(fnName)
-    const queryData = {
-        collectionId,
-        ratings,
-        vendor,
-        locale: account.locale,
-        profileId: account.profileId,
-    }
+    const queryData = { locale: account.locale }
+    utils.addParam(queryData, 'profileId', account.profileId)
+    utils.addParam(queryData, 'collectionId', collectionId)
+    utils.addParam(queryData, 'vendor', vendor)
+    utils.addParam(queryData, 'ratings', ratings)
     const query = await utils.toURLSearchParams(queryData)
     const url = `${config.url}/personalization/v2/personalization?${query}`
     const reqConfig = {
