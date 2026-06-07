@@ -3,11 +3,11 @@ import { defineConfig } from 'eslint/config'
 import js from '@eslint/js'
 import globals from 'globals'
 import n from 'eslint-plugin-n'
-import importPlugin from 'eslint-plugin-import'
+import importPlugin from 'eslint-plugin-import-x'
 
 export default defineConfig([
     {
-        ignores: ['eslint.config.js', 'tests/**', 'main.js', ' dist/**'],
+        ignores: ['eslint.config.js', 'tests/**', 'main.js', 'dist/**'],
     },
     js.configs.recommended,
     {

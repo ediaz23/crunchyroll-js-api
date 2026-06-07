@@ -27,6 +27,7 @@ async function getDeviceCode(obj) {
     const basicToken = getBasicToken()
     const body = { grant_type: 'client_id' }
     const url = `/auth/v1/device/code`
+    /** @type {RequestInit} */
     const reqConfig = {
         method: 'post',
         body: await utils.toURLSearchParams(body),
@@ -37,7 +38,6 @@ async function getDeviceCode(obj) {
         },
     }
     const { fnConfig } = (obj || {})
-    // @ts-expect-error
     const token = await utils.makeRequest(fnName, url, reqConfig, fnConfig)
     if (token) {
         token.created_date = new Date().toISOString()
@@ -64,6 +64,7 @@ async function getDeviceAuth({ device, deviceCode, fnConfig }) {
         device_code: deviceCode,
     }
     const url = `/auth/v1/device/token`
+    /** @type {RequestInit} */
     const reqConfig = {
         method: 'post',
         body: JSON.stringify(body),
@@ -72,7 +73,6 @@ async function getDeviceAuth({ device, deviceCode, fnConfig }) {
             'Content-Type': 'application/json',
         },
     }
-    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
@@ -99,6 +99,7 @@ async function _makeLogin({ device, credentials, grantType, scope, fnConfig }) {
         ...credentials,
     }
     const url = `/auth/v1/token`
+    /** @type {RequestInit} */
     const reqConfig = {
         method: 'post',
         body: await utils.toURLSearchParams(body),
@@ -108,7 +109,6 @@ async function _makeLogin({ device, credentials, grantType, scope, fnConfig }) {
             'ETP-Anonymous-ID': null,
         },
     }
-    // @ts-expect-error
     const token = await utils.makeRequest(fnName, url, reqConfig, fnConfig)
     if (token) {
         token.created_date = new Date().toISOString()
@@ -242,6 +242,7 @@ async function revokeRefreshToken({ refreshToken, fnConfig }) {
     const basicToken = getBasicToken()
     const body = { token: refreshToken }
     const url = `/auth/v1/revoke`
+    /** @type {RequestInit} */
     const reqConfig = {
         method: 'post',
         body: await utils.toURLSearchParams(body),
@@ -251,7 +252,6 @@ async function revokeRefreshToken({ refreshToken, fnConfig }) {
             'ETP-Anonymous-ID': null,
         },
     }
-    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 

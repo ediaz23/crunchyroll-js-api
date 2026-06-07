@@ -26,6 +26,7 @@ async function addEpisodeRating({ account, contentId, rating, contentType, fnCon
         throw new Error(`Rating ${rating} is not valid.`)
     }
     const url = `/content-reviews/v2/user/${account.accountId}/rating/${contentType}/${contentId}?${queryStr}`
+    /** @type {RequestInit} */
     const reqConfig = {
         method: 'put',
         headers: {
@@ -34,7 +35,6 @@ async function addEpisodeRating({ account, contentId, rating, contentType, fnCon
         },
         body: JSON.stringify({ rating: rating })
     }
-    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
@@ -60,6 +60,7 @@ async function addRating({ account, contentId, rating, contentType, fnConfig }) 
         throw new Error(`Rating ${rating} is not valid.`)
     }
     const url = `/content-reviews/v2/user/${account.accountId}/rating/${contentType}/${contentId}?${queryStr}`
+    /** @type {RequestInit} */
     const reqConfig = {
         method: 'put',
         headers: {
@@ -68,7 +69,6 @@ async function addRating({ account, contentId, rating, contentType, fnConfig }) 
         },
         body: JSON.stringify({ rating: rating })
     }
-    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
@@ -90,11 +90,11 @@ async function _getRatings({ account, contentId, contentType, fnConfig }) {
         throw new Error(`ContentType ${contentType} is not valid.`)
     }
     const url = `/content-reviews/v2/user/${account.accountId}/rating/${contentType}/${contentId}?${queryStr}`
+    /** @type {RequestInit} */
     const reqConfig = {
         method: 'get',
         headers: { Authorization: account.token }
     }
-    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
@@ -130,7 +130,7 @@ async function getRatings({ account, contentId, contentType, fnConfig }) {
  * @param {String} obj.contentId
  * @param {String} obj.contentType
  * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
- * @returns {Promise}
+ * @returns {Promise<void>}
  */
 async function removeRating({ account, contentId, contentType, fnConfig }) {
     const fnName = 'removeRating'
@@ -141,11 +141,11 @@ async function removeRating({ account, contentId, contentType, fnConfig }) {
         throw new Error(`ContentType ${contentType} is not valid.`)
     }
     const url = `/content-reviews/v2/user/${account.accountId}/rating/${contentType}/${contentId}?${queryStr}`
+    /** @type {RequestInit} */
     const reqConfig = {
         method: 'delete',
         headers: { Authorization: account.token }
     }
-    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 

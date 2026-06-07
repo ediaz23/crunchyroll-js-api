@@ -48,7 +48,7 @@ function toJSON(jsonData) {
 
 /**
  * @param {Object} [data]
- * @returns {Promise}
+ * @returns {Promise<void>}
  */
 async function saveToken(data) {
     if (data) {
@@ -122,7 +122,7 @@ async function getToken() {
 
 
 /**
- * @returns {Promise}
+ * @returns {Promise<void>}
  */
 async function revokeToken() {
     if (storage.token) {
@@ -193,7 +193,7 @@ async function getLocale() {
 
 /**
  * Load from persistence data
- * @returns {Promise}
+ * @returns {Promise<void>}
  */
 async function loadFromLocal() {
     let data = null
@@ -209,7 +209,7 @@ async function loadFromLocal() {
         }
     } catch (_e) {
         // #if process.env.NODE_COMPILING !== 'true'
-        const fs = (await import('fs')).default
+        const fs = await import('node:fs')
         if (fs.existsSync(authData)) {
             data = fs.readFileSync(authData, 'utf-8')
         }
@@ -224,7 +224,7 @@ async function loadFromLocal() {
 
 /**
  * Save to persistence data
- * @returns {Promise}
+ * @returns {Promise<void>}
  */
 async function saveToLocal() {
     const authData = await authDataFile()
@@ -237,7 +237,7 @@ async function saveToLocal() {
         }
     } catch (_e) {
         // #if process.env.NODE_COMPILING !== 'true'
-        const fs = (await import('fs')).default
+        const fs = await import('node:fs')
         fs.writeFileSync(authData, data)
         // #endif
     }
@@ -277,10 +277,11 @@ function swapObjectJson(jsonData, func) {
  * @returns {Promise<String>}
  */
 async function authDataFile() {
+    // eslint-disable-next-line no-useless-assignment
     let out = 'crunchyData'
 
     // #if process.env.NODE_COMPILING !== 'true'
-    const path = (await import('path')).default
+    const path = await import('node:path')
     out = path.resolve('.') + '/authData.json'
     // #endif
     return out
@@ -304,7 +305,7 @@ function setExternalStorage({ save, load }) {
 /**
  * Set credentials of an account
  * @param {Storage} newData
- * @returns {Promise}
+ * @returns {Promise<void>}
  */
 async function setNewData(newData) {
     Object.assign(storage, newData)

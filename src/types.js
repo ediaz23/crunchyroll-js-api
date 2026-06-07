@@ -203,7 +203,7 @@
  * @type {Object}
  * @property {Boolean} [baseUrlIncluded]
  * 
- * @typedef {CrunchyRequestTmp & import('node-fetch').Request} CrunchyRequest
+ * @typedef {CrunchyRequestTmp & RequestInit} CrunchyRequest
  */
 
 /**

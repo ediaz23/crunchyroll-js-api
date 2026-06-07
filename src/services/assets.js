@@ -14,11 +14,11 @@ async function getAvatar({ token, lang, fnConfig }) {
     const fnName = 'getAvatar'
     logger.debug(fnName)
     const url = `/assets/v2/${lang}/avatar`
+    /** @type {RequestInit} */
     const reqConfig = {
         method: 'get',
         headers: { Authorization: token },
     }
-    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
@@ -34,11 +34,11 @@ async function getWallpaper({ token, lang, fnConfig }) {
     const fnName = 'getWallpaper'
     logger.debug(fnName)
     const url = `/assets/v2/${lang}/wallpaper`
+    /** @type {RequestInit} */
     const reqConfig = {
         method: 'get',
         headers: { Authorization: token },
     }
-    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 

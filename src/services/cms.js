@@ -17,11 +17,11 @@ async function getEpisode({ account, episodeId, fnConfig }) {
     const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
     const queryStr = await utils.toURLSearchParams(queryData)
     const url = `/content/v2/cms/episodes/${episodeId}?${queryStr}`
+    /** @type {RequestInit} */
     const reqConfig = {
         method: 'get',
         headers: { Authorization: account.token }
     }
-    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
@@ -39,11 +39,11 @@ async function getEpisodes({ account, seasonId, fnConfig }) {
     const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
     const queryStr = await utils.toURLSearchParams(queryData)
     const url = `/content/v2/cms/seasons/${seasonId}/episodes?${queryStr}`
+    /** @type {RequestInit} */
     const reqConfig = {
         method: 'get',
         headers: { Authorization: account.token }
     }
-    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
@@ -61,11 +61,11 @@ async function getMovie({ account, movieId, fnConfig }) {
     const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
     const queryStr = await utils.toURLSearchParams(queryData)
     const url = `/content/v2/cms/movies/${movieId}?${queryStr}`
+    /** @type {RequestInit} */
     const reqConfig = {
         method: 'get',
         headers: { Authorization: account.token }
     }
-    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
@@ -83,11 +83,11 @@ async function getMovieListing({ account, movieListingId, fnConfig }) {
     const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
     const queryStr = await utils.toURLSearchParams(queryData)
     const url = `/content/v2/cms/movie_listings/${movieListingId}?${queryStr}`
+    /** @type {RequestInit} */
     const reqConfig = {
         method: 'get',
         headers: { Authorization: account.token }
     }
-    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
@@ -104,11 +104,11 @@ async function getMovieListingExtras({ account, movieListingId, fnConfig }) {
     const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
     const queryStr = await utils.toURLSearchParams(queryData)
     const url = `/content/v2/cms/movie_listings/${movieListingId}/extra_videos?${queryStr}`
+    /** @type {RequestInit} */
     const reqConfig = {
         method: 'get',
         headers: { Authorization: account.token }
     }
-    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
@@ -126,11 +126,11 @@ async function getMovies({ account, movieListingId, fnConfig }) {
     const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
     const queryStr = await utils.toURLSearchParams(queryData)
     const url = `/content/v2/cms/movie_listings/${movieListingId}/movies?${queryStr}`
+    /** @type {RequestInit} */
     const reqConfig = {
         method: 'get',
         headers: { Authorization: account.token }
     }
-    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
@@ -149,11 +149,11 @@ async function getObjects({ account, objectIds, ratings, fnConfig }) {
     utils.addParam(queryData, 'ratings', ratings)
     const query = await utils.toURLSearchParams(queryData)
     const url = `/content/v2/cms/objects/${objectIds.join(',')}?${query}`
+    /** @type {RequestInit} */
     const reqConfig = {
         method: 'get',
         headers: { Authorization: account.token }
     }
-    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
@@ -170,11 +170,11 @@ async function getSeason({ account, seasonId, fnConfig }) {
     const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
     const queryStr = await utils.toURLSearchParams(queryData)
     const url = `/content/v2/cms/seasons/${seasonId}?${queryStr}`
+    /** @type {RequestInit} */
     const reqConfig = {
         method: 'get',
         headers: { Authorization: account.token }
     }
-    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
@@ -191,11 +191,11 @@ async function getSeasonExtras({ account, seasonId, fnConfig }) {
     const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
     const queryStr = await utils.toURLSearchParams(queryData)
     const url = `/content/v2/cms/seasons/${seasonId}/extra_videos?${queryStr}`
+    /** @type {RequestInit} */
     const reqConfig = {
         method: 'get',
         headers: { Authorization: account.token }
     }
-    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
@@ -212,11 +212,11 @@ async function getSeasons({ account, serieId, fnConfig }) {
     const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
     const queryStr = await utils.toURLSearchParams(queryData)
     const url = `/content/v2/cms/series/${serieId}/seasons?${queryStr}`
+    /** @type {RequestInit} */
     const reqConfig = {
         method: 'get',
         headers: { Authorization: account.token }
     }
-    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
@@ -233,11 +233,11 @@ async function getSeries({ account, serieId, fnConfig }) {
     const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
     const queryStr = await utils.toURLSearchParams(queryData)
     const url = `/content/v2/cms/series/${serieId}?${queryStr}`
+    /** @type {RequestInit} */
     const reqConfig = {
         method: 'get',
         headers: { Authorization: account.token }
     }
-    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
@@ -255,11 +255,11 @@ async function getStreamsWithURL({ account, streamUrl, fnConfig }) {
     const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
     const queryStr = await utils.toURLSearchParams(queryData)
     const url = `${streamUrl}?${queryStr}`
+    /** @type {RequestInit} */
     const reqConfig = {
         method: 'get',
         headers: { Authorization: account.token }
     }
-    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
@@ -277,11 +277,11 @@ async function getStreams({ account, contentId, fnConfig }) {
     const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
     const queryStr = await utils.toURLSearchParams(queryData)
     const url = `/content/v2/cms/videos/${contentId}/streams?${queryStr}`
+    /** @type {RequestInit} */
     const reqConfig = {
         method: 'get',
         headers: { Authorization: account.token }
     }
-    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
@@ -297,14 +297,15 @@ async function getSkiptEvents({ account, contentId, fnConfig }) {
     const fnName = 'getSkiptEvents'
     logger.debug(fnName)
     const url = `${config.urlStatic}/skip-events/production/${contentId}.json`
+    /** @type {RequestInit} */
     const reqConfig = {
         method: 'get',
         headers: { Authorization: account.token },
+        // @ts-expect-error
         baseUrlIncluded: true,
     }
     let out = null
     try {
-        // @ts-expect-error
         out = await utils.makeRequest(fnName, url, reqConfig, fnConfig)
     } catch (_e) {
         // ignore any error

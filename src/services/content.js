@@ -10,7 +10,7 @@ import CrunchyrollError from '../error.js'
  * @param {String} obj.listId
  * @param {String} obj.contentId
  * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
- * @returns {Promise}
+ * @returns {Promise<void>}
  */
 async function addItemToCustomList({ account, listId, contentId, fnConfig }) {
     const fnName = 'addItemToCustomList'
@@ -18,6 +18,7 @@ async function addItemToCustomList({ account, listId, contentId, fnConfig }) {
     const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
     const queryStr = await utils.toURLSearchParams(queryData)
     const url = `/content/v2/${account.accountId}/custom-lists/${listId}?${queryStr}`
+    /** @type {RequestInit} */
     const reqConfig = {
         method: 'post',
         headers: {
@@ -26,7 +27,6 @@ async function addItemToCustomList({ account, listId, contentId, fnConfig }) {
         },
         body: JSON.stringify({ content_id: contentId })
     }
-    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
@@ -39,7 +39,7 @@ async function addItemToCustomList({ account, listId, contentId, fnConfig }) {
  * @param {String} obj.location
  * @param {String} obj.refContentId
  * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
- * @returns {Promise}
+ * @returns {Promise<void>}
  */
 async function changeCustomListItemPosition({ account, listId, contentId, location, refContentId, fnConfig }) {
     const fnName = 'changeCustomListItemPosition'
@@ -48,6 +48,7 @@ async function changeCustomListItemPosition({ account, listId, contentId, locati
     const queryStr = await utils.toURLSearchParams(queryData)
     const url = `/content/v2/${account.accountId}/custom-lists/${listId}/${contentId}/position?${queryStr}`
     if (!['after', 'before'].includes(location)) { throw new CrunchyrollError(`Wrong location`) }
+    /** @type {RequestInit} */
     const reqConfig = {
         method: 'put',
         headers: {
@@ -59,7 +60,6 @@ async function changeCustomListItemPosition({ account, listId, contentId, locati
             ref_content_id: refContentId
         })
     }
-    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
@@ -87,11 +87,11 @@ async function getCustomListItems({ account, listId, page, pageSize, sort, order
     utils.addParam(queryData, 'order', order)
     const query = await utils.toURLSearchParams(queryData)
     const url = `/content/v2/${account.accountId}/custom-lists/${listId}?${query}`
+    /** @type {RequestInit} */
     const reqConfig = {
         method: 'get',
         headers: { Authorization: account.token }
     }
-    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
@@ -102,7 +102,7 @@ async function getCustomListItems({ account, listId, page, pageSize, sort, order
  * @param {String} obj.listId
  * @param {String} obj.contentId 
  * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
- * @returns {Promise}
+ * @returns {Promise<void>}
  */
 async function deleteCustomListItem({ account, listId, contentId, fnConfig }) {
     const fnName = 'deleteCustomListItem'
@@ -110,6 +110,7 @@ async function deleteCustomListItem({ account, listId, contentId, fnConfig }) {
     const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
     const queryStr = await utils.toURLSearchParams(queryData)
     const url = `/content/v2/${account.accountId}/custom-lists/${listId}/${contentId}?${queryStr}`
+    /** @type {RequestInit} */
     const reqConfig = {
         method: 'delete',
         headers: {
@@ -117,7 +118,6 @@ async function deleteCustomListItem({ account, listId, contentId, fnConfig }) {
             'Content-Type': 'application/json',
         },
     }
-    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
@@ -135,6 +135,7 @@ async function createPrivateCustomList({ account, title, fnConfig }) {
     const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
     const queryStr = await utils.toURLSearchParams(queryData)
     const url = `/content/v2/${account.accountId}/custom-lists?${queryStr}`
+    /** @type {RequestInit} */
     const reqConfig = {
         method: 'post',
         headers: {
@@ -143,7 +144,6 @@ async function createPrivateCustomList({ account, title, fnConfig }) {
         },
         body: JSON.stringify({ title })
     }
-    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
@@ -160,11 +160,11 @@ async function getCustomLists({ account, fnConfig }) {
     const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
     const query = await utils.toURLSearchParams(queryData)
     const url = `/content/v2/${account.accountId}/custom-lists?${query}`
+    /** @type {RequestInit} */
     const reqConfig = {
         method: 'get',
         headers: { Authorization: account.token }
     }
-    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
@@ -175,7 +175,7 @@ async function getCustomLists({ account, fnConfig }) {
  * @param {String} obj.listId
  * @param {String} obj.title
  * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
- * @returns {Promise}
+ * @returns {Promise<void>}
  */
 async function updateCustomList({ account, listId, title, fnConfig }) {
     const fnName = 'updateCustomList'
@@ -183,6 +183,7 @@ async function updateCustomList({ account, listId, title, fnConfig }) {
     const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
     const queryStr = await utils.toURLSearchParams(queryData)
     const url = `/content/v2/${account.accountId}/custom-lists/${listId}?${queryStr}`
+    /** @type {RequestInit} */
     const reqConfig = {
         method: 'patch',
         headers: {
@@ -191,7 +192,6 @@ async function updateCustomList({ account, listId, title, fnConfig }) {
         },
         body: JSON.stringify({ title })
     }
-    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
@@ -201,7 +201,7 @@ async function updateCustomList({ account, listId, title, fnConfig }) {
  * @param {import('../types').AccountAuth} obj.account
  * @param {String} obj.listId
  * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
- * @returns {Promise}
+ * @returns {Promise<void>}
  */
 async function deletePrivateCustomList({ account, listId, fnConfig }) {
     const fnName = 'deletePrivateCustomList'
@@ -209,6 +209,7 @@ async function deletePrivateCustomList({ account, listId, fnConfig }) {
     const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
     const queryStr = await utils.toURLSearchParams(queryData)
     const url = `/content/v2/${account.accountId}/custom-lists/${listId}?${queryStr}`
+    /** @type {RequestInit} */
     const reqConfig = {
         method: 'delete',
         headers: {
@@ -216,7 +217,6 @@ async function deletePrivateCustomList({ account, listId, fnConfig }) {
             'Content-Type': 'application/json',
         },
     }
-    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
@@ -226,7 +226,7 @@ async function deletePrivateCustomList({ account, listId, fnConfig }) {
  * @param {import('../types').AccountAuth} obj.account
  * @param {String} obj.contentId
  * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
- * @returns {Promise}
+ * @returns {Promise<void>}
  */
 async function addWatchlistItem({ account, contentId, fnConfig }) {
     const fnName = 'addWatchlistItem'
@@ -234,6 +234,7 @@ async function addWatchlistItem({ account, contentId, fnConfig }) {
     const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
     const queryStr = await utils.toURLSearchParams(queryData)
     const url = `/content/v2/${account.accountId}/watchlist?${queryStr}`
+    /** @type {RequestInit} */
     const reqConfig = {
         method: 'post',
         headers: {
@@ -242,7 +243,6 @@ async function addWatchlistItem({ account, contentId, fnConfig }) {
         },
         body: JSON.stringify({ content_id: contentId })
     }
-    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
@@ -262,11 +262,11 @@ async function getWatchlistItems({ account, contentIds, fnConfig }) {
     }
     const query = await utils.toURLSearchParams(queryData)
     let url = `/content/v2/${account.accountId}/watchlist?${query}`
+    /** @type {RequestInit} */
     const reqConfig = {
         method: 'get',
         headers: { Authorization: account.token }
     }
-    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
@@ -277,7 +277,7 @@ async function getWatchlistItems({ account, contentIds, fnConfig }) {
  * @param {String} obj.contentId
  * @param {Boolean} obj.isFavorite
  * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
- * @returns {Promise}
+ * @returns {Promise<void>}
  */
 async function updateWatchlistItemFavoriteStatus({ account, contentId, isFavorite, fnConfig }) {
     const fnName = 'updateWatchlistItemFavoriteStatus'
@@ -285,6 +285,7 @@ async function updateWatchlistItemFavoriteStatus({ account, contentId, isFavorit
     const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
     const queryStr = await utils.toURLSearchParams(queryData)
     const url = `/content/v2/${account.accountId}/watchlist/${contentId}?${queryStr}`
+    /** @type {RequestInit} */
     const reqConfig = {
         method: 'patch',
         headers: {
@@ -293,7 +294,6 @@ async function updateWatchlistItemFavoriteStatus({ account, contentId, isFavorit
         },
         body: JSON.stringify({ is_favorite: isFavorite })
     }
-    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
@@ -303,7 +303,7 @@ async function updateWatchlistItemFavoriteStatus({ account, contentId, isFavorit
  * @param {import('../types').AccountAuth} obj.account
  * @param {String} obj.contentId
  * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
- * @returns {Promise}
+ * @returns {Promise<void>}
  */
 async function deleteWatchlistItem({ account, contentId, fnConfig }) {
     const fnName = 'deleteWatchlistItem'
@@ -311,6 +311,7 @@ async function deleteWatchlistItem({ account, contentId, fnConfig }) {
     const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
     const queryStr = await utils.toURLSearchParams(queryData)
     const url = `/content/v2/${account.accountId}/watchlist/${contentId}?${queryStr}`
+    /** @type {RequestInit} */
     const reqConfig = {
         method: 'delete',
         headers: {
@@ -318,7 +319,6 @@ async function deleteWatchlistItem({ account, contentId, fnConfig }) {
             'Content-Type': 'application/json',
         },
     }
-    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
@@ -338,14 +338,15 @@ async function getWatchHistory({ account, page, pageSize, fnConfig }) {
     utils.addParam(queryData, 'page_size', pageSize, val => val > 0)
     const query = await utils.toURLSearchParams(queryData)
     const url = `/content/v2/${account.accountId}/watch-history?${query}`
+    /** @type {RequestInit} */
     const reqConfig = {
         method: 'get',
         headers: {
             Authorization: account.token,
+            // @ts-expect-error
             upload_offline_playheads: true,
         }
     }
-    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
@@ -364,14 +365,15 @@ async function _getPlayheads({ account, contentIds, uploadOfflinePlayheads, fnCo
     utils.addParam(queryData, 'content_ids', contentIds.join(','))
     const query = await utils.toURLSearchParams(queryData)
     const url = `/content/v2/${account.accountId}/playheads?${query}`
+    /** @type {RequestInit} */
     const reqConfig = {
         method: 'get',
         headers: {
             Authorization: account.token,
+            // @ts-expect-error
             upload_offline_playheads: uploadOfflinePlayheads
         }
     }
-    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
@@ -394,7 +396,7 @@ async function getPlayheads({ account, contentIds, fnConfig }) {
  * @param {String} obj.contentId
  * @param {Number} obj.playhead
  * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
- * @returns {Promise}
+ * @returns {Promise<void>}
  */
 async function savePlayhead({ account, contentId, playhead, fnConfig }) {
     const fnName = 'savePlayhead'
@@ -402,6 +404,7 @@ async function savePlayhead({ account, contentId, playhead, fnConfig }) {
     const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
     const queryStr = await utils.toURLSearchParams(queryData)
     const url = `/content/v2/${account.accountId}/playheads?${queryStr}`
+    /** @type {RequestInit} */
     const reqConfig = {
         method: 'post',
         headers: {
@@ -413,7 +416,6 @@ async function savePlayhead({ account, contentId, playhead, fnConfig }) {
             playhead: playhead
         })
     }
-    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
@@ -448,6 +450,7 @@ async function getData({
     }
     const queryStr = await utils.toURLSearchParams(queryData)
     const urlStr = `${url}?${queryStr}`
+    /** @type {RequestInit} */
     const reqConfig = {
         method,
         headers: {
@@ -455,13 +458,33 @@ async function getData({
             'Content-Type': 'application/json',
             ...headers,
         },
+        // @ts-expect-error
         baseUrlIncluded,
         body: body && JSON.stringify(body),
     }
-    // @ts-expect-error
     return utils.makeRequest(fnName, urlStr, reqConfig, fnConfig)
 }
 
+/**
+ * @param {Object} obj
+ * @param {import('../types').AccountAuth} obj.account
+ * @param {Array<String>} [obj.contentIds]
+ * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
+ * @returns {Promise<Object>} 
+ */
+async function getLabels({ account, contentIds, fnConfig }) {
+    const fnName = 'getLabels'
+    logger.debug(fnName)
+    const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
+    const query = await utils.toURLSearchParams(queryData)
+    let url = `/content/v2/labels/${contentIds.join(',')}?${query}`
+    /** @type {RequestInit} */
+    const reqConfig = {
+        method: 'get',
+        headers: { Authorization: account.token }
+    }
+    return utils.makeRequest(fnName, url, reqConfig, fnConfig)
+}
 
 export default {
     addItemToCustomList,
@@ -477,6 +500,7 @@ export default {
     getPlayheads,
     getWatchHistory,
     getWatchlistItems,
+    getLabels,
     savePlayhead,
     updateCustomList,
     updateWatchlistItemFavoriteStatus,

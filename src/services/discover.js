@@ -26,11 +26,11 @@ async function getWatchlist({ account, quantity, start, ratings, order, fnConfig
     utils.addParam(queryData, 'order', order)
     const query = await utils.toURLSearchParams(queryData)
     const url = `/content/v2/discover/${account.accountId}/watchlist?${query}`
+    /** @type {RequestInit} */
     const reqConfig = {
         method: 'get',
         headers: { Authorization: account.token }
     }
-    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
@@ -82,14 +82,15 @@ async function getBrowseAll({
     utils.addParam(queryData, 'is_dubbed', isDubbed)
     const queryStr = await utils.toURLSearchParams(queryData)
     const url = `/content/v2/discover/browse?${queryStr}`
+    /** @type {RequestInit} */
     const reqConfig = {
         method: 'get',
         headers: {
             Authorization: account.token,
-            'add_watchlist_status': true,
+            // @ts-expect-error
+            add_watchlist_status: true,
         }
     }
-    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
@@ -114,14 +115,15 @@ async function getBrowseIndex({ account, category, sort, ratings, fnConfig }) {
     utils.addParam(queryData, 'ratings', ratings)
     const queryStr = await utils.toURLSearchParams(queryData)
     const url = `/content/v2/discover/browse/index?${queryStr}`
+    /** @type {RequestInit} */
     const reqConfig = {
         method: 'get',
         headers: {
             Authorization: account.token,
-            'add_watchlist_status': true,
+            // @ts-expect-error
+            add_watchlist_status: true,
         }
     }
-    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
@@ -139,14 +141,15 @@ async function getCategories({ account, contentId, fnConfig }) {
     utils.addParam(queryData, 'guid', contentId)
     const query = await utils.toURLSearchParams(queryData)
     const url = `/content/v2/discover/categories?${query}`
+    /** @type {RequestInit} */
     const reqConfig = {
         method: 'get',
         headers: {
             Authorization: account.token,
-            'add_watchlist_status': true,
+            // @ts-expect-error
+            add_watchlist_status: true,
         }
     }
-    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
@@ -164,11 +167,11 @@ async function getSubcategories({ account, parentCategory, fnConfig }) {
     utils.addParam(queryData, 'parent_category', parentCategory)
     const queryStr = await utils.toURLSearchParams(queryData)
     const url = `/content/v2/discover/categories/${parentCategory}/sub_categories?${queryStr}`
+    /** @type {RequestInit} */
     const reqConfig = {
         method: 'get',
         headers: { Authorization: account.token }
     }
-    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
@@ -188,11 +191,11 @@ async function getHomeFeed({ account, quantity, start, fnConfig }) {
     utils.addParam(queryData, 'start', start, val => val >= 0)
     const query = await utils.toURLSearchParams(queryData)
     const url = `/content/v2/discover/${account.accountId}/home_feed?${query}`
+    /** @type {RequestInit} */
     const reqConfig = {
         method: 'get',
         headers: { Authorization: account.token }
     }
-    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
@@ -208,12 +211,13 @@ async function getHome({ account, fnConfig }) {
     const queryData = { locale: account.locale }
     const query = await utils.toURLSearchParams(queryData)
     const url = `${config.url}/f/v1/home?${query}`
+    /** @type {RequestInit} */
     const reqConfig = {
         method: 'get',
         headers: { Authorization: account.token },
+        // @ts-expect-error
         baseUrlIncluded: true,
     }
-    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
@@ -236,12 +240,13 @@ async function getPersonalRecomendation({ account, collectionId, ratings, vendor
     utils.addParam(queryData, 'ratings', ratings)
     const query = await utils.toURLSearchParams(queryData)
     const url = `${config.url}/personalization/v2/personalization?${query}`
+    /** @type {RequestInit} */
     const reqConfig = {
         method: 'get',
         headers: { Authorization: account.token },
+        // @ts-expect-error
         baseUrlIncluded: true,
     }
-    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
@@ -261,11 +266,11 @@ async function getHistory({ account, quantity, ratings, fnConfig }) {
     utils.addParam(queryData, 'ratings', ratings)
     const query = await utils.toURLSearchParams(queryData)
     const url = `/content/v2/discover/${account.accountId}/history?${query}`
+    /** @type {RequestInit} */
     const reqConfig = {
         method: 'get',
         headers: { Authorization: account.token }
     }
-    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
@@ -287,11 +292,11 @@ async function getRecommendations({ account, quantity, start, ratings, fnConfig 
     utils.addParam(queryData, 'ratings', ratings)
     const queryStr = await utils.toURLSearchParams(queryData)
     const url = `/content/v2/discover/${account.accountId}/recommendations?${queryStr}`
+    /** @type {RequestInit} */
     const reqConfig = {
         method: 'get',
         headers: { Authorization: account.token }
     }
-    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
@@ -307,11 +312,11 @@ async function getSeasonList({ account, fnConfig }) {
     const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
     const query = await utils.toURLSearchParams(queryData)
     const url = `/content/v2/discover/seasonal_tags?${query}`
+    /** @type {RequestInit} */
     const reqConfig = {
         method: 'get',
         headers: { Authorization: account.token }
     }
-    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
@@ -334,11 +339,11 @@ async function getSimilar({ account, contentId, quantity, start, ratings, fnConf
     utils.addParam(queryData, 'ratings', ratings)
     const queryStr = await utils.toURLSearchParams(queryData)
     const url = `/content/v2/discover/${account.accountId}/similar_to/${contentId}?${queryStr}`
+    /** @type {RequestInit} */
     const reqConfig = {
         method: 'get',
         headers: { Authorization: account.token }
     }
-    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
@@ -355,11 +360,11 @@ async function getNext({ account, contentId, fnConfig }) {
     const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
     const query = await utils.toURLSearchParams(queryData)
     const url = `/content/v2/discover/up_next/${contentId}?${query}`
+    /** @type {RequestInit} */
     const reqConfig = {
         method: 'get',
         headers: { Authorization: account.token }
     }
-    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
@@ -376,11 +381,11 @@ async function getPrev({ account, contentId, fnConfig }) {
     const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
     const query = await utils.toURLSearchParams(queryData)
     const url = `/content/v2/discover/previous_episode/${contentId}?${query}`
+    /** @type {RequestInit} */
     const reqConfig = {
         method: 'get',
         headers: { Authorization: account.token }
     }
-    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
@@ -412,11 +417,11 @@ async function search({ account, query, quantity, start, type, fnConfig }) {
     }
     const queryStr = await utils.toURLSearchParams(queryData)
     const url = `/content/v2/discover/search?${queryStr}`
+    /** @type {RequestInit} */
     const reqConfig = {
         method: 'get',
         headers: { Authorization: account.token }
     }
-    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
@@ -425,7 +430,7 @@ async function search({ account, query, quantity, start, type, fnConfig }) {
  * @param {import('../types').AccountAuth} obj.account
  * @param {Number} obj.contentId Offset to request
  * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
- * @returns {Promise}
+ * @returns {Promise<void>}
  */
 async function markAsWatched({ account, contentId, fnConfig }) {
     const fnName = 'markAsWatched'
@@ -433,11 +438,11 @@ async function markAsWatched({ account, contentId, fnConfig }) {
     const queryData = { locale: account.locale, preferred_audio_language: account.audioLanguage }
     const query = await utils.toURLSearchParams(queryData)
     const url = `/content/v2/discover/${account.accountId}/mark_as_watched/${contentId}?${query}`
+    /** @type {RequestInit} */
     const reqConfig = {
         method: 'post',
         headers: { Authorization: account.token }
     }
-    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 

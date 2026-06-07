@@ -42,7 +42,7 @@ const stringifySorted = (obj) => {
  * @param {Object} obj
  * @returns {String}
  */
-function objectToStringForFileName(obj) {
+function objectToStringForFileName (obj) {
     for (const vals of Object.values(obj)) {
         if (Array.isArray(vals)) {
             vals.sort()
@@ -60,7 +60,7 @@ function objectToStringForFileName(obj) {
  * @param {Array<String>} [objectIds]
  * @returns {String}
  */
-export function getMockFilename(name, objectIds) {
+export function getMockFilename (name, objectIds) {
     let suff = ''
     if (objectIds) {
         if (objectIds instanceof String || typeof objectIds === 'string') {
@@ -75,7 +75,7 @@ export function getMockFilename(name, objectIds) {
     return `${name}${suff}.json`
 }
 
-async function getMockData(name, params) {
+async function getMockData (name, params) {
     const filename = `mock/${getMockFilename(name, params)}`
     if (fs.existsSync(filename)) {
         const data = fs.readFileSync(filename)
@@ -438,7 +438,7 @@ const processInFeedPanels = async (carousel, profile) => {
  * @return {Promise<Object>}
  */
 const processCuratedCollection = async (carousel, profile) => {
-    let res = {}
+    let res
     if ('artist' === carousel.response_type) {
         res = await getMusicArtists(profile, carousel.ids)
     } else if ('music_concert' === carousel.response_type) {
@@ -525,8 +525,8 @@ const processItemFeed = async (carousel, profile) => {
         if (res2.items) {
             await Promise.all(
                 res2.items
-                .map(val => val.id)
-                .map(contentId => getMockData('categories', { contentId }))
+                    .map(val => val.id)
+                    .map(contentId => getMockData('categories', { contentId }))
             )
         }
     })
@@ -576,7 +576,7 @@ const homefeed = async (profile) => {
 }
 
 
-async function main() {
+async function main () {
     logger.setLevel('debug')
     await localStore.loadFromLocal()
     const token = await localStore.getAuthToken()

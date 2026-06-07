@@ -23,12 +23,11 @@ const createMusic = async (profile, concertIds) => {
 
 const sessionId = '1705092875476-d1650989-cd33-50a3-a195-126b550c4e68'
 
-async function main() {
+async function main () {
 
     logger.setLevel('debug')
     const episodeId = 'GWDU8KN73'
     await localStore.loadFromLocal()
-
     const tokenObj = await localStore.getToken()
     const profile = await api.account.getMultiProfile(tokenObj)
     const account = await localStore.getContentParam(profile)

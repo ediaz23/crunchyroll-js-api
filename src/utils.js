@@ -39,8 +39,8 @@ function setUserAgent(newUserAgent) {
 /**
  * log api response
  * @param {String} fnName
- * @param {import('node-fetch').Response} res
- * @returns {Promise}
+ * @param {Response} res
+ * @returns {Promise<void>}
  */
 async function logRes(fnName, res) {
     if (!(200 <= res.status && res.status < 300)) {
@@ -68,12 +68,12 @@ async function logRes(fnName, res) {
 /**
  * Make http request and return raw response
  * @param {String} url
- * @param {import('node-fetch').Request} reqConfig
+ * @param {RequestInit} reqConfig
  * @param {import('./types').FetchConfig} [fnConfig]
- * @returns {Promise<import('node-fetch').Response>}
+ * @returns {Promise<Response>}
  */
 async function makeRawRequest(url, reqConfig, fnConfig) {
-    let fetchFn = null
+    let fetchFn
     // @ts-expect-error
     if (reqConfig.baseUrlIncluded) {
         url = decodeURIComponent(`${url}`)
@@ -84,7 +84,6 @@ async function makeRawRequest(url, reqConfig, fnConfig) {
     }
     logger.debug(`${reqConfig.method} - ${url}`)
     if (!reqConfig.headers) {
-        // @ts-expect-error
         reqConfig.headers = {}
     }
     reqConfig.headers['User-Agent'] = getUserAgent()
@@ -96,8 +95,7 @@ async function makeRawRequest(url, reqConfig, fnConfig) {
             fetchFn = window.fetch
         } catch (_e) {
             // #if process.env.NODE_COMPILING !== 'true'
-            fetchFn = await import('node-fetch')
-            fetchFn = fetchFn.default
+            fetchFn = fetch
             // #endif
         }
     }
@@ -109,7 +107,7 @@ async function makeRawRequest(url, reqConfig, fnConfig) {
  * Make http request
  * @param {String} fnName for loggin
  * @param {String} url
- * @param {import('node-fetch').Request} reqConfig
+ * @param {RequestInit} reqConfig
  * @param {import('./types').FetchConfig} [fnConfig]
  * @returns {Promise<Object>}
  */
@@ -128,7 +126,7 @@ async function makeRequest(fnName, url, reqConfig, fnConfig) {
 
 /**
  * Add key to object if not undefined
- * @param {Object} data
+ * @param {Object.<string, any>} data
  * @param {String} key
  * @param {Object} value
  * @param {Function} [validator]
@@ -138,7 +136,7 @@ function addParam(data, key, value, validator) {
         if (validator && !(validator(value))) {
             throw new Error(`Value ${value} for key ${key} is not valid.`)
         }
-        data[key] = encodeURIComponent(value)
+        data[key] = encodeURIComponent(`${value}`)
     }
 }
 
@@ -165,21 +163,16 @@ function toSnake(str) {
 /**
  * Return a toURLSearchParams object
  * @param {Object} data
- * @returns {Promise<import('url').URLSearchParams>}
+ * @returns {Promise<URLSearchParams>}
  */
 async function toURLSearchParams(data) {
-    let URLSearchParamsClass = null
+    let URLSearchParamsClass
 
     try {
         URLSearchParamsClass = window.URLSearchParams
     } catch (_e) {
         // #if process.env.NODE_COMPILING !== 'true'
-        const url = await import('url')
-        if (url.URLSearchParams) {
-            URLSearchParamsClass = url.URLSearchParams
-        } else {
-            throw new Error()
-        }
+        URLSearchParamsClass = URLSearchParams
         // #endif
     }
     return new URLSearchParamsClass(data)

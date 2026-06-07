@@ -17,11 +17,11 @@ async function getProducts({ auth, source, fnConfig }) {
     utils.addParam(queryData, 'source', source ? source : 'google-play')
     const queryStr = await utils.toURLSearchParams(queryData)
     const url = `/subs/v2/products?${queryStr}`
+    /** @type {RequestInit} */
     const reqConfig = {
         method: 'get',
         headers: { Authorization: auth.token }
     }
-    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
@@ -39,11 +39,11 @@ async function getUserBenefits({ auth, externalId, fnConfig }) {
     const queryData = { locale: auth.locale }
     const queryStr = await utils.toURLSearchParams(queryData)
     const url = `/subs/v1/subscriptions/${externalId}/benefits?${queryStr}`
+    /** @type {RequestInit} */
     const reqConfig = {
         method: 'get',
         headers: { Authorization: auth.token }
     }
-    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
@@ -61,11 +61,11 @@ async function getUserSubscription({ auth, externalId, fnConfig }) {
     const queryData = { locale: auth.locale }
     const queryStr = await utils.toURLSearchParams(queryData)
     const url = `/subs/v1/subscriptions/${externalId}/products?${queryStr}`
+    /** @type {RequestInit} */
     const reqConfig = {
         method: 'get',
         headers: { Authorization: auth.token }
     }
-    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 

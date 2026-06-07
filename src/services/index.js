@@ -14,11 +14,11 @@ async function getIndexConfig({ token, fnConfig }) {
     const fnName = 'getIndexConfig'
     logger.debug(fnName)
     const url = `/index/v2`
+    /** @type {RequestInit} */
     const reqConfig = {
         method: 'get',
         headers: { Authorization: token }
     }
-    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 

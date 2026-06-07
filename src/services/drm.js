@@ -27,12 +27,13 @@ async function getStream({ account, episodeId, type, browser, plataform, fnConfi
     }
     const version = type ? `v1/${type}` : 'v1'
     const url = `${config.urlDrm}/${version}/${episodeId}/${plataform}/${browser}/play`
+    /** @type {RequestInit} */
     const reqConfig = {
         method: 'get',
         headers: { Authorization: account.token },
+        // @ts-expect-error
         baseUrlIncluded: true,
     }
-    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
@@ -43,7 +44,7 @@ async function getStream({ account, episodeId, type, browser, plataform, fnConfi
  * @param {String} obj.token
  * @param {Number} obj.playhead
  * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
- * @returns {Promise}
+ * @returns {Promise<void>}
  */
 async function keepAlive({ account, token, episodeId, playhead, fnConfig }) {
     const fnName = 'keepAlive'
@@ -51,25 +52,25 @@ async function keepAlive({ account, token, episodeId, playhead, fnConfig }) {
     const queryData = { playhead }
     const queryStr = await utils.toURLSearchParams(queryData)
     const url = `${config.urlDrm}/v1/token/${episodeId}/${token}/keepAlive?${queryStr}`
-    let body = null, FormDataFn = null
+    let body, FormDataFn
 
     try {
         FormDataFn = window.FormData
     } catch (_e) {
         // #if process.env.NODE_COMPILING !== 'true'
-        FormDataFn = await import('form-data')
-        FormDataFn = FormDataFn.default
+        FormDataFn = FormData
         // #endif
     }
     body = new FormDataFn()
     body.append('position', playhead.toString())
+    /** @type {RequestInit} */
     const reqConfig = {
         method: 'PATCH',
         headers: { Authorization: account.token },
+        // @ts-expect-error
         baseUrlIncluded: true,
         body,
     }
-    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
@@ -79,18 +80,19 @@ async function keepAlive({ account, token, episodeId, playhead, fnConfig }) {
  * @param {String} obj.episodeId
  * @param {String} obj.token
  * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
- * @returns {Promise}
+ * @returns {Promise<void>}
  */
 async function deleteToken({ account, episodeId, token, fnConfig }) {
     const fnName = 'deleteToken'
     logger.debug(fnName)
     const url = `${config.urlDrm}/v1/token/${episodeId}/${token}`
+    /** @type {RequestInit} */
     const reqConfig = {
         method: 'delete',
         headers: { Authorization: account.token },
+        // @ts-expect-error
         baseUrlIncluded: true,
     }
-    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
@@ -101,18 +103,19 @@ async function deleteToken({ account, episodeId, token, fnConfig }) {
  * @param {String} obj.episodeId
  * @param {String} obj.token
  * @param {import('../types').FetchConfig} [obj.fnConfig]  util config param
- * @returns {Promise}
+ * @returns {Promise<void>}
  */
 async function revokeToken({ account, episodeId, token, fnConfig }) {
     const fnName = 'revokeToken'
     logger.debug(fnName)
     const url = `${config.urlDrm}/v1/token/${episodeId}/${token}/delete`
+    /** @type {RequestInit} */
     const reqConfig = {
         method: 'post',
         headers: { Authorization: account.token },
+        // @ts-expect-error
         baseUrlIncluded: true,
     }
-    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
@@ -129,9 +132,11 @@ async function getAuth({ account, assetId, sessionId, fnConfig }) {
     const fnName = 'getAuth'
     logger.debug(fnName)
     const url = `${config.urlPl}/drm/v1/auth`
+    /** @type {RequestInit} */
     const reqConfig = {
         method: 'post',
         headers: { Authorization: account.token },
+        // @ts-expect-error
         baseUrlIncluded: true,
         body: JSON.stringify({
             accounting_id: config.accountingId,
@@ -140,7 +145,6 @@ async function getAuth({ account, assetId, sessionId, fnConfig }) {
             user_id: account.accountId,
         })
     }
-    // @ts-expect-error
     return utils.makeRequest(fnName, url, reqConfig, fnConfig)
 }
 
