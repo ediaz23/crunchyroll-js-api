@@ -3,8 +3,7 @@
     "license": "Apache-2.0",
     "description": "JavaScript API consumer for crunchyroll",
     "homepage": "https://github.com/ediaz23/crunchyroll_js_api",
-    "types": "./dist/types/index.d.ts",
-    "version": "1.5.5",
+    "version": "1.5.6",
     "scripts": {
         "play": "node --experimental-specifier-resolution=node main.js",
         "lint": "npx eslint --ext .js ./",
@@ -28,10 +27,16 @@
         "type": "git",
         "url": "git+https://github.com/ediaz23/crunchyroll_js_api.git"
     },
+    "types": "./dist/types/index.d.ts",
     "exports": {
-        "development": "./dist/crunchyroll-js-api.debug.js",
-        "production": "./dist/crunchyroll-js-api.min.js",
-        "default": "./dist/crunchyroll-js-api.min.js"
+        ".": {
+            "types": "./dist/types/index.d.ts",
+            "default": "./dist/crunchyroll-js-api.min.js"
+        },
+        "./debug": {
+            "types": "./dist/types/index.d.ts",
+            "default": "./dist/crunchyroll-js-api.debug.js"
+        }
     },
     "files": [
         "dist",
